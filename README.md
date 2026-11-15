@@ -9,7 +9,7 @@
 [![Inference Latency: <28ms](https://img.shields.io/badge/Latency-%3C28ms-brightgreen.svg)]()
 [![S1MB Evaluated: 137 Tasks](https://img.shields.io/badge/S1MB%20English%20v1-Validated-orange.svg)](https://huggingface.co/blog/hotchpotch/system-one-mosaic-benchmark)
 
-🤗 **[Hugging Face Model](https://huggingface.co/ftpxain/nirnay-0.5b-v0-beta)** | 💻 **[GitHub Repository](https://github.com/Ronak-jain-afk/Nirnay)**
+ **[Hugging Face Model](https://huggingface.co/ftpxain/nirnay-0.5b-v0-beta)** |  **[GitHub Repository](https://github.com/Ronak-jain-afk/Nirnay)**
 
 Nirnay is a non-autoregressive decision model distilled from large reasoning teacher distributions (`SargeDev/jev-distill-corpus-v3`). Unlike conventional LLMs that generate verbose token-by-token chains of thought, Nirnay operates on the **"System One" cognitive paradigm**: delivering instant, calibrated probabilities in a **single forward pass** with native BF16 acceleration and $<28\text{ ms}$ latency on consumer laptop GPUs (e.g., RTX 4050 6GB).
 
