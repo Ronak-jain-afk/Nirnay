@@ -2,6 +2,7 @@
 
 > **A fast, calibrated "System One" decision model powered by Qwen2.5-0.5B.**
 
+[![Hugging Face Space](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live%20Demo-blue.svg)](https://huggingface.co/spaces/ftpxain/nirnay-demo)
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow.svg)](https://huggingface.co/ftpxain/nirnay-0.5b-v0-beta)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue.svg?logo=github)](https://github.com/Ronak-jain-afk/Nirnay)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -9,7 +10,7 @@
 [![Inference Latency: <28ms](https://img.shields.io/badge/Latency-%3C28ms-brightgreen.svg)]()
 [![S1MB Evaluated: 137 Tasks](https://img.shields.io/badge/S1MB%20English%20v1-Validated-orange.svg)](https://huggingface.co/blog/hotchpotch/system-one-mosaic-benchmark)
 
- **[Hugging Face Model](https://huggingface.co/ftpxain/nirnay-0.5b-v0-beta)** |  **[GitHub Repository](https://github.com/Ronak-jain-afk/Nirnay)**
+🚀 **[Live Interactive Demo Space](https://huggingface.co/spaces/ftpxain/nirnay-demo)** | 🤗 **[Hugging Face Model](https://huggingface.co/ftpxain/nirnay-0.5b-v0-beta)** | 💻 **[GitHub Repository](https://github.com/Ronak-jain-afk/Nirnay)**
 
 Nirnay is a non-autoregressive decision model distilled from large reasoning teacher distributions (`SargeDev/jev-distill-corpus-v3`). Unlike conventional LLMs that generate verbose token-by-token chains of thought, Nirnay operates on the **"System One" cognitive paradigm**: delivering instant, calibrated probabilities in a **single forward pass** with native BF16 acceleration and $<28\text{ ms}$ latency on consumer laptop GPUs (e.g., RTX 4050 6GB).
 
