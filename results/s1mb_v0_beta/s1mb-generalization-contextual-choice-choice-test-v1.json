@@ -1,0 +1,1626 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "s1mb-generalization-contextual-choice-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/s1mb-generalization-contextual-choice",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:29:14+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.63,
+    "uniform_accuracy_baseline": 0.20851190476190457,
+    "fixed_answer_accuracy_baseline": 0.2233333333333332,
+    "baseline_adjusted_skill": 0.5236051502145924,
+    "baseline_adjusted_score": 0.5236051502145924
+  },
+  "elapsed_seconds": 31.152045399998315,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "contextual-choice-001": "5563ce96bf64767b590f1cd7c8fd64097a5ba0d983539bd2977eef3905bbc31f",
+      "contextual-choice-002": "5cc61781f92c16ebc185e860e16f43fdf4d6dcb4016ae6eb9a2d912d511c99b1",
+      "contextual-choice-003": "dca534ef6dc3a482d4385e48bd2b84732cc1c7c6dd14397e291e589096aabbb7",
+      "contextual-choice-004": "ac772e06e3bcb9bf997d022c4f293561db0976a196e4c4831570bd834fd02484",
+      "contextual-choice-005": "901c042194810e8f81eecdbc754a219b86fefe6ff58b114e603cfb3acc1d26b9",
+      "contextual-choice-006": "5cd58c0755d2fb691fea03a4863b253d282204094694cccd37eac51999c67ca5",
+      "contextual-choice-007": "a565734533314a14ec4ea65999e3294156b68eafc1653a6a48551f093168695e",
+      "contextual-choice-008": "6c9c4b9525d8ec95b6f44bba60c2a6a04fcb6bf3ad5b440aa2e22877f02efb98",
+      "contextual-choice-009": "2b59b210df72b4daab842d6876583e6511760324d55725342ad8fc69ed91f380",
+      "contextual-choice-010": "a46b51ddf43775e32c9e0263c11c3e4ea665ad3deccd47ad5ce1b3a5b0043643",
+      "contextual-choice-011": "9b55fe2d74ca35e77f3a63145877a4b4df36306d190fa7a3f77116fdfad03855",
+      "contextual-choice-012": "f10c4e61386c209a4c78622027052698510935dbdfcc1f1e95ec0878a3699b1d",
+      "contextual-choice-013": "950171fcdef2bc54925b5aa7190a143c354b38352e5b0f06f251b1fb894c7678",
+      "contextual-choice-014": "0126005483ee72536149b7c7409a1ed238671c01d014b8fb62e95ccef93ed6c2",
+      "contextual-choice-015": "1046f616204c97a86abe7645c8269e6ab12860a41b1d737b38141b162bb85cbb",
+      "contextual-choice-016": "325e938ce5260ab48d621db768e38ac850ce87bc819242a041752831b082b92b",
+      "contextual-choice-017": "42c17901437d6aa3f82eb9b9fdf60bc862e5b89fd4bd1a9f0baa3bd690dbe39e",
+      "contextual-choice-018": "b49a59e9653521a4aedb92ad8f384e9cdac89a80b3a890d4014aaad108899b3a",
+      "contextual-choice-019": "e1077a7d50796e08135a6d331cb20287422901776c80a1aa937052edd3176639",
+      "contextual-choice-020": "527371c0ba16116e794265a82a656beab9d995de118ae1dd291421991b5967f0",
+      "contextual-choice-021": "7984b4b5a5993ab0ccf01a30fe160aed76257ee5d875f63a12372b7a0d0d42fd",
+      "contextual-choice-022": "828ea85278f96c1edc6451a6d6f57822347a35829a9d933605d5899669b346ba",
+      "contextual-choice-023": "6a592e0547f367d996a9723e679d614d03386a536a7212aa16f26fc7b376b475",
+      "contextual-choice-024": "912577a03ae6a4b840cfa62a8f0514f740fb2e1033fd3a6838e8f62524a4a6b8",
+      "contextual-choice-025": "491ae8aac27a8c19c9607e939bde7d28dbe6b46ef4ff20b1cd2acd6c967d0913",
+      "contextual-choice-026": "4c9fe2931b66010f0a7bf1eacc68601ca1cba2946ac7a88260ff0e03b788d569",
+      "contextual-choice-027": "c2e7b6b86636507da0f82ea1a7986061341b5ddd9e71d5afe052c23e3ec22c5a",
+      "contextual-choice-028": "b41d97b9b0db7797eb056c2be66bf232ef6c4c4292fe43b962b0dbbb5b6a81f5",
+      "contextual-choice-029": "99827c77e43d4abe18633a7a39ecc83a1a61e530a850c4aaf14dcb2ff936a8e0",
+      "contextual-choice-030": "ca815cb621aa8736cda459ecd2d1590cb32aa083118ab0c16481b47e3a1d0c5e",
+      "contextual-choice-031": "7d1a2a56b1e4541a07dcbcab402e51ece85168b6f05e41170064f7a2e5de7497",
+      "contextual-choice-032": "82d69b4d17d8b38f95bed31b7a3d0c0dcf558c7ef03a5523c8f3e29c736ada80",
+      "contextual-choice-033": "c6a6626147325726fba22fe982d9e8e32819692aa64ed811860ac098f95a168a",
+      "contextual-choice-034": "eb946bf367fce9c0a5a7457f335619ce863494ad5227c2c292451121d987e47a",
+      "contextual-choice-035": "8bb8552e9e7cadd1d011300f38267669c8c02eecfb1dee7c0243a0c9e90b16d0",
+      "contextual-choice-036": "ba851ed45dce29b61b9e42f2dc7126e2ba72cd468431aa57a4e35c39acdfe67d",
+      "contextual-choice-037": "727d3329ef51ebca00591bc389d0a0c2d97ed8a4f4c7a8f1b08a84cf7b1030bd",
+      "contextual-choice-038": "b0b6c1b245045a4fbae3d2f66c4998fc444a7ec3b46736ab8bbdc9f0c1d25ee6",
+      "contextual-choice-039": "fbdac645dbfac3bd94c1cc2db5f18f8e8a9af24b99c3e545d203162036b6d7b5",
+      "contextual-choice-040": "cb4d5349b69fb1bd2a56657a93a1682a80de0801ba484a9e4d5d5244ac8ed34a",
+      "contextual-choice-041": "05bd55d7fa76b1e00c9655b16d1fa3947201db116a5ce318ca00801a0359914d",
+      "contextual-choice-042": "bd9a2c8d85e25db6154161ea480f547f99acc24a373f377b8ee45d02d7358541",
+      "contextual-choice-043": "ffdda5a670c037ee7263939294062200927214362ab3c662fc57857524f5b677",
+      "contextual-choice-044": "93178cfc984356e23f101aee68bc711ad01b4b6d2ce230ccc68d086019f45fb9",
+      "contextual-choice-045": "5ff1ac9e576b27fa56c17d55acca440432b215c5c1e2aef7cdcbd0d4306335c0",
+      "contextual-choice-046": "29f0a18ede9f1dfef860ed8db4c44ae3930d447fc948b438a6fabf8d0d37a5cd",
+      "contextual-choice-047": "b9e2e37c97af6798ecec7c975d03311baea993ff801847f3c50fa57b437fbc63",
+      "contextual-choice-048": "e33b0c9f09a5214b9c63b50a5952ed5e36553cbc1db980dbd816d6badafc221b",
+      "contextual-choice-049": "944b900db1c6033e102887cb25b1772b660404beb5339a8f6672877c65806a8d",
+      "contextual-choice-050": "f95384dbdfc7e5941bf91ddfca5d224082ebd1a2750fcec70d27ee4e3e3b263a",
+      "contextual-choice-051": "921b059b5615a96c91e0b1a7a57e5386932bec95df72ad5f629bd2aa6135e841",
+      "contextual-choice-052": "c3c287237d574269dc83571b6ba45a735cbfd40d62a66cd25757f73c5360b4a5",
+      "contextual-choice-053": "6cdbdad5c90e20309dcbffd5980a66f578f90ae43be3df15e413551c2accfae2",
+      "contextual-choice-054": "2d2b81b609e2e78e4c132ec1d8ed43f901f3ef84ad6b784c621b737a4763e9c8",
+      "contextual-choice-055": "488d04dd5b4939a787e8c7c7836ba438d0f6598d36372ecb233e667a428db422",
+      "contextual-choice-056": "4f3037f6d8dc8fd02280959b3385351ba88873909a8521ca3dbd7ebe9e55911c",
+      "contextual-choice-057": "0262fb2840b0adfe2464af97a3ece4d8c321ff7d314b8180af14d29358f7f973",
+      "contextual-choice-058": "d464e93ff0dd93660ae02a722e46dfbe0340d73af65a9b3a3fc4c651780bdd5c",
+      "contextual-choice-059": "28ad8808db7d0d6f27c89389e3cf92fd8f66659f01e7b3836133b2550ba1819c",
+      "contextual-choice-060": "7632db3ec35c81d89275018d0e091db37c82eee806e45eb4c221fd1ca9a1d1f6",
+      "contextual-choice-061": "ac7398f9280bb72571ca7b46e428236661af23117bbffe8f0af1dc62ee53bfca",
+      "contextual-choice-062": "d7fa869452b2f59b707d93907bdd4b64e061dd7d98fc64b279ff891d70502d9d",
+      "contextual-choice-063": "a0a3eb56d1f9ad5b291f3408e1acd02ce6aab725270a6c879604435e55087ff2",
+      "contextual-choice-064": "08d63a27818c50b2329024e06db956907a66ccdfe47d63a5f71812f0cc5f8be4",
+      "contextual-choice-065": "9317fc3b64c2eba8a0b384a983a78e89ece1cfc8a0669334b58ccee7cf2aecc7",
+      "contextual-choice-066": "a10e016b3b156a87169650d6ef325e2a130a81bbfc5d5fa96cc73fa1d9d26a27",
+      "contextual-choice-067": "2510c8c3453db73e956f5f757ca4ccc77ee613f3dd528e2313543b3b50c3d3ae",
+      "contextual-choice-068": "74ba0e125cc7ea8c646b6900429328558a169e592c8beaacae778b69d24e5eee",
+      "contextual-choice-069": "aeb5adb96d6d37e394fe16cbb6c7e5b204f599f29085e2693c0f7a36aa72081a",
+      "contextual-choice-070": "8caa732689bcc10148ea15fbafdbdcbd22516cec031d69dd684c5c7d61a9bf4c",
+      "contextual-choice-071": "6806644f0b6b2e242be4817689b3220b10be6aab042c81e25e24649cb2d8395c",
+      "contextual-choice-072": "bf8271f6a64674eec6ee9d1c762848f6df5c7a91a4bc37e15954184d521de4be",
+      "contextual-choice-073": "8f2f865e2e7f2f1f424e8073dec76da8b66e2ccd90e20c8505f5a0280ccb34ef",
+      "contextual-choice-074": "232e72e9eb5fc56e08a3e20a6cee24e1e8dc5319416883ed8a8f1b5228deffb3",
+      "contextual-choice-075": "9a1d32d44584b8e58901648570de8bda4a7963146bde74b708b21836425aaadd",
+      "contextual-choice-076": "25fec2aad9d71a807863cc7d2de12bc4db27891199b3cd92a2843948dce648aa",
+      "contextual-choice-077": "bffe4e94a44c7b8b0fd3dce590fe2cd71d256a31ee0b7d33ca01a48def4b81f0",
+      "contextual-choice-078": "bdb7915bb57cb2a7e2b8d3fed6dda6a19455fea1d30431b0608b119f75de901d",
+      "contextual-choice-079": "ec0e7691024d65d13cf92fd413b9af5137be30199544801a3423aa62046ee46b",
+      "contextual-choice-080": "8229b8f26ce8d7c58e847b90d086f1dcc9953e91a3f40b16aadc89fee6d8834a",
+      "contextual-choice-081": "b69cac19d2e78f05a5367788ee4210856cebc4a660775f57b1bd9277512e528c",
+      "contextual-choice-082": "ada02f40fd57515b549549644c00850518b71ed90e9e8fe8573c41bb0dd28ad6",
+      "contextual-choice-083": "741fb6d8fce5744f20f221f3c409a4bb331d536ffab702710761872d7ebda391",
+      "contextual-choice-084": "edf48c5cc27e7420eee7a1f6d66d3a428cd4ce48320bdb62792db38b3c85993f",
+      "contextual-choice-085": "085377c5067b82557da74d026f270cde99a79114d8480623a339cdf4388ba899",
+      "contextual-choice-086": "6663ffee0e839a7523746825a5e31dca49bc8f4a713399b6f8ac9d1f2a667fc7",
+      "contextual-choice-087": "4c3fe327cc8d4a98e7d21685d7e2ac0f8cff3742ff3dcc414ea50fdd6e03d083",
+      "contextual-choice-088": "62d66e9173c12c9f4a93d34500ea432a24b20cd7da63348f0491853f1cc7f295",
+      "contextual-choice-089": "57d8038d501affdcd3053880e79278952f0b24280c3e23e9913dde1af76e2581",
+      "contextual-choice-090": "ce2235f3f29d3bcf66dabd90e466d6b1e1303052ee1e6daff697e82c4dc3e802",
+      "contextual-choice-091": "7ac1d4f65c988216416f7f336fd8324f19a84051516b7562f973ddb7d31ea863",
+      "contextual-choice-092": "53c6e70123963094557bc14816f79917d2501105f2df31f530cf63d3e41aa342",
+      "contextual-choice-093": "84dcfb93552a7b642acfec7279fab67c80c42bf44fa99d0b2b44ccd5afbe6913",
+      "contextual-choice-094": "a97b63a0a39c6c6b27f454e647ce359e73002fc90cd3d13c2ccd1287f4593996",
+      "contextual-choice-095": "433c312f8b504390b079e5c93b747f2a6faf78958e57cc174b08131f26c165cf",
+      "contextual-choice-096": "bd60ab29835f75e44aa4c64eedc1b5b6d37311336af0eaef29ffd72e079f301c",
+      "contextual-choice-097": "5303820a9a851a38a2b77924c02f9f2e7769684dca3aa83ddafbbe7cbde1307d",
+      "contextual-choice-098": "dfa08907f872322991fdfcd41ef101419cc8cd899eae2afecce1c6f083e15360",
+      "contextual-choice-099": "0b72d33a5d914d47e9165bb26a5e7d50849bfe6eb75c5e893a32ea9b548d4461",
+      "contextual-choice-100": "98f24ae3c7f464f3f4de56441f427795d1aaf5ddc5322b6272d0bdbe79adfa27"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "contextual-choice-001",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.05987784119355161,
+        "option_2": 0.7275458095524181,
+        "option_3": 0.04595974767197357,
+        "option_4": 0.06888955642335036,
+        "option_5": 0.05887653950135175,
+        "option_6": 0.03885050565735456
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-002",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.7123246492985972,
+        "option_2": 0.2876753507014028
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-003",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.7546546546546546,
+        "option_2": 0.24534534534534536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-004",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5926147704590818,
+        "option_2": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-005",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1602,
+        "option_2": 0.3594,
+        "option_3": 0.3086,
+        "option_4": 0.0398,
+        "option_5": 0.0732,
+        "option_6": 0.0588,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-006",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6770186335403726,
+        "option_2": 0.10418753756762171,
+        "option_3": 0.0420757363253857,
+        "option_4": 0.058405129232618716,
+        "option_5": 0.08605489881787218,
+        "option_6": 0.03225806451612903,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-007",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1613420130195293,
+        "option_2": 0.39899849774661994,
+        "option_3": 0.13790686029043564,
+        "option_4": 0.17996995493239862,
+        "option_5": 0.12178267401101653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-008",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17697697697697698,
+        "option_2": 0.06596596596596596,
+        "option_3": 0.12362362362362363,
+        "option_4": 0.23463463463463463,
+        "option_5": 0.39879879879879876
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-009",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14854854854854854,
+        "option_2": 0.32842842842842845,
+        "option_3": 0.28548548548548547,
+        "option_4": 0.23753753753753754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-010",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.11166600079904114,
+        "option_2": 0.039752297243308025,
+        "option_3": 0.07800639232920495,
+        "option_4": 0.20874950059928082,
+        "option_5": 0.2945465441470235,
+        "option_6": 0.26727926488214143,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-011",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.09520952095209521,
+        "option_2": 0.8203820382038204,
+        "option_3": 0.059605960596059604,
+        "option_4": 0.0248024802480248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-012",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.7951506685292358,
+        "option_2": 0.0448014368389543,
+        "option_3": 0.02544402314907204,
+        "option_4": 0.1042706046697266,
+        "option_5": 0.030333266813011375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-013",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17861069465267368,
+        "option_2": 0.07126436781609197,
+        "option_3": 0.053673163418290856,
+        "option_4": 0.1103448275862069,
+        "option_5": 0.48605697151424293,
+        "option_6": 0.10004997501249376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-014",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2129,
+        "option_2": 0.3926,
+        "option_3": 0.2451,
+        "option_4": 0.0547,
+        "option_5": 0.0947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-015",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.37488753373987804,
+        "option_2": 0.11276617014895532,
+        "option_3": 0.33190042987103874,
+        "option_4": 0.07177846646006199,
+        "option_5": 0.06448065580325903,
+        "option_6": 0.04418674397680696
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-016",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6453389406228097,
+        "option_2": 0.17402623410433565,
+        "option_3": 0.046961049364173425,
+        "option_4": 0.07820166216080907,
+        "option_5": 0.05547211374787223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-017",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.12880983311681823,
+        "option_2": 0.09173578495053464,
+        "option_3": 0.09323473568502048,
+        "option_4": 0.5893874287998402,
+        "option_5": 0.05925851903667433,
+        "option_6": 0.03757369841111222,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-018",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.174974974974975,
+        "option_2": 0.4984984984984985,
+        "option_3": 0.32652652652652653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-019",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2224775224775225,
+        "option_2": 0.15314685314685317,
+        "option_3": 0.16583416583416585,
+        "option_4": 0.19710289710289713,
+        "option_5": 0.2614385614385615
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-020",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4647535246475352,
+        "option_2": 0.019498050194980503,
+        "option_3": 0.49405059494050596,
+        "option_4": 0.021697830216978305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-021",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2021,
+        "option_2": 0.1631,
+        "option_3": 0.1758,
+        "option_4": 0.2334,
+        "option_5": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-022",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.30273027302730277,
+        "option_2": 0.1699169916991699,
+        "option_3": 0.23242324232423242,
+        "option_4": 0.29492949294929494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-023",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4683316683316684,
+        "option_2": 0.08931068931068932,
+        "option_3": 0.1077922077922078,
+        "option_4": 0.198001998001998,
+        "option_5": 0.13656343656343656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-024",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.332,
+        "option_2": 0.0938,
+        "option_3": 0.1523,
+        "option_4": 0.3223,
+        "option_5": 0.0996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-025",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1338,
+        "option_2": 0.4453,
+        "option_3": 0.106,
+        "option_4": 0.1025,
+        "option_5": 0.1406,
+        "option_6": 0.0718,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-026",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10678253920687245,
+        "option_2": 0.08580561382479274,
+        "option_3": 0.057037259015083414,
+        "option_4": 0.6437918289881132,
+        "option_5": 0.06972330436519829,
+        "option_6": 0.03685945459994007,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-027",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2676,
+        "option_2": 0.0869,
+        "option_3": 0.4707,
+        "option_4": 0.0957,
+        "option_5": 0.0791
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-028",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2884653761724207,
+        "option_2": 0.3273797645180603,
+        "option_3": 0.0730393135102774,
+        "option_4": 0.25533825583715825,
+        "option_5": 0.055777289962083414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-029",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.8034947578632051,
+        "option_2": 0.04752870693959062,
+        "option_3": 0.018272591113330003,
+        "option_4": 0.03704443334997504,
+        "option_5": 0.07358961557663504,
+        "option_6": 0.020069895157264102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-030",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.13096548274137065,
+        "option_2": 0.0688344172086043,
+        "option_3": 0.5744872436218109,
+        "option_4": 0.2257128564282141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-031",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.041558181454035656,
+        "option_2": 0.7471460044061686,
+        "option_3": 0.029441217704786703,
+        "option_4": 0.07430402563589025,
+        "option_5": 0.05667935109152814,
+        "option_6": 0.05087121970759063,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-032",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.43989590631568415,
+        "option_2": 0.34210789710739664,
+        "option_3": 0.2179961965769192
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-033",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.24992502249325202,
+        "option_2": 0.21383584924522644,
+        "option_3": 0.10736778966310107,
+        "option_4": 0.29291212636209135,
+        "option_5": 0.09177246825952215,
+        "option_6": 0.04418674397680696
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-034",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10695347673836919,
+        "option_2": 0.7425712856428214,
+        "option_3": 0.15047523761880943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-035",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14847423711855928,
+        "option_2": 0.11185592796398199,
+        "option_3": 0.08594297148574287,
+        "option_4": 0.2892446223111556,
+        "option_5": 0.10845422711355678,
+        "option_6": 0.2560280140070035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-036",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3941058941058941,
+        "option_2": 0.06923076923076922,
+        "option_3": 0.11808191808191806,
+        "option_4": 0.23516483516483513,
+        "option_5": 0.1834165834165834
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-037",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.04171251375412624,
+        "option_2": 0.186555966790037,
+        "option_3": 0.16504951485445635,
+        "option_4": 0.4337301190357107,
+        "option_5": 0.1729518855656697
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-038",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2471988795518207,
+        "option_2": 0.09083633453381353,
+        "option_3": 0.1299519807923169,
+        "option_4": 0.1602641056422569,
+        "option_5": 0.27160864345738295,
+        "option_6": 0.10014005602240895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-039",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4350649350649351,
+        "option_2": 0.15514485514485515,
+        "option_3": 0.10149850149850151,
+        "option_4": 0.2155844155844156,
+        "option_5": 0.09270729270729271
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-040",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1475,
+        "option_2": 0.1045,
+        "option_3": 0.4121,
+        "option_4": 0.1689,
+        "option_5": 0.167
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-041",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10626185958254268,
+        "option_2": 0.16288824528113452,
+        "option_3": 0.06171976430640167,
+        "option_4": 0.6047138719664437,
+        "option_5": 0.06441625886347747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-042",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0918918918918919,
+        "option_2": 0.38708708708708706,
+        "option_3": 0.13583583583583583,
+        "option_4": 0.0850850850850851,
+        "option_5": 0.17207207207207206,
+        "option_6": 0.12802802802802804,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-043",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2603989175102736,
+        "option_2": 0.15565801343089106,
+        "option_3": 0.13120176405733186,
+        "option_4": 0.1908389295379373,
+        "option_5": 0.1938458454445224,
+        "option_6": 0.06805653001904381
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-044",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.22671335667833914,
+        "option_2": 0.2657328664332166,
+        "option_3": 0.2813406703351676,
+        "option_4": 0.1328664332166083,
+        "option_5": 0.09334667333666832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-045",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5514065472019221,
+        "option_2": 0.18179997997797578,
+        "option_3": 0.07037741515667234,
+        "option_4": 0.0771849033937331,
+        "option_5": 0.11923115426969666
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-046",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5471188475390156,
+        "option_2": 0.01530612244897959,
+        "option_3": 0.4259703881552621,
+        "option_4": 0.011604641856742696
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-047",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.367016491754123,
+        "option_2": 0.11374312843578212,
+        "option_3": 0.519240379810095
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-048",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.35318213607753024,
+        "option_2": 0.22729543410930167,
+        "option_3": 0.4195224298131682
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-049",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.9186430501350945,
+        "option_2": 0.02491744220954668,
+        "option_3": 0.02912038426898829,
+        "option_4": 0.027319123386370457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-050",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17553669495756366,
+        "option_2": 0.11452820768846729,
+        "option_3": 0.15017473789316027,
+        "option_4": 0.14727908137793308,
+        "option_5": 0.3490763854218672,
+        "option_6": 0.06340489266100849,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-051",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2109,
+        "option_2": 0.3164,
+        "option_3": 0.0894,
+        "option_4": 0.2754,
+        "option_5": 0.1079
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-052",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0962673871710197,
+        "option_2": 0.5120584409086361,
+        "option_3": 0.019313519463624536,
+        "option_4": 0.08015610927649354,
+        "option_5": 0.04202942059441609,
+        "option_6": 0.25017512258581004,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-053",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.16774837743384924,
+        "option_2": 0.15017473789316027,
+        "option_3": 0.12680978532201698,
+        "option_4": 0.11702446330504243,
+        "option_5": 0.37244133799301044,
+        "option_6": 0.06580129805292062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-054",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2913204524977475,
+        "option_2": 0.11973170487536292,
+        "option_3": 0.10751827009710682,
+        "option_4": 0.12173390729802784,
+        "option_5": 0.2737010711782961,
+        "option_6": 0.08599459405345881,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-055",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.11963589076723016,
+        "option_2": 0.03831149344803441,
+        "option_3": 0.09772931879563869,
+        "option_4": 0.1235370611183355,
+        "option_5": 0.51185355606682,
+        "option_6": 0.10893267980394118,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-056",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.168,
+        "option_2": 0.2412,
+        "option_3": 0.2451,
+        "option_4": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-057",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.45074925074925076,
+        "option_2": 0.099000999000999,
+        "option_3": 0.16583416583416585,
+        "option_4": 0.08881118881118882,
+        "option_5": 0.120979020979021,
+        "option_6": 0.07462537462537464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-058",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5419161676646707,
+        "option_2": 0.07405189620758483,
+        "option_3": 0.3840319361277445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-059",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.31982026959560655,
+        "option_2": 0.13749375936095853,
+        "option_3": 0.19990014977533696,
+        "option_4": 0.1038442336495257,
+        "option_5": 0.10534198701947078,
+        "option_6": 0.13359960059910134
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-060",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.12214885954381752,
+        "option_2": 0.16416566626650658,
+        "option_3": 0.1279511804721889,
+        "option_4": 0.21788715486194477,
+        "option_5": 0.3263305322128851,
+        "option_6": 0.041516606642657064,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-061",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6183749123334336,
+        "option_2": 0.3816250876665665
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-062",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1914,
+        "option_2": 0.1128,
+        "option_3": 0.1914,
+        "option_4": 0.2344,
+        "option_5": 0.1592,
+        "option_6": 0.1108,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-063",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.055383384984504645,
+        "option_2": 0.04658602419274218,
+        "option_3": 0.027091872438268518,
+        "option_4": 0.15135459362191345,
+        "option_5": 0.17674697590722785,
+        "option_6": 0.5428371488553434,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-064",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5459718478586404,
+        "option_2": 0.21643206548866925,
+        "option_3": 0.02336028751123091,
+        "option_4": 0.0446241389637616,
+        "option_5": 0.0735749226315264,
+        "option_6": 0.0960367375461715,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-065",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.033223256279395576,
+        "option_2": 0.899029320524367,
+        "option_3": 0.012608826178324827,
+        "option_4": 0.027118983288301812,
+        "option_5": 0.014109876913839688,
+        "option_6": 0.01390973681577104,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-066",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6406,
+        "option_2": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-067",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.18663064144901428,
+        "option_2": 0.6098268788151706,
+        "option_3": 0.07084959471630141,
+        "option_4": 0.04863404383068147,
+        "option_5": 0.08405884118883218
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-068",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4763142114731162,
+        "option_2": 0.07665400759544275,
+        "option_3": 0.44703178093144114
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-069",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1648186994306263,
+        "option_2": 0.45459994006592747,
+        "option_3": 0.10148836280091897,
+        "option_4": 0.10977924283288382,
+        "option_5": 0.11317550694236339,
+        "option_6": 0.056138247927279984,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-070",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.16203518592562974,
+        "option_2": 0.1757297081167533,
+        "option_3": 0.4861055577768893,
+        "option_4": 0.021391443422630947,
+        "option_5": 0.07417033186725311,
+        "option_6": 0.08056777289084367,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-071",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5583766493402639,
+        "option_2": 0.08396641343462616,
+        "option_3": 0.033886445421831266,
+        "option_4": 0.14054378248700522,
+        "option_5": 0.05437824870051979,
+        "option_6": 0.1288484606157537
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-072",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.08445777111444279,
+        "option_2": 0.1503248375812094,
+        "option_3": 0.39040479760119945,
+        "option_4": 0.22938530734632687,
+        "option_5": 0.1454272863568216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-073",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0562,
+        "option_2": 0.1206,
+        "option_3": 0.2334,
+        "option_4": 0.3125,
+        "option_5": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-074",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17271001897912294,
+        "option_2": 0.604834681849965,
+        "option_3": 0.22245529917091197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-075",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.06634692246203039,
+        "option_2": 0.07903677058353319,
+        "option_3": 0.0534572342126299,
+        "option_4": 0.28497202238209435,
+        "option_5": 0.12779776179056757,
+        "option_6": 0.38838928856914473,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-076",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0678592844293424,
+        "option_2": 0.7417549470317809,
+        "option_3": 0.0346791924845093,
+        "option_4": 0.07955226863881672,
+        "option_5": 0.028782730361782933,
+        "option_6": 0.04737157705376774
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-077",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.09268877347183381,
+        "option_2": 0.5774071114662406,
+        "option_3": 0.10197762684778267,
+        "option_4": 0.0896923691570116,
+        "option_5": 0.08290051937674792,
+        "option_6": 0.055333599680383545,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-078",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14045954045954046,
+        "option_2": 0.13366633366633365,
+        "option_3": 0.3023976023976024,
+        "option_4": 0.1805194805194805,
+        "option_5": 0.24295704295704293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-079",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.07609346914319952,
+        "option_2": 0.09796285200718993,
+        "option_3": 0.0707010185739964,
+        "option_4": 0.7138006790493309,
+        "option_5": 0.0414419812262832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-080",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.18533320011989207,
+        "option_2": 0.24587870916175442,
+        "option_3": 0.22729543410930161,
+        "option_4": 0.3414926566090518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-081",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0723,
+        "option_2": 0.061,
+        "option_3": 0.373,
+        "option_4": 0.4102,
+        "option_5": 0.0835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-082",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.21085782843431314,
+        "option_2": 0.4667066586682663,
+        "option_3": 0.0622875424915017,
+        "option_4": 0.21085782843431314,
+        "option_5": 0.049290141971605674
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-083",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.785985985985986,
+        "option_2": 0.08548548548548549,
+        "option_3": 0.026126126126126126,
+        "option_4": 0.053553553553553554,
+        "option_5": 0.031031031031031032,
+        "option_6": 0.017817817817817817,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-084",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.21492895737442463,
+        "option_2": 0.22863718230938562,
+        "option_3": 0.022513508104862915,
+        "option_4": 0.49249549729837905,
+        "option_5": 0.015309185511306783,
+        "option_6": 0.026115669401640985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-085",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2013006503251626,
+        "option_2": 0.060530265132566284,
+        "option_3": 0.13386693346673337,
+        "option_4": 0.19539769884942473,
+        "option_5": 0.3224612306153076,
+        "option_6": 0.0864432216108054,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-086",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.23052305230523054,
+        "option_2": 0.24902490249024903,
+        "option_3": 0.1533153315331533,
+        "option_4": 0.12351235123512351,
+        "option_5": 0.1689168916891689,
+        "option_6": 0.0747074707470747,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-087",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10162032406481297,
+        "option_2": 0.122124424884977,
+        "option_3": 0.037407481496299265,
+        "option_4": 0.703240648129626,
+        "option_5": 0.03560712142428486
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-088",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6643657462985194,
+        "option_2": 0.07573029211684675,
+        "option_3": 0.2599039615846338
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-089",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.21932714385544574,
+        "option_2": 0.06578816012778277,
+        "option_3": 0.07307577118897873,
+        "option_4": 0.5966856344214835,
+        "option_5": 0.024158929819307177,
+        "option_6": 0.020964360587002098,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-090",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.12711440296266638,
+        "option_2": 0.6372735461915724,
+        "option_3": 0.07476729056150536,
+        "option_4": 0.06696026423781402,
+        "option_5": 0.04914422980682614,
+        "option_6": 0.04474026623961565,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-091",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.09615192403798101,
+        "option_2": 0.43138430784607695,
+        "option_3": 0.47246376811594204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-092",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.23882235528942117,
+        "option_2": 0.36447105788423156,
+        "option_3": 0.13842315369261476,
+        "option_4": 0.16177644710578842,
+        "option_5": 0.09650698602794411
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-093",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17381738173817382,
+        "option_2": 0.1689168916891689,
+        "option_3": 0.22752275227522753,
+        "option_4": 0.17971797179717972,
+        "option_5": 0.25002500250025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-094",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14516611792876383,
+        "option_2": 0.5924373939938142,
+        "option_3": 0.1057567594532575,
+        "option_4": 0.07063753367255313,
+        "option_5": 0.05676943031028634,
+        "option_6": 0.029232764641324953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-095",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.13095238095238093,
+        "option_2": 0.22669067627050818,
+        "option_3": 0.15046018407362946,
+        "option_4": 0.20908363345338132,
+        "option_5": 0.17386954781912764,
+        "option_6": 0.10894357743097238,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-096",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.19412528724148265,
+        "option_2": 0.310220801278849,
+        "option_3": 0.2536716954740733,
+        "option_4": 0.24198221600559494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-097",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14274274274274273,
+        "option_2": 0.1808808808808809,
+        "option_3": 0.40660660660660664,
+        "option_4": 0.12022022022022022,
+        "option_5": 0.14954954954954955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-098",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5432172869147659,
+        "option_2": 0.08353341336534614,
+        "option_3": 0.08893557422969188,
+        "option_4": 0.09133653461384554,
+        "option_5": 0.1328531412565026,
+        "option_6": 0.060124049619847936,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-099",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2748777323086136,
+        "option_2": 0.19492963369597763,
+        "option_3": 0.1773630102804671,
+        "option_4": 0.1091925341850484,
+        "option_5": 0.1773630102804671,
+        "option_6": 0.06627407924942609,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-choice-100",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.18587174348697394,
+        "option_2": 0.7006012024048097,
+        "option_3": 0.012324649298597194,
+        "option_4": 0.024448897795591184,
+        "option_5": 0.028356713426853707,
+        "option_6": 0.04839679358717435,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

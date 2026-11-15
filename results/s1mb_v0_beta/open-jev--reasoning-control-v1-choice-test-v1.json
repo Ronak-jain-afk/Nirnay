@@ -1,0 +1,521 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--reasoning-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__reasoning-control-v1",
+    "split": "test",
+    "case_count": 33,
+    "decision_count": 33,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:19:23+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 33,
+    "expected": 33,
+    "succeeded": 33,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.5151515151515151,
+    "uniform_accuracy_baseline": 0.3237373737373738,
+    "fixed_answer_accuracy_baseline": 0.3939393939393939,
+    "baseline_adjusted_skill": 0.2,
+    "baseline_adjusted_score": 0.2
+  },
+  "elapsed_seconds": 9.533972700002778,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:5:decision": "ed2eace0dcb55e3c728cbcc2f04bcc236455b7bedbfeb15184bbde28589dda46",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:14:decision": "418e13b7d833676a26706da7ffd6ee4a8b38834b2bc2a959c2903932e067ce2d",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:157:decision": "ee3257768d00bfb09bc3275d2b08b491a3161535f8963669dfabb8e6fa7b0100",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:184:decision": "069efc22bd71184e076a1a4a21342435ffd17d46d7939ebef6b17a0d4a1a8d57",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:239:decision": "7bdabb1e57826ca65f9b37760bf43f063f9373c7bee3017a2a5c7293d5c87c71",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:266:decision": "5ecf50845aceeb2db28bdba6fc011ada1808c441f4d170d9cd8a680711241815",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:344:decision": "26270ebac910d9eb7acbfca3e62ce51ffd4939b4a6fca0f3c1ac5110429fe6e9",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:364:decision": "f4eeed6c3c944fd188ccc997b751a513e407d77eb0ae87b780ba81da89197efd",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:414:decision": "27684150da78b63dce41709d2e96c77e25b7e803193419668b82e9cfe73f6630",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:446:decision": "dc73e60eccaf3fbb5a4372fec657cacae583fb85bee8ea5fce88bf894b4a671a",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:638:decision": "3ece64530e90d9c4b1799c8aae6a056a68fc15f55039ebb5df31e87e095e7f18",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:694:decision": "7985098b0a2c6c87bcb5abd6a094914ceeb54c46d91e6ed416f7157f057077e8",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:736:decision": "51cedb04221f022f09af7b554ded52d13fb2153bc3f4bf79b39f5c4032640044",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:834:decision": "176289da1b9a9a921b24808afe093f611a49d058e8b5c527c1994b3e25a7219a",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:922:decision": "e0881eba273b99c17687a5120f5244a893e5b34458d23b670b8307976f12adb0",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:945:decision": "89cdece3cc642836b842127097cbc1fefa53b4ce3688411cac711ebb1d8fbee9",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1095:decision": "63fe699a6b9661ac007b0c27c613c9a51028e5e8acbe9b965fe0cb5004243884",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1172:decision": "3bc1920b79047b492d6dafab289b719e83f57d501c004f4610c4dae9e5494d33",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1349:decision": "24dcb54eebdf75f610a4a404f758c4ae9dbb71efc9971ff11ec7861df768c3ae",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1415:decision": "d9a85f96e7c51efc4835877a7a11986d79e902024beb264daa9bfad7a6e7efb1",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1457:decision": "c1ef5652619c5656fb53a65a719c8b8f713c9d8a313058d14db217b2d81040bb",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1485:decision": "e5a8ddebfc52674c0a5c7649a06e709a68ca3fcc377d817fdd44475052a5c818",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1499:decision": "2467dc3e51837dbf77187b0ceb3bef178281973faa2f44e999d007211f64bf79",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1514:decision": "4230edb325bed4da58ed6f2af3444d44afc5c237b0577815f0177f556903593a",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1639:decision": "b0aa46ad680e39de1fb9d41c76e3b84a14c5d089ea94fd6f159c22dc7752f6b7",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1699:decision": "21f91527fbd19efbed572814f5629643a444ae54d67d09f3cc379c0ba58895af",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1778:decision": "375c516717b6678ae89ad04335ecc317b44ec310e1885fb2846523ddcf1d7894",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1842:decision": "92345089604832bd8f00e19b537f8dd6e6a86159591a28afa0a74c9b5e7b887b",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2325:decision": "e25a9af7cbe5ba6f74e033462cae6f3195aecbba4cbb5bc24733c36fd7b977aa",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2367:decision": "0df42c0da914ce5b09be864ac0fa86bf06d12077555929eff5167dd0ca1e665b",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2372:decision": "aa7483c77e4a0425e44b3ceb649e9819aa6541d1545320e25c4ec956afc95b04",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2423:decision": "225eefe43fdefd2e71b89bf2057b2fab5076ea3f5d127f073657c9b76d8b2736",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2479:decision": "95f7961fdfdc31ca4a6d1199049d0a51f7c5301b5c9cb1447df82c825f497b6d"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4224,
+      "output_tokens": 33,
+      "requests": 33,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:5:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.998801438274071,
+        "option_1": 9.988014382740711e-05,
+        "option_2": 0.00029964043148222126,
+        "option_3": 9.988014382740711e-05,
+        "option_4": 0.0006991610067918498
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:14:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5195,
+        "option_1": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:157:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2656,
+        "option_1": 0.2383,
+        "option_2": 0.2695,
+        "option_3": 0.2266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:184:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4316431643164316,
+        "option_1": 0.2002200220022002,
+        "option_2": 0.19431943194319432,
+        "option_3": 0.17381738173817382
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:239:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.15445445445445444,
+        "option_1": 0.6178178178178177,
+        "option_2": 0.22772772772772773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:266:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4883,
+        "option_1": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:344:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1504,
+        "option_1": 0.6211,
+        "option_2": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:364:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4961,
+        "option_1": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:414:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2051,
+        "option_1": 0.5664,
+        "option_2": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:446:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0021014710297208045,
+        "option_1": 0.0011007705393775644,
+        "option_2": 0.9889922946062244,
+        "option_3": 0.007805463824677274
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:638:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2025050100200401,
+        "option_1": 0.5675350701402806,
+        "option_2": 0.22995991983967937
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:694:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1974974974974975,
+        "option_1": 0.5786786786786787,
+        "option_2": 0.22382382382382385
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:736:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1780561122244489,
+        "option_1": 0.30140280561122246,
+        "option_2": 0.5205410821643286
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:834:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4766,
+        "option_1": 0.2109,
+        "option_2": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:922:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0009992006394884093,
+        "option_1": 0.0025979216626698643,
+        "option_2": 0.00019984012789768188,
+        "option_3": 0.9953037569944045,
+        "option_4": 0.0008992805755395684
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:945:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4805,
+        "option_1": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1095:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2676,
+        "option_1": 0.2324,
+        "option_2": 0.2812,
+        "option_3": 0.2188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1172:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2692307692307692,
+        "option_1": 0.23806193806193804,
+        "option_2": 0.2829170829170829,
+        "option_3": 0.20979020979020976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1349:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0054081121682523796,
+        "option_1": 0.00020030045067601405,
+        "option_2": 0.00020030045067601405,
+        "option_3": 0.9936905358037056,
+        "option_4": 0.0005007511266900351
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1415:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1883116883116883,
+        "option_1": 0.30049950049950047,
+        "option_2": 0.5111888111888112
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1457:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.25587441255874416,
+        "option_1": 0.208979102089791,
+        "option_2": 0.5351464853514649
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1485:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.18161816181618162,
+        "option_1": 0.29492949294929494,
+        "option_2": 0.5234523452345234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1499:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.25615615615615617,
+        "option_1": 0.216016016016016,
+        "option_2": 0.5278278278278278
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1514:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.22285599919943963,
+        "option_1": 0.03592514760332233,
+        "option_2": 0.0337236065245672,
+        "option_3": 0.7074952466726708
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1639:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4766,
+        "option_1": 0.2148,
+        "option_2": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1699:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.015919102923508212,
+        "option_1": 0.006407689227072487,
+        "option_2": 0.6961353624349219,
+        "option_3": 0.2815378454144974
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1778:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5156,
+        "option_1": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1842:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2598,
+        "option_1": 0.2129,
+        "option_2": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2325:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4824,
+        "option_1": 0.2383,
+        "option_2": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2367:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4785478547854785,
+        "option_1": 0.24022402240224022,
+        "option_2": 0.2812281228122812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2372:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1289,
+        "option_1": 0.3086,
+        "option_2": 0.0322,
+        "option_3": 0.0938,
+        "option_4": 0.0654,
+        "option_5": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2423:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.48001998001998003,
+        "option_1": 0.2097902097902098,
+        "option_2": 0.31018981018981023
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2479:decision",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4824,
+        "option_1": 0.2383,
+        "option_2": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

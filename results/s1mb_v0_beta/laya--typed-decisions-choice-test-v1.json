@@ -1,0 +1,2151 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "laya--typed-decisions-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/laya__typed_decisions",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 148,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-15T08:50:23+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 148,
+    "succeeded": 148,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.3197399662162162,
+    "uniform_accuracy_baseline": 0.23445945945945923,
+    "fixed_answer_accuracy_baseline": 0.2623439054054054,
+    "baseline_adjusted_skill": 0.0778086987030926,
+    "baseline_adjusted_score": 0.0778086987030926
+  },
+  "elapsed_seconds": 13.247837000002619,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "typed_decisions:all:test:3": "71733ef003235a0b063108dae7660591e981a7ebca8782d00f745fc447677152",
+      "typed_decisions:all:test:14": "ef940eabf7633c3008a7cc882ea8e59d93c8574b09d0e299dc51f98f3a0e8571",
+      "typed_decisions:all:test:22": "0cad1812edc7fbdec85b497e917aa78c9a9aa768e2e3de80e65a6e5bdb829281",
+      "typed_decisions:all:test:31": "72b35b9efed50748444527e81540fe1b427f714fc26aa656fdd7a0e6210eb6e5",
+      "typed_decisions:all:test:32": "e09520612e6bb769d11d316321da99a54d8fede83cfa7110cd5c760e654ee0db",
+      "typed_decisions:all:test:37": "bb1306011080111342baf2dc95c6f28af431e9d0d84fc67717a2811aabdfe03f",
+      "typed_decisions:all:test:39": "91d6890f3c7a1a09cef5207e52c750de31c75cc8db2e4b2e0117197c3b7cc87d",
+      "typed_decisions:all:test:40": "8315ab59f202991eedb75a435217fb2ea9ee618afd2513947ad8452fca727e75",
+      "typed_decisions:all:test:48": "2e2e9c7d65087d8eb2c3585e489144da540d4aeec92ff5d7b78b834493a11f15",
+      "typed_decisions:all:test:51": "8d9c8b8338cfecf0886b5be9e07c31d2df87dd63839f633230eac368d61df206",
+      "typed_decisions:all:test:53": "86fba45cb87a02f9f32dde686fc80a5d2f2cd3dafac51192a69255a0d2f4e65c",
+      "typed_decisions:all:test:55": "0458d4c65818cf7836068b55d5b8833faa225b9637de78ddaf5c289f3bc02d64",
+      "typed_decisions:all:test:56": "546218c7a0b9c5af68a486d2673338fae333ad914ee878ddffe9ec85f77d5bdd",
+      "typed_decisions:all:test:57": "3e976ae92efee3739de76f9585db8e4fdfabaeaccad4430a29bfc14bd92ab6b8",
+      "typed_decisions:all:test:61": "0ef93d093ef0c7d72350061501899db4ca1ea2f5a55badfc2102d61d7e962ceb",
+      "typed_decisions:all:test:64": "c75b7d4b678ff40d5c265b71360e724f4339ac29237e1797a0f6fef36690c597",
+      "typed_decisions:all:test:69": "2cd550f890c6c32efc1da7ff4a87c29e3fab65f53ccb3f05571c635a142a58a7",
+      "typed_decisions:all:test:78": "8ea0db9a415e0a496234bd625eb3c68c7a72d194b86244813e0cd33d7428417e",
+      "typed_decisions:all:test:80": "cf6eee2ea34014dd332b0f2fcfbbdd74a492907154d663f0d9db9896d6cbf884",
+      "typed_decisions:all:test:82": "60e8308f5cf9bf42271c950f9e2cb690dbaef9849695ef912fe517c652fe7e87",
+      "typed_decisions:all:test:84": "cb674eb666df5a2f9730849f2e77cc65f2a1ffabaca5a7979f6bde0c6b021798",
+      "typed_decisions:all:test:86": "e854c461843e071fe10ae487610ae5dcc3414ad2ca7faede452d0d1ae1c79598",
+      "typed_decisions:all:test:92": "b2106e1e6ca8406852c1d5fe34a7f587a0cef8eecc250a5d18ef36e83429b86e",
+      "typed_decisions:all:test:97": "db419640ac7898de24a30b1f9c1b3e8455f3cc685da62340ee81fe4d978dde74",
+      "typed_decisions:all:test:98": "e6b57342805c1f5dbb903e8909f8106a1d04dec27ccedabe5b79b119dbd366c6",
+      "typed_decisions:all:test:107": "dfa7ebba9200ea9c391b45c1e94975d7de57d8fbeed926ba9608f8e6db7bb0dd",
+      "typed_decisions:all:test:108": "fbfbb59e10b733dfb19963d81aee45c6f59328c65f8b9f1bc7881494e39a5ccf",
+      "typed_decisions:all:test:113": "58f12aa96ba8b53c4bcc05c05889c82f9b27b1412bc6b40b316241e487aaa513",
+      "typed_decisions:all:test:116": "9855a6b9df2f637d11aed30ba190b6f6663ce21ce9d3ddaef5d06fc7be42e1db",
+      "typed_decisions:all:test:120": "f23bd8dc75beeb9a00fa81d9add4bf32c985ce75aceef34b8d5a46f98c86e10b",
+      "typed_decisions:all:test:121": "393e0f16220a3d8f25c3c82fdf15fa8696f84c893fbba59b6613c0e0af9e46da",
+      "typed_decisions:all:test:126": "1798309ef7cef7a6883d1ff695dd87a0db3f2f20ef7b4cdbe4ebaea1978adb27",
+      "typed_decisions:all:test:132": "44bc83d20be128c91567786f76ff2313aa600d19b49ce06424a5c578d33f3e9b",
+      "typed_decisions:all:test:133": "cc13e5885b3de5040d0d64631c9fa39f2e0292f8a6bdab5a05ac5ef18265d53a",
+      "typed_decisions:all:test:140": "3a430d5581ad65e9d3eeca6679d89506748a03e39a4c93a1ffd1a4b12e081719",
+      "typed_decisions:all:test:155": "81b4734bc4de066659397cc6d5a657b21e1d2892d26ab3b8f3a515c9c1473517",
+      "typed_decisions:all:test:160": "dca004c0654d78b83af50cdaaf8071379f843afcb5d15a3fa2045bb18feacf39",
+      "typed_decisions:all:test:166": "e5317906257226b5080ed9a68ee8ac19c981e8a47f0c1b52b0b9b65276821628",
+      "typed_decisions:all:test:167": "73fd25e7590db544f2794d33b5a8eec7d5c359fa4470872ed0f1835514f09edc",
+      "typed_decisions:all:test:173": "b2a4ce459845dedbe3c46f829dd25317ffbe4d99b8bd9a0d2441658e532274b5",
+      "typed_decisions:all:test:177": "83b6bf02ba5a0de8e696a733bf383419e0c7be597a01e2f69d31584acdfe2da2",
+      "typed_decisions:all:test:180": "408d6caf9bb12efdbe8d89a80a7d53fe0cccf4a79f9ed76a8894dd77b3860564",
+      "typed_decisions:all:test:181": "5fce2d36573c2339e7a9da459ff5b846c9bf07a170b83325d6c23709488af6d9",
+      "typed_decisions:all:test:182": "406f8bfdcf5b4c86ee6bdcb117c6c8aadf310ead21688b87f7dcaad723e53dd5",
+      "typed_decisions:all:test:184": "db49e26b204ea56434480ab5d136eb42678d914f318b6aeacb50b714a5e52e55",
+      "typed_decisions:all:test:186": "32413fa24fc859801e0a0b364d473cd236a382910e4d4c4c8648e75fe7b2a15b",
+      "typed_decisions:all:test:196": "9d73be74d8a83992002f01819334a4bb0466d5bb93042567d6cf3d39a102ae50",
+      "typed_decisions:all:test:199": "9ef8681955265ca07f930af017fcb36339d9352858b711da2952cfa65136d97d",
+      "typed_decisions:all:test:204": "4aee72f17d9dce72a5793d87513273a1335f35316f82d2e235d6ba6f19f5a57a",
+      "typed_decisions:all:test:205": "27cedfa9bb6ef723956a2fa8c5b3e4c4ac665454bd3b682f07b4da8ce4acdc8d",
+      "typed_decisions:all:test:206": "e9ed69b6d6ec703637d62a95638125461f84513cd743aa2d759dcbc926cbab7a",
+      "typed_decisions:all:test:212": "28d5a5ddb74222cd4b2effc53b22ef02940f68c3fad3960400e46ffad75d830f",
+      "typed_decisions:all:test:218": "1edb4c369232d0dfae7e4cbeab8577c287515923a0c2fc34b13046a4fe506c5e",
+      "typed_decisions:all:test:219": "ff9df0358be447467bc5cb41c6a3a7ffc70b04b1a60e3a7afe138db3d8204ee2",
+      "typed_decisions:all:test:223": "f41878bca4e0d1c66e6fcfe87404cca477037483e8db9bab57d1fccf474d22c1",
+      "typed_decisions:all:test:226": "c53a1dc26637ada2f67312eb1a58f761c84ec54a6af2931c85da2333b410063a",
+      "typed_decisions:all:test:228": "0b78f9e2c65a08db68c7beec71176bb8a3c8cb6c2cf7184668594bbb3bc3bddd",
+      "typed_decisions:all:test:230": "6bd08ba14f694bd7a4ca387935a0aba496a1e213d2de43f27d9178eec8af7765",
+      "typed_decisions:all:test:232": "1538f50458e9f95f7fc9d6be398f0b4779d5ed6a1b0fe8be8112b7b2cbf6e78f",
+      "typed_decisions:all:test:238": "6b4ab717412b5141d60adc353cc277ccdc7fbfa968328852dd1c64f6ab77ddc1",
+      "typed_decisions:all:test:240": "5cfd11a1a767f97f3a8e15ab72eced59abe7cbae2925256ca1bdce4df695676c",
+      "typed_decisions:all:test:241": "42040e7d276ccaf3c5b967527a5287de248f06b563f01ad1b6b6c3bc790bce68",
+      "typed_decisions:all:test:243": "3a7a6e5d4434fb8f4c6d23559475f69863791bdfc32c883e0862f6e0d04a8c2b",
+      "typed_decisions:all:test:249": "cb89e3b3341dec1709b87927ad02a6e8c2c7e295db6f14d60d3ee9b299e64eac",
+      "typed_decisions:all:test:252": "fdc0a208acf0cd4a10b390e57e844dab68a4b6aec1b8cc46ede33dddc8d25ac9",
+      "typed_decisions:all:test:253": "0dd73920940f2397a959b1b6696f1f25f7bfa7b088cbf8abdd220df61050f30b",
+      "typed_decisions:all:test:257": "bdb48524b3dda77ca6e5ba58d7a8e85a1f34fea3f650674b740652b3040f217e",
+      "typed_decisions:all:test:259": "aa2544ecc95818f2768b86f1f231a1ca428ba162580cfdf0838df6d35405f367",
+      "typed_decisions:all:test:272": "8a8a0296afc5109e89f85d698f35468485e0143b526998c1f1238facec6ac8b6",
+      "typed_decisions:all:test:281": "e1ba0ff9512b904086f1ee5e51a5f33a26be346f9b3cbd0c5bc44a54b86f2719",
+      "typed_decisions:all:test:283": "3cee94b51cf24562a78b45819d9d1c5d72f36c58018af48202047fc310e1f2ba",
+      "typed_decisions:all:test:287": "e7a3b442110ff787dc6e398b4692771ee5d9623ef87144b904129ad1fb538a49",
+      "typed_decisions:all:test:291": "3a9f1b8a976f8cbd886e5d515a5397eac38d3b83ce788e95d04c0950a67e1126",
+      "typed_decisions:all:test:292": "2f9ea79cca6f2fb3ecc567a54129a58d5c639ba62748535e90cf043da6d6dee8",
+      "typed_decisions:all:test:293": "f9f1e7aedf9b299550a4a56f90517932fce8996e07f80324d065f95c4eca326c",
+      "typed_decisions:all:test:298": "4ec51a54c5f1495d325ff489dab63abdf277eac81ed43b0ddd4ed56715bc98c4",
+      "typed_decisions:all:test:304": "f6d93145728d2a9443274431adc11e7ea0997aa5aba21f4574ba2f042044dfc4",
+      "typed_decisions:all:test:305": "1c22d78ade995ffaef669159abe75dde9af02c15e127da300168f4eb8fc17b8d",
+      "typed_decisions:all:test:306": "aa1b58451203ff567553787e1245bae256b4565b941718838bd6871a6ed67951",
+      "typed_decisions:all:test:307": "c1873936729a5c9affb8692f94c3c42b8ceee1a160a374add22ed7fa16107b74",
+      "typed_decisions:all:test:309": "d777237debc901330bf8bf05381404b0877e394762003bc2d6dfce2587055055",
+      "typed_decisions:all:test:313": "28abfd94bb8b1091245f50d6d786e4ea258461a75717a2bd222ffc4431e944e6",
+      "typed_decisions:all:test:314": "26500f06a3547d936738b796d129058bda0089a77a3c8359647921bf6f21b4b9",
+      "typed_decisions:all:test:317": "96ef247a806cd2b3c0e8b58d8fe924ab4a3ba29397549881f149baec5a7f291d",
+      "typed_decisions:all:test:321": "78c74add50b0f64648b66b170e9c5492b549a34af932adfb73778eed5dd4d18c",
+      "typed_decisions:all:test:322": "6d88bfab7af547c21ed8d6243da665dbfa6bf4adafda80243f48aeec246f0dc5",
+      "typed_decisions:all:test:323": "20e0cb3b42cc15064ea7ff26f2ee45e96fd7965abbbf76061b03ca1510153bcb",
+      "typed_decisions:all:test:327": "afa176249ab34e451e65acace5c4ce9406a924db97f2dfbc7fa0de3c4277e04a",
+      "typed_decisions:all:test:328": "6698bf68929f3d9183bf6234ed9551ffdb658a2026f7528876b29797b8695fca",
+      "typed_decisions:all:test:337": "f017373828777d99532270d6d31326935188b0e0d09c73db70857b77f40790b7",
+      "typed_decisions:all:test:338": "42e16478e7de73330868cd934d7d736d44535c0b899d986a273884ad69442dcb",
+      "typed_decisions:all:test:349": "0201d024ecadd189257f2d4702896754f37157641867d4ed76411c2728150151",
+      "typed_decisions:all:test:355": "d8bf8785409f292f236b562e4800d4e6c62e695b9284ca4038b14f2634c3952f",
+      "typed_decisions:all:test:356": "03d5fc5d378e75003a9e96d82deff9baffb97f4ecd99f455d4bf4a2c35a0618b",
+      "typed_decisions:all:test:360": "f4413cdc2ad357aff9d088bbdd56e7062be4225d2e038c7e2a844dc621631cd7",
+      "typed_decisions:all:test:363": "613f616e06b55803e09699755a96c701196e2aa90440f76c4e9ca9c81f618222",
+      "typed_decisions:all:test:372": "5779659893ff4845e0384324e023ba05f1cb42ddb0806f932e1ceedb0b0604a6",
+      "typed_decisions:all:test:374": "e664f9c1dfb9dbb663bb8f9e4ccff2227a518b5b81af5e903f5e0b882443c4db",
+      "typed_decisions:all:test:378": "3c94adf233d0fdb1580b657c8026057f81d7db674f8371b205abd1747cf7fe40",
+      "typed_decisions:all:test:391": "35b997ad740e545226df5e26329bb48d76bc3db2ce9ffd08dc342223c0695fd6"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 148,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "typed_decisions:all:test:3",
+      "question_id": "action",
+      "probabilities": {
+        "stop": 0.3714342908617756,
+        "observe": 0.13492142928635772,
+        "continue": 0.15543989590631568,
+        "human_review": 0.33820438394555097
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:3",
+      "question_id": "outcome",
+      "probabilities": {
+        "harmful": 0.40250125062531267,
+        "failure": 0.31465732866433216,
+        "success": 0.06693346673336668,
+        "partial": 0.2159079539769885
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:14",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.31671671671671675,
+        "continue": 0.13193193193193192,
+        "stop": 0.25415415415415415,
+        "observe": 0.29719719719719717
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:14",
+      "question_id": "outcome",
+      "probabilities": {
+        "harmful": 0.3790895447723862,
+        "failure": 0.32436218109054527,
+        "success": 0.06303151575787894,
+        "partial": 0.2335167583791896
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:22",
+      "question_id": "action",
+      "probabilities": {
+        "stop": 0.46722049844860375,
+        "continue": 0.14272845561004904,
+        "human_review": 0.2179961965769192,
+        "observe": 0.172054849364428
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:22",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.5516274411617426,
+        "harmful": 0.18187280921382076,
+        "success": 0.06309464196294443,
+        "partial": 0.20340510766149225
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:31",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.17207207207207206,
+        "stop": 0.2873873873873874,
+        "continue": 0.1944944944944945,
+        "human_review": 0.34604604604604605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:31",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.4060375849660136,
+        "success": 0.12345061975209916,
+        "harmful": 0.20111955217912836,
+        "partial": 0.26939224310275894
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:32",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.1592,
+        "human_review": 0.375,
+        "observe": 0.1299,
+        "stop": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:32",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.2656,
+        "success": 0.1582,
+        "failure": 0.3672,
+        "harmful": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:37",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.12456228114057027,
+        "continue": 0.20520260130065032,
+        "human_review": 0.3380690345172586,
+        "stop": 0.33216608304152073
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:37",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.19068602904356538,
+        "success": 0.10706059088632949,
+        "harmful": 0.2523785678517777,
+        "failure": 0.4498748122183275
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:39",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.1895,
+        "stop": 0.2676,
+        "continue": 0.2148,
+        "human_review": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:39",
+      "question_id": "outcome",
+      "probabilities": {
+        "success": 0.16585073433909484,
+        "failure": 0.3687681087021681,
+        "partial": 0.26146468178639226,
+        "harmful": 0.2039164751723449
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:40",
+      "question_id": "action",
+      "probabilities": {
+        "stop": 0.3613,
+        "continue": 0.1523,
+        "human_review": 0.2676,
+        "observe": 0.2188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:40",
+      "question_id": "outcome",
+      "probabilities": {
+        "harmful": 0.32259033129816833,
+        "success": 0.16224602141927735,
+        "failure": 0.24732259033129816,
+        "partial": 0.26784105695125615
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:48",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.16906906906906907,
+        "human_review": 0.38708708708708706,
+        "continue": 0.2014014014014014,
+        "stop": 0.24244244244244245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:48",
+      "question_id": "outcome",
+      "probabilities": {
+        "harmful": 0.351424287856072,
+        "failure": 0.3201399300349825,
+        "success": 0.07956021989005498,
+        "partial": 0.24887556221889057
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:51",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.33006699330066996,
+        "stop": 0.3144685531446855,
+        "continue": 0.1708829117088291,
+        "observe": 0.1845815418458154
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:51",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.1885,
+        "success": 0.1279,
+        "harmful": 0.2832,
+        "failure": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:53",
+      "question_id": "action",
+      "probabilities": {
+        "stop": 0.36523652365236525,
+        "continue": 0.1562156215621562,
+        "human_review": 0.25392539253925395,
+        "observe": 0.22462246224622462
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:53",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.26952695269526955,
+        "success": 0.1689168916891689,
+        "failure": 0.3574357435743574,
+        "harmful": 0.20412041204120412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:55",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.34573457345734576,
+        "observe": 0.1855185518551855,
+        "continue": 0.1445144514451445,
+        "stop": 0.3242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:55",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.38460769615192403,
+        "success": 0.11564217891054474,
+        "harmful": 0.20889555222388806,
+        "partial": 0.2908545727136432
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:56",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.2380619380619381,
+        "human_review": 0.3355644355644356,
+        "stop": 0.18831168831168835,
+        "observe": 0.2380619380619381
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:56",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.4199,
+        "success": 0.1328,
+        "harmful": 0.1836,
+        "partial": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:57",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.30632430812268957,
+        "continue": 0.18633230092916378,
+        "observe": 0.13657708062743532,
+        "stop": 0.3707663103207114
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:57",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.2854569112200981,
+        "success": 0.15543989590631568,
+        "failure": 0.34010609548593734,
+        "harmful": 0.2189970973876489
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:61",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.1300170153137824,
+        "human_review": 0.35972375137623863,
+        "stop": 0.326493844460014,
+        "continue": 0.183765388849965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:61",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.42537462537462534,
+        "harmful": 0.31218781218781216,
+        "success": 0.05174825174825174,
+        "partial": 0.21068931068931068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:64",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.2175606832484267,
+        "observe": 0.20097892318449703,
+        "human_review": 0.29267805414044545,
+        "stop": 0.2887823394266307
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:64",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.5428371488553434,
+        "partial": 0.1845446366090173,
+        "harmful": 0.21183644906528043,
+        "success": 0.06078176547035889
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:69",
+      "question_id": "action",
+      "probabilities": {
+        "observe": 0.10104947526236882,
+        "stop": 0.3201399300349825,
+        "continue": 0.11224387806096951,
+        "human_review": 0.4665667166416792
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:69",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.1904952476238119,
+        "success": 0.11575787893946972,
+        "harmful": 0.31465732866433216,
+        "failure": 0.3790895447723862
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:78",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.30049950049950047,
+        "continue": 0.13366633366633365,
+        "stop": 0.2868131868131868,
+        "observe": 0.279020979020979
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:78",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.4082,
+        "success": 0.1084,
+        "partial": 0.165,
+        "harmful": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:80",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.30049950049950047,
+        "observe": 0.1531468531468531,
+        "continue": 0.16583416583416583,
+        "stop": 0.3805194805194805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:80",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.45074925074925076,
+        "success": 0.1033966033966034,
+        "harmful": 0.19710289710289713,
+        "partial": 0.24875124875124877
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:82",
+      "question_id": "action",
+      "probabilities": {
+        "human_review": 0.3343343343343343,
+        "observe": 0.18178178178178178,
+        "continue": 0.17887887887887885,
+        "stop": 0.305005005005005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:82",
+      "question_id": "outcome",
+      "probabilities": {
+        "success": 0.18341658341658346,
+        "harmful": 0.3121878121878122,
+        "failure": 0.2614385614385615,
+        "partial": 0.24295704295704298
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:84",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.16676652686239266,
+        "stop": 0.35300579189135206,
+        "observe": 0.09796285200718993,
+        "human_review": 0.38226482923906524
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:84",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.18068193180681932,
+        "success": 0.14358564143585642,
+        "harmful": 0.33196680331966805,
+        "failure": 0.3437656234376562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:86",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.1299,
+        "stop": 0.3066,
+        "observe": 0.1377,
+        "human_review": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:86",
+      "question_id": "outcome",
+      "probabilities": {
+        "partial": 0.24344344344344343,
+        "success": 0.15245245245245245,
+        "failure": 0.37147147147147147,
+        "harmful": 0.23263263263263262
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:92",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.19157241517365628,
+        "human_review": 0.3636272645380843,
+        "observe": 0.14763286958262437,
+        "stop": 0.29716745070563505
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:92",
+      "question_id": "outcome",
+      "probabilities": {
+        "success": 0.20487463789831184,
+        "failure": 0.2848866247128159,
+        "harmful": 0.2634102487264009,
+        "partial": 0.24682848866247123
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:97",
+      "question_id": "action",
+      "probabilities": {
+        "continue": 0.16126126126126125,
+        "stop": 0.2912912912912913,
+        "human_review": 0.30500500500500505,
+        "observe": 0.24244244244244245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:97",
+      "question_id": "outcome",
+      "probabilities": {
+        "harmful": 0.3494252873563219,
+        "failure": 0.3494252873563219,
+        "success": 0.06786606696651674,
+        "partial": 0.2332833583208396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:98",
+      "question_id": "action",
+      "probabilities": {
+        "stop": 0.3828,
+        "human_review": 0.2793,
+        "continue": 0.1094,
+        "observe": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:98",
+      "question_id": "outcome",
+      "probabilities": {
+        "failure": 0.4574574574574575,
+        "harmful": 0.2951951951951952,
+        "partial": 0.15835835835835838,
+        "success": 0.08898898898898899
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:107",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.08490660273698931,
+        "answer_directly": 0.21656178203975623,
+        "escalate_to_human": 0.2302467285985416,
+        "execute_refund": 0.3921686145240235,
+        "close_no_action": 0.07611627210068923
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:107",
+      "question_id": "category",
+      "probabilities": {
+        "billing": 0.3769246150769846,
+        "delivery": 0.013097380523895221,
+        "account": 0.007498500299940012,
+        "technical": 0.14747050589882024,
+        "refund": 0.45500899820035995
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:108",
+      "question_id": "action",
+      "probabilities": {
+        "escalate_to_human": 0.29314657328664334,
+        "execute_refund": 0.18959479739869936,
+        "close_no_action": 0.11475737868934467,
+        "request_information": 0.25012506253126565,
+        "answer_directly": 0.15237618809404702
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:108",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.05023971234518577,
+        "technical": 0.47792648821414296,
+        "account": 0.045145825009988004,
+        "billing": 0.36086695964842186,
+        "refund": 0.06582101478226128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:113",
+      "question_id": "action",
+      "probabilities": {
+        "answer_directly": 0.19620189905047478,
+        "close_no_action": 0.20199900049975014,
+        "escalate_to_human": 0.367016491754123,
+        "execute_refund": 0.047376311844077965,
+        "request_information": 0.18740629685157423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:113",
+      "question_id": "category",
+      "probabilities": {
+        "account": 0.8411458333333334,
+        "billing": 0.038161057692307696,
+        "refund": 0.016125801282051284,
+        "delivery": 0.029747596153846156,
+        "technical": 0.07481971153846155
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:116",
+      "question_id": "action",
+      "probabilities": {
+        "close_no_action": 0.15214785214785215,
+        "answer_directly": 0.17272727272727276,
+        "execute_refund": 0.06443556443556445,
+        "escalate_to_human": 0.4995004995004996,
+        "request_information": 0.1111888111888112
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:116",
+      "question_id": "category",
+      "probabilities": {
+        "refund": 0.09755366949575635,
+        "billing": 0.04383424862705941,
+        "technical": 0.032651023464802795,
+        "delivery": 0.744982526210684,
+        "account": 0.08097853220169746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:120",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.3362698968865752,
+        "close_no_action": 0.11632796075683251,
+        "answer_directly": 0.23165482030233256,
+        "execute_refund": 0.08409250175192712,
+        "escalate_to_human": 0.23165482030233256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:120",
+      "question_id": "category",
+      "probabilities": {
+        "account": 0.08243405275779375,
+        "technical": 0.7962629896083133,
+        "refund": 0.029076738609112706,
+        "billing": 0.04146682653876898,
+        "delivery": 0.05075939248601118
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:121",
+      "question_id": "action",
+      "probabilities": {
+        "close_no_action": 0.12393803098450776,
+        "execute_refund": 0.08245877061469266,
+        "escalate_to_human": 0.263568215892054,
+        "request_information": 0.33773113443278363,
+        "answer_directly": 0.19230384807596201
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:121",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.03642549784849395,
+        "billing": 0.07475232662864005,
+        "account": 0.08355849094366057,
+        "technical": 0.7193035124587212,
+        "refund": 0.08596017212048435
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:126",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.20420210105052525,
+        "answer_directly": 0.17688844422211106,
+        "escalate_to_human": 0.2696348174087044,
+        "close_no_action": 0.11085542771385692,
+        "execute_refund": 0.2384192096048024
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:126",
+      "question_id": "category",
+      "probabilities": {
+        "technical": 0.019817836052447205,
+        "account": 0.012611350215193674,
+        "delivery": 0.02342107897107397,
+        "refund": 0.5082574316885197,
+        "billing": 0.4358923030727655
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:132",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.17952047952047953,
+        "escalate_to_human": 0.3570429570429571,
+        "execute_refund": 0.1932067932067932,
+        "answer_directly": 0.1121878121878122,
+        "close_no_action": 0.15804195804195806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:132",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.09679679679679679,
+        "billing": 0.5825825825825826,
+        "technical": 0.07767767767767768,
+        "account": 0.0952952952952953,
+        "refund": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:133",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.30503553909300235,
+        "answer_directly": 0.16127740514566022,
+        "close_no_action": 0.16127740514566022,
+        "execute_refund": 0.09480428471318451,
+        "escalate_to_human": 0.27760536590249274
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:133",
+      "question_id": "category",
+      "probabilities": {
+        "refund": 0.14763286958262437,
+        "technical": 0.37733960564508057,
+        "delivery": 0.13882494244820337,
+        "account": 0.06055449904914423,
+        "billing": 0.27564808327494744
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:140",
+      "question_id": "action",
+      "probabilities": {
+        "answer_directly": 0.2305,
+        "execute_refund": 0.1299,
+        "close_no_action": 0.2168,
+        "request_information": 0.1689,
+        "escalate_to_human": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:140",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.1902287940853232,
+        "technical": 0.12099110800279747,
+        "account": 0.18143670696373262,
+        "refund": 0.11709461484663801,
+        "billing": 0.3902487761015086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:155",
+      "question_id": "action",
+      "probabilities": {
+        "answer_directly": 0.1503248375812094,
+        "execute_refund": 0.2771614192903548,
+        "escalate_to_human": 0.31434282858570717,
+        "request_information": 0.07956021989005498,
+        "close_no_action": 0.17861069465267368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:155",
+      "question_id": "category",
+      "probabilities": {
+        "technical": 0.07964778867320393,
+        "delivery": 0.01981188713227937,
+        "account": 0.011306784070442265,
+        "billing": 0.7426455873524115,
+        "refund": 0.146587952771663
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:160",
+      "question_id": "action",
+      "probabilities": {
+        "execute_refund": 0.24787606196901552,
+        "escalate_to_human": 0.3494252873563219,
+        "request_information": 0.1835082458770615,
+        "answer_directly": 0.07566216891554224,
+        "close_no_action": 0.14352823588205899
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:160",
+      "question_id": "category",
+      "probabilities": {
+        "billing": 0.6682004601380415,
+        "technical": 0.05491647494248274,
+        "delivery": 0.015104531359407822,
+        "account": 0.10253075922776832,
+        "refund": 0.1592477743322997
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:166",
+      "question_id": "action",
+      "probabilities": {
+        "close_no_action": 0.14287145576595534,
+        "escalate_to_human": 0.3541729285642721,
+        "execute_refund": 0.15950305580603147,
+        "answer_directly": 0.15950305580603147,
+        "request_information": 0.18394950405770966
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:166",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.07763881940970487,
+        "refund": 0.05182591295647824,
+        "technical": 0.1299649824912456,
+        "account": 0.2579289644822411,
+        "billing": 0.48264132066033016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:167",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.4665667166416792,
+        "answer_directly": 0.13373313343328336,
+        "execute_refund": 0.08735632183908047,
+        "close_no_action": 0.15132433783108448,
+        "escalate_to_human": 0.16101949025487255
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:167",
+      "question_id": "category",
+      "probabilities": {
+        "account": 0.0966033966033966,
+        "billing": 0.15604395604395607,
+        "technical": 0.6204795204795205,
+        "delivery": 0.05414585414585415,
+        "refund": 0.07272727272727274
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:173",
+      "question_id": "action",
+      "probabilities": {
+        "escalate_to_human": 0.31278150335301774,
+        "answer_directly": 0.2218997097387649,
+        "close_no_action": 0.14372935642077872,
+        "request_information": 0.18666800120108099,
+        "execute_refund": 0.13492142928635772
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:173",
+      "question_id": "category",
+      "probabilities": {
+        "technical": 0.30315473209814725,
+        "delivery": 0.07090635953930896,
+        "billing": 0.11537305958938407,
+        "account": 0.1329994992488733,
+        "refund": 0.3775663495242864
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:177",
+      "question_id": "action",
+      "probabilities": {
+        "execute_refund": 0.15821582158215822,
+        "close_no_action": 0.1445144514451445,
+        "request_information": 0.2578257825782578,
+        "escalate_to_human": 0.21972197219721973,
+        "answer_directly": 0.21972197219721973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:177",
+      "question_id": "category",
+      "probabilities": {
+        "refund": 0.14145854145854148,
+        "account": 0.03736263736263737,
+        "delivery": 0.031968031968031975,
+        "billing": 0.5775224775224775,
+        "technical": 0.2116883116883117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:180",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.2354706411923577,
+        "escalate_to_human": 0.38881664499349805,
+        "answer_directly": 0.16705011503451037,
+        "execute_refund": 0.03090927278183455,
+        "close_no_action": 0.17775332599779933
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:180",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.3947763434404083,
+        "refund": 0.021214850395276694,
+        "billing": 0.02161513059141399,
+        "account": 0.08545982187531272,
+        "technical": 0.4769338536975883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:181",
+      "question_id": "action",
+      "probabilities": {
+        "execute_refund": 0.14174174174174176,
+        "answer_directly": 0.21991991991991994,
+        "close_no_action": 0.15055055055055055,
+        "request_information": 0.2814814814814815,
+        "escalate_to_human": 0.2063063063063063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:181",
+      "question_id": "category",
+      "probabilities": {
+        "refund": 0.1348,
+        "account": 0.2324,
+        "technical": 0.4199,
+        "billing": 0.0635,
+        "delivery": 0.1494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:182",
+      "question_id": "action",
+      "probabilities": {
+        "execute_refund": 0.18533320011989213,
+        "close_no_action": 0.10540513537815967,
+        "answer_directly": 0.20291737436307325,
+        "request_information": 0.26146468178639226,
+        "escalate_to_human": 0.2448796083524828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:182",
+      "question_id": "category",
+      "probabilities": {
+        "refund": 0.1172,
+        "account": 0.0208,
+        "delivery": 0.009,
+        "billing": 0.7656,
+        "technical": 0.0874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:184",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.2462231115557779,
+        "escalate_to_human": 0.35757878939469734,
+        "answer_directly": 0.19829914957478736,
+        "execute_refund": 0.064032016008004,
+        "close_no_action": 0.13386693346673337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:184",
+      "question_id": "category",
+      "probabilities": {
+        "account": 0.10696417850710427,
+        "delivery": 0.10556333800280168,
+        "refund": 0.19931959175505304,
+        "technical": 0.34000400240144085,
+        "billing": 0.24814888933360016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:186",
+      "question_id": "action",
+      "probabilities": {
+        "execute_refund": 0.21287871212878712,
+        "answer_directly": 0.22657734226577342,
+        "close_no_action": 0.10058994100589941,
+        "escalate_to_human": 0.31836816318368166,
+        "request_information": 0.14158584141585842
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:186",
+      "question_id": "category",
+      "probabilities": {
+        "billing": 0.7247880299251871,
+        "technical": 0.10763092269326684,
+        "refund": 0.026832917705735662,
+        "account": 0.024339152119700752,
+        "delivery": 0.11640897755610972
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:196",
+      "question_id": "action",
+      "probabilities": {
+        "escalate_to_human": 0.23228385807096452,
+        "close_no_action": 0.175712143928036,
+        "execute_refund": 0.37091454272863567,
+        "answer_directly": 0.07566216891554224,
+        "request_information": 0.1454272863568216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:196",
+      "question_id": "category",
+      "probabilities": {
+        "account": 0.126987301269873,
+        "refund": 0.4784521547845215,
+        "delivery": 0.006899310068993101,
+        "technical": 0.17578242175782424,
+        "billing": 0.21187881211878812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:199",
+      "question_id": "action",
+      "probabilities": {
+        "request_information": 0.2731268731268731,
+        "close_no_action": 0.17072927072927074,
+        "execute_refund": 0.1434565434565435,
+        "answer_directly": 0.21268731268731272,
+        "escalate_to_human": 0.2
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:199",
+      "question_id": "category",
+      "probabilities": {
+        "delivery": 0.2158,
+        "billing": 0.127,
+        "refund": 0.2773,
+        "account": 0.2031,
+        "technical": 0.1768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:204",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.1299,
+        "approve": 0.2314,
+        "hold": 0.3594,
+        "manual_review": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:205",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.2637,
+        "approve": 0.3535,
+        "manual_review": 0.2021,
+        "reject": 0.1807
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:206",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.18931068931068934,
+        "reject": 0.18931068931068934,
+        "approve": 0.1062937062937063,
+        "hold": 0.515084915084915
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:212",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.1300170153137824,
+        "manual_review": 0.23951556400760687,
+        "hold": 0.3948553698328496,
+        "approve": 0.23561205084576117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:218",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.15132433783108448,
+        "hold": 0.38650674662668666,
+        "approve": 0.11074462768615692,
+        "reject": 0.351424287856072
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:219",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.18766890201181063,
+        "approve": 0.2854569112200981,
+        "hold": 0.35582023821439296,
+        "reject": 0.17105394855369832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:223",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.2432,
+        "manual_review": 0.2617,
+        "approve": 0.1924,
+        "reject": 0.3027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:226",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.17752247752247755,
+        "hold": 0.46243756243756245,
+        "reject": 0.22537462537462538,
+        "approve": 0.13466533466533467
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:228",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.28735862276048446,
+        "reject": 0.172054849364428,
+        "approve": 0.21409268341507356,
+        "manual_review": 0.326493844460014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:230",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.2715,
+        "manual_review": 0.3945,
+        "reject": 0.2246,
+        "approve": 0.1094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:232",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.1386861313868613,
+        "approve": 0.10938906109389061,
+        "hold": 0.43945605439456054,
+        "manual_review": 0.3124687531246875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:238",
+      "question_id": "disposition",
+      "probabilities": {
+        "approve": 0.15921592159215922,
+        "manual_review": 0.21092109210921092,
+        "reject": 0.1982198219821982,
+        "hold": 0.4316431643164316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:240",
+      "question_id": "disposition",
+      "probabilities": {
+        "approve": 0.14763286958262437,
+        "manual_review": 0.25412871584425983,
+        "reject": 0.17986187568811932,
+        "hold": 0.4183765388849965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:241",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.1426,
+        "approve": 0.2617,
+        "reject": 0.1445,
+        "hold": 0.4512
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:243",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.1641,
+        "manual_review": 0.3633,
+        "approve": 0.1406,
+        "reject": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:249",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.2656,
+        "approve": 0.1094,
+        "reject": 0.25,
+        "manual_review": 0.375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:252",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.17373050779688126,
+        "hold": 0.3982407037185126,
+        "manual_review": 0.310375849660136,
+        "approve": 0.11765293882447021
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:253",
+      "question_id": "disposition",
+      "probabilities": {
+        "approve": 0.1338,
+        "hold": 0.4453,
+        "manual_review": 0.2461,
+        "reject": 0.1748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:257",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.14536916774902586,
+        "hold": 0.3024278149665301,
+        "approve": 0.40193825556998697,
+        "reject": 0.15026476171445696
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:259",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.2043043043043043,
+        "approve": 0.24634634634634636,
+        "manual_review": 0.3108108108108108,
+        "reject": 0.23853853853853854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:272",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.14642678660669664,
+        "manual_review": 0.2518740629685158,
+        "approve": 0.11564217891054474,
+        "hold": 0.48605697151424293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:281",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.19931959175505304,
+        "hold": 0.49439663798278966,
+        "reject": 0.2120272163297979,
+        "approve": 0.09425655393235943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:283",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.32813281328132815,
+        "manual_review": 0.31643164316431643,
+        "reject": 0.1777177717771777,
+        "approve": 0.1777177717771777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:287",
+      "question_id": "disposition",
+      "probabilities": {
+        "manual_review": 0.166,
+        "approve": 0.127,
+        "reject": 0.2031,
+        "hold": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:291",
+      "question_id": "disposition",
+      "probabilities": {
+        "approve": 0.14045954045954048,
+        "hold": 0.4194805194805195,
+        "reject": 0.200999000999001,
+        "manual_review": 0.2390609390609391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:292",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.10995497748874437,
+        "hold": 0.40250125062531267,
+        "manual_review": 0.2755377688844422,
+        "approve": 0.21200600300150077
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:293",
+      "question_id": "disposition",
+      "probabilities": {
+        "hold": 0.3040918163672655,
+        "approve": 0.16956087824351296,
+        "manual_review": 0.3040918163672655,
+        "reject": 0.2222554890219561
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:298",
+      "question_id": "disposition",
+      "probabilities": {
+        "reject": 0.2441,
+        "manual_review": 0.2285,
+        "hold": 0.4551,
+        "approve": 0.0723
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:304",
+      "question_id": "disposition",
+      "probabilities": {
+        "contain": 0.18143670696373268,
+        "close_benign": 0.1209911080027975,
+        "monitor": 0.23319012888400442,
+        "investigate": 0.46438205614946554
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:305",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.13657708062743532,
+        "contain": 0.1775402138075732,
+        "monitor": 0.12778499350584477,
+        "investigate": 0.5580977120591468
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:306",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.4244366549824737,
+        "close_benign": 0.11977966950425638,
+        "monitor": 0.12518778167250877,
+        "contain": 0.3305958938407611
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:307",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.07566216891554224,
+        "contain": 0.2186906546726637,
+        "monitor": 0.07316341829085458,
+        "investigate": 0.6324837581209396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:309",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.453054694530547,
+        "monitor": 0.23537646235376464,
+        "close_benign": 0.06839316068393161,
+        "contain": 0.24317568243175683
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:313",
+      "question_id": "disposition",
+      "probabilities": {
+        "contain": 0.15231523152315232,
+        "close_benign": 0.12991299129912992,
+        "monitor": 0.20212021202120214,
+        "investigate": 0.5156515651565157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:314",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.4300870783705335,
+        "monitor": 0.2522270043038735,
+        "contain": 0.12120908817936142,
+        "close_benign": 0.1964768291462316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:317",
+      "question_id": "disposition",
+      "probabilities": {
+        "contain": 0.19420289855072465,
+        "close_benign": 0.10104947526236882,
+        "monitor": 0.14252873563218393,
+        "investigate": 0.5622188905547226
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:321",
+      "question_id": "disposition",
+      "probabilities": {
+        "monitor": 0.12277188063288604,
+        "contain": 0.2895053074304026,
+        "investigate": 0.4204886841578209,
+        "close_benign": 0.16723412777889046
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:322",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.6240639041437843,
+        "monitor": 0.15017473789316027,
+        "contain": 0.10334498252621067,
+        "close_benign": 0.12241637543684472
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:323",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.5283567134268538,
+        "close_benign": 0.09789579158316633,
+        "contain": 0.1692384769539078,
+        "monitor": 0.20450901803607216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:327",
+      "question_id": "disposition",
+      "probabilities": {
+        "contain": 0.5152393324672729,
+        "investigate": 0.2927950434695713,
+        "close_benign": 0.03487558708903768,
+        "monitor": 0.15709003697411814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:328",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.1289,
+        "contain": 0.2051,
+        "investigate": 0.3281,
+        "monitor": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:337",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.5234523452345234,
+        "close_benign": 0.07180718071807181,
+        "monitor": 0.09810981098109811,
+        "contain": 0.3066306630663066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:338",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.15399201596806386,
+        "investigate": 0.4112774451097805,
+        "monitor": 0.14231536926147706,
+        "contain": 0.2924151696606786
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:349",
+      "question_id": "disposition",
+      "probabilities": {
+        "monitor": 0.1904952476238119,
+        "contain": 0.14557278639319657,
+        "close_benign": 0.09724862431215607,
+        "investigate": 0.5666833416708354
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:355",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.11575787893946972,
+        "monitor": 0.18269134567283643,
+        "investigate": 0.41040520260130064,
+        "contain": 0.29114557278639314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:356",
+      "question_id": "disposition",
+      "probabilities": {
+        "investigate": 0.46117670602361416,
+        "monitor": 0.25405243145887535,
+        "close_benign": 0.053231939163498096,
+        "contain": 0.2315389233540124
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:360",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.13505660755435328,
+        "investigate": 0.5087666566476305,
+        "monitor": 0.10369702434625788,
+        "contain": 0.25247971145175835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:363",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.15023474178403756,
+        "investigate": 0.4760763160523424,
+        "contain": 0.1551293577065228,
+        "monitor": 0.21855958445709717
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:372",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.1602,
+        "contain": 0.2734,
+        "investigate": 0.3398,
+        "monitor": 0.2266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:374",
+      "question_id": "disposition",
+      "probabilities": {
+        "monitor": 0.15528447155284472,
+        "investigate": 0.455054494550545,
+        "close_benign": 0.06739326067393261,
+        "contain": 0.3222677732226777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:378",
+      "question_id": "disposition",
+      "probabilities": {
+        "close_benign": 0.1172,
+        "monitor": 0.2324,
+        "investigate": 0.3613,
+        "contain": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:391",
+      "question_id": "disposition",
+      "probabilities": {
+        "monitor": 0.10973539690464303,
+        "close_benign": 0.10144782825761357,
+        "contain": 0.14528207688467298,
+        "investigate": 0.6435346979530703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

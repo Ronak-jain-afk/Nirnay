@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "scicite-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/scicite",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:32:16+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.52,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.38,
+    "baseline_adjusted_skill": 0.22580645161290325,
+    "baseline_adjusted_score": 0.22580645161290325
+  },
+  "elapsed_seconds": 30.602075399998284,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "scicite:default:test:20": "36ba8643df91a89686e98240835a2ee00699a2bb3833efe55c0659afef89e37d",
+      "scicite:default:test:29": "8c93ec7c45c5c876b181527ed882b45f72308933dbf258f3ee19f1017cf94b35",
+      "scicite:default:test:41": "fae6b89e41aaac503d6e8f91e92365f8a93e00b1c73bb1845cfedf01a3978ba5",
+      "scicite:default:test:43": "02d5497172e674efef335eb551afa28f3dcc31d0074d5a5bb2b71580f5f27c30",
+      "scicite:default:test:88": "b1150abd22b41403e4d10574305129bcd141a53600302e08ea13777c480cb8b9",
+      "scicite:default:test:99": "92e2c7587db22fc0bfdf27ce4a936176ead35ff5f5e72376e3c1b4e622d926f1",
+      "scicite:default:test:143": "1d767f2b2dbf2f18383ac4fbd7a78ee31b027f9fba23ca7f37fd9e260fc9b1c7",
+      "scicite:default:test:204": "287390014513149b26e5c173fb5678e2c7ff7c4a25bfaacf9235a60de0b4fe3e",
+      "scicite:default:test:223": "905e25fa1e24ff6da5755c6d05d227bfba230ec00fa502f3349f0e4cb1f285b8",
+      "scicite:default:test:245": "b8e57138e29dbd4797c7e51779fc45acb9ec2dcc1068d9e285b735ed69bdc82f",
+      "scicite:default:test:285": "4454789cd415289ebd318e8b5537c5349f849b9c6eaffa1ab52efae79813ef22",
+      "scicite:default:test:313": "cf4bbe9e69595e8746d468a6c65d5fe6153a47a7e78db3e8f5a716c32c8e0844",
+      "scicite:default:test:321": "cc678d39ee24e25545491213f16487c5dc7a7a617846d2e1658d0307a0f39073",
+      "scicite:default:test:336": "c17068a48ed656ff75308ec0f7a4a1bfa87583c8d2ff82a06c49d8d7e27f33ec",
+      "scicite:default:test:349": "9f0f6f48e8d7630152aca3617946d8d892eafcd58a0a5bc30f358d6759e74a44",
+      "scicite:default:test:354": "a7218553c35bca57fd7a8c94505cddd74a07cdc9eb20c7ec06a33b9bf5cb0d3d",
+      "scicite:default:test:383": "f295b2164420741d34b3169d7fb4fd9d7080332b33a94de25f98155ab345b3ee",
+      "scicite:default:test:385": "39f67aa93dd5093c53b157a468478ac45932a2e71d20dd351327063a6577f9fd",
+      "scicite:default:test:389": "bf41a04a00e8221f587ac7c996841b80f88d3fed3cead39e4ef9b8fef3a98c8b",
+      "scicite:default:test:394": "017860f0b628f859e8afe3f0a14abc6ed732ac8fa1151f750545f30583294d31",
+      "scicite:default:test:403": "eeaf0b1f3303aec55a60022331694982bf1b59226bc6d3ee3a532a452fc66874",
+      "scicite:default:test:405": "0ce2f97513a469dd6b036b55bdf9d48d40aa602a3a1e340a1dfc63dd7d5d4f41",
+      "scicite:default:test:409": "fc55af758b7cb4f806c2521370e46494f91ca28b9b0c31ff5a576d865bc72efa",
+      "scicite:default:test:438": "36409fa4737556c89d6ee356eccda4bd2a4044469034ea9a1e6653b2c0eccec4",
+      "scicite:default:test:450": "1b5798bf98285a11fec7a9cc02c57f01a404ebb064e0d65609496a42d1edf2b3",
+      "scicite:default:test:455": "c890ec2f15dea3a0fd3206b5d6b9079930a6ac8d627bba6d1517e62a043aae9d",
+      "scicite:default:test:465": "1b62f1bfb36f978467a00d32e0617b4145a6507fdbd7b48a0ec0da91578581a4",
+      "scicite:default:test:545": "2d7ea23c8709c2b1ce246bf0d2eeb4c9776778d5370bd078f157fd4168ac79fe",
+      "scicite:default:test:594": "f3089f7611a7590e2113161f0fc4a2e1e31208f1bb16cc24f993c1778495bf93",
+      "scicite:default:test:601": "9a60e40c318609a001798529b5bc6838f0e432d05c32a995f1cdabb01ed2102f",
+      "scicite:default:test:606": "bbebf0494668bf6b9b5c04847ded738074115eeacda8c82566aff8172b00b039",
+      "scicite:default:test:631": "7975d073fe302aa284670c3fe8614a5643ea517a02d058a3cee946a98742f40a",
+      "scicite:default:test:634": "481b02740fb3f2bc7391d9afdf5801bfea219b4a2873c248bc49776ad3aefadb",
+      "scicite:default:test:684": "05e558ff65f90136420ab1ae995c6afa55b5e69c56472f2ffc8121d6370b5215",
+      "scicite:default:test:700": "6f1f018eaa7163c7a1f03b427a8addbedd72e17547a7936ada8dc734a631f9fc",
+      "scicite:default:test:704": "4c5a3c509a1cc2529acc78fb0c0710b35c984e292fdd2796f292d282b7642f90",
+      "scicite:default:test:705": "4863faba7807a029dc7b7daf536399149bde8133cb6d38d6e5b32fa0764270e1",
+      "scicite:default:test:736": "eaad8dc4753c33d3a87c192af72bc09270bcb54b766bd4a8cd4da3f4c1a9019c",
+      "scicite:default:test:738": "64bb90327f062241bac19f1a255ab3836c92024216fc20845a06d2bdf60149b4",
+      "scicite:default:test:759": "68c37863eb17c9c2e9c8748e9e4324912a92e7af2cd6778160906f14b499e2f3",
+      "scicite:default:test:786": "4ef8850cefb7c3076742156bc9e6e5df3bbaf5ecd7576f238e2e77af8e816b12",
+      "scicite:default:test:795": "efc76b16e1e8f0ef30dec8dd2da68ba08a3897c5735e80daffc49fa76f96bc24",
+      "scicite:default:test:807": "0542429b55a286037bd8e7038a28a8003084fa8ab75b610c90634939e51c74a3",
+      "scicite:default:test:828": "ca91c28a29414de1e2e217aae88b70f9bc2f499ae6f6951987028b9785c08cd6",
+      "scicite:default:test:877": "3730e794d972b0595bcd87472d3e01fe82fc978baa3154da25ffe32f66ec4ec6",
+      "scicite:default:test:881": "a01c5a6108f7964b172018d6f26e0b6aee237f94d1a719b3cf8279b3af017b10",
+      "scicite:default:test:963": "040c16832682137d882eea3dea9bfdf3d4115a628dea428db142186f8ce790ae",
+      "scicite:default:test:969": "f2362cc9bc5843b018789a932c624822fb53701fbb5afb7f41ae29bc30b7c837",
+      "scicite:default:test:973": "5b165bb2a094ade57baec9a656b2c9ad7ba807761e694d631a301d76d958ef67",
+      "scicite:default:test:984": "3d06b76423191503c6b7563044d2d2ff3bfc340c1bd8403f4a6c32e711a7bcac",
+      "scicite:default:test:997": "a7410b59fe90ad6c3c7ae64155c8e183fb0839c8f348024836d40a2af9d5b8fc",
+      "scicite:default:test:1003": "5f6f5ae1c6dc547b48552544536811a5dc0d09fbe725727618d5b9fa68d00267",
+      "scicite:default:test:1025": "7ac307d71ef64f8693804b3961fa558ba8c2923ece02de4ef7f4766e5f790441",
+      "scicite:default:test:1028": "128b66e042713ec311b15740eb2c0f7eb1f567546c297000c3eef7af7a4c127c",
+      "scicite:default:test:1030": "bef5e833a560538c8f419a53dcfe6d69bc0485255fa3ba482e0df2423d4e7236",
+      "scicite:default:test:1050": "4ea26ab756a42be8573a02f05432d23352e19bf4172e214aae59f30a61667397",
+      "scicite:default:test:1063": "88e699caf92707126b1d82143108288a87a42bcdbad0b7bfd041a690a32a3e5e",
+      "scicite:default:test:1073": "bbdf5031fa8c39256ae03fb8bd324d3857a1d21015b075e2b24b4eb509f042df",
+      "scicite:default:test:1112": "e7bd8a0e7b3ecee5b7bbfd9df2d8f7777031d20e10af022be71042937f84471c",
+      "scicite:default:test:1133": "77ac4d281d2f5108600798f50633fdfebc08c3a36b5c2a97f6edd0f12faeebba",
+      "scicite:default:test:1167": "557d5544b29a487662cb16e0d5e63f887798546e3af4259eb4fa57ad5ee3c324",
+      "scicite:default:test:1174": "45a1212569df0ae3a171cf8ca0ba7a2785e4996379a0b301cdddb5562f56cb60",
+      "scicite:default:test:1180": "84fe8e079289cfad03e93bc3e6544b8dcb85cb07dd265373b1c634138adac5c8",
+      "scicite:default:test:1185": "30ecc88f1e51436a673ef87461f0733b12ed0daf6b22e7db82b994198fc87968",
+      "scicite:default:test:1216": "9550cdb4f6ec20f92e2b1e1976f1ce18c4c82341d26a5e64d845afb632ccceda",
+      "scicite:default:test:1219": "d641f4210c5fd51883a5609654d4dde71f91ec3d315f47024a08df4dfa833f5d",
+      "scicite:default:test:1245": "3e9e4ce420869d89bd9577c62c5675706a17f52b1e34e77837e66966256260b1",
+      "scicite:default:test:1264": "9f1cee221f556fcb02c4fead4aaa7a77929634d89c5b801856b67570cc48de13",
+      "scicite:default:test:1295": "4423244f940dcf9eee0455a6112e22a0c766703c326fd0b9ba6f3491228d6a8f",
+      "scicite:default:test:1298": "afc1d455de13d131bdff6b580bdf857e034a0b99a9809137eeb2ba1839ddd209",
+      "scicite:default:test:1381": "3b256b02036747b2e1fea58bfb300cecff3165d94b876ac8d4162c5192fe400e",
+      "scicite:default:test:1410": "c8e437a595d783d0d0711090b5544054397ec22ec8678ee0392caee602147196",
+      "scicite:default:test:1411": "e85334a473964d06757b5f188194be61b680aaa5e6dd9972b16f791860db4435",
+      "scicite:default:test:1425": "1b58149d406ff209e7bc894df2b85fce741291c7798da4f1740c60f5d81ca9d1",
+      "scicite:default:test:1447": "abdd399a5aa34276aa69723f2c992a9954647dbe5d7a694315717a82b850041e",
+      "scicite:default:test:1453": "21af3fe474105932186f2b780a580db7bc6ecc707b6f5b6d06bf0eed4ba8b2a3",
+      "scicite:default:test:1472": "9f19e2fc9c7dd956cd87619be1eda4f9011a36432906e86364f53b04e502d891",
+      "scicite:default:test:1515": "0d710bbd6810188041bacd6918ce0e71589faeeda887a914f5573a01f46aa354",
+      "scicite:default:test:1531": "1f771be7af078594901c8c33bad651e04af24c32c23000a72ac01ecb41bf72c3",
+      "scicite:default:test:1546": "1638dfaee7306231a41472cbf7902af16bbb2edc3b73db06b2a14d96ee93e6f1",
+      "scicite:default:test:1557": "38bf9e5c165460cf355768c6977ea7f716e6ed1488c0c570df1cf1b3129e52da",
+      "scicite:default:test:1561": "aaa830f5fa93f4875a46870c3e97d452c8cb194cf309de15d116728d285c93b7",
+      "scicite:default:test:1614": "3ebd6e9f8829006c4fccec6da2839cc7d031bbac3e00c46500475dea09bc827e",
+      "scicite:default:test:1618": "01e6443d5061c9dcf5a1ec4e3f7c57df67d54d92c433073b20659feefd42ec66",
+      "scicite:default:test:1648": "ac6f7fed8dfba1d94483c59e7a26920f25c6b08fd3d29c6878d646c2bde02901",
+      "scicite:default:test:1670": "a09a0da2fb1f8d82d2fc4a08bae22193ce5e8009d293f0f43e0e38dc8b1a547d",
+      "scicite:default:test:1679": "2afb193e4150e9cba816204483ce8f1238bbba7fe9f33c465931a98c363e9494",
+      "scicite:default:test:1681": "6168bf85107b6da05ae71bd7b8ba645fdd009960581e064a7b6ac22aaae31e63",
+      "scicite:default:test:1703": "48a645b9a673edcab8b96854e1c456d2bf986c7506829faee424b10e5a20a451",
+      "scicite:default:test:1708": "6f66f35756d8ab85e000a3cbdf86bb1bad4f6426b88816a09cea8010e01749b5",
+      "scicite:default:test:1739": "9cff5cf580bdec361ae6268e4d5ec7a265442f3d1da5dcd64a64bea09b83f3fa",
+      "scicite:default:test:1755": "79b9324bf6df0d70b08d9bef018c2e0f85c95f51c291f5edcc90ab717bd4ccbf",
+      "scicite:default:test:1758": "1a97f17f34f37622eb16ba7e14f1f3bc82a6d3877557ba2405f5fe955853eb25",
+      "scicite:default:test:1785": "ba6004d271df47328eb4aa36be5b30e8b06856e7f795e397e5587da132e8f21b",
+      "scicite:default:test:1786": "f015fd4762906a10a2f0800d41cf476c9be9e4a7a882e8ffae1023fdb0eb44c6",
+      "scicite:default:test:1814": "d96948cfbfbaaf7db759284af888c821bd7458224b0e2a29e5a12980f5a4d588",
+      "scicite:default:test:1816": "19e67f054c1201c79efa2ab0c280f5c4d1dc806595532e1671c588448e7e0948",
+      "scicite:default:test:1821": "43c3ab4c644775d3ee56412504a488bd4b25ac11a7d9808da429681a7e878988",
+      "scicite:default:test:1831": "211784d6659f7ec81cb68790b4469ae313ee7e4738a8799b7a2b5569b19619f6",
+      "scicite:default:test:1843": "ade883001b918ab84764da4f7deb300a9da60630e54404f1cbffb20ffb0815c7"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "scicite:default:test:20",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2809471475671895,
+        "method": 0.5034468977919871,
+        "result": 0.21560595464082322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:29",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.5664,
+        "method": 0.2217,
+        "background": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:41",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3307615230460922,
+        "background": 0.39919839679358715,
+        "result": 0.27004008016032066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:43",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.4858627235488061,
+        "background": 0.24098311519632334,
+        "result": 0.27315416125487063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:88",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3718064322212203,
+        "background": 0.338543232141068,
+        "method": 0.2896503356377117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:99",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3437656234376562,
+        "background": 0.3847615238476152,
+        "result": 0.27147285271472854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:143",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2770506544110301,
+        "background": 0.493655709861125,
+        "result": 0.22929363572784497
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:204",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3613,
+        "method": 0.3789,
+        "background": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:223",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2812281228122812,
+        "background": 0.3984398439843984,
+        "result": 0.3203320332033203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:245",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3418,
+        "result": 0.4043,
+        "method": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:285",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.30601856472701866,
+        "method": 0.41131849485976646,
+        "result": 0.2826629404132149
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:313",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2451,
+        "background": 0.5352,
+        "result": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:321",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.38013972055888223,
+        "background": 0.34111776447105785,
+        "result": 0.27874251497005986
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:336",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.320941883767535,
+        "background": 0.41292585170340684,
+        "result": 0.26613226452905814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:349",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3105,
+        "background": 0.3926,
+        "method": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:354",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3418,
+        "background": 0.375,
+        "method": 0.2832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:383",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.4258,
+        "result": 0.3203,
+        "background": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:385",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3281,
+        "result": 0.3965,
+        "background": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:389",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2678678678678679,
+        "result": 0.5161161161161161,
+        "method": 0.21601601601601603
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:394",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.291029102910291,
+        "method": 0.36913691369136914,
+        "result": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:403",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3008,
+        "result": 0.4121,
+        "background": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:405",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.21092109210921092,
+        "background": 0.4609460946094609,
+        "result": 0.32813281328132815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:409",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2949,
+        "method": 0.3965,
+        "result": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:438",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.30721442885771544,
+        "result": 0.4911823647294589,
+        "method": 0.20160320641282564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:450",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.414058594140586,
+        "method": 0.289071092890711,
+        "background": 0.29687031296870314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:455",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2597740225977402,
+        "result": 0.455054494550545,
+        "background": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:465",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.251974802519748,
+        "result": 0.5351464853514649,
+        "background": 0.21287871212878712
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:545",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3281,
+        "method": 0.4004,
+        "result": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:594",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.34928564292137076,
+        "background": 0.4351084024378059,
+        "method": 0.21560595464082322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:601",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3789,
+        "method": 0.334,
+        "background": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:606",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.49755220301728437,
+        "method": 0.27125586971725446,
+        "background": 0.23119192726546106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:631",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3066,
+        "result": 0.459,
+        "method": 0.2344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:634",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3203,
+        "background": 0.4258,
+        "result": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:684",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2158,
+        "background": 0.5352,
+        "result": 0.249
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:700",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2814814814814815,
+        "result": 0.4731731731731732,
+        "background": 0.24534534534534536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:704",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3789,
+        "background": 0.3555,
+        "result": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:705",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2636736326367363,
+        "method": 0.4687531246875312,
+        "result": 0.26757324267573246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:736",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.332,
+        "method": 0.3828,
+        "background": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:738",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2285,
+        "result": 0.5469,
+        "method": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:759",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.45941347212491246,
+        "method": 0.326493844460014,
+        "background": 0.21409268341507356
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:786",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2031,
+        "result": 0.6172,
+        "method": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:795",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.30212596067471803,
+        "method": 0.4191037029643677,
+        "background": 0.27877033636091425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:807",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2871,
+        "result": 0.4961,
+        "method": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:828",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2891,
+        "result": 0.4609,
+        "method": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:877",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.21439265395748078,
+        "result": 0.6043517317097515,
+        "method": 0.18125561433276774
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:881",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.27592425608656446,
+        "background": 0.43442540827572385,
+        "method": 0.2896503356377117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:963",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.22125748502994014,
+        "background": 0.5926147704590818,
+        "result": 0.18612774451097805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:969",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3703592814371257,
+        "result": 0.3372255489021956,
+        "background": 0.2924151696606786
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:973",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.24802480248024802,
+        "result": 0.3242324232423242,
+        "method": 0.42774277427742774
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:984",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3496,
+        "background": 0.3281,
+        "method": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:997",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.21268731268731267,
+        "result": 0.597102897102897,
+        "method": 0.1902097902097902
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1003",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3121878121878122,
+        "method": 0.4526473526473527,
+        "result": 0.2351648351648352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1025",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.32001198920971125,
+        "method": 0.43121190928164654,
+        "background": 0.24877610150864224
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1028",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3477,
+        "method": 0.3945,
+        "background": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1030",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2988,
+        "result": 0.3887,
+        "method": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1050",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.24341907716945252,
+        "result": 0.4848363527174457,
+        "method": 0.2717445701131018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1063",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2846307385229541,
+        "method": 0.48343313373253494,
+        "result": 0.23193612774451097
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1073",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.23293413173652694,
+        "result": 0.5341317365269461,
+        "background": 0.23293413173652694
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1112",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.35420841683366733,
+        "method": 0.36593186372745495,
+        "result": 0.2798597194388778
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1133",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3222677732226777,
+        "result": 0.42185781421857815,
+        "background": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1167",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.6400239784194225,
+        "background": 0.16874812668598263,
+        "method": 0.19122789489459488
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1174",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.2754,
+        "result": 0.4023,
+        "background": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1180",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.24685314685314685,
+        "method": 0.44095904095904104,
+        "result": 0.3121878121878122
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1185",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.4785,
+        "background": 0.3184,
+        "method": 0.2031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1216",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.2969,
+        "background": 0.4453,
+        "method": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1219",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3223,
+        "background": 0.3652,
+        "result": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1245",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.2559,
+        "background": 0.5,
+        "method": 0.2441
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1264",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.25954045954045957,
+        "result": 0.5033966033966034,
+        "method": 0.2370629370629371
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1295",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3574357435743574,
+        "result": 0.373037303730373,
+        "method": 0.26952695269526955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1298",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3437656234376562,
+        "result": 0.3847615238476152,
+        "method": 0.27147285271472854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1381",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2163888611637888,
+        "result": 0.5731110889310311,
+        "method": 0.21050004990518015
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1410",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.2309611737698373,
+        "background": 0.5301926339954087,
+        "method": 0.23884619223475398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1411",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.23186372745490982,
+        "background": 0.5636272545090181,
+        "result": 0.20450901803607216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1425",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3066306630663066,
+        "background": 0.3945394539453945,
+        "method": 0.2988298829882988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1447",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.3828,
+        "background": 0.3496,
+        "result": 0.2676
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1453",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.35936406359364065,
+        "result": 0.38866113388661133,
+        "background": 0.251974802519748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1472",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.25831663326653304,
+        "result": 0.4755511022044088,
+        "method": 0.26613226452905814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1515",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.2969,
+        "method": 0.4609,
+        "background": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1531",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.26029455966336035,
+        "background": 0.4305179841699229,
+        "method": 0.3091874561667168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1546",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3477,
+        "result": 0.3359,
+        "method": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1557",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.22092092092092092,
+        "result": 0.5474474474474474,
+        "method": 0.2316316316316316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1561",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.13583583583583583,
+        "method": 0.4594594594594595,
+        "result": 0.4047047047047047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1614",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.2383,
+        "method": 0.4883,
+        "result": 0.2734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1618",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3287575150300601,
+        "method": 0.4031062124248497,
+        "background": 0.2681362725450902
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1648",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.4062,
+        "background": 0.3008,
+        "method": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1670",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.4121,
+        "method": 0.3008,
+        "background": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1679",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3535,
+        "method": 0.3633,
+        "background": 0.2832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1681",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.2148,
+        "method": 0.4629,
+        "background": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1703",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3434565434565435,
+        "background": 0.47802197802197804,
+        "method": 0.17852147852147854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1708",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.4433556644335567,
+        "background": 0.3007699230076992,
+        "result": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1739",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.5005005005005005,
+        "method": 0.32842842842842845,
+        "background": 0.17107107107107106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1755",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.24293277394865645,
+        "method": 0.46828488662471274,
+        "result": 0.2887823394266307
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1758",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.31868681813632266,
+        "result": 0.44379941947752977,
+        "background": 0.23751376238614752
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1785",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.20312031203120312,
+        "background": 0.42384238423842385,
+        "result": 0.373037303730373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1786",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.6120758483033931,
+        "method": 0.20469061876247505,
+        "background": 0.18323353293413175
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1814",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.6454682023034551,
+        "background": 0.23084626940410619,
+        "method": 0.12368552829243866
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1816",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.22092092092092092,
+        "result": 0.5474474474474474,
+        "background": 0.2316316316316316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1821",
+      "question_id": "intent",
+      "probabilities": {
+        "result": 0.3691,
+        "method": 0.3926,
+        "background": 0.2383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1831",
+      "question_id": "intent",
+      "probabilities": {
+        "method": 0.315799980037928,
+        "result": 0.3684000399241441,
+        "background": 0.315799980037928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scicite:default:test:1843",
+      "question_id": "intent",
+      "probabilities": {
+        "background": 0.3004995004995005,
+        "method": 0.48001998001998003,
+        "result": 0.2194805194805195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

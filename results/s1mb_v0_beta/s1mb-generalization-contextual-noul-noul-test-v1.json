@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "s1mb-generalization-contextual-noul-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/s1mb-generalization-contextual-noul",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:29:43+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25219099840000003,
+    "accuracy": 0.54,
+    "positive_recall": 0.14,
+    "specificity": 0.94,
+    "precision": 0.7,
+    "balanced_accuracy": 0.54,
+    "f1": 0.23333333333333334,
+    "true_positive": 7.0,
+    "false_positive": 3.0,
+    "false_negative": 43.0,
+    "true_negative": 47.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.00876399360000013,
+    "baseline_adjusted_skill": 0.08000000000000007,
+    "baseline_adjusted_score": 0.08000000000000007
+  },
+  "elapsed_seconds": 29.04265470000246,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "contextual-noul-001": "f1716390673063281968baeb6d97e1ba5d5baa2924e997f21329bb5f9621b265",
+      "contextual-noul-002": "23f53312e3ee6e455b2422597adbcc9f7108002dee825dfa842f177fd1e46286",
+      "contextual-noul-003": "0c19ae313a7e7a3077ed02955aa5245624359c4fd816a8e70eb4eb582172368f",
+      "contextual-noul-004": "6e76b1db439cb08f0a70aee9fdec966bf0ebf69759a31e0008a5805c0e537d68",
+      "contextual-noul-005": "fd67caa3a5a5706ec8ab5e8d48d20280b8fd3261db448f39d8a9f55fe1d1218c",
+      "contextual-noul-006": "c03593d9dff2d42752507b5776ce601c59658be833c472393ee14585294fdeb3",
+      "contextual-noul-007": "da6a201e967c4981c18d9d8aec56455b6c72127e863db36d5adf33d9d1cc7113",
+      "contextual-noul-008": "4368dfbb7ed1625d8c532dde24075a7767892b94edd9bdebd79e298d59495784",
+      "contextual-noul-009": "a4124d5cd28031cc0a104161371e14650c3a21cbbb1282ef6b1b3f30d98675d5",
+      "contextual-noul-010": "74c9027e4261db42f14babe5e7e218763a5ea9eb290e64047704b33880574539",
+      "contextual-noul-011": "435ab252b36d07db15cdad0c6783ca51f7b3eea6fa84fba1de80e27d10f91185",
+      "contextual-noul-012": "6dd870260d4ed476ce3b83708980e78694902d3ddea70ef566c7bce1cda8803e",
+      "contextual-noul-013": "f629128659992f9877f8a2fc5bef99b924f8ca6b80efe30dfb427c49c4d493fb",
+      "contextual-noul-014": "0cc8efefca0957b2cb70a9327eaab2b55cf956fb9de15c8125d425068a62cccf",
+      "contextual-noul-015": "18bc26279d5cb1ee44a361f3e68283eb0301b5ad6871797698a1f87686c9b302",
+      "contextual-noul-016": "481a32d349e44183310463a03b03bbb6a695f932de3c87e7c1b37d21ab39438c",
+      "contextual-noul-017": "a66cf8cf95215c6615a4df1a13793555e751b2becd9111426bcd81f30c82a00d",
+      "contextual-noul-018": "805ffa4c01adddc516fa1b9d49c35e4b4abf4ae87a9f5a5d0f64a54bdf07b723",
+      "contextual-noul-019": "3d8aba28ff9cbac358d409703894791efa567807d9d6d343eb06a88a1d296355",
+      "contextual-noul-020": "5d5edbc92605fda24a500cca777a94ed2dd6d5f544b9a8e8c6f3fb461c3ee895",
+      "contextual-noul-021": "6969d289c5f27fc4e5f0e3c8f355674dbcc500c4f0d4984d68fcafdc4b3aeaf1",
+      "contextual-noul-022": "b913b20d41cf6084b08d244f6fbd5b20dcc339cc58db1a42ea6b394003059a39",
+      "contextual-noul-023": "1b398067f7caf91f3c73b43416679ae40082f33d8472aa212bd2488eda17ccc0",
+      "contextual-noul-024": "65130f80e7d48a59a711633557025e0034309a2488fc0027cc5248ea896f5cf7",
+      "contextual-noul-025": "780ebd4df53027d4c551fdc4cfde032bddea421b77f14f19a4f545b0272bca55",
+      "contextual-noul-026": "8cf18a098f75a5985a24c6af78ad769bea8d13acb7f6e57f71bda3acb13b88a0",
+      "contextual-noul-027": "5bd3076e4856fbf4244a26f58947a3cff3cb263bfba72da70141a4fe649b72d4",
+      "contextual-noul-028": "ccd8eb71d87ae56bf7549147134e1208ec334295e4260961175809cc6bf53ef3",
+      "contextual-noul-029": "4b15040dc086bbf2777f725d85db638654e83003ffa4f40bbb15ece3dd6e9adb",
+      "contextual-noul-030": "9ebb6b4adc660904074bb50ce562ae0c8fb1d470ac55efe7ba5b7413b8ae6e6b",
+      "contextual-noul-031": "1a496f53c53881da3ee70454daf99e03d470b635388d290820a1bb64ff5152ff",
+      "contextual-noul-032": "ca395739d88e6922731400915b78314544cc07fa5146e92faaf418bcebc66420",
+      "contextual-noul-033": "8651e88c70bb322b659d2e7981124db9ea59f5c7ecc125736e0b27c3ff114c5f",
+      "contextual-noul-034": "92811f9dc01d39a84d6c68366808d5b8a79a8ea18eaf70bbfe37e483c93c632f",
+      "contextual-noul-035": "dc0aa774eb49c5644de9a8e6e6518128f3874711a0020ba65b44d9f84647ef90",
+      "contextual-noul-036": "4c957bb15a0c10e4622e4a1bb56392514c58df3da7bd5c94680cccde65963f9e",
+      "contextual-noul-037": "730eb7a7e4973e6b0b05dc8af8b2ba7e590e5a3ca3fdd7b601d7f79743c7b945",
+      "contextual-noul-038": "39b503587bd7b7daa0fbe2b2727b89c6737e569bcbd9bb46936101102a24b737",
+      "contextual-noul-039": "39fca13184db3ed1c88affa39894756341614ea9e0cc63c5922c6f1532d72529",
+      "contextual-noul-040": "8fe99ca50797b31eb7c0f2d821b046d1bcf6fb2a01b9e7a3345644c261bd6263",
+      "contextual-noul-041": "a43e18b2ae362c73cfeffa896c4a1e8320fa1c4d9aeb6f937e84d64e27c84349",
+      "contextual-noul-042": "54d5055e0856aaa0a0f91984e6dce59c9003c7d3c8de8e06e748c450c98b9d31",
+      "contextual-noul-043": "01fcf9bcdc580a4995014eb737b6fd148cfc91f765d18f1395fc5918a61d5431",
+      "contextual-noul-044": "f24e7ab108f5230829924d3156350e9a2d2ae3296d411fa39404ea1abbcf1c02",
+      "contextual-noul-045": "6dea42aaf04ec825fcd653301525e51867bddf6dec6d1815316ce233255d9295",
+      "contextual-noul-046": "217fd6ea36b670c6dc92b7aa6cbe24bad86c81bc90217726f577804f073a2faa",
+      "contextual-noul-047": "fd803416351e7368cb9c0380d04fe1de2cca21f629c1f9294786ed73df50da70",
+      "contextual-noul-048": "4280d3b718ef18401fb7c24ee202086d99b944039f5bff8dc7f2f26dc34bb402",
+      "contextual-noul-049": "6127b3bcb2bd0727bd5faa4fc74172c61cd567770efeff67ff82b65bb2423226",
+      "contextual-noul-050": "0609006215fa2f2f1b2b63d76ada93cac2694a1163feaf8b22d7cd5c59b04f27",
+      "contextual-noul-051": "4fbd192a670e2a86d1dc12786908b2dee783a365652fcfe727b6349138627420",
+      "contextual-noul-052": "4ce0953756146a85a5d51d3b4b5631a34aa85d588e9eee6e615e56f4c4da322e",
+      "contextual-noul-053": "cf4878c24a82cdcbe9f63f62fcbea36e3bc8c061f42e27363af1d072bb5e5a0a",
+      "contextual-noul-054": "cc6c8ccf06b094c70a22883a33c04f163b70e9e3abddef445549f2929690f697",
+      "contextual-noul-055": "3f133d29800f24b65589fb050f9e67be46fe153296d43672b5acc77e87f628a4",
+      "contextual-noul-056": "1644961e417337d5cecf58064f443f0cef1203562c86d49e0e48b06d9cff81b3",
+      "contextual-noul-057": "76b4baa6728ce43d9354cf2675a0922c0799654e2e1a8f26bfbee0bfff20f17c",
+      "contextual-noul-058": "b5f697a96e3fb1ad5424bbfa7684780dd01e73e86339b5c5a489cb045cf3d1e7",
+      "contextual-noul-059": "a4eaa2550c0511470b788a618b3651a77d2be1cfe833141c9e5b57335601a9aa",
+      "contextual-noul-060": "d6abc65c9585e29eff780a5e625ada06f4cac801038ba96854950f57c300e07f",
+      "contextual-noul-061": "e030b25d00e23d783ab6b626d7c61415167ca3def9c8c5a361367d5d1c603abc",
+      "contextual-noul-062": "dd4e8a4df360fbefedc780662f705d73e237d5cd421a108cc1a524b3ffd05deb",
+      "contextual-noul-063": "36fd27296b94598108368801d552ca88f9db2e3632a31cf831bab57474abb6bb",
+      "contextual-noul-064": "9d528e0499163cf2cf235a259ed53aa2e1baf95ca3a409639f582f30bca355b2",
+      "contextual-noul-065": "604672bc910138d78ea344d6721f397262071c8ddf57af34deea713579672b8f",
+      "contextual-noul-066": "22ddfff9e63686c04892eac8197babcf9fb7374ca7e2d1814d88a3f8e2c473e2",
+      "contextual-noul-067": "720d4883c817017b1a55f9ef3c8eeead81ae3a48a29964dc0694cb51610d5cee",
+      "contextual-noul-068": "ce7ed3d6576744d228dfef0aeb087f55b394e56105274c4563070bb9bbc78163",
+      "contextual-noul-069": "3ce2f40f9851879fb765dd8e28bc25a270cbe94060225cd6145bdb6dae8dff60",
+      "contextual-noul-070": "e33f802e0eee695dd0c63484a56aae95e4671c2e9a6a752af20e89a4aa92deda",
+      "contextual-noul-071": "48756a95a1ca5522c311ebc1227031625b4dceb5c791417d75b7f75827740ea0",
+      "contextual-noul-072": "22cd69f65b30dd557997520f8ad088bc272280e6048e555356327e86795aeee3",
+      "contextual-noul-073": "d7e2a5a3f39c9213bfb6edf58c0710aefec2b116fb1fdc4fef516d12a5bdb09b",
+      "contextual-noul-074": "ad2b1ba8e944490f58409aa65fc870ab3306403410f5d955124ae299d1f5dee4",
+      "contextual-noul-075": "f30a09aaad1154ffc8b9dbc927612ed71d282393c68e829295ce35959f444c96",
+      "contextual-noul-076": "5d795ac9fdeb0a6a502297718dcda87928142606f150a0fe0cf6774e14c55f3f",
+      "contextual-noul-077": "989bd5bb00a43c9f2a98561ab92c352ff5047553762ddcc0af64689fbfd91402",
+      "contextual-noul-078": "c9ea13cfb3258b4561fb0fa27d3279db8a073d7f15e2ff22cb827b7b40545dfb",
+      "contextual-noul-079": "d249b30dc572580bc9fb929e2e07a16082b7dcbae798124de396620f7a75a7e8",
+      "contextual-noul-080": "397daa55251fbc82da0140d5a27bb2380ef4a55693eada69691bce9973b10106",
+      "contextual-noul-081": "1fb6025969d574aa42fc974e785e44b304a647edd44bc6045770d94c9dd24861",
+      "contextual-noul-082": "24660f7efe15d3bc83d1e54cafc10121634f9e539c941d7f005e652d08f013be",
+      "contextual-noul-083": "3d3423717bd74004b9a6328b3b0d87801f5bc2e59bc3c592bd39876f4fa16a3b",
+      "contextual-noul-084": "a0cbf3c5abfd9d9727b3389e6e39d6091fbb0e082735149427403cca597e6618",
+      "contextual-noul-085": "e6bd196e854d2e8bbcde8780791f4f61eb22b2a409bc522495c439d41e5b69b9",
+      "contextual-noul-086": "174005217cd90f964ef9363df77bd3782ef70c806a9bab0b6741fdfc4f46c55c",
+      "contextual-noul-087": "f424cf5945eab4e58bc38dc193bbf7879e8e5e90d30e33759a7a00c89a078f6a",
+      "contextual-noul-088": "f01764fe0858b12f56b1183df8dfea7ea0c3aafbdfda9548722fa52ebc7d0110",
+      "contextual-noul-089": "131a76e3a7c3c20e4ade265a6b9f9a375f7973df064f5f0750962d05de7aa84b",
+      "contextual-noul-090": "601639b04a6c444a29e66c2b159fcae97560da8b304e4baefb62110403c8c855",
+      "contextual-noul-091": "b69e2a490e9aaab59a631875d4bde87898b2f7dbdacb0fd60c94045b4cf24e32",
+      "contextual-noul-092": "7273d9a563ef6aef954164c1f40ed438125e94bfc8bce1f8b96dca2e5bb18cfd",
+      "contextual-noul-093": "338a5a7fef1891a21279ee252258d30e7a51fe3e16f6197e8394ff2191801e59",
+      "contextual-noul-094": "41aa007cc3ac3c829594d55eec5c68e67b0add438f5d9ef62fc8aef3de37577e",
+      "contextual-noul-095": "81662fd91051960172dc5b9d882c924985faecd45feb1d0625c6e75e4881c6cc",
+      "contextual-noul-096": "219b00aca62ad27a799014a591e913f99e8c638969fa5ed65a8a95249be64f8d",
+      "contextual-noul-097": "11b84bb139082f089c11f64f809fec3d0bc8f5e9b8f613ef11425fab9205c0de",
+      "contextual-noul-098": "8c74239f03875c61f381c062bd46b527f6d374d73b7ee91ab862dfe645ded069",
+      "contextual-noul-099": "b9927917e91044b9fe9abcfd26bd2cec5d1eaeeda61e14e6a410a0d023bfdd1e",
+      "contextual-noul-100": "bcd5b39bfb6e9a4e1d81a4517944331bfbd0c530c6afdd83abb2cdaedaebb5af"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "contextual-noul-001",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-002",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-003",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-004",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-005",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-006",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-007",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-008",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-009",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-010",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-011",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-012",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-013",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-014",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-015",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-016",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-017",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-018",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-019",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-020",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-021",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-022",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-023",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-024",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-025",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-026",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-027",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-028",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-029",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-030",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-031",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-032",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-033",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-034",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-035",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.8535,
+        "true": 0.1465
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-036",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-037",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-038",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-039",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-040",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-041",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-042",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-043",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-044",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-045",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-046",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-047",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-048",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-049",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-050",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-051",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-052",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-053",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-054",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-055",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-056",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-057",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-058",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-059",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-060",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-061",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-062",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-063",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-064",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-065",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-066",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-067",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-068",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-069",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-070",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-071",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-072",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-073",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-074",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-075",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-076",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-077",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-078",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-079",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-080",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-081",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-082",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-083",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-084",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-085",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-086",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-087",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-088",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-089",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-090",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-091",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-092",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-093",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-094",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-095",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-096",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-097",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-098",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-099",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-noul-100",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

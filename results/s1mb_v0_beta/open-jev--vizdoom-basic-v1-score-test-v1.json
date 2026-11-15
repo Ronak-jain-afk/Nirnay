@@ -1,0 +1,577 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--vizdoom-basic-v1-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/open_jev__vizdoom-basic-v1",
+    "split": "test",
+    "case_count": 33,
+    "decision_count": 33,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:22:01+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 33,
+    "expected": 33,
+    "succeeded": 33,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.28222252333893355,
+    "normalized_score_rmse": 0.31203747603290605,
+    "constant_score_baseline": 0.5,
+    "constant_mae_baseline": 0.2196969696969697,
+    "baseline_adjusted_skill": -0.2845990717496285,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.11127960000158,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:0:score": "78da036d67dc23aa23b416c7d523aad1ff363ee4bddb53c9424c7c3946b7d661",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:1:score": "fb90f50d0b91511da6b280927427dad457044caab77a0dc80cb13d08a0102016",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:7:8:score": "644a8b564b7f84d616b1e7648dddf6800f75701a821f83856f8248c035c407c7",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:12:3:score": "2e92fad8bbb4199a14eb94de11ded827c3111f4c34063e6b20a6925713f6da27",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:14:3:score": "a01cf4c2d9b72230a17916e149b2752f30b1b8d4a4ce827d09b1d21014cd34b6",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:1:score": "471f586ea0d22b3390f43b1052b8725b21eb3bac00c0a32e3a9ade49435dadfc",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:2:score": "f8ec0871ad3c16ea272e888f6d87c0ecb75400f40d06b4fd9e76c81cd22f90e9",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:3:score": "6499d7c5a7330ff27bdafdc2b9df625f41c089c13c28d273bb52ee0cc59d8ba8",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:7:score": "cd845e72996ab17b7029049616dfb54d9ce9d3a1579f2332657ef0a2bc386fcb",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:32:5:score": "cb02c9f6bc2ab0202972a2b0c8c8e74cefd632482536cda10d579a128cb367eb",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:47:3:score": "4b20831d73e8b3f4f39ea4fff7fb5c31e09e47b5c89f4e8d07e6f8a43e195142",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:47:5:score": "24752eb235ab09fbb3f9eaa7019c497aed48bf757a7e964c3c1afcb72c7e94c9",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:51:3:score": "cb24fac57420c4966e85124f7d1e02c33f337502091c9d6536af8770c69a5c9a",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:51:5:score": "942f01226ff696fa0ba933756abe44968036cfce71b2dc31f14671961c788aca",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:102:0:score": "ddd4620ea56d7c7070abbe20de79973498b9e082ef6626b32f9b399f91618da1",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:3:score": "ab270af37f6140569bea53d5d1074a0040b6c155d54c21875c9231d77ac49d29",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:6:score": "76dcdad73a400c1a82d7aa813562959efa6436350b8009cfa10d04135da55eb4",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:10:score": "8d22572ddd2dbf60ff6c251c8796fa2ade64bf02794252a6e2ec0c88f1d8e91d",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:2:score": "5410c6f0e0e0742bbf995a33db026bd26b9a7aeaa186bc91d14de06dc818cb6d",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:5:score": "35a769b7b1ad67b52b404f15951003b56324941d9dbaeea63103163ec1428540",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:180:5:score": "70836ae38b63c03c813f9a36575b46948ac6e3a42da0207e3cadae68a56cbe07",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:181:2:score": "bbc4e3046f547b96d0e1a82c76f0d26e7d619e2cad1e27909f01148f0dcaa3da",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:211:7:score": "0bd1d812f2409888f5c628432c6773a3091b9807a375399f233e7546c2f0e8e2",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:220:2:score": "bfd554fc97bff03d26e77e84a215901b35905a138de3a3bdf5fdde1ea242257a",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:222:5:score": "abdf953c1d6dd643fc7e507dfe95555bf2ba72dc6f386921cf54db12e5a4d8c9",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:232:1:score": "a08aee3f1c63cf5cbfd3387845dcecc7dbbeb853019f7191ca1f9b6aa291bdf0",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:0:score": "9d84d0d3cba5882d8d8268d7f546707e51bb1645975f6a12d48c6bd71057ba6e",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:4:score": "af153df4b80b8bd9086a41de27b74aacb7a95415643061b2942dd265c7b53169",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:278:5:score": "c24a671aafbb86e66c8be9e85afe4fe1135f92d4ff2ca7525bca7a90ea122270",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:4:score": "20c5b69b76b8a48d1c27f0b2f150076b6660939ed754a18128b6ab658aecc787",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:5:score": "f1087e9314c49c4353bc0e45226b9f2051fda7d829c34f7089a616a71ba31249",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:3:score": "35ddf39e7b9c5a2d5c2da704124da7085acb5ac6222d46cd16a8164640d61073",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:390:0:score": "d0a6876aa451ea054f824bdb46ce1a238a8c764d2faebcf5d12e5d282fb5297a"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4224,
+      "output_tokens": 33,
+      "requests": 33,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:0:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0439,
+        "option_1": 0.2695,
+        "option_2": 0.2793,
+        "option_3": 0.1973,
+        "option_4": 0.21
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:1:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04394834317749525,
+        "option_1": 0.2737010711782961,
+        "option_2": 0.28150966062668936,
+        "option_3": 0.19751726899589547,
+        "option_4": 0.20332365602162378
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:7:8:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04485962633629734,
+        "option_1": 0.26536117494255174,
+        "option_2": 0.27515236287341394,
+        "option_3": 0.2039164751723449,
+        "option_4": 0.21071036067539217
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:12:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0928,
+        "option_1": 0.1816,
+        "option_2": 0.1631,
+        "option_3": 0.2441,
+        "option_4": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:14:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.07222055738687444,
+        "option_1": 0.151233642992708,
+        "option_2": 0.151233642992708,
+        "option_3": 0.23314354210368593,
+        "option_4": 0.3921686145240235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:1:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09716113554578168,
+        "option_1": 0.2030187924830068,
+        "option_2": 0.16493402638944424,
+        "option_3": 0.24400239904038387,
+        "option_4": 0.29088364654138343
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:2:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.12097902097902097,
+        "option_1": 0.15214785214785212,
+        "option_2": 0.19320679320679318,
+        "option_3": 0.22927072927072925,
+        "option_4": 0.30439560439560437
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0908,
+        "option_1": 0.1865,
+        "option_2": 0.167,
+        "option_3": 0.2393,
+        "option_4": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:7:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04419558044195581,
+        "option_1": 0.2733726627337266,
+        "option_2": 0.28117188281171884,
+        "option_3": 0.19918008199180082,
+        "option_4": 0.20207979202079793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:32:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0688344172086043,
+        "option_1": 0.13186593296648325,
+        "option_2": 0.18659329664832416,
+        "option_3": 0.2355177588794397,
+        "option_4": 0.37718859429714857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:47:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.07467013194722112,
+        "option_1": 0.15323870451819271,
+        "option_2": 0.14834066373450622,
+        "option_3": 0.23330667732906837,
+        "option_4": 0.3904438224710116
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:47:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04709058188362328,
+        "option_1": 0.2636472705458908,
+        "option_2": 0.2753449310137972,
+        "option_3": 0.1991601679664067,
+        "option_4": 0.21475704859028194
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:51:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0664066406640664,
+        "option_1": 0.17481748174817482,
+        "option_2": 0.1396139613961396,
+        "option_3": 0.22072207220722073,
+        "option_4": 0.3984398439843984
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:51:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.06890335503254882,
+        "option_1": 0.13890836254381572,
+        "option_2": 0.18678017025538307,
+        "option_3": 0.22203304957436157,
+        "option_4": 0.3833750625938908
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:102:0:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09970968064871358,
+        "option_1": 0.18570427470217238,
+        "option_2": 0.16908599459405346,
+        "option_3": 0.23856241866052658,
+        "option_4": 0.30693763139453395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1035,
+        "option_1": 0.2002,
+        "option_2": 0.168,
+        "option_3": 0.2373,
+        "option_4": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:6:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0977,
+        "option_1": 0.1826,
+        "option_2": 0.1689,
+        "option_3": 0.2305,
+        "option_4": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:10:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.042674395362782336,
+        "option_1": 0.2771337197681391,
+        "option_2": 0.2771337197681391,
+        "option_3": 0.20007995202878273,
+        "option_4": 0.20297821307215672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:2:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.10685725709716114,
+        "option_1": 0.1395441823270692,
+        "option_2": 0.19032387045181928,
+        "option_3": 0.23330667732906837,
+        "option_4": 0.3299680127948821
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0447537044453344,
+        "option_1": 0.27573087705246296,
+        "option_2": 0.2796355626752103,
+        "option_3": 0.19843812575090108,
+        "option_4": 0.2014417300760913
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:180:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.10295881647341064,
+        "option_1": 0.1923230707716913,
+        "option_2": 0.16983206717313076,
+        "option_3": 0.23230707716913235,
+        "option_4": 0.302578968412635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:181:2:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09896145396444976,
+        "option_1": 0.1121429998002796,
+        "option_2": 0.1608747753145596,
+        "option_3": 0.23017775114839226,
+        "option_4": 0.39784301977231873
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:211:7:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04366943139802139,
+        "option_1": 0.26541421005296295,
+        "option_2": 0.2791046267612671,
+        "option_3": 0.2010592585190367,
+        "option_4": 0.2107524732687119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:220:2:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09384692346173086,
+        "option_1": 0.10795397698849424,
+        "option_2": 0.16418209104552275,
+        "option_3": 0.22761380690345173,
+        "option_4": 0.4064032016008004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:222:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0957,
+        "option_1": 0.1875,
+        "option_2": 0.166,
+        "option_3": 0.2266,
+        "option_4": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:232:1:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.07612387612387612,
+        "option_1": 0.15604395604395604,
+        "option_2": 0.15124875124875123,
+        "option_3": 0.23026973026973024,
+        "option_4": 0.38631368631368623
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:0:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09416233506597362,
+        "option_1": 0.1991203518592563,
+        "option_2": 0.15813674530187927,
+        "option_3": 0.24400239904038387,
+        "option_4": 0.30457816873250704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:4:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09416233506597362,
+        "option_1": 0.19032387045181928,
+        "option_2": 0.15813674530187927,
+        "option_3": 0.23330667732906837,
+        "option_4": 0.3240703718512595
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:278:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.10785685725709716,
+        "option_1": 0.20201919232307078,
+        "option_2": 0.16493402638944424,
+        "option_3": 0.23230707716913235,
+        "option_4": 0.2928828468612555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:4:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.06072712744706352,
+        "option_1": 0.1551138633639632,
+        "option_2": 0.14822213343987214,
+        "option_3": 0.23991210547343186,
+        "option_4": 0.3960247702756692
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:5:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.06846846846846848,
+        "option_1": 0.15155155155155156,
+        "option_2": 0.1827827827827828,
+        "option_3": 0.22772772772772773,
+        "option_4": 0.36946946946946946
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:3:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09234617308654326,
+        "option_1": 0.1699849924962481,
+        "option_2": 0.15727863931965982,
+        "option_3": 0.2325162581290645,
+        "option_4": 0.34787393696848423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:390:0:score",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.06184329030321224,
+        "option_1": 0.189632742920044,
+        "option_2": 0.1348944260982688,
+        "option_3": 0.24817372160512358,
+        "option_4": 0.36545581907335134
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

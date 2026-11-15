@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "boardgameqa-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/boardgameqa",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:45:30+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.3,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.36,
+    "baseline_adjusted_skill": -0.09375,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.971005999999761,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "boardgameqa:default:test:248": "117e1022fb9d21d4dcd795e5270994f1e2cd7767a394d344080459281dad1119",
+      "boardgameqa:default:test:297": "25aef17d4829baa3ac828198c1f1baf8a46bb1e48087e61bd946641e28a45f27",
+      "boardgameqa:default:test:881": "2d1072fea1d7a819b55d5b58f71d9308df640aa018fd1b21236bfdd45d67dfd7",
+      "boardgameqa:default:test:1023": "0da5b45f8ec204dcb856c5567b684991ffd8a010a6c43d3a1efcd651b4c4ffd5",
+      "boardgameqa:default:test:1141": "94bffddb754ac8e7a97c7df3d898183a514382ad8a3c79f648dfb4edb9e2b4f8",
+      "boardgameqa:default:test:1260": "6bd4535461560998fd10757e495633bd2b3ca532cedce625ee875afd3b507789",
+      "boardgameqa:default:test:1280": "f2bf6ae41b11121404c0e39f90398977881594e9d96a4889ac2ef8ba9b084624",
+      "boardgameqa:default:test:1331": "4bf8efb7607ba9148507c2365001371ed5235648075db596cf65c62101ab94e5",
+      "boardgameqa:default:test:1374": "618a90c92a42b630d97014ff24f23a133225e1c2c338a947232d4c335cc9743c",
+      "boardgameqa:default:test:1389": "e67cc5ad5153ee6e0cad2ce3a958df77b0b858d2afe0ef957595ea81a810994a",
+      "boardgameqa:default:test:1430": "8be5162816ebbfbf5dafc11a92aaad4c437dfe29525213507ac26ba5dd1540db",
+      "boardgameqa:default:test:1817": "42c010ec7a5eddf7d2aa7d29e013de32e7f5160f8b2af99b274cbd3b40a60e34",
+      "boardgameqa:default:test:1834": "70b62ed6463aa0721d4196473c00d7a4bb144a33269a5fd4734e8e9c2c29cdce",
+      "boardgameqa:default:test:2047": "f2db6368f59daf52c611414fc8fbac934858788621815356bd641ef95a432492",
+      "boardgameqa:default:test:2150": "cf945e82c1d75b1cdc019b1729510dacf78bbaca3a78f54d28d1978aa36ee068",
+      "boardgameqa:default:test:2235": "e42c0617f8f978287ff49ad5637fbd70dcffae51828d2824ec03c1e836c3b227",
+      "boardgameqa:default:test:2251": "94a72d9d1de2f0c51646a0ab7d46fee90f8d9aeb796a3a62ec9500daa06dbc8a",
+      "boardgameqa:default:test:2472": "ad517676810f4e347c78923ffd651937f746303b86d3f8338a51066f00585a6c",
+      "boardgameqa:default:test:2541": "2bf86d7fbbd14c605789de81f654668ca5b0cbb6780c8a420832e88a5d5d5e34",
+      "boardgameqa:default:test:2686": "055f1efb2e7bfb3c22310f418396ba9e4b07f888c7336c12806eb33269a3eb95",
+      "boardgameqa:default:test:2784": "c8c0756d3ce5b78cb162efeeaa1f60ed11d6872c49de990aee7bfc5c61632e2f",
+      "boardgameqa:default:test:2826": "d0b76e4091f9a45704f7cbd81c14ba419ee704736302d0f69efd26455a55900b",
+      "boardgameqa:default:test:2858": "04c2573eab80c10b03a81df16b4d3d7d58fff68d1117e7f3508bdb80e71b4bb7",
+      "boardgameqa:default:test:2989": "0654e3b1fdd4c02fc9f1959ffe2e9a473604b23beef3a66b8dca1f65f678be96",
+      "boardgameqa:default:test:3294": "b4e38ccbb0dcaa51188c735e6e71d1767c8becc55066435f9e337a1cc32aa99d",
+      "boardgameqa:default:test:3475": "e9be8b063a96e789d953732b769927cb99a9f08d721814377d70dd567ac3a122",
+      "boardgameqa:default:test:3573": "aa2dc167c02df5fa40c80216a5f70a01b83c932f83ff52d57cbfa2f427a0a29b",
+      "boardgameqa:default:test:3719": "9951cb3d31faedc1f35e23601db4f4e335f3d6d3c2e6f9528f84480c36a28a64",
+      "boardgameqa:default:test:3741": "7d23d17fe16d968a3549ce08424afffcf2679f3c7bcb6769f095ff3c6dee3cf4",
+      "boardgameqa:default:test:3981": "96871323229ba97decf086affc11fadae415041ffa07cfd2d9bfba4434e0da2e",
+      "boardgameqa:default:test:4378": "44cc300608bdf8128d8d2580f11170c2a5fee2550d8fa22476dcac5455acccc4",
+      "boardgameqa:default:test:4492": "7c6c244712b032d8e5a8e9685b9bbc151df96bc0e9f9136d096464f5609aa15a",
+      "boardgameqa:default:test:4499": "3b977e422e302081bc46b9e52a3c2bca527253b1d448dc0a951fc7232079a3b3",
+      "boardgameqa:default:test:4521": "3135f8d57fd3eeecb1b5a5d9d661917b24ac00457c5f7e3a9ece027f9edd2e6a",
+      "boardgameqa:default:test:4916": "8cbd258931ce0d83bc23e95390cd5efe2d52e47255c96b27a0b7597553b49e4a",
+      "boardgameqa:default:test:5166": "45dc3fc34b1520f52fc1296a0c6cbbc2c22293d35e9eb234301a548ab764645d",
+      "boardgameqa:default:test:5362": "869790954e3240adf072cfb712667e0e006bcf74bba90e8e32a854d0093e0855",
+      "boardgameqa:default:test:5465": "731115d26846a41f8d7bddf86f9cb6a7e36f1b86ae6c2170aed4568c31627234",
+      "boardgameqa:default:test:5611": "313eac291a66f245219330223a124b3632a67e8850c0ccc371beea218464df12",
+      "boardgameqa:default:test:5668": "1e424cf16d59b8ac340cc3cf7eb9620c8ff8a70d1c2d99338683ce44c488c7aa",
+      "boardgameqa:default:test:5824": "b59422ac3b7ea4648be02676cf4be7c228a379125bc433051b312a322d9ac5db",
+      "boardgameqa:default:test:5861": "2dbf3338d2e854a915afe63893d45ee0e009ce5d4866d92c72a0e02849526695",
+      "boardgameqa:default:test:5949": "fefc737a5e1091781e8c707e0597db14ec3633b9eda4cb99daa9de69c7ec85a5",
+      "boardgameqa:default:test:5971": "7468a5c89f0686e7cc77ab9875c6a23e7d56c2c33e0f5f29ed1b7fa753be9b6a",
+      "boardgameqa:default:test:5984": "b9586eb14bbe7345e0a8e24a8dfdc9336ade1fc79ebb5dd8d189ffb7b7a506d6",
+      "boardgameqa:default:test:6230": "94d34a06b46b1664052c3a98242fdde814a0cd88bf61b54e4d5de1c31a85caeb",
+      "boardgameqa:default:test:6384": "14349289caf5eaa26e4a99db904dac47b38af8812220e5e7cb72dda2c23e8cdb",
+      "boardgameqa:default:test:6457": "5877b1a757241609ae467e2d755452045efe054a0838c6a9f126c5a7110b4c45",
+      "boardgameqa:default:test:6463": "909c9dd10928807105c3461502e42bc7179eeb90efab85843c5342a550fa5c2f",
+      "boardgameqa:default:test:6605": "211b5960ee00aa6c2f346f9373b24089bbafc073326aa9b0355d5247b1db824f",
+      "boardgameqa:default:test:6808": "0a8a31463177cacb03480accf9df95e112caa7d3b5deb70d5b856b144624beb4",
+      "boardgameqa:default:test:6972": "18492809a62fe95b36ff2ca1ee90b931724659ed7996fc3ac2e4741446af37ef",
+      "boardgameqa:default:test:7078": "ec6b21e45183efa1525e02afa2d387e16c6b7f31009004d449ea8b6f52e9bfd3",
+      "boardgameqa:default:test:7212": "4f022173d88d3c7cc944ac98984c572408923f21927b89b0520c6b4794a012ab",
+      "boardgameqa:default:test:7522": "03c13c43b599d30ab009a4728e7ac79e55545597b3541eb1419a741b3110f708",
+      "boardgameqa:default:test:7676": "da06ee497ab2d99ad5c5998e0426fa7c47ad6ad1e138908aa4edf84b63556c0a",
+      "boardgameqa:default:test:7690": "6603a7cc5bc53ccaed8ae7c4a2c9da966c53a36f4d9f1b03029631f20d293627",
+      "boardgameqa:default:test:7848": "67e78bb66797d4dc79700d4752e99a086bc54451615809f7ca2c10aa5d287b10",
+      "boardgameqa:default:test:7919": "6cc0ec54e0064ac4d86606c71925dbeed38561f1a6765f6313caaa9e6739924a",
+      "boardgameqa:default:test:8095": "5409419131d0b623a5fc3c33e99f503b17e69e374cb9a76837b4f5aa26d5dabd",
+      "boardgameqa:default:test:8226": "5425643d1e635efd207579abb8814226c1abe5241cb60e2ea5f73fc683dca057",
+      "boardgameqa:default:test:8375": "abab77a8e96f0acb9c13188bae8d42ef437e94174655c6e567b1ae30d933939b",
+      "boardgameqa:default:test:8388": "de35d213da33e3b6ebe41424fa495b6893f8075476b0b8b66f7acf0d1b35fd01",
+      "boardgameqa:default:test:8550": "c5a37293537a01099a2f4dfb7361102d16efe267cd4bb587c89e4d7d6515097e",
+      "boardgameqa:default:test:8611": "58afbd0e7d96a0103c6f4871109b36d1f3c929a7976bff95ae05cca8250c8328",
+      "boardgameqa:default:test:8626": "96be798f7e6f8a4566b9c3a022b1032188b4ec4108dfa4b190a1d291e24e0410",
+      "boardgameqa:default:test:8803": "22217e1588a69541a903d92a05c66cd37a2bf4da162a35b310e739c5fe096456",
+      "boardgameqa:default:test:9082": "866918cfd9ade6ee8ce520a1cbaac84aca53e8e76f9c75b11e3424fe35d56893",
+      "boardgameqa:default:test:9494": "6ef55fc9df083846fb53a4b91d826b7ba5cef731556120c5693d9a631c082dfe",
+      "boardgameqa:default:test:9625": "a3c4beb7d83ad59a566a29661ad314c993250b481c4db22296e497a0a27198f4",
+      "boardgameqa:default:test:9861": "fd7c48e98661767ad9dd731bab875fc20a6f1ca20274092b2c0ea5875a0b92a9",
+      "boardgameqa:default:test:10568": "f08566fa3ecaa478135e289f290d1ca4774aa5218e6bd17eae1c56a502f8fdaa",
+      "boardgameqa:default:test:10644": "5535e0be2e991771467e5a9a1f3acceae898fabe3ab9f4f2f219ad42ab5d3507",
+      "boardgameqa:default:test:10748": "27239adde8a2947efdd75aa8b05c124f932911295aba87552d4043c1ebba9659",
+      "boardgameqa:default:test:10817": "74785c950b679c3f9e04e4bda7432805e77b75f540df5f01da0f97c0c7110493",
+      "boardgameqa:default:test:10838": "b7f27686a89d315f4d23b8344388790d4b1a9fbe22e88606dddc78d3ee1b3428",
+      "boardgameqa:default:test:10975": "55e73481bdbc5f33998880e72f2e6581fb5f820fe1c8af19b1445f4c189e0bad",
+      "boardgameqa:default:test:11020": "f8a9fac372da1cec94faebe247c40a2b22397e888f7b68b0f23e058b53d4621c",
+      "boardgameqa:default:test:11185": "4090779085bc7458d0d78b0f3ad0f6ec05372b26e4326485ce05e9c00691890d",
+      "boardgameqa:default:test:11189": "10373fe8874e2357af2475a0e4691ff9b10c6d57c17f3dc9cf8f88ae382ef20a",
+      "boardgameqa:default:test:11505": "4d5256e8f22e23e9e5c1a88ee943d77225e50f47148e4b949b62450ce6808690",
+      "boardgameqa:default:test:11657": "d4ae1af2210531f399ad9be863223cfdc724f3bd25d838775413f42d5932c8c0",
+      "boardgameqa:default:test:11809": "b2e6ab9b8ab4c7f14962e5d3fc3520a5db489e7060002abe8931152fe9d94b69",
+      "boardgameqa:default:test:11952": "5a526d879fb49b5a0885f2350729641c5113be7034b26edfde440681bc47cdf7",
+      "boardgameqa:default:test:12270": "c8805586844da392e591617bb596ac9ff75e259fbb5729c7c94434cdac4f4448",
+      "boardgameqa:default:test:12375": "0eb88e5ad159b50c2e92693cd2eb65f628d03aacd11617cffa562defaa24636f",
+      "boardgameqa:default:test:12549": "b5b099d8e2d5b0c567b7e88f56cf63cea365e63386595becc685b65d7745f5a4",
+      "boardgameqa:default:test:13018": "3fca5690c6a415340838013a0f5f967e5b68128ec9c74cf2de8bbe06349fb9f0",
+      "boardgameqa:default:test:13196": "4b5e0729a8e6b76993ce75ae706e0f6e60d4b98800227ffb89df1978a0ced89f",
+      "boardgameqa:default:test:13225": "c9ff329877ab074ce1485667c1f77f6b7ad5bedd4ca10cb19f6095aea8812b6f",
+      "boardgameqa:default:test:13515": "94bb72eba62e3876c03f1026665551f16e45e1e0fbb3c3b7c537bfc5c96bcb46",
+      "boardgameqa:default:test:13651": "7fdd3d134f74923f8d7243c0b5d5d399b555c19a8446d0ab6667945adce9fd88",
+      "boardgameqa:default:test:13734": "ce6cd356fb91c72fbd80ddfefdc26b0f06e9420edae086e7c539e29baf0760c6",
+      "boardgameqa:default:test:13866": "b97a373c1ea63825b3d756075d73b1bb30c7df574c70bf6549c652cc0c3d0c08",
+      "boardgameqa:default:test:14341": "a57235552a8e9355b9d4c3b3bb909b00e579333ae7fbde0d07d2d2d978bc027a",
+      "boardgameqa:default:test:14446": "82d68a502ea3ec9e37ec820229ce416ff8d67b7ebddf29ba200fbdba3ba24213",
+      "boardgameqa:default:test:14695": "30c4b3d758783b41038ace17dca93b9c84fd075da14a6513a412241989c3989d",
+      "boardgameqa:default:test:14740": "99aa13fc124446c85ba94a6d8b2efee8b528c2e7a094bc33f0c41b3e93e629a8",
+      "boardgameqa:default:test:14797": "e3eeaee75a0ab08e56b01d5dd213f50322205ceafc9d00b6830ce953a0773c74",
+      "boardgameqa:default:test:14997": "49c22451a3e24f905e8c525c3b8ae38737280c6c594ecd1e77a47577b14d06c4"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "boardgameqa:default:test:248",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3965,
+        "disproved": 0.334,
+        "proved": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:297",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3874749498997996,
+        "unknown": 0.31112224448897796,
+        "proved": 0.30140280561122246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:881",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3457,
+        "proved": 0.2617,
+        "disproved": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1023",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3789,
+        "disproved": 0.2871,
+        "unknown": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1141",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3229135357178639,
+        "unknown": 0.2993688007213706,
+        "disproved": 0.37771766356076547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1260",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3457,
+        "unknown": 0.3203,
+        "disproved": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1280",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3574,
+        "proved": 0.3262,
+        "unknown": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1331",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.289071092890711,
+        "disproved": 0.3554644535546445,
+        "proved": 0.3554644535546445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1374",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.375,
+        "proved": 0.2617,
+        "unknown": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1389",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3457,
+        "unknown": 0.3242,
+        "proved": 0.3301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1430",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.2676,
+        "disproved": 0.4199,
+        "proved": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1817",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3620240480961924,
+        "disproved": 0.28176352705410823,
+        "unknown": 0.3562124248496994
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:1834",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3164,
+        "proved": 0.3027,
+        "unknown": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2047",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3047,
+        "disproved": 0.3984,
+        "proved": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2150",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.332,
+        "unknown": 0.2852,
+        "disproved": 0.3828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2235",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3086,
+        "unknown": 0.3242,
+        "disproved": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2251",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.2826347305389222,
+        "disproved": 0.4171656686626746,
+        "proved": 0.3001996007984032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2472",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.291,
+        "unknown": 0.3184,
+        "disproved": 0.3906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2541",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.377,
+        "proved": 0.2578,
+        "unknown": 0.3652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2686",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3616616616616617,
+        "proved": 0.23363363363363363,
+        "disproved": 0.4047047047047047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2784",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.41015898410158985,
+        "proved": 0.25587441255874416,
+        "unknown": 0.33396660333966605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2826",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.33463580803526705,
+        "disproved": 0.35617673579801623,
+        "proved": 0.3091874561667168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2858",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.27674650698602793,
+        "unknown": 0.313872255489022,
+        "disproved": 0.4093812375249501
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:2989",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.31836816318368166,
+        "disproved": 0.35936406359364065,
+        "proved": 0.3222677732226777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3294",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.45010020040080156,
+        "proved": 0.19959919839679358,
+        "disproved": 0.35030060120240486
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3475",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3079840319361277,
+        "disproved": 0.2846307385229541,
+        "unknown": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3573",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.31969258409022855,
+        "proved": 0.2573111088931031,
+        "disproved": 0.42299630701666835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3719",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.35585585585585583,
+        "disproved": 0.24144144144144145,
+        "unknown": 0.4027027027027027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3741",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.33137039624713044,
+        "disproved": 0.3528296237149416,
+        "proved": 0.315799980037928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:3981",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.33396660333966605,
+        "proved": 0.3222677732226777,
+        "unknown": 0.3437656234376562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:4378",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.2695,
+        "proved": 0.416,
+        "unknown": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:4492",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.4731731731731732,
+        "proved": 0.24924924924924924,
+        "unknown": 0.27757757757757756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:4499",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3145,
+        "disproved": 0.3105,
+        "unknown": 0.375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:4521",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.37696230376962303,
+        "unknown": 0.33786621337866213,
+        "proved": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:4916",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3398,
+        "proved": 0.252,
+        "disproved": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5166",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3457,
+        "unknown": 0.3086,
+        "proved": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5362",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3457,
+        "unknown": 0.2871,
+        "disproved": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5465",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3515648435156485,
+        "disproved": 0.3144685531446855,
+        "unknown": 0.33396660333966605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5611",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3555,
+        "unknown": 0.2715,
+        "disproved": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5668",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3301,
+        "proved": 0.2832,
+        "disproved": 0.3867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5824",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3184,
+        "disproved": 0.3535,
+        "proved": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5861",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3926,
+        "unknown": 0.2539,
+        "disproved": 0.3535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5949",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.317796187244236,
+        "proved": 0.2806667332069069,
+        "disproved": 0.40153707954885715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5971",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3041221678810261,
+        "unknown": 0.3235851881425292,
+        "disproved": 0.37229264397644474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:5984",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.28517148285171484,
+        "disproved": 0.39646035396460355,
+        "proved": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6230",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.315799980037928,
+        "disproved": 0.33137039624713044,
+        "unknown": 0.3528296237149416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6384",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3281,
+        "disproved": 0.3047,
+        "unknown": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6457",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.29687031296870314,
+        "unknown": 0.414058594140586,
+        "proved": 0.289071092890711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6463",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.33333333333333337,
+        "unknown": 0.34890219560878244,
+        "proved": 0.31776447105788425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6605",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3099111687793193,
+        "disproved": 0.3801776624413614,
+        "proved": 0.3099111687793193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6808",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.32682095982366494,
+        "unknown": 0.2974651838493137,
+        "disproved": 0.37571385632702137
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:6972",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.384070266493662,
+        "unknown": 0.27677412915460625,
+        "disproved": 0.3391556043517317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7078",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3496,
+        "disproved": 0.3281,
+        "unknown": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7212",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.4594594594594595,
+        "unknown": 0.24924924924924924,
+        "proved": 0.2912912912912913
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7522",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3652,
+        "proved": 0.293,
+        "unknown": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7676",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3613,
+        "unknown": 0.2871,
+        "disproved": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7690",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3574357435743574,
+        "disproved": 0.3066306630663066,
+        "unknown": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7848",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3242,
+        "disproved": 0.3301,
+        "unknown": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:7919",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.2988,
+        "unknown": 0.3535,
+        "disproved": 0.3477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8095",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3184,
+        "unknown": 0.2988,
+        "disproved": 0.3828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8226",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.35811623246492985,
+        "unknown": 0.320941883767535,
+        "proved": 0.320941883767535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8375",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3781437125748503,
+        "unknown": 0.25538922155688626,
+        "disproved": 0.3664670658682635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8388",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3711,
+        "proved": 0.2793,
+        "unknown": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8550",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.36716328367163287,
+        "unknown": 0.289071092890711,
+        "proved": 0.3437656234376562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8611",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.4035332867551652,
+        "disproved": 0.3099111687793193,
+        "unknown": 0.28655554446551557
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8626",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3483618875864142,
+        "proved": 0.30327622482717165,
+        "unknown": 0.3483618875864142
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:8803",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3398,
+        "unknown": 0.3086,
+        "proved": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:9082",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.33137039624713044,
+        "disproved": 0.3528296237149416,
+        "proved": 0.315799980037928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:9494",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.2778557114228457,
+        "disproved": 0.430561122244489,
+        "proved": 0.2915831663326653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:9625",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3477,
+        "unknown": 0.3105,
+        "proved": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:9861",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3470059880239521,
+        "unknown": 0.2885229540918164,
+        "disproved": 0.36447105788423156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10568",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3809,
+        "proved": 0.25,
+        "unknown": 0.3691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10644",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.31112224448897796,
+        "unknown": 0.30140280561122246,
+        "disproved": 0.3874749498997996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10748",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.39375187144425594,
+        "proved": 0.2748777323086136,
+        "unknown": 0.33137039624713044
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10817",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3379,
+        "unknown": 0.3594,
+        "proved": 0.3027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10838",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.3144685531446855,
+        "proved": 0.22657734226577342,
+        "disproved": 0.45895410458954106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:10975",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.43901708121066824,
+        "disproved": 0.23903705923484167,
+        "unknown": 0.32194585955449
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11020",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.2812,
+        "unknown": 0.3223,
+        "disproved": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11185",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.36133613361336137,
+        "proved": 0.2988298829882988,
+        "unknown": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11189",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.2773277327732773,
+        "disproved": 0.3867386738673867,
+        "unknown": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11505",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3502655044584711,
+        "proved": 0.2642019837691614,
+        "unknown": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11657",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.36913691369136914,
+        "unknown": 0.291029102910291,
+        "proved": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11809",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3222677732226777,
+        "unknown": 0.31836816318368166,
+        "proved": 0.35936406359364065
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:11952",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.35936406359364065,
+        "proved": 0.28517148285171484,
+        "unknown": 0.3554644535546445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:12270",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3242,
+        "disproved": 0.3242,
+        "unknown": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:12375",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.291029102910291,
+        "disproved": 0.3984398439843984,
+        "unknown": 0.31053105310531054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:12549",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3457,
+        "disproved": 0.3145,
+        "unknown": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13018",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3535,
+        "unknown": 0.3477,
+        "proved": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13196",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.36650364307815153,
+        "unknown": 0.3391556043517317,
+        "proved": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13225",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.28517148285171484,
+        "disproved": 0.37106289371062895,
+        "proved": 0.3437656234376562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13515",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.36402805611222444,
+        "disproved": 0.26613226452905814,
+        "unknown": 0.3698396793587174
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13651",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.332,
+        "proved": 0.2285,
+        "disproved": 0.4395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13734",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.25047590421801424,
+        "disproved": 0.4011622081955716,
+        "unknown": 0.3483618875864142
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:13866",
+      "question_id": "answer",
+      "probabilities": {
+        "unknown": 0.2949,
+        "proved": 0.3008,
+        "disproved": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14341",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3594,
+        "unknown": 0.3027,
+        "proved": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14446",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3906,
+        "proved": 0.291,
+        "unknown": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14695",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3555,
+        "disproved": 0.3047,
+        "unknown": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14740",
+      "question_id": "answer",
+      "probabilities": {
+        "disproved": 0.3555,
+        "unknown": 0.2949,
+        "proved": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14797",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3437656234376562,
+        "disproved": 0.28517148285171484,
+        "unknown": 0.37106289371062895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "boardgameqa:default:test:14997",
+      "question_id": "answer",
+      "probabilities": {
+        "proved": 0.3515648435156485,
+        "unknown": 0.3144685531446855,
+        "disproved": 0.33396660333966605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

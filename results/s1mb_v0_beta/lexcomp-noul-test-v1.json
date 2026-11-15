@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "lexcomp-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/lexcomp",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:10:01+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.26254857760000005,
+    "accuracy": 0.5,
+    "positive_recall": 1.0,
+    "specificity": 0.0,
+    "precision": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.6666666666666666,
+    "true_positive": 50.0,
+    "false_positive": 50.0,
+    "false_negative": 0.0,
+    "true_negative": 0.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.05019431040000022,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 27.843911000003573,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "lexcomp:default:test:0": "84a4fbc42f0c34055137b7a0855ac1a244a0b05e4edc24e30221bfa908cc0b34",
+      "lexcomp:default:test:1": "5354b9d026e776704257e44311304be05c0d99c2a655e8767fdd967f80ef8849",
+      "lexcomp:default:test:3": "fca2e58afdea38485cdf00db87783627f22a4649fe69d4a9ebd48ea6970fe900",
+      "lexcomp:default:test:4": "a16c0f2433ed50f92ca2114285a0e1f9baf66280fd6deefeae8e7eafa81dbf09",
+      "lexcomp:default:test:5": "bda81e5ec236d99d139f495bf0acbe823cdb7807e6988963023c54ddcfe671d8",
+      "lexcomp:default:test:7": "520805a45d4e080ea85a375bdc1b07b75dd98b528a19efe158461af1e784d0c4",
+      "lexcomp:default:test:9": "babff38ba2c1a34b462e72b215004f41c5592b33414edbbe19c3206964f756b9",
+      "lexcomp:default:test:10": "a193f41cf01dd2499a40dcaab4037de7dc711176a45261a87044f764a0915800",
+      "lexcomp:default:test:11": "2a22e0253df253dc8c4a400a2d2c08338a099e08945a2ec3cb527e50c16aa091",
+      "lexcomp:default:test:13": "37820d2ea09f7e3f962af9afc24f8a551ab7bc1f6ab9d7d2a9e37e4891035fa4",
+      "lexcomp:default:test:14": "bbfdad1b060f66109773a446f403e89447388d1bdecd97b747ac688b13bab500",
+      "lexcomp:default:test:15": "430e3b2761aad9f3648337a36c6ab2c4c6f07fc1716266c52ea8621e1eb101ed",
+      "lexcomp:default:test:16": "2e3f2aa020948dfe2a4bd63319db1c9beb3d3a5b6b53ed2d6e19afb164d55df9",
+      "lexcomp:default:test:17": "7aa3339ef5f1d0d746b6bd6462f0cd9af99be6c07a718e25a4bc0b6870c30ad6",
+      "lexcomp:default:test:18": "e4eb82851ba2cbb5d52a6ba0e9cb8e748188215574cfaf01ecc8845a238581e3",
+      "lexcomp:default:test:21": "9dbf7ad376f36c7c70a999c5f4101a1cee61ebf7c4312a2ef2b5f3fee5227d55",
+      "lexcomp:default:test:23": "0a29227245d5c16417c8308574772950de16cd7dfd87ef7364666ebea2d3f48d",
+      "lexcomp:default:test:24": "39aa1f0f181878f05422d62cba0932e83fd561689c705c11e25b0b6c5c47b8be",
+      "lexcomp:default:test:25": "90a235e63c70ec4b4ed86ee9e976c78c2b438ab646c8bac9c0bb55831b30108b",
+      "lexcomp:default:test:26": "7b0441f680b6b188bcc81bbcc6eabca8f652e59006df990cccf717528ad2eb72",
+      "lexcomp:default:test:27": "503f833ddc9c52f24d33bf9f350f93bdbbdd6f29a6554534bf8ba4696949caa6",
+      "lexcomp:default:test:28": "3fb03960fdf87883394026d5a914c4d180d131a781eecc394532e57e1906e013",
+      "lexcomp:default:test:31": "e7a87b551993c2953c7573c60a6ebab4493df352c8848c14bdcbf9ada1b0d2e8",
+      "lexcomp:default:test:32": "d49d82aff4f63250b36483464a75d0ff9e328839d7ec41cd8344963e021eb2a5",
+      "lexcomp:default:test:33": "15ee104ea877c84a75dba38362179b345b90d0ece264e4e23a4dee11ec2baf5b",
+      "lexcomp:default:test:34": "c78c5e7bf09f84265dca76105a502e9c8e3309cded83022e144b06d7e3975069",
+      "lexcomp:default:test:35": "eddbf4186a33c062f2f0ab0dd2939db81da38a1d9123222e84b09730c3ee9b9e",
+      "lexcomp:default:test:36": "ecf718f8e60a8ca384c7d61d61f2462c21c361df609e5d3e45b88e549d2278b8",
+      "lexcomp:default:test:37": "f1b6ec32a76274ef23f1ab99080770c8e2b63fa933b5ea5c547c7a94b02530b5",
+      "lexcomp:default:test:40": "d4af0ed22ec267a7b40d9c413776db16eba931db52afd2df406a452a377dee3f",
+      "lexcomp:default:test:41": "91b765066f2f90a9f48e0e6efa59cf63229cd303742100935220e814791d935c",
+      "lexcomp:default:test:42": "a010091724d1bf50b36c113a3e2ba4e7ec681815363006007f496fc99ee102a8",
+      "lexcomp:default:test:44": "3ab983d89623e0fed3db86382e81b8c2684a787909f8993b15cb2fef19b638b0",
+      "lexcomp:default:test:45": "24b6631acefb612a4119ca7a766182a8738614ac348fd70b8bfe725686d6764d",
+      "lexcomp:default:test:47": "7e64254ed402808eaadcb91f2f7a68f136520debcbc7f35194dd6b2d437d1dba",
+      "lexcomp:default:test:49": "dabda827bf0d4abf5a11caa7dec050e458fdfc769e7fe6179ef2dfcc29a18dd8",
+      "lexcomp:default:test:51": "6ea0be0bd211ee0c2bef543db725c412dcb852f8cc2f0b76527d3a0c4da739c5",
+      "lexcomp:default:test:52": "1dc7592caefca5a8087b71f1f26931ad6dafa0a4a1129cb7d873ec4417dc19b4",
+      "lexcomp:default:test:53": "028d84f32d3b5b98232890e8d9d38546e3eb1806ea11100bc56b465994d025b2",
+      "lexcomp:default:test:55": "10f04b059f124e7fe367e4a20c45441c8b30b8215eacfcec3be736208dc366e3",
+      "lexcomp:default:test:56": "f997a75b896986570540614a6ecdd5dc1585f1ff0ec43b4ec89a6cbf3132501c",
+      "lexcomp:default:test:59": "fa8604024a54d916a74be3e06e4572c27b8bbe2bb00ddb792371bbe7ead5dfc3",
+      "lexcomp:default:test:60": "ad88fb31da8d554701c0ca7fc12dac6137fbf6280a5a77fefab4a703cef0d660",
+      "lexcomp:default:test:61": "434036842a79d62cfd08344d1534ee2a47bdf4929fb3cd4f867aa118089625fa",
+      "lexcomp:default:test:63": "8c893035db1b381af1115639c29d105d38da83198cce89e4acf20fb4b511e217",
+      "lexcomp:default:test:66": "a0de492ce1a6dcf1a88d59bf38dc8d0e42251222402d9a3b3f82352232d5d984",
+      "lexcomp:default:test:67": "29a35af804e39645a1e50b208d6bd1c2ed311d776486171a5b93c7b02857f38a",
+      "lexcomp:default:test:68": "b1a662205f983e7b6b06a8648297b14881bca90881e4c8397572caf0ff3574be",
+      "lexcomp:default:test:69": "eec48befa0a35e26e552e04098590957f50e877def06aef46826c684935a4861",
+      "lexcomp:default:test:71": "3ad4c08b0c304c4583e2d9995864ef69ac35e8cfa28f60f3d1cf70af852fb649",
+      "lexcomp:default:test:72": "2f29a207dd71126789552d9a13310a54f546944adf2b2f3eb798ad1a0d64c082",
+      "lexcomp:default:test:77": "cc41b42e4ec8a84ba1967c8ee65c073dc8a395958c2fbf802329d52860e3aaed",
+      "lexcomp:default:test:79": "f6729b5546201cc33f66be93e81834ec7a1b41d5de43e2e29261dbbf89d10186",
+      "lexcomp:default:test:80": "71fc4f160741328522ca019715110b1fdd892a85665b601bfb614dbe2d4b4706",
+      "lexcomp:default:test:81": "6671ee879036e030d536215e751dbf38566207c7114ffe0c7f0cdfd04ee15ab6",
+      "lexcomp:default:test:82": "3ad40f34cf67f6857959b557c3fa2a18a652d42d0346a76c7a59f6b1369ca052",
+      "lexcomp:default:test:83": "390d363faef4f6fe412a0afd36fc4f62c871443060ca4d47cb306a88bb596880",
+      "lexcomp:default:test:84": "03859ac48cd2d121153424b0614d95a1586cfa0d5719e163245d6d839ecb37ed",
+      "lexcomp:default:test:86": "7c79433c065a46c1c44ed3daf30f56f0db4cd30219308fef0b13c8c2d83cf9ee",
+      "lexcomp:default:test:88": "6f4bba2947fb25a4c800a39b91cb2dfb5463abe73d017dd14fe57bf82de1c5f3",
+      "lexcomp:default:test:92": "3baa8986c6ba1e340c7825bf51253ea3873f3904bd1bc1a328221c9f7efbdc05",
+      "lexcomp:default:test:94": "30fbbc843fedb97277655bc5bd5bbe1b8670355610a6fa3509cb41fb9b75a1c7",
+      "lexcomp:default:test:96": "8ce8dd4756602588ac3e692c570581c631bd2c1a30066d0f3b10106b151bbe78",
+      "lexcomp:default:test:99": "9436ccf873fb017a371ee96ae62250a68cddea90b097fa07d189ee713426fdeb",
+      "lexcomp:default:test:104": "fa08b4852e79e3f667380bd9b38fd2ea2a653692ce5c038155c841d8cafe5c7d",
+      "lexcomp:default:test:106": "64ee13f64d34500035265ed4e39f16935c483540b2e3310777e5c74a164ad5f3",
+      "lexcomp:default:test:108": "064a5e5f3c6cb515af7fc61e62aff4b79ff4f0ed5544309fe7eeea8f4481b22d",
+      "lexcomp:default:test:109": "40fbde272699dd67f03b6be63552ad2b7dc39cad012b6278786e094089961011",
+      "lexcomp:default:test:112": "66bc5479c6f2be58fabd7173945828aea3186c57b78ba5c59995ac3adf55d9ff",
+      "lexcomp:default:test:113": "40de8b114d6057059c50997772c1b581ea3246635ca49b4a0dbeb3f780a99b46",
+      "lexcomp:default:test:114": "8c8a56dc0532cd16b8f36a7bcfcc00dbf6a7a96c687a387becb7477b598c6f80",
+      "lexcomp:default:test:115": "9d4c3d1c0d3176f4e409484e7446cb3af2f86a05a9281721fc7005ccc519511b",
+      "lexcomp:default:test:116": "97a9f0a622de36e83b62598594a9517768ac6acdd70bcf4b09680da739d3c137",
+      "lexcomp:default:test:117": "8b1e3a9344eff6dc3450cb9a3672ea5a1b991ff32262d4f39fc1c678da4d0550",
+      "lexcomp:default:test:118": "e85d45c7cc7188c94a8a058a1e7c506a99d7ff1e997cecacc9d3932d98950e31",
+      "lexcomp:default:test:120": "dabe92a7cb6470a9e20c26e6fd4e1cf31e0ec75596afc686f9e614fdf7b5f321",
+      "lexcomp:default:test:121": "d13751e9ab84a08cac53489712bf6e8f4660cf94428c44a696b9d15f793b7bde",
+      "lexcomp:default:test:122": "8187746a2df158611aa9f27fe10e8ebc5bf12d8218fc3d67a2c2d09c56adb776",
+      "lexcomp:default:test:123": "acb6cc3731c2df70d80d1ad0d014dd27b8ed341f5ce53e5ebe174c4a56ef799f",
+      "lexcomp:default:test:124": "cb9cf100dea183a9446ae2ee63d6873f8da5e61727f753d8d0d4489b237d4541",
+      "lexcomp:default:test:125": "d85ea5446fd22c30264780ccf83d85c41b407b9aa3e8fcbf10d95925f4534744",
+      "lexcomp:default:test:126": "48e0091d6410492882a1eb54657982893d3ff8b336c11d5e43214e0c19cfd19b",
+      "lexcomp:default:test:127": "d1d57b4e87728810459e0044ae5b1b4a7bdf8c276392bb46b25cd0f24dc0c8f7",
+      "lexcomp:default:test:131": "b1d7e11a65f42bbcfd1d8c3d7d4a81aa07d61ee724b7d4bd1a6314a2ccdbf7bf",
+      "lexcomp:default:test:133": "9aeb70511ce175dbd05367bf98f7e12cf3867ca859c609fef3cf928e90b70d3f",
+      "lexcomp:default:test:134": "1a204f93b060994588f53afa0c8730caa9af1770f12781e73def5c41e0bd1e74",
+      "lexcomp:default:test:135": "207c23153a0acd001825bb2db1c5c935f7d6bb28559a124baf79453cb1e0b76e",
+      "lexcomp:default:test:136": "49922bf2876d3da1436264cb8415a958d60b893879747ca8dd6c85706961928b",
+      "lexcomp:default:test:137": "fbc88c9c5402e5b086cc32d740be042c202b74079d69c3f42dde9be76790f5ef",
+      "lexcomp:default:test:139": "bea9c66707a923f442b996ee6c613d4a263a70c2e02537273e2ef8f8174d836b",
+      "lexcomp:default:test:140": "f72a6ccf40a80361af229e777767b4ba78a405239d54b2d5bdcfad64aea24522",
+      "lexcomp:default:test:141": "1f553af09435ef5422151953c56435df7ee00c4cb1e3056bf9260aadee5a42ab",
+      "lexcomp:default:test:143": "f476cd68025b5f7d8d47e74e693c1a3955e3955f19bd1b74fc1ab42f11125e23",
+      "lexcomp:default:test:147": "288fb75681154e984b2d3d6cfcb0da93b70a390be0276b5773e9d3bd3c5e7551",
+      "lexcomp:default:test:149": "82f3bad904bb5dacfe9cbf958b682b716948dda7a8d0aa2899cec1b4bb1b799e",
+      "lexcomp:default:test:150": "b26b40de2f33899bb6f74a874f4baa469a6f776230438d27510263452477527e",
+      "lexcomp:default:test:151": "5be3d21b268f643ea119dbb4c9287bc0bedc32d1c6988b71ee277bc5c153b946",
+      "lexcomp:default:test:158": "6d33ae71fcf8ff4a85102c8814b48fd4e4089fdf369256b2b39d9f873bece971",
+      "lexcomp:default:test:159": "da97c85b5ea5d8584cbf387d2d2530ed4ca2fc739a157f277d0c6692e0e22fe5",
+      "lexcomp:default:test:160": "3f1b93c390988f3e609eefdadb4a7debb5ba2cedd77b26e2ae8d5996da52c3e9"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "lexcomp:default:test:0",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:1",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:3",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:4",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:5",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:7",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:9",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:10",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:11",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:13",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:14",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:15",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:16",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:17",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:18",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:21",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:23",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:24",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:25",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:26",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:27",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:28",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:31",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:32",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:33",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:34",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:35",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:36",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:37",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:40",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:41",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:42",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:44",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:45",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:47",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:49",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:51",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:52",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:53",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:55",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:56",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:59",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:60",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:61",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:63",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:66",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:67",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:68",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:69",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:71",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:72",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:77",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:79",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:80",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:81",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:82",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:83",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:84",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:86",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:88",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:92",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:94",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:96",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:99",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:104",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:106",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:108",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:109",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:112",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:113",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:114",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:115",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:116",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:117",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:118",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:120",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:121",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:122",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:123",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:124",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:125",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:126",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:127",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:131",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:133",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:134",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:135",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:136",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:137",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:139",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:140",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:141",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:143",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:147",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:149",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:150",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:151",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:158",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:159",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lexcomp:default:test:160",
+      "question_id": "meaning",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "wiqa-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/wiqa",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-15T08:53:23+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.29,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.37,
+    "baseline_adjusted_skill": -0.126984126984127,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.350289199966937,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "wiqa:default:test:41": "a566bae3f60e2453446ab6b2b7139c0e0807109739c4a8ad6cb619ac8df3c22d",
+      "wiqa:default:test:46": "4bb485046b82ae717d40bc1d8f7d61e695477c837504eaf4b81922a9cf7e7151",
+      "wiqa:default:test:74": "8520298c77a4fb534d4143e3e6183ad32838a049c67438bec8ce1b9fee4fb64b",
+      "wiqa:default:test:172": "1898d335038c33d9d5eea1beea4731bade9c1003cdf3c1ad18079255db3297f1",
+      "wiqa:default:test:173": "ff626d6a1c728979e503f029eed3390f827f1b7ce857a61c8c6787cfd96ba5c5",
+      "wiqa:default:test:192": "9924229b080ea0ea291c2de57a46bcb56e330b5355d50a9a52bd271f8afe1a24",
+      "wiqa:default:test:262": "0e72a37092b919b1d9a7eab3e09647d033b4522166f1b5a43c75eb4bef7a9e15",
+      "wiqa:default:test:263": "274ff7ca70964e303d8d42991864896605867ac23059005c4ddcae26a5975a35",
+      "wiqa:default:test:273": "99ae965d65acb79f277fd8562ecbe36645227ea9cdfb52093a5dc76b9ebdc64b",
+      "wiqa:default:test:275": "630fc8617455702070d7e9c7dc45634b46bdef39bd3cf3076009ef35066ed976",
+      "wiqa:default:test:277": "843b4de3d44aa0e86e237d5d05103a6dcb95fdf18e22cc7eaf74353d27a6bf99",
+      "wiqa:default:test:294": "43ae841203fb68602ff477711e3ac1af2891c7eb3839a2679181990725a00399",
+      "wiqa:default:test:312": "f0558bd148bb3a5282b813cd6c23086850bab721370efcf573d919aab1cf9bfb",
+      "wiqa:default:test:313": "76d05429a07d5efdceb56ac32ed02fe5daccaa1cd1ee742f2f07c7a614bcb813",
+      "wiqa:default:test:332": "819ae5ab554d79da8bceb6e885452600448283d9df379a0ec089cad0ef548d9c",
+      "wiqa:default:test:374": "d76e9af3fcf2d1860b1a0f81c54bcbb0c35c1e261d2ded9ec2cfb8e9b98fb5d7",
+      "wiqa:default:test:401": "b25c20d3ef6f7567ba4a7e3852f8b404983e3518dc5a6d4aaa2b55162f729d63",
+      "wiqa:default:test:517": "e308f40302dbaa173b32e95a18421d5fe29860021a02136b25b43cdcf5107772",
+      "wiqa:default:test:531": "2de958069232172e1d4737d7e9ab781a5f79c1d2390e26db24f58a6c5c2d9fc3",
+      "wiqa:default:test:573": "08aa1b1404dc9ddc92f1801489efd1f243a1128db139a097f877aaae14038823",
+      "wiqa:default:test:608": "ecdb757e506e6b6ce9f3f27e42289b0eed6e6fe5ce9c0d0a20bf959e2823a887",
+      "wiqa:default:test:645": "eec40b7248fa2f79a37ef2f04fcd85abde3722be017625c789f63a649f2a1fdb",
+      "wiqa:default:test:699": "b52c1aa057c0996af9bd3ba52910a6d5ccac5a4adbdbee629f18584db4cd36e7",
+      "wiqa:default:test:731": "32b443293a9cfd5de2a93e339e31defea0dde78fb4f3a912b1b0acabc93280b5",
+      "wiqa:default:test:765": "b544d0aa1c05b300e1dba876cafc3e677724f5055a06c7e6f11b902762fae2ec",
+      "wiqa:default:test:769": "bbf677128ec4d17fe84780625734933764a58d64dc3f5dfb8ff2af491f5d8b74",
+      "wiqa:default:test:804": "d6f5d5b2bfa0b5749244ff309864888aa3bcbe9232987a0f19896df177dcbaaa",
+      "wiqa:default:test:819": "b42ebd3341398325f2d8cc98fff3fde6cc7655ff641eefbb6eb6c0aa7219d11f",
+      "wiqa:default:test:869": "2970530943cb337d575b382e11717d31e706736e00ef4aaadf0d30171df0f661",
+      "wiqa:default:test:944": "f2847a7dc31842837ae13e1515e08d956f968d528c784cb7f63865a1e5b5458a",
+      "wiqa:default:test:976": "8af2ee8ef4c6b802b78863d167c378af54ae84c1865681f1d3dc92ea86753496",
+      "wiqa:default:test:1031": "e9fc866c7ae943f24c54552731fbdd31dbd8fceaf87cf0493013fbc60725cf9d",
+      "wiqa:default:test:1061": "a624a488bf957dd4a098fd17ecb26c7587d311fc2a6345b82ae5636bba15738f",
+      "wiqa:default:test:1068": "aecf2d31993f9aa28d6892fc1ebedd77a56e384b7bc3a1cf8156a421ced7337c",
+      "wiqa:default:test:1081": "a7f3408487defdb892a08d23b91b4a3512e045103526f239840bf11bc0889e31",
+      "wiqa:default:test:1099": "f7133a208cd772b5458241295f7d8d306e54d87d546e94faaf1a3a45aac9be21",
+      "wiqa:default:test:1139": "5ceff1fa7248ae71120156b306bf4bb356f747d01a8a94ddeb167cfe16f8c9bc",
+      "wiqa:default:test:1163": "9f1ca222b18c603eb391dab5a5c22550b08d28317e11fded31e1c966f659d24b",
+      "wiqa:default:test:1169": "4b3671c9712a1d41c9e859c8a36712c7a3a0a711a1170149bf50bfde26a12297",
+      "wiqa:default:test:1181": "dbe3a028297f85acf2b10494ddfffb2c37e19e342bcbff89241f0f048ed30cae",
+      "wiqa:default:test:1188": "40d2917dac8f78bfd5c3554a83ab1be3b317557e58697a70175acfa93511239e",
+      "wiqa:default:test:1218": "954060c8f8c5548f34a5b846d55320cd78cf08ec99bb4faccb97334ae7a1bdc7",
+      "wiqa:default:test:1245": "34741b2c1c384466181c97679bf9e89fdb2d35e544a446cb7ba3258c808dcb43",
+      "wiqa:default:test:1263": "5cbe21fdafecc8773a17ca9781a5724354956dea0b66295a5f2b8870ee076121",
+      "wiqa:default:test:1300": "5e27dd32d43d7c64c784c438b9c5809ff1652d8dc1e3df0c6818c29ec6d26c00",
+      "wiqa:default:test:1305": "41756083fcd46773c02212e006b2514cffc7f0ad9be54c193558423631bbada5",
+      "wiqa:default:test:1310": "f6fe3d0eb2fbf107c44263b324d64b845877401ba4667fdaebe7842632b7b98d",
+      "wiqa:default:test:1312": "350b2e1d1996a525de09980e2f92c4359d60fb02e485d2b6c64c1136c885072b",
+      "wiqa:default:test:1336": "7e51066800586c9d923f07e2227cbbfdcaa71f607090219e896f17b9c3b19442",
+      "wiqa:default:test:1367": "891efdd803a78cb593eb8de5632e784918b0e08a6c383193507d1f5b4ef974c1",
+      "wiqa:default:test:1384": "ff02398708ddb6ce81118cb2348156699b65d8dc8fe0cf2687ab147dae428641",
+      "wiqa:default:test:1399": "d59cb6414e1a0afd3dabbd212dbdd46b43e56c4858013ee15b216c011a442ede",
+      "wiqa:default:test:1413": "8226fb4648d639784e3859b2ee10c2c483264c8edb699dffebc19520083e5ca8",
+      "wiqa:default:test:1443": "f5d61bdba6c23f98e387920230776ea5ba8f9e303f256a78b84eeaab58fc69ab",
+      "wiqa:default:test:1455": "c0027a37fc3599611e9a1fb2b00e543f0eb8e4b1ac92fadc6fc62107740782a4",
+      "wiqa:default:test:1502": "91c9fbbe3b4d3cc1363987b0e24f3bd468b551bb074dd0ea89d66f023bf8e1b8",
+      "wiqa:default:test:1551": "25e74b44b5e33361a6028cd2978e180ac9b78e6d08c8eecbad6d828d6cff3cd8",
+      "wiqa:default:test:1563": "78769639bf247ee3f3855362c789c38948d9c06d4464aa603e6604de27d8be08",
+      "wiqa:default:test:1564": "c0e0db939e11ca567a770bed9999ee2f32556ebc90dc169211a829bbcb3b1142",
+      "wiqa:default:test:1607": "20874926843f1e4bcb82461d7c0379a719876568319e8fccd1d09eb5be89f444",
+      "wiqa:default:test:1653": "df51e4b0197a355667cac23c8e2a0c0c3496d8dff126e65d923568233521bac9",
+      "wiqa:default:test:1784": "b5c6dd730414836d701d21eb9ddf06e9b68e2e7bb091f6e15c81a8bb78f689f1",
+      "wiqa:default:test:1787": "80adffe5b5928155033b433b1b2fc0868f99ea83eea1672fd029ccadf5fac865",
+      "wiqa:default:test:1793": "860170b5d675307fc8fa33dddae0631822e0b5ec20b03df1191681c8a32acf80",
+      "wiqa:default:test:1824": "dd35cfed6b245c41cb2ca28b800167e8bdc2202ec344b7b086a09f9361b42442",
+      "wiqa:default:test:1846": "4b641b960837021d0e271ce39f9b04d53b087f7b0a0d661a580c8b06cc60e3e5",
+      "wiqa:default:test:1873": "72bda01472dc99f557a29ae406baf2f9012e7cfc3248e086ce6cc4fc953609f6",
+      "wiqa:default:test:1874": "1847f9c7a5ce426c8521b85624cbf7382ed57b520cdc4382cb676fef39396f0c",
+      "wiqa:default:test:1958": "d0d96172ddd34e09dfc6915f8fabd4f90e0e7bf3a735170a0bcaf5fd6944c2ad",
+      "wiqa:default:test:1967": "fdea7022685d736c05263b064e35e0c6f1533a4223d747cda3c7f59864bee809",
+      "wiqa:default:test:1992": "91e4aedd5dcd3639c338ab98e5dccbce0349beed0816b24799c6c51474fbd935",
+      "wiqa:default:test:2002": "cdcc7dd9b5a8010916b706cb7dbf5371f660b8e59822ab3ce935448ba38db2e0",
+      "wiqa:default:test:2030": "8a22b6d9e0ec18ddaac2d1a66fe7928f88b91c2d10aaca1103575f9948dfbd0f",
+      "wiqa:default:test:2143": "69d5ecd5ec41fd1ab54cbb090439b4c2e924e6d36be0db04df5e1c1a1adc6ed1",
+      "wiqa:default:test:2301": "7a904d525612f017b6cef08ff0372129fb683b4138682595c8fb16626d0207fa",
+      "wiqa:default:test:2410": "00c4ef8f20026db359a643419f299299a3cc2ff285df3aae32d4ae5928b68af9",
+      "wiqa:default:test:2464": "25e9d42582a9e68746b9c8de726a1ea1802d81281dd3c26a8635d23096a1893f",
+      "wiqa:default:test:2465": "bc838ceb11ed4eb1d0b0f4c0556944aafe179647e63da33e3bdc63329fecd7b1",
+      "wiqa:default:test:2524": "b1acc171295c8725f7dd4e8ec03d28bf6f62f1e57bfd604c104b40b55128462e",
+      "wiqa:default:test:2591": "2fcff7367b993ab47761c9a0121a1b33a58c54497a62a2456edc6d1c8ee4b314",
+      "wiqa:default:test:2657": "e5bc1561d03b7e0f20f2e4be661bc6eb3fe426a10c224036971927cc428cc18a",
+      "wiqa:default:test:2673": "3c41dfc986399a601190aca9177c7706ddbde2429120d0699dc21d3ebdd6bdc4",
+      "wiqa:default:test:2695": "71638cb0bccb69f17fb71817a821002a673d1849442946c1d9021de0f232aa24",
+      "wiqa:default:test:2701": "4e1e807310782501a85ee4e1d188656760993b5c1877ca264cedebfd01cf9764",
+      "wiqa:default:test:2711": "9ff1c7959d22a3f74f961fc9f44b0a8aa65b211354e9a1b54365d14fe62f1f9e",
+      "wiqa:default:test:2769": "13d8ad2580b0564486b37001850b575f19c6ed6f90fa79834ca9523be5763422",
+      "wiqa:default:test:2773": "eff15250fbcb641db6f66fc27b83af5226faed7b6da23d6f793226c17fd6598d",
+      "wiqa:default:test:2796": "fca4e8f87f9c5d4c5dadfdd430b2dce3925ee542f21bbd98168b372ce79e19a2",
+      "wiqa:default:test:2800": "1a8a8044dca4c6e80f6f4ab15eca1cb32ab0e822133e333e41816d7189e0fd89",
+      "wiqa:default:test:2816": "724f4ed2d687c24ea29bad2c892e45cd1c36296cdfe89d39d66ddbb46323f78d",
+      "wiqa:default:test:2841": "d1c58c2b7ac1bc27a59c8e3c082f87a70f279dbcf0d4227b61fc78347c4ad96d",
+      "wiqa:default:test:2842": "e917d18110798844f1bb1fa7e4637e5d28ad87ca56edbfa545f9a9a42ff35aed",
+      "wiqa:default:test:2850": "737b67364dcc74c4e63ad2b104ab6dbd46d1a2d05a0b4d70c2c9a4de1f342fdb",
+      "wiqa:default:test:2860": "1bb364100e52257658237cabd316c9db436a11c7e0b11750bb2de6842c86f0c6",
+      "wiqa:default:test:2894": "4bc7d0a11503744af096c114a3b99a6d61b5858b7b83c08e5dc20684e12f4118",
+      "wiqa:default:test:2945": "2ad0ed1318ab1e018cc70309180a303ab6688b12d2bda917c334839ad0512338",
+      "wiqa:default:test:2954": "c4f1ed75aa9511b7f1b3c692f5ea64f3f4de0a43dcbfd78a15e8c9c7f3bf7679",
+      "wiqa:default:test:2956": "be3a65bd0dfaa003e58fe19a444a286b61ca45d411064a67cda25deddaf3abc7",
+      "wiqa:default:test:2957": "e789345bfc3cc61a6a96aa22bcaaead85acc02cfaa4b7b83c05d180d18025e1c",
+      "wiqa:default:test:2993": "b93035de1d0da53957fd0807ac172f9dd2f95a35e86fda06e56fd99b4e386caf"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "wiqa:default:test:41",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.36593186372745495,
+        "B": 0.35420841683366733,
+        "C": 0.2798597194388778
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:46",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3301,
+        "B": 0.3301,
+        "C": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:74",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.2988,
+        "A": 0.4922,
+        "C": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:172",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.33266533066132264,
+        "A": 0.35420841683366733,
+        "C": 0.31312625250501
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:173",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.24682848866247123,
+        "B": 0.46828488662471274,
+        "C": 0.2848866247128159
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:192",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.4184184184184184,
+        "B": 0.35775775775775776,
+        "C": 0.22382382382382382
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:262",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.15153638274447004,
+        "A": 0.4378941046942248,
+        "B": 0.4105695125613052
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:263",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1953,
+        "A": 0.4395,
+        "B": 0.3652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:273",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.2637,
+        "B": 0.4277,
+        "C": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:275",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.13783783783783782,
+        "B": 0.42422422422422423,
+        "A": 0.43793793793793795
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:277",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3047,
+        "A": 0.4551,
+        "C": 0.2402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:294",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.15705864721750423,
+        "B": 0.4410030972125087,
+        "A": 0.40193825556998697
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:312",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3418,
+        "C": 0.2344,
+        "B": 0.4238
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:313",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1699,
+        "A": 0.4531,
+        "B": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:332",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.2236,
+        "B": 0.5352,
+        "C": 0.2412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:374",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.39879879879879876,
+        "C": 0.24924924924924924,
+        "B": 0.351951951951952
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:401",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.22382382382382382,
+        "A": 0.4301301301301302,
+        "B": 0.34604604604604605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:517",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.17462537462537467,
+        "B": 0.38631368631368634,
+        "A": 0.4390609390609391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:531",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.15904095904095902,
+        "B": 0.41368631368631364,
+        "A": 0.42727272727272725
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:573",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1465,
+        "B": 0.4863,
+        "A": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:608",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.38356713426853706,
+        "C": 0.23286573146292586,
+        "B": 0.38356713426853706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:645",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.21523046092184367,
+        "B": 0.5322645290581163,
+        "C": 0.25250501002004005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:699",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1905905905905906,
+        "A": 0.42422422422422423,
+        "B": 0.3851851851851852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:731",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.209,
+        "B": 0.4023,
+        "A": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:765",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.34604604604604605,
+        "C": 0.23753753753753754,
+        "A": 0.4164164164164164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:769",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3277722277722278,
+        "B": 0.4331668331668332,
+        "C": 0.2390609390609391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:804",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3099111687793193,
+        "A": 0.43667032637987824,
+        "C": 0.25341850484080247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:819",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.2656,
+        "A": 0.3672,
+        "B": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:869",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.25440881763527057,
+        "A": 0.3698396793587174,
+        "B": 0.375751503006012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:944",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.18866980282254028,
+        "B": 0.4183765388849965,
+        "A": 0.3929536582924632
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:976",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.10984507746126937,
+        "B": 0.49975012493753124,
+        "A": 0.39040479760119945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1031",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.334,
+        "B": 0.3848,
+        "C": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1061",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.4453,
+        "C": 0.1973,
+        "A": 0.3574
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1068",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1964964964964965,
+        "A": 0.5005005005005005,
+        "B": 0.30300300300300304
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1081",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.13003003003003002,
+        "A": 0.5278278278278278,
+        "B": 0.3421421421421421
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1099",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.22657734226577342,
+        "A": 0.41015898410158985,
+        "B": 0.36326367363263673
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1139",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.4897102897102897,
+        "C": 0.21368631368631366,
+        "B": 0.2966033966033966
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1163",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.46926926926926926,
+        "C": 0.19839839839839837,
+        "A": 0.33233233233233234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1169",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.2461,
+        "A": 0.5117,
+        "C": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1181",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.25587441255874416,
+        "A": 0.48435156484351566,
+        "C": 0.2597740225977402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1188",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1855185518551855,
+        "A": 0.49804980498049806,
+        "B": 0.31643164316431643
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1218",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.16683316683316682,
+        "A": 0.5072927072927073,
+        "B": 0.32587412587412584
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1245",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.2324,
+        "B": 0.3906,
+        "A": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1263",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1836,
+        "B": 0.4277,
+        "A": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1300",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.166,
+        "A": 0.4297,
+        "B": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1305",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.2031,
+        "A": 0.418,
+        "B": 0.3789
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1310",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3372255489021956,
+        "C": 0.25538922155688626,
+        "B": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1312",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3203,
+        "A": 0.4375,
+        "C": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1336",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3796212804328224,
+        "C": 0.25247971145175835,
+        "B": 0.3678990081154193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1367",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.48001998001998003,
+        "C": 0.2,
+        "B": 0.31998001998002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1384",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3004995004995005,
+        "C": 0.24875124875124877,
+        "A": 0.45074925074925076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1399",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.18358164183581643,
+        "B": 0.37696230376962303,
+        "A": 0.43945605439456054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1413",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.21636726546906188,
+        "B": 0.3918163672654691,
+        "A": 0.3918163672654691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1443",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.36913691369136914,
+        "C": 0.2617261726172617,
+        "B": 0.36913691369136914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1455",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.15316215406134476,
+        "B": 0.42341892296932754,
+        "A": 0.42341892296932754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1502",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.16516516516516516,
+        "B": 0.44964964964964965,
+        "A": 0.3851851851851852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1551",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.2723169508525577,
+        "A": 0.524974924774323,
+        "C": 0.20270812437311936
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1563",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1641,
+        "A": 0.4316,
+        "B": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1564",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.12289494787489975,
+        "B": 0.5324779470729751,
+        "A": 0.34462710505212507
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1607",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.33396660333966605,
+        "C": 0.289071092890711,
+        "A": 0.37696230376962303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1653",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.46926926926926926,
+        "C": 0.19839839839839837,
+        "A": 0.33233233233233234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1784",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1718828117188281,
+        "A": 0.38866113388661133,
+        "B": 0.43945605439456054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1787",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.26613226452905814,
+        "A": 0.4677354709418838,
+        "C": 0.26613226452905814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1793",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.34604604604604605,
+        "A": 0.4301301301301302,
+        "C": 0.22382382382382382
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1824",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.2109,
+        "A": 0.4004,
+        "B": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1846",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.209,
+        "B": 0.4355,
+        "A": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1873",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.25,
+        "B": 0.5039,
+        "C": 0.2461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1874",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3144685531446855,
+        "C": 0.22657734226577342,
+        "A": 0.45895410458954106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1958",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.25831663326653304,
+        "B": 0.4911823647294589,
+        "C": 0.250501002004008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1967",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.457,
+        "C": 0.1875,
+        "A": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:1992",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1836,
+        "B": 0.4023,
+        "A": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2002",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.17887887887887888,
+        "B": 0.43593593593593594,
+        "A": 0.3851851851851852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2030",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1523,
+        "B": 0.4766,
+        "A": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2143",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.3691,
+        "C": 0.25,
+        "A": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2301",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.23953953953953955,
+        "A": 0.5317317317317317,
+        "C": 0.22872872872872874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2410",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.32194585955449,
+        "C": 0.23903705923484167,
+        "A": 0.43901708121066824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2464",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.4414,
+        "C": 0.2051,
+        "B": 0.3535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2465",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.41447302572315087,
+        "A": 0.37733960564508057,
+        "C": 0.2081873686317686
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2524",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.35191672505254734,
+        "B": 0.4378941046942248,
+        "C": 0.2101891702532279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2591",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.24144144144144145,
+        "B": 0.3675675675675676,
+        "A": 0.390990990990991
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2657",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.2837675350701403,
+        "A": 0.45400801603206414,
+        "C": 0.26222444889779556
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2673",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.4609,
+        "C": 0.2012,
+        "B": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2695",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.2185814185814186,
+        "B": 0.5853146853146853,
+        "C": 0.19610389610389614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2701",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3222677732226777,
+        "C": 0.2636736326367363,
+        "B": 0.414058594140586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2711",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3574,
+        "B": 0.3809,
+        "C": 0.2617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2769",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.5122122122122122,
+        "C": 0.21411411411411413,
+        "B": 0.2736736736736736
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2773",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.4453,
+        "C": 0.207,
+        "B": 0.3477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2796",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.33266533066132264,
+        "C": 0.2720440881763527,
+        "B": 0.3952905811623247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2800",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.46043956043956047,
+        "C": 0.19220779220779222,
+        "A": 0.3473526473526474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2816",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.2383,
+        "A": 0.375,
+        "B": 0.3867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2841",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.14735264735264736,
+        "A": 0.40579420579420583,
+        "B": 0.44685314685314687
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2842",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.15314685314685317,
+        "A": 0.4956043956043956,
+        "B": 0.3512487512487513
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2850",
+      "question_id": "effect",
+      "probabilities": {
+        "C": 0.1484,
+        "A": 0.459,
+        "B": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2860",
+      "question_id": "effect",
+      "probabilities": {
+        "B": 0.390990990990991,
+        "A": 0.4027027027027027,
+        "C": 0.2063063063063063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2894",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.31278150335301774,
+        "B": 0.46922230007006305,
+        "C": 0.2179961965769192
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2945",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.22092092092092092,
+        "B": 0.5903903903903904,
+        "C": 0.18868868868868868
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2954",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.33366633366633364,
+        "C": 0.23706293706293705,
+        "B": 0.42927072927072923
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2956",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3164,
+        "C": 0.3125,
+        "B": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2957",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3675675675675676,
+        "B": 0.390990990990991,
+        "C": 0.24144144144144145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "wiqa:default:test:2993",
+      "question_id": "effect",
+      "probabilities": {
+        "A": 0.3574,
+        "B": 0.4043,
+        "C": 0.2383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

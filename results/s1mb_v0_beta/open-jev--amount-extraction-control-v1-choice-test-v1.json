@@ -1,0 +1,594 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--amount-extraction-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__amount-extraction-control-v1",
+    "split": "test",
+    "case_count": 36,
+    "decision_count": 36,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:13:25+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 36,
+    "expected": 36,
+    "succeeded": 36,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.4722222222222222,
+    "uniform_accuracy_baseline": 0.23888888888888893,
+    "fixed_answer_accuracy_baseline": 0.2916666666666667,
+    "baseline_adjusted_skill": 0.2549019607843137,
+    "baseline_adjusted_score": 0.2549019607843137
+  },
+  "elapsed_seconds": 9.439888399996562,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:11:attributes:span_4:currency": "2dbd4e31cdb25317325d34686b81aa8fbbf4ecacddea00e28116ffd630ee70b4",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:attributes:span_1:currency": "966d235f65133f04df76cca527de6ef29dae87504eecbe9f60b0c2fbdc271eca",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:4:selection:request:span": "dcaeb9d74b9022f8cfb9ead38a04ffff1167cfa1225c3650aae99754c564b14d",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:5:attributes:span_4:currency": "0ffb5543bf95ebe2a368f1506379cf6f5c012ea4599bd0de363372a2c57b1102",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:10:attributes:span_3:currency": "7ee702e9f372afb5e9e31fd7a5b036ff8feaf36b83c0036e90184292818485ed",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:0:attributes:span_3:currency": "501fcf570d1077097150034385c54523709184d756fcf07f31fc5b65401b3ff0",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:selection:request:span": "e5826deb27ed5b71b2a84ee78cee00d3e43a8f72bcb5103cba1173e89a39aa80",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:5:attributes:span_4:currency": "69fa5c5673713291536825b3f0121a4a0cea4e89fa1f17f020a9ebbf58e41b0b",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:6:attributes:span_0:currency": "ea3cbb3674ef8a7bae9f701f28fa1eb245476041ddbe3806fda21172d925dc81",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:7:attributes:span_4:currency": "5c4655f4229e90e6f88f265224294460166973de0c06efdd8c0b7ff80453dffd",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:11:attributes:span_2:currency": "08a84cbe81cb6adc8ad789b2017369b1870351c195a74d486dccdd792b01b8b2",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:3:selection:request:span": "5d25236e7a12f67798a02a6d6eb16575f727de05813ce1d36a8ba4a441ba0715",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:3:attributes:span_0:currency": "589d5615d92493fd340489c22cd6cc6c8c1afc3648667fcf4fc829d07b4c1162",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_0:currency": "26d41e4ec39618c22fa18a30269963bdbb234b5250c19641cba66baef0551168",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_1:currency": "5d3b7eaf3c1381cff2bd7546045775f0569c69b5f1144abf7d770418ce4ea5d1",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_3:currency": "7c7a44f3e5077ff310381091754e6f9fc95854634092d039297af07f6f0b44e7",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:2:selection:request:span": "582e40929ad300f1dd25883faf3ab7943c97043bdd0aab78263bb6a03bbb6489",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:7:attributes:span_1:currency": "922627dfa3de8151dc47a25bbf1e90c0f3c5573876414d6be388de23113e1e7b",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:11:selection:request:span": "f9e1b76b8846ee3fb0b36323972c6efd17e4facfa455da2bce30c0078e48d551",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:11:attributes:span_2:currency": "879b6313022b09db4a2f97cedf6c641b7b9a9fb39e4212c9c3f32133fe42d16a",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:1:selection:request:span": "2e2c3f979ef5d8f19a16a38dcba9c29147e62d46181ea4d882acaa3d866bb81f",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:5:attributes:span_4:currency": "188d8224aef385e3badc42545ad9d1d1d6970e44351e82d171a51383f3742d44",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:6:attributes:span_0:currency": "ccdd0d8eb70b3007693ccc692550c91c0c25b7162e7e1e2b51f003004672a033",
+      "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_1:currency": "98866d0ccf4c5faccad8f1c414aca98365fad6f59e20657e6040bb3b9483c8f6",
+      "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_3:currency": "edc63f5cda0b8d1e37106117738045319fdccf38fbb04aab887eedc8301f0625",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:5:attributes:span_1:currency": "47da7e6150c6eeba76376a640d722be576135d7c771d339ff1814344ad57efcc",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:7:attributes:span_3:currency": "c345670d0ff770e12cdfbb5fd941ddf60ce1e760de5e9ccef6a7f490bc1ecf62",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:13:attributes:span_4:currency": "5150d0591dd81cb92ea4dd95fbd61ae038f4a4b970b393a048d29319cc000b35",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:15:attributes:span_2:currency": "4bd65e6527337baeec1e2684b3014bd36c71c72e11a569597819a935fba2d83e",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:0:attributes:span_0:currency": "5082e6594bed1682068fdb15716825e365387f47d3f04cf8c3e1bfc688b30a06",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:7:attributes:span_0:currency": "9d5f23bac3a927b2eb0758afbe29cf5536281e2a334edeb403eab9dde053f513",
+      "open_jev__amount-extraction-control-v1:document-family-1f6c46fd1958a19cd27f:document:6:attributes:span_3:currency": "fd704644d60a960bd32348bb0acff66acaa6b8758ba6141842418480f7b5db0d",
+      "open_jev__amount-extraction-control-v1:document-family-1f6c46fd1958a19cd27f:document:13:attributes:span_2:currency": "86fbed9216c16d6e0f3082d7b605c5b9834fa0f9bb4b613199162b13ee3ee84b",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:3:attributes:span_0:currency": "f0dc765225f5a01598ca9419e64baa597527bb3e2a8e2b2f061241a4e87bc44e",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:6:attributes:span_0:currency": "d84bd550f3121350163980c4353e440529d25080027443e9d3db228b249eee81",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:13:attributes:span_3:currency": "e129f339a3a304dab3127fb98672e04b0b178fddb8ea924bca51ac74f4050453"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4608,
+      "output_tokens": 36,
+      "requests": 36,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:11:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.3453891497652113,
+        "option_1": 0.13947447297432308,
+        "option_2": 0.2614646817863922,
+        "option_3": 0.2536716954740733
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:attributes:span_1:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.36523652365236525,
+        "option_1": 0.1494149414941494,
+        "option_2": 0.23142314231423142,
+        "option_3": 0.25392539253925395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:4:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.23563563563563564,
+        "option_1": 0.13393393393393394,
+        "option_2": 0.16906906906906907,
+        "option_3": 0.26586586586586586,
+        "option_4": 0.1954954954954955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:5:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2337272181053475,
+        "option_1": 0.4791708391748448,
+        "option_2": 0.06408972561586221,
+        "option_3": 0.22301221710394556
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:10:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.3301,
+        "option_1": 0.1426,
+        "option_2": 0.2695,
+        "option_3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:0:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.291,
+        "option_1": 0.1768,
+        "option_2": 0.2871,
+        "option_3": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2236,
+        "option_1": 0.1592,
+        "option_2": 0.1973,
+        "option_3": 0.1885,
+        "option_4": 0.2314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:5:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2363,
+        "option_1": 0.4688,
+        "option_2": 0.0664,
+        "option_3": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:6:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.30500500500500505,
+        "option_1": 0.21991991991991994,
+        "option_2": 0.1974974974974975,
+        "option_3": 0.27757757757757756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:7:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2834834834834835,
+        "option_1": 0.174974974974975,
+        "option_2": 0.27567567567567564,
+        "option_3": 0.26586586586586586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:11:attributes:span_2:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.3008,
+        "option_1": 0.1719,
+        "option_2": 0.2695,
+        "option_3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:3:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2178,
+        "option_1": 0.1279,
+        "option_2": 0.2285,
+        "option_3": 0.2012,
+        "option_4": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:3:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.3045477261369316,
+        "option_1": 0.40409795102448776,
+        "option_2": 0.0687656171914043,
+        "option_3": 0.22258870564717642
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.321978021978022,
+        "option_1": 0.4,
+        "option_2": 0.05754245754245755,
+        "option_3": 0.22047952047952052
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_1:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.29534301452178263,
+        "option_1": 0.43034551827741613,
+        "option_2": 0.05818728092138207,
+        "option_3": 0.21612418627941912
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:11:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.3050660792951542,
+        "option_1": 0.40478574289146974,
+        "option_2": 0.05937124549459351,
+        "option_3": 0.23077693231878255
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:2:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.18967070363326996,
+        "option_1": 0.18967070363326996,
+        "option_2": 0.13191872685416875,
+        "option_3": 0.1495345811230107,
+        "option_4": 0.23951556400760687,
+        "option_5": 0.0996897207486738
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:7:attributes:span_1:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2891,
+        "option_1": 0.1816,
+        "option_2": 0.2773,
+        "option_3": 0.252
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:11:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.1904,
+        "option_1": 0.1157,
+        "option_2": 0.1582,
+        "option_3": 0.1631,
+        "option_4": 0.2852,
+        "option_5": 0.0874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:11:attributes:span_2:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4887398658792913,
+        "option_1": 0.11440296266639975,
+        "option_2": 0.09188269442498248,
+        "option_3": 0.3049744770293264
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:1:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21200600300150074,
+        "option_1": 0.12306153076538268,
+        "option_2": 0.17878939469734867,
+        "option_3": 0.17588794397198598,
+        "option_4": 0.2257128564282141,
+        "option_5": 0.08454227113556778
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:5:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.23521183053557157,
+        "option_1": 0.4820143884892087,
+        "option_2": 0.062250199840127904,
+        "option_3": 0.22052358113509196
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:6:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.459,
+        "option_1": 0.1177,
+        "option_2": 0.0991,
+        "option_3": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_1:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2363,
+        "option_1": 0.4785,
+        "option_2": 0.0635,
+        "option_3": 0.2217
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2422,
+        "option_1": 0.4668,
+        "option_2": 0.0664,
+        "option_3": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:5:attributes:span_1:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.2383476695339068,
+        "option_1": 0.48059611922384476,
+        "option_2": 0.06031206241248249,
+        "option_3": 0.22074414882976595
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:7:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.483916083916084,
+        "option_1": 0.1326673326673327,
+        "option_2": 0.0985014985014985,
+        "option_3": 0.28491508491508494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:13:attributes:span_4:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4867867867867868,
+        "option_1": 0.11921921921921921,
+        "option_2": 0.08898898898898899,
+        "option_3": 0.30500500500500505
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:15:attributes:span_2:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.48781218781218777,
+        "option_1": 0.12487512487512487,
+        "option_2": 0.10049950049950049,
+        "option_3": 0.2868131868131868
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:0:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4902,
+        "option_1": 0.1094,
+        "option_2": 0.0938,
+        "option_3": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:7:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.48512769153730595,
+        "option_1": 0.10856284426639959,
+        "option_2": 0.10315473209814721,
+        "option_3": 0.30315473209814725
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-1f6c46fd1958a19cd27f:document:6:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4163747372635372,
+        "option_1": 0.1583425082574317,
+        "option_2": 0.11049944950455409,
+        "option_3": 0.31478330497447704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-1f6c46fd1958a19cd27f:document:13:attributes:span_2:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.47873936968484243,
+        "option_1": 0.12506253126563283,
+        "option_2": 0.09724862431215608,
+        "option_3": 0.2989494747373687
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:3:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.48557164253619567,
+        "option_1": 0.10823764353469795,
+        "option_2": 0.1019470793809286,
+        "option_3": 0.30424363454817777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:6:attributes:span_0:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4587247651409155,
+        "option_1": 0.12152708374975016,
+        "option_2": 0.10543673795722566,
+        "option_3": 0.31431141315210875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:13:attributes:span_3:currency",
+      "question_id": "currency",
+      "probabilities": {
+        "option_0": 0.4938530734632684,
+        "option_1": 0.10494752623688156,
+        "option_2": 0.0927536231884058,
+        "option_3": 0.3084457771114443
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

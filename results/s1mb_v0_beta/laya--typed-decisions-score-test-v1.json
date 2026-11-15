@@ -1,0 +1,2806 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "laya--typed-decisions-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/laya__typed_decisions",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 200,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-15T08:50:55+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 200,
+    "succeeded": 200,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.2090216562548478,
+    "normalized_score_rmse": 0.2544487642204196,
+    "constant_score_baseline": 0.5841668333333334,
+    "constant_mae_baseline": 0.21700552708333315,
+    "baseline_adjusted_skill": 0.03679109438267636,
+    "baseline_adjusted_score": 0.03679109438267636
+  },
+  "elapsed_seconds": 17.727036500000395,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "typed_decisions:all:test:3": "71733ef003235a0b063108dae7660591e981a7ebca8782d00f745fc447677152",
+      "typed_decisions:all:test:14": "ef940eabf7633c3008a7cc882ea8e59d93c8574b09d0e299dc51f98f3a0e8571",
+      "typed_decisions:all:test:22": "0cad1812edc7fbdec85b497e917aa78c9a9aa768e2e3de80e65a6e5bdb829281",
+      "typed_decisions:all:test:31": "72b35b9efed50748444527e81540fe1b427f714fc26aa656fdd7a0e6210eb6e5",
+      "typed_decisions:all:test:32": "e09520612e6bb769d11d316321da99a54d8fede83cfa7110cd5c760e654ee0db",
+      "typed_decisions:all:test:37": "bb1306011080111342baf2dc95c6f28af431e9d0d84fc67717a2811aabdfe03f",
+      "typed_decisions:all:test:39": "91d6890f3c7a1a09cef5207e52c750de31c75cc8db2e4b2e0117197c3b7cc87d",
+      "typed_decisions:all:test:40": "8315ab59f202991eedb75a435217fb2ea9ee618afd2513947ad8452fca727e75",
+      "typed_decisions:all:test:48": "2e2e9c7d65087d8eb2c3585e489144da540d4aeec92ff5d7b78b834493a11f15",
+      "typed_decisions:all:test:51": "8d9c8b8338cfecf0886b5be9e07c31d2df87dd63839f633230eac368d61df206",
+      "typed_decisions:all:test:53": "86fba45cb87a02f9f32dde686fc80a5d2f2cd3dafac51192a69255a0d2f4e65c",
+      "typed_decisions:all:test:55": "0458d4c65818cf7836068b55d5b8833faa225b9637de78ddaf5c289f3bc02d64",
+      "typed_decisions:all:test:56": "546218c7a0b9c5af68a486d2673338fae333ad914ee878ddffe9ec85f77d5bdd",
+      "typed_decisions:all:test:57": "3e976ae92efee3739de76f9585db8e4fdfabaeaccad4430a29bfc14bd92ab6b8",
+      "typed_decisions:all:test:61": "0ef93d093ef0c7d72350061501899db4ca1ea2f5a55badfc2102d61d7e962ceb",
+      "typed_decisions:all:test:64": "c75b7d4b678ff40d5c265b71360e724f4339ac29237e1797a0f6fef36690c597",
+      "typed_decisions:all:test:69": "2cd550f890c6c32efc1da7ff4a87c29e3fab65f53ccb3f05571c635a142a58a7",
+      "typed_decisions:all:test:78": "8ea0db9a415e0a496234bd625eb3c68c7a72d194b86244813e0cd33d7428417e",
+      "typed_decisions:all:test:80": "cf6eee2ea34014dd332b0f2fcfbbdd74a492907154d663f0d9db9896d6cbf884",
+      "typed_decisions:all:test:82": "60e8308f5cf9bf42271c950f9e2cb690dbaef9849695ef912fe517c652fe7e87",
+      "typed_decisions:all:test:84": "cb674eb666df5a2f9730849f2e77cc65f2a1ffabaca5a7979f6bde0c6b021798",
+      "typed_decisions:all:test:86": "e854c461843e071fe10ae487610ae5dcc3414ad2ca7faede452d0d1ae1c79598",
+      "typed_decisions:all:test:92": "b2106e1e6ca8406852c1d5fe34a7f587a0cef8eecc250a5d18ef36e83429b86e",
+      "typed_decisions:all:test:97": "db419640ac7898de24a30b1f9c1b3e8455f3cc685da62340ee81fe4d978dde74",
+      "typed_decisions:all:test:98": "e6b57342805c1f5dbb903e8909f8106a1d04dec27ccedabe5b79b119dbd366c6",
+      "typed_decisions:all:test:107": "dfa7ebba9200ea9c391b45c1e94975d7de57d8fbeed926ba9608f8e6db7bb0dd",
+      "typed_decisions:all:test:108": "fbfbb59e10b733dfb19963d81aee45c6f59328c65f8b9f1bc7881494e39a5ccf",
+      "typed_decisions:all:test:113": "58f12aa96ba8b53c4bcc05c05889c82f9b27b1412bc6b40b316241e487aaa513",
+      "typed_decisions:all:test:116": "9855a6b9df2f637d11aed30ba190b6f6663ce21ce9d3ddaef5d06fc7be42e1db",
+      "typed_decisions:all:test:120": "f23bd8dc75beeb9a00fa81d9add4bf32c985ce75aceef34b8d5a46f98c86e10b",
+      "typed_decisions:all:test:121": "393e0f16220a3d8f25c3c82fdf15fa8696f84c893fbba59b6613c0e0af9e46da",
+      "typed_decisions:all:test:126": "1798309ef7cef7a6883d1ff695dd87a0db3f2f20ef7b4cdbe4ebaea1978adb27",
+      "typed_decisions:all:test:132": "44bc83d20be128c91567786f76ff2313aa600d19b49ce06424a5c578d33f3e9b",
+      "typed_decisions:all:test:133": "cc13e5885b3de5040d0d64631c9fa39f2e0292f8a6bdab5a05ac5ef18265d53a",
+      "typed_decisions:all:test:140": "3a430d5581ad65e9d3eeca6679d89506748a03e39a4c93a1ffd1a4b12e081719",
+      "typed_decisions:all:test:155": "81b4734bc4de066659397cc6d5a657b21e1d2892d26ab3b8f3a515c9c1473517",
+      "typed_decisions:all:test:160": "dca004c0654d78b83af50cdaaf8071379f843afcb5d15a3fa2045bb18feacf39",
+      "typed_decisions:all:test:166": "e5317906257226b5080ed9a68ee8ac19c981e8a47f0c1b52b0b9b65276821628",
+      "typed_decisions:all:test:167": "73fd25e7590db544f2794d33b5a8eec7d5c359fa4470872ed0f1835514f09edc",
+      "typed_decisions:all:test:173": "b2a4ce459845dedbe3c46f829dd25317ffbe4d99b8bd9a0d2441658e532274b5",
+      "typed_decisions:all:test:177": "83b6bf02ba5a0de8e696a733bf383419e0c7be597a01e2f69d31584acdfe2da2",
+      "typed_decisions:all:test:180": "408d6caf9bb12efdbe8d89a80a7d53fe0cccf4a79f9ed76a8894dd77b3860564",
+      "typed_decisions:all:test:181": "5fce2d36573c2339e7a9da459ff5b846c9bf07a170b83325d6c23709488af6d9",
+      "typed_decisions:all:test:182": "406f8bfdcf5b4c86ee6bdcb117c6c8aadf310ead21688b87f7dcaad723e53dd5",
+      "typed_decisions:all:test:184": "db49e26b204ea56434480ab5d136eb42678d914f318b6aeacb50b714a5e52e55",
+      "typed_decisions:all:test:186": "32413fa24fc859801e0a0b364d473cd236a382910e4d4c4c8648e75fe7b2a15b",
+      "typed_decisions:all:test:196": "9d73be74d8a83992002f01819334a4bb0466d5bb93042567d6cf3d39a102ae50",
+      "typed_decisions:all:test:199": "9ef8681955265ca07f930af017fcb36339d9352858b711da2952cfa65136d97d",
+      "typed_decisions:all:test:204": "4aee72f17d9dce72a5793d87513273a1335f35316f82d2e235d6ba6f19f5a57a",
+      "typed_decisions:all:test:205": "27cedfa9bb6ef723956a2fa8c5b3e4c4ac665454bd3b682f07b4da8ce4acdc8d",
+      "typed_decisions:all:test:206": "e9ed69b6d6ec703637d62a95638125461f84513cd743aa2d759dcbc926cbab7a",
+      "typed_decisions:all:test:212": "28d5a5ddb74222cd4b2effc53b22ef02940f68c3fad3960400e46ffad75d830f",
+      "typed_decisions:all:test:218": "1edb4c369232d0dfae7e4cbeab8577c287515923a0c2fc34b13046a4fe506c5e",
+      "typed_decisions:all:test:219": "ff9df0358be447467bc5cb41c6a3a7ffc70b04b1a60e3a7afe138db3d8204ee2",
+      "typed_decisions:all:test:223": "f41878bca4e0d1c66e6fcfe87404cca477037483e8db9bab57d1fccf474d22c1",
+      "typed_decisions:all:test:226": "c53a1dc26637ada2f67312eb1a58f761c84ec54a6af2931c85da2333b410063a",
+      "typed_decisions:all:test:228": "0b78f9e2c65a08db68c7beec71176bb8a3c8cb6c2cf7184668594bbb3bc3bddd",
+      "typed_decisions:all:test:230": "6bd08ba14f694bd7a4ca387935a0aba496a1e213d2de43f27d9178eec8af7765",
+      "typed_decisions:all:test:232": "1538f50458e9f95f7fc9d6be398f0b4779d5ed6a1b0fe8be8112b7b2cbf6e78f",
+      "typed_decisions:all:test:238": "6b4ab717412b5141d60adc353cc277ccdc7fbfa968328852dd1c64f6ab77ddc1",
+      "typed_decisions:all:test:240": "5cfd11a1a767f97f3a8e15ab72eced59abe7cbae2925256ca1bdce4df695676c",
+      "typed_decisions:all:test:241": "42040e7d276ccaf3c5b967527a5287de248f06b563f01ad1b6b6c3bc790bce68",
+      "typed_decisions:all:test:243": "3a7a6e5d4434fb8f4c6d23559475f69863791bdfc32c883e0862f6e0d04a8c2b",
+      "typed_decisions:all:test:249": "cb89e3b3341dec1709b87927ad02a6e8c2c7e295db6f14d60d3ee9b299e64eac",
+      "typed_decisions:all:test:252": "fdc0a208acf0cd4a10b390e57e844dab68a4b6aec1b8cc46ede33dddc8d25ac9",
+      "typed_decisions:all:test:253": "0dd73920940f2397a959b1b6696f1f25f7bfa7b088cbf8abdd220df61050f30b",
+      "typed_decisions:all:test:257": "bdb48524b3dda77ca6e5ba58d7a8e85a1f34fea3f650674b740652b3040f217e",
+      "typed_decisions:all:test:259": "aa2544ecc95818f2768b86f1f231a1ca428ba162580cfdf0838df6d35405f367",
+      "typed_decisions:all:test:272": "8a8a0296afc5109e89f85d698f35468485e0143b526998c1f1238facec6ac8b6",
+      "typed_decisions:all:test:281": "e1ba0ff9512b904086f1ee5e51a5f33a26be346f9b3cbd0c5bc44a54b86f2719",
+      "typed_decisions:all:test:283": "3cee94b51cf24562a78b45819d9d1c5d72f36c58018af48202047fc310e1f2ba",
+      "typed_decisions:all:test:287": "e7a3b442110ff787dc6e398b4692771ee5d9623ef87144b904129ad1fb538a49",
+      "typed_decisions:all:test:291": "3a9f1b8a976f8cbd886e5d515a5397eac38d3b83ce788e95d04c0950a67e1126",
+      "typed_decisions:all:test:292": "2f9ea79cca6f2fb3ecc567a54129a58d5c639ba62748535e90cf043da6d6dee8",
+      "typed_decisions:all:test:293": "f9f1e7aedf9b299550a4a56f90517932fce8996e07f80324d065f95c4eca326c",
+      "typed_decisions:all:test:298": "4ec51a54c5f1495d325ff489dab63abdf277eac81ed43b0ddd4ed56715bc98c4",
+      "typed_decisions:all:test:304": "f6d93145728d2a9443274431adc11e7ea0997aa5aba21f4574ba2f042044dfc4",
+      "typed_decisions:all:test:305": "1c22d78ade995ffaef669159abe75dde9af02c15e127da300168f4eb8fc17b8d",
+      "typed_decisions:all:test:306": "aa1b58451203ff567553787e1245bae256b4565b941718838bd6871a6ed67951",
+      "typed_decisions:all:test:307": "c1873936729a5c9affb8692f94c3c42b8ceee1a160a374add22ed7fa16107b74",
+      "typed_decisions:all:test:309": "d777237debc901330bf8bf05381404b0877e394762003bc2d6dfce2587055055",
+      "typed_decisions:all:test:313": "28abfd94bb8b1091245f50d6d786e4ea258461a75717a2bd222ffc4431e944e6",
+      "typed_decisions:all:test:314": "26500f06a3547d936738b796d129058bda0089a77a3c8359647921bf6f21b4b9",
+      "typed_decisions:all:test:317": "96ef247a806cd2b3c0e8b58d8fe924ab4a3ba29397549881f149baec5a7f291d",
+      "typed_decisions:all:test:321": "78c74add50b0f64648b66b170e9c5492b549a34af932adfb73778eed5dd4d18c",
+      "typed_decisions:all:test:322": "6d88bfab7af547c21ed8d6243da665dbfa6bf4adafda80243f48aeec246f0dc5",
+      "typed_decisions:all:test:323": "20e0cb3b42cc15064ea7ff26f2ee45e96fd7965abbbf76061b03ca1510153bcb",
+      "typed_decisions:all:test:327": "afa176249ab34e451e65acace5c4ce9406a924db97f2dfbc7fa0de3c4277e04a",
+      "typed_decisions:all:test:328": "6698bf68929f3d9183bf6234ed9551ffdb658a2026f7528876b29797b8695fca",
+      "typed_decisions:all:test:337": "f017373828777d99532270d6d31326935188b0e0d09c73db70857b77f40790b7",
+      "typed_decisions:all:test:338": "42e16478e7de73330868cd934d7d736d44535c0b899d986a273884ad69442dcb",
+      "typed_decisions:all:test:349": "0201d024ecadd189257f2d4702896754f37157641867d4ed76411c2728150151",
+      "typed_decisions:all:test:355": "d8bf8785409f292f236b562e4800d4e6c62e695b9284ca4038b14f2634c3952f",
+      "typed_decisions:all:test:356": "03d5fc5d378e75003a9e96d82deff9baffb97f4ecd99f455d4bf4a2c35a0618b",
+      "typed_decisions:all:test:360": "f4413cdc2ad357aff9d088bbdd56e7062be4225d2e038c7e2a844dc621631cd7",
+      "typed_decisions:all:test:363": "613f616e06b55803e09699755a96c701196e2aa90440f76c4e9ca9c81f618222",
+      "typed_decisions:all:test:372": "5779659893ff4845e0384324e023ba05f1cb42ddb0806f932e1ceedb0b0604a6",
+      "typed_decisions:all:test:374": "e664f9c1dfb9dbb663bb8f9e4ccff2227a518b5b81af5e903f5e0b882443c4db",
+      "typed_decisions:all:test:378": "3c94adf233d0fdb1580b657c8026057f81d7db674f8371b205abd1747cf7fe40",
+      "typed_decisions:all:test:391": "35b997ad740e545226df5e26329bb48d76bc3db2ce9ffd08dc342223c0695fd6"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 200,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "typed_decisions:all:test:3",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.14535464535464537,
+        "1": 0.2106893106893107,
+        "2": 0.3766233766233767,
+        "3": 0.26733266733266736
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:3",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09914957478739368,
+        "1": 0.2032016008004002,
+        "2": 0.2540270135067534,
+        "3": 0.4436218109054527
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:14",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1113111311131113,
+        "1": 0.1699169916991699,
+        "2": 0.36523652365236525,
+        "3": 0.35353535353535354
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:14",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1044895510448955,
+        "1": 0.18358164183581643,
+        "2": 0.23537646235376464,
+        "3": 0.4765523447655235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:22",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.15445445445445444,
+        "1": 0.23463463463463463,
+        "2": 0.38708708708708706,
+        "3": 0.22382382382382382
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:22",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1166416791604198,
+        "1": 0.23918040979510247,
+        "2": 0.23618190904547728,
+        "3": 0.40799600199900055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:31",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1300170153137824,
+        "1": 0.24241817635872284,
+        "2": 0.3929536582924632,
+        "3": 0.23461115003503152
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:31",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09940119760479041,
+        "1": 0.2241516966067864,
+        "2": 0.2885229540918164,
+        "3": 0.38792415169660677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:32",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.15024975024975026,
+        "1": 0.2292707292707293,
+        "2": 0.40189810189810193,
+        "3": 0.2185814185814186
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:32",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10614860805127177,
+        "1": 0.26987782896054474,
+        "2": 0.24253955537752853,
+        "3": 0.38143400761065493
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:37",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.124,
+        "1": 0.1885,
+        "2": 0.4004,
+        "3": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:37",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0723,
+        "1": 0.1875,
+        "2": 0.2695,
+        "3": 0.4707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:39",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.12197802197802199,
+        "1": 0.23216783216783218,
+        "2": 0.38241758241758245,
+        "3": 0.26343656343656346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:39",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1092907092907093,
+        "1": 0.2038961038961039,
+        "2": 0.2614385614385615,
+        "3": 0.42537462537462545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:40",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.13466533466533467,
+        "1": 0.2077922077922078,
+        "2": 0.39410589410589414,
+        "3": 0.26343656343656346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:40",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11085542771385692,
+        "1": 0.21690845422711355,
+        "2": 0.2911455727863932,
+        "3": 0.38109054527263636
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:48",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1807,
+        "1": 0.2314,
+        "2": 0.3633,
+        "3": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:48",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11208703463419503,
+        "1": 0.2446351931330472,
+        "2": 0.28655554446551557,
+        "3": 0.3567222277672422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:51",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.15053548193374036,
+        "1": 0.22290061054949453,
+        "2": 0.3968571714543089,
+        "3": 0.2297067360624562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:51",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1006,
+        "1": 0.249,
+        "2": 0.2695,
+        "3": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:53",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1318131813181318,
+        "1": 0.22752275227522753,
+        "2": 0.3867386738673867,
+        "3": 0.25392539253925395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:53",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09234617308654328,
+        "1": 0.21790895447723863,
+        "2": 0.3067533766883442,
+        "3": 0.38299149574787394
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:55",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1387,
+        "1": 0.2285,
+        "2": 0.3828,
+        "3": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:55",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08898898898898899,
+        "1": 0.21311311311311312,
+        "2": 0.2814814814814815,
+        "3": 0.4164164164164164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:56",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1465,
+        "1": 0.2695,
+        "2": 0.3613,
+        "3": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:56",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.125987401259874,
+        "1": 0.2470752924707529,
+        "2": 0.26757324267573246,
+        "3": 0.35936406359364065
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:57",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.12498750124987501,
+        "1": 0.22657734226577342,
+        "2": 0.3847615238476152,
+        "3": 0.2636736326367363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:57",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0967,
+        "1": 0.208,
+        "2": 0.2676,
+        "3": 0.4277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:61",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.10994397759103641,
+        "1": 0.18467386954781911,
+        "2": 0.37715086034413764,
+        "3": 0.3282312925170068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:61",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09089089089089089,
+        "1": 0.174974974974975,
+        "2": 0.23563563563563564,
+        "3": 0.4984984984984985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:64",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1543,
+        "1": 0.2422,
+        "2": 0.3574,
+        "3": 0.2461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:64",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.13194513965361898,
+        "1": 0.2658924817299029,
+        "2": 0.2658924817299029,
+        "3": 0.3362698968865752
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:69",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.09815889533720233,
+        "1": 0.1357814688813288,
+        "2": 0.35371222733640184,
+        "3": 0.41234740844506707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:69",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08163060897435898,
+        "1": 0.14182692307692307,
+        "2": 0.2444911858974359,
+        "3": 0.532051282051282
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:78",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.10784607696151924,
+        "1": 0.20109945027486256,
+        "2": 0.3885057471264368,
+        "3": 0.30254872563718144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:78",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09234617308654326,
+        "1": 0.17878939469734867,
+        "2": 0.22861430715357678,
+        "3": 0.5002501250625312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:80",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1543,
+        "1": 0.2207,
+        "2": 0.4004,
+        "3": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:80",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11049944950455409,
+        "1": 0.2268041237113402,
+        "2": 0.2600340306275648,
+        "3": 0.40266239615654087
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:82",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.14536916774902586,
+        "1": 0.21460685383155156,
+        "2": 0.3961434708762114,
+        "3": 0.24388050754321108
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:82",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09814907453726865,
+        "1": 0.24722361180590297,
+        "2": 0.2599299649824912,
+        "3": 0.3946973486743372
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:84",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.12488760115895692,
+        "1": 0.21560595464082322,
+        "2": 0.3902487761015086,
+        "3": 0.26925766809871116
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:84",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09171745429113799,
+        "1": 0.22729543410930167,
+        "2": 0.2497752023179139,
+        "3": 0.43121190928164654
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:86",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.12053973013493254,
+        "1": 0.19230384807596201,
+        "2": 0.40799600199900055,
+        "3": 0.279160419790105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:86",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0814592703648176,
+        "1": 0.17471264367816094,
+        "2": 0.2674662668665667,
+        "3": 0.47636181909045483
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:92",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.168,
+        "1": 0.2412,
+        "2": 0.3574,
+        "3": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:92",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10104947526236882,
+        "1": 0.23128435782108947,
+        "2": 0.279160419790105,
+        "3": 0.3885057471264368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:97",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.11374312843578212,
+        "1": 0.18740629685157423,
+        "2": 0.39820089955022486,
+        "3": 0.3006496751624188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:97",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.07581372058087131,
+        "1": 0.1789684526790185,
+        "2": 0.24446670005007512,
+        "3": 0.5007511266900351
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:98",
+      "question_id": "risk",
+      "probabilities": {
+        "0": 0.1396139613961396,
+        "1": 0.19431943194319432,
+        "2": 0.34573457345734576,
+        "3": 0.3203320332033203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:98",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1035103510351035,
+        "1": 0.1992199219921992,
+        "2": 0.24802480248024802,
+        "3": 0.44924492449244924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:107",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.07527527527527528,
+        "1": 0.08018018018018018,
+        "2": 0.3831831831831832,
+        "3": 0.46136136136136136
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:107",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09270729270729271,
+        "1": 0.2087912087912088,
+        "2": 0.3375624375624376,
+        "3": 0.360939060939061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:108",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.1328,
+        "1": 0.1289,
+        "2": 0.3457,
+        "3": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:108",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.06455164131305044,
+        "1": 0.2394915932746197,
+        "2": 0.34797838270616493,
+        "3": 0.34797838270616493
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:113",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.12376484679109691,
+        "1": 0.12376484679109691,
+        "2": 0.29244435572412414,
+        "3": 0.46002595069368196
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:113",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10115057528764382,
+        "1": 0.2833416708354177,
+        "2": 0.2501250625312656,
+        "3": 0.36538269134567286
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:116",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.19839839839839837,
+        "1": 0.17787787787787787,
+        "2": 0.32652652652652653,
+        "3": 0.29719719719719717
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:116",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11630467420678611,
+        "1": 0.3303973576218597,
+        "2": 0.2385146631968772,
+        "3": 0.31478330497447704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:120",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.13551028560015976,
+        "1": 0.11943279408827641,
+        "2": 0.45246654683443177,
+        "3": 0.29259037347713196
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:120",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08254127063531767,
+        "1": 0.23151575787893947,
+        "2": 0.3263631815907954,
+        "3": 0.3595797898949475
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:121",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.11971971971971972,
+        "1": 0.14174174174174176,
+        "2": 0.6451451451451451,
+        "3": 0.09339339339339339
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:121",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1172,
+        "1": 0.2773,
+        "2": 0.334,
+        "3": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:126",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.15704295704295704,
+        "1": 0.12877122877122874,
+        "2": 0.31808191808191805,
+        "3": 0.39610389610389607
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:126",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10370741482965931,
+        "1": 0.3190380761523046,
+        "2": 0.29549098196392787,
+        "3": 0.28176352705410823
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:132",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.15734160744670203,
+        "1": 0.13101791612451205,
+        "2": 0.28936042438194376,
+        "3": 0.42228005204684216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:132",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11219902088120692,
+        "1": 0.32001198920971125,
+        "2": 0.27315416125487063,
+        "3": 0.29463482865421126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:133",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.12865555444655155,
+        "1": 0.11498153508334165,
+        "2": 0.38985926739195526,
+        "3": 0.36650364307815153
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:133",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.082,
+        "1": 0.2773,
+        "2": 0.2852,
+        "3": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:140",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.16416566626650658,
+        "1": 0.11674669867947178,
+        "2": 0.3478391356542617,
+        "3": 0.37124849939975985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:140",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08971028971028973,
+        "1": 0.2185814185814186,
+        "2": 0.2292707292707293,
+        "3": 0.46243756243756245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:155",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.11184473789515806,
+        "1": 0.08893557422969188,
+        "2": 0.3556422569027611,
+        "3": 0.44357743097238894
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:155",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09723889555822328,
+        "1": 0.26380552220888354,
+        "2": 0.34973989595838334,
+        "3": 0.28921568627450983
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:160",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.11278872112788721,
+        "1": 0.0961903809619038,
+        "2": 0.3515648435156485,
+        "3": 0.43945605439456054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:160",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0819180819180819,
+        "1": 0.24485514485514484,
+        "2": 0.22247752247752245,
+        "3": 0.4507492507492507
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:166",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.10988901109889011,
+        "1": 0.09719028097190281,
+        "2": 0.40815918408159185,
+        "3": 0.3847615238476152
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:166",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0918,
+        "1": 0.2969,
+        "2": 0.2695,
+        "3": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:167",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.14442778610694654,
+        "1": 0.12343828085957022,
+        "2": 0.4177911044477761,
+        "3": 0.31434282858570717
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:167",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11631631631631631,
+        "1": 0.351951951951952,
+        "2": 0.2736736736736736,
+        "3": 0.25805805805805804
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:173",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.17996995493239862,
+        "1": 0.12178267401101653,
+        "2": 0.3872809213820731,
+        "3": 0.31096644967451176
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:173",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0927907209279072,
+        "1": 0.251974802519748,
+        "2": 0.2333766623337666,
+        "3": 0.42185781421857815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:177",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.13473263368315844,
+        "1": 0.10984507746126937,
+        "2": 0.35332333833083457,
+        "3": 0.40209895052473765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:177",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.12053973013493254,
+        "1": 0.2986506746626687,
+        "2": 0.33773113443278363,
+        "3": 0.2430784607696152
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:180",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.12287712287712287,
+        "1": 0.08881118881118881,
+        "2": 0.3512487512487512,
+        "3": 0.43706293706293703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:180",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.06546546546546547,
+        "1": 0.1866866866866867,
+        "2": 0.1808808808808809,
+        "3": 0.566966966966967
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:181",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.16018398160183983,
+        "1": 0.126987301269873,
+        "2": 0.42185781421857815,
+        "3": 0.290970902909709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:181",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0947947947947948,
+        "1": 0.261961961961962,
+        "2": 0.3421421421421421,
+        "3": 0.3011011011011011
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:182",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.120979020979021,
+        "1": 0.1082917082917083,
+        "2": 0.4155844155844156,
+        "3": 0.35514485514485516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:182",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.12312312312312312,
+        "1": 0.34994994994995,
+        "2": 0.28548548548548547,
+        "3": 0.24144144144144145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:184",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.1474852514748525,
+        "1": 0.12208779122087791,
+        "2": 0.35936406359364065,
+        "3": 0.37106289371062895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:184",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.12431352970544184,
+        "1": 0.30813779331003494,
+        "2": 0.30813779331003494,
+        "3": 0.2594108836744882
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:186",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.1348,
+        "1": 0.1484,
+        "2": 0.4023,
+        "3": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:186",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09979959919839679,
+        "1": 0.33266533066132264,
+        "2": 0.2837675350701403,
+        "3": 0.2837675350701403
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:196",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.0946053946053946,
+        "1": 0.10929070929070928,
+        "2": 0.24975024975024973,
+        "3": 0.5463536463536464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:196",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11085542771385692,
+        "1": 0.2032016008004002,
+        "2": 0.23451725862931466,
+        "3": 0.45142571285642824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:199",
+      "question_id": "churn_risk",
+      "probabilities": {
+        "0": 0.1836,
+        "1": 0.1426,
+        "2": 0.2676,
+        "3": 0.4062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:199",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1396139613961396,
+        "1": 0.30083008300830083,
+        "2": 0.24902490249024903,
+        "3": 0.31053105310531054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:204",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.26120371294540373,
+        "1": 0.15590378281265596,
+        "2": 0.3255813953488372,
+        "3": 0.2573111088931031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:204",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.21092109210921092,
+        "1": 0.3066306630663066,
+        "2": 0.27152715271527156,
+        "3": 0.21092109210921092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:205",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.22582582582582583,
+        "1": 0.16816816816816818,
+        "2": 0.32842842842842845,
+        "3": 0.27757757757757756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:205",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.18967070363326996,
+        "1": 0.3166850165148634,
+        "2": 0.25803222900610545,
+        "3": 0.23561205084576117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:206",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2812,
+        "1": 0.1631,
+        "2": 0.3184,
+        "3": 0.2373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:206",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.2072072072072072,
+        "1": 0.3362362362362362,
+        "2": 0.22092092092092092,
+        "3": 0.23563563563563564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:212",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2363,
+        "1": 0.1602,
+        "2": 0.3281,
+        "3": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:212",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1915915915915916,
+        "1": 0.3108108108108108,
+        "2": 0.21411411411411413,
+        "3": 0.2834834834834835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:218",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2753724627537246,
+        "1": 0.1503849615038496,
+        "2": 0.3222677732226777,
+        "3": 0.251974802519748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:218",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.18733140173843543,
+        "1": 0.32001198920971125,
+        "2": 0.2233989409531422,
+        "3": 0.2692576680987112
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:219",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2517482517482518,
+        "1": 0.15314685314685317,
+        "2": 0.3297702297702298,
+        "3": 0.2653346653346654
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:219",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1944944944944945,
+        "1": 0.29719719719719717,
+        "2": 0.25415415415415415,
+        "3": 0.25415415415415415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:223",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2792720727927207,
+        "1": 0.1728827117288271,
+        "2": 0.30856914308569144,
+        "3": 0.23927607239276075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:223",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1924,
+        "1": 0.3418,
+        "2": 0.2578,
+        "3": 0.208
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:226",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.3007699230076992,
+        "1": 0.16018398160183983,
+        "2": 0.30856914308569144,
+        "3": 0.23047695230476953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:226",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.2148214821482148,
+        "1": 0.33403340334033405,
+        "2": 0.23632363236323634,
+        "3": 0.2148214821482148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:228",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.24532078870983884,
+        "1": 0.16815133620258232,
+        "2": 0.3343008707837053,
+        "3": 0.25222700430387346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:228",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.18341658341658346,
+        "1": 0.3531468531468532,
+        "2": 0.2390609390609391,
+        "3": 0.2243756243756244
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:230",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.26120371294540373,
+        "1": 0.15590378281265596,
+        "2": 0.29633695977642477,
+        "3": 0.28655554446551557
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:230",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1865,
+        "1": 0.3066,
+        "2": 0.2393,
+        "3": 0.2676
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:232",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.24295704295704298,
+        "1": 0.15024975024975026,
+        "2": 0.29850149850149854,
+        "3": 0.3082917082917083
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:232",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.18766890201181063,
+        "1": 0.31478330497447704,
+        "2": 0.23361024922430187,
+        "3": 0.2639375437894105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:238",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2852,
+        "1": 0.1621,
+        "2": 0.3125,
+        "3": 0.2402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:238",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.20589410589410587,
+        "1": 0.34535464535464533,
+        "2": 0.22927072927072925,
+        "3": 0.21948051948051947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:240",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2636736326367363,
+        "1": 0.16798320167983202,
+        "2": 0.3124687531246875,
+        "3": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:240",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1934,
+        "1": 0.3223,
+        "2": 0.248,
+        "3": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:241",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2470752924707529,
+        "1": 0.1474852514748525,
+        "2": 0.33786621337866213,
+        "3": 0.26757324267573246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:241",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.18929177904305264,
+        "1": 0.2965737688542603,
+        "2": 0.24293277394865645,
+        "3": 0.27120167815403057
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:243",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.3160839160839161,
+        "1": 0.15314685314685317,
+        "2": 0.29660339660339663,
+        "3": 0.2341658341658342
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:243",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.2012,
+        "1": 0.3203,
+        "2": 0.2207,
+        "3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:249",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.27394789579158313,
+        "1": 0.16633266533066132,
+        "2": 0.320941883767535,
+        "3": 0.23877755511022045
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:249",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1923807619238076,
+        "1": 0.34766523347665235,
+        "2": 0.22457754224577542,
+        "3": 0.23537646235376464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:252",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2578,
+        "1": 0.1777,
+        "2": 0.3223,
+        "3": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:252",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1954954954954955,
+        "1": 0.3538538538538538,
+        "2": 0.23263263263263262,
+        "3": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:253",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.29492949294929494,
+        "1": 0.1699169916991699,
+        "2": 0.30273027302730277,
+        "3": 0.23242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:253",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.19057151436292666,
+        "1": 0.344109698728856,
+        "2": 0.2561305174657192,
+        "3": 0.20918826944249824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:257",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2573111088931031,
+        "1": 0.15590378281265596,
+        "2": 0.32947399940113786,
+        "3": 0.2573111088931031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:257",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.2081873686317686,
+        "1": 0.31278150335301774,
+        "2": 0.23951556400760687,
+        "3": 0.23951556400760687
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:259",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2351413445210269,
+        "1": 0.16391968834282292,
+        "2": 0.3375287184097493,
+        "3": 0.263410248726401
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:259",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1728827117288271,
+        "1": 0.3495650434956505,
+        "2": 0.22557744225577442,
+        "3": 0.251974802519748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:272",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.27702297702297707,
+        "1": 0.17272727272727276,
+        "2": 0.3141858141858142,
+        "3": 0.2360639360639361
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:272",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.19412528724148267,
+        "1": 0.3687681087021681,
+        "2": 0.2233989409531422,
+        "3": 0.21370766310320713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:281",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2712287712287712,
+        "1": 0.15904095904095902,
+        "2": 0.31608391608391606,
+        "3": 0.25364635364635363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:281",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1973,
+        "1": 0.3242,
+        "2": 0.2451,
+        "3": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:283",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2477770006993706,
+        "1": 0.15316215406134479,
+        "2": 0.33949445499050857,
+        "3": 0.2595663902487761
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:283",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1909537659211714,
+        "1": 0.29575769732223445,
+        "2": 0.25664426837829707,
+        "3": 0.25664426837829707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:287",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2653611749425517,
+        "1": 0.15316215406134476,
+        "2": 0.29463482865421114,
+        "3": 0.2868418423418923
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:287",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1923807619238076,
+        "1": 0.3124687531246875,
+        "2": 0.23927607239276075,
+        "3": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:291",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2893893893893894,
+        "1": 0.17207207207207206,
+        "2": 0.3069069069069069,
+        "3": 0.2316316316316316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:291",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.21,
+        "1": 0.3457,
+        "2": 0.2275,
+        "3": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:292",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.24775224775224777,
+        "1": 0.1434565434565435,
+        "2": 0.34925074925074934,
+        "3": 0.25954045954045957
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:292",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1974974974974975,
+        "1": 0.3011011011011011,
+        "2": 0.22772772772772773,
+        "3": 0.2736736736736736
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:293",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.2888111888111889,
+        "1": 0.16973026973026975,
+        "2": 0.30629370629370634,
+        "3": 0.2351648351648352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:293",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1914,
+        "1": 0.3574,
+        "2": 0.2383,
+        "3": 0.2129
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:298",
+      "question_id": "discrepancy_severity",
+      "probabilities": {
+        "0": 0.25928143712574847,
+        "1": 0.15399201596806386,
+        "2": 0.29820359281437125,
+        "3": 0.2885229540918164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:298",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1865,
+        "1": 0.3164,
+        "2": 0.2393,
+        "3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:304",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1367,
+        "1": 0.1045,
+        "2": 0.0742,
+        "3": 0.1924,
+        "4": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:304",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10528942115768462,
+        "1": 0.21636726546906188,
+        "2": 0.2611776447105788,
+        "3": 0.4171656686626746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:305",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1011,
+        "1": 0.0879,
+        "2": 0.1108,
+        "3": 0.2178,
+        "4": 0.4824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:305",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09515242378810596,
+        "1": 0.21179410294852574,
+        "2": 0.2713643178410795,
+        "3": 0.42168915542228885
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:306",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.06405765188669803,
+        "1": 0.10119107196476829,
+        "2": 0.1280152136923231,
+        "3": 0.2101891702532279,
+        "4": 0.49654689220298265
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:306",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.06976511744127936,
+        "1": 0.19620189905047478,
+        "2": 0.263568215892054,
+        "3": 0.47046476761619194
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:307",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1064,
+        "1": 0.0845,
+        "2": 0.1001,
+        "3": 0.209,
+        "4": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:307",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0762,
+        "1": 0.1855,
+        "2": 0.2422,
+        "3": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:309",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.17671164417791108,
+        "1": 0.1215392303848076,
+        "2": 0.15612193903048477,
+        "3": 0.20399800099950027,
+        "4": 0.34162918540729637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:309",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1504,
+        "1": 0.2402,
+        "2": 0.2598,
+        "3": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:313",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1923807619238076,
+        "1": 0.14358564143585642,
+        "2": 0.19918008199180082,
+        "3": 0.17578242175782424,
+        "4": 0.289071092890711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:313",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.13557797981816366,
+        "1": 0.26536117494255174,
+        "2": 0.241982216005595,
+        "3": 0.3570786292336897
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:314",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.14435564435564435,
+        "1": 0.09020979020979022,
+        "2": 0.09610389610389611,
+        "3": 0.19710289710289713,
+        "4": 0.4722277722277723
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:314",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0936127744510978,
+        "1": 0.20079840319361275,
+        "2": 0.31187624750499005,
+        "3": 0.3937125748502994
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:317",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.12253873063468267,
+        "1": 0.10154922538730635,
+        "2": 0.10344827586206896,
+        "3": 0.20199900049975014,
+        "4": 0.47046476761619194
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:317",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09170829170829173,
+        "1": 0.2,
+        "2": 0.241958041958042,
+        "3": 0.46633366633366635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:321",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.10310310310310308,
+        "1": 0.07767767767767766,
+        "2": 0.08408408408408408,
+        "3": 0.16036036036036036,
+        "4": 0.5747747747747748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:321",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.06474461292897048,
+        "1": 0.13737031125299282,
+        "2": 0.20949720670391062,
+        "3": 0.5883878691141261
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:322",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.09200240529164162,
+        "1": 0.06243736219683303,
+        "2": 0.12236921226698737,
+        "3": 0.19472840248546802,
+        "4": 0.5284626177590699
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:322",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.0781,
+        "1": 0.1758,
+        "2": 0.252,
+        "3": 0.4941
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:323",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.15705864721750426,
+        "1": 0.08292536716954742,
+        "2": 0.10630432610650416,
+        "3": 0.16974722749525428,
+        "4": 0.48396443201119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:323",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09324405356785928,
+        "1": 0.19718169098540878,
+        "2": 0.23715770537677397,
+        "3": 0.4724165500699581
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:327",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1768,
+        "1": 0.0713,
+        "2": 0.0918,
+        "3": 0.1484,
+        "4": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:327",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09805097451274364,
+        "1": 0.18940529735132436,
+        "2": 0.20499750124937532,
+        "3": 0.5075462268865568
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:328",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.15026476171445702,
+        "1": 0.13657708062743532,
+        "2": 0.19902088120691377,
+        "3": 0.2019182735538016,
+        "4": 0.31221900289739235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:328",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1386861313868613,
+        "1": 0.25587441255874416,
+        "2": 0.26757324267573246,
+        "3": 0.33786621337866213
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:337",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.17057590577901985,
+        "1": 0.1081944305818944,
+        "2": 0.15300928236350933,
+        "3": 0.15300928236350933,
+        "4": 0.41521109891206703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:337",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09914957478739368,
+        "1": 0.2335167583791896,
+        "2": 0.23741870935467735,
+        "3": 0.42991495747873937
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:338",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1043956043956044,
+        "1": 0.09950049950049951,
+        "2": 0.11808191808191809,
+        "3": 0.2175824175824176,
+        "4": 0.46043956043956047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:338",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10284573140289564,
+        "1": 0.21747378931602596,
+        "2": 0.24672990514228654,
+        "3": 0.4329505741387918
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:349",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.12412412412412413,
+        "1": 0.087987987987988,
+        "2": 0.09089089089089089,
+        "3": 0.1925925925925926,
+        "4": 0.5044044044044044
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:349",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11775887943971987,
+        "1": 0.23451725862931466,
+        "2": 0.24912456228114058,
+        "3": 0.39859929964982493
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:355",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.08531468531468533,
+        "1": 0.05614385614385615,
+        "2": 0.08681318681318682,
+        "3": 0.15904095904095908,
+        "4": 0.6126873126873127
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:355",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.07695378780317397,
+        "1": 0.19003892604052303,
+        "2": 0.22227767242239746,
+        "3": 0.5107296137339056
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:356",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1118,
+        "1": 0.1289,
+        "2": 0.0679,
+        "3": 0.1758,
+        "4": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:356",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.11086651991194717,
+        "1": 0.22083249949969982,
+        "2": 0.2618571142685611,
+        "3": 0.4064438663197919
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:360",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.07414068745003996,
+        "1": 0.05685451638689048,
+        "2": 0.07853717026378897,
+        "3": 0.18934852118305354,
+        "4": 0.601119104716227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:360",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.09026389444222312,
+        "1": 0.13374650139944022,
+        "2": 0.24890043982407037,
+        "3": 0.5270891643342663
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:363",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.1582,
+        "1": 0.1089,
+        "2": 0.104,
+        "3": 0.1562,
+        "4": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:363",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08071299819747647,
+        "1": 0.21319847786901663,
+        "2": 0.25625876226717403,
+        "3": 0.4498297616663328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:372",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.09162591076953788,
+        "1": 0.061882423395548454,
+        "2": 0.07266194230961175,
+        "3": 0.18514821838506837,
+        "4": 0.5886815051402335
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:372",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.06880688068806881,
+        "1": 0.12061206120612061,
+        "2": 0.23632363236323634,
+        "3": 0.5742574257425743
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:374",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.11752371442835746,
+        "1": 0.07358961557663504,
+        "2": 0.08337493759360959,
+        "3": 0.17943085371942086,
+        "4": 0.5460808786819771
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:374",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.10204897551224389,
+        "1": 0.14832583708145927,
+        "2": 0.23038480759620192,
+        "3": 0.519240379810095
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:378",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.07674604762857716,
+        "1": 0.07084250550330198,
+        "2": 0.05793476085651391,
+        "3": 0.17300380228136883,
+        "4": 0.6214728837302381
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:378",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.1038442336495257,
+        "1": 0.18821767348976534,
+        "2": 0.24183724413379928,
+        "3": 0.4661008487269096
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:391",
+      "question_id": "severity",
+      "probabilities": {
+        "0": 0.08495752123938032,
+        "1": 0.08345827086456772,
+        "2": 0.08585707146426788,
+        "3": 0.22648675662168916,
+        "4": 0.519240379810095
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "typed_decisions:all:test:391",
+      "question_id": "urgency",
+      "probabilities": {
+        "0": 0.08698698698698698,
+        "1": 0.15055055055055053,
+        "2": 0.215015015015015,
+        "3": 0.5474474474474474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

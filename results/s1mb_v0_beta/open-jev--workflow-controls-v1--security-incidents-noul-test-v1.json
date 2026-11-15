@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--workflow-controls-v1--security-incidents-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__workflow-controls-v1__security_incidents",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:23:58+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2162746875,
+    "accuracy": 0.74,
+    "positive_recall": 0.16129032258064516,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 0.5806451612903226,
+    "f1": 0.2777777777777778,
+    "true_positive": 5.0,
+    "false_positive": 0.0,
+    "false_negative": 26.0,
+    "true_negative": 69.0,
+    "positive_prevalence": 0.31,
+    "majority_accuracy_baseline": 0.69,
+    "constant_brier_baseline": 0.21389999999999987,
+    "brier_skill": -0.011101858345021753,
+    "baseline_adjusted_skill": 0.16129032258064524,
+    "baseline_adjusted_score": 0.16129032258064524
+  },
+  "elapsed_seconds": 30.23917629999778,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:BLOCK DESTINATION": "8fbeca95d629ebac5ef034b0ca776fa0fdf844ea3f5fc73d405fe8c993a26a00",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:BLOCK EGRESS ASSET": "c0d16137ed7aec7ab5ad6284d49541098e55930e8f37074e3a39830595f9f1e9",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:REVOKE SESSIONS": "6848717c47a6e2f885e036e1b77994979d6f08b08bae05823bbcfda04a3dd7ec",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v2:PURGE MAILBOXES": "3e4d8a8a0929f2884e726a67449e1d436bb5bc7c3aa01ff9febe9073ca222dfd",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v2:ESCALATE URGENT": "e9836bfbed97f6caf8e4b7cf7b656bce509c4072d9ef9b067c0be3adb5edd6cb",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v0:REVOKE ACCESS KEY": "d3240e19ddfd5a7c6de86020d493109b5e985c46fb60a5fb297962955cf8f1da",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v0:ESCALATE URGENT": "59db8c1b882a84552f424de4cd9e5dde59935119ec2f54b24a21338beb7787ce",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v1:REVOKE ACCESS KEY": "58ea650319fbc9d6b07750855ac7a3f34ffcfcde2e9b290cea0ac163a52f63c4",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v1:QUARANTINE MESSAGE": "cf19f91afee732b770b3704fb5525cb9df13ea0026bf57d81dadf5545dde90fc",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v2:REVOKE SESSIONS": "907f97221fa47e44af14b4e98b115ff100e7b159a177b901a9015dfdaced80d0",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v2:KILL PROCESS": "4386e2d8bb9d8cd999d74dc1dde8099ca67651bafe11349a6683318813ebf1e6",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:9:v0:ESCALATE TIER2": "ba2ad90c08aeda32df8376028d4b1b20f2a86495b9a6859b94e8a9a0cbae7bfb",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:9:v0:BLOCK SENDER": "1dbe350f98c4e2181d2560a4d3cf2008f37a85c7e92909a20cd4949d4fc6fec7",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v0:BLOCK EGRESS ASSET": "107f7937e51b1d67bc55c529e64552fe41da0901808700f81b8a033ac170b458",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v0:REQUIRE REAUTH": "a9e2362ec13716de93f086c5b6a4c93010beb51a6ab15d9846080d0c82867fa9",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:AUTO CLOSE": "32c8e5e4da985457281e4a5e217b5fa44487d120b75f45afd95807e5e86fb11d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:NOTIFY USER": "b342460af5e30de101e766cb1a9b65ff6879ca9dccf9a30403a1ef4a9b25dbe8",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:KILL PROCESS": "1bc5de9f3b8a0c5cb46b3dcd1238d41ad1c03a7421cf1ce7fe5f9b5db9dbc044",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v0:BLOCK DESTINATION": "a39098bdf10c0e7dd06727eba8d192d1b10b309b419ce4e3aa7c14d80fa24513",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v0:PURGE MAILBOXES": "0617013536ae3184a05d51136bfd1cc235be2523a856d6909b3c5bc2a11ccea3",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:QUARANTINE MESSAGE": "f4b49498028649694a908d856d065a35603f9ce18196455886fb834217eedbfd",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:KILL PROCESS": "a736fe1077822c9f2bd2dfcdac3202d3706432211ab963c64938bc6678a2d93d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:QUARANTINE FILE": "04486fe7b55abf2c52729a915cc9e6f28aca049793acf82228845c528bc92d66",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:33:v0:BLOCK EGRESS ASSET": "5991643e9e70b887d00889f5604301a74efc559df5e21dc636773b295723b7b0",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:33:v0:REVOKE ACCESS KEY": "282173fceb6ac65f12301b08eea46206b92c7e15c618965c319527f09fefc59f",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v0:ESCALATE TIER2": "3e014700a0ef0a86c4cdbcfb1283477c85d080e4a59639c3b947334e35438979",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v0:ISOLATE HOST": "198e640074e31f054226c339c75c9d9b6b25b847eb1dedb5f4314f083b3192ac",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v1:AUTO CLOSE": "93eaf56552a1ff814adf6acc8ebbbf121294cd747f6e1de710de817c64604754",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v1:BLOCK SENDER": "9d34b5483118097983e5dd3e83cd81f4768469ed37317688899384cb5f4f2720",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v2:AUTO CLOSE": "ebd22f6f50025eff8c639a7352f324bd989dfa7314db6d47daf07dc50aaa01c2",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:42:v1:BLOCK SENDER": "4f6517731a2a25ed8e2fe9f321c8dd01ada431eec641ebadd88a943e2e1f812b",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:42:v2:ISOLATE HOST": "dd0dd64737d2e3a75850ee1758d75c8afe4a423df8bf91c8995bb9fd69231031",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v0:QUARANTINE MESSAGE": "e05cf60f4a7e95dfe45c074edb6c6b30939bb7bfca144eb46a46deda7ad02a4d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v1:NOTIFY USER": "239954162a2f6b7eea2d27b0c037c673d1b2a1fe60be70c8f04926949f3ee4a2",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v2:AUTO CLOSE": "d9648327c04bdc0ff14459bd83d1289de764999d608edde89a2f8cd7362fb7f6",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v2:ESCALATE TIER2": "9234cf78cde371ea3e600a77b6917e4334c8210712828e038682c49622d4949a",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v0:REVOKE ACCESS KEY": "b4937bfdba29323aae0b6fbbec0e0dbb349aedb53a42241d9d4bf26632aeff7a",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v1:DISABLE ACCOUNT": "8ee5dd9e99114c765e369a6616a2c9c6dfffd232c8105423541099c4a6c1ec6f",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:BLOCK EGRESS ASSET": "0d1e644344d7ea2328c42896125ed38541a8f8ab76854f84b7ba993de2d03279",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:REQUIRE REAUTH": "4bdc425cae4506e14a8020418109ffab7bce5b172ef9bbd89037c56ed88950ed",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:REMOVE FORWARDING RULES": "50e941fbacb810c819ddee90dcd0aee114a07afd85f0d5347f741ae74a345ad4",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v0:DISABLE ACCOUNT": "e0ad7eb835f511416069fb9df8ba66952950ea50ef56ebe8d350fb91b1ec2ce8",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v0:QUARANTINE MESSAGE": "11c87b987a86bbf332291d6cd9e800f1bd1e5fc864f7ac1a756bc46a760888d4",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v1:BLOCK EGRESS ASSET": "343d66a0b90bdb353f1b37f9d768464f5d116db3092e880c011e62afcc24b42d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v1:ESCALATE URGENT": "fc8c24d3d7855491b6eae331b638505eda2a15acb48b444f066f90dfafbb516b",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:88:v1:REVOKE ACCESS KEY": "fe3702f929f52060f0fd09356a0ec8103c1d824cac175800016c39d0cc93c4fe",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:93:v0:AUTO CLOSE": "180e8ee4f6e5b7c016068e3f7fae4f06029a53365aaa1c4642c1aa9c1c495bdf",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:93:v0:ISOLATE HOST": "7e28011dbefe589fb0b9b9b8be973fecdf1bab5ef84fa9b4bc6f277bb19837f1",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:BLOCK DESTINATION": "5ba6169805391c68e91e2f639883e5b01dbe47d3a56703e743fadc0ba90340ec",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:DISABLE ACCOUNT": "7051132a12d720ca7ea46c66cb60a4a156347cb76930895664f689ea31aca9ff",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:PURGE MAILBOXES": "3085ec83fae631664fca5441dc246609550079940c889e6eec83d25ccb486504",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:QUARANTINE FILE": "687d85768da560bea84ffb969df02c4787fad8c8eb8a4872af9ead60ec4c7c1d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v2:REQUIRE REAUTH": "f47c838b6b4fa57ca86c6bf93202f096f1ce3c97581428c1d21de35b08ecee08",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v0:AUTO CLOSE": "5a5b2c4df8a1cc6d2b26667e749a5cb2583e3994fc9f67f60137c4b01aa09e46",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v1:AUTO CLOSE": "ddf8d4df2c96f5b60c104433f6c3ee0543efe6da0e41f2eaac6166701036fad8",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v1:BLOCK SENDER": "bcc910d970d2094aabc1a7d7dc85fa9ffc008994338fbbd6e09d8f88a9180d32",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v2:BLOCK DESTINATION": "c78f750da7c4a84033472ca3b4077a7f4032449f78dd2f42e3297eb3f2944c11",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v2:ESCALATE URGENT": "4543f4a2a165f3518e22b8c19169bb6ae988ba130771993e939abf9b9a5e4685",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v0:QUARANTINE FILE": "1bce1a41c293952092a4f83052b7046e08725b69272ae5599129109f240338c2",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v1:REMOVE FORWARDING RULES": "af7a77baf8fdbdb3d61e00ba4fb87238c536cd3970d60e9ea76f2c55d0d95596",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v2:ESCALATE URGENT": "df01009065a459a459cddfd0b3199b93f016a9bcb6027b5ee0ac3eb32706076c",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:BLOCK DESTINATION": "a31f9878f4229402501707f3da1586f9d7e035b155512cd2a184328798cdafc2",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:PURGE MAILBOXES": "f08120dd2b4667903c49b16e1bd5ef92fba54458bcff3b3908b4d9812420d7ca",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:ISOLATE HOST": "898d0c766a2b9e85d18d73a79afe740823c4dab3c2151b1d1d6c5f9557f6c43a",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:REMOVE FORWARDING RULES": "ecbeeccf9911d344837ca8f9f42459896f0c51ed9beeceb5ca3b3ebab227a22e",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v1:NOTIFY USER": "9988152b2239f973cddd68897c93077f97153c47fae5608e1b40a29ebc11bd44",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:BLOCK EGRESS ASSET": "f812cee85cd66e9720ba0bb66d7c24a66cf1d37836ad9974d82f991515b28a1d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:REVOKE ACCESS KEY": "38cb8c46d5aa6b50e929f461fbd1c231a683dc45092d866e2a93dffa2c1c920a",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:BLOCK SENDER": "25f22f926db7e37a50837dac7418f487072d7fdf5f4a0c94ca28cc9ca4fc8d29",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:QUARANTINE FILE": "d4c2ec9e3f36038308f999b9702fed9b820310b402da073d9d62c7c01f992ca7",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v0:ESCALATE TIER2": "238797f555ae6637f8ca876c0523b34025e4eff4f81fadc2ea890b459ca12fce",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v1:ESCALATE TIER2": "53a28dad51dc81689595328fe5f38a86f20e76884d182dd553f87624d2dcd67e",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v1:QUARANTINE FILE": "5076dee95fc07f63efbefaa4ae8636921628c6610e29b7c787016a9a47123fed",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:142:v1:PURGE MAILBOXES": "5a201c8f930b404c8ab244800d6f674b3c90e71ce6505d87119d90bea801a5cb",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:142:v2:ESCALATE URGENT": "6644550f97a074dec27ed715f2cc78058d3d6e798ef63ff615ed1765b298f70d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v1:AUTO CLOSE": "05903132b02a8a9e1faea8776c22755808b16e9f05e8ef08e98a5b76bad9abfb",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v2:ESCALATE TIER2": "626239ae23412da8e70439c282448eef179717c091ed4cf40007382a51d8f658",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v2:QUARANTINE MESSAGE": "fc534704afbc2bdf3ed8426bc8906a3fad11672386450b0316eb4ed8fcc46757",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:BLOCK DESTINATION": "efaa9346ccf5db864e23e1d98a4f9b9c09a648c5e3c8a4bda74d8162f19f0dfd",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:BLOCK EGRESS ASSET": "ecc5e21b8ccbfaac65c494388ae380cbb5e9db8d871de4d5a0455e383066f207",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:DISABLE ACCOUNT": "9b2f7629ea2509b1ee38ac95b19500bda7fb89bffda479ba92472a6cb636912d",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v1:QUARANTINE FILE": "b3a8bc54acdc899b60e6e7c4e1d1b0a96142d3757ca5011682efa7d3bb91e499",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v2:REVOKE ACCESS KEY": "74921da436c0c61b2084a5ec238f8ff71fef0624658b6f9cb67bbb89af49bc01",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:195:v0:REVOKE SESSIONS": "f1845985eb36c63faa5f4719df36657cace246cdb613febac3dd2581817c644e",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:195:v2:REVOKE SESSIONS": "c3a51486395c96954010614622291d1c4cc1da5077f3b5e6233211acf5663f5c",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v0:REQUIRE REAUTH": "f08534ddcd41316ed5547ea85fc8cc880de5f9a0718edda8c11c71be78619164",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v1:ISOLATE HOST": "56b31d47772344198d1aaf734bf96419141c1f096973e2c9001be2ec41fb0e89",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v2:BLOCK SENDER": "3c99b620f4667d7f680bdee440d50e81f07f18e56c55b4908a907f40ce77affb",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v2:ESCALATE URGENT": "45d7fab12af3ea082ac3bb167926b6fcb2ca32b3ee99d9d87582e684feabd636",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v0:ISOLATE HOST": "88604383a0575dbcb61cc8fce2d41002db78d7a27b9ba81e15b99dbd534affd9",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v1:NOTIFY USER": "b1ce3aebe36d1a7a85d1ed5d9c94c9fb9ebb004fa8c967e47273a40fcdbf5e86",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v1:ESCALATE URGENT": "d595d0bc35779ebb055d1fd924debc21060b902dd291ad6b37a9da0095e80309",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v0:ESCALATE TIER2": "81fbfc5cbcf8a4930a8f84fa6a56a8e16a9bb551c3cf2ebca53354094252cb56",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v0:ESCALATE URGENT": "2e4f5292d5e55040fb6ad297951bee054d953bac3896c4e5c54e363f75724ee1",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v1:AUTO CLOSE": "47d31e4782484138a454777993cf8c538339539b3417a44bbcfb5ab41a98058b",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v1:BLOCK EGRESS ASSET": "3fda72411acef9713a39b635329dde2f1d0fd8240bd0fd355d92dc8effc945b1",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v2:BLOCK EGRESS ASSET": "3c8c4c6798a1432a5f55fca8dce78296087d817031b2ff81a969170794d2e2ef",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v0:PURGE MAILBOXES": "f43de1bbda3d0a98c0dcef227a3a5d25d9aa9fca2fe9f342986df23d75b90911",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v2:AUTO CLOSE": "fd347d3c30c7da84dbe23250686cc1db346a21a0f9ff341ed7bc2e3ad17161a6",
+      "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v2:DISABLE ACCOUNT": "d3e9bc569dfd3fe1a839b3412458a86f83fa0a9d833ec3d7261931d708e054bf"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9963,
+        "true": 0.0037
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9973,
+        "true": 0.0027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v0:REVOKE SESSIONS",
+      "question_id": "REVOKE SESSIONS",
+      "probabilities": {
+        "false": 0.9871,
+        "true": 0.0129
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v2:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:3:v2:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v0:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9326,
+        "true": 0.0674
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v0:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.9072,
+        "true": 0.0928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v1:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9992,
+        "true": 0.0008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v1:QUARANTINE MESSAGE",
+      "question_id": "QUARANTINE MESSAGE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v2:REVOKE SESSIONS",
+      "question_id": "REVOKE SESSIONS",
+      "probabilities": {
+        "false": 0.9889,
+        "true": 0.0111
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:6:v2:KILL PROCESS",
+      "question_id": "KILL PROCESS",
+      "probabilities": {
+        "false": 0.9991,
+        "true": 0.0009
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:9:v0:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:9:v0:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 0.9057999999999999,
+        "true": 0.0942
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v0:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9964,
+        "true": 0.0036
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v0:REQUIRE REAUTH",
+      "question_id": "REQUIRE REAUTH",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:NOTIFY USER",
+      "question_id": "NOTIFY USER",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:13:v1:KILL PROCESS",
+      "question_id": "KILL PROCESS",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v0:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9982,
+        "true": 0.0018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v0:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:QUARANTINE MESSAGE",
+      "question_id": "QUARANTINE MESSAGE",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:KILL PROCESS",
+      "question_id": "KILL PROCESS",
+      "probabilities": {
+        "false": 0.9983,
+        "true": 0.0017
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:21:v2:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.8916,
+        "true": 0.1084
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:33:v0:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:33:v0:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9263,
+        "true": 0.0737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v0:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v0:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.9769,
+        "true": 0.0231
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v1:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v1:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:39:v2:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:42:v1:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:42:v2:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.9988,
+        "true": 0.0012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v0:QUARANTINE MESSAGE",
+      "question_id": "QUARANTINE MESSAGE",
+      "probabilities": {
+        "false": 0.8477,
+        "true": 0.1523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v1:NOTIFY USER",
+      "question_id": "NOTIFY USER",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v2:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:47:v2:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.9996,
+        "true": 0.0004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v0:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9336,
+        "true": 0.0664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v1:DISABLE ACCOUNT",
+      "question_id": "DISABLE ACCOUNT",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:REQUIRE REAUTH",
+      "question_id": "REQUIRE REAUTH",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:51:v2:REMOVE FORWARDING RULES",
+      "question_id": "REMOVE FORWARDING RULES",
+      "probabilities": {
+        "false": 0.9966,
+        "true": 0.0034
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v0:DISABLE ACCOUNT",
+      "question_id": "DISABLE ACCOUNT",
+      "probabilities": {
+        "false": 0.9986,
+        "true": 0.0014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v0:QUARANTINE MESSAGE",
+      "question_id": "QUARANTINE MESSAGE",
+      "probabilities": {
+        "false": 0.8398,
+        "true": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v1:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:56:v1:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:88:v1:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:93:v0:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:93:v0:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.9736,
+        "true": 0.0264
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:DISABLE ACCOUNT",
+      "question_id": "DISABLE ACCOUNT",
+      "probabilities": {
+        "false": 0.9986,
+        "true": 0.0014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 0.9996,
+        "true": 0.0004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v0:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.8438,
+        "true": 0.1562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:95:v2:REQUIRE REAUTH",
+      "question_id": "REQUIRE REAUTH",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v0:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v1:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v1:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v2:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:98:v2:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.9004,
+        "true": 0.0996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v0:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.8496,
+        "true": 0.1504
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v1:REMOVE FORWARDING RULES",
+      "question_id": "REMOVE FORWARDING RULES",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:104:v2:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.916,
+        "true": 0.084
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9975,
+        "true": 0.0025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.9968,
+        "true": 0.0032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v0:REMOVE FORWARDING RULES",
+      "question_id": "REMOVE FORWARDING RULES",
+      "probabilities": {
+        "false": 0.9984,
+        "true": 0.0016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v1:NOTIFY USER",
+      "question_id": "NOTIFY USER",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9983,
+        "true": 0.0017
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9993,
+        "true": 0.0007
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 0.9993,
+        "true": 0.0007
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:119:v2:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.8857,
+        "true": 0.1143
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v0:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v1:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:136:v1:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:142:v1:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:142:v2:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.8989,
+        "true": 0.1011
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v1:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v2:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.7881,
+        "true": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:143:v2:QUARANTINE MESSAGE",
+      "question_id": "QUARANTINE MESSAGE",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:BLOCK DESTINATION",
+      "question_id": "BLOCK DESTINATION",
+      "probabilities": {
+        "false": 0.9896,
+        "true": 0.0104
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.989,
+        "true": 0.011
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v0:DISABLE ACCOUNT",
+      "question_id": "DISABLE ACCOUNT",
+      "probabilities": {
+        "false": 0.9504,
+        "true": 0.0496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v1:QUARANTINE FILE",
+      "question_id": "QUARANTINE FILE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:148:v2:REVOKE ACCESS KEY",
+      "question_id": "REVOKE ACCESS KEY",
+      "probabilities": {
+        "false": 0.9949,
+        "true": 0.0051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:195:v0:REVOKE SESSIONS",
+      "question_id": "REVOKE SESSIONS",
+      "probabilities": {
+        "false": 0.8418,
+        "true": 0.1582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:195:v2:REVOKE SESSIONS",
+      "question_id": "REVOKE SESSIONS",
+      "probabilities": {
+        "false": 0.8535,
+        "true": 0.1465
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v0:REQUIRE REAUTH",
+      "question_id": "REQUIRE REAUTH",
+      "probabilities": {
+        "false": 0.9019,
+        "true": 0.0981
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v1:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v2:BLOCK SENDER",
+      "question_id": "BLOCK SENDER",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:205:v2:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.9218999999999999,
+        "true": 0.0781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v0:ISOLATE HOST",
+      "question_id": "ISOLATE HOST",
+      "probabilities": {
+        "false": 0.967,
+        "true": 0.033
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v1:NOTIFY USER",
+      "question_id": "NOTIFY USER",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:209:v1:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v0:ESCALATE TIER2",
+      "question_id": "ESCALATE TIER2",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v0:ESCALATE URGENT",
+      "question_id": "ESCALATE URGENT",
+      "probabilities": {
+        "false": 0.9382,
+        "true": 0.0618
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v1:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v1:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:227:v2:BLOCK EGRESS ASSET",
+      "question_id": "BLOCK EGRESS ASSET",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v0:PURGE MAILBOXES",
+      "question_id": "PURGE MAILBOXES",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v2:AUTO CLOSE",
+      "question_id": "AUTO CLOSE",
+      "probabilities": {
+        "false": 0.9995,
+        "true": 0.0005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__security_incidents:workflow-controls-v1:security_incidents:42:243:v2:DISABLE ACCOUNT",
+      "question_id": "DISABLE ACCOUNT",
+      "probabilities": {
+        "false": 0.9986,
+        "true": 0.0014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

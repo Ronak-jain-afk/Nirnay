@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "s1mb-generalization-diverse-noul-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/s1mb-generalization-diverse-noul",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:31:14+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2515814582,
+    "accuracy": 0.54,
+    "positive_recall": 0.38,
+    "specificity": 0.7,
+    "precision": 0.5588235294117647,
+    "balanced_accuracy": 0.54,
+    "f1": 0.4523809523809524,
+    "true_positive": 19.0,
+    "false_positive": 15.0,
+    "false_negative": 31.0,
+    "true_negative": 35.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.006325832799999986,
+    "baseline_adjusted_skill": 0.08000000000000007,
+    "baseline_adjusted_score": 0.08000000000000007
+  },
+  "elapsed_seconds": 29.941724799995427,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "synthetic-noul-001": "6a8f11c488cb8391c8c7504c532a3c5b77d409a92168221b32c078c23d93f50b",
+      "synthetic-noul-002": "9a589b608cfac85c9a9ae72ecd15984184ab573ffa48b7b11ee4fecd0a964ca0",
+      "synthetic-noul-003": "0a65b9cbf486515790cbb4f3562126bf0348518298696439f0a9fb1881bace81",
+      "synthetic-noul-004": "af93a736b6d320f9e1174cca8e389f3523df81b4145a4e68b4ae6d6af6bbaa7e",
+      "synthetic-noul-005": "7ad68a7e7d1f754b095bd8714353f4de12f0ee6d325988626a7d74f22c8696ac",
+      "synthetic-noul-006": "00aff3139687900c43c8848848d9d0ff00009d8fe6e492ad64c5555d0fa37b7d",
+      "synthetic-noul-007": "479766aef8858440a78814710a25866ee7008fffdc9566f569a581e9589e8bb5",
+      "synthetic-noul-008": "c1541879a1190191315c983df5287564da573b1702011ab897419479f7f30d24",
+      "synthetic-noul-009": "330b3e2acb9542fd038737ef5a56a563f381452c3f97cd6071930a9abc68b932",
+      "synthetic-noul-010": "349091f5ebd142c71ebeb090e3765eab2f119fce8eb77d5776571ca1598468e7",
+      "synthetic-noul-011": "7b0dd3a1291a890924ecdff7afe107b1050708a20ed4d3ac291418fafda3f41a",
+      "synthetic-noul-012": "437ce733ac9de3b67ea0ce430c8c733216311a72ded0ecb6dd1fc00df5dd87e0",
+      "synthetic-noul-013": "7c9ac5d38fd2a28174ff873c3ad3a92be6e730be2ce82334c216d2b6c1d8377f",
+      "synthetic-noul-014": "3d767140ab957baef31b645092012fe29dc5dd9b1f21250db691068aebfaf3ab",
+      "synthetic-noul-015": "5c2d9b8202a4863369b5fccf208b4e5f98916ad61a40027676f079183f25c9eb",
+      "synthetic-noul-016": "77e125bdf0e98d4adc8232a5ae289679081b57a21afc21de3156cf4619e3dae0",
+      "synthetic-noul-017": "7c51bc36c9c35cf5a4e5538e725419d8ef0897c7d88b8064b368f48782fd4b1d",
+      "synthetic-noul-018": "cccff6eb27977223bc5b76f72636ff553d43d90f1131e7c87ed87ea1d3c09971",
+      "synthetic-noul-019": "57a0c80ce3f2d708553a4b49234ffe792ed5a31e82585bbf45dfa29cbf3a55b1",
+      "synthetic-noul-020": "da02f2c0bddf8f22033f9185ced677b55876360599e9583bbbdc6f3b6999afec",
+      "synthetic-noul-021": "4e819a57cd58ea72a0e6a1c1a8cfbd666f7b502164c24bd1ab5f20d87695a359",
+      "synthetic-noul-022": "c1f0daf2643d20e3a099fd7a05a91f16d7824bf9e4c804adabb258bf984246d6",
+      "synthetic-noul-023": "a55a14936f90dc5fa2d4174e5eb929e288760a9abfb1ff922c2fb50a484c2967",
+      "synthetic-noul-024": "aef06c330402bd35873d89baba0f5388d8642413c93d34e6004fdb6cc1621270",
+      "synthetic-noul-025": "665246f7e6dc3af82b020c65038b129e1bf0153269ea5242952fa51f545dbbcf",
+      "synthetic-noul-026": "a11dccb20673581be153245a803ab125baf9ba91c17890bbeea0657d5b61133a",
+      "synthetic-noul-027": "20cc30c63e792b4a73c09b45c7dda82ecbc5e066615aa0dda438d5e5e2bcedce",
+      "synthetic-noul-028": "450178929eab411ebc43a81b2d99914876181a4e4d7cbd154ff63e96acb01d21",
+      "synthetic-noul-029": "1bc10f61d755f4b6394ad736ba105e675058ea9859fab29d147050d2f1705a99",
+      "synthetic-noul-030": "82e4135ce160d30ee5ee484260b5ee32e1345bb22ea31332f730ac8882d0c8e1",
+      "synthetic-noul-031": "0c01371fbe60466515566e7b4f847ec24366b112de053c02f7440bca9a0546d1",
+      "synthetic-noul-032": "5c0f8dd2d6341da252e547e383dc8e599813bf5f52311f563ac56e562e955a78",
+      "synthetic-noul-033": "bc0dfa5563e3061a350870bbf8b9762db906bf092ddeab888e8f379e15988114",
+      "synthetic-noul-034": "64c2086fbfa902f4812b08df8c33b419b676df9c939781d68cb95a2f3cf5ad87",
+      "synthetic-noul-035": "ee0e34b8f152a6f85ff3957b10b5e916ef7345cd113676a5737302269618f487",
+      "synthetic-noul-036": "8cd6762ffbf12731931885095e6be226aa2e8cc2216f8a258ef809ecb6a84364",
+      "synthetic-noul-037": "4d77d649a4235bdccd40d8839720129f769143806d13e47cf620409bc61d04e8",
+      "synthetic-noul-038": "9ad86e3930c430dee92613f11302a121ac73dcf211d12bffc60167434343cb72",
+      "synthetic-noul-039": "ab71d2a6c99f22e1dc527d3aa6a008b63f739a61916fd67207c08a443683e2b4",
+      "synthetic-noul-040": "7ef17bdf8b67d494938c942a5b081c961edfdefe4a949a4acc07ad8aa807b632",
+      "synthetic-noul-041": "fe8ef1206e0e70be6cd78256fc5040dc6cebcddfe590b4f6d178c5312ed8e9bd",
+      "synthetic-noul-042": "5bd8a700f5f65ce45d49188332b021fd767de34dd62ad2e6220c0c844bb8a96a",
+      "synthetic-noul-043": "6e6322a8b463d2a256e343b1604eb38b68fc9e7329295a46b230c52d41023e39",
+      "synthetic-noul-044": "60b0ade574709ca6c658b8ed6dbd99812b3890f89598f327679938d7c4bba2a6",
+      "synthetic-noul-045": "61d44c20520d1f5746442b5bfa05c27c205bed12ceab042107b9ec646d6028e6",
+      "synthetic-noul-046": "50546904fe1d27cfa049b067691b95eb04e94b062dda8cd516740e6f9ddaad6a",
+      "synthetic-noul-047": "0604b8b76673d9197e3e4029e909b4f56eb7db4ad18b278073333ea23f09f6d1",
+      "synthetic-noul-048": "9fe4683c9d95c5ece472e18e3406ca5e558a60b6acb4a68fb6dfa307ff310bcf",
+      "synthetic-noul-049": "430be17e9e4aa039f4b8cf15244662316dcbe3c68b696e2057eb7f37dc824e49",
+      "synthetic-noul-050": "6462f15c13453428c0475bd4a5a1ddcf5fbe959b6e80a369aeddbb0481caa119",
+      "synthetic-noul-051": "f3417b9ccb2bb9dc7477a07d92a60ba0c2b42a5319b558172099cc4b7b999944",
+      "synthetic-noul-052": "11687e3cd4429a963045badfdf622a73beb10ceb9c4de5c19e211ccbf6b24525",
+      "synthetic-noul-053": "9d3bdcf1986d46275166d39052af7a3b6b66a955c95c2e41c99c701746ec7956",
+      "synthetic-noul-054": "34ad2957266c56a86caaa8113b5f288281875ba45cbca160addef5ecc0005c4d",
+      "synthetic-noul-055": "9a5d58cd06ae8254186c75b5d383d2445e3d5d2a54a05df50a4368f1b513635f",
+      "synthetic-noul-056": "28b96f642bc150ce0c782cc340f5f00853151b93899786bf17130fcaa48caa4f",
+      "synthetic-noul-057": "31f8b39dcf0b548c34faa143d0233f63316117c0a529f6d84d667cdee70d5727",
+      "synthetic-noul-058": "74b253d505107c4666520bbd8c2f75b7f31d02df635cc071a412755f87fcad73",
+      "synthetic-noul-059": "6198cfef9c89a47491690e11922b16e842f8ba1f18b75b6a8356be547a8f7c67",
+      "synthetic-noul-060": "e5fc982292b39b09928f321b7f942b15a07d8674e3f7883aba9435cf6b902505",
+      "synthetic-noul-061": "e361bcd59cf239e3a7214923b4491c50f0f35065290546d5473879e1d1d43ba5",
+      "synthetic-noul-062": "0f8ab816de5e9c3c4863b2e1c6de54b0ce5133c925a50886d76a28bf2bba5173",
+      "synthetic-noul-063": "93a5aa695fc1a85f560aff7fa0224b39c8e62b522ef9d18f1ca462807e2ec03d",
+      "synthetic-noul-064": "e6a5b76728624f2b5ad4a3484129e83244311b4bcdd8105579e07542454a2761",
+      "synthetic-noul-065": "8b3c38c61a4ed5d91d1c20cec0f1ff5036f8da8cff79ad6a15c876ffebb903bd",
+      "synthetic-noul-066": "6f7d54303a1488056e6d5b4f9d2aee14794f7c5aea7d44acbf202ec6aa7df1cf",
+      "synthetic-noul-067": "9bc9b8e94b5daf8312655bd36a3344db24354da69aac080a5370a0240569bf79",
+      "synthetic-noul-068": "8a4269b1f8a2254c89471fb37995e74ecf97e74b095257931ed9e0a7e7e3dd12",
+      "synthetic-noul-069": "f976e54ae05ff633a0f4d71462860f7d53d4f60140be4a94aea3bf59e6b89809",
+      "synthetic-noul-070": "e55a684598c053a319ad6634184fabaaabfbbff60ac7c31551294db7302e0be1",
+      "synthetic-noul-071": "cb321b0cd66e2c8ad86c44ab9e35b1797f2befb7c341032aad9ef56cc5a4064f",
+      "synthetic-noul-072": "1209f53f44db09050512e7a4fe74c5a407a14e8b1a6342f4a4caeb9ce3776ef0",
+      "synthetic-noul-073": "646d60581387db3dd5a6994da3d9720c1788c8e360b025df1e1264d757491ccc",
+      "synthetic-noul-074": "2a83a4484200866f2079298aef2bfa6ec5a1ee251476d592da52b2801abbcc90",
+      "synthetic-noul-075": "a754e8faeacbd5831c9ab6c1ac4c0e16b830ef910b64419f9f67f4e1f53de7b3",
+      "synthetic-noul-076": "674a2db2ecebabd1c9549144af6ccc00e1e4654c3b808c38e1b9fa5928c04f01",
+      "synthetic-noul-077": "c8dc7f9b412658cb397237b388ba4d86871a174f8776beb683e3efda795d2e4f",
+      "synthetic-noul-078": "659f5599850a70d31f24b00facfe1bc2b49ad11b37be2a16eff7e6bffba142bc",
+      "synthetic-noul-079": "9f1d35182a0c8c63baaedf84ad4b891dc6e48763e1629275452b890317bea489",
+      "synthetic-noul-080": "eca93a6af253fde22409d2a92a2efa7cf3ac81eb94c2f6365d8e24bcba859ca7",
+      "synthetic-noul-081": "2f19d2f85f887c43560ba6cb9929c7fa0e9e11c7ba621a232f9996aae3223ad6",
+      "synthetic-noul-082": "41754a8d7854dbfe2fb574b3d3d02076cf00bd931c99c1651c9507ccd777e24e",
+      "synthetic-noul-083": "06f572787968f62e9bdab5b8318896a2e3fd56c032a952bf5cc7d5607e4a7974",
+      "synthetic-noul-084": "dd79973a0ac364e6484c71747b4bb3ab2d8c91e775eaf2d74c3f36a914321263",
+      "synthetic-noul-085": "26bf7934553be2ba36b8438ae901fcbdf0ee8118578a58095ab6d3441d2c4804",
+      "synthetic-noul-086": "5d166f5e551954f435d7d436fb009ba30199d17e6de54fd3f79604f8ce990561",
+      "synthetic-noul-087": "2c883fce7795de1443dd3b19a8974333a7b3753093870c0898b6f578d12ecea3",
+      "synthetic-noul-088": "8d8694a2d30566dd0952ea093777709e825d85ae0de28820689bf93d24802cdd",
+      "synthetic-noul-089": "87acaefd67ed18fdc95165238cc7f0d23fdd652efc73f82f56a4740608880f37",
+      "synthetic-noul-090": "bca85afbbc537ee8a58ec14f7c7047e389d54c8f8f7dc94c88044c6393479f59",
+      "synthetic-noul-091": "7228cd0e73999abf8b75a7ca9a1008ee586ebaa7b2d356969e1ad96be30ad97b",
+      "synthetic-noul-092": "383e6faa9964a73097f952469ff3aacf94159b3e18df9d18fc60067e6b3cff51",
+      "synthetic-noul-093": "17ab5187f37e4eda77bfffc09679711e8fa84cdb22cf5a4ed3c22b3fb75fc750",
+      "synthetic-noul-094": "e25237faf1cd2b9c64f0a8a55836daa58f7580999f46d486a369719f81aff9b6",
+      "synthetic-noul-095": "dccee6aa74e7ab6b4fb42fc0c3b8bf959f392d494704f975d992dba37c083be3",
+      "synthetic-noul-096": "50ed98a895a5d4e41749821a87e8ef0e7fc7bc94722be684df9666d0aa67acc3",
+      "synthetic-noul-097": "4eafcb1e529bf6996e83a0cbf3097039dda2bfd207ac8fd33a0fe9a41c8fabcb",
+      "synthetic-noul-098": "c741d34f47555b46d47a27226427af1afbe215ead03f67a7052767772a8cbd06",
+      "synthetic-noul-099": "885e9fe17c50d144de621d02f2f6f888685022a239b2f657df17940e0e708251",
+      "synthetic-noul-100": "24e316f44950cde27e456c9542fc30b398985606368f072418b7b9ef3507c988"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "synthetic-noul-001",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-002",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-003",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-004",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-005",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-006",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-007",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-008",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-009",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-010",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-011",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-012",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-013",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-014",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-015",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-016",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-017",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-018",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-019",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-020",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-021",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-022",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-023",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-024",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-025",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-026",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-027",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-028",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-029",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-030",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-031",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-032",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-033",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-034",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-035",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-036",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-037",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-038",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-039",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-040",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-041",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-042",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-043",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-044",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-045",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-046",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-047",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-048",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-049",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-050",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-051",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-052",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-053",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-054",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-055",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-056",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-057",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-058",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-059",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-060",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-061",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-062",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-063",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-064",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-065",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-066",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-067",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-068",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-069",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-070",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-071",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-072",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-073",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-074",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-075",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-076",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-077",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-078",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-079",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-080",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-081",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-082",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-083",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-084",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-085",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-086",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-087",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-088",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-089",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-090",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-091",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-092",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-093",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-094",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-095",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-096",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-097",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-098",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-099",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-noul-100",
+      "question_id": "judgment",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

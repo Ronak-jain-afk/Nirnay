@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--workflow-controls-v1--customer-service-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__workflow-controls-v1__customer_service",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:22:58+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2283711153,
+    "accuracy": 0.68,
+    "positive_recall": 0.35135135135135137,
+    "specificity": 0.873015873015873,
+    "precision": 0.6190476190476191,
+    "balanced_accuracy": 0.6121836121836122,
+    "f1": 0.4482758620689655,
+    "true_positive": 13.0,
+    "false_positive": 8.0,
+    "false_negative": 24.0,
+    "true_negative": 55.0,
+    "positive_prevalence": 0.37,
+    "majority_accuracy_baseline": 0.63,
+    "constant_brier_baseline": 0.23310000000000008,
+    "brier_skill": 0.020286935649936,
+    "baseline_adjusted_skill": 0.22436722436722434,
+    "baseline_adjusted_score": 0.22436722436722434
+  },
+  "elapsed_seconds": 28.674265499998,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:SAY": "aedeea46f57a63489932c05cec140612860b677700fd4ff89f545d2fa35032b9",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:SET INTENT": "af0cc5edf0b2ab64d798b9c28ee60c0793293049dd1d3f1e333461cf88b7b4df",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:CANCEL": "f626001b46174264115e6a0eb5b06c485b937e39a8e1ac6596eee7f90a38bf7e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v1:REFUND": "df2082f138144b7ee5914ad1d02182d19b678cbb9e6830ea3cde7e4f913aa146",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v1:CLOSE": "9d6c6fd57ae59171d41e24bcd55bd1e128851e1edf66c1f91f512ab221d122b0",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:SAY": "e3b0686988d5916bf88dabc9bc86c178fa41df4557e35105e40471333a0bab60",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:FREEZE CARD": "011e728fec607149d6fb22ecd1b363328670c8fcf1bce44c51a240d3c3e8e5e5",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:CLOSE": "f55e4c55243e6113dd119327e52f4a9bcdc22dc0215e83d2d2cc7e4a369a871d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v0:CANCEL": "b8fa8ebf13d329ff06d39b1fbd5a1a6c68f3b2cddc24e209afd29e5499715a0d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v0:CLOSE": "71028c21a91b50b4b2da5c8cc76cd5d0c82f424d9efbbc95fee382e9843897b2",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:SAY": "c2b0586b24800eefe002bc22a33fec2adf4c38db8657050996bc58c5fe0f407e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:REFUND": "d6efb00114ad35705f4c7b2a6f948070d18c40e24699e36dc49f75dfeb006459",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:SET INTENT": "e0122291956cb14b6b336964e46c3a11e5937edf678465bd1765c57226b80559",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:HAND OFF": "29f560a15e2a4213729dcc511c62ba8b7c0970dc5bc8da00124909ec89069f48",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v2:CANCEL": "e13bbfe328df09851ddbda05d957365afe416d3d162c42c477c67c3d64dbac6a",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v2:FLAG FOR REVIEW": "8c55f357e3bec8485f172af43e8638cccdef86853c51b16dcd640d765398610b",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:27:v1:REFUND": "432f47f3b1e265085f8ecfc833edbacd2823151954cbbf904bfdd4df3c441ccd",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:27:v1:CLOSE": "39b1bbb1b09418fad81f56e5605be468e71cd38ff43154684e5edbabedb42e7b",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:63:v0:SAY": "1f5f80ad597392d11719e799b20806d87307dd17b88fa83bde4d589bd7ddd1ed",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:REFUND": "6cbd1f125fe76b5410180aa324d3a9a5c3d37d8daea04d7b2561b33dac7f517a",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:SET INTENT": "5887f6fff336d867a68241c42dc67ca8671b47e03c43728b60a332e1adea1744",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:CANCEL": "3562561c750d8ba346c8aacdf02c289136af707b2db33f581c737793c8625e83",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v1:FREEZE CARD": "cd50f8ab915a934674c1134c3138091a891e5e51f6fb8f88918d0659636ca008",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:SAY": "4aa1f828a0ba39909ad7adfde16d9f19ba71102bc16c820fd214b815b7f36f1e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:FREEZE CARD": "58cf1315fc6e377e722a58371c135219acfdb6264f921f3f3cd0226951fa1a6a",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:HAND OFF": "f46a5a992a47c97fcb6c13119d11ea2b862ead6f0999213c00ade338eb7cd709",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:FLAG FOR REVIEW": "d25722bf6ef33079c7f5f7812fdcb5c2a6b1ac17bcc9497730fe96414068e72f",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v2:HAND OFF": "16cbc467ff68d46ff7ae3dc23671e9983c958f887635f4e15e9df7f5ce29fedc",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v2:FLAG FOR REVIEW": "456bdc9cb74c03299a0c4235c72effadff7acd80aaa5761a65377dc30905f334",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v0:REFUND": "0146888ed53cbe8cd831faf4faec21ae482a9b4271e605532065b1b0b8c2717d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v0:CANCEL": "7ab42c1cc780fed65450d2225b27e318b2952d2e67b6be07acdd0dbf49d944d7",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v1:SET INTENT": "30f64cc925e680a81c44c26ef4f00b1499a85c5b766fb182461fe931f698fd64",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v1:CANCEL": "bc53965d11f7ecf92bedbbc4c7ec6f08164c6e022a4b6c0b917a3a40e7a51798",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v2:FLAG FOR REVIEW": "cc37ad13d37bc901a2767264533c3310832b5d4f29f384cc3c4e1b371f28a036",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v0:SET INTENT": "02f1945ffb370d81dd41b0597faf49316645751b2a627f6ee8a568d9e7950938",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v0:FLAG FOR REVIEW": "ae37911968d73d1f84efa26d5714d9f30f8f9db0fee1cef63f125fea4b3b573b",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v1:CANCEL": "127fa580bca4e6a274d79eed37e32cd3ef47346ba6d5a00494935e54c6ef144a",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v1:FLAG FOR REVIEW": "ae37911968d73d1f84efa26d5714d9f30f8f9db0fee1cef63f125fea4b3b573b",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v2:FREEZE CARD": "221b7c96f967de1fbc4f023b6d01c624f23ec1519108361ba9a524ff619abb45",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v2:FLAG FOR REVIEW": "81b2f57e958d809099b457166ae73447d554c9e6ef0005df42c0bc766c4ef2dd",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v0:FREEZE CARD": "2af0503f17949962f76e964a2c99e6f8214dd2b25f20229943c46966bd29055d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v1:SAY": "8671dd872c5a1f35c50be798eea38521fdbd618d768dcec4523a0f105ff5e048",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v1:FREEZE CARD": "32123de210a32d48fd45e12a58ff36a0143024ea0d636d3e5a9922500da9eb3d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v2:REFUND": "2c8e3034dceeef025b70b9ed493481aa163e57526ec196e246b554b1abb3b670",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:CANCEL": "09caaf59568454e16f2aa2390b333a7c1ded81c3b0d78acf6a84a666be5c2359",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:HAND OFF": "8dfa21f2f243ca7cc192c53185b8baf9f0cfa4a1470054bfaf82da5a9a5ed8b5",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:CLOSE": "4d29653a855e4d6ab97c9a9a4dd459931e0470b115c3450a9ba1d6b21878d3df",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v2:SAY": "1182ae354017d6afe2cecd0352ff78c66da5e100930b8f492c7d8919f5f0de62",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v2:SET INTENT": "c95bb80c25c740b46ee5da53b9bed4b13c34e33449e43c8797c15d0130b4178c",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:118:v0:HAND OFF": "1273b8f2431144a69271e38408c4d1379f2b4b0dddcdfd26923d14d9d3ae10c4",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v0:HAND OFF": "4cec74ad0e2b42ff21e8b96211e51d6bfc9736d579bab7dd31196e9d9015b344",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v0:CLOSE": "9e181898403f5fa150b53f24692915d99845b9294e89d811d5a08efcfb269475",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v2:FREEZE CARD": "05733bf8861242aafd3fc45f8fdd05f85ec5ed07be966b8256555a5d930ec9ec",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v2:SET INTENT": "3b8f3d26c0b7ab3f19150cbc506173eb650027fcab988346909ff8cfeae4ab02",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:SAY": "443f172dc7034969a1089e885ea7fe14ad37202147454aabc7b4a671ec0edf13",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:CANCEL": "9520bde3bd171b202428d300e24d19d1f3098517407cd28c5d1bdb5412e4385e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:HAND OFF": "aa0ec4558208891ef110bd6aa25e251125f72dfbbee8d91d1fed087b14c59841",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:CLOSE": "ae02050376a2d1fca620426b0c786ee87bb30c3a09af2a3e48376db2bac59145",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:SAY": "443f172dc7034969a1089e885ea7fe14ad37202147454aabc7b4a671ec0edf13",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:REFUND": "963f3969ee64e2bf205023ff7b27782afc34fbdcf4106af144655c222b3ace61",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:SET INTENT": "3cf8a9638f776801f5fa8e71e8d2af3317e7226e41d0b4726af574a8c39fc424",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:CANCEL": "9520bde3bd171b202428d300e24d19d1f3098517407cd28c5d1bdb5412e4385e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:CLOSE": "ae02050376a2d1fca620426b0c786ee87bb30c3a09af2a3e48376db2bac59145",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v2:CLOSE": "8f685691b9ca15ce267769a28a2b0afb225ae8776a4782f0b801baa55b9d50dd",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v0:FREEZE CARD": "1c1ae4a057730aefdfb20ea7e898f4f9919ce4aa71ca403e2fe475c9e0650385",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v1:FREEZE CARD": "1c1ae4a057730aefdfb20ea7e898f4f9919ce4aa71ca403e2fe475c9e0650385",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:SAY": "b3a4a8637ef5a1e6a480d238a4beff1a408a863761f0054946d78c3e30d19705",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:FREEZE CARD": "2b2bfe4e8de7679d1d22c075f488bcf08886b7d3c1b1337cda3b2c57556dac7a",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:FLAG FOR REVIEW": "4548536b3d53c2eb27ef307c8e8f3e5eba5b99415f195d122bab8143109995ad",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:REFUND": "476ca82dfc4e5568706a278c1243a5498701a572acd8d83d7665c87baef22249",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:FREEZE CARD": "eedacf282480dc5ad03b81d488139393db8ae3841288949c15652f30ab12027c",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:SET INTENT": "6855f8e0fd024a43a4381501d2c207cf02589b30f26bebae442ae3dc3939ce62",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:FLAG FOR REVIEW": "98acdb3be6a7058546536755bf8f91c9cab157d0c08609dfe95ccf4a2d3d1b3e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:CLOSE": "0858a5eb543b7bb19b108ae1351f545aa4fc05dc59cc18d888fe1fdfdb95a44f",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:SAY": "1512c2020cd628e1f44e56bcb7e0e17ea7ee24b662b9cf4776e4b422543a1867",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:CANCEL": "2482d0595d9b046c337e572674c004fc46a07f2e5f639f8bc7843d638205569d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:HAND OFF": "414a1f594ee8d9a1df0df95d1e68c1bf1f999d0ada88fbee416ed33b88a624d5",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v2:SET INTENT": "baaf8a1f4cd11a177d5ff2b192f7a67e25f6dd71818df6e8af33223f5e5efc5f",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v2:CANCEL": "2d3df36fba76b6af54997aa6707ba1d20629cf11cded71425c93da2a66de1d6c",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v0:CANCEL": "50de479d01014b58b2aaefd046f06a8e8cd820c12b46b5ba48fc69e7eb77fd3c",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v1:HAND OFF": "02a8290de0951c3f8d6d35615bccc41e8731f58cfdc677d4f1d75f10260b017e",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v2:SAY": "526817d617d397119f00c0afd9da9c8c3902c94021d1bc818c2a6148aa3f25c3",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v0:HAND OFF": "ef46a63e45f6b1f2c4316ed98faeddf05321bede8d9c33d0a6d61e6f7d717b6d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v1:REFUND": "a2c9ee88cc332789e5d10dc27fd02f0f58883011c808dba56be256f95ae2db45",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v2:FLAG FOR REVIEW": "e25b3a02c4f0c0aa55c652fc4d33c8e660e79750d3d72ec5c718b2a2bea082a8",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v2:CLOSE": "c04a7f9dd7a8c2cf7a7a63654b44bfc8f893ecb014d39361d6ba56b80697fac1",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:FREEZE CARD": "ce443035251644f3fdaf0f86ea2869aae559848b8e9331cff0e74d3611fcc4ca",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:FLAG FOR REVIEW": "ba7d10c641662fed0bcab7089a448ff69c933e11a3a37fb66da34782de89ba75",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:CLOSE": "eb5d4ef420b570c4aa87d234d8d69b9c54b4352446bcd59e52c942e74b657b2b",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v1:CANCEL": "5c63b33f90c0c9e19087d869e3df6277d253bc6692dae5b545159723fe444e15",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v1:FLAG FOR REVIEW": "ba7d10c641662fed0bcab7089a448ff69c933e11a3a37fb66da34782de89ba75",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:SAY": "0cf536b59a713b40f63c15850d359c7e49dec53d8ad32bd6f7a75df0e0f65866",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:REFUND": "c912203dc0f8407d844a124fa813aa98ce1088178a8b6a393bee6fbe1681b330",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:SET INTENT": "f41fd19f215babf03aad79dc3d8abc1a9ced6f448b0bcac7338e6d7edc0c3c5d",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:FREEZE CARD": "246ed72d936fc1102edb8cb9080d9230f86eac079a73834f4db5760677c4db23",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:SET INTENT": "a87600ee0e95608b07191b34545e35b59aa1aad5709939ac044c7163b78f31b6",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:CANCEL": "7991f6fd2e5cd8f9b9a96322197ff4d4bfcef571907543e0974231777ff2eff2",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:HAND OFF": "4e80d24f09064b6323f8c07978754aefbd59ca218aecbd9026667fb98c24576f",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v2:CANCEL": "ee855542c60c3a50d91ae35185da369c52386cb5ad48a770d3d381def4b2d1e3",
+      "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v2:HAND OFF": "acfb9e1c4edea3008eee45f1d13cc2eb5379b9694937fee9d56f8cfba996788f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v1:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9933,
+        "true": 0.0067
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v1:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.13280000000000003,
+        "true": 0.8672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9988,
+        "true": 0.0012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:14:v2:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.125,
+        "true": 0.875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.9985,
+        "true": 0.0015
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9978,
+        "true": 0.0022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.9828,
+        "true": 0.0172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v1:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v2:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:15:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9458,
+        "true": 0.0542
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:27:v1:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9991,
+        "true": 0.0009
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:27:v1:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.9993,
+        "true": 0.0007
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:63:v0:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9901,
+        "true": 0.0099
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.972,
+        "true": 0.028
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:71:v1:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9987,
+        "true": 0.0013
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9915,
+        "true": 0.0085
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v0:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9465,
+        "true": 0.0535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v2:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:76:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.949,
+        "true": 0.051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v0:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9973,
+        "true": 0.0027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9949,
+        "true": 0.0051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v1:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.994,
+        "true": 0.006
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:77:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9399,
+        "true": 0.0601
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v0:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.9745,
+        "true": 0.0255
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v0:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.8901,
+        "true": 0.1099
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v1:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.8901,
+        "true": 0.1099
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v2:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9992,
+        "true": 0.0008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:83:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9087,
+        "true": 0.0913
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v0:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9921,
+        "true": 0.0079
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v1:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v1:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9923,
+        "true": 0.0077
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:94:v2:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9975,
+        "true": 0.0025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.8398,
+        "true": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.125,
+        "true": 0.875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v2:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:116:v2:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:118:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.9987,
+        "true": 0.0013
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v2:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:136:v2:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.9972,
+        "true": 0.0028
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.8418,
+        "true": 0.1582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.12890000000000001,
+        "true": 0.8711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.996,
+        "true": 0.004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v1:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.12890000000000001,
+        "true": 0.8711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:143:v2:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.13280000000000003,
+        "true": 0.8672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v0:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.999,
+        "true": 0.001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v1:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.999,
+        "true": 0.001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.999,
+        "true": 0.001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:158:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9253,
+        "true": 0.0747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9989,
+        "true": 0.0011
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9976,
+        "true": 0.0024
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.8931,
+        "true": 0.1069
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9546,
+        "true": 0.0454
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.9987,
+        "true": 0.0013
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9992,
+        "true": 0.0008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v1:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v2:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.8593999999999999,
+        "true": 0.1406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:193:v2:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9998,
+        "true": 0.0002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v0:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9958,
+        "true": 0.0042
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v1:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:197:v2:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v0:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v1:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.999,
+        "true": 0.001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v2:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.9546,
+        "true": 0.0454
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:202:v2:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.9988,
+        "true": 0.0012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9994,
+        "true": 0.0006
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.10940000000000005,
+        "true": 0.8906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v0:CLOSE",
+      "question_id": "CLOSE",
+      "probabilities": {
+        "false": 0.999,
+        "true": 0.001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:235:v1:FLAG FOR REVIEW",
+      "question_id": "FLAG FOR REVIEW",
+      "probabilities": {
+        "false": 0.10940000000000005,
+        "true": 0.8906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:SAY",
+      "question_id": "SAY",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:REFUND",
+      "question_id": "REFUND",
+      "probabilities": {
+        "false": 0.9925,
+        "true": 0.0075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v0:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.9668,
+        "true": 0.0332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:FREEZE CARD",
+      "question_id": "FREEZE CARD",
+      "probabilities": {
+        "false": 0.9986,
+        "true": 0.0014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:SET INTENT",
+      "question_id": "SET INTENT",
+      "probabilities": {
+        "false": 0.9689,
+        "true": 0.0311
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9997,
+        "true": 0.0003
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v1:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.8154,
+        "true": 0.1846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v2:CANCEL",
+      "question_id": "CANCEL",
+      "probabilities": {
+        "false": 0.9996,
+        "true": 0.0004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__customer_service:workflow-controls-v1:customer_service:42:239:v2:HAND OFF",
+      "question_id": "HAND OFF",
+      "probabilities": {
+        "false": 0.8154,
+        "true": 0.1846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

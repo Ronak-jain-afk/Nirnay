@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "snli-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/snli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:34:45+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.38,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.38,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 27.922607499996957,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "snli:plain_text:test:44": "73e81e97e120a25190a42bd09776d32bdc5ac71ccc9e2525a13a398479912f10",
+      "snli:plain_text:test:269": "d2004077d3f5fa0c525468bb7c4d4ef9c429ce593e0f659e2c625dd8f3633ec8",
+      "snli:plain_text:test:273": "70ad0fc1e5fe606bc70b0d2218d0d2996e2cfb8ce580aa05f8ad580557673306",
+      "snli:plain_text:test:286": "4b491bb377d592de20efea34703884be069d0639fbe698feb6173ae58fb963c5",
+      "snli:plain_text:test:360": "ee9423acb361c27f33f2690ee527cbdf90534326418c29ac8dde0d2b1a77fbaf",
+      "snli:plain_text:test:427": "0551ae97374c54f14f0fe12b64a81cec1157cd3557f5730242726703e2108345",
+      "snli:plain_text:test:441": "ea364a3a61a943a4c15d54c8f22ee0e53b61127fca420d54c2a3f82c6435af31",
+      "snli:plain_text:test:643": "872186f36cf6af17f35dc4266374ffd2639de19f3acde2b63827b8968e0e088d",
+      "snli:plain_text:test:799": "8f067d9262f9f0fc0a6932d09205e448a90c6a5982071a6265bcf9a2c956841f",
+      "snli:plain_text:test:1060": "78a72940f738b8a0f6b7a7c9ffec2c3a28fc39e1be93e60f8b2d0befd13a0a60",
+      "snli:plain_text:test:1175": "a5ed3b18269450d8c4e4ae0608b95756807388f51b29c3985f69722de9e495dd",
+      "snli:plain_text:test:1273": "fee0cd41e87c514ba0aaac25f9a4bc0cc199482e41c5639191c266c9b5a9daf5",
+      "snli:plain_text:test:1369": "b7dea8d57e2ed9de1a33b0bb89246f04e9ab3eae146e8b77ef2e13dd6b7d3da6",
+      "snli:plain_text:test:1403": "1456924c25ebb8997bcee745182a569088027d2049663cdc06e63b2f0c5de822",
+      "snli:plain_text:test:1441": "124e5235beb3a320da520966b577cddd3a1461b6dc4fde18683de4c629b16827",
+      "snli:plain_text:test:1525": "824784ca7d27756ff2a7904735e290c24e92d133e898128bb0e48a8e1468ad21",
+      "snli:plain_text:test:1780": "a895d74e22f85b637170701e16a51dcc3ec23f4414335409a54332f7eb786709",
+      "snli:plain_text:test:1975": "28aa82796456ac282def3ae950926ebb5736c9a950fce47f177dd72ca849f9d9",
+      "snli:plain_text:test:1983": "328c33f9f8cdf2f7fc4dfdc8f52b8e8ce8bb33c2975beb991142873e22b4c652",
+      "snli:plain_text:test:2103": "5e67df2bf0d005aec8b4ab3c5be14774c81c496e36a922d8e3941d75ed51ea21",
+      "snli:plain_text:test:2117": "812ef4f9fe1c0f8dca6e9aa2e088927681c7b7125f440d98312a0cba29a35393",
+      "snli:plain_text:test:2127": "8ab3bfd0e7af80c3f5eed9e2ce8d964d083f58ba750fe6a28c09a6b82f9942a9",
+      "snli:plain_text:test:2209": "f868b9648800103df1e7934e14c2f02853fe8b417d00d0ac1f690945acd91fb0",
+      "snli:plain_text:test:2270": "a414a6c5d3d344a4e8081cb6f3f332e4b4ee9a3209f1cf0ed882ca56f45e770f",
+      "snli:plain_text:test:2365": "2bdb6c832aabe65f150769fcc9015a1ef495f6cc2342aaf230c74358cf8d7060",
+      "snli:plain_text:test:2472": "ecf45b809537320a107fa9d696cbf7dfd4391d0e1f0f4f230ab8cc9543d2ae1c",
+      "snli:plain_text:test:2657": "234c7da47dc89f6eea2c7e6ca2465342927aa852c4d4f54e6a2413cc393b1a9d",
+      "snli:plain_text:test:2717": "a734cd3403652b6673a14b86eac7a2e5f67eab62b47c953a4562e784a9cc9b75",
+      "snli:plain_text:test:2745": "28e206a8d9edb90be913e3552a65d86c80184da8f70bd7a1fd02edb2d3d52d42",
+      "snli:plain_text:test:2756": "6797d5119abf5f30e3dada572d22a607b272893d14a84d194c1a36d726457d3b",
+      "snli:plain_text:test:2851": "2593e297a1a8eb007c6ffba08e31affd96dfd366b4e2123b3235545d64a81b44",
+      "snli:plain_text:test:2887": "b9175840d8b1ff0ff576afd631164152b6eae8e6ed502ce9ef78e0dad87103b3",
+      "snli:plain_text:test:2913": "805f2f109eafcfcdd69635d4b58684de081591fb091735055b8ad42cf7a1d24e",
+      "snli:plain_text:test:2996": "7a80fb31a347ce4655c589996fa4e96e515edb6e7e09ccaa68dc97dd903d0e54",
+      "snli:plain_text:test:3106": "74ab7360c6031eadcfdb40fa2057becd64d79bf1e443f292a7b55769b110af77",
+      "snli:plain_text:test:3231": "8bae32b441f79999b62d26e5c0b71f53c6d877b88e98d222d665800621f5927c",
+      "snli:plain_text:test:3450": "308d18f589c0ca16f4482c0f80121b776065624c40f92efce918671bcf4c9d85",
+      "snli:plain_text:test:3757": "2e9611e1d4850704fe9c6798b3e815d95fb5f8376214d42f0d03a1239ba8728b",
+      "snli:plain_text:test:4053": "0c21de63f520a7455886fd57e89041513f95d0343c27a80bc946e103c257006b",
+      "snli:plain_text:test:4079": "4aa1e2500eba265a93660f33064a4f41554e20f0c2558f10c3593d6007dce12c",
+      "snli:plain_text:test:4229": "4b59694bafa2d672b92880eb41090c9353d3d422f8c545293483c1f6e59a9278",
+      "snli:plain_text:test:4239": "e1abc4714e3750d7c365ffb79d9b70b92463a2628acb2fe6f3bd563a7f351daf",
+      "snli:plain_text:test:4303": "6538f9e0d47701322eba3879e115612a3c411c0e7a33034a9ff9927f50537b8a",
+      "snli:plain_text:test:4536": "74393355056e4668d4c5dbaabdb26a8f2154c877f6106cd209f14d5de8412262",
+      "snli:plain_text:test:4587": "b01595aa864e62676a4bbc792b469c67ca23690597c2e5eab463c7036c011f2b",
+      "snli:plain_text:test:4759": "ded4b030591723e37be35e1446c433913bbf5c4cc0b351241839f93ee6a615ba",
+      "snli:plain_text:test:4822": "d4dc5237e40c135a3cf961ab1cc5d99dc1480ba9599ba909f41781f131e57484",
+      "snli:plain_text:test:4926": "8bb65ff549ee58689b99fde87e6d70df170a4130f6747611682752ec0c37f8e8",
+      "snli:plain_text:test:5058": "7797c1ada26e5e774cb5cdd4569c9ab53ea11f3065f107d76fc0ab0bc6eb7271",
+      "snli:plain_text:test:5153": "b1e49aa6b48751d5873e3215653ffae2442b60a0f2a96ce531e1689acf7fb77d",
+      "snli:plain_text:test:5327": "52012f1c8745af2ffe4f164ed6948208f0b6b63447df312bda011026bc93ba9f",
+      "snli:plain_text:test:5461": "386f21ab5966100fe9093d13b73623ccc26907ea9501f094bc4f38bfa343fcfc",
+      "snli:plain_text:test:5546": "1fb8f46b7c16213732f93ddf67f84041176f7e4ccf5efd33ba375d0267d35ffe",
+      "snli:plain_text:test:5561": "2e2993be09c26b603e2892c47e8a465490ad9a5ee4637144b2c2d282acf88439",
+      "snli:plain_text:test:5625": "d6df1728fe28b9bcf08092491923a1fec70d0e82afe97ade79a2e2a4aff9600f",
+      "snli:plain_text:test:5657": "c9d77d15408ed42aacf4af733dd424e8c97f5f3cf82ed2c4f31b7fc12d153bf2",
+      "snli:plain_text:test:5755": "8ce99e9da9a80d4a0c1c51bdd004707138aca53d67995cfc8f55102b5b64efde",
+      "snli:plain_text:test:5799": "6b0f84186aad003f1ec7f57070814ea88fd5a25cb0c8893945fba4a60badac13",
+      "snli:plain_text:test:5814": "adb3f1f0da4281f47a59df0d4a43c56854b9bd43fbe1b1dceb01ca25644757e6",
+      "snli:plain_text:test:5890": "98554285e930fbb8db36af335ccfcfb6d592b9572c993d04568e412d008ccbef",
+      "snli:plain_text:test:6061": "fe7d1fbe3678a7ae68428d6060d5544881caf9df12b8bf39eba16c984ea17ee5",
+      "snli:plain_text:test:6313": "78815c911aeea473df4fd0a7359845c13b4b24cd8f5a7ee5da9fb0a2ed2c2e53",
+      "snli:plain_text:test:6323": "f4dee84adc78fc7c10152d6cdc5b7b7e39d3c0d4ad01ed2e68d16f4f1ad939d1",
+      "snli:plain_text:test:6602": "5ddf639a0f9a04a5b3d86ee551275972a16cd4e8f214cbf2cbac90b8c0c3df45",
+      "snli:plain_text:test:6654": "6a5f0e3a2cb85e7a0da933b8826e1a989fd27f026f41f2caa919547a0f6c7d17",
+      "snli:plain_text:test:6712": "4f68544e3065bef3dc6c988ba425df21a534d77a84ad432b3fa0e4cd0ebd7945",
+      "snli:plain_text:test:6899": "bdb6525470fff65ea38ade5ae05048fca1f68f4be7a836cf84c02c17075911f2",
+      "snli:plain_text:test:6906": "dcedccdfd518f183022b4a7382141f182e36d7e79747fc175c1ee3ca336a5413",
+      "snli:plain_text:test:7159": "98efa512ab55d35af4fb07bbae2fc172b465ed69f3f38008dbb06fc286faeb0e",
+      "snli:plain_text:test:7201": "dd765917a6a71ab65fed4da3af3a05b78770e9ad455e894606f88660d9f6d0a5",
+      "snli:plain_text:test:7291": "59ac934bb7e6028e0fe8c9d0b0c12fbaa9a78f5804b800c6afc9b476b415b9ae",
+      "snli:plain_text:test:7311": "17bf3baba2c1429277acfb895858f6288965f87c3c924a8dd01fc244cbdd3c82",
+      "snli:plain_text:test:7392": "fa953d50952d9ab3d30ed768d548f93abae8d821a10c0085899f4a713c3cefda",
+      "snli:plain_text:test:7451": "1773bcaa8f5f406cd5b4621b7763708e4abeb69c31b520d185447e848abcdbb3",
+      "snli:plain_text:test:7477": "cd998b6dbd7c50198bc42ec7f2df57d123c7d8e3c65432cf5f47263ec8666f29",
+      "snli:plain_text:test:7482": "8af5f4a983f048bdc62b4cdacc350d42fc0a982eb7064a36e8129b75f11a6a83",
+      "snli:plain_text:test:7504": "5a8950000592bdf067f381bf5e492c4adfda9803d809d7a8e6e0c46a15a589bf",
+      "snli:plain_text:test:7626": "651c016d987df99d621b2d42c6ffd4e2a646593d8c0f697214d027955c15c83a",
+      "snli:plain_text:test:7649": "00590f5d7afbc82c581f8b0940b3eb686362423d28c3cfc8fa7c1fabf497d285",
+      "snli:plain_text:test:7744": "1fce9c90dc3b6f315fdf0850b2cfcf056e0b77888c2dfda1facde07c194f2bb7",
+      "snli:plain_text:test:7784": "e312da065d8a55d5fed68fe4a63fe6fdcf34f99e014c6a6e7bdb573eb4124868",
+      "snli:plain_text:test:7840": "3461242fbe4894804c9718f8e7b9301db2af3217c12b05ccead36064e9298b14",
+      "snli:plain_text:test:7922": "5bf7df1e5a2adeacef5699ab2b3ffcbc8102cc7c76a9d9f3cebb259dfd26cff9",
+      "snli:plain_text:test:8031": "ba850761123b3b71bb2fa31c47dd64eff1143c62483f61df0f33ac177a0b9e21",
+      "snli:plain_text:test:8108": "c46053c7789541fca8c735779b6a82096f329b1ca4dac0e86af546960a241f2e",
+      "snli:plain_text:test:8178": "00739754c202aaa779f0c594287f0cb2e0bf47effd67f5fb860362cc2526f469",
+      "snli:plain_text:test:8218": "fa964602941e63a890ed24e2db3565840b6712e58410f60e1d5a5be1860e15cd",
+      "snli:plain_text:test:8334": "6e2de0f8b4f5d97371a6c035b662b423960ab9103387876b32a488c089ee61f9",
+      "snli:plain_text:test:8709": "c5b7b3de219b3bde36a06239a1c96f58efb8cba7c686203492f8380e3a389a8a",
+      "snli:plain_text:test:8948": "3e07374f7a831b12829219548a9b5cbd4ac8180f1b7599759f7e0006f4d93090",
+      "snli:plain_text:test:9057": "767c69642e857357462ffd3ea3364f83005982035a4946a65a68b43a9cbd9830",
+      "snli:plain_text:test:9135": "e5130f891e8398243eb5d2206b2b8b42387901b49c2e40b7a3c874ee097f3821",
+      "snli:plain_text:test:9146": "ceb0ab3f14ff882ff9a9c938722a0e50bb80117a651b64d1accdd44d8c70770a",
+      "snli:plain_text:test:9326": "7bc017813d4dad710d2d6b2f6247a0b7d3206a5e85a6a5ca85f60541644dcd1c",
+      "snli:plain_text:test:9392": "c3f37ff3bb97ea6cf08beea8c1b2e91f75a376e4acbb49ebb345d6b2d3784c18",
+      "snli:plain_text:test:9396": "02dc32d6353cf6d5020a13ae32c3760840e8dac547b156e67a1748ea29d1cef2",
+      "snli:plain_text:test:9464": "b8c1f76c3a57de42f61f77d46f1966ad8b0951ff23a018669ca4710d563030b5",
+      "snli:plain_text:test:9683": "ccfd29a79a597aee9b24606fe7ce85a08d6b5d0b1f07f768486f09bc7a8eae9a",
+      "snli:plain_text:test:9736": "10af7b9ecf9b5ddd465d075d5e471a58d7d13a9ee3217083ae14a0788d6c93e0",
+      "snli:plain_text:test:9923": "ef2a38a938fcd49d3b82db109d1a7b79e78e736e3c3a05cb75de304183a830d6"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "snli:plain_text:test:44",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.37771766356076547,
+        "contradiction": 0.3229135357178639,
+        "entailment": 0.2993688007213706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:269",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.5469,
+        "entailment": 0.1797,
+        "contradiction": 0.2734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:273",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24685314685314685,
+        "contradiction": 0.37072927072927075,
+        "neutral": 0.38241758241758245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:286",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3684000399241441,
+        "neutral": 0.3626110390258509,
+        "contradiction": 0.268988921050005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:360",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3848,
+        "contradiction": 0.3047,
+        "entailment": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:427",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.4219,
+        "neutral": 0.334,
+        "entailment": 0.2441
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:441",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3242,
+        "neutral": 0.3848,
+        "entailment": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:643",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.252,
+        "neutral": 0.4238,
+        "contradiction": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:799",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3796212804328224,
+        "contradiction": 0.3150986875062619,
+        "entailment": 0.30528003206091575
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1060",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.375,
+        "contradiction": 0.3047,
+        "entailment": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1175",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.373,
+        "entailment": 0.2598,
+        "neutral": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1273",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4472552744725527,
+        "entailment": 0.20507949205079493,
+        "contradiction": 0.34766523347665235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1369",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.27098512825631305,
+        "contradiction": 0.36450743587184353,
+        "neutral": 0.36450743587184353
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1403",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2792720727927207,
+        "contradiction": 0.3437656234376562,
+        "neutral": 0.37696230376962303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1441",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3918163672654691,
+        "contradiction": 0.3255489021956088,
+        "neutral": 0.2826347305389222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1525",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2826347305389222,
+        "neutral": 0.4171656686626746,
+        "entailment": 0.3001996007984032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1780",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36913691369136914,
+        "contradiction": 0.31053105310531054,
+        "entailment": 0.3203320332033203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1975",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3222677732226777,
+        "neutral": 0.38086191380861917,
+        "entailment": 0.29687031296870314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:1983",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2344,
+        "neutral": 0.4238,
+        "contradiction": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2103",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3887,
+        "contradiction": 0.3027,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2117",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3457,
+        "neutral": 0.3633,
+        "entailment": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2127",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3945394539453945,
+        "contradiction": 0.30273027302730277,
+        "entailment": 0.30273027302730277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2209",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3091874561667168,
+        "neutral": 0.4227031359583208,
+        "entailment": 0.26810940787496246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2270",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3535,
+        "entailment": 0.2656,
+        "neutral": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2365",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.28517148285171484,
+        "contradiction": 0.33786621337866213,
+        "neutral": 0.37696230376962303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2472",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2436370895298932,
+        "contradiction": 0.3781814552350534,
+        "neutral": 0.3781814552350534
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2657",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2461,
+        "neutral": 0.4316,
+        "contradiction": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2717",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3223,
+        "neutral": 0.3965,
+        "entailment": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2745",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2642019837691614,
+        "contradiction": 0.3502655044584711,
+        "neutral": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2756",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4277,
+        "entailment": 0.2246,
+        "contradiction": 0.3477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2851",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.375,
+        "contradiction": 0.3008,
+        "neutral": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2887",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.27677412915460625,
+        "contradiction": 0.3391556043517317,
+        "neutral": 0.384070266493662
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2913",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4448551448551449,
+        "entailment": 0.21368631368631372,
+        "contradiction": 0.3414585414585415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:2996",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.4531,
+        "contradiction": 0.2676,
+        "neutral": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:3106",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.45219560878243514,
+        "entailment": 0.20079840319361275,
+        "contradiction": 0.3470059880239521
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:3231",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2637,
+        "neutral": 0.4609,
+        "entailment": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:3450",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3789,
+        "contradiction": 0.3086,
+        "entailment": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:3757",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4531453145314531,
+        "entailment": 0.21092109210921092,
+        "contradiction": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4053",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3125,
+        "neutral": 0.3945,
+        "contradiction": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4079",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3867,
+        "contradiction": 0.3203,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4229",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2305,
+        "neutral": 0.4297,
+        "contradiction": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4239",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4062,
+        "contradiction": 0.3008,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4303",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.293,
+        "neutral": 0.4004,
+        "entailment": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4536",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.25438332832381527,
+        "contradiction": 0.3639915840096183,
+        "neutral": 0.3816250876665665
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4587",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3789,
+        "contradiction": 0.3203,
+        "entailment": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4759",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3965,
+        "contradiction": 0.3047,
+        "entailment": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4822",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3809,
+        "entailment": 0.25,
+        "neutral": 0.3691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:4926",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4102,
+        "contradiction": 0.291,
+        "entailment": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5058",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3535,
+        "entailment": 0.2656,
+        "neutral": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5153",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24685314685314685,
+        "contradiction": 0.37072927072927075,
+        "neutral": 0.38241758241758245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5327",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3945,
+        "contradiction": 0.3125,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5461",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.22657734226577342,
+        "neutral": 0.45895410458954106,
+        "contradiction": 0.3144685531446855
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5546",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.334,
+        "entailment": 0.2695,
+        "neutral": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5561",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4062,
+        "contradiction": 0.293,
+        "entailment": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5625",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.37571385632702137,
+        "contradiction": 0.2974651838493137,
+        "entailment": 0.32682095982366494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5657",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2461,
+        "neutral": 0.4316,
+        "contradiction": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5755",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3906,
+        "contradiction": 0.3047,
+        "entailment": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5799",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3945,
+        "contradiction": 0.3164,
+        "entailment": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5814",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3125,
+        "neutral": 0.3945,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:5890",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3066306630663066,
+        "neutral": 0.3945394539453945,
+        "entailment": 0.2988298829882988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6061",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.31053105310531054,
+        "neutral": 0.41214121412141214,
+        "entailment": 0.2773277327732773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6313",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2656,
+        "contradiction": 0.3555,
+        "neutral": 0.3789
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6323",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3437656234376562,
+        "entailment": 0.27147285271472854,
+        "neutral": 0.3847615238476152
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6602",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24144144144144145,
+        "contradiction": 0.3851851851851852,
+        "neutral": 0.3733733733733734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6654",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.40779220779220776,
+        "neutral": 0.3492507492507492,
+        "entailment": 0.24295704295704293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6712",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2422,
+        "neutral": 0.4258,
+        "contradiction": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6899",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.37571385632702137,
+        "contradiction": 0.32682095982366494,
+        "neutral": 0.2974651838493137
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:6906",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.38866113388661133,
+        "contradiction": 0.292970702929707,
+        "entailment": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7159",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3711,
+        "contradiction": 0.3125,
+        "entailment": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7201",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.373,
+        "contradiction": 0.3086,
+        "entailment": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7291",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2422,
+        "neutral": 0.4316,
+        "contradiction": 0.3262
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7311",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2383,
+        "neutral": 0.4258,
+        "contradiction": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7392",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3594,
+        "entailment": 0.2578,
+        "neutral": 0.3828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7451",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3913827655310621,
+        "contradiction": 0.2993987975951904,
+        "entailment": 0.3092184368737475
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7477",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.38356713426853706,
+        "contradiction": 0.3033066132264529,
+        "entailment": 0.31312625250501
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7482",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.251974802519748,
+        "contradiction": 0.35936406359364065,
+        "neutral": 0.38866113388661133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7504",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.45115488451154884,
+        "entailment": 0.19728027197280273,
+        "contradiction": 0.3515648435156485
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7626",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3535,
+        "neutral": 0.3809,
+        "contradiction": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7649",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4483033932135728,
+        "entailment": 0.2183632734530938,
+        "contradiction": 0.33333333333333337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7744",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.23286573146292586,
+        "neutral": 0.42855711422845694,
+        "contradiction": 0.33857715430861723
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7784",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.432032032032032,
+        "entailment": 0.2102102102102102,
+        "contradiction": 0.35775775775775776
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7840",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.35936406359364065,
+        "entailment": 0.2636736326367363,
+        "neutral": 0.37696230376962303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:7922",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3359335933593359,
+        "entailment": 0.291029102910291,
+        "neutral": 0.373037303730373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8031",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3502655044584711,
+        "neutral": 0.38553251177236747,
+        "contradiction": 0.2642019837691614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8108",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2218997097387649,
+        "neutral": 0.4339905915323791,
+        "contradiction": 0.344109698728856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8178",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2988298829882988,
+        "neutral": 0.3945394539453945,
+        "entailment": 0.3066306630663066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8218",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.41906187624750496,
+        "contradiction": 0.2924151696606786,
+        "entailment": 0.2885229540918164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8334",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.4434,
+        "contradiction": 0.2871,
+        "neutral": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8709",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.4375,
+        "neutral": 0.3359,
+        "entailment": 0.2266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:8948",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2773277327732773,
+        "contradiction": 0.34963496349634965,
+        "neutral": 0.373037303730373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9057",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3809,
+        "contradiction": 0.3027,
+        "entailment": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9135",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.22729543410930167,
+        "neutral": 0.43121190928164654,
+        "contradiction": 0.34149265660905187
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9146",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4121,
+        "contradiction": 0.291,
+        "entailment": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9326",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.33137039624713044,
+        "entailment": 0.2748777323086136,
+        "neutral": 0.39375187144425594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9392",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3926,
+        "contradiction": 0.3203,
+        "entailment": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9396",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4414,
+        "entailment": 0.209,
+        "contradiction": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9464",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2969,
+        "neutral": 0.4004,
+        "entailment": 0.3027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9683",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.27004008016032066,
+        "contradiction": 0.33657314629258517,
+        "neutral": 0.39338677354709417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9736",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2617,
+        "contradiction": 0.3574,
+        "neutral": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "snli:plain_text:test:9923",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3527944111776447,
+        "entailment": 0.27095808383233533,
+        "neutral": 0.37624750499001997
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

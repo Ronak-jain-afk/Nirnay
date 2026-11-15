@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "spartqa-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/spartqa",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:35:13+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.29,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.38,
+    "baseline_adjusted_skill": -0.14516129032258068,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 28.042975500000466,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "spartqa:default:test:9": "2458bc2df773c211bc4cf2e86196a712ae2097abbd03e91ec00a698856dd450d",
+      "spartqa:default:test:130": "4ea7fbd38b3dd634a1ed1deb9d95200fb0e242f81c8e995ef7d31dbf3742fae1",
+      "spartqa:default:test:183": "f027420bf75cba61b1ffba7f7f63298615b041e72db992c6383b3011890811f1",
+      "spartqa:default:test:190": "0b3ed85ebafdb6f430d0d13f0b24c8d7a4e85725b22c43dbd09033466e68cbcc",
+      "spartqa:default:test:233": "6f677218948d834207dfacc12ba9422fb2844f6e9c798d235e228e05461f6ca3",
+      "spartqa:default:test:272": "3f54e1c53361f288c5cc5599b4e69a66464363c6abeb8af77ef3a1166f472082",
+      "spartqa:default:test:286": "86db7cd9c9e7c23002b7c53b538272d09673463d54aa4278f438b7e660eda7e1",
+      "spartqa:default:test:287": "8045d439b67d1d577e56ce781e25c08a75f40868b5ef9f742663fdb4e065bbcf",
+      "spartqa:default:test:359": "0fe42b3a5c9d12bcacf88431f443057a8939790059ee797540305b8ed75935e7",
+      "spartqa:default:test:362": "b21a81eb4d4173dfb1cd6aea6d83ecbe4aad9f123613468c998a6487ece730a5",
+      "spartqa:default:test:386": "3862b4ba03ba35a92063c6a0cf922a1c3005862f891d91d820819d8b9d7ce260",
+      "spartqa:default:test:388": "10e7732f77f5e1929ee6c9d0aaefb26315bc1bfbec3cf906373b8d5a6a76c6f1",
+      "spartqa:default:test:421": "5822760ffd308b9459f74cdc10ac6c9e73548df67fda8e65b4d66b44bfe1b7a6",
+      "spartqa:default:test:430": "88821dd637a4b4d84a7ee25562bb775da7e1989796a757adc30c5be6577c25a1",
+      "spartqa:default:test:453": "a4d508ef05a4f7eb7249a3549c8caa85875dd50d0f452b909a06e07ce2cf38d9",
+      "spartqa:default:test:540": "a114ae4471409bf173725e009eb55f96dbf47463e02a8b9791b683eb43d76304",
+      "spartqa:default:test:562": "f18de060f51528200be5bdddca4c55785b4abc6099ca80cd763a3c593b9bf8ef",
+      "spartqa:default:test:570": "c2657502982bce45e452b050cd9baf5df7e6674b9feb3de2dd41eb6b53b39afc",
+      "spartqa:default:test:651": "5fdebfd6d15f8b38ff13820a608ac7d13878cbb883b3298503e91274ba4298dc",
+      "spartqa:default:test:799": "000538f401c79ee291ead75ae4a9b59e5d706036ccf92e5d0b1c6b00f80942ac",
+      "spartqa:default:test:810": "d64cb26db182247db108b0886c338859f14584f1bde00b66a0e7d361dba8024c",
+      "spartqa:default:test:811": "58c8a1079f5e7ed1141181d4c6f2de3d52a498d00d4096c268b624d812888e4e",
+      "spartqa:default:test:867": "cf1432c403d0ed4f5f6af28d0c9b1cf791ca31a91c193e9218b571cb0417a1d8",
+      "spartqa:default:test:905": "b0eac024cd57ebf82ffbbc7c6723224e57a57c94dc11d9a53b69c0c1f123dca1",
+      "spartqa:default:test:919": "7246fb0781245f81d53626fed59305d3fa580b05752195082a2effd82c8e8b95",
+      "spartqa:default:test:940": "a1f523093fe4a664b31ba745638b48d942baa20866fc10a9ee92bf5bafea3d08",
+      "spartqa:default:test:953": "caaca1ff7e1f077eea43f756947702d81bd87fc85e0419a23fb9aa1d5d791ca3",
+      "spartqa:default:test:979": "b70fabad77d13fea21511459def9f0141d500f63a552b8d034db6cc40089be75",
+      "spartqa:default:test:1044": "47df37960da9d2c56c9fb619c7b121f48dca465b7df12f9dbb3edd737b02bc28",
+      "spartqa:default:test:1073": "af319455802d016994b4e51b8b1c1f05597adbf79b71781801b423e5e1bd467f",
+      "spartqa:default:test:1087": "5e2067c76b4df374940f44f4f8bddd218584498eeadf346c595b401f054f06de",
+      "spartqa:default:test:1093": "ab9a3cb4c5f6240ce5a36a9eb85a8c02b87c2bf917eb04cfbfa9fbb77210b7cf",
+      "spartqa:default:test:1104": "f482d92af14cae28a9b004e856451ea740836f09467e9079f300921cf39b30fe",
+      "spartqa:default:test:1109": "8fda0faef11d269ef45674041231a0abc494b0eef6e8effb66a8318073d4fd76",
+      "spartqa:default:test:1110": "0afae702368881dfc3234218f4fc45ef83567499c5427d1701828816b4b3216d",
+      "spartqa:default:test:1156": "906fbd05ddf0956171b0d28a5590b4b745950ebd657a7f40a2e228f992489c67",
+      "spartqa:default:test:1169": "ad30d29bd81b56ce75fd23427eb1d1d61eb297729616b44f43205274bdb46093",
+      "spartqa:default:test:1194": "18ca9a40bb89e16db84edc0abd105fba409b291fc357eb8a8098d564c2d3874a",
+      "spartqa:default:test:1339": "85fc0eae18978884bdd59cd5d955d0a10c9465e691b959c6e5b5cab07d0943e6",
+      "spartqa:default:test:1403": "532375f545444ac8ef8e79b6f9ab60ecd5f60b471465ec9013e7141386c49dfb",
+      "spartqa:default:test:1411": "78838338476649bad63530ff51244250ccef098cfaedfc018fe062932b14c179",
+      "spartqa:default:test:1414": "22693cc23d5828201b4115d40052e23a4f2e9ef5b0b978e52b953b748f6af971",
+      "spartqa:default:test:1444": "6eda1de37aea0053d30ee4a2a26996d7632a296a339b8367853c653e3544e57b",
+      "spartqa:default:test:1451": "8f9f214724e449bf6b426905a7fab27c8419626de5bd2fd85822e893e8ce725f",
+      "spartqa:default:test:1478": "7cd6d3a2a9bbc3df59ee80c4639e1070444b782f14fe40324ee3ee94d41c6497",
+      "spartqa:default:test:1484": "4ad7cc84c6f0a86f2b0e7ff0ee474c3b74143b5ec07ff967662798b9425de117",
+      "spartqa:default:test:1493": "d519605c3309fce586060d5f4c57621f11f4b16d8df6124f7be8d5930611b4af",
+      "spartqa:default:test:1614": "8ef7d992f7b8be78955a87a9fef4aa57e69bc10a78b5bda2f8df9ee78b596167",
+      "spartqa:default:test:1652": "bb09b87b0af0bb0c1fb3acafe74bc0654428397d07c9253e92f9bfe84853238d",
+      "spartqa:default:test:1662": "d1e3bda0fc3496cb04211b9615275f545f8284b83edfc4c12394241f78918ab3",
+      "spartqa:default:test:1674": "39ba529c0476482152684eb9cc44d304ddc622c6bc7fe89e90dacae50f82067f",
+      "spartqa:default:test:1675": "add478ba3d1350fc71a273853fb55ea2eaf1963ddf1d18385eeb907c809d71ed",
+      "spartqa:default:test:1757": "44a765c2a4c34e001fa37d646f0cd60f148f890222d2a2b6aedffb1d66fe058b",
+      "spartqa:default:test:1872": "b9e8d208cf5353c3d00f01444300fc0479659fe76a9dfcaf33801039c84640bf",
+      "spartqa:default:test:1890": "b5659ecb56e6ceb6b3ac8fd088bdd4fe85e7e46290dd6274b415427de58ea8ee",
+      "spartqa:default:test:1897": "86fc042484210dccaabee99962aa4f0cf7396ba2535551eb7e9021408a6e1db0",
+      "spartqa:default:test:1932": "65490893b271f881f59535809e49af95b071fd297fd2160c082907bad6d4f961",
+      "spartqa:default:test:1949": "baa559d67d483016828c74ea777852baaf2a7cab1f4a01a4c6fc0cae4cc2e7f7",
+      "spartqa:default:test:2048": "a6388d7a714396490ddd419e1a535d8fe8d978ae1a4a943b0f17fb8f39e539da",
+      "spartqa:default:test:2066": "aa9bf88e139a1ce65967993475e285117b7ae31475d2d94ace093290affeff3f",
+      "spartqa:default:test:2086": "fd44d1b88c974588ece64bbbf21889254c5ac3bbb2630dc5b73881cc9c07bdc9",
+      "spartqa:default:test:2137": "839e53372a012ae7e4b3c2ac6a89080ffd1af39835c08e7be7f1ab2520f05bc0",
+      "spartqa:default:test:2143": "15c673d1a8a4e8c53b3ff1b5948b762f5d0fae25dbd24cda22d7a5dbc8d1fa35",
+      "spartqa:default:test:2173": "4ffe75215a4a3ec16c011be99f9b939af2f5f97389ee74a90ded7a4a7f5420bd",
+      "spartqa:default:test:2174": "399cfc446a54c32c84e117e6a8400e26ed23f6fee27239ee98ebacbaac347f9f",
+      "spartqa:default:test:2194": "37886bb63694ee1e0ec20ee990e33c08a8678275a71f8ce6043ff991ab08c8c8",
+      "spartqa:default:test:2252": "4c59fbf3e28555e6c27cef1fbf25072822049525ed3febcf956be12078eca0df",
+      "spartqa:default:test:2371": "a442150c536baab25dcf7e3fa6c497b32cbd1d16c30eaad45244e3c990771e1b",
+      "spartqa:default:test:2388": "6f722d620ba45f8d65fdacfadb231f656a059d46aa3f7ffb81a5a951ce884421",
+      "spartqa:default:test:2427": "983b03309acb62815f64f01c5f009b77ad200a886d1e732e3b6465c26f88b9f4",
+      "spartqa:default:test:2447": "a93b1d16f49e270bbdc72fb78104d36ee5397f766f06e344ed3bcbded6ee1273",
+      "spartqa:default:test:2511": "0ee7fbf36649820b142b24ce15cf27aef65d6817b2cc04fa80ba7009d45c83c7",
+      "spartqa:default:test:2541": "11d3f730d13a14fd125b0be8d9802c7ae935ebf18444aafc6c6c86bab50223eb",
+      "spartqa:default:test:2585": "54bb11934a1c613a20deb48c189a374665c5426ff265e843fd9cc5abbc5adecf",
+      "spartqa:default:test:2653": "5fa6d3b626c6cf1ba134d5a213403c7fcf708e91206a525a51d9fe251e6f5726",
+      "spartqa:default:test:2681": "31c5f0e46d10658fa0c1cb2bba5ae11b057ac96da1f1143cd66285a30419a822",
+      "spartqa:default:test:2696": "625e0d3d48b9f11acbddd99737983163c74311dfdee4e856195465833f01b713",
+      "spartqa:default:test:2728": "096cf81472331a08659e4fb972c3fadaaf3ddd32e30746d1690742848e17823d",
+      "spartqa:default:test:2735": "077b23878d9c7c81fc4f65446e294fda4009cdf091bb34bfb1a37a33b726dfaf",
+      "spartqa:default:test:2858": "dcb21d916af20cd17ba9440af4354b5dbf0ba2c36eafae3143a4734e423e0bea",
+      "spartqa:default:test:2913": "5d996e21d6412c05d2da0df5363b8c3c6c5036dbf2cc329073fcb60ac82987d3",
+      "spartqa:default:test:2962": "a76391a838ad89e90cbac8eb3f97a96530d052b7d0b62f3a1e769e2b15574a32",
+      "spartqa:default:test:2965": "c3cdf8b01d6ef96b8a1cf12e02d6ec9de24c144138d05133827082d27aa3cdd8",
+      "spartqa:default:test:3010": "a6194e2e96ee4fcc34f0a03144c76dfdbccd3da627c01f6935182f50c252904b",
+      "spartqa:default:test:3165": "95a9779b7fbff5da0bd02bb3e51c6052b456eb4601840f1281b674a1a3eac3da",
+      "spartqa:default:test:3173": "edc19145806e2815a9b38e253d64113406c8c710ddd800b75f0f9834ef7bee32",
+      "spartqa:default:test:3234": "09d44a282b0c8ce6da2261d1893d17c29e3057bf41407f76049ba5ae292a7ac3",
+      "spartqa:default:test:3281": "ccb2958ae4fccdb940a339189385ea263a9ed7c46fb71e8b4a53927f5725c640",
+      "spartqa:default:test:3292": "023e4cc11939885add1ca90ae6cacd703e28c174ace477d2530e6d26a91efb91",
+      "spartqa:default:test:3308": "94ed4332f2542e6be20ef22800988538f337f8401df7627d2a7e7462558e7339",
+      "spartqa:default:test:3325": "0d10e8abe84761ae429f2e815215cfabbd69fd8b563f8454c556e14bfd3df449",
+      "spartqa:default:test:3363": "6a0d69d0694fcc656180c9cf147875e3d62d555f9841a96011c3bc7a9747f3b1",
+      "spartqa:default:test:3378": "4b0cfdae7c9b20bc0b1cb5a8759eee27d3cdecf4802615d89fd706508dd7302a",
+      "spartqa:default:test:3406": "f8af902f4e3a827ed3041bbcde7e604d8a226b40b1d2654348b2f8ecd618d61c",
+      "spartqa:default:test:3413": "06650c2f4be694204c62f0736a320f2368210549787141bf82712cfb89c9f1cc",
+      "spartqa:default:test:3466": "0fb55f1e9a5fe64f2df6fcb78dcf0e2ae67bf63b30fee01d10b016d39b1e5642",
+      "spartqa:default:test:3478": "c2ed55738857a5be7a2a11429c3b0bdfb31f1c5e265cc8b49d3d6b69d3ef1bb1",
+      "spartqa:default:test:3514": "d1c9c62b0fd46dff3f105ddb5552f8332a2f05260c3a928fc87f3f1a326756a1",
+      "spartqa:default:test:3523": "a158c208b1dbad7ae44cf4021d250ae89de065eb97ccd263852d1be7e7686c32",
+      "spartqa:default:test:3592": "8271c5f3c7686eda829e5b1a69870f78927afcde9bd72bab34c1b40d9e867303"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "spartqa:default:test:9",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1777,
+        "3": 0.0967,
+        "0": 0.1162,
+        "1": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:130",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.17595836252627367,
+        "2": 0.15053548193374036,
+        "3": 0.07917125412871585,
+        "0": 0.5943349014112701
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:183",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.26939224310275894,
+        "2": 0.11375449820071971,
+        "1": 0.18152738904438226,
+        "0": 0.43532586965213915
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:190",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3714342908617756,
+        "2": 0.18967070363326996,
+        "0": 0.2717445701131018,
+        "3": 0.16715043539185268
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:233",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.30485242621310654,
+        "1": 0.3341670835417709,
+        "0": 0.2950475237618809,
+        "3": 0.06593296648324162
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:272",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.49390243902439024,
+        "1": 0.29478208716513393,
+        "3": 0.0697720911635346,
+        "2": 0.14154338264694125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:286",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2518740629685158,
+        "1": 0.503648175912044,
+        "0": 0.09415292353823089,
+        "3": 0.1503248375812094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:287",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3831831831831832,
+        "3": 0.16426426426426427,
+        "0": 0.25415415415415415,
+        "2": 0.19839839839839837
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:359",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.27095808383233533,
+        "1": 0.10429141716566866,
+        "3": 0.0594810379241517,
+        "0": 0.5652694610778444
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:362",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.5388305847076462,
+        "3": 0.11464267866066967,
+        "1": 0.24697651174412794,
+        "2": 0.09955022488755622
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:386",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4565434565434565,
+        "2": 0.17072927072927072,
+        "0": 0.2556443556443556,
+        "3": 0.11708291708291707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:388",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.29692969296929694,
+        "2": 0.23142314231423142,
+        "3": 0.1611161116111611,
+        "0": 0.31053105310531054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:421",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.27567567567567564,
+        "2": 0.2834834834834835,
+        "3": 0.12412412412412413,
+        "1": 0.31671671671671675
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:430",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.30122171039455237,
+        "2": 0.09343080312437411,
+        "3": 0.042058882435409575,
+        "0": 0.5632886040456639
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:453",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.2773,
+        "3": 0.0889,
+        "2": 0.1143,
+        "0": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:540",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.431815907953977,
+        "1": 0.3478739369684843,
+        "2": 0.10745372686343171,
+        "3": 0.11285642821410706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:562",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.287071292870713,
+        "2": 0.22657734226577342,
+        "0": 0.25587441255874416,
+        "3": 0.23047695230476953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:570",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2732906837265094,
+        "1": 0.320171931227509,
+        "2": 0.11955217912834866,
+        "0": 0.286985205917633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:651",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3688786727963222,
+        "2": 0.11463122126723967,
+        "3": 0.05586648011193284,
+        "0": 0.4606236258245053
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:799",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.3258415742683049,
+        "1": 0.18929177904305267,
+        "0": 0.3375287184097493,
+        "2": 0.14733792827889322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:810",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2601902854281422,
+        "0": 0.3246870305458187,
+        "1": 0.34031046569854784,
+        "2": 0.07481221832749124
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:811",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.43706293706293703,
+        "2": 0.14145854145854145,
+        "1": 0.32977022977022974,
+        "3": 0.0917082917082917
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:867",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.3379,
+        "1": 0.3828,
+        "3": 0.0742,
+        "2": 0.2051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:905",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1795204795204795,
+        "0": 0.11948051948051946,
+        "3": 0.07272727272727272,
+        "1": 0.6282717282717282
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:919",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2950475237618809,
+        "1": 0.35177588794397197,
+        "0": 0.2335167583791896,
+        "3": 0.11965982991495747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:940",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.22718194527661273,
+        "3": 0.09017375674056322,
+        "1": 0.23796684641501897,
+        "0": 0.444677451567805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:953",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.31234382808595706,
+        "1": 0.19230384807596201,
+        "0": 0.42558720639680164,
+        "3": 0.06976511744127936
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:979",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4609,
+        "2": 0.1895,
+        "0": 0.1924,
+        "3": 0.1572
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1044",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4924462231115558,
+        "3": 0.09134567283641822,
+        "2": 0.07813906953476739,
+        "1": 0.3380690345172586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1073",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.3286916449609297,
+        "1": 0.5243438188739732,
+        "3": 0.04177519535163294,
+        "2": 0.10518934081346423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1087",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.40080080080080077,
+        "3": 0.1046046046046046,
+        "2": 0.15245245245245245,
+        "0": 0.3421421421421421
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1093",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.39489489489489493,
+        "3": 0.174974974974975,
+        "0": 0.2082082082082082,
+        "2": 0.22192192192192192
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1104",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2522270043038735,
+        "1": 0.4163747372635372,
+        "0": 0.14372935642077872,
+        "2": 0.18766890201181063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1109",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2575681886302328,
+        "0": 0.4975522030172845,
+        "3": 0.06733939454490959,
+        "1": 0.1775402138075732
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1110",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2775497948153338,
+        "0": 0.4105695125613052,
+        "3": 0.08507656891202083,
+        "1": 0.2268041237113402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1156",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.39063906390639064,
+        "0": 0.23632363236323634,
+        "3": 0.125012501250125,
+        "1": 0.24802480248024802
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1169",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2029985007496252,
+        "0": 0.16301849075462269,
+        "3": 0.09905047476261869,
+        "1": 0.5349325337331334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1194",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3338330834582709,
+        "3": 0.10834582708645678,
+        "1": 0.10294852573713144,
+        "0": 0.45487256371814094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1339",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.3393249450768923,
+        "0": 0.3842620331535849,
+        "2": 0.11164369882164968,
+        "1": 0.16476932294787297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1403",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4219,
+        "3": 0.127,
+        "0": 0.2695,
+        "2": 0.1816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1411",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.25587441255874416,
+        "1": 0.19528047195280474,
+        "0": 0.455054494550545,
+        "3": 0.0937906209379062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1414",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.36311844077961025,
+        "0": 0.2869565217391305,
+        "3": 0.1088455772113943,
+        "1": 0.24107946026986507
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1444",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.34342223554090495,
+        "3": 0.1365497952252522,
+        "2": 0.1434422135650784,
+        "0": 0.37658575566876434
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1451",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.29675162418790607,
+        "1": 0.35332333833083457,
+        "3": 0.11464267866066967,
+        "2": 0.2352823588205897
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1478",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4333833083458271,
+        "0": 0.22158920539730137,
+        "3": 0.09805097451274364,
+        "2": 0.24697651174412794
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1484",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.24765328540043943,
+        "2": 0.1452965847813062,
+        "3": 0.05702017175953666,
+        "0": 0.5500299580587178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1493",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.49824912456228115,
+        "3": 0.09334667333666834,
+        "2": 0.087943971985993,
+        "1": 0.32046023011505753
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1614",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.32977022977022974,
+        "3": 0.16583416583416583,
+        "0": 0.2487512487512487,
+        "2": 0.2556443556443556
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1652",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.263831915957979,
+        "3": 0.11525762881440721,
+        "2": 0.12066033016508254,
+        "0": 0.5002501250625313
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1662",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.24380743108270075,
+        "0": 0.3082301238513783,
+        "3": 0.05783060327606871,
+        "1": 0.39013184178985216
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1674",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.20117988201179882,
+        "0": 0.5546445355464453,
+        "2": 0.125987401259874,
+        "3": 0.11818818118188182
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1675",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2601902854281422,
+        "1": 0.28162243365047573,
+        "0": 0.37356034051076614,
+        "3": 0.08462694041061593
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1757",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2944877171959257,
+        "3": 0.061713600958657876,
+        "0": 0.05871779508687836,
+        "1": 0.585080886758538
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1872",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.24107946026986507,
+        "1": 0.2576711644177911,
+        "0": 0.39240379810094955,
+        "3": 0.1088455772113943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1890",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4805,
+        "2": 0.1787,
+        "1": 0.125,
+        "3": 0.2158
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1897",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.22859143657462988,
+        "0": 0.25990396158463386,
+        "3": 0.12264905962384955,
+        "1": 0.3888555422168868
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1932",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2306153076538269,
+        "1": 0.32436218109054527,
+        "2": 0.09914957478739368,
+        "0": 0.3458729364682341
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:1949",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2517482517482518,
+        "0": 0.28681318681318685,
+        "1": 0.31998001998002,
+        "3": 0.14145854145854148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2048",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.35585585585585583,
+        "3": 0.17887887887887888,
+        "0": 0.21991991991991994,
+        "2": 0.24534534534534536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2066",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.24534534534534536,
+        "0": 0.18178178178178178,
+        "1": 0.3792792792792793,
+        "2": 0.19359359359359357
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2086",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.3102517985611511,
+        "2": 0.22731814548361315,
+        "1": 0.3063549160671463,
+        "3": 0.15607513988808955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2137",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2176911544227886,
+        "0": 0.12393803098450776,
+        "3": 0.09225387306346826,
+        "1": 0.5661169415292354
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2143",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.455054494550545,
+        "3": 0.13478652134786523,
+        "1": 0.24317568243175683,
+        "2": 0.16698330166983302
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2173",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.24775224775224777,
+        "1": 0.2224775224775225,
+        "2": 0.14535464535464537,
+        "0": 0.38441558441558443
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2174",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3398,
+        "3": 0.1729,
+        "0": 0.2715,
+        "2": 0.2158
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2194",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.1845815418458154,
+        "0": 0.47265273472652736,
+        "2": 0.126987301269873,
+        "1": 0.21577842215778423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2252",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.241982216005595,
+        "3": 0.1024078329503447,
+        "0": 0.28684184234189236,
+        "1": 0.3687681087021681
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2371",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.3226226226226226,
+        "3": 0.17007007007007008,
+        "2": 0.15735735735735737,
+        "1": 0.34994994994995
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2388",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2459770114942529,
+        "3": 0.1215392303848076,
+        "0": 0.26936531734132935,
+        "1": 0.36311844077961025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2427",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2557465520687588,
+        "1": 0.4216470117929243,
+        "3": 0.0971417149710174,
+        "0": 0.22546472116729963
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2447",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2969,
+        "0": 0.2461,
+        "1": 0.3164,
+        "2": 0.1406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2511",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.36220551378446114,
+        "0": 0.36220551378446114,
+        "3": 0.10716791979949873,
+        "2": 0.16842105263157894
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2541",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.39446055394460555,
+        "0": 0.25587441255874416,
+        "3": 0.0937906209379062,
+        "1": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2585",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3828,
+        "0": 0.3418,
+        "2": 0.1475,
+        "3": 0.1279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2653",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.279160419790105,
+        "0": 0.263568215892054,
+        "1": 0.40799600199900055,
+        "3": 0.04927536231884058
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2681",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.26520219670494255,
+        "0": 0.47978032950574134,
+        "2": 0.13749375936095853,
+        "1": 0.11752371442835746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2696",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.24244244244244245,
+        "0": 0.261961961961962,
+        "1": 0.3011011011011011,
+        "2": 0.1944944944944945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2728",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2451,
+        "1": 0.3789,
+        "2": 0.0889,
+        "0": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2735",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4780697372364872,
+        "0": 0.15316215406134479,
+        "3": 0.09561394744729744,
+        "2": 0.27315416125487063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2858",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2637,
+        "3": 0.1367,
+        "0": 0.3047,
+        "1": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2913",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.218018018018018,
+        "0": 0.2316316316316316,
+        "1": 0.42622622622622625,
+        "3": 0.12412412412412413
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2962",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2334,
+        "2": 0.2295,
+        "1": 0.2559,
+        "0": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:2965",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.16087477531455963,
+        "2": 0.10874775314559618,
+        "0": 0.14919113241461956,
+        "1": 0.5811863391252248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3010",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.25225225225225223,
+        "2": 0.30300300300300304,
+        "3": 0.14564564564564564,
+        "0": 0.2990990990990991
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3165",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2536463536463537,
+        "2": 0.29660339660339663,
+        "1": 0.2497502497502498,
+        "0": 0.2
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3173",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4787393696848424,
+        "0": 0.34977488744372187,
+        "2": 0.08454227113556778,
+        "3": 0.08694347173586793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3234",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.2754,
+        "1": 0.3281,
+        "2": 0.2012,
+        "3": 0.1953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3281",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3067533766883442,
+        "0": 0.3478739369684843,
+        "3": 0.06983491745872937,
+        "1": 0.2755377688844422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3292",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3337997201678993,
+        "0": 0.22546472116729963,
+        "1": 0.34359384369378376,
+        "3": 0.0971417149710174
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3308",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1377,
+        "0": 0.625,
+        "1": 0.0977,
+        "3": 0.1396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3325",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3434565434565435,
+        "1": 0.17562437562437566,
+        "3": 0.07902097902097903,
+        "0": 0.40189810189810193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3363",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4805,
+        "3": 0.1289,
+        "2": 0.1533,
+        "0": 0.2373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3378",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.23753753753753754,
+        "3": 0.12512512512512514,
+        "0": 0.3089089089089089,
+        "1": 0.32842842842842845
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3406",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.18495140767458168,
+        "0": 0.5009518084360285,
+        "2": 0.15559563170023044,
+        "3": 0.15850115218915942
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3413",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.27512487512487516,
+        "1": 0.3258741258741259,
+        "0": 0.21368631368631372,
+        "2": 0.18531468531468534
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3466",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.5886815051402335,
+        "1": 0.23006288052699872,
+        "3": 0.04381674817846092,
+        "2": 0.1374388661543068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3478",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.31237504998000803,
+        "2": 0.08536585365853659,
+        "3": 0.03608556577369053,
+        "1": 0.566173530587765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3514",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.34031046569854784,
+        "1": 0.34031046569854784,
+        "3": 0.10225338007010516,
+        "0": 0.2171256885327992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3523",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.2402,
+        "1": 0.2324,
+        "0": 0.2676,
+        "2": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "spartqa:default:test:3592",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.542782886845262,
+        "1": 0.20201919232307078,
+        "3": 0.08536585365853659,
+        "2": 0.16983206717313076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

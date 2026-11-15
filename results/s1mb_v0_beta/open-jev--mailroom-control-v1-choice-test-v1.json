@@ -1,0 +1,328 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--mailroom-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__mailroom-control-v1",
+    "split": "test",
+    "case_count": 15,
+    "decision_count": 15,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:17:49+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 15,
+    "expected": 15,
+    "succeeded": 15,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.6666666666666666,
+    "uniform_accuracy_baseline": 0.15555555555555553,
+    "fixed_answer_accuracy_baseline": 0.2,
+    "baseline_adjusted_skill": 0.5833333333333333,
+    "baseline_adjusted_score": 0.5833333333333333
+  },
+  "elapsed_seconds": 4.493726299995615,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:en:invoice:reordered:category": "f9b694cdde115972b6d5b6e5e416b507a95395ac962ccb80ecd3c21d5c8c594b",
+      "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:invoice:reordered:category": "6f6fd38006bdb4d9538a36f0a5f6ffe74a5608f610f7250d41168e2b6899ff08",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:invoice:insurance_added:category": "4e5dc89ae369612b9c7c8fca33a4973b8edde675946ab04b465682312a86b35c",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:relay_invoice:base:category": "1f4ba272382c5039acc7a18989872a65d786b1063a478fc724835c0ad0e65996",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:invoice:reordered:category": "01fab838c0ddaeae6e4c49ee44af0296de096a1dae113e44a2517def6cf96898",
+      "open_jev__mailroom-control-v1:mailroom:4807be5134a8:en:invoice:insurance_added:category": "838540da9a89d0f358b812c41657c4833d9303392c615cef25d8a73cdcfd1de3",
+      "open_jev__mailroom-control-v1:mailroom:678e97278a5b:en:invoice:insurance_added:category": "13af4363f53343a2affe5b84c336f6b28d1678350bf136dc5a1ba8253bec20ea",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:zh:invoice:base:category": "14585e892f921464b12676456885d01d385db4f9474453757797d4e379d488db",
+      "open_jev__mailroom-control-v1:mailroom:453bc1515a6c:en:invoice:insurance_added:category": "937508cb7ab7bfdb10fd9cb98a073dd88c5b31e963a9dcf9cf374d7948b38d47",
+      "open_jev__mailroom-control-v1:mailroom:2bdc642c293f:en:invoice:insurance_added:category": "8e60dcf973eb061bd10cc01a657c3108ce22e40b0cbcbd31e146fc7cfb07c512",
+      "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:en:invoice:reordered:category": "819759daedabe74cce73084913d65aca3def5322e71d18c45377492bb034387d",
+      "open_jev__mailroom-control-v1:mailroom:6614de14e862:en:invoice:reordered:category": "86a80a2da4113f65d5f5ff1cf8bd815c7dcb19e6853259483548c42abd348d1f",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:en:invoice:insurance_added:category": "e5ab6d9e41e8a948b9774b290dc3c719b5eed849dce8f661df3d1a80c396c7f7",
+      "open_jev__mailroom-control-v1:mailroom:3d63fc56ac8a:en:invoice:reordered:category": "2703b3bcc849b9e41c52ca4c9eda56c82ccb4675dbefc0dedd93cb129b61db68",
+      "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:en:invoice:insurance_added:category": "1f1eb46925ad3f9125da6e4fa173db431bb74aff562dc3c21a6b3d4187104827"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 1920,
+      "output_tokens": 15,
+      "requests": 15,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.1943,
+        "option_1": 0.1177,
+        "option_2": 0.0933,
+        "option_3": 0.4375,
+        "option_4": 0.0669,
+        "option_5": 0.0903
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.321978021978022,
+        "option_1": 0.18931068931068934,
+        "option_2": 0.09800199800199802,
+        "option_3": 0.14435564435564435,
+        "option_4": 0.12977022977022978,
+        "option_5": 0.11658341658341659
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.39212944466640026,
+        "option_1": 0.0648222133439872,
+        "option_2": 0.325809029165002,
+        "option_3": 0.07850579304834199,
+        "option_4": 0.07950459448661605,
+        "option_5": 0.05922892528965241,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:relay_invoice:base:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.23996003996003998,
+        "option_1": 0.07662337662337664,
+        "option_2": 0.29850149850149854,
+        "option_3": 0.13856143856143857,
+        "option_4": 0.1434565434565435,
+        "option_5": 0.1028971028971029
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.23253952371422854,
+        "option_1": 0.08545127076245748,
+        "option_2": 0.19831899139483689,
+        "option_3": 0.0840504302581549,
+        "option_4": 0.3381028617170302,
+        "option_5": 0.06153692215329198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4807be5134a8:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.06646646646646646,
+        "option_1": 0.09089089089089089,
+        "option_2": 0.07527527527527528,
+        "option_3": 0.26586586586586586,
+        "option_4": 0.12612612612612611,
+        "option_5": 0.37537537537537535,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:678e97278a5b:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.1377,
+        "option_1": 0.1211,
+        "option_2": 0.2129,
+        "option_3": 0.2305,
+        "option_4": 0.2158,
+        "option_5": 0.082,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:zh:invoice:base:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.08790879087908791,
+        "option_1": 0.1465146514651465,
+        "option_2": 0.104010401040104,
+        "option_3": 0.40624062406240624,
+        "option_4": 0.1318131813181318,
+        "option_5": 0.12351235123512351
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:453bc1515a6c:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.14664664664664664,
+        "option_1": 0.47897897897897895,
+        "option_2": 0.06016016016016016,
+        "option_3": 0.17887887887887888,
+        "option_4": 0.07817817817817818,
+        "option_5": 0.057157157157157155,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:2bdc642c293f:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.14727908137793308,
+        "option_1": 0.19500748876684973,
+        "option_2": 0.07408886669995007,
+        "option_3": 0.43884173739390914,
+        "option_4": 0.090664003994009,
+        "option_5": 0.054118821767348974,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.29891956782713086,
+        "option_1": 0.10994397759103641,
+        "option_2": 0.3087234893957583,
+        "option_3": 0.09573829531812723,
+        "option_4": 0.10994397759103641,
+        "option_5": 0.07673069227691076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:6614de14e862:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.3121878121878122,
+        "option_1": 0.0966033966033966,
+        "option_2": 0.14245754245754247,
+        "option_3": 0.16973026973026975,
+        "option_4": 0.13856143856143857,
+        "option_5": 0.14045954045954048
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.36538269134567286,
+        "option_1": 0.08404202101050526,
+        "option_2": 0.1426713356678339,
+        "option_3": 0.22181090545272636,
+        "option_4": 0.09814907453726864,
+        "option_5": 0.08794397198599299,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:3d63fc56ac8a:en:invoice:reordered:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.3586826347305389,
+        "option_1": 0.09061876247504991,
+        "option_2": 0.13842315369261476,
+        "option_3": 0.14910179640718563,
+        "option_4": 0.16666666666666669,
+        "option_5": 0.09650698602794411
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:en:invoice:insurance_added:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.1162,
+        "option_1": 0.1426,
+        "option_2": 0.1108,
+        "option_3": 0.4883,
+        "option_4": 0.0693,
+        "option_5": 0.0728,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

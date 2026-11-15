@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "canttalk-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/canttalk",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:45:50+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.24743033300000014,
+    "accuracy": 0.52,
+    "positive_recall": 0.08,
+    "specificity": 0.96,
+    "precision": 0.6666666666666666,
+    "balanced_accuracy": 0.52,
+    "f1": 0.14285714285714285,
+    "true_positive": 4.0,
+    "false_positive": 2.0,
+    "false_negative": 46.0,
+    "true_negative": 48.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.010278667999999436,
+    "baseline_adjusted_skill": 0.040000000000000036,
+    "baseline_adjusted_score": 0.040000000000000036
+  },
+  "elapsed_seconds": 20.23097499999858,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "canttalk:mixtral:test:3": "4edc3060e48826ebaf4ff26e0a034a5c43716dd285a5525e941737f975b13fa2",
+      "canttalk:mixtral:test:15": "4eaadf6abf337400dcd7fcbc4f0ef36135fdd7eb7fa1110773b509204febc2ca",
+      "canttalk:mixtral:test:17": "606c90a0a4234ba861cfd36ec9269b91d0cfa22ce17c03f0b51d5798c1a83449",
+      "canttalk:mixtral:test:20": "3abf33d246ac9abb078ec352cd97a3799558665f850d194586553c1e694f7986",
+      "canttalk:mixtral:test:22": "7b348af9c36cc1f483657e0d36a616e19166023153d6df4d80196f0f027fcf20",
+      "canttalk:mixtral:test:23": "bd1f4802cac55893909397ec2f7d117e0fc75af33dab49a54bb0ea5e792d3c86",
+      "canttalk:mixtral:test:25": "cd42f605daf215e5ef03491faa2773207a6eeede7b9f249900214450d2a1beb9",
+      "canttalk:mixtral:test:26": "a5ad92eb27814492a7adf85da6b9396e037b9de6f973f98bf97f6c3277b92bc8",
+      "canttalk:mixtral:test:32": "648b62443d8c250431b08fa7ac336235be6d8ebfe8582a843f1e6b799c2bf087",
+      "canttalk:mixtral:test:33": "a91c9e156e29793b5fa17759f78c6ba5bf82e66d3f1767a0bf19633aa1a61a9c",
+      "canttalk:mixtral:test:37": "20506c14a2366b99f79c44642c26d81aacaf2e3238cb16de814ae715a89fc6bd",
+      "canttalk:mixtral:test:42": "3a3f2bb97846c047d71264c925316da4665e6b408065e82f3c3c62a8bfc20209",
+      "canttalk:mixtral:test:46": "ff043649d5ecd754a734bc3554f888e463e6b5506b7dff941fae5ba556ff0110",
+      "canttalk:mixtral:test:47": "f46d162983f1061e616744eb9ade95a1f69ede6aad17f4c04bd88f9943f1f0d2",
+      "canttalk:mixtral:test:53": "993fbe25119a8b8a75044f84ae7ceaf54085eeed9b908fdc6a662bce08e22fe2",
+      "canttalk:mixtral:test:54": "12417c1846a8bc50f73d5fbd09673e4d9f14c2932c82f5065236d9981028d086",
+      "canttalk:mixtral:test:57": "b6d3c8d94b508f1fb15a16d962a1a20f3c4070ed047b13485b21e666896241fa",
+      "canttalk:mixtral:test:63": "1c9a0c92fa0ae6425609f10248e737b8c0ad78e5774ff7c533e2827cface9532",
+      "canttalk:mixtral:test:64": "4e8ea10b05ed7a66d1204c2950551ac33b9e42b92f5e2cf3de5ecd087f7d5abe",
+      "canttalk:mixtral:test:68": "85b073c1a94297faaa9ad480a9e130e4317e619189bfec24f791ba51cba23689",
+      "canttalk:mixtral:test:70": "8767b27fa6d40371e75c51bc6e2752772916135ac73f298a79359257a0a2309e",
+      "canttalk:mixtral:test:81": "f0319fc46b5628703ca49644aa1708ef4406e8ed1aea54177918f2d4731fd1fc",
+      "canttalk:mixtral:test:82": "8275ba0abebe5303b4ddca468db148d8919c405c8056a2a3694734ee16e5fb87",
+      "canttalk:mixtral:test:84": "aade03af03307789e694e23b7659c5ce66216e3c2c73a47c5d78e26dc914cdee",
+      "canttalk:mixtral:test:85": "a5bc9f079641e4940ec8be2535b7fc181a3f6d12dfbd02771891739f4cd4ebbb",
+      "canttalk:mixtral:test:86": "3ba0843f12383de56dc34e885881d00110a428e1195010d8fe9cc0560d79550a",
+      "canttalk:mixtral:test:89": "1bbfebc54d0c4b6753c8d597a5d7549e53ce8fddf2b312ff72c16514c380f660",
+      "canttalk:mixtral:test:90": "3a620fe638240da467c2dad173162e147acb3e8bcfdc15ea8b8d8ea43901da27",
+      "canttalk:mixtral:test:93": "bd2686165e6a884bd981b983d6ebc434330f6662bc9be2e9e96622fc3e01c125",
+      "canttalk:mixtral:test:95": "df24c876485836a13879740f0bddb706c341eaad1327a2cdc65f8954e8966e65",
+      "canttalk:mixtral:test:101": "6ed13436252e99f172690becf373a2f227fdbef9d09ab4576dcdaddadf73f504",
+      "canttalk:mixtral:test:102": "0c9629777fc20dbd9093024ada7f33b689cc8f344fa8db7a138a391a54a8ea8a",
+      "canttalk:mixtral:test:109": "04ec8ca5a9db5de2eb83e198cffe389c62ab9924cd6b29eb1644af0fc4c171a9",
+      "canttalk:mixtral:test:113": "72868201f356d1cd566f9dc4c56f9facfc1e23f62a7e6ce6fd6cd8d313ccd276",
+      "canttalk:mixtral:test:114": "a2c89fa48d9c51f23b291a03205e4c87751e746c4a6e28957eb27ab8f97fd3ac",
+      "canttalk:mixtral:test:116": "2e774a9b5fb99bb2acc7ae84283616cbe42248504cf888373556e3e90b467905",
+      "canttalk:mixtral:test:117": "3eb9e7c77de8c689ce8f398bbee639158236c6990ca59411c47769b15c6048f9",
+      "canttalk:mixtral:test:119": "3ab9003f61b70844f7dc10d543806b770aed5d6aa24576d585209d951d4b56c9",
+      "canttalk:mixtral:test:123": "ee3cd9449ac40b91acd99d3a635353d4f590cd6bc4f77ec75bbbfdb90d35113c",
+      "canttalk:mixtral:test:124": "97fda0ac656243e2b14d51b74fd1524b805365464f3af791be44e2bf0e783c41",
+      "canttalk:mixtral:test:133": "6e01c573d5bf5490d0f96fa53b2cf6e9315ec8e35cb5a452b64481ea554a5d92",
+      "canttalk:mixtral:test:134": "9f016ccdbbddbcb1f145bd8e9e90d4889d115e0bad162ac54b5d647ce7957e3d",
+      "canttalk:mixtral:test:135": "ba0b7b09a180d9accd1afda104535740474760dd9d0b007320db2eb5925d00ba",
+      "canttalk:mixtral:test:138": "cb2b239628a61cc30c27f94ed9ae1bb123835c1be445cc102eeb6cc2f92b1046",
+      "canttalk:mixtral:test:146": "1fd0043bd19c17a603f8008a03987245554c5f2478773071c28d8598848dcf56",
+      "canttalk:mixtral:test:148": "70892cd2fa3eec9c8fe0df17762aa792de025cbf056499d52e9b26dc154e7f2b",
+      "canttalk:mixtral:test:149": "3022f6835337871bb8dc10d22f7e28f2097f6234473c27904092f55f04a254fc",
+      "canttalk:mixtral:test:150": "9dde0f1c12326bca999806aa74a1b6d48ea31e378fcdb82f12e290c359cc0e71",
+      "canttalk:mixtral:test:157": "c48a5de20cacc54256d793c30f2ab64c3921f45bf7a6049c159adfc6c271a23a",
+      "canttalk:mixtral:test:159": "260651b534012c279756f86e516587a86348922dbee0e2319ca84cdd204f3812",
+      "canttalk:mixtral:test:162": "c2c6bd5a3875db53d9567f561b6edacc182d5c452d417558f0a8a342dc89deb5",
+      "canttalk:mixtral:test:166": "53f6ff52bcf5b9f4e678a28562af704f1ea80cbc0e12491fb05601592b86a09a",
+      "canttalk:mixtral:test:167": "369a10c12e69d8298d1c59c7688dfb47e00ca8dfc4dfbd0aec316c567028597a",
+      "canttalk:mixtral:test:168": "7f5e1f4dfde15069a19f1828293b775cf682f40ea169049aa54e56795b85bbd9",
+      "canttalk:mixtral:test:171": "7ab284a1fc96f7109e9064afd8929941f35ce9342c6bc79f8fc3722bdac810a6",
+      "canttalk:mixtral:test:173": "b9f02507498e1323fb2e537ce5d76ca6856b65dfab032609a789d1e1086c1073",
+      "canttalk:mixtral:test:174": "627a7a5df678a9d5682d706e74a2e63dba8dcdb12a29a56347a3333d48f2537b",
+      "canttalk:mixtral:test:176": "142bb03a75f371b85362ab37acd3c5a6d1502b4bc50aeac4d499916363482cf0",
+      "canttalk:mixtral:test:179": "b721e4d28be16da1d243f4806f05608dee16f0f784e5619b73b69c8cc7a0bf56",
+      "canttalk:mixtral:test:184": "09f6e89027a954ae2861e6cb9bf32cc02caf78f9f4fe1f3ce8cc5fa384a281ca",
+      "canttalk:mixtral:test:185": "90df92d494390dcf396ab00d89f352f28105d8e76e999f9262c9195c98e00628",
+      "canttalk:mixtral:test:186": "be3dfadc55141eedafadf88c6198898857d26e9eadb72e547ef02c6c79fa671d",
+      "canttalk:mixtral:test:193": "2a6d6d79b6bc12cd0030449572aa3c592f6f1f879b3680fb0eb2cddc7b39e014",
+      "canttalk:mixtral:test:195": "7aa347a9e34637d84c0046ac478089ffcdda8de69f435d0204fcfe851c0867e7",
+      "canttalk:mixtral:test:196": "e27feb338185dd6371da66f88735a86b9dc9a2da3c26641ecd3d3297f7fdf5b8",
+      "canttalk:mixtral:test:197": "870bc7dcad04739faeef8f490b4329dc065bcccd3b93a0770ab144321782f2c0",
+      "canttalk:mixtral:test:199": "da60ba0f1595c0bef76194186f7687e981223e3f437fa561c97d743b082cdf8e",
+      "canttalk:mixtral:test:210": "b0e1cf5b5006f3808643b2e3272b0616ea45a668ac0f3da9e16c5bf868387ed7",
+      "canttalk:mixtral:test:212": "817e9f5d7bd51097f4f8a40f601fbede1a11711e0064c3416b41327628a13fa3",
+      "canttalk:mixtral:test:214": "35b98ade700a6799ab5ebb8ca3205e386a923bd9cc47a88c9d66f9c9572801df",
+      "canttalk:mixtral:test:218": "64f4037a48c3db9502c13cfc059a9e5799b0055afea33f48f2abd9f77eb34145",
+      "canttalk:mixtral:test:219": "c99f06f24eff2c1a991ef366b4945fbc72b61dc093b3bdb3ea280cb072404d48",
+      "canttalk:mixtral:test:223": "588314672cd9925839a2c126a2e3e259a5e82d145b4fee93385764731db8ac58",
+      "canttalk:mixtral:test:225": "42b38c3ac2eec4854e3ce74ebcf447575e0f340d38c295620b3cc8fc9e30172b",
+      "canttalk:mixtral:test:228": "8611152f3130bcad2cd0c763c715d4763cec3eb24a7491abf98af8de4e4b1cb1",
+      "canttalk:mixtral:test:229": "51d888fd746b1268024615595396470068e6aa7ed4d04d61022d4891aefbe638",
+      "canttalk:mixtral:test:242": "6c189b3c5aa081f3bfba201fb420096c35e56892f035e033ea538cdcb7790eb9",
+      "canttalk:mixtral:test:243": "a368e65fb4287233fa7e5d2a26597b15ff85c3b153a3f26ff319f343f04d8fe5",
+      "canttalk:mixtral:test:249": "7eea34dae4d69a96d487b9adc4a68b9a6988c321ffffd2e6226257440f8e1b04",
+      "canttalk:mixtral:test:250": "d72f707fbfe95efa1c6f3ff1f51e1e1c2e9386d8744e25f828ea93c9a2cf1422",
+      "canttalk:mixtral:test:252": "0096a20f28d595033615f2de270d82f8126a8b2693e19d7e8576197eaa0b2920",
+      "canttalk:mixtral:test:253": "015333b19ccb9ba49aa6798b71a5394f991ac1d208214632a90c620bb3f07e44",
+      "canttalk:mixtral:test:259": "612432aa4190c7704e32c8ad5cfd6c2b7799d73484650091e6636173e28a9f5c",
+      "canttalk:mixtral:test:265": "890c916fc0ec5a15cfd111315a9659a525bbf2bf1e3d47126c6dff013cc19f5b",
+      "canttalk:mixtral:test:266": "a0d79f963b371ff210d5fdb3332e5ad2272e57aa61afa4168fa48fc28af9a767",
+      "canttalk:mixtral:test:269": "10270054cba2ba00c360a5507deb490e672ad68a98ab8820762140300564e8e5",
+      "canttalk:mixtral:test:272": "910970739005918715df7bd0bdc7213688fd91e3de9dda8a3b19457f0a0469c8",
+      "canttalk:mixtral:test:273": "04ca2e07c0e69ab9edafaedb1cbdd16fffd9b03a7ff61bb0690edb59a5bd36fe",
+      "canttalk:mixtral:test:275": "a193a50b0ac7b7c2f70652d25028c5f79fcdb23cce78cd2b6d8678bb83bf4ba4",
+      "canttalk:mixtral:test:276": "a98b62f7bc9b11a34504b6375dc57f5d7cfffaf4d8d97a8cdff23e282cce2c35",
+      "canttalk:mixtral:test:282": "397595781860424a4ce6d0eba4695b9c7d57b48cc13069c04a90d2dae3338001",
+      "canttalk:mixtral:test:283": "20c01166359e3a8a64b35ecc858d17a5be23aed2b1915e331a6b3fe7378a028b",
+      "canttalk:mixtral:test:289": "ae34762a93687a4a73b2b19cc488bb3deb58b6c75222008acacd06065a7df297",
+      "canttalk:mixtral:test:290": "398608c1fb22a775358a1b7cc112419f5e10e6cadb63880281593848146dd656",
+      "canttalk:mixtral:test:291": "b8242f8b17c894bdaf8a4840fd0b84e9547ea488674ce959136dd18a9f3d9f04",
+      "canttalk:mixtral:test:296": "44b192645c2eb6d7fe066f26043c6cfbe7f6db85f08018cb31aa8213e22b01fa",
+      "canttalk:mixtral:test:297": "2d17b00d7b24e2fc01bd32a501020117878c30464d3996407ee9f0a2aa5731a2",
+      "canttalk:mixtral:test:303": "ce61a8cf2e9ae0135a4d404fe67b2c7fbca6b65372ab9c14c89534f4e4f4831e",
+      "canttalk:mixtral:test:304": "b02cdc7bb22cb5724e2066c559d941a0a758574cf721590e6bee666a5da234d4",
+      "canttalk:mixtral:test:305": "b96b40795fe1ebe6cad48b268210e66a86a1dcb2581d829eff55956bb029d604"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "canttalk:mixtral:test:3",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:15",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:17",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:20",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:22",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:23",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:25",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:26",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:32",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:33",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:37",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:42",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:46",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:47",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:53",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:54",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:57",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:63",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:64",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:68",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:70",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:81",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:82",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:84",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:85",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:86",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:89",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:90",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:93",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:95",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:101",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:102",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:109",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:113",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:114",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:116",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:117",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:119",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:123",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:124",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:133",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:134",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:135",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:138",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:146",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:148",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:149",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:150",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:157",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:159",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:162",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:166",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:167",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:168",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:171",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:173",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:174",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:176",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:179",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:184",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:185",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:186",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:193",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:195",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:196",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:197",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:199",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:210",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:212",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:214",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:218",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:219",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:223",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:225",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:228",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:229",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:242",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:243",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:249",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:250",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:252",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:253",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:259",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:265",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:266",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:269",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:272",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:273",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:275",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:276",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:282",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:283",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:289",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:290",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:291",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:296",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:297",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:303",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:304",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "canttalk:mixtral:test:305",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

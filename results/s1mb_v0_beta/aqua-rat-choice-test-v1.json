@@ -1,0 +1,1580 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "aqua-rat-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/aqua_rat",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:44:13+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.19,
+    "uniform_accuracy_baseline": 0.20049999999999962,
+    "fixed_answer_accuracy_baseline": 0.29,
+    "baseline_adjusted_skill": -0.1408450704225352,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.40242489999946,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "aqua_rat:raw:test:5": "6edba763d652e51edd8bd9ac5ede0b1c13709a171e282ebd84a3895d3e40e266",
+      "aqua_rat:raw:test:6": "df1bb36ace4cd1cd7c38fca824cc35ac31502f6e63eadb86517f9776673b65bb",
+      "aqua_rat:raw:test:8": "69f897dee818a9102c0cba245ee4a3a46bfda111ee2fe1df58de2b5b1043892c",
+      "aqua_rat:raw:test:9": "49a17feb5b6cc644eae6d826cecf78011e12a95e1afc8e5c4352f17a96249f1f",
+      "aqua_rat:raw:test:13": "cafd37dd3c1ca926cbec70ed31a95153fdb27166e93d4bca35ab0a1c7374f276",
+      "aqua_rat:raw:test:15": "7ee139d933f74b63d875ac2e1eb82b492c80cfdbce1b26ea1679216a28406c0b",
+      "aqua_rat:raw:test:18": "2c60eb49816c1ac15261731436589d7ed1dd494c77ccfd72a14c232480c577e7",
+      "aqua_rat:raw:test:19": "3cf3c61e41bb041f07806321dda6e7b90034132c5d1182b76ebc64fa7068d62a",
+      "aqua_rat:raw:test:20": "ec522653fe50cf70505bdf5e1c48464fcde076cf6300cc7cf99da9d32aafb0c8",
+      "aqua_rat:raw:test:21": "50c8b3c89f7fcf38898b44059b1215998876f5c4665aa36831d428bf39d0e721",
+      "aqua_rat:raw:test:27": "a8df20b533bdfc1451be13706db9551976aa8a2d2791dcc8b069432fb00e825d",
+      "aqua_rat:raw:test:29": "e6dff3a73e893cadc34409afa5e55a8a7cf40c6c7b395bd9853ff8f5d4c27a0f",
+      "aqua_rat:raw:test:34": "0942ecda18a0bd881ad5a247fc183dc3cba56001a20595d54b66146d96432206",
+      "aqua_rat:raw:test:35": "097ca2d29b99e4c71b9ed4e1ddf983c1bfc39faabf4079a4aad4567b63ce6644",
+      "aqua_rat:raw:test:37": "00316775f20de0629a73dad3f87b351afbe357a4808c885a800b80192b634970",
+      "aqua_rat:raw:test:39": "fddbe1ac6a9f7ba3e9e2d4ecaf7a4b544f15fd03ef2cd15d9eccb8cfb50ea334",
+      "aqua_rat:raw:test:45": "02351a35ae09ca6bfe665318dccdb940ef82095c32f70d21d4024f9246e0c4f5",
+      "aqua_rat:raw:test:46": "fe65d058711c919e8234168ea2a1eb990a5e5a12bcfcb5f940b0bdba563418ce",
+      "aqua_rat:raw:test:48": "c64ac8fefa722993d058ded0542f45f489b6775c83d67462e6916df3d323f05c",
+      "aqua_rat:raw:test:50": "31f6bf87591a5dd5ca322dd57333cf2f734bcdb4a7859f767b4a1b4ef140362c",
+      "aqua_rat:raw:test:51": "76e0e7110f78d8c5b6982ad6fb55f5e5e10f7212b28eba3c491bdbe11f890264",
+      "aqua_rat:raw:test:52": "2030929b573db2f7dabb31f049b343307bd28cbcb972c47335deee88f711b280",
+      "aqua_rat:raw:test:53": "63b690692a00e16af3cc19bd68f784a7690269ed1dc6099545f36cc0ed9220dd",
+      "aqua_rat:raw:test:58": "5ad9de19a8b602b131a711574f121d1866e9828a8fe4d452665c5a5247de1f99",
+      "aqua_rat:raw:test:59": "e1def725e758418dbe3d510b1eee2ecba4a6c457b2eeb32510332cf92c0eb589",
+      "aqua_rat:raw:test:64": "f8062853e8f9c30e964ae25833940f2bc52bf2be88c115d449dd8a770237940a",
+      "aqua_rat:raw:test:66": "91d6cdb40b8e98f8f7e9c9ed22162fda2600a293aa8c4d40246c72b70b447317",
+      "aqua_rat:raw:test:68": "b42bc7d42de5d32bbf21c6a1962c237b42d446ba1c572d32ee12ba91ad1f1f00",
+      "aqua_rat:raw:test:72": "1fb80520e12bf049b05f69a5f5b73403794bd1ee2ba4d73e551e1cb0b1f4287d",
+      "aqua_rat:raw:test:76": "630ff70daa549569ccbcdc9fc762ea1f55a68885770ffdd95dfc638826e613fa",
+      "aqua_rat:raw:test:78": "77e33225607470f367c7f7052c7ecfdfbe086449b87fbec7fb6200a84acce946",
+      "aqua_rat:raw:test:86": "d8137dd41baca1c6a6833a1dc202bc2bbbacf73c51fed5df6dddc38a7bcf8ed8",
+      "aqua_rat:raw:test:87": "ba19a0dc35eb3d70f7046e651f56cccb4659618435fab8ad8fc6ca84a83f593e",
+      "aqua_rat:raw:test:90": "fb9a635aec61732df981d47cd3e3ae596dd869b5d52887974030e21d7497140e",
+      "aqua_rat:raw:test:95": "39319a7cc9450d67ca4a8c32e84135ef4785652d3e444c753e14b54a134e290f",
+      "aqua_rat:raw:test:97": "2997fcfb8474d6ad7b00aba8f5b14c9e7f82f8b6091906eefc2c787c10536cf1",
+      "aqua_rat:raw:test:98": "cbc243ed5c1e98faeddcdb79b93bae1067ff2bef5ed2b408861c1dacf4156e21",
+      "aqua_rat:raw:test:99": "152e9d5231189fcf61b9b06bfc3fd2c4d46a8c9cfe7fa21d3c0ef8add504ecda",
+      "aqua_rat:raw:test:100": "e50c511aefd1bc3970f628ad0349cdf3d2fc139b95c3f094e6ff462c4f416b33",
+      "aqua_rat:raw:test:102": "fc6d1402409f28a77f363f01e40fa69237741df5006c9575b05a4fca7a119b76",
+      "aqua_rat:raw:test:103": "20acc96c8ca3dd4a5f8617847423863da2e3441f9df292ab8ed93b536a4993f2",
+      "aqua_rat:raw:test:104": "6239dac6a499ffe71d2e24576edccb99ae9c34f67e8ccb7a0830097b9633ae18",
+      "aqua_rat:raw:test:106": "1924574f2270ca64239f0fcb5e2e09c436aebea2fd73fd739359faa5d24d4319",
+      "aqua_rat:raw:test:110": "018e2ee255766d5d9e157ad593eb5444b09b19984e2bcb6949efdc865872ea52",
+      "aqua_rat:raw:test:115": "aac7e9ed327e559bb680cfb3eeeb7e15e59d9f8bc741d48fcadb1d8e47b79fcc",
+      "aqua_rat:raw:test:118": "1a0f2e0555c7bd270f59dcdd06a6a28645a526728c0f8bcfeb54915f9e4f6a98",
+      "aqua_rat:raw:test:121": "1fcd6d2daaf0075fad6e4e0bbf2656350a48ee84476d144c4fba03a8c797720e",
+      "aqua_rat:raw:test:122": "3d033b0e3d5955cccae71960a8764bbd89cc6f8b5dceb3233bbd1ff36b357d7f",
+      "aqua_rat:raw:test:123": "d52806e041753c879abc286d7d26ad76f5bddc8918b1af50f44347b0a256728a",
+      "aqua_rat:raw:test:127": "695fca54b29544e77e0cb773c67690a87b9744f916f1b37be66edcb48b0e3eec",
+      "aqua_rat:raw:test:128": "dc512672dc32fdd65657eb772349efbec20b8aa81356c5fc46d92d8fafd2d3ae",
+      "aqua_rat:raw:test:130": "83797b29dfabcd7580c0b254fa759bbfb29bef95b78db495b3db2dcac0c3f43b",
+      "aqua_rat:raw:test:132": "65fab4e6c6e408f18d5baec4282af7e30aff83b392e5626b9d64367c3d7f7d23",
+      "aqua_rat:raw:test:133": "57584edf97ca4b682fc79c16d5631c8f13a4ca899ae7bec32e45a855650ef08f",
+      "aqua_rat:raw:test:138": "d2662b1890fa900c846aeb76fa9edddad20b38b7e84b957811ec0bdd80a1cdc4",
+      "aqua_rat:raw:test:139": "3b398eab1c74ec866988429033b456455f12d2fee99cfee4acf5349615dadc71",
+      "aqua_rat:raw:test:141": "3732c98a801f669d6c7cb5aa19684a13714e398f033b9a4a210f2da1cba34759",
+      "aqua_rat:raw:test:142": "c573e877465f0001b7bfceac468ffd49077d6d532255f5faae43b22f9aff90b7",
+      "aqua_rat:raw:test:143": "a7ed1d3a366fc18050d8e7fd11968dce9d4654db7037c8fb77dddd568f472428",
+      "aqua_rat:raw:test:145": "60849c44a0b8271d7a7c659653e5810a6ccb4ce8bda686604aa846df12517495",
+      "aqua_rat:raw:test:150": "0a17a5082b220b2983d4691c86a0eda2ec4192bd7d8427da2c64626931baf07a",
+      "aqua_rat:raw:test:152": "fb1f2c796369894e0c82ce8470ceaa69dafcf99c94e7098f4cb943603c559f56",
+      "aqua_rat:raw:test:158": "7cc2847488683e5f7dc5fe9a848de5f7c77196c1118ed21de85a7120ee2d046a",
+      "aqua_rat:raw:test:159": "81d9c62e6d65b512b538679d73174902a94b5c31ea14e196593232350cdea4e0",
+      "aqua_rat:raw:test:161": "cccae64552506e4e36ebc675b9aad7f659bfca4289b56165e17e04a8d7c84fe9",
+      "aqua_rat:raw:test:162": "a479c515ea2c045acfd7b9a11ea78535f99da32a0e89d2550404878531ae5e20",
+      "aqua_rat:raw:test:165": "330b6782d86d78e128bf800b0fa53a79b4121291652f5977f58ce4aed3d8f293",
+      "aqua_rat:raw:test:168": "9dc723c066bc7482935c0142c57018eb6f6f6776975b171c21b76cfa41cd44c0",
+      "aqua_rat:raw:test:173": "7af369fbecb2242ad32b598ecc72896eeca9572f8857a855d545c99bee88bff4",
+      "aqua_rat:raw:test:174": "d0457b197863a1814e5e64b913507f0ff5b5d7e2a248a7ccd1ffd8b256a9e470",
+      "aqua_rat:raw:test:175": "a559c634196435b39beea968f9f31ac663db8b825fba1bb6060adea3a22589a1",
+      "aqua_rat:raw:test:177": "2cc84d8cc59198646cdaf25e4babb542fa7c72ed317ae65747d995e48a0f20f4",
+      "aqua_rat:raw:test:178": "eb717325aa4c4534fb8a7bfc5519208f78863dcfea50a1f5de98f9c10f40835d",
+      "aqua_rat:raw:test:183": "bf519cc11e5e2d76e7841cfe742442402a9de67d003c7e55aaa337da9b8a674d",
+      "aqua_rat:raw:test:186": "8485234f90b7c29be94ccd502a3058bc4388857fb985abed184794d9d806e5aa",
+      "aqua_rat:raw:test:188": "299c59ddc4d163c40aa4560e3417178374f41b6ebffdbcc3a2ec5a480e7ce9c8",
+      "aqua_rat:raw:test:190": "00a66dec700301b245569bc8738216af0ebb5d55dad0f479baf91291ee5089e7",
+      "aqua_rat:raw:test:192": "71998992c70e3da2940947644637de21b5323b6c0f1b1f351ef16a7fa2660f18",
+      "aqua_rat:raw:test:193": "92c6286306898026d6f8629fa70b68f7e39956de089744ba9a0e5eaa1478e353",
+      "aqua_rat:raw:test:194": "d16b07b4da25a5ab88225a836e11bc485984bea2ad2a505f4df65a7185511c74",
+      "aqua_rat:raw:test:197": "1cd78e25e051c6a99fada1efe40bf16212fd20b71a45541e85b7392810bd19db",
+      "aqua_rat:raw:test:201": "2713423172fcb3b88b5f217a8356d61347bb9e6694adda95147acd4c26534a99",
+      "aqua_rat:raw:test:202": "9d685469dc4a54e2aa3f17723fb3ee02ad5c0b944966704a9a85cd091ff36c26",
+      "aqua_rat:raw:test:203": "2015127ecf17ca719082804046175e383369224b9d210cc0a03101e18c3f1c50",
+      "aqua_rat:raw:test:204": "3db15f56e3a80b9254987de0eb4157d06729ea05726a2321578ef363fa7319a6",
+      "aqua_rat:raw:test:213": "317aa94d2ce3d4cb2f17d93488cdfbb37d09a65a32b535e430548dc64fc554e7",
+      "aqua_rat:raw:test:214": "63810037c91914e678306fa841790de9f06a41f1d60b17c883016d32a2d2ca91",
+      "aqua_rat:raw:test:218": "9e6de6b868e0bbc05f05303263863a8e6225a49596766748769cb8b91f2b74bb",
+      "aqua_rat:raw:test:219": "335067e152a62c94afefb92a9d998a8df8ebe0e6d43e895f449dbf58bab706f3",
+      "aqua_rat:raw:test:221": "4058adeb1fb9736c725ca27d21b2448b41594dc99b0d30f0b1e110a30f50ffd0",
+      "aqua_rat:raw:test:225": "b1356087f49d1887d93742647f4685f3655dfca9f56224a1551ca7fa1f4a3a4d",
+      "aqua_rat:raw:test:228": "b2cc6ed35e18ea9edbf2842631b5753b4c61973487a7ca415261990714f16ecc",
+      "aqua_rat:raw:test:232": "9f37be953721865b877b0bd88e42d8ad4173e88b1e658e601caf8c67f234427b",
+      "aqua_rat:raw:test:236": "3257d5fd82066d57e347bf7ffa5d79739875fd8f3e5fc2a893eabbab352625b9",
+      "aqua_rat:raw:test:240": "0ef144ba6cd412973b6208f2c0791177200ffe8dd4a44530a2216cc87805658b",
+      "aqua_rat:raw:test:241": "f842d6ce6c69b71c12f06a1fa5243f0141984cd4391f85c2b554ce2e4c434355",
+      "aqua_rat:raw:test:242": "b6666ffa32a818ee3dbbb0860a33282544e6f7f05c89b4aa0c816edf90c5eadc",
+      "aqua_rat:raw:test:249": "df38bf4b0aa1950390de4aa0baac08a7bc87cb03b15419f6af711f1d08bf5c50",
+      "aqua_rat:raw:test:251": "4e32a34daf50e40ac6da6d322e50895e0981c683fa793c32c7344f1ffa83bf62",
+      "aqua_rat:raw:test:253": "2b872cac1c1d8f888bded8507c85218a97173a5d34bc21b3e64a5473dce92379"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "aqua_rat:raw:test:5",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.46113056528264135,
+        "B": 0.17778889444722362,
+        "E": 0.11825912956478239,
+        "C": 0.1299649824912456,
+        "D": 0.11285642821410706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:6",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2832,
+        "B": 0.1592,
+        "E": 0.1914,
+        "A": 0.1426,
+        "D": 0.2236
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:8",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3611194402798601,
+        "A": 0.10494752623688156,
+        "E": 0.16491754122938532,
+        "D": 0.14352823588205899,
+        "B": 0.2254872563718141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:9",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.18086277649884897,
+        "C": 0.12611350215193676,
+        "D": 0.22480232208988088,
+        "E": 0.24341907716945252,
+        "B": 0.22480232208988088
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:13",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.46851888866679997,
+        "D": 0.07275634619228463,
+        "C": 0.13861682990205876,
+        "E": 0.1366180291824905,
+        "A": 0.1834899060563662
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:15",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5011526510975243,
+        "D": 0.1487421068457452,
+        "E": 0.050616417760849956,
+        "B": 0.20948180815876513,
+        "C": 0.09000701613711537
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:18",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.2158,
+        "A": 0.1992,
+        "C": 0.2188,
+        "B": 0.1846,
+        "D": 0.1816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:19",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.17978989494747374,
+        "D": 0.10895447723861931,
+        "A": 0.33996998499249625,
+        "E": 0.20030015007503751,
+        "C": 0.1709854927463732
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:20",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.23927607239276075,
+        "E": 0.15428457154284572,
+        "A": 0.18648135186481352,
+        "C": 0.23927607239276075,
+        "D": 0.18068193180681932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:21",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3260695721711315,
+        "C": 0.09466213514594163,
+        "A": 0.08246701319472212,
+        "E": 0.1610355857656937,
+        "B": 0.33576569372251097
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:27",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.28517148285171484,
+        "B": 0.1366863313668633,
+        "E": 0.28517148285171484,
+        "A": 0.10838916108389161,
+        "C": 0.1845815418458154
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:29",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.39338677354709417,
+        "C": 0.13597194388777553,
+        "E": 0.13597194388777553,
+        "A": 0.15170340681362726,
+        "D": 0.18296593186372748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:34",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.2988,
+        "A": 0.1348,
+        "C": 0.2295,
+        "B": 0.1553,
+        "D": 0.1816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:35",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.40664731204324756,
+        "E": 0.14075483031334468,
+        "B": 0.15637200921013114,
+        "D": 0.1642807087796576,
+        "C": 0.13194513965361898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:37",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.23951556400760685,
+        "B": 0.174957461715544,
+        "A": 0.10949854869382443,
+        "D": 0.22189970973876488,
+        "E": 0.25412871584425983
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:39",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2795795795795796,
+        "D": 0.17787787787787787,
+        "E": 0.12802802802802804,
+        "A": 0.22192192192192192,
+        "C": 0.1925925925925926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:45",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.18948105189481051,
+        "C": 0.32806719328067196,
+        "D": 0.14158584141585842,
+        "E": 0.1933806619338066,
+        "A": 0.1474852514748525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:46",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.250075022506752,
+        "A": 0.15624687406221865,
+        "D": 0.04861458437531259,
+        "E": 0.38881664499349805,
+        "C": 0.15624687406221865
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:48",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.06783894494954541,
+        "B": 0.07563193126186434,
+        "E": 0.7649115795783795,
+        "C": 0.028674193226096517,
+        "A": 0.0629433509841143
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:50",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.13101791612451205,
+        "B": 0.06455810229206285,
+        "E": 0.06886197577820038,
+        "C": 0.6842157942147933,
+        "A": 0.05134621159043139
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:51",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.13202444155063608,
+        "B": 0.10177301412401082,
+        "D": 0.0374636882700591,
+        "A": 0.6925773815486327,
+        "C": 0.03616147450666132
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:52",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.34193677470988393,
+        "E": 0.16706682673069229,
+        "D": 0.23549419767907162,
+        "A": 0.14755902360944376,
+        "C": 0.10794317727090835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:53",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.3066306630663066,
+        "B": 0.1572157215721572,
+        "D": 0.1387138713871387,
+        "A": 0.1865186518651865,
+        "C": 0.21092109210921092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:58",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.19528047195280474,
+        "C": 0.0937906209379062,
+        "D": 0.24317568243175683,
+        "B": 0.3222677732226777,
+        "A": 0.1454854514548545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:59",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.21102661596958175,
+        "C": 0.09815889533720233,
+        "B": 0.12017210326195718,
+        "A": 0.17000200120072043,
+        "E": 0.4006403842305383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:64",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.07684600741408676,
+        "D": 0.673179040176335,
+        "E": 0.10029055204889288,
+        "B": 0.11351567979160404,
+        "C": 0.03616872056908125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:66",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2653346653346654,
+        "C": 0.15414585414585416,
+        "E": 0.15124875124875128,
+        "A": 0.15414585414585416,
+        "D": 0.27512487512487516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:68",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.2908255046971817,
+        "D": 0.1049370377773336,
+        "C": 0.22646412152708376,
+        "B": 0.15520687587447532,
+        "A": 0.22256646012392567
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:72",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.25022520268241416,
+        "B": 0.3636272645380843,
+        "A": 0.11440296266639977,
+        "C": 0.16424782304073665,
+        "E": 0.10749674707236513
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:76",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2892446223111556,
+        "E": 0.11285642821410705,
+        "B": 0.15727863931965982,
+        "C": 0.3067533766883441,
+        "A": 0.13386693346673337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:78",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.0918918918918919,
+        "B": 0.1046046046046046,
+        "C": 0.5903903903903904,
+        "E": 0.11831831831831832,
+        "A": 0.0947947947947948
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:86",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2578,
+        "C": 0.3008,
+        "B": 0.0889,
+        "D": 0.2275,
+        "E": 0.125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:87",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.1550673989016475,
+        "C": 0.39001497753369946,
+        "A": 0.05701447828257613,
+        "B": 0.22236645032451322,
+        "D": 0.17553669495756366
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:90",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.279160419790105,
+        "C": 0.12003998000999501,
+        "A": 0.08005997001499252,
+        "B": 0.41969015492253875,
+        "D": 0.10104947526236882
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:95",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.25816142599639497,
+        "A": 0.10614860805127178,
+        "C": 0.12227117965151213,
+        "E": 0.18095333466853597,
+        "D": 0.33246545163228525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:97",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2461,
+        "E": 0.2041,
+        "A": 0.1543,
+        "C": 0.1943,
+        "B": 0.2012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:98",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2734273427342734,
+        "D": 0.2656265626562656,
+        "C": 0.04200420042004201,
+        "E": 0.1914191419141914,
+        "B": 0.22752275227522753
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:99",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3361352947062944,
+        "D": 0.1944361052736916,
+        "B": 0.0491343940758531,
+        "E": 0.21014710297208045,
+        "C": 0.21014710297208045
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:100",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.2227891156462585,
+        "C": 0.11574629851940775,
+        "A": 0.16806722689075632,
+        "D": 0.24129651860744297,
+        "B": 0.25210084033613445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:102",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.23375062593890839,
+        "B": 0.2640961442163245,
+        "E": 0.11196795192789184,
+        "C": 0.24446670005007515,
+        "A": 0.1457185778668002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:103",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.15240668467927548,
+        "E": 0.4064845391774242,
+        "C": 0.12798959271490046,
+        "D": 0.214950465325728,
+        "A": 0.09816871810267189
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:104",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3164,
+        "E": 0.1387,
+        "C": 0.124,
+        "A": 0.2432,
+        "B": 0.1777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:106",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.18723786698621928,
+        "B": 0.3393249450768923,
+        "E": 0.05702017175953664,
+        "D": 0.14339924106251248,
+        "C": 0.27301777511483916
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:110",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.28936042438194376,
+        "D": 0.12611350215193673,
+        "C": 0.12611350215193673,
+        "A": 0.23651286157541787,
+        "B": 0.22189970973876488
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:115",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.34538914976521135,
+        "B": 0.1609551403736637,
+        "D": 0.0629433509841143,
+        "A": 0.3570786292336897,
+        "E": 0.07363372964332102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:118",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.1484148414841484,
+        "A": 0.1328132813281328,
+        "E": 0.04440444044404441,
+        "C": 0.6055605560556055,
+        "B": 0.06880688068806881
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:121",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.39067813562712544,
+        "C": 0.060112022404480894,
+        "D": 0.05641128225645129,
+        "B": 0.4297859571914383,
+        "A": 0.0630126025205041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:122",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2557721139430285,
+        "C": 0.09805097451274364,
+        "E": 0.16201899050474763,
+        "A": 0.19520239880059972,
+        "B": 0.2889555222388806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:123",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.1377688844422211,
+        "A": 0.16608304152076037,
+        "D": 0.5275637818909454,
+        "B": 0.08744372186093047,
+        "C": 0.08114057028514257
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:127",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.24987506246876562,
+        "D": 0.400199900049975,
+        "B": 0.07276361819090456,
+        "A": 0.09075462268865568,
+        "C": 0.18640679660169915
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:128",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2869565217391305,
+        "E": 0.24107946026986507,
+        "D": 0.1215392303848076,
+        "A": 0.17671164417791108,
+        "B": 0.17371314342828587
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:130",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2556443556443556,
+        "C": 0.2809190809190809,
+        "B": 0.12587412587412586,
+        "E": 0.1756243756243756,
+        "D": 0.1619380619380619
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:132",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2793,
+        "A": 0.1758,
+        "B": 0.0869,
+        "C": 0.3281,
+        "E": 0.1299
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:133",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2617,
+        "E": 0.1572,
+        "C": 0.2012,
+        "D": 0.1621,
+        "A": 0.2178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:138",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.20242387820512822,
+        "D": 0.1291065705128205,
+        "E": 0.07922676282051283,
+        "A": 0.532051282051282,
+        "B": 0.05719150641025641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:139",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.296781287485006,
+        "A": 0.09906037584966014,
+        "E": 0.2030187924830068,
+        "C": 0.2615953618552579,
+        "D": 0.1395441823270692
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:141",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2597740225977402,
+        "C": 0.1386861313868613,
+        "A": 0.24407559244075594,
+        "B": 0.1845815418458154,
+        "E": 0.1728827117288271
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:142",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2559,
+        "E": 0.1035,
+        "C": 0.1816,
+        "B": 0.3008,
+        "D": 0.1582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:143",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.13493493493493494,
+        "E": 0.12462462462462462,
+        "D": 0.1031031031031031,
+        "B": 0.5747747747747748,
+        "A": 0.06256256256256257
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:145",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.25225225225225223,
+        "C": 0.3245245245245245,
+        "E": 0.12902902902902902,
+        "B": 0.12312312312312312,
+        "D": 0.17107107107107106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:150",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2038961038961039,
+        "B": 0.17952047952047953,
+        "E": 0.22047952047952052,
+        "A": 0.14635364635364637,
+        "D": 0.2497502497502498
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:152",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.10949854869382444,
+        "C": 0.25022520268241416,
+        "B": 0.15443899509558603,
+        "D": 0.38905014513061753,
+        "E": 0.0967871083975578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:158",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3047,
+        "C": 0.1396,
+        "A": 0.1572,
+        "E": 0.1729,
+        "D": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:159",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2947526236881559,
+        "A": 0.1054472763618191,
+        "D": 0.14642678660669664,
+        "E": 0.33573213393303347,
+        "C": 0.11764117941029485
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:161",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.4512,
+        "B": 0.125,
+        "D": 0.1123,
+        "A": 0.1826,
+        "E": 0.1289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:162",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2654672663668166,
+        "C": 0.08735632183908047,
+        "E": 0.10054972513743128,
+        "A": 0.21669165417291356,
+        "D": 0.32993503248375816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:165",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.1728827117288271,
+        "B": 0.20507949205079493,
+        "C": 0.292970702929707,
+        "D": 0.1454854514548545,
+        "A": 0.18358164183581643
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:168",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.11509641322809472,
+        "C": 0.10630432610650416,
+        "B": 0.1453691677490259,
+        "A": 0.08292536716954742,
+        "E": 0.5503047257468279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:173",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2713371976813912,
+        "E": 0.12252648410953429,
+        "B": 0.21866879872076755,
+        "A": 0.23226064361383172,
+        "D": 0.15520687587447532
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:174",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2988,
+        "D": 0.1309,
+        "E": 0.1172,
+        "A": 0.248,
+        "B": 0.2051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:175",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2793,
+        "E": 0.1396,
+        "A": 0.1465,
+        "D": 0.2344,
+        "B": 0.2002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:177",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.23594608087868196,
+        "C": 0.0892661008487269,
+        "A": 0.19211183225162254,
+        "E": 0.16475287069395905,
+        "D": 0.3179231153270095
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:178",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.1491762356465302,
+        "D": 0.11263105341987019,
+        "E": 0.0799800299550674,
+        "A": 0.5929106340489265,
+        "C": 0.06530204692960559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:183",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.0897640943622551,
+        "D": 0.06877249100359856,
+        "B": 0.6130547780887645,
+        "C": 0.06347461015593762,
+        "A": 0.16493402638944424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:186",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.38499249624812404,
+        "A": 0.13676838419209605,
+        "C": 0.19639819909954978,
+        "B": 0.10015007503751876,
+        "D": 0.18169084542271138
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:188",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.22740903638544585,
+        "A": 0.10055977608956418,
+        "B": 0.07467013194722112,
+        "C": 0.33576569372251097,
+        "E": 0.2615953618552579
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:190",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.25587441255874416,
+        "C": 0.14158584141585842,
+        "B": 0.3007699230076992,
+        "D": 0.14158584141585842,
+        "E": 0.16018398160183983
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:192",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.22274454890978196,
+        "E": 0.04760952190438088,
+        "C": 0.3047609521904381,
+        "D": 0.2451490298059612,
+        "B": 0.1797359471894379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:193",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2871,
+        "C": 0.1914,
+        "A": 0.3008,
+        "E": 0.2207
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:194",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2673326673326673,
+        "C": 0.13166833166833167,
+        "D": 0.2556443556443556,
+        "B": 0.1619380619380619,
+        "E": 0.1834165834165834
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:197",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.20781296832850435,
+        "B": 0.16485163352982318,
+        "A": 0.20781296832850435,
+        "D": 0.20491557598161658,
+        "E": 0.21460685383155162
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:201",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.14147267459286644,
+        "A": 0.2907383354980518,
+        "B": 0.12488760115895695,
+        "D": 0.23998401438705166,
+        "E": 0.20291737436307325
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:202",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.4629925985197039,
+        "E": 0.08061612322464493,
+        "D": 0.037407481496299265,
+        "A": 0.33986797359471893,
+        "B": 0.07911582316463293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:203",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.1973,
+        "A": 0.2383,
+        "D": 0.2422,
+        "C": 0.1533,
+        "B": 0.1689
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:204",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.23953953953953955,
+        "A": 0.27567567567567564,
+        "E": 0.1114114114114114,
+        "B": 0.1866866866866867,
+        "C": 0.1866866866866867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:213",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.12272272272272272,
+        "D": 0.08548548548548549,
+        "C": 0.17307307307307307,
+        "A": 0.4203203203203203,
+        "E": 0.19839839839839837
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:214",
+      "question_id": "answer",
+      "probabilities": {
+        "E": 0.28505747126436787,
+        "A": 0.12783608195902052,
+        "B": 0.11864067966016992,
+        "D": 0.21469265367316342,
+        "C": 0.2537731134432784
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:218",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.23944366619971985,
+        "A": 0.13678206924154493,
+        "D": 0.12267360416249751,
+        "B": 0.4475685411246748,
+        "E": 0.05353211927156294
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:219",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.542728635682159,
+        "D": 0.08195902048975513,
+        "E": 0.05617191404297851,
+        "A": 0.07906046976511745,
+        "B": 0.24007996001999002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:221",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.19812075169932028,
+        "B": 0.49200319872051185,
+        "D": 0.09516193522590964,
+        "E": 0.14054378248700522,
+        "C": 0.07417033186725311
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:225",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.25623310303394414,
+        "A": 0.10513667768098528,
+        "E": 0.26404325623310304,
+        "D": 0.15550215279863822,
+        "B": 0.21908481025332932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:228",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2383,
+        "A": 0.1377,
+        "E": 0.1768,
+        "D": 0.2197,
+        "B": 0.2275
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:232",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.42401200600300154,
+        "E": 0.11085542771385692,
+        "B": 0.1299649824912456,
+        "D": 0.14657328664332167,
+        "A": 0.18859429714857429
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:236",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.16218109054527263,
+        "D": 0.17778889444722362,
+        "E": 0.10305152576288144,
+        "C": 0.455327663831916,
+        "B": 0.10165082541270636
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:240",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.624875024995001,
+        "E": 0.10687862427514497,
+        "A": 0.0617876424715057,
+        "B": 0.11907618476304739,
+        "D": 0.08738252349530094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:241",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.11955217912834866,
+        "C": 0.3982407037185126,
+        "D": 0.08346661335465815,
+        "B": 0.29478208716513393,
+        "E": 0.10395841663334666
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:242",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3966983491745873,
+        "D": 0.08844422211105553,
+        "B": 0.17878939469734867,
+        "C": 0.17878939469734867,
+        "E": 0.15727863931965982
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:249",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.26557344265573446,
+        "D": 0.17678232176782324,
+        "B": 0.20017998200179982,
+        "A": 0.22657734226577342,
+        "E": 0.1308869113088691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:251",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.09905047476261869,
+        "B": 0.23038480759620192,
+        "E": 0.23038480759620192,
+        "A": 0.17081459270364818,
+        "D": 0.26936531734132935
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "aqua_rat:raw:test:253",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.34197098549274635,
+        "A": 0.1167583791895948,
+        "E": 0.07423711855927964,
+        "B": 0.30285142571285645,
+        "D": 0.16418209104552275
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

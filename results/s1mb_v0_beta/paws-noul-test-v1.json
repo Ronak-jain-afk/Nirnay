@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "paws-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/paws",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:25:26+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.24854297949999998,
+    "accuracy": 0.54,
+    "positive_recall": 0.68,
+    "specificity": 0.4,
+    "precision": 0.53125,
+    "balanced_accuracy": 0.54,
+    "f1": 0.5964912280701754,
+    "true_positive": 34.0,
+    "false_positive": 30.0,
+    "false_negative": 16.0,
+    "true_negative": 20.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.005828082000000068,
+    "baseline_adjusted_skill": 0.08000000000000007,
+    "baseline_adjusted_score": 0.08000000000000007
+  },
+  "elapsed_seconds": 28.461467000000994,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "paws:labeled_final:test:52": "9fdf89c514fc22aa4218c3b8e82f09091fc1a35c89b6af45578a3c517037dbab",
+      "paws:labeled_final:test:67": "005dbf0e8f2377c3f69a2de3ec538c2ebba7f8dcaecf8e1503a80cce54e436a4",
+      "paws:labeled_final:test:122": "ae4e3da13bb4db6a93b35a7f906130c0cf4b5ce795103508fb36f78712dd22a1",
+      "paws:labeled_final:test:495": "c9b1a67b7d87bc8b11eb62b9c74d3e0296b024ab4345c10a0d92bb29c40f18e7",
+      "paws:labeled_final:test:504": "91d7428239aff2945f7e8d18fbe7ff208a8ade22bd3510d4cfc50e542c710c10",
+      "paws:labeled_final:test:629": "e62ede9229769e9a02714eeafa0a8942de70d7bc1c8a6acaaeff381979e0b935",
+      "paws:labeled_final:test:796": "72d87a7aeedb62fc9bf7ff5c90954c70a296fa0817ab88bc22578b7bac8b4c1f",
+      "paws:labeled_final:test:831": "13ee2b60d6f2330f5dd0d682948b6776b21f2d8ee1bbcc998bc8bf6a85413fb2",
+      "paws:labeled_final:test:856": "e3ec01031d38ec8e60d6d63b6b2b295f5f0dfb2b9eaa59d8a4473e485a5b12bb",
+      "paws:labeled_final:test:886": "29ed86a7d06022de4e20000b02661d0750af792d97149a1c85aaf71703c0405a",
+      "paws:labeled_final:test:1025": "9e6d18b083510526d92e028fb15f3b37578f77890b291492b8a61d71866718cb",
+      "paws:labeled_final:test:1055": "003041d79ef9e000635d37278be247b048aff1761130ecc4c1a9c1ef84ec5a29",
+      "paws:labeled_final:test:1178": "96cd09bc771bbf37ac93e94af4c239a3be9053ba6d9dfc3cf16341915b7855a4",
+      "paws:labeled_final:test:1340": "3f5b8d7db058df666367373ce1cb99fd5b8f333f25550f77dbfe6b6997419414",
+      "paws:labeled_final:test:1344": "0cd19e76f5da78a010dcae5918e5deb424aa9d957f8ba771dbd9c1ba1d746405",
+      "paws:labeled_final:test:1415": "4ac3650e2cddc987b83b3f5c14135ffc6084f0abb47c4b3faecb00ebc3f12a27",
+      "paws:labeled_final:test:1460": "a274b87d65bb8aecd9fc663a19ac81a8d68f3d8e256610dc9cf14eca248fc0d5",
+      "paws:labeled_final:test:1477": "f70c858743c903f3bfd287859162de27918b8e18490770f215491421e4f02844",
+      "paws:labeled_final:test:1490": "c4023276470f612c68e995c5c0b069c5c8c3cc356e886c2934ad1a0931da18d2",
+      "paws:labeled_final:test:1514": "b3cfbb45a285c8bd58becb7311f2c84dd2f014fad853ececa94f24a4284d13bb",
+      "paws:labeled_final:test:1666": "66a416ddd2866069ef29200b404cc05177010c60f821fff5821c3c597863bde2",
+      "paws:labeled_final:test:1958": "d5de934a3eb37df71ae6076a92ddca9dcedbd12d9a74d296910aaf563f85ac5e",
+      "paws:labeled_final:test:2160": "1a2dddb61ac5464f4f902597920acc56b8ad473cb09d80d1da60f05bad2a9304",
+      "paws:labeled_final:test:2282": "c0d0c0ddd5998120a0146d71a86e62047721b5a14373f3a832991027de801328",
+      "paws:labeled_final:test:2346": "ddd7bf6c4da03b7145d9a8572d75bb7f4ec01b7fc39b38254413a34c5109b0a8",
+      "paws:labeled_final:test:2463": "16673f8aae10507c0ee0789f637aee41c0e44ca13dbdf8b4c91be2ba4db4f088",
+      "paws:labeled_final:test:2677": "a402e0caf87659b84d4722134d82f5ff9e7eedd46068be7053eb7e155fe1b55f",
+      "paws:labeled_final:test:2679": "d8ccb0538aa151d27bfa65c62607236c47c6e01c89eaeb4484fed7b83edb748a",
+      "paws:labeled_final:test:2725": "0dcdb407c5aef6bc580ad590fed1c72ceade8bf6b8880d1878a620ea07b147ee",
+      "paws:labeled_final:test:2738": "c64068a56660cba19279d321e6538563e1c2674969a2e41ce8ebf26662c98b27",
+      "paws:labeled_final:test:2841": "6b651ef55bf82b74749c9c3a48839fac39b48f4edd77c1c7cbd1be55c9b6858f",
+      "paws:labeled_final:test:2869": "1d585725f47f5db930ba09d54a14a2e73e34c4e8b33b1db0bc6f79bed7bfe9de",
+      "paws:labeled_final:test:2884": "9711f7550222402f0d7e95f3b9a8ca7b808a131d9065b27cffb9299dbc322955",
+      "paws:labeled_final:test:2929": "930f2acc299a6dacee44ba2230b9c91e4d200d068956c1c602febebf99609212",
+      "paws:labeled_final:test:3017": "812a4d807b39a3aaf0b685acea4694ac3284c56e6cdd9087d4b1bdcbe6b48c1c",
+      "paws:labeled_final:test:3035": "8efc349ecebd6a4a4da8368dcf45b8affda99fe6f2ace10bfa1bdb1ff37ff13d",
+      "paws:labeled_final:test:3171": "bf13c9b728d58e9ceca10f6c5a3db9f1eb9aa16575299b7081c78ee6b2711774",
+      "paws:labeled_final:test:3367": "baf6e6c9772fc0720922c5787376a6bba4c0f479c63e4b27f5a1d74304d85fcf",
+      "paws:labeled_final:test:3436": "b7dcf758273f00985da992d93bae251c573100f633e60b91990f5a519e16cd5f",
+      "paws:labeled_final:test:3475": "d988a319ab2d422b865c3905c04790621c725ca395b205bf054405fc445f4ded",
+      "paws:labeled_final:test:3607": "823beeb6d32b55614be69523fb6db84c051154f25b28dc3d42bc245dbed583f8",
+      "paws:labeled_final:test:3609": "55049bddc605bb20a002fd7fe4ca5b50defe510fea8378f3e02812ad36d9b1f9",
+      "paws:labeled_final:test:3626": "47813ab52bcaae4d0ea99d49af3c9c1fe9ddc8eb902c6088816859f977b86264",
+      "paws:labeled_final:test:3912": "f284f9c8478e4004d3fa6abe744a4c6189841c6a24b7de63da129a61ba54d83d",
+      "paws:labeled_final:test:4224": "50eaf1c611205ffc280de105c095fb88827394cbdcf05d01b17aca22fec49c3f",
+      "paws:labeled_final:test:4296": "85de1fab2a148a6a288455582b710028fe76350fe4a48dee711feabe0d0d462e",
+      "paws:labeled_final:test:4365": "af835b238208208d4a0d95cec9595873370dc9f1ff7c83c60f12987826163931",
+      "paws:labeled_final:test:4438": "b65f6295e2d5e72d97b95475973c0cb719d884d0e7e08ac53fd704968bb09df5",
+      "paws:labeled_final:test:4453": "56ae24e620a8e8b3f7cd3b7804e5ef28e3a63f7600e6233b19ac50f42ac9f5bb",
+      "paws:labeled_final:test:4454": "dc4657a915ebbe4d8deafcc4bde6a19a9310c5ce21bb2d4ce982576e256eb200",
+      "paws:labeled_final:test:4571": "185789e836daa38458045ba6941b983b5532e2b709543ec73d862bf822a880f4",
+      "paws:labeled_final:test:4792": "cab8d7f832f2a755ea9640cc5d0b035d56928f0681a1b8b42aeadcafba763ebb",
+      "paws:labeled_final:test:4898": "42587e03d33051398c25d9c2ecd113d105b73177445d2fbe1ac864bd51397e98",
+      "paws:labeled_final:test:4935": "78b8dfb4a77f40c5014b6f29af06cda81db6b65949c1d6110b66f10526cd9c74",
+      "paws:labeled_final:test:5174": "7db182c168a9a2bb2ebd31857090a017d6d767773664bf5dec2ec7887a6baed7",
+      "paws:labeled_final:test:5186": "03fc82cdd0647ab38f447bc66644bf106824e3fe908f59c5e36789d253620cf9",
+      "paws:labeled_final:test:5357": "e8f9cbd552bfd1cf02eb71bc730f596e175ce979e82face74b813e807f256c9a",
+      "paws:labeled_final:test:5408": "66582109726065655b3f3f9474540b15cc7ae7b0d9facd74f239e79caa07feb5",
+      "paws:labeled_final:test:5532": "18c59a27ef2112c8108dc9cdbd8477727119aa78708f79fb721d8256f0a9a82f",
+      "paws:labeled_final:test:5578": "1bd3066e61bdcc8096e42437eddd574b25c07aa5f16882eecd4f09b4ddb32684",
+      "paws:labeled_final:test:5632": "5ae307c3d89ef8ec60484d9e88aa67c86fd1d707e07076aac5cd8913c6c633b3",
+      "paws:labeled_final:test:5646": "0c76c477fbef7e2790629f64e9d4edb8fcc23592961e7d4a6bee07c549ed7f9b",
+      "paws:labeled_final:test:5679": "8285d7926f27169c9eaadd3ca7f4d0df3c2bbbc810648442c58efdb2b275a89e",
+      "paws:labeled_final:test:5813": "0ea6456971d2807ca069e667d810b3dbab8a0196b934aeb810562a62471047a6",
+      "paws:labeled_final:test:5916": "4461ec23a2188d485cacf79fdd83aba3d7048eb1148a5949a53a3e29b1a4cbd0",
+      "paws:labeled_final:test:5960": "66e3739ff542cbe855601be9d2543ed2a2c26250ce25c6a160addf0028071c1b",
+      "paws:labeled_final:test:5998": "7e5abe6a85ebe4c8e4652176b2ee4598f110b026bd174a5817fe05ac9536b42a",
+      "paws:labeled_final:test:6001": "2ade842ced7e5aef2c2ec2ff35db15568e20f4c451ad8e6d0ade800c024b6aab",
+      "paws:labeled_final:test:6073": "44c886c510ce3ca2892bc77dd4a3dbd2054e6a19d021d042fc000d551967a202",
+      "paws:labeled_final:test:6152": "0668b4b15de05383d059033c481c5ea7908ed6ffde31641c92be3eb8c874a674",
+      "paws:labeled_final:test:6225": "db61bd0a319ff25fad03b8c32e5a632e0319d2321dacc0abb6b9fac5457a61e8",
+      "paws:labeled_final:test:6263": "ba755407c477285d49d4f703fe12b7be1f48b2dc198624a40ae14b4067561db7",
+      "paws:labeled_final:test:6378": "86debff6e44a01da642ed539c8f6470de6b91453c188ee9b4e8e617721627400",
+      "paws:labeled_final:test:6543": "da94ff4bd1c616c032c4f3efbddf4c9b57110c6e5813de796746c47b70f768e6",
+      "paws:labeled_final:test:6608": "07ee22ce99da2bb9c88bd3a1f0a356a2f2e07e8e5c750e8fa8f631e5d2e5f794",
+      "paws:labeled_final:test:6619": "bba49663cca29725d415b326d07e10dbe6c40eeb183cff65c6384715005d32fa",
+      "paws:labeled_final:test:6633": "ee5eccec4df8be3b08e50b2b044910b553fd8b478bf0bd7e8a8526bb59c5994c",
+      "paws:labeled_final:test:6666": "967c8d93c7e52d5b82428ac538715b5445b26fc7bdd416592a4bd6353c0d4c72",
+      "paws:labeled_final:test:6681": "43ad653ded864d11da6da48753246639051025ecbb549f60482c0cc286df0991",
+      "paws:labeled_final:test:6729": "0a87ff7e9f81a894325a9e8bc9253bfa8754b282a10c03993d673af3a5ffcd3f",
+      "paws:labeled_final:test:6836": "a95e251d378a1d6f83fd4b7309d929a883419d2ce9dd15b5ba2fbe4c64034dff",
+      "paws:labeled_final:test:6858": "c434e3c4f87299642b4f3764d1f335677094dfee2cc66a5688cc9d158613f86e",
+      "paws:labeled_final:test:6966": "60e2cf830f125bccc67b6803a04ed36e2376a5e0dbdc046a00a957c186081f23",
+      "paws:labeled_final:test:6976": "67dd2f8d9275913c5cb6c52b968b92c208336a4ac178c10f43dc4ef5a95a1d6d",
+      "paws:labeled_final:test:7043": "be08a2694637f07225fa02513ee565533cd5f273ffe879d33f7b874a0275614a",
+      "paws:labeled_final:test:7058": "afbf6977092204a48c83b5a9c62346247a502b23639c47bea9af31be6e1a72ba",
+      "paws:labeled_final:test:7080": "fb5f4a7305c5a5832161634a9d1bdd06e44797dba7d46f546ae5d8ea70cd7f1a",
+      "paws:labeled_final:test:7176": "d433833b3d2a494efc39189a36b4423e1ba3a00cb3880428d00d4e1b62308de4",
+      "paws:labeled_final:test:7429": "90cda219a7eb83e18cf4d34b9f4c12c855854809a0dba1931e06d14329868ca4",
+      "paws:labeled_final:test:7458": "04f418586d70db73d74d6ba82853b79bbd77c416eee1e8b54e2f683e8aff2c2b",
+      "paws:labeled_final:test:7464": "e0129bdabf41a9964ec94418f7506464995b9c4e42a697a694d4427937709434",
+      "paws:labeled_final:test:7543": "97a227bcfd529699741647abfc6fd4487de98aa119065b14d254c16d33e138eb",
+      "paws:labeled_final:test:7584": "3abc5c87e286a989adbd78b4fd090b865a1ae603e42099b98f24ad468fb0abf0",
+      "paws:labeled_final:test:7821": "3edf6d53310cfdb3e3bf68a9b8bc9b99d07877e053c1d700a41517103de4c0eb",
+      "paws:labeled_final:test:7826": "c6a9ea650981c54737707a2cc53e8f242f31ca9569ebdae3f730e422412b9fd5",
+      "paws:labeled_final:test:7842": "c9e5ca46dad46d688b7730426613bf4e3314239380f44b80d59b77b27f00d6db",
+      "paws:labeled_final:test:7870": "5bc7b48cbf3e4cb2c672bf7a5ae71d6adef87ed31aa962c7a49108fc820d7d59",
+      "paws:labeled_final:test:7894": "d2cb98d6d7ac0f72e343f69fde8ca7afe90e334fba2a3725b8c61424d3081a06",
+      "paws:labeled_final:test:7904": "a949a1101d675136a34e8e9d73edb923baba47170de811f2ee4eefe708c45b14",
+      "paws:labeled_final:test:7912": "4ae80dc62fd897618e27e6c218268ba1583699e39ce76af00b08e592f2c81b7c"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "paws:labeled_final:test:52",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:67",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:122",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:495",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:504",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:629",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:796",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:831",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:856",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:886",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1025",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1055",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1178",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1340",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1344",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1415",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1460",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1477",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1490",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1514",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1666",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:1958",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2160",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2282",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2346",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2463",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2677",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2679",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2725",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2738",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2841",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2869",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2884",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:2929",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3017",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3035",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3171",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3367",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3436",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3475",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3607",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3609",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3626",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:3912",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4224",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4296",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4365",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4438",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4453",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4454",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4571",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4792",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4898",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:4935",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5174",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5186",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5357",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5408",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5532",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5578",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5632",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5646",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5679",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5813",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5916",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5960",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:5998",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6001",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6073",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6152",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6225",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6263",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6378",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6543",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6608",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6619",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6633",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6666",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6681",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6729",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6836",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6858",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6966",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:6976",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7043",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7058",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7080",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7176",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7429",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7458",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7464",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7543",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7584",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7821",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7826",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7842",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7870",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7894",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7904",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "paws:labeled_final:test:7912",
+      "question_id": "paraphrase",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

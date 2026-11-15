@@ -1,0 +1,1981 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "stepgame-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/stepgame",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:35:42+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.12,
+    "uniform_accuracy_baseline": 0.11111111111111088,
+    "fixed_answer_accuracy_baseline": 0.16,
+    "baseline_adjusted_skill": -0.04761904761904763,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 28.156734800002596,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "stepgame:default:test:2209": "181315dbb89a58a335965725dd2516373896f30f67e27dd2b8a4f16978be1365",
+      "stepgame:default:test:2227": "26d62870bacf59deb03f1ce1990cc69af48a4ceb47e6bbbc3fcbcd84c377f983",
+      "stepgame:default:test:4494": "6a928415230897f5d5e6be853295b69cf7af29bd58ca3d17a26b88cdb66fbbf1",
+      "stepgame:default:test:5214": "5cf4f7c2db3260d43b26c06b01f2e9bf7888b8f3ad4eb4053f22bbd4320a331c",
+      "stepgame:default:test:6287": "83f3d7f6932dec0091359e8d474ec98cb3554cff7bad9de19e1cd25cc0b9fbf6",
+      "stepgame:default:test:6475": "badcb3ebbe18a6d2a8efb637d134e8fa639214ef214667acc020299f7075d83c",
+      "stepgame:default:test:7268": "31c4711576458d0a2c4f4a046efcca77b7a8f36e0e76c6e252b298f6c12840f0",
+      "stepgame:default:test:7293": "6defa25246e6986e45b88aa64870cbbff763e9468fd91492dff9607be0f9b786",
+      "stepgame:default:test:7331": "90b4d49b75eea44dd96653a361261893f09835a7efbc69e9aa72f845b10903a0",
+      "stepgame:default:test:7925": "07a5c3ce07bc02e987d74054cb1eb2e6cb3707d60e923d7987d2093d3c797bcc",
+      "stepgame:default:test:8731": "4b8a4035dfdd7e16540139ead841c81dbc14eca2e54a9b9b77c71a82ff0a6025",
+      "stepgame:default:test:10062": "20f870b2ac849250ccc84942c2bf0558b6281c2064b12e33347d2c9ce4a1b5e6",
+      "stepgame:default:test:10807": "167b736e4d7c7b8cfd36eb5130fc539a6181f4a7321efbc3d733b4ae99022c16",
+      "stepgame:default:test:11449": "9a278825b40953273b39822bc1858aa7178da087eb7cc78069229acb4cfe48ac",
+      "stepgame:default:test:12803": "57ce9823f069b5cf612931f532e7d2f4c7e49c2e9ec584d80d4d46b79899cc4c",
+      "stepgame:default:test:14958": "01e0ac5cb589ba307d07b5755d159f115bbfb74a85afa135ae3bc1323a397b64",
+      "stepgame:default:test:15057": "bdd583425a18cf25ee5c367cd61d31342d8409027edfd4ba6919ecb750782ffa",
+      "stepgame:default:test:15449": "feda394f683bc47cb1b604cdf64e0916fb69ff4157a1a28760fe37e3d769add5",
+      "stepgame:default:test:17914": "6858044f9260f7de71aade9dbe4e1ef2e290ae463894a855053f819cba111fb1",
+      "stepgame:default:test:18003": "b24853806168ade2aac0c1d1ae657ea3ca87749908fb0c222d50ec0a5df9c550",
+      "stepgame:default:test:19524": "339522b9063ba9da5bc2b0f7cf640673421dd456966565dea36fb412b145c93f",
+      "stepgame:default:test:22292": "66d8dac6eb0d9b095d499bb03f2c580b89044157f5ba9d6245c3b2779a11fff4",
+      "stepgame:default:test:22972": "a76a7f5341ff19b5e29a5f3b7a2ba053af54247a44e2cbeae0c2e55b10e66237",
+      "stepgame:default:test:26078": "f92dfbbe0bf45ea03fc5a78fc200b5be87adf88058b69c8b733ca032cb9d34f6",
+      "stepgame:default:test:26583": "09f0603d2621694fdd2e50a18ad12777867d6c9a9f430a607a4b017200430340",
+      "stepgame:default:test:28171": "efaf410062c62a6e41227b934cfda7991f9e2dd68c20820bd91ad6b98d27a0f9",
+      "stepgame:default:test:28181": "0f922615f6cfc484dfc245dc70e44bae3dfafcf4978ccf619afcb8a405f88ca7",
+      "stepgame:default:test:28757": "b8d6bd5a25aa0ddaee6dabccee62777deed6aac1f01c20c1eef97c599605c8f4",
+      "stepgame:default:test:31317": "1127f578e8d993b437fe59b40296d311138cc47238f8278b3f8c59201047f7f4",
+      "stepgame:default:test:31708": "4d37dfa290adb300da61cb063329a79755a518d148a02968cefb64369e6ef07f",
+      "stepgame:default:test:32232": "855c97f2f835a6a536004989ac31d191673e8151c84b5e4fc57763448f97c924",
+      "stepgame:default:test:32681": "9d6776659beafe3594bbc7f5a885a97ea8dcb2363d77e374e4d45f02d47fbd20",
+      "stepgame:default:test:32850": "1df195351ddcf65d0a6b9d643aee0938c3357807a8f9a75ed5c86ebd765ca528",
+      "stepgame:default:test:36487": "82c3ebde0e8ca48e75c00294b20668fae9f62971c3c57fe6dd8f519ae1d257c6",
+      "stepgame:default:test:38259": "da6a5fb04221e48024e729971e38336119876c8aec85d35d4806c47221f3496a",
+      "stepgame:default:test:38756": "d7f812c7ff74abafa0911dc5a427b3bb72ca1a3c4887bc81c2c6ef3d882671ba",
+      "stepgame:default:test:39420": "f7c01601a10347a582e40e8443505fa8d8626e115e0176741486bd9655cf32d0",
+      "stepgame:default:test:40094": "f29932f0a8fbc3c5e590d889652e045c742aa8c3427922e69c39d47b3a8c593e",
+      "stepgame:default:test:41126": "14ebee356efdca4fa30ba861cf589bda14592db069be7b4a408e35619bcee517",
+      "stepgame:default:test:41555": "03b45593b75094444ee6d9488fcadc387921bc7c74bf393c2b507dff225ea7cf",
+      "stepgame:default:test:42076": "d9711d54ca6629ecdbe903883df02f87e933a23602e399787c3412d3c26b4fe5",
+      "stepgame:default:test:43717": "bc4ce8f615e7fb5d5414a3c99605b71358bd164cee30b8ac2c1c379b58c873fb",
+      "stepgame:default:test:43903": "ef14918eddb72a61e6ee3419d145d7246cedbd8cb23791a086a2d7d747588416",
+      "stepgame:default:test:47221": "c32de19c34072997257c818a00e62b3dc16dd14c289d6602faadfef8fa5fe3ae",
+      "stepgame:default:test:48201": "d2deb64314684cd8a8e24d3de4c98e59a902ac4d7c13733a9a3b693df35dc819",
+      "stepgame:default:test:48661": "9a295b520fa97acc85492733e98d2ab3ad160a7919a0514be22bd97b486a9b17",
+      "stepgame:default:test:51462": "c3ef9cce168974a20c99a245ae59e5f5ea19c19ac1c90ad155f8318d14e91829",
+      "stepgame:default:test:53451": "f0c3411eb7ab8005e6d4439b6638af906ebefb8ad5249dd72daf7c498d56ae4b",
+      "stepgame:default:test:54362": "bdda624a3753d1099d77703b7ade5c2d6ebe29745331e0e72bc4f8d417b4967c",
+      "stepgame:default:test:55435": "8b92ca409e63e2db75cc9689bf0f20a96773b947fc7879aa89868c33431ab815",
+      "stepgame:default:test:56097": "54f674c5707fe601b9955ababfda1dfb3b0392d8526d4f193574534a8bfb6671",
+      "stepgame:default:test:57395": "ba984a6a3d45bc0e533924e0a5d0dffae43fcb5c7d8781603f4a6a49b03dbe57",
+      "stepgame:default:test:57644": "425e5ccb460c2d3392090976ca7e8f7765f66c88d1c5d90e8b9602ed00055778",
+      "stepgame:default:test:58367": "5f55e2f31913a2bcf0c0e6a45c65b6a90d157fe0e3c39dee6d9c596b8c5d602f",
+      "stepgame:default:test:58605": "d7669059284be0cba52a1049bef5024d9e9dc75e9adfc689c7074405ae9a298e",
+      "stepgame:default:test:59505": "4942501aa913d27c26d1a5c7c355a1e26fff5183d71b2d51c667c7744ff413d0",
+      "stepgame:default:test:61816": "2e9c57beaceec7f66b6e143b6a920c0189ea0dc75366f15c50234ee6a9805019",
+      "stepgame:default:test:61963": "ee5076c383cc3d2c83e2c47fb73b64402447129ff5075c555f7ff68689100c26",
+      "stepgame:default:test:62507": "bada85563fdcb92ddfdc32726b68cad1cc5ac3e03d74a5cb5dcca7e0b5d93818",
+      "stepgame:default:test:64146": "d9c3b1a11f53be182a6011e87e4c4a0b7128a9e76a7baef3242659d8b7b35b53",
+      "stepgame:default:test:65851": "9281d5241c622e2ddf6f8b27c550273e98416c3b132079899d358a379cd6eea0",
+      "stepgame:default:test:65942": "0a8f96de22f08695ed2ed046f6819832302a0dd16a180c6387bb977196b245df",
+      "stepgame:default:test:70872": "d9fd289adbe8f9c6622a7afb333ce65a78a8f3366e3a159f56dd3fa63f287896",
+      "stepgame:default:test:71035": "6aa7afa48e36b6f71b9e0d9f52a1808d91be1334b43c9ec04aa961febe9c2800",
+      "stepgame:default:test:71208": "2e21009a3dfcad5fe40fc44367265a6b932b79d06e0cbc7bc6435bb2287708a0",
+      "stepgame:default:test:71827": "a74a3852a478f1c047d50cf2b6caca8e4fa74ecd3577d1836e36bd083399983a",
+      "stepgame:default:test:72049": "defaa577c31dc98fec8d61c5e899d12486168f5438c11202b3bdf2077af40a55",
+      "stepgame:default:test:73164": "336662f74d40ef555cb2d46a8a73c52c37e3d9c4ad33e56840c7cb19516f902a",
+      "stepgame:default:test:74752": "c24f266d12c17e7fcf891a886f67c76dfc3c5c6f969473ee167ea1f6a791aa78",
+      "stepgame:default:test:75438": "348e978455d950ba81cd10a7abf756de369e2baab18d910297a0a9e9ed5aac7e",
+      "stepgame:default:test:76750": "07b31ec008e83c4760ab3d84901f6b6197b795b179a9de47d7ff79ce02a33577",
+      "stepgame:default:test:77304": "bae3c650b936b7118b1faef0b40f5771119d2fc12956a3c9b49b3b306e1df9de",
+      "stepgame:default:test:77461": "15c8197f591eafe68a848f58167f9e07c3a900af9640669365de1e91dc068be5",
+      "stepgame:default:test:77522": "017354a2bbf7a12112be3d31bb4a1145ece6fbbd0058e3c10ba3cd405a25cd8b",
+      "stepgame:default:test:77576": "14bb36d14b98aa50abbb84f2be9dcea7ca241f0de1bc560745feb1fc680974e5",
+      "stepgame:default:test:78770": "48506bee501f2dd3e270b25663e7715c66f98fe57151aeda2cdcaa5993d5a3a6",
+      "stepgame:default:test:79344": "714eda3621e3f63485d4f04d16ad8158699c2590c3e70f8cb3119556b80700ce",
+      "stepgame:default:test:80760": "31fede24c42e8564eb230acc7551f435727f2ce28cb91ebc3414ad158e646a97",
+      "stepgame:default:test:81788": "27edaaef281f359e5b5c12a6ed2b7f3a9bf476303f0782f17bc89e15c543239e",
+      "stepgame:default:test:83210": "a4a27cba87bba501d79053c18d546a3bb531404bae5318113ec3e4dd212c167e",
+      "stepgame:default:test:84451": "39500fd1ed74c0854eeb078a16f891d89a68d4082d1f507dfcd83ed9c01e6b1f",
+      "stepgame:default:test:85608": "d00cab76b2bc3068059df72c87ece2f1d9b6cc72368f1e530fa6f92f5f699886",
+      "stepgame:default:test:86091": "4498ac49998730393b0735ed5167d4fba808e947bbc0dd8928c67b0ebfce179c",
+      "stepgame:default:test:86606": "87ee760c45f665488ec88a8fd1a6c540898f2c03a8c5d47d3ccfde7d4de4decd",
+      "stepgame:default:test:86668": "0d7fa03d8308db058bdb70e54404822e2918ef0072479a52c6109598cd8d5fa2",
+      "stepgame:default:test:90139": "5f10b971512e53d2563fa18fdd192f0739298ab1b7b31c90da22be9e2a66f888",
+      "stepgame:default:test:90731": "df87dc7992abc49b6df55efe364c78c6234a1b024a0f00844c1802d257d58cab",
+      "stepgame:default:test:90797": "f6f4156eeb7cff9234876de1adb1c99e96490250ed00badaec074dd6c2aef7f8",
+      "stepgame:default:test:90835": "9489680ac899d180b4393b70c2ce80eb6af2e84af939dc139a6b37cda50d9761",
+      "stepgame:default:test:91100": "509a7af4fb751a93865d0f62f3b8b271f9b4c490f3f63bcf95560de547d6d0a7",
+      "stepgame:default:test:91590": "cec21ffd898dabdabe91674c1775528eeaa68bb0483fc8e43ff9c510cd40e356",
+      "stepgame:default:test:91763": "c6af26ede6e7e4c1908d455e6bb542a6418b5821d5c43b5ea358b7a433960611",
+      "stepgame:default:test:94469": "3e12f6616e9f3b97719184d3696c8177196e331d77e5d8584e4ef8c88db3e855",
+      "stepgame:default:test:95856": "1c863db0a575b536cd61c2134109ba6914ced16fbd6621868fea70bf3de979ba",
+      "stepgame:default:test:96795": "0e2a4530c4ee06875866c5a31e30fb566e0a9e138e684a7fd09e8c7fc69ebef8",
+      "stepgame:default:test:96828": "4f7f6f31adf971ad47541d5bdcb91edc31b322cac529c8985175b62892461e88",
+      "stepgame:default:test:97296": "6d37dc4c2808d365b1c6b401a1621b230cdd3e3ed350f3f9f4cab45be7a7b4af",
+      "stepgame:default:test:98219": "52fdfb2973cc104865e3d91aededab051226e1af859716d9559404caea8a9474",
+      "stepgame:default:test:99399": "5ec1d8e198743eaf96e3db6e7837311803e30db892f83c15fb9c0e19a893ba08",
+      "stepgame:default:test:99710": "955e6c8769bc91d312f99c9285e766272264afda87b8c08d17a786ec6d59bbfc"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "stepgame:default:test:2209",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.1855185518551855,
+        "upper-left": 0.16701670167016702,
+        "left": 0.1562156215621562,
+        "overlap": 0.2012201220122012,
+        "lower-left": 0.18261826182618263,
+        "right": 0.1074107410741074,
+        "upper-right": 0.0,
+        "above": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:2227",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.17695926333700332,
+        "overlap": 0.1583425082574317,
+        "lower-right": 0.1856671003903513,
+        "upper-right": 0.2268041237113402,
+        "below": 0.17105394855369832,
+        "left": 0.08117305575017517,
+        "upper-left": 0.0,
+        "above": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:4494",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16595021493551937,
+        "upper-left": 0.11376587023892833,
+        "lower-left": 0.11716485054483655,
+        "below": 0.44326701989403183,
+        "above": 0.10346895931220633,
+        "right": 0.05638308507447766,
+        "upper-right": 0.0,
+        "overlap": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:5214",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.1727272727272727,
+        "left": 0.20489510489510487,
+        "below": 0.12047952047952047,
+        "upper-left": 0.23606393606393605,
+        "lower-right": 0.1805194805194805,
+        "overlap": 0.0853146853146853,
+        "upper-right": 0.0,
+        "right": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:6287",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.14847423711855928,
+        "left": 0.23351675837918962,
+        "overlap": 0.14847423711855928,
+        "upper-right": 0.1934967483741871,
+        "right": 0.18469234617308655,
+        "below": 0.09134567283641822,
+        "lower-left": 0.0,
+        "upper-left": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:6475",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.2214563979622415,
+        "right": 0.15702727000299668,
+        "upper-left": 0.13465188292877833,
+        "lower-right": 0.2634102487264009,
+        "above": 0.15902507242033762,
+        "overlap": 0.06442912795924483,
+        "below": 0.0,
+        "left": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:7268",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.17381738173817382,
+        "lower-left": 0.1328132813281328,
+        "upper-right": 0.19041904190419043,
+        "left": 0.23342334233423342,
+        "right": 0.1709170917091709,
+        "above": 0.0986098609860986,
+        "below": 0.0,
+        "lower-right": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:7293",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.15208707809067304,
+        "overlap": 0.09796285200718993,
+        "lower-right": 0.15208707809067304,
+        "lower-left": 0.2213900539245057,
+        "left": 0.26722588376273215,
+        "below": 0.10924705412422607,
+        "upper-right": 0.0,
+        "above": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:7331",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.15912043978010995,
+        "upper-right": 0.12393803098450776,
+        "below": 0.18940529735132436,
+        "upper-left": 0.22158920539730137,
+        "above": 0.2107946026986507,
+        "left": 0.09515242378810596,
+        "lower-left": 0.0,
+        "lower-right": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:7925",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.1650990594356614,
+        "overlap": 0.1367820692415449,
+        "upper-left": 0.1504902941765059,
+        "above": 0.2716629977986792,
+        "below": 0.18170902541524914,
+        "right": 0.09425655393235942,
+        "upper-right": 0.0,
+        "lower-right": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:8731",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.2217,
+        "right": 0.1045,
+        "lower-right": 0.1572,
+        "upper-left": 0.2285,
+        "overlap": 0.2051,
+        "lower-left": 0.083,
+        "upper-right": 0.0,
+        "below": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:10062",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16874812668598263,
+        "lower-left": 0.14926566090518537,
+        "upper-left": 0.1560595464082326,
+        "upper-right": 0.2575681886302328,
+        "lower-right": 0.17664102307922872,
+        "overlap": 0.09171745429113799,
+        "right": 0.0,
+        "below": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:10807",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.2039164751723449,
+        "above": 0.1609551403736637,
+        "left": 0.13367968828054752,
+        "lower-left": 0.2927365371165951,
+        "overlap": 0.13168148666200422,
+        "right": 0.07703067239484465,
+        "below": 0.0,
+        "upper-left": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:11449",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.1709,
+        "overlap": 0.1309,
+        "above": 0.2227,
+        "right": 0.2158,
+        "below": 0.1816,
+        "upper-left": 0.0781,
+        "lower-left": 0.0,
+        "left": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:12803",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.21010505252626313,
+        "lower-left": 0.12896448224112056,
+        "upper-left": 0.1631815907953977,
+        "above": 0.26573286643321664,
+        "below": 0.1533766883441721,
+        "left": 0.07863931965982993,
+        "lower-right": 0.0,
+        "right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:14958",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.1406140614061406,
+        "above": 0.35943594359435943,
+        "lower-right": 0.1562156215621562,
+        "overlap": 0.1494149414941494,
+        "upper-left": 0.1357135713571357,
+        "right": 0.05860586058605861,
+        "lower-left": 0.0,
+        "upper-right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:15057",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.1553,
+        "lower-right": 0.2451,
+        "upper-left": 0.1465,
+        "overlap": 0.209,
+        "lower-left": 0.1582,
+        "left": 0.0859,
+        "upper-right": 0.0,
+        "below": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:15449",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.20733173076923078,
+        "upper-right": 0.17407852564102566,
+        "below": 0.13982371794871795,
+        "lower-right": 0.2171474358974359,
+        "left": 0.17407852564102566,
+        "upper-left": 0.08754006410256411,
+        "lower-left": 0.0,
+        "overlap": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:17914",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.1806096951524238,
+        "lower-left": 0.19230384807596201,
+        "upper-left": 0.15612193903048477,
+        "below": 0.23918040979510247,
+        "left": 0.15422288855572214,
+        "overlap": 0.07756121939030486,
+        "above": 0.0,
+        "lower-right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:18003",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.152223888055972,
+        "lower-right": 0.15422288855572214,
+        "lower-left": 0.16401799100449777,
+        "above": 0.2674662668665667,
+        "left": 0.16401799100449777,
+        "upper-right": 0.09805097451274364,
+        "upper-left": 0.0,
+        "overlap": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:19524",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.17688844422211106,
+        "overlap": 0.09914957478739368,
+        "above": 0.21980990495247624,
+        "lower-right": 0.28724362181090546,
+        "right": 0.14657328664332164,
+        "upper-right": 0.0703351675837919,
+        "upper-left": 0.0,
+        "below": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:22292",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.13393393393393394,
+        "lower-right": 0.3812812812812813,
+        "upper-left": 0.1026026026026026,
+        "right": 0.22772772772772773,
+        "upper-right": 0.1012012012012012,
+        "overlap": 0.05325325325325325,
+        "left": 0.0,
+        "above": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:22972",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.15813674530187927,
+        "below": 0.1845261895241903,
+        "upper-right": 0.20011995201919233,
+        "lower-right": 0.19422231107556978,
+        "lower-left": 0.15613754498200721,
+        "right": 0.10685725709716114,
+        "upper-left": 0.0,
+        "above": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:26078",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.20710355177588793,
+        "upper-left": 0.12406203101550775,
+        "above": 0.18859429714857429,
+        "upper-right": 0.2501250625312656,
+        "below": 0.15927963981990995,
+        "overlap": 0.07083541770885443,
+        "left": 0.0,
+        "lower-left": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:26583",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.31789137380191695,
+        "upper-left": 0.16773162939297126,
+        "below": 0.13069089456869007,
+        "right": 0.1959864217252396,
+        "upper-right": 0.13069089456869007,
+        "lower-right": 0.05700878594249201,
+        "overlap": 0.0,
+        "lower-left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:28171",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.1416141614161416,
+        "lower-right": 0.34573457345734576,
+        "upper-left": 0.11571157115711571,
+        "below": 0.22362236223622362,
+        "right": 0.0962096209620962,
+        "lower-left": 0.07710771077107711,
+        "left": 0.0,
+        "upper-right": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:28181",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.2002,
+        "left": 0.1089,
+        "above": 0.1738,
+        "lower-left": 0.2383,
+        "overlap": 0.1855,
+        "upper-left": 0.0933,
+        "lower-right": 0.0,
+        "below": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:28757",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.31465732866433216,
+        "overlap": 0.09474737368684343,
+        "lower-left": 0.11965982991495747,
+        "lower-right": 0.24522261130565282,
+        "upper-right": 0.15337668834417206,
+        "below": 0.07233616808404202,
+        "upper-left": 0.0,
+        "left": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:31317",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.15630941659161415,
+        "upper-right": 0.16901831281897328,
+        "upper-left": 0.1944361052736916,
+        "lower-right": 0.22765936155308716,
+        "overlap": 0.15630941659161415,
+        "below": 0.09626738717101971,
+        "right": 0.0,
+        "lower-left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:31708",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.16201899050474763,
+        "upper-left": 0.16691654172913545,
+        "lower-left": 0.13863068465767117,
+        "below": 0.30254872563718144,
+        "right": 0.14742628685657172,
+        "left": 0.08245877061469266,
+        "overlap": 0.0,
+        "upper-right": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:32232",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.13968381028617172,
+        "right": 0.15539323594156493,
+        "upper-left": 0.16509905943566142,
+        "below": 0.3087852711626976,
+        "overlap": 0.13968381028617172,
+        "left": 0.09135481288773264,
+        "above": 0.0,
+        "lower-right": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:32681",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.2119,
+        "overlap": 0.1099,
+        "below": 0.1206,
+        "above": 0.3555,
+        "left": 0.1289,
+        "lower-right": 0.0732,
+        "right": 0.0,
+        "upper-left": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:32850",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.16396882494004794,
+        "left": 0.33173461231015183,
+        "right": 0.15907274180655473,
+        "above": 0.18345323741007194,
+        "upper-left": 0.09952038369304554,
+        "overlap": 0.06225019984012789,
+        "lower-left": 0.0,
+        "upper-right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:36487",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.33413365346138457,
+        "right": 0.12895158063225287,
+        "overlap": 0.12705082032813125,
+        "lower-left": 0.20318127250900359,
+        "above": 0.14365746298519408,
+        "upper-left": 0.06302521008403361,
+        "left": 0.0,
+        "lower-right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:38259",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16774837743384924,
+        "right": 0.1345981028457314,
+        "upper-left": 0.218472291562656,
+        "overlap": 0.19600599101347976,
+        "above": 0.2017973040439341,
+        "lower-right": 0.08137793310034948,
+        "below": 0.0,
+        "upper-right": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:38756",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.11904047976011994,
+        "below": 0.1933033483258371,
+        "overlap": 0.1151424287856072,
+        "left": 0.3338330834582709,
+        "upper-right": 0.1503248375812094,
+        "above": 0.08835582208895554,
+        "lower-left": 0.0,
+        "lower-right": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:39420",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.172796322206676,
+        "overlap": 0.10293823705776534,
+        "above": 0.1805916450129922,
+        "right": 0.23226064361383172,
+        "left": 0.18938636817909255,
+        "upper-right": 0.12202678392964222,
+        "lower-left": 0.0,
+        "lower-right": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:40094",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.168,
+        "above": 0.2295,
+        "overlap": 0.1416,
+        "left": 0.2031,
+        "below": 0.1846,
+        "lower-right": 0.0732,
+        "upper-right": 0.0,
+        "lower-left": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:41126",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.28505747126436787,
+        "left": 0.12693653173413294,
+        "above": 0.17081459270364818,
+        "overlap": 0.1903048475762119,
+        "right": 0.1581209395302349,
+        "below": 0.0687656171914043,
+        "lower-left": 0.0,
+        "lower-right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:41555",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.1768,
+        "lower-left": 0.2207,
+        "above": 0.1445,
+        "upper-right": 0.2168,
+        "right": 0.1465,
+        "left": 0.0947,
+        "lower-right": 0.0,
+        "upper-left": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:42076",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.2098740755546672,
+        "overlap": 0.11373176094343394,
+        "left": 0.2127723365980412,
+        "below": 0.2059764141515091,
+        "lower-left": 0.17959224465320808,
+        "upper-left": 0.07805316809914052,
+        "above": 0.0,
+        "upper-right": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:43717",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.16118059029514759,
+        "above": 0.15437718859429714,
+        "left": 0.23451725862931466,
+        "lower-left": 0.19149574787393697,
+        "lower-right": 0.17198599299649825,
+        "upper-right": 0.0864432216108054,
+        "right": 0.0,
+        "below": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:43903",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.18659329664832416,
+        "above": 0.1426713356678339,
+        "lower-left": 0.20130065032516256,
+        "lower-right": 0.22471235617808902,
+        "left": 0.16708354177088544,
+        "upper-right": 0.07763881940970485,
+        "upper-left": 0.0,
+        "overlap": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:47221",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.1758,
+        "lower-right": 0.1387,
+        "right": 0.2324,
+        "overlap": 0.165,
+        "upper-right": 0.208,
+        "above": 0.0801,
+        "left": 0.0,
+        "upper-left": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:48201",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.18659329664832416,
+        "upper-right": 0.11825912956478238,
+        "lower-right": 0.17198599299649825,
+        "lower-left": 0.2501250625312656,
+        "left": 0.17488744372186094,
+        "below": 0.09814907453726864,
+        "right": 0.0,
+        "upper-left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:48661",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.1836,
+        "upper-left": 0.1221,
+        "left": 0.2207,
+        "lower-right": 0.2354,
+        "upper-right": 0.1689,
+        "overlap": 0.0693,
+        "below": 0.0,
+        "above": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:51462",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.17859284429342395,
+        "right": 0.143513891665001,
+        "below": 0.17569458325005,
+        "lower-right": 0.20497701379172498,
+        "overlap": 0.20497701379172498,
+        "upper-right": 0.09224465320807515,
+        "left": 0.0,
+        "above": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:53451",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.1572,
+        "lower-left": 0.1895,
+        "upper-left": 0.1367,
+        "overlap": 0.2852,
+        "upper-right": 0.1406,
+        "lower-right": 0.0908,
+        "above": 0.0,
+        "left": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:54362",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.24497751124437783,
+        "lower-left": 0.12883558220889554,
+        "upper-left": 0.17081459270364818,
+        "right": 0.1933033483258371,
+        "upper-right": 0.17371314342828587,
+        "lower-right": 0.08835582208895554,
+        "overlap": 0.0,
+        "above": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:55435",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.14465912503754128,
+        "above": 0.17789568525377916,
+        "upper-left": 0.12413655020522575,
+        "below": 0.3871258384222645,
+        "overlap": 0.11292421663830213,
+        "upper-right": 0.053258584442887176,
+        "lower-right": 0.0,
+        "left": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:56097",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16698330166983302,
+        "upper-right": 0.15718428157184283,
+        "upper-left": 0.2597740225977402,
+        "right": 0.18068193180681932,
+        "overlap": 0.15528447155284472,
+        "lower-right": 0.08009199080091992,
+        "above": 0.0,
+        "lower-left": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:57395",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.15216305325207313,
+        "lower-right": 0.17853931461684486,
+        "above": 0.19322609651313818,
+        "overlap": 0.196123488860026,
+        "left": 0.19022879408532326,
+        "upper-left": 0.08971925267259467,
+        "below": 0.0,
+        "upper-right": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:57644",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.13690535803705556,
+        "overlap": 0.09093640460691037,
+        "lower-left": 0.11347020530796194,
+        "left": 0.5399098647971958,
+        "above": 0.0743114672008012,
+        "right": 0.044466700050075116,
+        "upper-left": 0.0,
+        "lower-right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:58367",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.1454854514548545,
+        "above": 0.39646035396460355,
+        "left": 0.0927907209279072,
+        "below": 0.21187881211878812,
+        "upper-left": 0.09719028097190281,
+        "upper-right": 0.056194380561943806,
+        "lower-right": 0.0,
+        "right": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:58605",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.13764494202319072,
+        "upper-left": 0.10205917632946822,
+        "upper-right": 0.13564574170331867,
+        "below": 0.2732906837265094,
+        "lower-left": 0.16883246701319474,
+        "left": 0.18252698920431829,
+        "above": 0.0,
+        "lower-right": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:59505",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.13574072221666497,
+        "above": 0.4728418525557667,
+        "upper-left": 0.11433430029008702,
+        "lower-left": 0.148444533360008,
+        "lower-right": 0.07712313694108232,
+        "upper-right": 0.051515454636390914,
+        "below": 0.0,
+        "right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:61816",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.15342273819055244,
+        "lower-right": 0.12510008006405124,
+        "left": 0.10898718975180144,
+        "above": 0.4378502802241794,
+        "below": 0.11629303442754203,
+        "upper-left": 0.058346677341873494,
+        "lower-left": 0.0,
+        "overlap": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:61963",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.2657062825130052,
+        "lower-left": 0.14265706282513005,
+        "upper-right": 0.16416566626650658,
+        "upper-left": 0.20808323329331732,
+        "overlap": 0.14755902360944376,
+        "right": 0.07182873149259704,
+        "below": 0.0,
+        "above": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:62507",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.16508254127063532,
+        "upper-left": 0.1426713356678339,
+        "upper-right": 0.18369184592296148,
+        "lower-right": 0.21100550275137567,
+        "above": 0.20520260130065032,
+        "right": 0.09234617308654326,
+        "lower-left": 0.0,
+        "left": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:64146",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.17715430861723447,
+        "right": 0.11452905811623246,
+        "below": 0.14188376753507015,
+        "lower-left": 0.3404809619238477,
+        "lower-right": 0.14869739478957916,
+        "upper-right": 0.07725450901803607,
+        "above": 0.0,
+        "left": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:65851",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.1426713356678339,
+        "lower-right": 0.22761380690345173,
+        "below": 0.1855927963981991,
+        "overlap": 0.18859429714857429,
+        "left": 0.15927963981990995,
+        "upper-right": 0.09624812406203101,
+        "above": 0.0,
+        "upper-left": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:65942",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.17488744372186094,
+        "lower-right": 0.14457228614307152,
+        "right": 0.10945472736368184,
+        "above": 0.3106553276638319,
+        "upper-right": 0.17688844422211106,
+        "overlap": 0.08354177088544272,
+        "lower-left": 0.0,
+        "below": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:70872",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.14167083541770886,
+        "overlap": 0.11385692846423211,
+        "above": 0.2696348174087044,
+        "below": 0.20620310155077537,
+        "upper-right": 0.1904952476238119,
+        "left": 0.07813906953476739,
+        "lower-left": 0.0,
+        "upper-left": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:71035",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.18535171862509994,
+        "lower-right": 0.13169464428457237,
+        "lower-left": 0.14438449240607515,
+        "overlap": 0.27907673860911275,
+        "right": 0.18245403677058356,
+        "left": 0.07703836930455636,
+        "upper-right": 0.0,
+        "upper-left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:71208",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16218109054527263,
+        "overlap": 0.10795397698849425,
+        "lower-right": 0.37718859429714857,
+        "above": 0.18659329664832416,
+        "upper-right": 0.10645322661330665,
+        "lower-left": 0.05962981490745373,
+        "right": 0.0,
+        "below": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:71827",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.15445445445445444,
+        "above": 0.2795795795795796,
+        "right": 0.14274274274274273,
+        "upper-right": 0.19839839839839837,
+        "below": 0.14564564564564564,
+        "lower-right": 0.07917917917917919,
+        "lower-left": 0.0,
+        "overlap": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:72049",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.16301849075462269,
+        "upper-right": 0.20889555222388806,
+        "lower-left": 0.11714142928535733,
+        "upper-left": 0.3338330834582709,
+        "right": 0.10834582708645678,
+        "overlap": 0.0687656171914043,
+        "above": 0.0,
+        "below": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:73164",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.17200320192115268,
+        "above": 0.22373424054432658,
+        "below": 0.17390434260556334,
+        "lower-left": 0.1660996597958775,
+        "upper-left": 0.18561136682009205,
+        "overlap": 0.0786471883129878,
+        "upper-right": 0.0,
+        "left": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:74752",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.19433886777355472,
+        "below": 0.1445289057811562,
+        "lower-left": 0.21974394878975795,
+        "above": 0.2031406281256251,
+        "upper-left": 0.15623124624924986,
+        "upper-right": 0.08201640328065614,
+        "right": 0.0,
+        "lower-right": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:75438",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.14237220447284346,
+        "lower-left": 0.1180111821086262,
+        "below": 0.08097044728434505,
+        "left": 0.5303514376996805,
+        "lower-right": 0.08486421725239617,
+        "overlap": 0.04343051118210862,
+        "above": 0.0,
+        "right": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:76750",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.2430784607696152,
+        "upper-left": 0.13663168415792104,
+        "overlap": 0.16691654172913545,
+        "lower-right": 0.20109945027486256,
+        "lower-left": 0.16691654172913545,
+        "upper-right": 0.08535732133933034,
+        "left": 0.0,
+        "right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:77304",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.13876938469234615,
+        "upper-right": 0.12016008004002,
+        "below": 0.11475737868934466,
+        "above": 0.49044522261130563,
+        "lower-left": 0.08944472236118058,
+        "left": 0.04642321160580289,
+        "right": 0.0,
+        "overlap": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:77461",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.13278672132786723,
+        "below": 0.22657734226577342,
+        "above": 0.1845815418458154,
+        "lower-right": 0.208979102089791,
+        "upper-left": 0.15818418158184183,
+        "right": 0.08889111088891112,
+        "upper-right": 0.0,
+        "overlap": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:77522",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16514863377039338,
+        "upper-right": 0.15543989590631568,
+        "right": 0.22290061054949456,
+        "above": 0.22580322290061056,
+        "upper-left": 0.14372935642077872,
+        "lower-right": 0.08697828045240717,
+        "lower-left": 0.0,
+        "below": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:77576",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.16028014007003502,
+        "above": 0.29894947473736866,
+        "below": 0.1396698349174587,
+        "upper-left": 0.19929964982491244,
+        "lower-left": 0.11725862931465732,
+        "right": 0.08454227113556778,
+        "upper-right": 0.0,
+        "lower-right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:78770",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.2753724627537246,
+        "upper-left": 0.13378662133786623,
+        "overlap": 0.13378662133786623,
+        "lower-right": 0.22457754224577542,
+        "below": 0.1640835916408359,
+        "upper-right": 0.06839316068393161,
+        "left": 0.0,
+        "lower-left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:79344",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.18542582966813276,
+        "overlap": 0.13084766093562575,
+        "left": 0.14834066373450622,
+        "lower-left": 0.25379848060775695,
+        "below": 0.19422231107556978,
+        "lower-right": 0.08736505397840864,
+        "upper-right": 0.0,
+        "above": 0.0,
+        "right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:80760",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.208020802080208,
+        "lower-left": 0.1079107910791079,
+        "above": 0.2617261726172617,
+        "below": 0.17481748174817482,
+        "right": 0.1699169916991699,
+        "left": 0.0776077607760776,
+        "upper-left": 0.0,
+        "lower-right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:81788",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.1494149414941494,
+        "lower-left": 0.125012501250125,
+        "upper-right": 0.1855185518551855,
+        "lower-right": 0.2656265626562656,
+        "upper-left": 0.17971797179717972,
+        "right": 0.09470947094709471,
+        "below": 0.0,
+        "left": 0.0,
+        "above": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:83210",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.1602641056422569,
+        "upper-right": 0.1924769907963185,
+        "upper-left": 0.15726290516206481,
+        "lower-right": 0.2471988795518207,
+        "right": 0.16216486594637855,
+        "below": 0.08063225290116047,
+        "above": 0.0,
+        "left": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:84451",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.15442353883106485,
+        "upper-right": 0.12019615692554043,
+        "left": 0.10308246597277822,
+        "upper-left": 0.4905924739791834,
+        "overlap": 0.07916333066453163,
+        "lower-right": 0.05254203362690152,
+        "lower-left": 0.0,
+        "right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:85608",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.13293293293293293,
+        "above": 0.3538538538538538,
+        "overlap": 0.14564564564564564,
+        "upper-left": 0.1808808808808809,
+        "below": 0.11681681681681681,
+        "right": 0.06986986986986987,
+        "lower-right": 0.0,
+        "upper-right": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:86091",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.18245403677058356,
+        "overlap": 0.14438449240607515,
+        "below": 0.2575939248601119,
+        "left": 0.14828137490007995,
+        "upper-left": 0.18535171862509994,
+        "lower-left": 0.08193445243804957,
+        "lower-right": 0.0,
+        "right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:86606",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.1824175824175824,
+        "right": 0.14825174825174825,
+        "above": 0.16583416583416583,
+        "lower-right": 0.20979020979020976,
+        "upper-left": 0.1883116883116883,
+        "left": 0.10539460539460538,
+        "lower-left": 0.0,
+        "below": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:86668",
+      "question_id": "direction",
+      "probabilities": {
+        "overlap": 0.1366590022993102,
+        "right": 0.3709887033889833,
+        "lower-left": 0.12256323103069079,
+        "above": 0.21183644906528043,
+        "upper-left": 0.1000699790062981,
+        "upper-right": 0.05788263520943717,
+        "left": 0.0,
+        "below": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:90139",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.15927963981990997,
+        "right": 0.14457228614307152,
+        "lower-left": 0.21690845422711355,
+        "upper-left": 0.21010505252626313,
+        "left": 0.15627813906953478,
+        "above": 0.11285642821410706,
+        "below": 0.0,
+        "lower-right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:90731",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.1786642671465707,
+        "left": 0.4081183763247351,
+        "lower-right": 0.1244751049790042,
+        "below": 0.14747050589882024,
+        "right": 0.08688262347530494,
+        "overlap": 0.05438912217556489,
+        "upper-left": 0.0,
+        "lower-left": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:90797",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-right": 0.2755102040816326,
+        "below": 0.243297318927571,
+        "right": 0.14945978391356543,
+        "upper-right": 0.16706682673069229,
+        "left": 0.11674669867947178,
+        "overlap": 0.047919167667066824,
+        "lower-left": 0.0,
+        "above": 0.0,
+        "upper-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:90835",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.1613420130195293,
+        "overlap": 0.11447170756134202,
+        "upper-left": 0.2171256885327992,
+        "left": 0.22784176264396597,
+        "lower-right": 0.18878317476214324,
+        "above": 0.09043565348022034,
+        "lower-left": 0.0,
+        "right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:91100",
+      "question_id": "direction",
+      "probabilities": {
+        "right": 0.12691116218646947,
+        "below": 0.2215449185570101,
+        "upper-right": 0.13470570600579596,
+        "above": 0.2850004996502449,
+        "left": 0.13470570600579596,
+        "upper-left": 0.09713200759468373,
+        "overlap": 0.0,
+        "lower-left": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:91590",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.2266,
+        "upper-left": 0.123,
+        "lower-left": 0.1553,
+        "overlap": 0.209,
+        "left": 0.1963,
+        "above": 0.0898,
+        "right": 0.0,
+        "lower-right": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:91763",
+      "question_id": "direction",
+      "probabilities": {
+        "left": 0.17852147852147854,
+        "below": 0.13076923076923078,
+        "upper-left": 0.19220779220779222,
+        "upper-right": 0.2214785214785215,
+        "right": 0.17852147852147854,
+        "lower-left": 0.0985014985014985,
+        "above": 0.0,
+        "overlap": 0.0,
+        "lower-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:94469",
+      "question_id": "direction",
+      "probabilities": {
+        "lower-left": 0.17103682946357085,
+        "right": 0.13100480384307445,
+        "upper-right": 0.16323058446757405,
+        "upper-left": 0.2561048839071257,
+        "lower-right": 0.1681345076060849,
+        "above": 0.11048839071257005,
+        "below": 0.0,
+        "overlap": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:95856",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-left": 0.22863718230938562,
+        "above": 0.1650990594356614,
+        "below": 0.1621973183910346,
+        "lower-left": 0.22183309985991595,
+        "overlap": 0.1367820692415449,
+        "lower-right": 0.08545127076245747,
+        "upper-right": 0.0,
+        "right": 0.0,
+        "left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:96795",
+      "question_id": "direction",
+      "probabilities": {
+        "upper-right": 0.19461137820512822,
+        "lower-left": 0.19461137820512822,
+        "left": 0.13201121794871795,
+        "above": 0.262119391025641,
+        "overlap": 0.13792067307692307,
+        "right": 0.07872596153846155,
+        "upper-left": 0.0,
+        "lower-right": 0.0,
+        "below": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:96828",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.1386861313868613,
+        "overlap": 0.125987401259874,
+        "left": 0.28517148285171484,
+        "lower-left": 0.207979202079792,
+        "below": 0.1454854514548545,
+        "lower-right": 0.0966903309669033,
+        "right": 0.0,
+        "upper-left": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:97296",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.2754275427542754,
+        "right": 0.1523152315231523,
+        "lower-right": 0.1328132813281328,
+        "overlap": 0.1787178717871787,
+        "upper-right": 0.18161816181618162,
+        "left": 0.07910791079107911,
+        "below": 0.0,
+        "upper-left": 0.0,
+        "lower-left": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:98219",
+      "question_id": "direction",
+      "probabilities": {
+        "above": 0.21357963055416873,
+        "below": 0.1491762356465302,
+        "right": 0.16085871193210183,
+        "lower-left": 0.2037943085371942,
+        "upper-right": 0.17164253619570644,
+        "upper-left": 0.10094857713429854,
+        "left": 0.0,
+        "lower-right": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:99399",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.1454854514548545,
+        "above": 0.26757324267573246,
+        "right": 0.11868813118688132,
+        "lower-left": 0.251974802519748,
+        "upper-right": 0.12788721127887212,
+        "lower-right": 0.08839116088391162,
+        "upper-left": 0.0,
+        "left": 0.0,
+        "overlap": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "stepgame:default:test:99710",
+      "question_id": "direction",
+      "probabilities": {
+        "below": 0.18123752495009982,
+        "right": 0.1842315369261477,
+        "left": 0.17055888223552892,
+        "above": 0.205688622754491,
+        "upper-left": 0.1627744510978044,
+        "lower-left": 0.09550898203592814,
+        "lower-right": 0.0,
+        "overlap": 0.0,
+        "upper-right": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

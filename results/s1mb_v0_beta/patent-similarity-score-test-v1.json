@@ -1,0 +1,1582 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "patent-similarity-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/patent_similarity",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:24:57+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.2604959632094747,
+    "normalized_score_rmse": 0.3150700715275373,
+    "constant_score_baseline": 0.25,
+    "constant_mae_baseline": 0.2325,
+    "baseline_adjusted_skill": -0.12041274498698784,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 29.07290490000014,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "patent_similarity:default:test:48": "cfc2fc47641ce4094cf735f1a6cd724a3e481118b9ef4b375ada7286428acebd",
+      "patent_similarity:default:test:66": "c58da402df61c5d396a5c055b977d6634fce76e5e4890d3af83aba49950ec20c",
+      "patent_similarity:default:test:196": "67a683918b7c71594474918c148d2c615d27ffb9237fa2ec2c001c663846a4ab",
+      "patent_similarity:default:test:199": "9fbfb111368c7b737709308b298652ee6d654e367b372819ecad463c35608ddf",
+      "patent_similarity:default:test:248": "7cfc9bba789c6ef0ceea6c151d2dc260c66ef9bc74d1117a06a45fd5bcb859f4",
+      "patent_similarity:default:test:294": "de5b59bb5d084c0f9b1402e3e86c2e9eb7c01cb9c61cffba6c8681b580fd21b8",
+      "patent_similarity:default:test:345": "9125e2229fbfdf8a39e52908068275a387e1a23bca355e39cff2c44e027717ac",
+      "patent_similarity:default:test:394": "ad648e475312ed82ca9cc9928b365e600030a5400dcaee704bc7a61bcddc43a9",
+      "patent_similarity:default:test:599": "1b9c22f42a5df34a5b0f29621adcc6bb273918b0092c06e4c7a1f2d17e18990c",
+      "patent_similarity:default:test:712": "832b875700c8ac765e1f69657cc74987d6368c5631e6309d2fcda901093ae81a",
+      "patent_similarity:default:test:841": "865295cea924974adc66672c513182233e908ea386b14a9979f622b5ad54ba9d",
+      "patent_similarity:default:test:985": "d125eb78338cf0ccadc96eb38674a0748a1904e4bd6f5c6bebd1397526819ae3",
+      "patent_similarity:default:test:997": "7f5a97fb0b896fcc22f9aa5a4730c82e227391f52c21c43251b87d13c8d5f2b2",
+      "patent_similarity:default:test:998": "249fa67dd3dd9ea2ddcd4ffb3d03ed0a1a7594eca800a4451ec64c87714fced9",
+      "patent_similarity:default:test:1463": "378248c592c15338272e5f5af223e9e1bab12b772923902a892564b66e9585d3",
+      "patent_similarity:default:test:1660": "d7de090a67ec99676ced9975df845bea8a5d388feef5dc623555e6ca42aa859a",
+      "patent_similarity:default:test:1698": "17c19bb6aef12acf5f8fb6b85c8e0c4f08799cc63d7a65a91319e8a7b2501a04",
+      "patent_similarity:default:test:1762": "77b878b4e54cd8aa455112a28534515024dd8d052b60efd642c337abcf1ff315",
+      "patent_similarity:default:test:1793": "e57a5758df144e7189bd4ab352e8d4388257a0f07f7b94c3b30ee6ddfe01261e",
+      "patent_similarity:default:test:1831": "fee539931ebf0c9f722f8f97e882a1e386ab691bf3ccec14ca7b8e5d21a62434",
+      "patent_similarity:default:test:2085": "30fdda6ef063f045320511b697d65a74b42b242eec65a28fc764e5e122c1f6f1",
+      "patent_similarity:default:test:2186": "63004f26fc07fb6575633997454ccaa557b84dd5490f198a6f13b0091547b942",
+      "patent_similarity:default:test:2210": "369bc039827fa3557e8be97267484591e3c951af952d068cb981e5bed40b79ec",
+      "patent_similarity:default:test:2216": "32299621bbbeadf907f623ac4ef6a39515df219be2c3c573f9c741597328f028",
+      "patent_similarity:default:test:2253": "be6ead189207be38a27cc17c730113a825d788a26a5bf8f6680923fc5f2994ab",
+      "patent_similarity:default:test:2272": "a507dfd547b75ee4f39af6f9ac247021f004d0faf732cdcdc646e708bf38787f",
+      "patent_similarity:default:test:2476": "568e9bf62ef8dc221a532bc7d8a239e122201d6bb85351c76ec029d91a7d25b6",
+      "patent_similarity:default:test:2574": "c66920f347484745fa0e1dc00f86a88419137bb4b13e19d5e2ce16ea3387bf50",
+      "patent_similarity:default:test:2629": "ae86d8f5fe46b7731f9d8ca4b76edaa1f44c53d872108f1dfa471fad58a813d6",
+      "patent_similarity:default:test:2853": "6e2b149fde058f9d697123bd9480cb828aa249cc3f970a99c17e6dfc2da24e8a",
+      "patent_similarity:default:test:2898": "757fef9e3fbdad60aa0bf5ee294ea5e9ca95ca58915f9d3483c6171aaa3994ac",
+      "patent_similarity:default:test:3127": "c82bc780670a6e4f88e73ffb10b6049d61e6c73d73a4726ae04c72d94773e083",
+      "patent_similarity:default:test:3248": "8f7701bb15f9b9eca031c0444f60043636c2eca6f381b246afef4d34006ec7c7",
+      "patent_similarity:default:test:3276": "a373519c030d9f63f62a6fdc8120c8df5a49f453286019f3d808f6b326cbbb06",
+      "patent_similarity:default:test:3301": "19cba2406dbcce970acb56ea517d5b7f6b90e7d59ba04018eabb80a5a895b060",
+      "patent_similarity:default:test:3446": "adcaebf112a696492154b66e1a34de892be914bee3607becc6c996a6c977cff1",
+      "patent_similarity:default:test:3450": "8a47ff888b6a0a0ef38e105f2c86d2592fb8587e936812973f315c81a2d1b8b5",
+      "patent_similarity:default:test:3682": "22987cf734365443d274777d28e87a4b0e1d3a080dba6ec7c1126a3f4af0b69e",
+      "patent_similarity:default:test:3955": "b0d684c01333a7bc65d9be5c7c182a20b0360486e9a09a8789657f87fa7d3e41",
+      "patent_similarity:default:test:4079": "48b1bcfb03876635d0cd50ae1651166ba1e6ee83aa43e53e3edc0891fa4ac915",
+      "patent_similarity:default:test:4242": "9de36451b3a6c6a6f49ead9bd0f5630a45eeaa5b2231218808784d6095113ba3",
+      "patent_similarity:default:test:4273": "19b6709afa5156a184eb9f4632ac9d4c52fee3cb691cd7b1c2184ade4c52cecc",
+      "patent_similarity:default:test:4310": "c1b78b2500ee5c940ce9394b845d44afe44ee7aed997695cbcd062487367df45",
+      "patent_similarity:default:test:4412": "fb5f14839fa08e5d3df41f54e5fb12064a2a63dfbd9ae19536c889424d83a591",
+      "patent_similarity:default:test:4521": "161983f414a8d51743b6011074524a549e8afd91bcdff48a08996810da03b1d6",
+      "patent_similarity:default:test:4523": "1c50de8a3c595d260a383ab23df75c7799c7f1ffea66ed56be9d91c4e343441a",
+      "patent_similarity:default:test:4532": "d1aa6bb21537622fdf6a05494b7bbb32040781f5a086512ec0d197471c487a0f",
+      "patent_similarity:default:test:4547": "97043fe9378a70318fb5843aabf03b9976e0850b24f28db0b60be336591beec0",
+      "patent_similarity:default:test:4595": "849b7e8b1bb4c243a4d6b6a7ebdc36ec3414561f7b874576098b4e879f27075c",
+      "patent_similarity:default:test:4620": "920280769878173b3e9fc79b3f16d90ded72d9ccff65969ce641e4caa6c3858d",
+      "patent_similarity:default:test:4796": "f873148d5431886a7ef066fcf6cd035fb441cd552672b63e56f7fd2e2d136314",
+      "patent_similarity:default:test:4874": "49f77401347e362b4e6507b4f77d546ca827cb541b3004a815eca4cefeebb286",
+      "patent_similarity:default:test:4973": "57d2dffb827faf40c914f60202150cf682bf6b535ee50cc01f51eed6b2681fb3",
+      "patent_similarity:default:test:5107": "3025b00ed217a6257e88e0c05b9fb883085c948e357617afbe4a0b5c089a84d1",
+      "patent_similarity:default:test:5238": "5a5687620fbb40e35f3a99118423d3245d921bc3fe968f87fe5433dbb596c143",
+      "patent_similarity:default:test:5324": "a031baeeeecc2292610e87cd96f5e2ed54aa8b92b8ff3c2cd8258805124abdca",
+      "patent_similarity:default:test:5354": "80822fe174644841b887051f2a389da3f1730aa513a3f86d7b90c557f3681f22",
+      "patent_similarity:default:test:5379": "732ef33eadee475eb676e72470787e23b0c4acd4592730cf45799def17bc9327",
+      "patent_similarity:default:test:5459": "4b8d419a1b3d480ab79be4bb309dcaa7d20ecbc8f6bae18b7dbb48ce0470b239",
+      "patent_similarity:default:test:5464": "b96977014d75d03c80a2d00fbf3dfe084ac6a7eee0986ef4c3f5903f75b0e2ce",
+      "patent_similarity:default:test:5467": "3e2e5e4d7c26c2398b2196ef8af94d8b621f3c99a3053d550aec487057f40a94",
+      "patent_similarity:default:test:5648": "e0126fac0df6c321d94df2f8c51f39a824a05bd075af00107528b01ec99b3e55",
+      "patent_similarity:default:test:5771": "6104e53da85b767ee6857e508e6705f7cef00614406f9fc23aebe8cb38ccc22a",
+      "patent_similarity:default:test:5791": "37bfee8463e067e04d409d0e16c79cf5a86f6a94b4b2897dc558aab908fcd710",
+      "patent_similarity:default:test:5821": "261a15611592150cdc3b412ea142e5b26008595b70f57f5584e470b9f487d090",
+      "patent_similarity:default:test:5937": "15ca40aa75b5b8970989b8b9aea0f832625edab2fd319a33816fbb83a6e2b87c",
+      "patent_similarity:default:test:6191": "8f31de3b6c76d5e7658bc3b4b0a6e617d4d4c5c1c8304cd2df971a74cdb2fa9c",
+      "patent_similarity:default:test:6219": "7a99f8526fb4bed7b13208cae6b9e40828cf6db7ca42208b028ae9f29d1701fe",
+      "patent_similarity:default:test:6255": "4da4491f9eb12638a4472680c97b867f04a7f1eec97877189b9e179207790ba8",
+      "patent_similarity:default:test:6260": "aebe977075664dd8730f75102345338897bbb244ff399f92f324e89f38111fb3",
+      "patent_similarity:default:test:6352": "d00a7e8e0659c601585dc37527f033c1753874c09372bed50d98bd6562cd718b",
+      "patent_similarity:default:test:6370": "5d77309ed8a815a0b0a232944ff126c4ad3b6f5374fdb945f84e9917daeac2a9",
+      "patent_similarity:default:test:6376": "201b47f707f79799d5173e68026d8157f6dcd66fb90f6017c2f70e8604cc28e7",
+      "patent_similarity:default:test:6385": "232c4386e7517b07243fddff68c2bd4e5ae4b2d1005dc8e4fc65f04c4930d069",
+      "patent_similarity:default:test:6442": "76416bd49f31b5f8fe34e4554182f190a7199830d9eed79bd35fcf594b6e5176",
+      "patent_similarity:default:test:6527": "8211a5d2a75f84fdf0626c86c6452bda313d3feb0592400f56433b7b61a22289",
+      "patent_similarity:default:test:6560": "d14fc1e38cb2649a8c33d3be8cba1238e1eb2166aaa893a0d5d7a29729d2a36d",
+      "patent_similarity:default:test:7007": "b952682a026db7076a7b70be254c5e2f10d0aab6d16e22a8ad7bd780e79ef8b2",
+      "patent_similarity:default:test:7049": "9e26edc1411dfcbf2ac3f5c270beed0976de721643ff9203df94ee24a929307f",
+      "patent_similarity:default:test:7067": "a724d55667606cc96f966ad56e758da3b3f0f8d514c0c9c64410924f5608129f",
+      "patent_similarity:default:test:7176": "a29f563f820c587386c6bd4a66f3cb9ae83121d393ae65e196d7e50de2cb6487",
+      "patent_similarity:default:test:7177": "57a55d94c6ee1954bb4b6a1b77ae8ddd482d685e5838eaf75f2a22a7f43a0374",
+      "patent_similarity:default:test:7305": "0024d24ab3e8feae1826af77213a187e7a8c6c17940d8abf604326ffab8311b2",
+      "patent_similarity:default:test:7532": "91298776120d270af3ebe2fc79dcf1334232a5fbe20a6c2936f61981d2e6dbce",
+      "patent_similarity:default:test:7590": "d53818e21fd56fa06349385f3ea481ee209e54e64935b58b1a56351f9c9f5149",
+      "patent_similarity:default:test:7826": "967406549a744b7a7bb318e25c3dd826afc509dcc8ffcb5d02a38172dd2c251c",
+      "patent_similarity:default:test:7953": "8be33b5a80f8388ed42e7006879e13697881dde28669339e2831f4e02d136583",
+      "patent_similarity:default:test:7982": "39c38a5575b756838ef22d70447388769cccf7e706e9ab93f0022b8422479c7e",
+      "patent_similarity:default:test:8213": "064189db82d0b83f08f7967646cb0105e5958f43fb82ca995ec9157771d1ef5d",
+      "patent_similarity:default:test:8257": "f7abe6c63eab8cc4135dab9148b31a672bc8f47516b787f2f28009a7b3dc895a",
+      "patent_similarity:default:test:8287": "3e94effff7cbadfa2875229151ff05c147ba7984b36a21f999fd04d8cbd3c4ca",
+      "patent_similarity:default:test:8560": "2a91de67e238f48f5be4710c09a59e67c282ed1098aa5910de2d0b1260303564",
+      "patent_similarity:default:test:8569": "efe6babf83fe5eed110a07fe4a9891a7493c6cac174b4487f0d7e4b76ab16d05",
+      "patent_similarity:default:test:8685": "20a60665ceefc650fe7bc755cbc290571332216390d63998b6589631f23c2085",
+      "patent_similarity:default:test:8940": "c4ab33c0be5f0184a9bade637fc097eb51fafe8402159e2f9e17808dc9794006",
+      "patent_similarity:default:test:9032": "f61c0cf0a618a668def8ebd78065b79871de81a5842fdec613d4579d965b71ff",
+      "patent_similarity:default:test:9045": "038f60e3ba5f7782e255b80d005cecfe68c6dbe82d31af169da25570dbc95f7b",
+      "patent_similarity:default:test:9074": "01b8a4baa6ce6cc10246b1785b3af9475ae97975ec531f0e27d0272cf63e3521",
+      "patent_similarity:default:test:9137": "79bdce21a9e163152da99ea0791c1b92a65d68d4e11f55613862d1966d4bde98",
+      "patent_similarity:default:test:9176": "8313823b28353f111d6d12eeffe5514ba6a870dea1b39fdb114895edf57ed029"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "patent_similarity:default:test:48",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1533,
+        "1": 0.1816,
+        "2": 0.2559,
+        "3": 0.2412,
+        "4": 0.168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:66",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1447895791583166,
+        "1": 0.20160320641282564,
+        "2": 0.26613226452905814,
+        "3": 0.24268537074148297,
+        "4": 0.1447895791583166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:196",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13948840927258194,
+        "1": 0.18145483613109514,
+        "2": 0.2614908073541167,
+        "3": 0.2692845723421263,
+        "4": 0.14828137490007995
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:199",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14372935642077872,
+        "1": 0.18766890201181063,
+        "2": 0.2522270043038735,
+        "3": 0.2697427684916425,
+        "4": 0.1466319687718947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:248",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14045954045954048,
+        "1": 0.18341658341658346,
+        "2": 0.25954045954045957,
+        "3": 0.26733266733266736,
+        "4": 0.14925074925074927
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:294",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14287145576595534,
+        "1": 0.18885883178038274,
+        "2": 0.26219817653541727,
+        "3": 0.25438332832381527,
+        "4": 0.15168820759442941
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:345",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1437293564207787,
+        "1": 0.19057151436292663,
+        "2": 0.2658392553297968,
+        "3": 0.25613051746571913,
+        "4": 0.1437293564207787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:394",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14825174825174828,
+        "1": 0.18441558441558442,
+        "2": 0.26733266733266736,
+        "3": 0.2517482517482518,
+        "4": 0.14825174825174828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:599",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14826656009591369,
+        "1": 0.18833050254770708,
+        "2": 0.2575681886302328,
+        "3": 0.2575681886302328,
+        "4": 0.14826656009591369
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:712",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13466533466533467,
+        "1": 0.18631368631368633,
+        "2": 0.27902097902097905,
+        "3": 0.26343656343656346,
+        "4": 0.13656343656343656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:841",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13597194388777553,
+        "1": 0.18887775551102204,
+        "2": 0.26613226452905814,
+        "3": 0.26613226452905814,
+        "4": 0.14288577154308618
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:985",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14045954045954046,
+        "1": 0.1756243756243756,
+        "2": 0.2556443556443556,
+        "3": 0.2634365634365634,
+        "4": 0.16483516483516483
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:997",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13642714570858283,
+        "1": 0.1754491017964072,
+        "2": 0.2846307385229541,
+        "3": 0.25149700598802394,
+        "4": 0.15199600798403193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:998",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13493493493493494,
+        "1": 0.173973973973974,
+        "2": 0.2814814814814815,
+        "3": 0.24924924924924924,
+        "4": 0.16036036036036036
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1463",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14358564143585642,
+        "1": 0.18748125187481252,
+        "2": 0.26757324267573246,
+        "3": 0.2597740225977402,
+        "4": 0.14158584141585842
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1660",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13842315369261476,
+        "1": 0.18612774451097805,
+        "2": 0.25149700598802394,
+        "3": 0.25928143712574847,
+        "4": 0.16467065868263475
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1698",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14245754245754247,
+        "1": 0.19510489510489512,
+        "2": 0.24685314685314685,
+        "3": 0.26343656343656346,
+        "4": 0.15214785214785215
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1762",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1533,
+        "1": 0.1992,
+        "2": 0.2598,
+        "3": 0.2441,
+        "4": 0.1436
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1793",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14825174825174828,
+        "1": 0.1932067932067932,
+        "2": 0.25564435564435567,
+        "3": 0.24775224775224777,
+        "4": 0.15514485514485515
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:1831",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14074074074074075,
+        "1": 0.18868868868868868,
+        "2": 0.25415415415415415,
+        "3": 0.261961961961962,
+        "4": 0.15445445445445444
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2085",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13367968828054752,
+        "1": 0.18243580777300433,
+        "2": 0.26146468178639226,
+        "3": 0.26146468178639226,
+        "4": 0.1609551403736637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2186",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1582,
+        "1": 0.1875,
+        "2": 0.252,
+        "3": 0.2373,
+        "4": 0.165
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2210",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.16715043539185268,
+        "1": 0.18086277649884897,
+        "2": 0.24341907716945252,
+        "3": 0.24341907716945252,
+        "4": 0.16514863377039338
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2216",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.16126126126126125,
+        "1": 0.18768768768768768,
+        "2": 0.25225225225225223,
+        "3": 0.24534534534534536,
+        "4": 0.15345345345345346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2253",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14274274274274273,
+        "1": 0.1954954954954955,
+        "2": 0.26586586586586586,
+        "3": 0.25805805805805804,
+        "4": 0.13783783783783782
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2272",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14357128574285144,
+        "1": 0.1933613277344531,
+        "2": 0.259748050389922,
+        "3": 0.259748050389922,
+        "4": 0.14357128574285144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2476",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.12710168134507607,
+        "1": 0.18474779823859086,
+        "2": 0.26000800640512406,
+        "3": 0.2678142514011209,
+        "4": 0.1603282626100881
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2574",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.12687312687312688,
+        "1": 0.17852147852147854,
+        "2": 0.2731268731268731,
+        "3": 0.26343656343656346,
+        "4": 0.15804195804195806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2629",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15214785214785215,
+        "1": 0.17462537462537467,
+        "2": 0.26343656343656346,
+        "3": 0.25564435564435567,
+        "4": 0.15414585414585416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2853",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13783783783783785,
+        "1": 0.1915915915915916,
+        "2": 0.25805805805805804,
+        "3": 0.2658658658658659,
+        "4": 0.14664664664664664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:2898",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15124875124875128,
+        "1": 0.18441558441558442,
+        "2": 0.2448551448551449,
+        "3": 0.2614385614385615,
+        "4": 0.15804195804195806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3127",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1416,
+        "1": 0.1904,
+        "2": 0.2656,
+        "3": 0.2559,
+        "4": 0.1465
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3248",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1445144514451445,
+        "1": 0.18261826182618263,
+        "2": 0.2578257825782578,
+        "3": 0.2656265626562656,
+        "4": 0.1494149414941494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3276",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1336796882805475,
+        "1": 0.18243580777300428,
+        "2": 0.2536716954740733,
+        "3": 0.26925766809871116,
+        "4": 0.16095514037366368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3301",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14147267459286642,
+        "1": 0.18533320011989207,
+        "2": 0.2536716954740733,
+        "3": 0.2614646817863922,
+        "4": 0.15805774802677588
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3446",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1494,
+        "1": 0.1807,
+        "2": 0.2578,
+        "3": 0.25,
+        "4": 0.1621
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3450",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14954954954954955,
+        "1": 0.18868868868868868,
+        "2": 0.25415415415415415,
+        "3": 0.24634634634634636,
+        "4": 0.16126126126126125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3682",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1495345811230107,
+        "1": 0.18086277649884897,
+        "2": 0.25022520268241416,
+        "3": 0.2600340306275648,
+        "4": 0.15934340906816136
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:3955",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14074074074074075,
+        "1": 0.1954954954954955,
+        "2": 0.261961961961962,
+        "3": 0.25415415415415415,
+        "4": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4079",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14074074074074075,
+        "1": 0.1954954954954955,
+        "2": 0.261961961961962,
+        "3": 0.25415415415415415,
+        "4": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4242",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15124875124875123,
+        "1": 0.20099900099900098,
+        "2": 0.25364635364635363,
+        "3": 0.25364635364635363,
+        "4": 0.14045954045954046
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4273",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15053548193374036,
+        "1": 0.19057151436292666,
+        "2": 0.2600340306275648,
+        "3": 0.2522270043038735,
+        "4": 0.1466319687718947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4310",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14635364635364637,
+        "1": 0.18831168831168835,
+        "2": 0.2614385614385615,
+        "3": 0.2614385614385615,
+        "4": 0.14245754245754247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4412",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14274274274274273,
+        "1": 0.1856856856856857,
+        "2": 0.25415415415415415,
+        "3": 0.2697697697697698,
+        "4": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4521",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13584943437781558,
+        "1": 0.19451396536189808,
+        "2": 0.24637100810891982,
+        "3": 0.25417959755731306,
+        "4": 0.16908599459405346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4523",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1396,
+        "1": 0.1787,
+        "2": 0.2451,
+        "3": 0.2598,
+        "4": 0.1768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4532",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1475147514751475,
+        "1": 0.1865186518651865,
+        "2": 0.24802480248024802,
+        "3": 0.24802480248024802,
+        "4": 0.1699169916991699
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4547",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1329196276648984,
+        "1": 0.1935742167951156,
+        "2": 0.2561305174657192,
+        "3": 0.2639375437894105,
+        "4": 0.15343809428485636
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4595",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14258574142585742,
+        "1": 0.18848115188481152,
+        "2": 0.24607539246075394,
+        "3": 0.24607539246075394,
+        "4": 0.17678232176782324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4620",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14636826855829754,
+        "1": 0.19412528724148267,
+        "2": 0.26146468178639226,
+        "3": 0.25367169547407337,
+        "4": 0.14437006693975424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4796",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13014727983168017,
+        "1": 0.20158300771465784,
+        "2": 0.25047590421801424,
+        "3": 0.25829075242961624,
+        "4": 0.15950305580603147
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4874",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1328,
+        "1": 0.1875,
+        "2": 0.248,
+        "3": 0.2715,
+        "4": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:4973",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.11943279408827641,
+        "1": 0.16866387058118631,
+        "2": 0.2340722987817056,
+        "3": 0.26522867984821247,
+        "4": 0.21260235670061914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5107",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13493493493493494,
+        "1": 0.18768768768768768,
+        "2": 0.26006006006006005,
+        "3": 0.27757757757757756,
+        "4": 0.13973973973973974
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5238",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1316683316683317,
+        "1": 0.18631368631368633,
+        "2": 0.26733266733266736,
+        "3": 0.26733266733266736,
+        "4": 0.14735264735264736
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5324",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1523152315231523,
+        "1": 0.1777177717771777,
+        "2": 0.25392539253925395,
+        "3": 0.25392539253925395,
+        "4": 0.1621162116211621
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5354",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1523,
+        "1": 0.1904,
+        "2": 0.252,
+        "3": 0.2598,
+        "4": 0.1455
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5379",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15124875124875128,
+        "1": 0.17072927072927074,
+        "2": 0.2575424575424575,
+        "3": 0.2575424575424575,
+        "4": 0.16293706293706295
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5459",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1445144514451445,
+        "1": 0.1982198219821982,
+        "2": 0.2578257825782578,
+        "3": 0.25002500250025,
+        "4": 0.1494149414941494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5464",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14563106796116504,
+        "1": 0.20628565709138225,
+        "2": 0.2639375437894105,
+        "3": 0.24041637473726354,
+        "4": 0.14372935642077872
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5467",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14145854145854148,
+        "1": 0.18441558441558442,
+        "2": 0.2517482517482518,
+        "3": 0.2692307692307693,
+        "4": 0.15314685314685317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5648",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14045954045954048,
+        "1": 0.18631368631368633,
+        "2": 0.25564435564435567,
+        "3": 0.26343656343656346,
+        "4": 0.15414585414585416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5771",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14664664664664664,
+        "1": 0.18868868868868868,
+        "2": 0.25805805805805804,
+        "3": 0.26586586586586586,
+        "4": 0.14074074074074075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5791",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1396139613961396,
+        "1": 0.18261826182618263,
+        "2": 0.2617261726172617,
+        "3": 0.26952695269526955,
+        "4": 0.1465146514651465
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5821",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14854854854854854,
+        "1": 0.1964964964964965,
+        "2": 0.25615615615615617,
+        "3": 0.24824824824824826,
+        "4": 0.15055055055055055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:5937",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14232957380976147,
+        "1": 0.19393153009282363,
+        "2": 0.25341850484080247,
+        "3": 0.26120371294540373,
+        "4": 0.1491166783112087
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6191",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14464464464464463,
+        "1": 0.1915915915915916,
+        "2": 0.25415415415415415,
+        "3": 0.261961961961962,
+        "4": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6219",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1454854514548545,
+        "1": 0.18948105189481051,
+        "2": 0.25387461253874616,
+        "3": 0.2636736326367363,
+        "4": 0.1474852514748525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6255",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14258574142585742,
+        "1": 0.18948105189481051,
+        "2": 0.26757324267573246,
+        "3": 0.2577742225777422,
+        "4": 0.14258574142585742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6260",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1396,
+        "1": 0.1904,
+        "2": 0.2637,
+        "3": 0.2559,
+        "4": 0.1504
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6352",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14031936127744513,
+        "1": 0.20169660678642715,
+        "2": 0.25928143712574847,
+        "3": 0.25149700598802394,
+        "4": 0.1472055888223553
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6370",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14437006693975424,
+        "1": 0.20291737436307325,
+        "2": 0.2575681886302328,
+        "3": 0.24877610150864224,
+        "4": 0.14636826855829754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6376",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14344221356507844,
+        "1": 0.19898112076715613,
+        "2": 0.2595145340125862,
+        "3": 0.2595145340125862,
+        "4": 0.13854759764259317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6385",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14465912503754128,
+        "1": 0.1984182600860947,
+        "2": 0.25417959755731306,
+        "3": 0.26198818700570625,
+        "4": 0.14075483031334468
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6442",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1465,
+        "1": 0.2012,
+        "2": 0.2578,
+        "3": 0.25,
+        "4": 0.1445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6527",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15345345345345346,
+        "1": 0.2092092092092092,
+        "2": 0.26786786786786787,
+        "3": 0.24434434434434435,
+        "4": 0.12512512512512514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:6560",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13584943437781558,
+        "1": 0.21113224547001702,
+        "2": 0.2658924817299029,
+        "3": 0.2424667133847232,
+        "4": 0.14465912503754128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7007",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1582,
+        "1": 0.1875,
+        "2": 0.2559,
+        "3": 0.248,
+        "4": 0.1504
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7049",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1454854514548545,
+        "1": 0.19628037196280373,
+        "2": 0.26757324267573246,
+        "3": 0.251974802519748,
+        "4": 0.1386861313868613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7067",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1494,
+        "1": 0.1973,
+        "2": 0.2656,
+        "3": 0.25,
+        "4": 0.1377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7176",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1609551403736637,
+        "1": 0.19322609651313818,
+        "2": 0.26146468178639226,
+        "3": 0.2448796083524828,
+        "4": 0.13947447297432314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7177",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1611161116111611,
+        "1": 0.1914191419141914,
+        "2": 0.2617261726172617,
+        "3": 0.24612461246124615,
+        "4": 0.1396139613961396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7305",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1455,
+        "1": 0.1963,
+        "2": 0.2715,
+        "3": 0.248,
+        "4": 0.1387
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7532",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1318,
+        "1": 0.1836,
+        "2": 0.2539,
+        "3": 0.2715,
+        "4": 0.1592
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7590",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15416125487061647,
+        "1": 0.19802178039764212,
+        "2": 0.2497752023179139,
+        "3": 0.2575681886302328,
+        "4": 0.1404735737835948
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7826",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1279,
+        "1": 0.1719,
+        "2": 0.2539,
+        "3": 0.2695,
+        "4": 0.1768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7953",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1454854514548545,
+        "1": 0.19918008199180082,
+        "2": 0.2597740225977402,
+        "3": 0.251974802519748,
+        "4": 0.14358564143585642
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:7982",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1481185747080547,
+        "1": 0.19393153009282363,
+        "2": 0.25341850484080247,
+        "3": 0.25341850484080247,
+        "4": 0.15111288551751673
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8213",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14664664664664664,
+        "1": 0.1974974974974975,
+        "2": 0.261961961961962,
+        "3": 0.25415415415415415,
+        "4": 0.13973973973973974
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8257",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15053548193374036,
+        "1": 0.20228205384846362,
+        "2": 0.2600340306275648,
+        "3": 0.2522270043038735,
+        "4": 0.13492142928635772
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8287",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14274274274274273,
+        "1": 0.19839839839839837,
+        "2": 0.261961961961962,
+        "3": 0.25415415415415415,
+        "4": 0.14274274274274273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8560",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1523,
+        "1": 0.1992,
+        "2": 0.2598,
+        "3": 0.252,
+        "4": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8569",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.14245754245754244,
+        "1": 0.19120879120879117,
+        "2": 0.25364635364635363,
+        "3": 0.25364635364635363,
+        "4": 0.15904095904095902
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8685",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1298870112988701,
+        "1": 0.18068193180681932,
+        "2": 0.25587441255874416,
+        "3": 0.2636736326367363,
+        "4": 0.1698830116988301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:8940",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1464853514648535,
+        "1": 0.1933806619338066,
+        "2": 0.2616738326167383,
+        "3": 0.251974802519748,
+        "4": 0.1464853514648535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:9032",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.15068630397755736,
+        "1": 0.19957920048091374,
+        "2": 0.26029455966336035,
+        "3": 0.25247971145175835,
+        "4": 0.13696022442641018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:9045",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.127,
+        "1": 0.1943,
+        "2": 0.2539,
+        "3": 0.2451,
+        "4": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:9074",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1279127912791279,
+        "1": 0.18261826182618263,
+        "2": 0.2578257825782578,
+        "3": 0.2754275427542754,
+        "4": 0.1562156215621562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:9137",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.13465188292877833,
+        "1": 0.17850364598941162,
+        "2": 0.2595145340125861,
+        "3": 0.26730596344021573,
+        "4": 0.16002397362900808
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "patent_similarity:default:test:9176",
+      "question_id": "similarity",
+      "probabilities": {
+        "0": 0.1406,
+        "1": 0.1895,
+        "2": 0.2793,
+        "3": 0.2539,
+        "4": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

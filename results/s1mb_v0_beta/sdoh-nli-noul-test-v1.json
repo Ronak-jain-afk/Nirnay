@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "sdoh-nli-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/sdoh_nli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:33:47+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.23498552230000005,
+    "accuracy": 0.65,
+    "positive_recall": 0.34,
+    "specificity": 0.96,
+    "precision": 0.8947368421052632,
+    "balanced_accuracy": 0.65,
+    "f1": 0.4927536231884058,
+    "true_positive": 17.0,
+    "false_positive": 2.0,
+    "false_negative": 33.0,
+    "true_negative": 48.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.06005791079999978,
+    "baseline_adjusted_skill": 0.30000000000000004,
+    "baseline_adjusted_score": 0.30000000000000004
+  },
+  "elapsed_seconds": 29.005612300003122,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "sdoh_nli:default:test:3": "b19af4978fd422c41472da6d1b33c0780b33d69c8f7a26e5222dac76dceaa921",
+      "sdoh_nli:default:test:52": "8d98fc51947871a1b64c348b2d5775fa5d95f36d935b84b2ba1b6334f54d84a6",
+      "sdoh_nli:default:test:75": "bcd55a4c689f0df3c3235f60c95b698473d97d09036cc519dcd8dc18f81b007b",
+      "sdoh_nli:default:test:235": "793e554f0fa97ac5f8e6f7786d2674777f5116af1a10f74931aaf9a7f1b993c5",
+      "sdoh_nli:default:test:243": "a34c2132448c59dcdd6f59f3ae8fcfbaeafbb318eaaa42d5d3e830d7185af702",
+      "sdoh_nli:default:test:258": "aa0e9f2d55e6587b256bc9af52ae03328b0a61bbb5b03f9595662f50bc8a3c97",
+      "sdoh_nli:default:test:275": "fcdfba037d60d04a5a40e0c0a1acbe9b10e478d52231fa0bbf1078a81862f40e",
+      "sdoh_nli:default:test:309": "865abb600d657716fafec9ce588a2fd6e83315b7f23859ea43d4cee5b5c2af1a",
+      "sdoh_nli:default:test:425": "2fcdba5532bf1177a871658f3cf491b2ba4420f82809fb9037a3ee2fe3fd36fd",
+      "sdoh_nli:default:test:427": "c149dbd38ee8c8864ee8eb2c42ddeabfe29e0329698649fa73fc423b9e44519a",
+      "sdoh_nli:default:test:428": "a4ca0031d01849cdc524ed893f63a4976605a96c9992aac53f6a29997803be7b",
+      "sdoh_nli:default:test:473": "e29684bdb39834bdbb84e7b9d4e232b34266ca17634dcdc53e768d9ea7bcf0ec",
+      "sdoh_nli:default:test:495": "6382d8c4098dd0a5bf2b9c4b8bc7e78b43270dbc43b6ec67ab2984ce14f7a0e4",
+      "sdoh_nli:default:test:522": "bc48af16400a17ffc981667d7d36675d36fa4d01dcc286ea5811f365a0348bf9",
+      "sdoh_nli:default:test:548": "deb073944473eaa2330cbae4c7de7bf452a284fabf4adf5278654f214cfb3039",
+      "sdoh_nli:default:test:553": "e7ba88fdac1e64d6a6930f8148032c5b1d07554cfcbd388bde5f5eb07917c746",
+      "sdoh_nli:default:test:603": "d4a31e00e527d8eceac1805280505976349cc98851113033ba72b1e4b3670713",
+      "sdoh_nli:default:test:611": "335fe9f24b09d4808f3bf7a80d41e6eccdb0748ae9b576a7da3f5b2b2524c46d",
+      "sdoh_nli:default:test:650": "3796bd829dc028525d874667f0c0981725668a2b9742cf174dc7eb0245f797ca",
+      "sdoh_nli:default:test:670": "1eec1e1439dd4562109fd4a5a8de159e35d4a0a3b4a5af6adecf8af1747c3a0a",
+      "sdoh_nli:default:test:678": "23b44de63bcd875011e8a4f6eca4bf1f7ec64bb73fe31344aff89a972bf69105",
+      "sdoh_nli:default:test:688": "a7f7f8d7f48cc320a3eb138e767fb6528dad486afb06d5ea5590fbe9a5f30caf",
+      "sdoh_nli:default:test:744": "c4b207b4745eab4154c9633bfc1e57af0e6a4ff88dfa3e5c36b8d3c397eca82c",
+      "sdoh_nli:default:test:789": "37183411446a5045a356eb76cf322443306496da25d33ce16191604c7229aed6",
+      "sdoh_nli:default:test:847": "1e850de0c8412df3d7a8459c448a5833852f024aba6db1ea0626c22df5e7b1c9",
+      "sdoh_nli:default:test:864": "038e1ac8d1684749ad1a85099ea3be3a779dc15fdc4b3dd64d035f0f32b43018",
+      "sdoh_nli:default:test:928": "31b00056e0e4b5c6149eedbf951e04e8bd89a7cb40da30d4850fb28f6d831756",
+      "sdoh_nli:default:test:947": "48b5a1d5d18d0e67791a20f3ef1cea051d521a031a47be26a87c16c366d7ab9f",
+      "sdoh_nli:default:test:1088": "69ff6bcc2afde90637d3e81757f62e6b1f2ee86552b1fe4706f13366f2529043",
+      "sdoh_nli:default:test:1100": "c271d7068940d3b11470ad04e3e91dd24cef3d7563324a1ea224b764461f97d5",
+      "sdoh_nli:default:test:1159": "a3fd4946f25b7150d52853a9d66a6722d800c627a1ad2f84fec1257c5fed8b3b",
+      "sdoh_nli:default:test:1261": "c5afd4ed0d1a24ef503bcaf68c246fbed750fc3e2ddc499bac6751607b600df7",
+      "sdoh_nli:default:test:1298": "c571ba0abf436475ad21f2eb39e19d188c436b2a8f2555c9e51a5a9d0a5254d0",
+      "sdoh_nli:default:test:1436": "486d6118523732f41d1eb29dc63a54908e4073b70279f8d5740ba918041c7429",
+      "sdoh_nli:default:test:1528": "65ae8dc3e0c7c56d79ae015821f69f9259e10f995a807a326d482a1fc06e8aea",
+      "sdoh_nli:default:test:1550": "fd41848b3df8f5baaabc06a3f1c8f4f73ce732bdfce22565898292bf621b169f",
+      "sdoh_nli:default:test:1598": "6c9ed8d5ffbdd8af769f84cb92c455e411a8e673d6e7280cb2eb9759f923f3ee",
+      "sdoh_nli:default:test:1603": "e291b57b20d9ae6d48d50791794f720e081c03b04479a4234c33de23a6e27464",
+      "sdoh_nli:default:test:1679": "028152bae8070a4a4b6e18795c203272de6dbfa28b03897b07b2d0acf619e4be",
+      "sdoh_nli:default:test:1760": "003a969761afe9c82efe8dc25f6e456df77c9b80d511d60e3d2b9d8c60675aa4",
+      "sdoh_nli:default:test:1776": "06bb6e4473c5494f7baeba9536528a56308e25e68b1e09dd765b9adf8c0766d5",
+      "sdoh_nli:default:test:1788": "e4202eb4d112ad0d1f4caf88ebd55930b18a2720e4eaa6bffe5be749d43577b3",
+      "sdoh_nli:default:test:1824": "f8d081c784e7ef65b65c558a9c54e16581cba35d402bfb6be9b4a9c3e8da812f",
+      "sdoh_nli:default:test:1843": "4078ec773f0ec45fcc80b7123ec56185588a11ca2dfd61f447db95171b64ccd1",
+      "sdoh_nli:default:test:1934": "923a1c3321abd6f588cd184632378c6f0bc292852f6e3ba2ca99b8687ffff513",
+      "sdoh_nli:default:test:1962": "bef178126fad265e7495510bed0cdd9a5adb3a20f83825c55f14f9f14ef81f2b",
+      "sdoh_nli:default:test:1964": "8b702307e3aefa2bb755961c97b1159806b7c295faf323338df62c6b01b65bca",
+      "sdoh_nli:default:test:2000": "4585606240ac20493042172c56caefd7681af235d7350f84f709b35f98d586a1",
+      "sdoh_nli:default:test:2010": "b364c75bbb921d2ef8ea4ccda245bbf00d5f2e3f5ba1c74d19598dc1b89621f1",
+      "sdoh_nli:default:test:2012": "ecfebe68e20b244caad3cb4ef84159b35c6affb8ecc0ba81e2e259dc9dd9e379",
+      "sdoh_nli:default:test:2047": "62e212689aee08625bf8d15ccef0eaf67b8f8c635d1418a7d90a23557a381a30",
+      "sdoh_nli:default:test:2149": "8c144a3d3d44e5ef46b3fb7d0ef9b41a00151dc592f5f9e748bac13459119951",
+      "sdoh_nli:default:test:2164": "ec8b0e9ae9bb6363dd7917094f998da189ad66db1e148f9fabdc418e547593ee",
+      "sdoh_nli:default:test:2194": "c9a382c5bb87203ead2e21c5c237a6e5c31aeb8b328e9cd7c2768ceaa3efda70",
+      "sdoh_nli:default:test:2197": "3fcb06a8268769f086fb204f7e687dde580d1cd70cc67449fcfb445b62b55073",
+      "sdoh_nli:default:test:2269": "d1c6d7419985681e0046c102004c35b1e7ba6021ef740b585c72a46e75289beb",
+      "sdoh_nli:default:test:2270": "58dd2ec1131e22c98bb4027b642efcd09814beb8b6784421e31339fca8607fa8",
+      "sdoh_nli:default:test:2271": "e39607de27ba3aeb8072d44e7c841878f6cbe441090f38089e9e1d70102c08c1",
+      "sdoh_nli:default:test:2278": "dc9542a519081644d4647dceee8fd1dcb8b6064644ee524c4231b8a182caf0d4",
+      "sdoh_nli:default:test:2279": "c8f104f09fb5879b0c17509d6cb10b4e27b496e05e1ef45a236c1a9e38a7ec38",
+      "sdoh_nli:default:test:2280": "2c9cbd57eb03315ee037463a649e6781511eefd5332f41ac49e5d76dd1357f9c",
+      "sdoh_nli:default:test:2282": "95783ac344a3b065825bce18919d092179c40b11034e8d5511ad920865f0efcb",
+      "sdoh_nli:default:test:2333": "7bd866e77bd711422b901ef5fd779661066a1abaa5e9da55072259b2a093bc25",
+      "sdoh_nli:default:test:2384": "835af7d837c33ee70d4ee3faf42692ceb0b80743f4ebfe6fd786f34e3c7ef0f5",
+      "sdoh_nli:default:test:2586": "1f1921a9956d547b73d422426a7d58527f0fc73f8b70e8efa2d95914d7dcad92",
+      "sdoh_nli:default:test:2640": "fd04a9a284fa8223ecf9f52969e89a121c70187d943295647da6d1e369ce004a",
+      "sdoh_nli:default:test:2750": "baadbf082826a44241b7237ae463faab640525f03ef9768b1c6a0b9b7f24e883",
+      "sdoh_nli:default:test:2839": "a369e7be0ce7ad29a81edf716588d9faec8fae600742a238a99c26acb87b1307",
+      "sdoh_nli:default:test:2861": "60746af7754bedebabe0539d32a47aee54f24b72b46edee519678cba48b4f6c0",
+      "sdoh_nli:default:test:2893": "dafd5f4d1c1d20ef0c20ee5b1ac9cee1c7994aa8cba73348f5b0bee5f6ea3250",
+      "sdoh_nli:default:test:3076": "1582eb903ffe86efe24f52e96a6cb9e6306492eb506f4befca89ed719a457b56",
+      "sdoh_nli:default:test:3084": "99cffd39755fdf24660cda0150a2b169865fa0061fe6dcbcd92c0844804b1ee9",
+      "sdoh_nli:default:test:3109": "a5c9c27a7cb0666d8513b9b45590ee884d36e125f1e2b6c558a15ef128cda2ab",
+      "sdoh_nli:default:test:3118": "2d19808a888f159eaacdd400482696c69fc1ac68a7db244ee00e49e97b425609",
+      "sdoh_nli:default:test:3131": "08caebc4e72873738496dcf211b2bbbee1939146adf48faf35d45bd90db781e0",
+      "sdoh_nli:default:test:3153": "ca5fb3572a3d3c1869c70d732fb7693b1d63233c7728c71bc3ea087e4244141d",
+      "sdoh_nli:default:test:3159": "5f916b9374582322c4e179a5c135dd88e58f8028b17dcffc096713788689b5a0",
+      "sdoh_nli:default:test:3296": "518549a29065873ff66086044a51a66a59e6ea25d680a3ec388fef53eba4320c",
+      "sdoh_nli:default:test:3376": "12545df99ce38cc15ad0207c9e340638118fa0df01207f20e14b52741eb3e47e",
+      "sdoh_nli:default:test:3379": "08a08bb8cfdcde4e2234ee357e6ed5e1d7f840f1924dab7d217e7730cd601103",
+      "sdoh_nli:default:test:3482": "2e3906c30d0b9c05acabac09d6fd2458615161c582eacfc113f78dc6a2691a50",
+      "sdoh_nli:default:test:3487": "a45bfd6240021002017d1d51d3bfd8ba73ddb6c8eed9e277588204f5d1666316",
+      "sdoh_nli:default:test:3496": "18c06707a3606919ff175b0998cb95905c75c5a4bb357c7386b4b7126376f2c7",
+      "sdoh_nli:default:test:3543": "1fdc17e6d8daa400032d6f3acd79492d28ee034e48a62b6ff8ffe66a5bae098a",
+      "sdoh_nli:default:test:3622": "1b0afe1f40826b08cd7de3b1203c3dfc6279323160d42061c87cf9ff2de8862f",
+      "sdoh_nli:default:test:3653": "9bf6a022b5e7bf4a31aa7a1d17282169e810855bb49ff82f8d980a31d7b3856c",
+      "sdoh_nli:default:test:3760": "f722e86b1aaff696f3ac765416f9455515c1ba548727d9ce3597523918b83f44",
+      "sdoh_nli:default:test:3847": "880a2bc1ff40f449eaa090824a965630d74e10224d931511ed24559c7146f1d8",
+      "sdoh_nli:default:test:3891": "b113dac2a5c8fc2c3cc2576c94bc466a805add4b32463b0aace7ece63d303b71",
+      "sdoh_nli:default:test:3944": "bce33fcced6aaa8ad771c02a38635dce9ccee0a45819f94775b9cd5bf725ab83",
+      "sdoh_nli:default:test:3950": "d10049d4dbd324da1ee91bd28c0d3b4950d03c785d1e0a7b048a783cd211defe",
+      "sdoh_nli:default:test:3966": "8f56fd017e6c6acf2330fa4b819ad283497a2cd9325d41c41761fa7e342440db",
+      "sdoh_nli:default:test:4007": "8b8950e313c4248982e4b84786c1f975dada3c6b94ed573e6f8e036d40622f73",
+      "sdoh_nli:default:test:4057": "775b5d3494c71d3d27836246e5a3cbf122aa54ca41f1b9ebfbfd4104a6ccfd32",
+      "sdoh_nli:default:test:4081": "0eaadf15fc903947781b93c1b76ac7f34c354118e6e12a5d37701a57c78f616a",
+      "sdoh_nli:default:test:4131": "fbef854bb432ebea91d5227963b2e2b62e7991d179d63e9d757488e2b9aa0cbe",
+      "sdoh_nli:default:test:4169": "2a420e750392b3311fa96ef7b409df9f401dc4d3922a035944e0a3524b3c5d74",
+      "sdoh_nli:default:test:4170": "a9025685249a690b7e204dd8807a0e54f049d131dd71590f53701dd6be5df07b",
+      "sdoh_nli:default:test:4199": "63dce6397de4b73a86dc8788ea16e812f649977cc45485b7968600f5a4b5f08a",
+      "sdoh_nli:default:test:4201": "c4d92a7e748905bf70ff554416ecc47347551a758d1c7dd0efeebfe22f19134d"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "sdoh_nli:default:test:3",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:52",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:75",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:235",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:243",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:258",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:275",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:309",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:425",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:427",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:428",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:473",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:495",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:522",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:548",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:553",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:603",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:611",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:650",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:670",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:678",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:688",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:744",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:789",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:847",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:864",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:928",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:947",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1088",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1100",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1159",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1261",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1298",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1436",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1528",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1550",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1598",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1603",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1679",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1760",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1776",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1788",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1824",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1843",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1934",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1962",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:1964",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2000",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2010",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2012",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2047",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2149",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2164",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2194",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2197",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2269",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2270",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2271",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2278",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2279",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2280",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2282",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2333",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2384",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2586",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2640",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2750",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2839",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2861",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:2893",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3076",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3084",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3109",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3118",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3131",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3153",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3159",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3296",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3376",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3379",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3482",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3487",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3496",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3543",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3622",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3653",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3760",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3847",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3891",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3944",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3950",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:3966",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4007",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4057",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4081",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4131",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4169",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4170",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4199",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sdoh_nli:default:test:4201",
+      "question_id": "supported",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--ir-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__ir-control-v1",
+    "split": "test",
+    "case_count": 17,
+    "decision_count": 17,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:17:20+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 17,
+    "expected": 17,
+    "succeeded": 17,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.2647058823529412,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.2647058823529412,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 4.753861800003506,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:17:more_relevant": "e6c851b60567b048c0e959461e638e8030d651b1c5c2aade76e0e20cb7f836de",
+      "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:20:most_relevant": "bf8d8da0d0db89b54deb965d1593ca5b01cf4f879465d2fdb124b61d588ed0dd",
+      "open_jev__ir-control-v1:q-417de1dce3683a37:20:most_relevant": "39a2bceceea673c0f55040a8afbba79a104f1846e0d6401579727629047a0d09",
+      "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:17:more_relevant": "17bb068c07dd051a2593fb75c5c9c7181dcbffdeca78c16b8a6ebca36f6faf13",
+      "open_jev__ir-control-v1:q-46d5003b2672731a:20:most_relevant": "e99429b244ba187309767a115ae52378d29cb9cd61618ddc01382aa42d7f0158",
+      "open_jev__ir-control-v1:q-559f1366098336e9:18:most_relevant": "c5c31a0ca6ffad00aae6bbd240aba3fa380ef9d09c5ee4f9902ee5a1d2ff5b2b",
+      "open_jev__ir-control-v1:q-bd87a6b8f45afc9c:17:more_relevant": "696a3ee8a14258c716cb4fca5de591f57768cb883f940d5748c92944691066d4",
+      "open_jev__ir-control-v1:q-6922565138965545:20:most_relevant": "126ed4b29ad1ff467fda706913f0abacc8e048297bd65c5caa873083cbf5542c",
+      "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:20:most_relevant": "159b5e82bf2e6653dfeb6adf44c6a688c22f0e77e2cb007969a3dfc53c68378f",
+      "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:19:most_relevant": "8bb9806576a0c7d93708ebf25fbef27df45bf553df76d1aa038eba9e04efd0c7",
+      "open_jev__ir-control-v1:q-9c6da545a0141bfc:20:most_relevant": "90e6d246b4676c7af8a8d2a001be2d8a5a6f719780617453cf3bb9455ce97397",
+      "open_jev__ir-control-v1:q-2895c6dade496579:18:most_relevant": "ba865a9c6b2c25b03ef230482bf4567b82e8fbcda8e9a049e0dd6d7fb69e76ea",
+      "open_jev__ir-control-v1:q-11aacd01ac0af2f9:19:most_relevant": "3bbb9d10b2768450f1cd79cd7cad959310d4e29cbb6041d0eaa66beda342ae83",
+      "open_jev__ir-control-v1:q-11aacd01ac0af2f9:20:most_relevant": "b9582a7364f2949d44d2faee05ff587d2e9b71208a22f908529dc00509c685db",
+      "open_jev__ir-control-v1:q-79ee1d06a67a51ef:17:more_relevant": "0f1b8c76181c78e9c277a048f349eb0ed5441272fcc02d12e01ee0b0dfc5b41b",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:18:most_relevant": "1d2cd9b21177862fb7de01205e49a7e2f810421b782bf32b4a11170fc13ddc93",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:20:most_relevant": "9c1c827e807c19d0e3c5335347e9ce54b63db085cf2bcca7add7560160f4e659"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 2176,
+      "output_tokens": 17,
+      "requests": 17,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.5078,
+        "option_1": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.17588794397198598,
+        "option_1": 0.17588794397198598,
+        "option_2": 0.18169084542271136,
+        "option_3": 0.20910455227613806,
+        "option_4": 0.14167083541770886,
+        "option_5": 0.11575787893946972,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-417de1dce3683a37:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.17569458325005,
+        "option_1": 0.172796322206676,
+        "option_2": 0.1834899060563662,
+        "option_3": 0.20787527483509893,
+        "option_4": 0.143513891665001,
+        "option_5": 0.11663002198680793,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.4961,
+        "option_1": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-46d5003b2672731a:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.17581758175817583,
+        "option_1": 0.16701670167016702,
+        "option_2": 0.1777177717771777,
+        "option_3": 0.21192119211921193,
+        "option_4": 0.1523152315231523,
+        "option_5": 0.1152115211521152,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-559f1366098336e9:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2316316316316316,
+        "option_1": 0.24244244244244245,
+        "option_2": 0.23853853853853854,
+        "option_3": 0.2873873873873874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-bd87a6b8f45afc9c:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.5117,
+        "option_1": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-6922565138965545:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1659170414792604,
+        "option_1": 0.17081459270364818,
+        "option_2": 0.18250874562718644,
+        "option_3": 0.2098950524737631,
+        "option_4": 0.15322338830584709,
+        "option_5": 0.11764117941029485,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.17378262173782624,
+        "option_1": 0.17678232176782324,
+        "option_2": 0.18258174182581743,
+        "option_3": 0.20997900209979,
+        "option_4": 0.14258574142585742,
+        "option_5": 0.11428857114288571,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:19:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.23319012888400437,
+        "option_1": 0.24487960835248274,
+        "option_2": 0.24487960835248274,
+        "option_3": 0.27705065441103005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-9c6da545a0141bfc:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1748,
+        "option_1": 0.1748,
+        "option_2": 0.1797,
+        "option_3": 0.207,
+        "option_4": 0.1475,
+        "option_5": 0.1162,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-2895c6dade496579:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.23463463463463463,
+        "option_1": 0.24244244244244245,
+        "option_2": 0.24534534534534536,
+        "option_3": 0.27757757757757756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-11aacd01ac0af2f9:19:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.22457754224577542,
+        "option_1": 0.24317568243175683,
+        "option_2": 0.24317568243175683,
+        "option_3": 0.289071092890711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-11aacd01ac0af2f9:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.17471264367816094,
+        "option_1": 0.17181409295352323,
+        "option_2": 0.1806096951524238,
+        "option_3": 0.2107946026986507,
+        "option_4": 0.14742628685657172,
+        "option_5": 0.11464267866066967,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-79ee1d06a67a51ef:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.5039,
+        "option_1": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.23219102807473277,
+        "option_1": 0.23998401438705166,
+        "option_2": 0.2468778099710261,
+        "option_3": 0.2809471475671896
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.16478577848796563,
+        "option_1": 0.17846799161090582,
+        "option_2": 0.1813642265055428,
+        "option_3": 0.2155198242285029,
+        "option_4": 0.14820733047038848,
+        "option_5": 0.11165484869669429,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

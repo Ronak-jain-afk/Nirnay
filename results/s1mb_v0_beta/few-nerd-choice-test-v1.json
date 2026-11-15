@@ -1,0 +1,6267 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "few-nerd-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/few_nerd",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 358,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:58:07+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 358,
+    "succeeded": 358,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.22346368715083798,
+    "uniform_accuracy_baseline": 0.125,
+    "fixed_answer_accuracy_baseline": 0.2206703910614525,
+    "baseline_adjusted_skill": 0.0035842293906809997,
+    "baseline_adjusted_score": 0.0035842293906809997
+  },
+  "elapsed_seconds": 32.21382699999958,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "few_nerd:supervised:test:2318": "2c6dde6552e1ad133565fb33d5a607c2de53289e5f05623b65bcedfe13511b3a",
+      "few_nerd:supervised:test:2513": "aa7c50379a0138243b74e9defca4e2dfddd0a53cc1973bdb16fb619939324683",
+      "few_nerd:supervised:test:3218": "4e9c2a71d347ccead76440c73450861e2ecc0b573257c1483bf9b5036eff48ed",
+      "few_nerd:supervised:test:3369": "ae97e3b4f0f3ed7d6b5e297afb654f30e14c0209d31fb3878236ec82d4266e55",
+      "few_nerd:supervised:test:3408": "9b38d2d1098a9268e3762666c01833f723b274249f5c132eb3e86d3e16736055",
+      "few_nerd:supervised:test:3656": "ef1b5a1a35fa2cfafd68ea3c1e1832aa7260562be7c534b0ecc733db9a77dbe1",
+      "few_nerd:supervised:test:4212": "ffe1e794b7d04264a071c151161e8b2e49871093460be84ffa22a3dd9676b088",
+      "few_nerd:supervised:test:4444": "f963b2c70bd79ba609c3e65ebeca540bdd575562c8ef91bbc2f80d39e57b80d1",
+      "few_nerd:supervised:test:4522": "400745633f34c85f10fe82167d23de2faf045f1f5c45e7632cb198d78434f623",
+      "few_nerd:supervised:test:4794": "c543e34f0d034d5be2c21eea6bce5c42c57861c5ac23f130d24decb7f15cec86",
+      "few_nerd:supervised:test:4970": "1839658ba18b0e8ab3f422d2a688546018d8c95bdd6d345e2dc76e2f56dbca20",
+      "few_nerd:supervised:test:5045": "728803e1e8bea9024b4558999ea1c28b47d9bb19fdb403cf2f55a219d631aa39",
+      "few_nerd:supervised:test:6124": "8b76be20c12710574a5f4a15b5bc14b2ee46d0e97d61cbb57b4d6fa6ed355c2c",
+      "few_nerd:supervised:test:6778": "0e923fa77b8172bcddb174e1a34394cbb791072db2c90ce91f65849f1fad045a",
+      "few_nerd:supervised:test:6841": "6b6ae4608dc835af51a16f9e7ef0ba97106795f253033eac076d3fbb1339d15a",
+      "few_nerd:supervised:test:7040": "c167189958af94d77fde3c38f3d9717dcdb53ce6c64997cdf4f37a64ea54d85b",
+      "few_nerd:supervised:test:7225": "c8d390c166a6c0f34ee0199651c984949e9031a89680b6c251163b07c3677fd7",
+      "few_nerd:supervised:test:7641": "7494d65c1a1500f536e0b0f940258e760509f56d357dae305f7836b7103ff1f5",
+      "few_nerd:supervised:test:7666": "f0aa7858f2793eee2155bdd94c087d37450d19a02e88be50e0574534e3451927",
+      "few_nerd:supervised:test:7882": "88435bbac457f3b84ac7a12535e8d7fddf3fd2e70ede8c2402a77df83b1e81b8",
+      "few_nerd:supervised:test:8296": "da33a40b454edd064fb36fd8cbbfb45ea28189bbaf88506ee0ca6d41c55b89fd",
+      "few_nerd:supervised:test:10419": "9ebdc9e5e1c8681bcd34ef882da955a3d400677775ed66e0bba7ce94ec4415a2",
+      "few_nerd:supervised:test:10899": "467d24707dffc55d98e6ea1134de7af74ef9ceed5cb8c835800276c140a14ffa",
+      "few_nerd:supervised:test:11063": "067f70af865c28eb2b3eda63588489f1a91dadabda3cd5f9399069dd37ac010f",
+      "few_nerd:supervised:test:11103": "cb757cfb445041141e95b0aa5d24031bf220f85de157778648ab4d88d1c103b4",
+      "few_nerd:supervised:test:12306": "236f71a589f49eb5d049372392f8c882c0e9dd6a5faf709366fb95e57fcb36dc",
+      "few_nerd:supervised:test:13153": "d70d70772bcec3738f93493be7b93fb5d691e23e6bc22fac9b4bd116222101c9",
+      "few_nerd:supervised:test:13177": "374695a05d3709922ff82688266be9613fd6b48b5274c6218ab68d0a2fa35acd",
+      "few_nerd:supervised:test:13611": "44ea2bb3aa21adfb34cb734010416974ed88de7faa694d62b55ed79900546fa3",
+      "few_nerd:supervised:test:13641": "93a7c8287c4525b7f43b90a3bd2b2147802cc315770cdc3a6881b73ef2186dab",
+      "few_nerd:supervised:test:13843": "de31d0177238069dbc7d060d464e6e12bc29c6d3c6ac748bea4078dda84e881b",
+      "few_nerd:supervised:test:14104": "b54211aa7e287d4ede3d69a9cbcada856958612c7a47d1156f9e1f76eaf3b0ac",
+      "few_nerd:supervised:test:15205": "54ab8daae85f03347196a410d72d78ec3c3e64eab8b6a815a9b2e268514f1a21",
+      "few_nerd:supervised:test:15945": "9a2bcf0f077eedc05038ae90b0669adb8bede5be7a2d458531fb251ec79e6cd9",
+      "few_nerd:supervised:test:16662": "69d6b582ae0409f5290dbfbe1c665b596e32f9c287123301e9ae136823a6bb0b",
+      "few_nerd:supervised:test:16743": "9d29e6b27eab466179ed762a53bacd8fc774f8059f228c2d7bb8c9b75051d3af",
+      "few_nerd:supervised:test:19768": "3a77515641bfb3dde3127980d07cc2e554a9d2ea300223d40972ae2a78757afa",
+      "few_nerd:supervised:test:20226": "0317378002c2c35219d2e27622fe9e507d686c32ad40fcc04d444cce1f2360e2",
+      "few_nerd:supervised:test:20306": "5007a89e67ec4bb373d333b379b980155e5d00d64e189a5389db8f6f666b8389",
+      "few_nerd:supervised:test:20456": "8c339f31930b633f29c9a44e7e5511044ce987c3df6651d203a1c01a6e41fab1",
+      "few_nerd:supervised:test:20573": "f92a4e4527a23f9cc4906b71902948d2d3a8e74826da1cb81038f653303bb708",
+      "few_nerd:supervised:test:20966": "58b05d3b61e61f26870129cb01424248c2b484b396672a5f7c0b97f2367c111d",
+      "few_nerd:supervised:test:21566": "9a23d384a9fd8ef1bc6c65db614ac912a5d8abfee304ec9c70f38efeafe2172d",
+      "few_nerd:supervised:test:21721": "a6e4ac281ae6d5ffa8dbb4fb40f17f791a2444f665626613ccb86c179c4404ac",
+      "few_nerd:supervised:test:21978": "01a30397ce96863f830e5f1f69d5b744d294317fbb86e29508a4a84b655f1c8e",
+      "few_nerd:supervised:test:22008": "3e1357942593e13e09459765c2ae3175ebd12dbcd67a841a1785e0b2d242f87e",
+      "few_nerd:supervised:test:22838": "a99c45255c214817d0b994d94d4a6d0401ae810cf92570b1ef7115ba30b0f972",
+      "few_nerd:supervised:test:22944": "a9f13996abfb58ddf9bd65d1ddc2a4ed56fb07f9bc3c2e8cddbee8e8600b7d29",
+      "few_nerd:supervised:test:23481": "ac9396dcd950f7c2c11279ad9d2c58679f4093d2a04e1902883b4fed12ece76c",
+      "few_nerd:supervised:test:23805": "419c7f51980c4e7f7079958cf9a9e288b060d790919a9cbe65801ab9597ca70f",
+      "few_nerd:supervised:test:24306": "ea13f07b69988d552e34787f037e480c0e2f7fcbd7f77ad06aa8b5275a16c517",
+      "few_nerd:supervised:test:24586": "c5f0ae66bdc7c4ab1e0e9ea954c6d32ffafc315e4d9a14354d961e8bb171cf79",
+      "few_nerd:supervised:test:24642": "7ab1bc8a65e406f765f35007cc29f07a771f6c133455c96df0c7d937dba4641f",
+      "few_nerd:supervised:test:24652": "e654c1e72263884a16cc728d9cfb5940d03b1dd755d88b7f60a015a348a5cf82",
+      "few_nerd:supervised:test:24801": "8d033aabcf77b71f70023c918722fe627fff29b0970dcc61ae48678f0827cfd2",
+      "few_nerd:supervised:test:25023": "0039f4bc2948d719525ab6a7f972a82b7b4214943e045eab9f3d0f41ecd57357",
+      "few_nerd:supervised:test:25475": "75661f532e75d1c52b0ce6c98abd99c7801ed91516859d07578b22013b91c27b",
+      "few_nerd:supervised:test:25567": "62d1279d77d66cd9d177562dfe259dd1833a265813b90897652ead40fe397fe1",
+      "few_nerd:supervised:test:26095": "550e4c5f470baeee5f7291d6cdee019b6cecf0b672c98f84914a0759e54525bd",
+      "few_nerd:supervised:test:26110": "a245e465e5f95d3376101f98c46a51e9c02c01461c5f6c94cb9a1e4fe052b00c",
+      "few_nerd:supervised:test:26165": "09bec392de2c410d54c3dcb96e3d1870289ed448ecfe8499ba3f5532bc23a24d",
+      "few_nerd:supervised:test:26230": "911bc248eb35cc523aa75b85dfe222f4eaa3583210b2468f1348f69314f4cfeb",
+      "few_nerd:supervised:test:26749": "6cfa4f1620326af8ace30b2ca3c50e814e6097dbc27b3819d6cb7dbb11d34865",
+      "few_nerd:supervised:test:27111": "bc1b2d157a1f164c0f940247790286771e70385305d871862fca38cd55454bc5",
+      "few_nerd:supervised:test:27177": "244bcfa27017263767255e4ea04cf8f339cb8a178157498952a122f7e81b397c",
+      "few_nerd:supervised:test:27284": "84e76b12b417a15cde61e5ec583dd3f1bc8951f11ce3ad1b4149d302c36a5260",
+      "few_nerd:supervised:test:27644": "be29d95826f45743d5e112fbf4578534d40dca757a5eb7c9d0f051369d122bd6",
+      "few_nerd:supervised:test:27658": "4b6434d1eed96520d6f9f2be79034a4f5b852caa695c785800ce4f84f08ac044",
+      "few_nerd:supervised:test:27791": "bd1c37e1e403781915ab8f62fc87756f57c468b88f8158904e6a135f68dec110",
+      "few_nerd:supervised:test:27873": "6479d2e0124154b5239d8a1c9556946dc4f3291bf1efe551b89123d7582429ab",
+      "few_nerd:supervised:test:27913": "aa7c4bc43f2077ba51b820e8fb5dc151c9cd98fceceff3ae5030015f6ac7692f",
+      "few_nerd:supervised:test:28032": "bdde661c15de02d691b96a3650f94438b2d8757d384d28ad9e877d0814bb855a",
+      "few_nerd:supervised:test:28582": "f54553d7b7bc3c1356c56102fc83dc6f32e7a2c6a10fcffa85b59dcd2624c7fc",
+      "few_nerd:supervised:test:28939": "44098be805af40c0fa9e80f0e74b1f002ac41f0019c5b6677c9c7267c20dfcef",
+      "few_nerd:supervised:test:28954": "8775d01f55baa572465a355be16aa218fef4fdccef1df6abad5d7fa26c0d0f90",
+      "few_nerd:supervised:test:29524": "ea72a20b9ce5230590f709351d4d955b3a6a40a933b32a8779c58bf4c440a6dd",
+      "few_nerd:supervised:test:30114": "0109a346e48f55c089200c78b729622a136018f515a6ca9b681c8faf82369839",
+      "few_nerd:supervised:test:30209": "c4d2c873d298590252c8f1c0f5fe4e926831977e3ac7967ec370820f818cc62d",
+      "few_nerd:supervised:test:30852": "b346c6fb4248871544e11389a7fe0504f88cf6845b941fbef9a3628d21c63866",
+      "few_nerd:supervised:test:30902": "90bcb99fdf5e296515993fca5abb99edc1ec61ac5bb7978f4607133cf0303956",
+      "few_nerd:supervised:test:30929": "1577f25a8749d01d3b44351d74b12cbbef95a23c2590ccc28a8c594f50ed3694",
+      "few_nerd:supervised:test:31050": "377d69271c6de857c2f66b3ef7db63fd3f420b52af37e5f20df8054c6a6af531",
+      "few_nerd:supervised:test:31232": "0cf671f47398077aa5ced396f5c63526c3b01d6694d3d10b47271c6af2dbb6fa",
+      "few_nerd:supervised:test:32274": "ffc1300873e077ca8be2344817cbccf57c62c10ba22fd91d4a084cb307fd88bf",
+      "few_nerd:supervised:test:32720": "2d2a438713343d5497c45dc9516ce049bab12fc61db7ac284abf9bc03351a30e",
+      "few_nerd:supervised:test:33040": "7e546014aa0247ea1a1912b3994257e517d95b67c7840488ac9e4dba1d5fd3ef",
+      "few_nerd:supervised:test:33384": "cbb07aa688c5b260dafd868f86916d6c424027ae3bfc295d8fc5a3d06e78a6a0",
+      "few_nerd:supervised:test:34421": "7cf100e0a97ee5d95bdfa8f6ccfcc5ca2c478667da8319e184ee1014b9afffb2",
+      "few_nerd:supervised:test:34683": "f301143ccc541a797ab575db1533d19637b1c730d8a610cfacc387792696fcc1",
+      "few_nerd:supervised:test:34949": "291db247dffdfe844d05958aa8a8128ca514304e8d3101f5aa51b3c555dd8437",
+      "few_nerd:supervised:test:35220": "48a778e499db3b1ee6623c1e27f0b454f22887e23059e40d90b122aad5cc9f5e",
+      "few_nerd:supervised:test:35349": "fd271f4d22307da4cf290b665d977471bcc34744124818a741ac3c65fb000b9e",
+      "few_nerd:supervised:test:36319": "915eeb2b1af27b099170b006ca448205d218e59a15fdeeff7b0b19be2759ebbc",
+      "few_nerd:supervised:test:36389": "b2247987b91d443e147c4e354c62bf5e534bd08f417d864a56bccbc1111809ef",
+      "few_nerd:supervised:test:36412": "c154dc88716147620965ef245a5b05a1a6b03bd255fd13e57a6df72a909c799a",
+      "few_nerd:supervised:test:36675": "009f331f0cf26b80af44edb83ebb7b6a2b37b27bb5fb5d61b475595f9943ccd2",
+      "few_nerd:supervised:test:36839": "cf8cecd63733634240f40848cf46ee6bb391f3dac0b29d45fd606cd9895fda7e",
+      "few_nerd:supervised:test:37024": "0e57e9476486782b2acc4eed3bee445c6cdcf3ce5acfbc6c056de69679410a05",
+      "few_nerd:supervised:test:37204": "ca38970fd329b906b58d5c0a4baf2c999d8b2f825aec7847664369fb380193da",
+      "few_nerd:supervised:test:37617": "7ae35e5ed60146c771ba8752adb290b2526bb71a2d56a5c91e6dad90dac52151"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 358,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "few_nerd:supervised:test:2318",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "organization": 0.28712871287128716,
+        "product": 0.08250825082508251,
+        "event": 0.1689168916891689,
+        "building": 0.126012601260126,
+        "art": 0.23142314231423142,
+        "other": 0.104010401040104,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:2318",
+      "question_id": "entity_5_6",
+      "probabilities": {
+        "product": 0.20487463789831184,
+        "event": 0.10828089101987812,
+        "art": 0.1551293577065228,
+        "building": 0.1434422135650784,
+        "location": 0.25561881929877134,
+        "person": 0.1326540805114374,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:2513",
+      "question_id": "entity_0_3",
+      "probabilities": {
+        "product": 0.1836734693877551,
+        "event": 0.15536214485794317,
+        "location": 0.18957583033213285,
+        "other": 0.1758703481392557,
+        "art": 0.1836734693877551,
+        "organization": 0.11184473789515806,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:2513",
+      "question_id": "entity_18_21",
+      "probabilities": {
+        "building": 0.22761380690345173,
+        "art": 0.07763881940970485,
+        "event": 0.18859429714857429,
+        "product": 0.12606303151575787,
+        "organization": 0.26183091545772885,
+        "other": 0.11825912956478238,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:2513",
+      "question_id": "entity_23_24",
+      "probabilities": {
+        "other": 0.34221065278334,
+        "building": 0.056968362034441326,
+        "product": 0.06848217861433721,
+        "location": 0.35392470965158185,
+        "organization": 0.12414897877452943,
+        "art": 0.054265118141770124,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:2513",
+      "question_id": "entity_29_32",
+      "probabilities": {
+        "location": 0.3084766093562575,
+        "organization": 0.1786285485805678,
+        "product": 0.0814674130347861,
+        "building": 0.10635745701719312,
+        "event": 0.23230707716913235,
+        "art": 0.09276289484206317,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3218",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "product": 0.24607539246075394,
+        "organization": 0.1298870112988701,
+        "event": 0.24607539246075394,
+        "person": 0.12208779122087791,
+        "other": 0.1620837916208379,
+        "art": 0.0937906209379062,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3369",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "other": 0.2988,
+        "art": 0.1226,
+        "person": 0.2051,
+        "building": 0.1167,
+        "location": 0.1777,
+        "product": 0.0791,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3369",
+      "question_id": "entity_12_14",
+      "probabilities": {
+        "person": 0.3982407037185126,
+        "product": 0.07706917233106758,
+        "building": 0.08886445421831268,
+        "organization": 0.13564574170331867,
+        "art": 0.21281487405037985,
+        "location": 0.08736505397840864,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3369",
+      "question_id": "entity_37_40",
+      "probabilities": {
+        "organization": 0.1973,
+        "event": 0.2139,
+        "art": 0.1196,
+        "location": 0.2236,
+        "product": 0.1494,
+        "building": 0.0962,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3369",
+      "question_id": "entity_53_55",
+      "probabilities": {
+        "art": 0.21411411411411413,
+        "person": 0.26586586586586586,
+        "product": 0.0962962962962963,
+        "location": 0.25805805805805804,
+        "building": 0.0962962962962963,
+        "other": 0.06936936936936937,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3369",
+      "question_id": "entity_56_58",
+      "probabilities": {
+        "art": 0.22468987595038017,
+        "product": 0.11284513805522209,
+        "location": 0.20128051220488197,
+        "person": 0.2579031612645058,
+        "other": 0.13875550220088034,
+        "building": 0.06452581032412966,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "location": 0.4572743646187713,
+        "product": 0.09285571342805683,
+        "other": 0.0732439463678207,
+        "building": 0.2159295577346408,
+        "art": 0.0957574544726836,
+        "person": 0.06493896337802682,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_4_7",
+      "probabilities": {
+        "person": 0.14365746298519408,
+        "location": 0.3673469387755102,
+        "other": 0.08693477390956382,
+        "building": 0.1758703481392557,
+        "art": 0.1211484593837535,
+        "organization": 0.10504201680672268,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_9_10",
+      "probabilities": {
+        "other": 0.1289773864318591,
+        "event": 0.26966179707824695,
+        "organization": 0.123574144486692,
+        "product": 0.15149089453672204,
+        "location": 0.24914948969381628,
+        "person": 0.0771462877726636,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_11_12",
+      "probabilities": {
+        "person": 0.1445,
+        "building": 0.1445,
+        "location": 0.1885,
+        "event": 0.3164,
+        "product": 0.1143,
+        "other": 0.0918,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_20_21",
+      "probabilities": {
+        "organization": 0.20212021202120212,
+        "event": 0.3047304730473048,
+        "product": 0.0698069806980698,
+        "other": 0.1572157215721572,
+        "location": 0.1992199219921992,
+        "person": 0.0669066906690669,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_25_28",
+      "probabilities": {
+        "organization": 0.1864627074585083,
+        "art": 0.05248950209958008,
+        "building": 0.16406718656268746,
+        "event": 0.33193361327734455,
+        "location": 0.18356328734253152,
+        "person": 0.08148370325934813,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3408",
+      "question_id": "entity_31_34",
+      "probabilities": {
+        "product": 0.09783697176046464,
+        "location": 0.33056278790306426,
+        "art": 0.04546364910875225,
+        "organization": 0.22781894652513518,
+        "person": 0.15161225716002402,
+        "event": 0.14670538754255957,
+        "other": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3656",
+      "question_id": "entity_2_4",
+      "probabilities": {
+        "building": 0.18125561433276774,
+        "location": 0.19592773729913165,
+        "product": 0.18125561433276774,
+        "art": 0.12675915760055895,
+        "other": 0.22517217287154406,
+        "event": 0.08962970356322987,
+        "organization": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3656",
+      "question_id": "entity_5_6",
+      "probabilities": {
+        "product": 0.36924769907963184,
+        "event": 0.16216486594637855,
+        "person": 0.06932773109243698,
+        "building": 0.14065626250500202,
+        "other": 0.19827931172468988,
+        "art": 0.06032412965186075,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:3656",
+      "question_id": "entity_10_12",
+      "probabilities": {
+        "product": 0.25374775134919053,
+        "other": 0.3474915050969419,
+        "art": 0.05316809914051569,
+        "organization": 0.15130921447131723,
+        "person": 0.10933439936038378,
+        "location": 0.08494903058165103,
+        "building": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_0_3",
+      "probabilities": {
+        "event": 0.40571314422692767,
+        "art": 0.05733120255693168,
+        "building": 0.10587295245705153,
+        "person": 0.22722732720735117,
+        "location": 0.13363963244107072,
+        "other": 0.0702157411106672,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "art": 0.1377688844422211,
+        "product": 0.06643321660830416,
+        "organization": 0.19149574787393697,
+        "event": 0.26183091545772885,
+        "person": 0.23841920960480242,
+        "location": 0.1040520260130065,
+        "building": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "product": 0.16808404202101052,
+        "person": 0.21590795397698848,
+        "organization": 0.2003001500750375,
+        "building": 0.1396698349174587,
+        "art": 0.17688844422211106,
+        "other": 0.09914957478739368,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_15_18",
+      "probabilities": {
+        "location": 0.3418341834183418,
+        "art": 0.0566056605660566,
+        "product": 0.0491049104910491,
+        "person": 0.3203320332033203,
+        "event": 0.17381738173817382,
+        "other": 0.058305830583058306,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_22_23",
+      "probabilities": {
+        "building": 0.23263263263263262,
+        "other": 0.10020020020020019,
+        "organization": 0.1837837837837838,
+        "person": 0.22582582582582583,
+        "event": 0.1866866866866867,
+        "product": 0.07087087087087088,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4212",
+      "question_id": "entity_25_27",
+      "probabilities": {
+        "organization": 0.3049134394075853,
+        "product": 0.05543880716501551,
+        "other": 0.13099169418593012,
+        "location": 0.2853997798458921,
+        "building": 0.16511558090663464,
+        "art": 0.05814069848894225,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_7_8",
+      "probabilities": {
+        "organization": 0.2869565217391305,
+        "person": 0.2576711644177911,
+        "product": 0.09325337331334332,
+        "other": 0.15132433783108448,
+        "location": 0.13953023488255872,
+        "art": 0.07126436781609197,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "location": 0.2657860502351646,
+        "building": 0.06034223956769739,
+        "product": 0.10947663364355048,
+        "art": 0.20424297007905534,
+        "person": 0.25407785449814874,
+        "event": 0.10607425197638347,
+        "organization": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_19_20",
+      "probabilities": {
+        "other": 0.23361024922430187,
+        "person": 0.17595836252627367,
+        "event": 0.20628565709138225,
+        "organization": 0.14372935642077872,
+        "building": 0.15053548193374036,
+        "location": 0.08988089280352318,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_21_22",
+      "probabilities": {
+        "other": 0.26885474860335196,
+        "building": 0.06284916201117319,
+        "product": 0.12669592976855548,
+        "person": 0.26885474860335196,
+        "organization": 0.20261372705506786,
+        "art": 0.0701316839584996,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_24_26",
+      "probabilities": {
+        "organization": 0.2887823394266307,
+        "person": 0.1756068324842673,
+        "event": 0.17271001897912294,
+        "product": 0.10977924283288382,
+        "building": 0.1648186994306263,
+        "location": 0.08830286684646887,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4444",
+      "question_id": "entity_30_32",
+      "probabilities": {
+        "building": 0.14274274274274273,
+        "other": 0.1061061061061061,
+        "event": 0.19839839839839837,
+        "product": 0.14074074074074075,
+        "location": 0.29719719719719717,
+        "person": 0.11481481481481481,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4522",
+      "question_id": "entity_2_5",
+      "probabilities": {
+        "organization": 0.5073940847322143,
+        "art": 0.048561151079136694,
+        "other": 0.12050359712230217,
+        "person": 0.15517585931254996,
+        "product": 0.11320943245403678,
+        "building": 0.055155875299760196,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4522",
+      "question_id": "entity_6_8",
+      "probabilities": {
+        "other": 0.2158,
+        "organization": 0.3086,
+        "person": 0.1172,
+        "event": 0.1328,
+        "art": 0.127,
+        "product": 0.0986,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4522",
+      "question_id": "entity_10_13",
+      "probabilities": {
+        "product": 0.2102102102102102,
+        "building": 0.08358358358358359,
+        "other": 0.13293293293293293,
+        "organization": 0.3675675675675676,
+        "art": 0.11971971971971972,
+        "event": 0.08598598598598599,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4522",
+      "question_id": "entity_15_18",
+      "probabilities": {
+        "art": 0.1327203677793324,
+        "product": 0.0971417149710174,
+        "event": 0.172796322206676,
+        "building": 0.20197881271237259,
+        "other": 0.2518488906656007,
+        "organization": 0.143513891665001,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4794",
+      "question_id": "entity_4_10",
+      "probabilities": {
+        "art": 0.1875750300120048,
+        "person": 0.13095238095238093,
+        "product": 0.33413365346138457,
+        "other": 0.11044417767106843,
+        "building": 0.1377551020408163,
+        "organization": 0.09913965586234492,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4794",
+      "question_id": "entity_15_17",
+      "probabilities": {
+        "organization": 0.18250874562718644,
+        "event": 0.18840579710144928,
+        "product": 0.2830584707646177,
+        "art": 0.1039480259870065,
+        "location": 0.15322338830584709,
+        "person": 0.08885557221389306,
+        "other": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4794",
+      "question_id": "entity_22_23",
+      "probabilities": {
+        "other": 0.33186725309876053,
+        "person": 0.12005197920831667,
+        "building": 0.09616153538584565,
+        "art": 0.2069172331067573,
+        "event": 0.1747301079568173,
+        "organization": 0.07027189124350261,
+        "product": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4794",
+      "question_id": "entity_24_26",
+      "probabilities": {
+        "art": 0.2031,
+        "organization": 0.0957,
+        "event": 0.1875,
+        "building": 0.1377,
+        "location": 0.2412,
+        "product": 0.1348,
+        "other": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4794",
+      "question_id": "entity_30_31",
+      "probabilities": {
+        "location": 0.24712471247124712,
+        "organization": 0.1494149414941494,
+        "person": 0.1079107910791079,
+        "other": 0.22852285228522853,
+        "art": 0.1523152315231523,
+        "event": 0.1147114711471147,
+        "building": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4970",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "art": 0.2889555222388806,
+        "building": 0.2430784607696152,
+        "person": 0.07756121939030486,
+        "other": 0.18640679660169915,
+        "organization": 0.11864067966016992,
+        "event": 0.08535732133933034,
+        "product": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4970",
+      "question_id": "entity_8_10",
+      "probabilities": {
+        "person": 0.26348920863309355,
+        "organization": 0.11460831334932055,
+        "building": 0.19804156674660273,
+        "product": 0.11121103117505995,
+        "art": 0.2146282973621103,
+        "other": 0.09802158273381296,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:4970",
+      "question_id": "entity_11_12",
+      "probabilities": {
+        "event": 0.2412,
+        "organization": 0.1055,
+        "other": 0.1172,
+        "location": 0.3242,
+        "building": 0.1348,
+        "art": 0.0771,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:5045",
+      "question_id": "entity_6_8",
+      "probabilities": {
+        "other": 0.28732986389111287,
+        "event": 0.33226581265012006,
+        "product": 0.03522818254603683,
+        "person": 0.13190552441953562,
+        "location": 0.16903522818254602,
+        "art": 0.04423538831064852,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:6124",
+      "question_id": "entity_41_46",
+      "probabilities": {
+        "other": 0.252,
+        "product": 0.1206,
+        "organization": 0.0815,
+        "art": 0.2441,
+        "person": 0.1729,
+        "event": 0.1289,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:6778",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "location": 0.4121,
+        "building": 0.0728,
+        "organization": 0.0762,
+        "other": 0.1826,
+        "person": 0.1777,
+        "event": 0.0786,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:6778",
+      "question_id": "entity_5_6",
+      "probabilities": {
+        "organization": 0.23253952371422854,
+        "art": 0.06543926355813488,
+        "building": 0.11136682009205523,
+        "location": 0.3830298178907344,
+        "person": 0.12997798679207523,
+        "other": 0.07764658795277167,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:6841",
+      "question_id": "entity_12_16",
+      "probabilities": {
+        "location": 0.2907964424902568,
+        "event": 0.3454581792745079,
+        "organization": 0.11372039572299392,
+        "building": 0.09563305686019787,
+        "product": 0.09903067852503247,
+        "art": 0.05536124712701109,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:6841",
+      "question_id": "entity_20_25",
+      "probabilities": {
+        "building": 0.19759639459188785,
+        "product": 0.04837255883825739,
+        "person": 0.07721582373560341,
+        "event": 0.48122183274912367,
+        "art": 0.12178267401101653,
+        "organization": 0.07381071607411117,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7040",
+      "question_id": "entity_17_19",
+      "probabilities": {
+        "organization": 0.36538269134567286,
+        "other": 0.10845422711355678,
+        "product": 0.05712856428214107,
+        "event": 0.21890945472736367,
+        "art": 0.15727863931965982,
+        "location": 0.09284642321160579,
+        "person": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7040",
+      "question_id": "entity_20_22",
+      "probabilities": {
+        "location": 0.19032387045181928,
+        "event": 0.19622151139544183,
+        "organization": 0.16493402638944424,
+        "person": 0.23230707716913235,
+        "art": 0.13084766093562575,
+        "other": 0.08536585365853659,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7040",
+      "question_id": "entity_23_25",
+      "probabilities": {
+        "art": 0.1543,
+        "person": 0.2617,
+        "product": 0.104,
+        "location": 0.2344,
+        "building": 0.1396,
+        "other": 0.106,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7040",
+      "question_id": "entity_27_30",
+      "probabilities": {
+        "building": 0.16716716716716717,
+        "organization": 0.23263263263263262,
+        "person": 0.22872872872872874,
+        "event": 0.16226226226226226,
+        "location": 0.14374374374374374,
+        "product": 0.06546546546546547,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7040",
+      "question_id": "entity_40_41",
+      "probabilities": {
+        "building": 0.16393606393606394,
+        "other": 0.1175824175824176,
+        "person": 0.18531468531468534,
+        "organization": 0.241958041958042,
+        "product": 0.17172827172827174,
+        "location": 0.11948051948051949,
+        "event": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7225",
+      "question_id": "entity_3_5",
+      "probabilities": {
+        "art": 0.11164369882164968,
+        "location": 0.2769123227481526,
+        "building": 0.10974635510285599,
+        "person": 0.2944877171959257,
+        "product": 0.0828839624525664,
+        "other": 0.1243259436788496,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7225",
+      "question_id": "entity_11_17",
+      "probabilities": {
+        "product": 0.12693653173413294,
+        "location": 0.2332833583208396,
+        "event": 0.16491754122938532,
+        "building": 0.1933033483258371,
+        "organization": 0.23718140929535234,
+        "art": 0.044377811094452775,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7225",
+      "question_id": "entity_18_19",
+      "probabilities": {
+        "person": 0.3441441441441441,
+        "organization": 0.3226226226226226,
+        "product": 0.045245245245245244,
+        "art": 0.0845845845845846,
+        "building": 0.13883883883883882,
+        "other": 0.06456456456456457,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7225",
+      "question_id": "entity_22_25",
+      "probabilities": {
+        "organization": 0.43758751750350067,
+        "product": 0.04320864172834567,
+        "event": 0.11432286457291457,
+        "location": 0.21004200840168033,
+        "art": 0.11772354470894178,
+        "person": 0.07711542308461693,
+        "building": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_17_18",
+      "probabilities": {
+        "event": 0.450794285143371,
+        "building": 0.07363372964332102,
+        "person": 0.09461484663802579,
+        "art": 0.15316215406134479,
+        "other": 0.16585073433909484,
+        "product": 0.06194425017484265,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_26_27",
+      "probabilities": {
+        "art": 0.1728827117288271,
+        "person": 0.08839116088391162,
+        "event": 0.208979102089791,
+        "product": 0.10008999100089991,
+        "location": 0.30266973302669736,
+        "other": 0.126987301269873,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_35_36",
+      "probabilities": {
+        "building": 0.16908599459405346,
+        "location": 0.26979677645409955,
+        "other": 0.1109220142156372,
+        "art": 0.13975372910201223,
+        "person": 0.19751726899589547,
+        "product": 0.11292421663830213,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_50_53",
+      "probabilities": {
+        "art": 0.14934026389444224,
+        "other": 0.14934026389444224,
+        "event": 0.22061175529788085,
+        "location": 0.22061175529788085,
+        "person": 0.15613754498200721,
+        "building": 0.10395841663334666,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_55_57",
+      "probabilities": {
+        "location": 0.3706181963447518,
+        "building": 0.057824827723958847,
+        "other": 0.11854589034255467,
+        "product": 0.13262758414061718,
+        "organization": 0.2516728253270748,
+        "person": 0.06871067612104263,
+        "event": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_58_59",
+      "probabilities": {
+        "location": 0.3341670835417709,
+        "event": 0.22671335667833914,
+        "product": 0.06303151575787894,
+        "building": 0.10355177588794397,
+        "other": 0.1904952476238119,
+        "art": 0.08204102051025512,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_64_67",
+      "probabilities": {
+        "location": 0.3124687531246875,
+        "other": 0.12788721127887212,
+        "art": 0.07669233076692332,
+        "event": 0.25587441255874416,
+        "product": 0.1386861313868613,
+        "person": 0.08839116088391162,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7641",
+      "question_id": "entity_68_69",
+      "probabilities": {
+        "location": 0.31053105310531054,
+        "organization": 0.1416141614161416,
+        "art": 0.0747074707470747,
+        "event": 0.2656265626562656,
+        "building": 0.1289128912891289,
+        "product": 0.0786078607860786,
+        "other": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7666",
+      "question_id": "entity_3_5",
+      "probabilities": {
+        "event": 0.3887,
+        "organization": 0.0981,
+        "location": 0.1895,
+        "product": 0.0742,
+        "other": 0.1807,
+        "art": 0.0688,
+        "person": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7666",
+      "question_id": "entity_6_8",
+      "probabilities": {
+        "building": 0.11917150290174104,
+        "event": 0.24034420652391436,
+        "person": 0.19931959175505304,
+        "organization": 0.12507504502701622,
+        "location": 0.2159295577346408,
+        "other": 0.10016009605763458,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7666",
+      "question_id": "entity_11_13",
+      "probabilities": {
+        "art": 0.1944944944944945,
+        "building": 0.06746746746746747,
+        "event": 0.23463463463463463,
+        "other": 0.17987987987987988,
+        "location": 0.22092092092092092,
+        "person": 0.1026026026026026,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7666",
+      "question_id": "entity_17_21",
+      "probabilities": {
+        "location": 0.2773277327732773,
+        "organization": 0.1367136713671367,
+        "event": 0.22952295229522954,
+        "other": 0.15821582158215822,
+        "product": 0.1152115211521152,
+        "person": 0.08300830083008301,
+        "art": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7882",
+      "question_id": "entity_0_5",
+      "probabilities": {
+        "other": 0.2696348174087044,
+        "person": 0.18859429714857429,
+        "art": 0.15927963981990995,
+        "event": 0.1089544772386193,
+        "organization": 0.16608304152076037,
+        "product": 0.1074537268634317,
+        "building": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7882",
+      "question_id": "entity_12_13",
+      "probabilities": {
+        "location": 0.2617261726172617,
+        "art": 0.207020702070207,
+        "other": 0.127012701270127,
+        "person": 0.17381738173817382,
+        "event": 0.1357135713571357,
+        "building": 0.09470947094709471,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7882",
+      "question_id": "entity_17_18",
+      "probabilities": {
+        "person": 0.390990990990991,
+        "building": 0.049849849849849845,
+        "event": 0.0986986986986987,
+        "location": 0.2092092092092092,
+        "organization": 0.15545545545545544,
+        "product": 0.0957957957957958,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7882",
+      "question_id": "entity_19_21",
+      "probabilities": {
+        "product": 0.37072927072927075,
+        "art": 0.15904095904095908,
+        "person": 0.1258741258741259,
+        "other": 0.13656343656343656,
+        "organization": 0.1277722277722278,
+        "event": 0.08001998001998004,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:7882",
+      "question_id": "entity_26_28",
+      "probabilities": {
+        "other": 0.2618571142685611,
+        "location": 0.12407444466680008,
+        "art": 0.17780668401040625,
+        "building": 0.10256153692215329,
+        "product": 0.22763658194916953,
+        "event": 0.10606363818290974,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_11_13",
+      "probabilities": {
+        "other": 0.2370866220401639,
+        "product": 0.10540513537815967,
+        "location": 0.2575681886302328,
+        "art": 0.17364372065141376,
+        "building": 0.14437006693975424,
+        "organization": 0.08192626636027577,
+        "event": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_18_19",
+      "probabilities": {
+        "person": 0.23632363236323634,
+        "art": 0.11181118111811181,
+        "event": 0.2148214821482148,
+        "organization": 0.1328132813281328,
+        "building": 0.1924192419241924,
+        "location": 0.11181118111811181,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_23_24",
+      "probabilities": {
+        "product": 0.1592,
+        "building": 0.0815,
+        "person": 0.1338,
+        "location": 0.3711,
+        "organization": 0.1592,
+        "art": 0.0952,
+        "other": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_27_28",
+      "probabilities": {
+        "organization": 0.18659329664832416,
+        "other": 0.09084542271135568,
+        "product": 0.06543271635817909,
+        "location": 0.4279139569784892,
+        "event": 0.1729864932466233,
+        "person": 0.05622811405702851,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_31_34",
+      "probabilities": {
+        "product": 0.1108,
+        "event": 0.2578,
+        "location": 0.25,
+        "person": 0.1279,
+        "building": 0.1641,
+        "art": 0.0894,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_37_40",
+      "probabilities": {
+        "event": 0.38070964517741135,
+        "art": 0.09615192403798101,
+        "organization": 0.06296851574212894,
+        "location": 0.35722138930534736,
+        "other": 0.06026986506746627,
+        "building": 0.04267866066966517,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:8296",
+      "question_id": "entity_41_42",
+      "probabilities": {
+        "location": 0.32859288933400105,
+        "building": 0.08462694041061593,
+        "person": 0.1271907861792689,
+        "product": 0.13690535803705559,
+        "event": 0.24056084126189284,
+        "other": 0.08212318477716575,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:10419",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "person": 0.351951951951952,
+        "art": 0.05225225225225225,
+        "organization": 0.14274274274274273,
+        "other": 0.17987987987987988,
+        "product": 0.1944944944944945,
+        "building": 0.07867867867867868,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:10899",
+      "question_id": "entity_0_3",
+      "probabilities": {
+        "product": 0.5664,
+        "event": 0.0449,
+        "organization": 0.0464,
+        "building": 0.1699,
+        "location": 0.126,
+        "person": 0.0464,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:10899",
+      "question_id": "entity_9_10",
+      "probabilities": {
+        "building": 0.4141,
+        "person": 0.0869,
+        "organization": 0.0635,
+        "other": 0.2324,
+        "event": 0.1279,
+        "product": 0.0752,
+        "location": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:10899",
+      "question_id": "entity_14_15",
+      "probabilities": {
+        "building": 0.4986981774484278,
+        "organization": 0.0471660324454236,
+        "art": 0.07089925896254758,
+        "location": 0.19847786901662326,
+        "event": 0.11486080512717806,
+        "product": 0.06989785699979972,
+        "other": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:10899",
+      "question_id": "entity_18_19",
+      "probabilities": {
+        "organization": 0.367016491754123,
+        "art": 0.08685657171414293,
+        "person": 0.10834582708645678,
+        "building": 0.22158920539730137,
+        "event": 0.12053973013493254,
+        "product": 0.09565217391304348,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:11063",
+      "question_id": "entity_13_17",
+      "probabilities": {
+        "event": 0.22493740610916374,
+        "product": 0.06649974962443665,
+        "location": 0.22103154732098146,
+        "person": 0.1202804206309464,
+        "organization": 0.2542814221331998,
+        "building": 0.1129694541812719,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:11103",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "other": 0.2812,
+        "person": 0.2559,
+        "building": 0.0649,
+        "location": 0.1992,
+        "product": 0.1104,
+        "event": 0.0884,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:11103",
+      "question_id": "entity_11_13",
+      "probabilities": {
+        "event": 0.24909963985594236,
+        "other": 0.21008403361344535,
+        "location": 0.11964785914365746,
+        "art": 0.2560024009603842,
+        "product": 0.09283713485394157,
+        "building": 0.07232893157262905,
+        "organization": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:11103",
+      "question_id": "entity_15_17",
+      "probabilities": {
+        "location": 0.2579031612645058,
+        "other": 0.1592637054821929,
+        "event": 0.1377551020408163,
+        "product": 0.11434573829531813,
+        "person": 0.2579031612645058,
+        "organization": 0.07282913165266107,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:11103",
+      "question_id": "entity_20_22",
+      "probabilities": {
+        "person": 0.3206206206206206,
+        "event": 0.13193193193193192,
+        "building": 0.08018018018018018,
+        "art": 0.2834834834834835,
+        "location": 0.11631631631631631,
+        "organization": 0.06746746746746747,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:12306",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "product": 0.2305,
+        "other": 0.1216,
+        "building": 0.0703,
+        "person": 0.3691,
+        "organization": 0.125,
+        "art": 0.0835,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13153",
+      "question_id": "entity_3_6",
+      "probabilities": {
+        "building": 0.15423830467812874,
+        "event": 0.23130747700919632,
+        "art": 0.09516193522590964,
+        "other": 0.19812075169932028,
+        "organization": 0.1952219112355058,
+        "location": 0.12594962015193922,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13153",
+      "question_id": "entity_7_9",
+      "probabilities": {
+        "building": 0.14566022624887376,
+        "location": 0.13194513965361898,
+        "art": 0.13685053558914806,
+        "person": 0.27960756832515765,
+        "event": 0.21503654019421362,
+        "product": 0.09089998998898789,
+        "organization": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13153",
+      "question_id": "entity_15_18",
+      "probabilities": {
+        "product": 0.24424654792875725,
+        "person": 0.1650990594356614,
+        "other": 0.15829497698619172,
+        "location": 0.14848909345607364,
+        "event": 0.21592955773464076,
+        "building": 0.0679407644586752,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13153",
+      "question_id": "entity_31_36",
+      "probabilities": {
+        "product": 0.2658392553297968,
+        "person": 0.172054849364428,
+        "organization": 0.08117305575017517,
+        "event": 0.18967070363326996,
+        "building": 0.174957461715544,
+        "art": 0.11630467420678611,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13177",
+      "question_id": "entity_7_9",
+      "probabilities": {
+        "organization": 0.3007699230076992,
+        "person": 0.1376862313768623,
+        "other": 0.17968203179682032,
+        "building": 0.0961903809619038,
+        "location": 0.21287871212878712,
+        "art": 0.07279272072792721,
+        "product": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13177",
+      "question_id": "entity_9_11",
+      "probabilities": {
+        "other": 0.31649494848454535,
+        "building": 0.062318695608682605,
+        "organization": 0.13574072221666497,
+        "person": 0.224667400220066,
+        "product": 0.16895068520556167,
+        "event": 0.09182754826447935,
+        "location": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13177",
+      "question_id": "entity_20_22",
+      "probabilities": {
+        "event": 0.40197841726618705,
+        "building": 0.0534572342126299,
+        "art": 0.076638689048761,
+        "person": 0.20493605115907276,
+        "product": 0.15517585931254996,
+        "other": 0.10781374900079936,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13177",
+      "question_id": "entity_38_39",
+      "probabilities": {
+        "event": 0.33363300369593446,
+        "other": 0.21556288083108577,
+        "building": 0.06173209469583458,
+        "location": 0.2058735391069823,
+        "art": 0.12246528818299869,
+        "product": 0.06073319348716411,
+        "organization": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13611",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "location": 0.30709134615384615,
+        "other": 0.10466746794871795,
+        "art": 0.17508012820512822,
+        "event": 0.1985176282051282,
+        "product": 0.14573317307692307,
+        "building": 0.06891025641025642,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13611",
+      "question_id": "entity_8_10",
+      "probabilities": {
+        "building": 0.216016016016016,
+        "event": 0.23073073073073075,
+        "product": 0.07817817817817818,
+        "organization": 0.16816816816816818,
+        "other": 0.18768768768768768,
+        "art": 0.11921921921921921,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13641",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "building": 0.42991495747873937,
+        "organization": 0.08204102051025512,
+        "event": 0.12306153076538268,
+        "person": 0.2032016008004002,
+        "other": 0.1104552276138069,
+        "product": 0.0513256628314157,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13641",
+      "question_id": "entity_9_10",
+      "probabilities": {
+        "organization": 0.2599819873911738,
+        "product": 0.052036425497848496,
+        "person": 0.19353547483238268,
+        "other": 0.20224156909836888,
+        "art": 0.17302111478034624,
+        "building": 0.11918342839987991,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13641",
+      "question_id": "entity_11_12",
+      "probabilities": {
+        "product": 0.0957957957957958,
+        "location": 0.3851851851851852,
+        "person": 0.13973973973973974,
+        "art": 0.1036036036036036,
+        "event": 0.16326326326326326,
+        "building": 0.11241241241241241,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13641",
+      "question_id": "entity_17_20",
+      "probabilities": {
+        "organization": 0.208,
+        "art": 0.1016,
+        "person": 0.1836,
+        "building": 0.2314,
+        "location": 0.208,
+        "product": 0.0674,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13641",
+      "question_id": "entity_21_22",
+      "probabilities": {
+        "building": 0.27152715271527156,
+        "other": 0.08300830083008301,
+        "product": 0.0503050305030503,
+        "event": 0.2812281228122812,
+        "location": 0.24412441244124414,
+        "person": 0.0698069806980698,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:13843",
+      "question_id": "entity_2_4",
+      "probabilities": {
+        "location": 0.6086088085488864,
+        "other": 0.09317886747228601,
+        "event": 0.049036252871267345,
+        "person": 0.09317886747228601,
+        "art": 0.11215419954059722,
+        "product": 0.04384300409467692,
+        "building": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:14104",
+      "question_id": "entity_4_7",
+      "probabilities": {
+        "organization": 0.21192119211921193,
+        "person": 0.1367136713671367,
+        "product": 0.07520752075207521,
+        "event": 0.30273027302730277,
+        "art": 0.16701670167016702,
+        "other": 0.1064106410641064,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:14104",
+      "question_id": "entity_8_11",
+      "probabilities": {
+        "building": 0.0938,
+        "event": 0.3066,
+        "organization": 0.1367,
+        "location": 0.1719,
+        "other": 0.1865,
+        "product": 0.1045,
+        "art": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:14104",
+      "question_id": "entity_16_19",
+      "probabilities": {
+        "location": 0.24814888933360013,
+        "art": 0.11336802081248748,
+        "other": 0.08985391234740844,
+        "event": 0.30288172903742244,
+        "building": 0.14558735241144685,
+        "product": 0.10016009605763457,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:14104",
+      "question_id": "entity_23_27",
+      "probabilities": {
+        "organization": 0.356971634039153,
+        "art": 0.10237714742309227,
+        "other": 0.09608469836196562,
+        "event": 0.2965441470235717,
+        "location": 0.08879344786256492,
+        "building": 0.05922892528965241,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:14104",
+      "question_id": "entity_37_43",
+      "probabilities": {
+        "organization": 0.2323303009097271,
+        "location": 0.11176647005898231,
+        "person": 0.11516545036489054,
+        "event": 0.27721683494951516,
+        "product": 0.16495051484554635,
+        "other": 0.0985704288713386,
+        "art": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15205",
+      "question_id": "entity_2_3",
+      "probabilities": {
+        "other": 0.2383,
+        "location": 0.1357,
+        "building": 0.1338,
+        "product": 0.1543,
+        "person": 0.2539,
+        "art": 0.084,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15205",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "event": 0.40442132639791933,
+        "location": 0.12793838151445436,
+        "product": 0.06742022606782035,
+        "organization": 0.21686505951785534,
+        "art": 0.13574072221666497,
+        "building": 0.04761428428528559,
+        "other": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_2_9",
+      "probabilities": {
+        "art": 0.07320732073207321,
+        "event": 0.30273027302730277,
+        "building": 0.08690869086908691,
+        "other": 0.1924192419241924,
+        "product": 0.17481748174817482,
+        "location": 0.1699169916991699,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_16_18",
+      "probabilities": {
+        "product": 0.2699318910256411,
+        "building": 0.10266426282051282,
+        "person": 0.07141426282051283,
+        "organization": 0.17407852564102566,
+        "event": 0.277744391025641,
+        "location": 0.10416666666666667,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_20_24",
+      "probabilities": {
+        "building": 0.14636826855829754,
+        "other": 0.08582275951643523,
+        "product": 0.11030072934359078,
+        "event": 0.3355979618343491,
+        "art": 0.16874812668598263,
+        "location": 0.15316215406134479,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_26_27",
+      "probabilities": {
+        "building": 0.3048219287715086,
+        "other": 0.08893557422969188,
+        "organization": 0.11234493797519007,
+        "product": 0.1875750300120048,
+        "event": 0.2227891156462585,
+        "art": 0.08353341336534614,
+        "location": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_36_39",
+      "probabilities": {
+        "location": 0.4375,
+        "other": 0.0903,
+        "building": 0.1006,
+        "person": 0.1138,
+        "organization": 0.1875,
+        "art": 0.0703,
+        "product": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_46_50",
+      "probabilities": {
+        "other": 0.16689986008394966,
+        "location": 0.35918448930641617,
+        "building": 0.11613032180691586,
+        "art": 0.11273236058364981,
+        "person": 0.15130921447131723,
+        "product": 0.09374375374775135,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_51_52",
+      "probabilities": {
+        "product": 0.2305,
+        "person": 0.0835,
+        "event": 0.2031,
+        "other": 0.1631,
+        "location": 0.2578,
+        "art": 0.062,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_53_54",
+      "probabilities": {
+        "event": 0.243297318927571,
+        "art": 0.07082833133253301,
+        "location": 0.31852741096438575,
+        "building": 0.15726290516206481,
+        "organization": 0.1299519807923169,
+        "other": 0.08013205282112845,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:15945",
+      "question_id": "entity_55_56",
+      "probabilities": {
+        "person": 0.12507504502701622,
+        "other": 0.08355013007804683,
+        "organization": 0.13968381028617172,
+        "product": 0.2452471482889734,
+        "building": 0.2579547728637182,
+        "location": 0.14848909345607367,
+        "event": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16662",
+      "question_id": "entity_0_2",
+      "probabilities": {
+        "building": 0.3245245245245245,
+        "location": 0.16326326326326326,
+        "person": 0.16326326326326326,
+        "product": 0.08358358358358359,
+        "other": 0.1905905905905906,
+        "event": 0.07477477477477477,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16662",
+      "question_id": "entity_6_8",
+      "probabilities": {
+        "product": 0.16029617770662397,
+        "building": 0.1396838102861717,
+        "art": 0.24814888933360013,
+        "person": 0.18170902541524914,
+        "location": 0.17880728437062235,
+        "organization": 0.09135481288773264,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16662",
+      "question_id": "entity_15_16",
+      "probabilities": {
+        "location": 0.2497502497502498,
+        "organization": 0.13856143856143857,
+        "other": 0.08931068931068932,
+        "art": 0.3121878121878122,
+        "product": 0.1077922077922078,
+        "building": 0.1023976023976024,
+        "event": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16662",
+      "question_id": "entity_27_28",
+      "probabilities": {
+        "person": 0.29253194888178913,
+        "location": 0.15115814696485624,
+        "building": 0.12579872204472842,
+        "art": 0.24960063897763576,
+        "other": 0.1180111821086262,
+        "event": 0.06289936102236421,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16743",
+      "question_id": "entity_0_4",
+      "probabilities": {
+        "event": 0.2263736263736264,
+        "art": 0.2263736263736264,
+        "organization": 0.08581418581418583,
+        "product": 0.1004995004995005,
+        "other": 0.19020979020979026,
+        "person": 0.17072927072927074,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16743",
+      "question_id": "entity_15_17",
+      "probabilities": {
+        "location": 0.27356413848308986,
+        "building": 0.0957574544726836,
+        "person": 0.2491494896938163,
+        "organization": 0.13287972783670202,
+        "event": 0.19051430858515112,
+        "product": 0.058134880928557134,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:16743",
+      "question_id": "entity_20_21",
+      "probabilities": {
+        "other": 0.29311724689875945,
+        "art": 0.23939575830332133,
+        "event": 0.16416566626650658,
+        "location": 0.13675470188075228,
+        "product": 0.06842737094837935,
+        "building": 0.09813925570228091,
+        "organization": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_3_7",
+      "probabilities": {
+        "other": 0.15804195804195806,
+        "art": 0.3355644355644356,
+        "event": 0.15804195804195806,
+        "person": 0.15124875124875128,
+        "organization": 0.1053946053946054,
+        "building": 0.09170829170829173,
+        "product": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "other": 0.15926370548219287,
+        "product": 0.10114045618247298,
+        "building": 0.09623849539815925,
+        "art": 0.4513805522208883,
+        "event": 0.1216486594637855,
+        "location": 0.070328131252501,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_14_16",
+      "probabilities": {
+        "product": 0.2657328664332166,
+        "location": 0.22761380690345173,
+        "building": 0.08354177088544272,
+        "person": 0.21690845422711355,
+        "other": 0.1299649824912456,
+        "organization": 0.07623811905952976,
+        "event": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_17_18",
+      "probabilities": {
+        "building": 0.19113241461953262,
+        "event": 0.1823447173956461,
+        "other": 0.09896145396444976,
+        "product": 0.17944877171959256,
+        "organization": 0.22328739764329936,
+        "person": 0.12482524465747952,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_19_20",
+      "probabilities": {
+        "location": 0.21590795397698848,
+        "building": 0.08744372186093047,
+        "person": 0.17878939469734867,
+        "organization": 0.17098549274637317,
+        "other": 0.21980990495247624,
+        "art": 0.12706353176588295,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:19768",
+      "question_id": "entity_21_24",
+      "probabilities": {
+        "other": 0.16508254127063532,
+        "art": 0.26773386693346674,
+        "building": 0.11725862931465732,
+        "product": 0.1504752376188094,
+        "person": 0.17878939469734867,
+        "location": 0.12066033016508253,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20226",
+      "question_id": "entity_7_8",
+      "probabilities": {
+        "product": 0.3515296940611878,
+        "other": 0.1718656268746251,
+        "person": 0.11427714457108579,
+        "location": 0.11817636472705459,
+        "event": 0.129874025194961,
+        "building": 0.11427714457108579,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20226",
+      "question_id": "entity_9_10",
+      "probabilities": {
+        "event": 0.1416,
+        "location": 0.105,
+        "product": 0.0854,
+        "art": 0.5156,
+        "organization": 0.0757,
+        "other": 0.0767,
+        "person": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20226",
+      "question_id": "entity_11_12",
+      "probabilities": {
+        "location": 0.21002100210021002,
+        "person": 0.1396139613961396,
+        "organization": 0.1289128912891289,
+        "other": 0.19431943194319432,
+        "event": 0.15821582158215822,
+        "art": 0.1689168916891689,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20226",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "event": 0.17373050779688126,
+        "other": 0.13764494202319072,
+        "building": 0.15323870451819271,
+        "person": 0.1874250299880048,
+        "art": 0.24890043982407037,
+        "location": 0.09906037584966014,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20226",
+      "question_id": "entity_15_16",
+      "probabilities": {
+        "art": 0.4494247123561781,
+        "person": 0.09724862431215608,
+        "organization": 0.10355177588794397,
+        "event": 0.10015007503751876,
+        "product": 0.16508254127063535,
+        "location": 0.0845422711355678,
+        "building": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20306",
+      "question_id": "entity_5_6",
+      "probabilities": {
+        "other": 0.2889555222388806,
+        "organization": 0.13473263368315844,
+        "product": 0.1259370314842579,
+        "art": 0.15712143928035985,
+        "location": 0.19810094952523738,
+        "event": 0.09515242378810596,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20456",
+      "question_id": "entity_3_10",
+      "probabilities": {
+        "building": 0.1776111944027986,
+        "location": 0.40799600199900055,
+        "other": 0.07176411794102949,
+        "art": 0.07316341829085458,
+        "organization": 0.14352823588205899,
+        "event": 0.1259370314842579,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20456",
+      "question_id": "entity_12_13",
+      "probabilities": {
+        "organization": 0.18280108118930824,
+        "event": 0.16618280108118932,
+        "location": 0.2835118630493543,
+        "product": 0.08649514465912504,
+        "other": 0.19451396536189808,
+        "building": 0.08649514465912504,
+        "person": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20573",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "person": 0.4342513770655984,
+        "building": 0.11347020530796195,
+        "other": 0.10315473209814723,
+        "event": 0.14081121682523787,
+        "organization": 0.16234351527290936,
+        "art": 0.045968953430145225,
+        "location": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20573",
+      "question_id": "entity_6_9",
+      "probabilities": {
+        "product": 0.17880728437062238,
+        "other": 0.10696417850710427,
+        "building": 0.13287972783670202,
+        "location": 0.4357614568741245,
+        "person": 0.10696417850710427,
+        "art": 0.03862317390434261,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "other": 0.24822340106095486,
+        "building": 0.07576819137223502,
+        "organization": 0.17305575017515765,
+        "art": 0.22290061054949456,
+        "product": 0.17305575017515765,
+        "location": 0.10699629666700029,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "event": 0.33186725309876053,
+        "other": 0.1093562574970012,
+        "product": 0.10445821671331468,
+        "person": 0.16203518592562974,
+        "location": 0.2108156737305078,
+        "building": 0.0814674130347861,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_8_14",
+      "probabilities": {
+        "organization": 0.28724362181090546,
+        "art": 0.09674837418709353,
+        "person": 0.12406203101550775,
+        "other": 0.2179089544772386,
+        "building": 0.16118059029514756,
+        "event": 0.11285642821410705,
+        "product": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_20_21",
+      "probabilities": {
+        "organization": 0.23151575787893947,
+        "product": 0.08014007003501752,
+        "location": 0.16418209104552275,
+        "event": 0.29314657328664334,
+        "building": 0.1455727863931966,
+        "other": 0.08544272136068035,
+        "person": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_25_27",
+      "probabilities": {
+        "other": 0.1696455317024463,
+        "organization": 0.1892161757363954,
+        "event": 0.26330504243634545,
+        "location": 0.1696455317024463,
+        "product": 0.12581128307538691,
+        "building": 0.08237643534697953,
+        "person": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_30_31",
+      "probabilities": {
+        "art": 0.16906906906906907,
+        "building": 0.08118118118118119,
+        "location": 0.2043043043043043,
+        "other": 0.18868868868868868,
+        "event": 0.25415415415415415,
+        "organization": 0.1026026026026026,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_34_36",
+      "probabilities": {
+        "event": 0.27301777511483916,
+        "product": 0.08188536049530656,
+        "organization": 0.1657679249051328,
+        "other": 0.1657679249051328,
+        "location": 0.22628320351507886,
+        "person": 0.08727781106450969,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_40_43",
+      "probabilities": {
+        "other": 0.1738,
+        "art": 0.1104,
+        "location": 0.2031,
+        "person": 0.1875,
+        "building": 0.1904,
+        "event": 0.1348,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_45_47",
+      "probabilities": {
+        "art": 0.20891643342662936,
+        "product": 0.08736505397840864,
+        "organization": 0.24110355857656937,
+        "person": 0.17373050779688126,
+        "other": 0.2030187924830068,
+        "building": 0.0858656537385046,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_48_49",
+      "probabilities": {
+        "location": 0.2560024009603842,
+        "person": 0.10694277711084432,
+        "organization": 0.18467386954781911,
+        "other": 0.17386954781912764,
+        "event": 0.20618247298919568,
+        "product": 0.07232893157262905,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_52_61",
+      "probabilities": {
+        "person": 0.21959020489755124,
+        "other": 0.10054972513743128,
+        "building": 0.11564217891054474,
+        "event": 0.26936531734132935,
+        "product": 0.16791604197901053,
+        "organization": 0.12693653173413294,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_65_68",
+      "probabilities": {
+        "organization": 0.2636736326367363,
+        "art": 0.1151884811518848,
+        "building": 0.0937906209379062,
+        "event": 0.33786621337866213,
+        "location": 0.1298870112988701,
+        "product": 0.05959404059594041,
+        "other": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_72_75",
+      "probabilities": {
+        "organization": 0.3086308630863086,
+        "building": 0.0742074207420742,
+        "product": 0.08300830083008301,
+        "person": 0.24022402240224022,
+        "other": 0.19041904190419043,
+        "location": 0.1035103510351035,
+        "event": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_77_82",
+      "probabilities": {
+        "organization": 0.22158920539730137,
+        "location": 0.2186906546726637,
+        "building": 0.08975512243878062,
+        "other": 0.18640679660169915,
+        "product": 0.175712143928036,
+        "event": 0.10784607696151924,
+        "art": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_91_96",
+      "probabilities": {
+        "product": 0.18640679660169915,
+        "building": 0.0927536231884058,
+        "organization": 0.1454272863568216,
+        "event": 0.3182408795602199,
+        "art": 0.18150924537731136,
+        "person": 0.07566216891554224,
+        "other": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:20966",
+      "question_id": "entity_99_108",
+      "probabilities": {
+        "art": 0.20007995202878273,
+        "event": 0.22646412152708376,
+        "product": 0.07615430741555068,
+        "building": 0.16300219868079152,
+        "organization": 0.2166699980011993,
+        "other": 0.11762942234659206,
+        "location": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_4_5",
+      "probabilities": {
+        "location": 0.33059589384076116,
+        "event": 0.16915373059589384,
+        "organization": 0.09634451677516274,
+        "product": 0.18878317476214324,
+        "art": 0.14471707561342012,
+        "building": 0.07040560841261893,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_7_10",
+      "probabilities": {
+        "art": 0.1426713356678339,
+        "person": 0.1377688844422211,
+        "event": 0.23451725862931463,
+        "other": 0.15627813906953478,
+        "location": 0.24232116058029013,
+        "building": 0.0864432216108054,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "organization": 0.2656,
+        "building": 0.0659,
+        "product": 0.1885,
+        "event": 0.2139,
+        "art": 0.1797,
+        "other": 0.0864,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_18_21",
+      "probabilities": {
+        "organization": 0.27924415116976603,
+        "product": 0.238252349530094,
+        "person": 0.11427714457108579,
+        "other": 0.13567286542691462,
+        "event": 0.17766446710657868,
+        "building": 0.05488902219556089,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_23_24",
+      "probabilities": {
+        "art": 0.1406,
+        "event": 0.1748,
+        "product": 0.2393,
+        "person": 0.1299,
+        "other": 0.2109,
+        "organization": 0.1045,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21566",
+      "question_id": "entity_25_26",
+      "probabilities": {
+        "event": 0.26396396396396393,
+        "product": 0.27567567567567564,
+        "other": 0.1031031031031031,
+        "building": 0.0942942942942943,
+        "person": 0.175975975975976,
+        "organization": 0.086986986986987,
+        "location": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21721",
+      "question_id": "entity_5_9",
+      "probabilities": {
+        "person": 0.2139,
+        "event": 0.1943,
+        "location": 0.1426,
+        "organization": 0.2539,
+        "product": 0.1128,
+        "building": 0.0825,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21721",
+      "question_id": "entity_11_15",
+      "probabilities": {
+        "art": 0.12306153076538269,
+        "organization": 0.24132066033016508,
+        "event": 0.18469234617308655,
+        "building": 0.15047523761880943,
+        "location": 0.20910455227613808,
+        "other": 0.09134567283641822,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21721",
+      "question_id": "entity_16_17",
+      "probabilities": {
+        "event": 0.2948115565330401,
+        "product": 0.06178146556033191,
+        "other": 0.12886134159752075,
+        "art": 0.17084874537638708,
+        "person": 0.22653204038788363,
+        "organization": 0.11716485054483655,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21978",
+      "question_id": "entity_1_4",
+      "probabilities": {
+        "product": 0.2561305174657192,
+        "person": 0.14853368031228106,
+        "event": 0.1847662896606946,
+        "other": 0.1417275547993194,
+        "art": 0.19747772995696128,
+        "building": 0.07136422780502452,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21978",
+      "question_id": "entity_10_11",
+      "probabilities": {
+        "other": 0.20910455227613806,
+        "person": 0.23741870935467735,
+        "location": 0.1904952476238119,
+        "art": 0.17878939469734867,
+        "event": 0.11725862931465732,
+        "building": 0.06693346673336668,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21978",
+      "question_id": "entity_13_16",
+      "probabilities": {
+        "location": 0.291029102910291,
+        "event": 0.1553155315531553,
+        "art": 0.18161816181618162,
+        "building": 0.08980898089808981,
+        "person": 0.19631963196319632,
+        "other": 0.0859085908590859,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:21978",
+      "question_id": "entity_21_23",
+      "probabilities": {
+        "person": 0.3085074477656703,
+        "building": 0.05348395481355593,
+        "product": 0.10156952914125762,
+        "art": 0.29871038688393486,
+        "location": 0.16794961511546538,
+        "other": 0.06977906628011597,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22008",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "event": 0.27356413848308986,
+        "person": 0.3732239343606164,
+        "building": 0.06593956373824295,
+        "other": 0.12707624574744847,
+        "product": 0.06593956373824295,
+        "organization": 0.09425655393235943,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22008",
+      "question_id": "entity_4_5",
+      "probabilities": {
+        "location": 0.31068641184710827,
+        "organization": 0.15339203522113268,
+        "person": 0.194416649989994,
+        "product": 0.08254952971783071,
+        "event": 0.18861316790074045,
+        "other": 0.07034220532319392,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22008",
+      "question_id": "entity_12_14",
+      "probabilities": {
+        "other": 0.26029455966336035,
+        "product": 0.08997094479511071,
+        "person": 0.22312393547740708,
+        "organization": 0.19667367999198476,
+        "art": 0.1438733593828274,
+        "event": 0.0860635206893097,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22008",
+      "question_id": "entity_22_24",
+      "probabilities": {
+        "art": 0.08395802098950526,
+        "location": 0.30644677661169417,
+        "event": 0.18940529735132436,
+        "organization": 0.18640679660169915,
+        "product": 0.1259370314842579,
+        "other": 0.10784607696151924,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22838",
+      "question_id": "entity_18_19",
+      "probabilities": {
+        "organization": 0.10561617779557513,
+        "location": 0.16327960756832516,
+        "building": 0.035438982881169284,
+        "event": 0.5357893683051357,
+        "product": 0.10411452597857643,
+        "art": 0.055761337471218336,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22838",
+      "question_id": "entity_32_33",
+      "probabilities": {
+        "product": 0.11608391608391609,
+        "person": 0.2165834165834166,
+        "event": 0.29660339660339663,
+        "other": 0.07462537462537464,
+        "organization": 0.2165834165834166,
+        "art": 0.07952047952047954,
+        "building": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22838",
+      "question_id": "entity_34_35",
+      "probabilities": {
+        "art": 0.08839116088391162,
+        "person": 0.1366863313668633,
+        "product": 0.042995700429957,
+        "event": 0.5155484451554844,
+        "other": 0.12258774122587741,
+        "location": 0.0937906209379062,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22838",
+      "question_id": "entity_43_47",
+      "probabilities": {
+        "art": 0.08407566810129116,
+        "person": 0.18666800120108099,
+        "location": 0.14072665398858974,
+        "event": 0.37733960564508057,
+        "product": 0.11880692623361025,
+        "other": 0.0923831448303473,
+        "building": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22944",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "product": 0.17305575017515765,
+        "building": 0.03743369032128916,
+        "art": 0.05204684215794215,
+        "event": 0.5669102191972776,
+        "other": 0.10359323391051946,
+        "organization": 0.06696026423781404,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22944",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "other": 0.21777822217778223,
+        "art": 0.10938906109389061,
+        "event": 0.289071092890711,
+        "location": 0.1454854514548545,
+        "organization": 0.15918408159184083,
+        "product": 0.07909209079092092,
+        "person": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22944",
+      "question_id": "entity_21_22",
+      "probabilities": {
+        "art": 0.1806096951524238,
+        "other": 0.14252873563218393,
+        "building": 0.12783608195902052,
+        "location": 0.2928535732133933,
+        "person": 0.16981509245377313,
+        "product": 0.08635682158920541,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:22944",
+      "question_id": "entity_33_36",
+      "probabilities": {
+        "location": 0.17096838735494196,
+        "art": 0.07963185274109644,
+        "event": 0.31852741096438575,
+        "other": 0.15046018407362946,
+        "organization": 0.1875750300120048,
+        "person": 0.09283713485394157,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23481",
+      "question_id": "entity_1_5",
+      "probabilities": {
+        "person": 0.3162418790604698,
+        "art": 0.07856071964017992,
+        "other": 0.12783608195902052,
+        "product": 0.1259370314842579,
+        "organization": 0.2352823588205897,
+        "location": 0.11614192903548226,
+        "building": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23481",
+      "question_id": "entity_12_18",
+      "probabilities": {
+        "location": 0.249,
+        "organization": 0.2578,
+        "other": 0.1069,
+        "person": 0.1309,
+        "event": 0.1875,
+        "building": 0.0679,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23481",
+      "question_id": "entity_26_29",
+      "probabilities": {
+        "organization": 0.35332333833083457,
+        "product": 0.05077461269365317,
+        "event": 0.15612193903048477,
+        "location": 0.20399800099950027,
+        "other": 0.16401799100449777,
+        "building": 0.07176411794102949,
+        "person": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23481",
+      "question_id": "entity_38_44",
+      "probabilities": {
+        "building": 0.20603818854343697,
+        "product": 0.05738278516445067,
+        "organization": 0.24892532240327903,
+        "art": 0.15135459362191345,
+        "other": 0.23722883135059483,
+        "person": 0.0990702789163251,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_0_3",
+      "probabilities": {
+        "art": 0.2736736736736736,
+        "organization": 0.0850850850850851,
+        "location": 0.1944944944944945,
+        "product": 0.1056056056056056,
+        "building": 0.20330330330330332,
+        "event": 0.13783783783783782,
+        "person": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_8_10",
+      "probabilities": {
+        "product": 0.18670537591350486,
+        "art": 0.2248473320652718,
+        "person": 0.17789568525377916,
+        "other": 0.13194513965361898,
+        "event": 0.1984182600860947,
+        "organization": 0.08018820702773051,
+        "building": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_11_13",
+      "probabilities": {
+        "product": 0.20312031203120312,
+        "other": 0.1357135713571357,
+        "building": 0.1289128912891289,
+        "person": 0.2656265626562656,
+        "organization": 0.1562156215621562,
+        "location": 0.1104110411041104,
+        "art": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_14_16",
+      "probabilities": {
+        "event": 0.31265632816408206,
+        "other": 0.10115057528764382,
+        "location": 0.16418209104552275,
+        "product": 0.09964982491245623,
+        "art": 0.23151575787893947,
+        "person": 0.09084542271135569,
+        "building": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_21_22",
+      "probabilities": {
+        "organization": 0.17887887887887888,
+        "building": 0.07817817817817818,
+        "art": 0.2063063063063063,
+        "location": 0.23363363363363363,
+        "event": 0.21311311311311312,
+        "other": 0.0898898898898899,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_23_24",
+      "probabilities": {
+        "building": 0.16806722689075632,
+        "product": 0.08063225290116047,
+        "art": 0.2599039615846338,
+        "location": 0.24419767907162865,
+        "organization": 0.14365746298519408,
+        "other": 0.10354141656662665,
+        "event": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_33_35",
+      "probabilities": {
+        "building": 0.16118059029514756,
+        "art": 0.17098549274637317,
+        "location": 0.24132066033016505,
+        "product": 0.09184592296148074,
+        "organization": 0.21300650325162582,
+        "other": 0.1216608304152076,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:23805",
+      "question_id": "entity_36_37",
+      "probabilities": {
+        "location": 0.23525884469318412,
+        "art": 0.12982210673595843,
+        "building": 0.0995402758344993,
+        "organization": 0.172796322206676,
+        "event": 0.2674395362782331,
+        "person": 0.09514291425144915,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24306",
+      "question_id": "entity_2_5",
+      "probabilities": {
+        "organization": 0.25351972041937093,
+        "event": 0.16085871193210183,
+        "art": 0.16285571642536195,
+        "product": 0.1019470793809286,
+        "building": 0.17653519720419372,
+        "other": 0.14428357463804292,
+        "location": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24306",
+      "question_id": "entity_7_9",
+      "probabilities": {
+        "organization": 0.2275,
+        "location": 0.1201,
+        "building": 0.0801,
+        "event": 0.2871,
+        "other": 0.167,
+        "person": 0.1182,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24306",
+      "question_id": "entity_10_12",
+      "probabilities": {
+        "product": 0.2218997097387649,
+        "person": 0.21209088179361427,
+        "other": 0.17005304774296867,
+        "building": 0.09388449604644179,
+        "art": 0.2081873686317686,
+        "organization": 0.09388449604644179,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24306",
+      "question_id": "entity_13_15",
+      "probabilities": {
+        "other": 0.23832383238323834,
+        "event": 0.1562156215621562,
+        "organization": 0.11231123112311231,
+        "location": 0.17381738173817382,
+        "product": 0.1914191419141914,
+        "person": 0.1279127912791279,
+        "art": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24306",
+      "question_id": "entity_16_18",
+      "probabilities": {
+        "person": 0.34538914976521135,
+        "event": 0.13268058747127587,
+        "building": 0.07703067239484465,
+        "other": 0.18733140173843543,
+        "art": 0.1844340093915476,
+        "location": 0.07313417923868519,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24586",
+      "question_id": "entity_12_13",
+      "probabilities": {
+        "person": 0.30669200760228066,
+        "other": 0.15624687406221865,
+        "art": 0.061318395518655595,
+        "location": 0.310593177953386,
+        "event": 0.12993898169450835,
+        "building": 0.03521056316895069,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24586",
+      "question_id": "entity_17_18",
+      "probabilities": {
+        "person": 0.3438,
+        "building": 0.0688,
+        "art": 0.1035,
+        "organization": 0.1934,
+        "location": 0.2334,
+        "product": 0.0571,
+        "other": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24586",
+      "question_id": "entity_21_23",
+      "probabilities": {
+        "event": 0.3552513240731488,
+        "person": 0.16978115319276507,
+        "product": 0.0707504746677326,
+        "art": 0.1366043769361447,
+        "location": 0.20885380233836315,
+        "building": 0.05875886879184571,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24586",
+      "question_id": "entity_36_38",
+      "probabilities": {
+        "organization": 0.2109,
+        "other": 0.1377,
+        "product": 0.0703,
+        "building": 0.2139,
+        "art": 0.2354,
+        "location": 0.1318,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24642",
+      "question_id": "entity_5_9",
+      "probabilities": {
+        "product": 0.2077922077922078,
+        "art": 0.06833166833166834,
+        "building": 0.10149850149850151,
+        "location": 0.37072927072927075,
+        "organization": 0.14535464535464537,
+        "other": 0.1062937062937063,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24652",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "building": 0.31203195207189216,
+        "other": 0.19500748876684973,
+        "organization": 0.0965551672491263,
+        "product": 0.0672990514228657,
+        "event": 0.22815776335496754,
+        "location": 0.10094857713429854,
+        "art": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24652",
+      "question_id": "entity_9_11",
+      "probabilities": {
+        "organization": 0.4729837902741645,
+        "art": 0.05153091855113067,
+        "person": 0.08505103061837102,
+        "product": 0.11436862117270362,
+        "building": 0.20322193315989592,
+        "event": 0.07284370622373423,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24652",
+      "question_id": "entity_16_17",
+      "probabilities": {
+        "location": 0.31022080127884905,
+        "person": 0.1307822959336597,
+        "product": 0.053651713457887905,
+        "event": 0.26536117494255174,
+        "building": 0.1209911080027975,
+        "organization": 0.11899290638425418,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24652",
+      "question_id": "entity_20_21",
+      "probabilities": {
+        "art": 0.11414020371479927,
+        "other": 0.19113241461953262,
+        "person": 0.1559816257239864,
+        "organization": 0.33543039744357894,
+        "location": 0.13940483323347314,
+        "building": 0.06391052526462952,
+        "product": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24801",
+      "question_id": "entity_1_2",
+      "probabilities": {
+        "building": 0.24585414585414583,
+        "art": 0.07512487512487512,
+        "person": 0.14245754245754244,
+        "organization": 0.22047952047952046,
+        "product": 0.14435564435564432,
+        "event": 0.1717282717282717,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:24801",
+      "question_id": "entity_10_11",
+      "probabilities": {
+        "event": 0.28150966062668936,
+        "other": 0.10411452597857643,
+        "building": 0.06937631394533987,
+        "location": 0.41065171688857743,
+        "organization": 0.08599459405345881,
+        "art": 0.0483531885073581,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25023",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "other": 0.1953781512605042,
+        "person": 0.05182072829131652,
+        "building": 0.12454981992797118,
+        "organization": 0.18957583033213285,
+        "product": 0.1953781512605042,
+        "location": 0.243297318927571,
+        "art": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25023",
+      "question_id": "entity_10_12",
+      "probabilities": {
+        "organization": 0.13269384492406078,
+        "art": 0.0534572342126299,
+        "building": 0.1258992805755396,
+        "event": 0.23221422861710633,
+        "person": 0.19224620303756995,
+        "location": 0.26348920863309355,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25475",
+      "question_id": "entity_6_7",
+      "probabilities": {
+        "building": 0.17669398360983413,
+        "person": 0.11762942234659206,
+        "event": 0.22646412152708376,
+        "art": 0.1249250449730162,
+        "organization": 0.24885068958624826,
+        "location": 0.10543673795722566,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25475",
+      "question_id": "entity_9_14",
+      "probabilities": {
+        "event": 0.36891554222888556,
+        "person": 0.10934532733633184,
+        "building": 0.06636681659170415,
+        "product": 0.16401799100449777,
+        "other": 0.1854072963518241,
+        "organization": 0.10594702648675662,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25475",
+      "question_id": "entity_16_17",
+      "probabilities": {
+        "other": 0.2268268268268268,
+        "person": 0.16126126126126125,
+        "product": 0.11971971971971972,
+        "event": 0.2736736736736736,
+        "building": 0.13103103103103103,
+        "art": 0.0874874874874875,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25475",
+      "question_id": "entity_27_28",
+      "probabilities": {
+        "organization": 0.332199319591755,
+        "product": 0.08545127076245747,
+        "other": 0.13287972783670202,
+        "location": 0.21492895737442463,
+        "building": 0.1504902941765059,
+        "art": 0.0840504302581549,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25567",
+      "question_id": "entity_3_5",
+      "probabilities": {
+        "location": 0.377,
+        "building": 0.0571,
+        "art": 0.0986,
+        "person": 0.2441,
+        "organization": 0.1348,
+        "product": 0.0884,
+        "other": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:25567",
+      "question_id": "entity_13_15",
+      "probabilities": {
+        "product": 0.13764494202319072,
+        "event": 0.2771891243502599,
+        "person": 0.14154338264694125,
+        "organization": 0.11175529788084766,
+        "building": 0.19032387045181928,
+        "location": 0.14154338264694125,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26095",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "person": 0.2383,
+        "organization": 0.0825,
+        "other": 0.166,
+        "art": 0.1855,
+        "building": 0.2344,
+        "event": 0.0933,
+        "product": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26095",
+      "question_id": "entity_18_22",
+      "probabilities": {
+        "person": 0.15422288855572214,
+        "event": 0.2254872563718141,
+        "other": 0.10784607696151924,
+        "building": 0.23228385807096452,
+        "product": 0.13473263368315844,
+        "location": 0.1454272863568216,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26095",
+      "question_id": "entity_24_25",
+      "probabilities": {
+        "art": 0.16300219868079152,
+        "product": 0.08444933040175896,
+        "building": 0.21567059764141516,
+        "organization": 0.172796322206676,
+        "other": 0.23715770537677397,
+        "location": 0.12692384569258447,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26110",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "product": 0.22267773222677734,
+        "location": 0.18748125187481252,
+        "event": 0.24507549245075494,
+        "other": 0.11378862113788621,
+        "organization": 0.1464853514648535,
+        "person": 0.08449155084491551,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26165",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "product": 0.14528207688467298,
+        "location": 0.33349975037443835,
+        "organization": 0.0984523215177234,
+        "event": 0.28477284073889164,
+        "other": 0.08287568647029456,
+        "art": 0.05511732401397903,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26165",
+      "question_id": "entity_5_9",
+      "probabilities": {
+        "organization": 0.21,
+        "building": 0.0996,
+        "location": 0.1748,
+        "event": 0.2617,
+        "other": 0.1689,
+        "person": 0.085,
+        "art": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26230",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "art": 0.18848115188481152,
+        "location": 0.3261673832616738,
+        "other": 0.08349165083491651,
+        "event": 0.18848115188481152,
+        "person": 0.105989401059894,
+        "organization": 0.10738926107389261,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26230",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "organization": 0.26146468178639226,
+        "product": 0.2039164751723449,
+        "building": 0.07363372964332102,
+        "person": 0.18833050254770708,
+        "location": 0.16874812668598263,
+        "other": 0.10390648416425217,
+        "art": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:26749",
+      "question_id": "entity_1_8",
+      "probabilities": {
+        "art": 0.20770920711004592,
+        "event": 0.3705811863391252,
+        "product": 0.04044337926902337,
+        "other": 0.16187337727181944,
+        "person": 0.11993209506690632,
+        "building": 0.09946075494307968,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27111",
+      "question_id": "entity_4_7",
+      "probabilities": {
+        "location": 0.2951951951951952,
+        "event": 0.23363363363363363,
+        "other": 0.0845845845845846,
+        "organization": 0.08898898898898899,
+        "person": 0.18178178178178178,
+        "product": 0.1158158158158158,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27111",
+      "question_id": "entity_26_28",
+      "probabilities": {
+        "product": 0.2323767623237676,
+        "location": 0.18948105189481051,
+        "person": 0.06739326067393261,
+        "organization": 0.1474852514748525,
+        "building": 0.251974802519748,
+        "event": 0.11128887111288871,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27111",
+      "question_id": "entity_37_39",
+      "probabilities": {
+        "event": 0.2432,
+        "location": 0.2051,
+        "person": 0.0688,
+        "product": 0.2246,
+        "other": 0.1729,
+        "building": 0.0854,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27177",
+      "question_id": "entity_1_2",
+      "probabilities": {
+        "organization": 0.26776065639383634,
+        "art": 0.08985391234740846,
+        "person": 0.160296177706624,
+        "location": 0.3224934960976586,
+        "other": 0.10166099659795877,
+        "product": 0.05793476085651391,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27177",
+      "question_id": "entity_9_11",
+      "probabilities": {
+        "organization": 0.20228205384846362,
+        "other": 0.0923831448303473,
+        "product": 0.06796116504854369,
+        "person": 0.26784105695125615,
+        "event": 0.27564808327494744,
+        "location": 0.09388449604644179,
+        "art": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27177",
+      "question_id": "entity_23_25",
+      "probabilities": {
+        "building": 0.15543989590631568,
+        "art": 0.07236512861575418,
+        "event": 0.22290061054949456,
+        "location": 0.2775497948153338,
+        "product": 0.163246922230007,
+        "other": 0.10849764788309478,
+        "organization": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27177",
+      "question_id": "entity_31_32",
+      "probabilities": {
+        "person": 0.312656328164082,
+        "organization": 0.08254127063531766,
+        "art": 0.06453226613306653,
+        "event": 0.34197098549274635,
+        "product": 0.1167583791895948,
+        "building": 0.0815407703851926,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27284",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "art": 0.14439892075547117,
+        "product": 0.04756670330768463,
+        "other": 0.1020285799940042,
+        "location": 0.12341361047266913,
+        "event": 0.48795842909963033,
+        "person": 0.09463375637054064,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27644",
+      "question_id": "entity_1_5",
+      "probabilities": {
+        "person": 0.19739869934967483,
+        "location": 0.31465732866433216,
+        "event": 0.08204102051025512,
+        "art": 0.16318159079539768,
+        "product": 0.14847423711855928,
+        "organization": 0.09424712356178089,
+        "other": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27658",
+      "question_id": "entity_15_24",
+      "probabilities": {
+        "person": 0.20981116994704763,
+        "location": 0.2536716954740733,
+        "other": 0.11559596363273053,
+        "art": 0.15605954640823258,
+        "product": 0.15605954640823258,
+        "building": 0.10880207812968327,
+        "organization": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27658",
+      "question_id": "entity_26_35",
+      "probabilities": {
+        "person": 0.20910455227613808,
+        "building": 0.10355177588794397,
+        "location": 0.19929964982491247,
+        "other": 0.1709854927463732,
+        "event": 0.24032016008004004,
+        "product": 0.0767383691845923,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27658",
+      "question_id": "entity_41_44",
+      "probabilities": {
+        "product": 0.17861069465267368,
+        "location": 0.22158920539730137,
+        "building": 0.13663168415792104,
+        "person": 0.1503248375812094,
+        "event": 0.22158920539730137,
+        "other": 0.09125437281359322,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27658",
+      "question_id": "entity_45_47",
+      "probabilities": {
+        "building": 0.2540016006402561,
+        "person": 0.1377551020408163,
+        "other": 0.1514605842336935,
+        "art": 0.20418167266906762,
+        "organization": 0.15926370548219287,
+        "product": 0.09333733493397357,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27658",
+      "question_id": "entity_49_52",
+      "probabilities": {
+        "other": 0.16400159904057565,
+        "location": 0.16979812112732362,
+        "building": 0.16400159904057565,
+        "person": 0.18938636817909255,
+        "event": 0.2205676594043574,
+        "art": 0.09224465320807515,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27791",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "person": 0.2147141143542583,
+        "location": 0.37684926029588167,
+        "event": 0.11125549780087965,
+        "building": 0.08536585365853659,
+        "art": 0.1278488604558177,
+        "product": 0.08396641343462616,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27791",
+      "question_id": "entity_20_23",
+      "probabilities": {
+        "organization": 0.18622066899650522,
+        "event": 0.16385421867199199,
+        "location": 0.2671992011982027,
+        "building": 0.0965551672491263,
+        "art": 0.1696455317024463,
+        "person": 0.1165252121817274,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27791",
+      "question_id": "entity_31_32",
+      "probabilities": {
+        "event": 0.2715,
+        "art": 0.0508,
+        "building": 0.1318,
+        "organization": 0.2041,
+        "location": 0.2539,
+        "other": 0.0879,
+        "person": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27791",
+      "question_id": "entity_33_34",
+      "probabilities": {
+        "building": 0.3011011011011011,
+        "other": 0.1012012012012012,
+        "person": 0.15445445445445444,
+        "product": 0.11481481481481481,
+        "organization": 0.25805805805805804,
+        "art": 0.07037037037037037,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "person": 0.2753724627537246,
+        "other": 0.15918408159184083,
+        "art": 0.1386861313868613,
+        "building": 0.14058594140585942,
+        "location": 0.18948105189481051,
+        "product": 0.0966903309669033,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_22_26",
+      "probabilities": {
+        "art": 0.19728027197280273,
+        "person": 0.15818418158184183,
+        "product": 0.1513848615138486,
+        "organization": 0.2616738326167383,
+        "location": 0.14258574142585742,
+        "building": 0.08889111088891112,
+        "other": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_28_31",
+      "probabilities": {
+        "person": 0.26183091545772885,
+        "building": 0.09474737368684343,
+        "organization": 0.20420210105052525,
+        "location": 0.15927963981990995,
+        "other": 0.20130065032516256,
+        "product": 0.07863931965982991,
+        "art": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_34_37",
+      "probabilities": {
+        "product": 0.27746647988793277,
+        "organization": 0.2237342405443266,
+        "other": 0.16609965979587754,
+        "person": 0.10896537922753652,
+        "building": 0.13778266960176105,
+        "event": 0.08595157094256554,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_40_43",
+      "probabilities": {
+        "art": 0.1935742167951156,
+        "location": 0.11970773696326693,
+        "person": 0.2268041237113402,
+        "event": 0.11580422380142127,
+        "organization": 0.22290061054949456,
+        "other": 0.12120908817936142,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_45_47",
+      "probabilities": {
+        "building": 0.1875,
+        "organization": 0.2324,
+        "product": 0.1553,
+        "event": 0.1387,
+        "other": 0.1963,
+        "person": 0.0898,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_57_59",
+      "probabilities": {
+        "product": 0.26406969757660725,
+        "art": 0.11926697376326859,
+        "organization": 0.20638894452233128,
+        "other": 0.18485880232325255,
+        "person": 0.1506108551972762,
+        "building": 0.07480472661726417,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27873",
+      "question_id": "entity_62_63",
+      "probabilities": {
+        "other": 0.2523532946124574,
+        "building": 0.0929301021430002,
+        "organization": 0.19066693370719007,
+        "product": 0.181854596435009,
+        "person": 0.1799519327057881,
+        "event": 0.10224314039655517,
+        "location": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27913",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "organization": 0.2537731134432784,
+        "product": 0.23818090954522741,
+        "person": 0.11224387806096951,
+        "art": 0.23818090954522741,
+        "event": 0.11614192903548226,
+        "building": 0.0414792603698151,
+        "other": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27913",
+      "question_id": "entity_4_8",
+      "probabilities": {
+        "organization": 0.1484148414841484,
+        "other": 0.1108110811081108,
+        "location": 0.21972197219721973,
+        "person": 0.207020702070207,
+        "art": 0.21002100210021002,
+        "event": 0.104010401040104,
+        "building": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27913",
+      "question_id": "entity_15_16",
+      "probabilities": {
+        "building": 0.15726290516206481,
+        "art": 0.1807723089235694,
+        "event": 0.23549419767907162,
+        "product": 0.14265706282513005,
+        "organization": 0.16506602641056423,
+        "other": 0.11874749899959984,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:27913",
+      "question_id": "entity_19_20",
+      "probabilities": {
+        "building": 0.16815133620258232,
+        "organization": 0.09728755880292263,
+        "art": 0.23361024922430187,
+        "person": 0.19057151436292666,
+        "location": 0.21309178260434392,
+        "other": 0.09728755880292263,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:28032",
+      "question_id": "entity_11_14",
+      "probabilities": {
+        "organization": 0.41468055277388344,
+        "product": 0.05447626677348287,
+        "location": 0.1838574003605047,
+        "person": 0.1838574003605047,
+        "building": 0.11345884237933106,
+        "art": 0.04966953735229321,
+        "other": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:28582",
+      "question_id": "entity_20_21",
+      "probabilities": {
+        "art": 0.09750499001996007,
+        "organization": 0.07455089820359281,
+        "building": 0.07794411177644711,
+        "other": 0.6666666666666667,
+        "person": 0.049700598802395204,
+        "product": 0.033632734530938124,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:28939",
+      "question_id": "entity_4_8",
+      "probabilities": {
+        "person": 0.2832283228322832,
+        "building": 0.0479047904790479,
+        "art": 0.09810981098109811,
+        "other": 0.23142314231423142,
+        "location": 0.22462246224622462,
+        "organization": 0.1147114711471147,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:28954",
+      "question_id": "entity_6_7",
+      "probabilities": {
+        "location": 0.21862509992006396,
+        "building": 0.05195843325339729,
+        "art": 0.063449240607514,
+        "event": 0.4703237410071943,
+        "person": 0.14048760991207035,
+        "other": 0.055155875299760196,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:28954",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "product": 0.16683316683316682,
+        "art": 0.08141858141858141,
+        "event": 0.2712287712287712,
+        "building": 0.09660339660339659,
+        "other": 0.2712287712287712,
+        "person": 0.11268731268731268,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "other": 0.16124512060854768,
+        "person": 0.10559503553197878,
+        "event": 0.21309178260434392,
+        "art": 0.1271144029626664,
+        "organization": 0.23461115003503152,
+        "location": 0.1583425082574317,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_16_18",
+      "probabilities": {
+        "person": 0.18868868868868868,
+        "organization": 0.22772772772772773,
+        "art": 0.06356356356356356,
+        "event": 0.261961961961962,
+        "building": 0.13003003003003002,
+        "location": 0.12802802802802804,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_22_25",
+      "probabilities": {
+        "organization": 0.4184184184184184,
+        "person": 0.1109109109109109,
+        "other": 0.11831831831831832,
+        "building": 0.13583583583583583,
+        "product": 0.13003003003003002,
+        "art": 0.08648648648648649,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_33_35",
+      "probabilities": {
+        "organization": 0.2947526236881559,
+        "product": 0.053673163418290856,
+        "building": 0.13083458270864567,
+        "person": 0.23228385807096452,
+        "location": 0.2186906546726637,
+        "art": 0.06976511744127936,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_39_41",
+      "probabilities": {
+        "organization": 0.2615169381432997,
+        "product": 0.04466873188767863,
+        "person": 0.13760367742580193,
+        "location": 0.3806335565104427,
+        "event": 0.12341361047266913,
+        "art": 0.052163485560107935,
+        "building": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_42_43",
+      "probabilities": {
+        "other": 0.1299129912991299,
+        "location": 0.32233223322332233,
+        "person": 0.12061206120612061,
+        "event": 0.24322432243224323,
+        "organization": 0.126012601260126,
+        "product": 0.057905790579057904,
+        "building": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:29524",
+      "question_id": "entity_56_58",
+      "probabilities": {
+        "location": 0.38460769615192403,
+        "person": 0.09855072463768116,
+        "art": 0.0766616691654173,
+        "other": 0.18150924537731136,
+        "building": 0.16301849075462269,
+        "organization": 0.09565217391304348,
+        "product": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30114",
+      "question_id": "entity_2_4",
+      "probabilities": {
+        "organization": 0.14544182327069172,
+        "location": 0.29478208716513393,
+        "product": 0.05707716913234706,
+        "art": 0.1757297081167533,
+        "other": 0.19032387045181928,
+        "building": 0.1366453418632547,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30114",
+      "question_id": "entity_7_8",
+      "probabilities": {
+        "organization": 0.14657328664332164,
+        "building": 0.42991495747873937,
+        "other": 0.08204102051025512,
+        "person": 0.17388694347173586,
+        "location": 0.11775887943971985,
+        "art": 0.04982491245622811,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30114",
+      "question_id": "entity_10_11",
+      "probabilities": {
+        "other": 0.13654979522525224,
+        "building": 0.46239136949355714,
+        "organization": 0.07311956847467786,
+        "person": 0.21456397962241536,
+        "location": 0.0790130856058336,
+        "art": 0.03436220157826391,
+        "event": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30209",
+      "question_id": "entity_0_3",
+      "probabilities": {
+        "product": 0.24497751124437783,
+        "building": 0.07466266866566718,
+        "location": 0.3045477261369316,
+        "organization": 0.0976511744127936,
+        "person": 0.1659170414792604,
+        "event": 0.11224387806096951,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30209",
+      "question_id": "entity_5_7",
+      "probabilities": {
+        "event": 0.1406140614061406,
+        "other": 0.1445144514451445,
+        "product": 0.10941094109410941,
+        "organization": 0.1406140614061406,
+        "art": 0.27932793279327933,
+        "location": 0.1855185518551855,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30852",
+      "question_id": "entity_22_25",
+      "probabilities": {
+        "art": 0.20831246870305456,
+        "building": 0.07681522283425138,
+        "other": 0.15743615423134702,
+        "location": 0.25037556334501754,
+        "organization": 0.17506259389083625,
+        "event": 0.13199799699549322,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30852",
+      "question_id": "entity_40_43",
+      "probabilities": {
+        "location": 0.28724362181090546,
+        "event": 0.2306153076538269,
+        "other": 0.08894447223611807,
+        "organization": 0.13386693346673337,
+        "building": 0.1855927963981991,
+        "person": 0.0737368684342171,
+        "product": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30902",
+      "question_id": "entity_15_16",
+      "probabilities": {
+        "organization": 0.34538914976521135,
+        "product": 0.11709461484663804,
+        "other": 0.09851133979418523,
+        "location": 0.3239084823658707,
+        "art": 0.059746228394445,
+        "person": 0.055350184833649715,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30929",
+      "question_id": "entity_1_3",
+      "probabilities": {
+        "building": 0.2789931075816601,
+        "art": 0.2887823394266307,
+        "event": 0.06442912795924483,
+        "organization": 0.11807012286484865,
+        "product": 0.1473379282788932,
+        "other": 0.10238737388872239,
+        "location": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30929",
+      "question_id": "entity_15_17",
+      "probabilities": {
+        "building": 0.28317168283171684,
+        "art": 0.2577742225777422,
+        "organization": 0.0751924807519248,
+        "person": 0.105989401059894,
+        "product": 0.18848115188481152,
+        "event": 0.0893910608939106,
+        "other": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:30929",
+      "question_id": "entity_32_34",
+      "probabilities": {
+        "location": 0.3026092172348296,
+        "organization": 0.1337598720383885,
+        "event": 0.07077876637008898,
+        "art": 0.3631910426871939,
+        "building": 0.08397480755773269,
+        "person": 0.045686294111766466,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_6_10",
+      "probabilities": {
+        "product": 0.17481748174817482,
+        "organization": 0.0776077607760776,
+        "building": 0.08690869086908691,
+        "person": 0.25392539253925395,
+        "location": 0.2988298829882988,
+        "event": 0.1079107910791079,
+        "art": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_12_13",
+      "probabilities": {
+        "event": 0.40999500249875065,
+        "other": 0.0687656171914043,
+        "product": 0.06686656671664168,
+        "organization": 0.1659170414792604,
+        "location": 0.24107946026986507,
+        "building": 0.047376311844077965,
+        "person": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_19_21",
+      "probabilities": {
+        "organization": 0.17839672556653688,
+        "art": 0.05291005291005291,
+        "building": 0.056304282719377055,
+        "event": 0.518618348807028,
+        "person": 0.137466307277628,
+        "product": 0.056304282719377055,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_22_24",
+      "probabilities": {
+        "event": 0.48805597201399303,
+        "product": 0.07366316841579211,
+        "art": 0.053173413293353324,
+        "person": 0.19720139930034983,
+        "other": 0.14252873563218393,
+        "building": 0.04537731134432784,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_33_35",
+      "probabilities": {
+        "art": 0.17272727272727276,
+        "other": 0.1111888111888112,
+        "building": 0.08831168831168833,
+        "person": 0.3277722277722278,
+        "product": 0.17752247752247755,
+        "organization": 0.12247752247752249,
+        "event": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_36_37",
+      "probabilities": {
+        "other": 0.1699,
+        "location": 0.2471,
+        "person": 0.1621,
+        "product": 0.1367,
+        "organization": 0.2051,
+        "art": 0.0791,
+        "building": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_41_46",
+      "probabilities": {
+        "product": 0.24098311519632334,
+        "building": 0.06484164252173044,
+        "other": 0.13557797981816366,
+        "organization": 0.20981116994704768,
+        "person": 0.2907383354980518,
+        "art": 0.05804775701868319,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31050",
+      "question_id": "entity_55_59",
+      "probabilities": {
+        "person": 0.3395283772981615,
+        "art": 0.0573541167066347,
+        "location": 0.18245403677058356,
+        "building": 0.0976219024780176,
+        "organization": 0.23421262989608316,
+        "product": 0.0888289368505196,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:31232",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "art": 0.16327960756832516,
+        "location": 0.14175593152467714,
+        "organization": 0.19060967063770148,
+        "person": 0.28150966062668936,
+        "product": 0.1036139753729102,
+        "other": 0.11923115426969666,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32274",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "person": 0.3457691538307662,
+        "organization": 0.07131426285257052,
+        "art": 0.046609321864372874,
+        "location": 0.47079415883176634,
+        "event": 0.041308261652330466,
+        "product": 0.024204840968193638,
+        "building": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32274",
+      "question_id": "entity_4_5",
+      "probabilities": {
+        "organization": 0.19245773732119634,
+        "event": 0.11873562068620586,
+        "person": 0.19245773732119634,
+        "building": 0.18955686706011804,
+        "product": 0.17585275582674803,
+        "other": 0.13093928178453534,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32720",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "event": 0.40369445831253115,
+        "other": 0.15017473789316027,
+        "person": 0.09895157264103843,
+        "location": 0.17653519720419372,
+        "product": 0.10044932601098351,
+        "art": 0.07019470793809286,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32720",
+      "question_id": "entity_14_16",
+      "probabilities": {
+        "other": 0.2617,
+        "building": 0.0464,
+        "product": 0.126,
+        "person": 0.2393,
+        "event": 0.2285,
+        "location": 0.0981,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32720",
+      "question_id": "entity_26_29",
+      "probabilities": {
+        "building": 0.11070036966729942,
+        "other": 0.1214906584074333,
+        "location": 0.17953841542611648,
+        "product": 0.19412528724148265,
+        "event": 0.2868418423418923,
+        "person": 0.10730342691577578,
+        "organization": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:32720",
+      "question_id": "entity_33_34",
+      "probabilities": {
+        "art": 0.1864627074585083,
+        "building": 0.04709058188362328,
+        "event": 0.1806638672265547,
+        "organization": 0.20405918816236754,
+        "person": 0.22455508898220355,
+        "other": 0.15716856628674267,
+        "location": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_2_4",
+      "probabilities": {
+        "location": 0.4712183401741916,
+        "building": 0.08849734708178997,
+        "art": 0.049654620082090296,
+        "organization": 0.15547101811993191,
+        "product": 0.14375813394734208,
+        "person": 0.09140054059465412,
+        "event": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_17_21",
+      "probabilities": {
+        "event": 0.2771891243502599,
+        "location": 0.33576569372251097,
+        "person": 0.08346661335465815,
+        "other": 0.14154338264694125,
+        "building": 0.09906037584966014,
+        "organization": 0.06297481007596961,
+        "product": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_22_23",
+      "probabilities": {
+        "location": 0.39489489489489493,
+        "product": 0.1031031031031031,
+        "organization": 0.13003003003003002,
+        "other": 0.16716716716716717,
+        "person": 0.15055055055055055,
+        "art": 0.05425425425425425,
+        "building": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_24_25",
+      "probabilities": {
+        "other": 0.19843812575090106,
+        "product": 0.11483780536643973,
+        "location": 0.30306367641169407,
+        "art": 0.11143372046455746,
+        "building": 0.1867240688826592,
+        "organization": 0.0855026031237485,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_27_29",
+      "probabilities": {
+        "other": 0.1937681595030558,
+        "person": 0.13305280032060915,
+        "location": 0.3091874561667168,
+        "art": 0.09588217613465584,
+        "organization": 0.17904017633503658,
+        "product": 0.08906923153992587,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33040",
+      "question_id": "entity_35_38",
+      "probabilities": {
+        "organization": 0.2873873873873874,
+        "art": 0.07627627627627628,
+        "product": 0.12222222222222222,
+        "other": 0.25805805805805804,
+        "person": 0.16126126126126125,
+        "building": 0.0947947947947948,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33384",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "product": 0.207020702070207,
+        "building": 0.08740874087408741,
+        "person": 0.291029102910291,
+        "other": 0.1445144514451445,
+        "event": 0.207020702070207,
+        "art": 0.063006300630063,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33384",
+      "question_id": "entity_5_6",
+      "probabilities": {
+        "other": 0.25022520268241416,
+        "art": 0.04353918526674006,
+        "product": 0.07286557902111901,
+        "organization": 0.38704834350915823,
+        "location": 0.15153638274447004,
+        "person": 0.09478530677609849,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:33384",
+      "question_id": "entity_18_19",
+      "probabilities": {
+        "other": 0.23246974092227668,
+        "person": 0.29888966690007,
+        "product": 0.05441632489746923,
+        "art": 0.14554366309892966,
+        "event": 0.1602480744223267,
+        "organization": 0.10843252975892767,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34421",
+      "question_id": "entity_6_9",
+      "probabilities": {
+        "person": 0.2755653392035221,
+        "product": 0.05593356013608165,
+        "art": 0.18961376826095658,
+        "other": 0.16710026015609367,
+        "location": 0.21793075845507304,
+        "event": 0.09385631378827296,
+        "organization": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34421",
+      "question_id": "entity_19_21",
+      "probabilities": {
+        "other": 0.18161816181618162,
+        "art": 0.1699169916991699,
+        "product": 0.07910791079107911,
+        "organization": 0.22172217221722174,
+        "event": 0.24412441244124414,
+        "person": 0.1035103510351035,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34421",
+      "question_id": "entity_26_28",
+      "probabilities": {
+        "building": 0.1357814688813288,
+        "art": 0.13968381028617172,
+        "organization": 0.07714628777266361,
+        "event": 0.4162497498499099,
+        "person": 0.14368621172703624,
+        "location": 0.08745247148288975,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "art": 0.5474474474474476,
+        "organization": 0.05425425425425425,
+        "event": 0.086986986986987,
+        "person": 0.09679679679679679,
+        "product": 0.09969969969969969,
+        "other": 0.11481481481481481,
+        "building": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_10_12",
+      "probabilities": {
+        "product": 0.11027869343721905,
+        "art": 0.503346319049046,
+        "person": 0.08051143741883927,
+        "building": 0.1434422135650784,
+        "organization": 0.07801418439716312,
+        "event": 0.08440715213265408,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_13_14",
+      "probabilities": {
+        "organization": 0.15727863931965982,
+        "person": 0.11725862931465732,
+        "art": 0.36148074037018507,
+        "product": 0.0767383691845923,
+        "event": 0.1504752376188094,
+        "building": 0.13676838419209603,
+        "other": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_20_22",
+      "probabilities": {
+        "organization": 0.09460539460539462,
+        "art": 0.561938061938062,
+        "person": 0.08341658341658344,
+        "location": 0.15314685314685317,
+        "other": 0.060039960039960046,
+        "product": 0.04685314685314686,
+        "event": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_23_25",
+      "probabilities": {
+        "art": 0.43967587034813926,
+        "location": 0.16416566626650658,
+        "organization": 0.07523009203681473,
+        "product": 0.07523009203681473,
+        "building": 0.16706682673069229,
+        "other": 0.07863145258103241,
+        "event": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_33_34",
+      "probabilities": {
+        "art": 0.4510646805958213,
+        "organization": 0.05738278516445067,
+        "other": 0.09417174847545737,
+        "product": 0.08737378786364092,
+        "event": 0.1962411276617015,
+        "location": 0.11376587023892833,
+        "building": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_36_38",
+      "probabilities": {
+        "other": 0.15726290516206481,
+        "location": 0.25210084033613445,
+        "person": 0.10994397759103641,
+        "product": 0.13675470188075228,
+        "event": 0.19347739095638253,
+        "building": 0.15046018407362946,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34683",
+      "question_id": "entity_46_48",
+      "probabilities": {
+        "building": 0.24790083966413434,
+        "organization": 0.051279488204718116,
+        "location": 0.1708316673330668,
+        "person": 0.17373050779688126,
+        "art": 0.2732906837265094,
+        "event": 0.08296681327469013,
+        "product": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34949",
+      "question_id": "entity_1_4",
+      "probabilities": {
+        "art": 0.1338,
+        "location": 0.3652,
+        "organization": 0.0952,
+        "building": 0.1777,
+        "product": 0.1187,
+        "other": 0.1094,
+        "person": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34949",
+      "question_id": "entity_6_8",
+      "probabilities": {
+        "organization": 0.2732633683158421,
+        "person": 0.08445777111444279,
+        "other": 0.17081459270364818,
+        "art": 0.16301849075462269,
+        "product": 0.2029985007496252,
+        "building": 0.1054472763618191,
+        "location": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:34949",
+      "question_id": "entity_18_21",
+      "probabilities": {
+        "building": 0.2575681886302328,
+        "event": 0.10730342691577581,
+        "location": 0.21660505545009492,
+        "art": 0.13947447297432314,
+        "person": 0.19412528724148267,
+        "product": 0.08492356878809074,
+        "other": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:35220",
+      "question_id": "entity_5_9",
+      "probabilities": {
+        "event": 0.26586586586586586,
+        "building": 0.15635635635635636,
+        "person": 0.07427427427427427,
+        "other": 0.2043043043043043,
+        "location": 0.23563563563563564,
+        "art": 0.06356356356356356,
+        "organization": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:35220",
+      "question_id": "entity_10_11",
+      "probabilities": {
+        "organization": 0.20017998200179982,
+        "other": 0.10058994100589941,
+        "location": 0.20997900209979,
+        "event": 0.20997900209979,
+        "art": 0.17678232176782324,
+        "building": 0.1024897510248975,
+        "product": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:35220",
+      "question_id": "entity_24_26",
+      "probabilities": {
+        "event": 0.32652652652652653,
+        "organization": 0.11481481481481481,
+        "building": 0.1896896896896897,
+        "product": 0.1046046046046046,
+        "person": 0.17787787787787787,
+        "art": 0.08648648648648649,
+        "location": 0.0,
+        "other": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:35220",
+      "question_id": "entity_30_34",
+      "probabilities": {
+        "building": 0.26706586826347306,
+        "event": 0.11107784431137724,
+        "location": 0.18912175648702595,
+        "product": 0.11447105788423154,
+        "other": 0.2466067864271457,
+        "person": 0.07165668662674651,
+        "art": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:35349",
+      "question_id": "entity_11_12",
+      "probabilities": {
+        "location": 0.5000500050005,
+        "person": 0.051005100510051,
+        "organization": 0.0552055205520552,
+        "building": 0.21092109210921092,
+        "other": 0.1318131813181318,
+        "event": 0.051005100510051,
+        "product": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36319",
+      "question_id": "entity_0_2",
+      "probabilities": {
+        "other": 0.279160419790105,
+        "organization": 0.13563218390804596,
+        "person": 0.29675162418790607,
+        "art": 0.08105947026486758,
+        "location": 0.12983508245877062,
+        "event": 0.07756121939030486,
+        "product": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36319",
+      "question_id": "entity_9_10",
+      "probabilities": {
+        "person": 0.5817091454272864,
+        "organization": 0.07276361819090456,
+        "event": 0.06536731634182909,
+        "building": 0.06836581709145428,
+        "other": 0.16101949025487255,
+        "product": 0.05077461269365317,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36389",
+      "question_id": "entity_16_18",
+      "probabilities": {
+        "building": 0.2656265626562656,
+        "location": 0.1426142614261426,
+        "person": 0.07960796079607961,
+        "art": 0.23142314231423142,
+        "event": 0.1611161116111611,
+        "organization": 0.11961196119611961,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36412",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "event": 0.242563845768653,
+        "product": 0.2914371557336004,
+        "location": 0.10906359539308964,
+        "building": 0.10265398097145718,
+        "other": 0.17706559839759642,
+        "art": 0.07721582373560341,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36412",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "organization": 0.1709,
+        "other": 0.1465,
+        "person": 0.0957,
+        "product": 0.3398,
+        "building": 0.1582,
+        "location": 0.0889,
+        "art": 0.0,
+        "event": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36675",
+      "question_id": "entity_15_17",
+      "probabilities": {
+        "organization": 0.19230384807596201,
+        "art": 0.07316341829085458,
+        "other": 0.10444777611194403,
+        "event": 0.37091454272863567,
+        "location": 0.12253873063468267,
+        "person": 0.13663168415792104,
+        "building": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_0_1",
+      "probabilities": {
+        "other": 0.24232116058029013,
+        "product": 0.11435717858929464,
+        "event": 0.22761380690345173,
+        "art": 0.16608304152076037,
+        "person": 0.1855927963981991,
+        "building": 0.064032016008004,
+        "location": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_4_7",
+      "probabilities": {
+        "building": 0.17895053074304026,
+        "person": 0.3090326457039856,
+        "product": 0.06408972561586221,
+        "organization": 0.1936711395954336,
+        "other": 0.14179851792509515,
+        "event": 0.11245744041658322,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_9_11",
+      "probabilities": {
+        "product": 0.172796322206676,
+        "art": 0.11663002198680793,
+        "building": 0.1366180291824905,
+        "event": 0.25964421347191685,
+        "location": 0.21766939836098342,
+        "other": 0.09664201479112533,
+        "person": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_16_18",
+      "probabilities": {
+        "product": 0.17739842268144154,
+        "event": 0.2671458520515124,
+        "organization": 0.07846660676849355,
+        "person": 0.3119696515922931,
+        "other": 0.1028251971648198,
+        "building": 0.06219426974143955,
+        "art": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_19_20",
+      "probabilities": {
+        "location": 0.3258741258741259,
+        "person": 0.2575424575424575,
+        "building": 0.08781218781218783,
+        "art": 0.14045954045954048,
+        "product": 0.1072927072927073,
+        "other": 0.08101898101898103,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_21_22",
+      "probabilities": {
+        "location": 0.3179231153270095,
+        "building": 0.10144782825761357,
+        "event": 0.1364952571143285,
+        "person": 0.23594608087868196,
+        "other": 0.13260109835247127,
+        "art": 0.07558662006989515,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:36839",
+      "question_id": "entity_27_30",
+      "probabilities": {
+        "organization": 0.2539,
+        "other": 0.1162,
+        "building": 0.1406,
+        "product": 0.1426,
+        "event": 0.2393,
+        "art": 0.1074,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_1_2",
+      "probabilities": {
+        "organization": 0.207020702070207,
+        "art": 0.1396139613961396,
+        "event": 0.2617261726172617,
+        "product": 0.08500850085008502,
+        "building": 0.20412041204120412,
+        "other": 0.1025102510251025,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_4_6",
+      "probabilities": {
+        "other": 0.1835265893642543,
+        "person": 0.14934026389444224,
+        "location": 0.302578968412635,
+        "art": 0.14254298280687727,
+        "product": 0.1366453418632547,
+        "building": 0.08536585365853659,
+        "event": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_7_10",
+      "probabilities": {
+        "event": 0.33573213393303347,
+        "person": 0.0976511744127936,
+        "location": 0.21279360319840082,
+        "organization": 0.12343828085957022,
+        "product": 0.1581209395302349,
+        "building": 0.07226386806596702,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_11_15",
+      "probabilities": {
+        "organization": 0.1689,
+        "person": 0.1177,
+        "location": 0.21,
+        "event": 0.3359,
+        "product": 0.0864,
+        "building": 0.0811,
+        "other": 0.0,
+        "art": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_21_24",
+      "probabilities": {
+        "other": 0.20011995201919233,
+        "product": 0.0819672131147541,
+        "person": 0.10735705717712915,
+        "event": 0.3748500599760096,
+        "art": 0.15613754498200721,
+        "organization": 0.07956817273090765,
+        "location": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_31_32",
+      "probabilities": {
+        "other": 0.14074074074074072,
+        "event": 0.303003003003003,
+        "building": 0.07187187187187187,
+        "person": 0.18378378378378377,
+        "art": 0.18378378378378377,
+        "location": 0.1168168168168168,
+        "product": 0.0,
+        "organization": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_34_35",
+      "probabilities": {
+        "product": 0.14642678660669664,
+        "other": 0.1376311844077961,
+        "art": 0.14252873563218393,
+        "event": 0.37481259370314846,
+        "person": 0.11614192903548226,
+        "organization": 0.08245877061469266,
+        "building": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37024",
+      "question_id": "entity_44_45",
+      "probabilities": {
+        "organization": 0.17893261239611494,
+        "art": 0.1349754681085411,
+        "building": 0.07379593471512967,
+        "event": 0.4869330129167918,
+        "other": 0.0821067387603885,
+        "product": 0.04325623310303395,
+        "person": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37204",
+      "question_id": "entity_2_3",
+      "probabilities": {
+        "other": 0.22439804176241385,
+        "event": 0.30632430812268957,
+        "product": 0.08632230992107105,
+        "organization": 0.104406034568888,
+        "location": 0.18053751623538816,
+        "person": 0.09801178938954942,
+        "art": 0.0,
+        "building": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37617",
+      "question_id": "entity_0_5",
+      "probabilities": {
+        "location": 0.2676,
+        "art": 0.1523,
+        "person": 0.1348,
+        "building": 0.2598,
+        "event": 0.1113,
+        "organization": 0.0742,
+        "other": 0.0,
+        "product": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37617",
+      "question_id": "entity_8_9",
+      "probabilities": {
+        "event": 0.19990014977533696,
+        "other": 0.12481278082875685,
+        "building": 0.23015476784822766,
+        "art": 0.19700449326010983,
+        "product": 0.13939091362955566,
+        "person": 0.10873689465801298,
+        "organization": 0.0,
+        "location": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "few_nerd:supervised:test:37617",
+      "question_id": "entity_12_15",
+      "probabilities": {
+        "organization": 0.1984182600860947,
+        "other": 0.13584943437781558,
+        "building": 0.2835118630493543,
+        "art": 0.17499249174091502,
+        "event": 0.14075483031334468,
+        "product": 0.06647312043247572,
+        "location": 0.0,
+        "person": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

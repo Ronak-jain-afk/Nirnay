@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "scone-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/scone",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:33:18+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.34,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.5,
+    "baseline_adjusted_skill": -0.31999999999999995,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 29.67190159999882,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "scone:default:test:8": "f4d808851d94bb2c0142c341c423ca5809e3ca8b1001babed2ea0ab489e54b70",
+      "scone:default:test:45": "bed820c754b583242446c04be0e575df2a1d34aee37d58a28469c5f751d58fe7",
+      "scone:default:test:58": "b36d4871c592e2ecf84551cfb52a6e287b5b15f073e93a74ca6df55fe31f26b0",
+      "scone:default:test:63": "33350f7238b9998d1e4919e02e6f0311fe7d22992ea631a6544c5ccfeebd9000",
+      "scone:default:test:82": "a3b014219f9be7793b984d99a8cf954686d95fcc46cada55a2b8503d319f8a99",
+      "scone:default:test:89": "6614c5bc818b4e771b4d4046eff032d7857e306ca345a00c98effb67d5b5f919",
+      "scone:default:test:115": "90c0b16da0ec62117adf22647f2ebbdaeb69b2d6ca46d796cf18466b33ebfcb1",
+      "scone:default:test:116": "0316c47fd9b2b2200dc4c99262d73ae818c08fad40911d6ab79d09838feb6cd3",
+      "scone:default:test:127": "f3d511cddc88947e40fa269c4c57c911ff35cdf369bf185f4c426a8be65028c9",
+      "scone:default:test:146": "22e08a19400907a881f923d62e529fbdc479788f3fe47abee0e617a6f2751966",
+      "scone:default:test:152": "33afc018e8d9aed16dedc9cd06f1682962855044359439a44cba4d08713d2508",
+      "scone:default:test:173": "edc183dc788c8351c9c86aa8b3799aea998b6f713e3a584a347c34346284123d",
+      "scone:default:test:180": "67ec9090702ed2e4028a1b4f64e4ec23dcafb484a8ffb26492085a7ca21de4c1",
+      "scone:default:test:187": "37a07454192b428baa4d29d6ae547709c644bd3ff2087b8be4bc94c42b9f1209",
+      "scone:default:test:200": "0812d6393dc3e58d0110fac1f21ffdc25fc1b10e34facd48668b599373f03cad",
+      "scone:default:test:206": "4dc6356c0305b0a2235c1543377930a7f0f9316458b755e65ba1b1ffb01c899e",
+      "scone:default:test:211": "40f0f75402984bcd47647a76af4f1c9749dd5c65f5d2e95d811cba9b9ae67ad2",
+      "scone:default:test:222": "2a383ad1062c9b934270db8365a1ec825ce62a18adca37dcb67533a1173feee9",
+      "scone:default:test:231": "6cf9979b5fede76efabfddcc8e5fcb5eb398cc042721cb0f3dae34b4e90ef063",
+      "scone:default:test:241": "35864d76d049d26d67f8414bcf37db15d61252e246aecd168738f68b1c0ee82e",
+      "scone:default:test:247": "5bc4493cac0bee48c5ec87b817af54a5a6b8eec5108bfe8c26e3ac5534e6ead1",
+      "scone:default:test:257": "ad315aae1adefb12af19d6c16550c99ed5d2eee9fd0f1868c6d62627568dfea1",
+      "scone:default:test:272": "73a6927afc7bc38bab653d4a58b57c87faaaa9493628cfc3afc0ec166fcd3756",
+      "scone:default:test:285": "4f3f7a5e84a91d8848f7919ef5af2f65a4410625c5c62d04d995a6d9a2095469",
+      "scone:default:test:293": "e3c1e5d96ebbeb76fd797fe24d22b29e5f46395cb2542c79c6bff2bf1ec77fe7",
+      "scone:default:test:304": "8d016f1fe8502afe956d148353a4c5799a3205a3219f0d1770f907ff0beb1929",
+      "scone:default:test:343": "9e95564cbb8cae6a0d132959b27a221dd696557a51cdcc226e172035659b278c",
+      "scone:default:test:344": "34ff4ab2084b1828d445d3c9fedc2f2548ed8964f84fbc9cc606913cff5de10f",
+      "scone:default:test:350": "5b83ff238a5768a7836ac3ff19135a815e0e353d1212494106224230e32d7450",
+      "scone:default:test:352": "6e649cdea596704464e812add889b174d25d685ad42bcb4f3e8575ee10d19d3a",
+      "scone:default:test:353": "44eb3fcca30787669cedd482de44f58b7a0189a26a5b9a3f2748e47867d34c4d",
+      "scone:default:test:357": "6752c2c2aca3902b41b4d4d99f528152183e7d00414d6d1b99b9b13adebc8694",
+      "scone:default:test:361": "739893a5dad7390f22f36830b53d300f80229f8688beb0d6b62beda90bf2189b",
+      "scone:default:test:366": "6efb5af2b9ce405150442641747af5c74161220d8da451a99a22df065493fc6d",
+      "scone:default:test:378": "c24e50e86277f91f5d210ca12dd292792885cc312cd2fecbd016e0bc4adf0ddc",
+      "scone:default:test:380": "9ab58857c0068d0797c3a0033a97478f0546e041fd558cd22ae6b8484c09a9f0",
+      "scone:default:test:387": "589a810eb30feb763cfb8c4a7ad0820a1c41749bd1dab2d0ba01420e5385f185",
+      "scone:default:test:392": "538851105526ea293d40f249b1d9d3df4a40c97443809ed4cf9896de937ef45b",
+      "scone:default:test:402": "537fb984b513835aef2659863c9051cd4136bd452a66550c5126a79e08605703",
+      "scone:default:test:403": "51cfe6441a0ee943a95fa1857e9d558a9091675aaefcdde981fd9c603d9f1146",
+      "scone:default:test:417": "072924ef0e0645527e0db0937a1a02026e1ac0fd61d802e22e6abb5ad02886ce",
+      "scone:default:test:432": "33d86ecfb920acdaca793e2aaa15a71480d9c4d2b34c381a96d2249ed38d1574",
+      "scone:default:test:453": "f6e45f9518f3add4e34309bd75ce7573f91a80e9af9948e5effff24814244458",
+      "scone:default:test:469": "bfbb9ef4522e73b5c03d19c5b884a730b467d95e56e3f90bd877db9797c90065",
+      "scone:default:test:487": "823c9d761902890e19c6ac05f37a8c3a515b5600800a4e373369d96c0ac55be6",
+      "scone:default:test:501": "353ac5ae2c11abe5912af139862e0cd5dcb5d8602829d57b89ebf6abfad72939",
+      "scone:default:test:502": "d56edfcdbb82730fa6046ac10631d9007c143ffde30e0ac86d511cd5f06b9d0e",
+      "scone:default:test:517": "60b0c22f35e3ae8394f4e65fb8dfa9a4207b8a4fffb2ad8e03a2e06dfb02038f",
+      "scone:default:test:524": "c568bfe4604e57b4a7661d0ee0624ec0c118171b4829b5c782f74380b6d4b1d0",
+      "scone:default:test:528": "6b8e5bf0ff3ded7ac3b20eb6630cf9952a98560d21d3a101c2101d8a3588467d",
+      "scone:default:test:535": "e255899535332adf86e558ab7de78557518a4ad5482b54f9e5552553a7420018",
+      "scone:default:test:539": "c332b3294bf78ba7bbd5c9c941ea66ed17d541355fce44d63f82246171a27981",
+      "scone:default:test:549": "2e97f83bc886de3b342f3bc32c67eaa9c4204de24f2b662aaa44930959ff2380",
+      "scone:default:test:564": "5b3d6476621a29d7a800ac5bf308354f18d905e43d7d6c0e2cd018e60dd9849b",
+      "scone:default:test:578": "95ffafa165e3a4b06836a99b9441275d27800c9dad9ee7909a2fc8349585b9d5",
+      "scone:default:test:585": "fdbf689168650b9be43b1303878ef44ca5b18a10d103b253855400551eed3267",
+      "scone:default:test:593": "d66399b607e9f26cbea57a0b5c948e44497fc09dbc85c36c9d505cdbdab2aa06",
+      "scone:default:test:596": "8a1249d65f30a06a8a5c73b3f5b7df177d2c0dd84e93be2692f9306c0cfc9f70",
+      "scone:default:test:604": "77cb41c173e7cf7e6780a9c781c7046e6f636cb51e2cb279cd79dda8af50cd2b",
+      "scone:default:test:612": "fbde90aed0126bec3f00422e7c6959815041663c7b97a8c99de94285521a3c69",
+      "scone:default:test:615": "30bf1331230f5ca6480d9abb900ac244983ba134ecf662c51bb785568217af99",
+      "scone:default:test:626": "2b2d6fbe73d7b5960b7d0c1e7b7c4c86d54a79c82670872efcb4fb11bce21d1a",
+      "scone:default:test:627": "6c5f0d4afcca29474d25bb61aa9cab71b0a5b2bd829f12081cb7bb21bac0d849",
+      "scone:default:test:628": "da60d631dfa6df09880f409cdb71b8ec29fd6e777859beecc9b902486ac60a21",
+      "scone:default:test:632": "1945a162609e6f162452c59ce665f0d2b4d824a06c80b31391451ba4b078df7a",
+      "scone:default:test:638": "ecbc4e6600c4042b811cd02d56147a344ba939d29b6389be072cdd2533b5cc81",
+      "scone:default:test:684": "fe6b824a818dbc535bf6710e1d897bdf7568384a98bc94bbe0e123bdb3bf279c",
+      "scone:default:test:686": "a704726c8ef0c8aa409a7c968c9b755165a0b78917bb041c8af6220c7887c023",
+      "scone:default:test:690": "0d18afa33fbb75478e703250d5a8bd379ce68ecc47594c6de88fd408a866f8f3",
+      "scone:default:test:694": "c761b11942084b4969b345daeb3b728623f28694096586acc1f6a142ae77073b",
+      "scone:default:test:697": "0e013c7f832ea66d378f69f339a4ce48967aa273db48c8f09ab38566eff98dd4",
+      "scone:default:test:703": "3d225dea08ea9852fcf5ce4b95dc8dd20a0452dc012ed6b6b57377b14c1eee93",
+      "scone:default:test:704": "204828e98cf63f43879aab13cc4fbab179635d1a039f84999ed07adae11a2bfa",
+      "scone:default:test:721": "068423109f400dc2209faf679cb297b596f68a4d2ccbcf313bf67a175de3525b",
+      "scone:default:test:726": "d742d03fbcb59076ea6305414cf00aa32d87dfee37f6701263477dbb48aeb7e9",
+      "scone:default:test:737": "3a4cc958de1b1fd3d24d755cca9ea8a05dd73d71b63baa16e8996970e5b71724",
+      "scone:default:test:741": "905ba167fcf7eb58f082aea110222f63d52a35418174e522e76554b63a128673",
+      "scone:default:test:743": "4d3bae847af1f104ac1a6b828d14ae45dd3527a9c6fa464ed340b008cd6dfac8",
+      "scone:default:test:748": "b746ea9ed09dd9ec855f2afdbb20fffeddf413a8cd6e502c591f0a547cc89939",
+      "scone:default:test:750": "e86e60e5782b1e78f763ea9932169f51e993f9504622731c5584cae4730b39b9",
+      "scone:default:test:761": "a7ff9068a1c95d120d3cbb29b1c366f4441e43548dfccf640c17e91a64e615db",
+      "scone:default:test:777": "d01244f9cdbc0e952bd39f2f2446d24c57d4b1a1ac3fdb7ed38840426d6d9474",
+      "scone:default:test:789": "8762e327a964eea10892260c94979878233bf2541cf94009cf829035c5e03cba",
+      "scone:default:test:805": "51276c51bed3824452001076116792cc865617c62bd2f74cba3e3033017049ce",
+      "scone:default:test:806": "03b3d3760cc85eca66f1bbdbfcede0bfe1e0f77c67f7fc9a9267f5f8bef8d407",
+      "scone:default:test:815": "5ec29e2c0adf49adbb4df7b2e9abbda26174659a8e567a1a2ec18632c3236d1b",
+      "scone:default:test:817": "c20e5a85a7cc9fedb50fd41203b90d9bae2d27c115ff5fb12e997db7ce472f2b",
+      "scone:default:test:825": "71fb8a99c4c4530789ab914e0843e72131af4da2d17f3d54a6410d7b6f34a184",
+      "scone:default:test:832": "938b6146ac31cf4e77f5d612c7df6a75ec2fb08d76beaec48a7987c5c5c93309",
+      "scone:default:test:833": "fb806d1d5f26e05a4ff10faf28f8d208b5a56451da8e763ec412bddf53f2fe33",
+      "scone:default:test:834": "db67c61dfbadfcd1f16d028ea9f99a8b0b27680b7a7cba05ace8175322a883cc",
+      "scone:default:test:887": "e062c85422d361bd6e6821278cf602c2e5a86db84246bae7e279ffdc9b36ee01",
+      "scone:default:test:900": "e0a59ce8ff3712cb55a3d5eb65cb3bb99a413be48f9e2c5ebb792af002f708d9",
+      "scone:default:test:902": "6a96bcd82ccbd2ab8ff68e690103fdc2ce51e5df1ab86b9559e3def0866a72fe",
+      "scone:default:test:913": "bb087ccdf7476beb7eeeca206c310dd6edd15510c005dccab9f1bd542e4b5c01",
+      "scone:default:test:918": "ab8551ec462e7345e1237653c577fc0876d808841152299e3a868946aea28c4f",
+      "scone:default:test:930": "dd3f8e71fa06f2bdbd6f3d8deaefe0343e9d42400262432ce55ab1ab2f6643b3",
+      "scone:default:test:958": "30b50f2a919d1cfc8fe134df9cdf70f967c5244bb9eb33b3003c02a5baaf4c44",
+      "scone:default:test:975": "d49e8c1b44ac041c58128eeb2c57e24699f0ea3bd336cff796ab9f835259eec4",
+      "scone:default:test:986": "e483303e2a6ef7ae393c2417775fbb148614be0b7c007d87edaeda0028e2d417"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "scone:default:test:8",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.251974802519748,
+        "contradiction": 0.4296570342965704,
+        "neutral": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:45",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2559,
+        "contradiction": 0.416,
+        "neutral": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:58",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2324,
+        "neutral": 0.4492,
+        "contradiction": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:63",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.42341892296932754,
+        "entailment": 0.23708662204016384,
+        "contradiction": 0.3394944549905085
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:82",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.22927072927072925,
+        "contradiction": 0.4565434565434565,
+        "neutral": 0.31418581418581415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:89",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.40234023402340235,
+        "entailment": 0.2734273427342734,
+        "neutral": 0.3242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:115",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2715,
+        "neutral": 0.4316,
+        "contradiction": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:116",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.31053105310531054,
+        "neutral": 0.3984398439843984,
+        "entailment": 0.291029102910291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:127",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.26219817653541727,
+        "neutral": 0.44033663961526903,
+        "contradiction": 0.2974651838493137
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:146",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3906,
+        "entailment": 0.2852,
+        "contradiction": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:152",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.28712871287128716,
+        "contradiction": 0.373037303730373,
+        "neutral": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:173",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24534534534534536,
+        "contradiction": 0.43593593593593594,
+        "neutral": 0.3187187187187187
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:180",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3613,
+        "contradiction": 0.334,
+        "entailment": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:187",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3848,
+        "entailment": 0.2812,
+        "contradiction": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:200",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.26757324267573246,
+        "contradiction": 0.414058594140586,
+        "neutral": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:206",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3711,
+        "entailment": 0.3027,
+        "neutral": 0.3262
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:211",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.41131849485976646,
+        "entailment": 0.25341850484080247,
+        "contradiction": 0.33526300029943107
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:222",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.416041604160416,
+        "entailment": 0.24412441244124414,
+        "contradiction": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:231",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24875124875124877,
+        "neutral": 0.4370629370629371,
+        "contradiction": 0.3141858141858142
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:241",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3496,
+        "entailment": 0.3223,
+        "neutral": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:247",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.26613226452905814,
+        "contradiction": 0.41292585170340684,
+        "neutral": 0.320941883767535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:257",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.19492963369597763,
+        "neutral": 0.5068370096816049,
+        "contradiction": 0.2982333566224174
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:272",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.31776447105788425,
+        "entailment": 0.3040918163672655,
+        "neutral": 0.3781437125748503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:285",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.1969061876247505,
+        "neutral": 0.5028942115768463,
+        "contradiction": 0.3001996007984032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:293",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2227,
+        "contradiction": 0.4043,
+        "neutral": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:304",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3164,
+        "neutral": 0.3945,
+        "entailment": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:343",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3470059880239521,
+        "contradiction": 0.36447105788423156,
+        "entailment": 0.2885229540918164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:344",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.33526300029943107,
+        "entailment": 0.32947399940113786,
+        "neutral": 0.33526300029943107
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:350",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2617,
+        "contradiction": 0.418,
+        "neutral": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:352",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3984398439843984,
+        "entailment": 0.2656265626562656,
+        "contradiction": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:353",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.25928143712574847,
+        "contradiction": 0.4132734530938124,
+        "neutral": 0.3274451097804391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:357",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4004,
+        "entailment": 0.2617,
+        "contradiction": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:361",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.21211211211211212,
+        "neutral": 0.47897897897897895,
+        "contradiction": 0.3089089089089089
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:366",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.43833283238152493,
+        "entailment": 0.23093878368900914,
+        "contradiction": 0.330728383929466
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:378",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3105,
+        "contradiction": 0.4395,
+        "entailment": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:380",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3828,
+        "neutral": 0.3418,
+        "entailment": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:387",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.18125561433276774,
+        "contradiction": 0.5185148218385068,
+        "neutral": 0.30022956382872545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:392",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3145,
+        "entailment": 0.3105,
+        "neutral": 0.375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:402",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.25149700598802394,
+        "neutral": 0.44051896207584834,
+        "contradiction": 0.3079840319361277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:403",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2715,
+        "contradiction": 0.3867,
+        "neutral": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:417",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3437656234376562,
+        "neutral": 0.3847615238476152,
+        "entailment": 0.27147285271472854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:432",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3184,
+        "neutral": 0.3828,
+        "entailment": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:453",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.34311377245508984,
+        "entailment": 0.29820359281437125,
+        "neutral": 0.3586826347305389
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:469",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.40979020979020975,
+        "entailment": 0.24485514485514484,
+        "contradiction": 0.34535464535464533
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:487",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36716328367163287,
+        "contradiction": 0.3437656234376562,
+        "entailment": 0.289071092890711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:501",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2798316801923655,
+        "contradiction": 0.36008415990381726,
+        "neutral": 0.36008415990381726
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:502",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2832,
+        "contradiction": 0.3633,
+        "neutral": 0.3535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:517",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4141,
+        "entailment": 0.2539,
+        "contradiction": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:524",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3722554890219561,
+        "contradiction": 0.313872255489022,
+        "entailment": 0.313872255489022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:528",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3047,
+        "neutral": 0.3848,
+        "entailment": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:535",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3984398439843984,
+        "entailment": 0.2617261726172617,
+        "contradiction": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:539",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.40701402805611225,
+        "entailment": 0.250501002004008,
+        "contradiction": 0.34248496993987976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:549",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2793,
+        "contradiction": 0.3633,
+        "neutral": 0.3574
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:564",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2949,
+        "contradiction": 0.3613,
+        "neutral": 0.3438
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:578",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.41015898410158985,
+        "entailment": 0.25587441255874416,
+        "contradiction": 0.33396660333966605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:585",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3684000399241441,
+        "contradiction": 0.33526300029943107,
+        "entailment": 0.29633695977642477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:593",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2753724627537246,
+        "contradiction": 0.37696230376962303,
+        "neutral": 0.34766523347665235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:596",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3027,
+        "entailment": 0.3535,
+        "neutral": 0.3438
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:604",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.39960079840319357,
+        "contradiction": 0.31187624750499005,
+        "entailment": 0.2885229540918164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:612",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.39646035396460355,
+        "contradiction": 0.31836816318368166,
+        "entailment": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:615",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4121,
+        "contradiction": 0.3125,
+        "entailment": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:626",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4246492985971944,
+        "entailment": 0.27394789579158313,
+        "contradiction": 0.30140280561122246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:627",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4258,
+        "entailment": 0.2676,
+        "contradiction": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:628",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2988,
+        "neutral": 0.4082,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:632",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4082,
+        "entailment": 0.2891,
+        "contradiction": 0.3027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:638",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.375,
+        "contradiction": 0.2949,
+        "neutral": 0.3301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:684",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4102,
+        "contradiction": 0.2812,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:686",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2720168319807635,
+        "neutral": 0.40897705640717363,
+        "entailment": 0.31900611161206294
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:690",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3535,
+        "neutral": 0.3711,
+        "contradiction": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:694",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3626110390258509,
+        "neutral": 0.3684000399241441,
+        "contradiction": 0.268988921050005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:697",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.32944111776447105,
+        "contradiction": 0.3196606786427145,
+        "neutral": 0.3508982035928144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:703",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2988,
+        "entailment": 0.3555,
+        "neutral": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:704",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2846307385229541,
+        "neutral": 0.42105788423153695,
+        "contradiction": 0.294311377245509
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:721",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.291,
+        "entailment": 0.3633,
+        "neutral": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:726",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.291,
+        "entailment": 0.3633,
+        "neutral": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:737",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2949,
+        "neutral": 0.4102,
+        "entailment": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:741",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2988,
+        "neutral": 0.4082,
+        "contradiction": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:743",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4093812375249501,
+        "entailment": 0.27674650698602793,
+        "contradiction": 0.313872255489022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:748",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3379,
+        "contradiction": 0.3125,
+        "neutral": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:750",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.33786621337866213,
+        "contradiction": 0.31836816318368166,
+        "neutral": 0.3437656234376562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:761",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3125,
+        "neutral": 0.3789,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:777",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2852,
+        "neutral": 0.4023,
+        "entailment": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:789",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.28655554446551557,
+        "neutral": 0.4035332867551652,
+        "entailment": 0.3099111687793193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:805",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.4731731731731732,
+        "neutral": 0.27757757757757756,
+        "entailment": 0.24924924924924924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:806",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.27004008016032066,
+        "contradiction": 0.5049098196392786,
+        "entailment": 0.22505010020040078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:815",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2038961038961039,
+        "neutral": 0.38241758241758245,
+        "contradiction": 0.41368631368631376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:817",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.21877812218778123,
+        "neutral": 0.3847615238476152,
+        "contradiction": 0.39646035396460355
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:825",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36523652365236525,
+        "entailment": 0.23242324232423242,
+        "contradiction": 0.40234023402340235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:832",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.19802178039764212,
+        "neutral": 0.38245578978918976,
+        "contradiction": 0.4195224298131682
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:833",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.27315416125487063,
+        "contradiction": 0.4858627235488061,
+        "entailment": 0.24098311519632334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:834",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.1827827827827828,
+        "contradiction": 0.5786786786786786,
+        "neutral": 0.23853853853853854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:887",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24877610150864224,
+        "contradiction": 0.43121190928164654,
+        "neutral": 0.32001198920971125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:900",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.33526300029943107,
+        "neutral": 0.3684000399241441,
+        "entailment": 0.29633695977642477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:902",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3848,
+        "contradiction": 0.3242,
+        "entailment": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:913",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3066306630663066,
+        "contradiction": 0.36523652365236525,
+        "neutral": 0.32813281328132815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:918",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3828,
+        "contradiction": 0.3281,
+        "entailment": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:930",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2852,
+        "neutral": 0.416,
+        "contradiction": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:958",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3066,
+        "contradiction": 0.3633,
+        "neutral": 0.3301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:975",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.4219,
+        "neutral": 0.3008,
+        "entailment": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scone:default:test:986",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.24295704295704293,
+        "neutral": 0.40779220779220776,
+        "contradiction": 0.3492507492507492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

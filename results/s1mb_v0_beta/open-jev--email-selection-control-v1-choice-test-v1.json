@@ -1,0 +1,928 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--email-selection-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__email-selection-control-v1",
+    "split": "test",
+    "case_count": 48,
+    "decision_count": 48,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:16:28+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 48,
+    "expected": 48,
+    "succeeded": 48,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.0,
+    "uniform_accuracy_baseline": 0.13194444444444448,
+    "fixed_answer_accuracy_baseline": 0.6006944444444444,
+    "baseline_adjusted_skill": -1.5043478260869563,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 21.830977300000086,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:4:span": "ff1538f9dc7a70d09c9b7d6dc0b9912f78971808d4385a711b8547b628ef5862",
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:6:span": "786ccc3b5c60b154106cd791542ce03c11c099baf996c17f1e489e1560a2da75",
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:7:span": "89308039f1b5ab67dd7588c34f37704c8bb57b74f4de7236de17d68df2bed7e9",
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:13:span": "c97e396d10506c80a3d2ba6db875e650b8ed211e65f34216185032803c4c7c56",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:6:span": "7c89a76a51068b538597bab297194148128db7c4c92466008ccae284c49356fa",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:13:span": "a4e3ebf9b0b04bfb1114bbf830d8849e6ad387b4456c70cacbddcb1fbd6133f3",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:5:span": "e0ec82538c8b513657100e5305878a9a0fe076c2f236ba4c6cae2f337fd52922",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:9:span": "53476dc5a7c0c85155479a9ec7404df0eb62da8c59c039594e1b5edff821dc92",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:10:span": "b0b8af82b751a32a096063d519fc735adbd6fd2e58e90a7cf85ba7013dfd12d9",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:13:span": "4368932ca881915ba907c1c5554504100134639006d7f3554557deac6a035f41",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:0:span": "2c0434eef80c2c483604ad269f286cfa9a7743bdaf81cefd99c1008bc592afd5",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:6:span": "19deab77c596533629edd70e57efee99f03fa6bd961f5aae7ea7d8fbfe6cafae",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:9:span": "b35415d57c0f6c18e524ac0f0740420c5d11a08ef6012f86588df4e20727d5e0",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:13:span": "18bb6f962954b188afe94c93e737adbfaed1a15176f1bae387a8f33204b93fe3",
+      "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:3:span": "f999770bd447324d1d1de5675f43b5b8df14522e51bcdf3e3e0b74718da406a7",
+      "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:4:span": "4aa3b7310289ea2cf5626ad1b2920b74430f5f69764f682ce4beb0f2f536443d",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:0:span": "76e62ff1eb3e01816fd31f7f435cb5b705d17132ca4cb79d3e937d590a773bad",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:2:span": "ac83b1afa39a066735cddba648380f8f34a92de1d3ef5c22448f8552af4415cd",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:4:span": "44d62f3c162de262c27c6b104740e146d2bcd804ff8d5604996cfb6b9567f646",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:6:span": "30e7ea110635e59830ad4e5b5b2a287f38925a00cd349e8ed81efbcc329b9a41",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:12:span": "f50618767d1fd59971b11e9736631b162171b9007a5806c3ff0e9b89d0453ab8",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:0:span": "8f7fa53fbf7827f2de5ace5d8920410ec220fdd596217bb9b23ebbcf10c5a0f0",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:3:span": "f29f24772b6955997606adee494d84626f1d25728ed76a04bfd2a082408b32b9",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:5:span": "5abb314cc33ff9cd3cbd5c0645d43be1d23040a1d5f680ff4b4ab9585a6049fb",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:7:span": "c0568ddfacb24cbbddeb3c9cad2039c2dfa2d11dcb84bd7d360bf92a68ba5357",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:10:span": "128614d422d6ca5203c03470374a3d35b17f18a2e4ae269369d4d2f3f0789a35",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:1:span": "943681b0c1c87e5e0fdd31ce1d3f9875d9f2263ee9a0a29c839dcaf9a583eaf1",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:5:span": "0a99431ae436166009ac9ada46dae7397c62cdc4c3d0c0ab9c4799da6c03dc81",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:6:span": "44e05c7e32ec2f620ad9f531d8b69be95150223e0273a323223fc15ae32e2e3a",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:7:span": "64b25fef6c056b27624f1e83048f42c96fc93844d5b6f2ecfc2a1cf8ca77ae2b",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:5:span": "3db912c3be2a2122fb3c7ce79757f9c20ab4ce08791a26c1da29204366022bd2",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:7:span": "419880bedb68d09dfef38466d87bbac3a88ce4c52d643dc0f3edede29e2842f5",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:9:span": "96324b126c948c226091df48705a850b586c49aed95abfd3fad47f8375401989",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:10:span": "18744bcb2cc8236c558e9cba707e83dd1db7a8fd70ad67695f5b47b045878c22",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:5:span": "21f44f79aa030d978f8987c0ce224d9b44a431b3b4f882e891862c6cad053ea8",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:9:span": "e108a692351b9c8369ca7746dccf191f29e455b67b902d2b3a143a80beec757b",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:13:span": "f13492b2645654ee7aa57c671d104e563dbbb4c89ace9114273b8dfb0f59e56e",
+      "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:0:span": "a2b7698225cc67934ef5d8955eb4a7a48bc36af72c03a9b7f11e304ecd263e7b",
+      "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:2:span": "e8fc3d2fa3974d57ee1d01d0a17d86b3441eeeba4d95a8557974e8e52fb7c290",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:3:span": "dbf3c972dd68d75c641e233aec2d72cbd428bc8e216c1942b18e1b2335cd1b34",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:5:span": "1ad575bb8f21b0aed8d8cdd719416097555eeebab009c7a3a730bcfa1ef823a0",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:13:span": "f1e0817262b9dc642aa39c059d0bc27579de4b9a10074a4e5742600541d707dd",
+      "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:3:span": "ab1c488793d385e31ffd62db36ab64be9e80e23b56d70c61b82745f2149e20ae",
+      "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:3:span": "59b1d3022e7a261549c9bdf576069f9e69d695bb8e0ea6b429916f22fb61db72",
+      "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:10:span": "a7143e7c30041d2e977b258239ff6f9092059f261b062878fddb5939ad45fd48",
+      "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:12:span": "63a25c11746a1bf0f0f4e91f452e6620e85d8286057622f5763fbaabc694eea8",
+      "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:6:span": "207a08f6db35062f1ff38dd4c958618662676c1e0cc3169fc3408222e538d7a9",
+      "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:10:span": "bae0eb088241e4ba2ae852ef8e10b0d9a540591669f67b6463c40068fe1457eb"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 6144,
+      "output_tokens": 48,
+      "requests": 48,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:4:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.22301221710394553,
+        "option_1": 0.12908071299819746,
+        "option_2": 0.19657520528740235,
+        "option_3": 0.16042459443220508,
+        "option_4": 0.17895053074304024,
+        "option_5": 0.11195673943520928,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21477852214778523,
+        "option_1": 0.14258574142585742,
+        "option_2": 0.16698330166983302,
+        "option_3": 0.1728827117288271,
+        "option_4": 0.18068193180681932,
+        "option_5": 0.12208779122087791,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:7:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21066826490860052,
+        "option_1": 0.1385475976425931,
+        "option_2": 0.18050144840675256,
+        "option_3": 0.16391968834282286,
+        "option_4": 0.18050144840675256,
+        "option_5": 0.12586155229247825,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2021,
+        "option_1": 0.1436,
+        "option_2": 0.1729,
+        "option_3": 0.1816,
+        "option_4": 0.1865,
+        "option_5": 0.1133,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.22328739764329936,
+        "option_1": 0.17655282604353906,
+        "option_2": 0.14429798282404632,
+        "option_3": 0.16866387058118631,
+        "option_4": 0.1657679249051328,
+        "option_5": 0.12142999800279608,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2227891156462585,
+        "option_1": 0.15536214485794317,
+        "option_2": 0.18467386954781911,
+        "option_3": 0.1514605842336935,
+        "option_4": 0.16606642657062826,
+        "option_5": 0.11964785914365746,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.24217578242175783,
+        "option_1": 0.12788721127887212,
+        "option_2": 0.1640835916408359,
+        "option_3": 0.15918408159184083,
+        "option_4": 0.18848115188481152,
+        "option_5": 0.11818818118188182,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:9:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2021,
+        "option_1": 0.1631,
+        "option_2": 0.1729,
+        "option_3": 0.1582,
+        "option_4": 0.1846,
+        "option_5": 0.1191,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:10:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.22763658194916953,
+        "option_1": 0.14458675205123073,
+        "option_2": 0.2013207924754853,
+        "option_3": 0.14458675205123073,
+        "option_4": 0.1690014008405043,
+        "option_5": 0.11286772063237943,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.24285999600559216,
+        "option_1": 0.14729378869582582,
+        "option_2": 0.15698022768124625,
+        "option_3": 0.15208707809067304,
+        "option_4": 0.18623926502895943,
+        "option_5": 0.11453964449770321,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:0:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2002200220022002,
+        "option_1": 0.1396139613961396,
+        "option_2": 0.20312031203120312,
+        "option_3": 0.1533153315331533,
+        "option_4": 0.1846184618461846,
+        "option_5": 0.11911191119111911,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21092109210921092,
+        "option_1": 0.1455145514551455,
+        "option_2": 0.1699169916991699,
+        "option_3": 0.19531953195319532,
+        "option_4": 0.16701670167016702,
+        "option_5": 0.1113111311131113,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:9:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.24007996001999002,
+        "option_1": 0.13083458270864567,
+        "option_2": 0.16011994002998503,
+        "option_3": 0.16201899050474763,
+        "option_4": 0.18640679660169915,
+        "option_5": 0.12053973013493254,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.250501002004008,
+        "option_1": 0.1447895791583166,
+        "option_2": 0.18587174348697394,
+        "option_3": 0.15170340681362726,
+        "option_4": 0.16442885771543087,
+        "option_5": 0.10270541082164328,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:3:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21285742851429715,
+        "option_1": 0.130873825234953,
+        "option_2": 0.18456308738252347,
+        "option_3": 0.16796640671865629,
+        "option_4": 0.1933613277344531,
+        "option_5": 0.11037792441511697
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:4:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.20518207282913165,
+        "option_1": 0.14755902360944376,
+        "option_2": 0.16506602641056423,
+        "option_3": 0.1807723089235694,
+        "option_4": 0.1807723089235694,
+        "option_5": 0.12064825930372149,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:0:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2072072072072072,
+        "option_1": 0.16426426426426427,
+        "option_2": 0.16906906906906907,
+        "option_3": 0.17207207207207206,
+        "option_4": 0.16906906906906907,
+        "option_5": 0.11831831831831832,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:2:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21671331467413035,
+        "option_1": 0.14644142343062774,
+        "option_2": 0.18252698920431829,
+        "option_3": 0.1610355857656937,
+        "option_4": 0.17373050779688126,
+        "option_5": 0.11955217912834866,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:4:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.20628565709138225,
+        "option_1": 0.1417275547993194,
+        "option_2": 0.1847662896606946,
+        "option_3": 0.163246922230007,
+        "option_4": 0.1847662896606946,
+        "option_5": 0.11920728655790211,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2047723642172524,
+        "option_1": 0.1667332268370607,
+        "option_2": 0.1647364217252396,
+        "option_3": 0.17262380191693288,
+        "option_4": 0.17262380191693288,
+        "option_5": 0.11851038338658146,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:12:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2031,
+        "option_1": 0.1484,
+        "option_2": 0.1768,
+        "option_3": 0.1738,
+        "option_4": 0.1875,
+        "option_5": 0.1104,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:0:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2374424654792876,
+        "option_1": 0.15339203522113268,
+        "option_2": 0.1690014008405043,
+        "option_3": 0.1611967180308185,
+        "option_4": 0.16319791875125075,
+        "option_5": 0.1157694616770062,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:3:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21671331467413035,
+        "option_1": 0.13764494202319072,
+        "option_2": 0.1747301079568173,
+        "option_3": 0.1747301079568173,
+        "option_4": 0.18542582966813276,
+        "option_5": 0.11075569772091164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.23806193806193804,
+        "option_1": 0.15414585414585413,
+        "option_2": 0.16683316683316682,
+        "option_3": 0.14925074925074924,
+        "option_4": 0.1717282717282717,
+        "option_5": 0.11998001998001996,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:7:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.19220779220779222,
+        "option_1": 0.14735264735264736,
+        "option_2": 0.16393606393606394,
+        "option_3": 0.19510489510489512,
+        "option_4": 0.17752247752247755,
+        "option_5": 0.12387612387612389,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:10:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.22167783221677834,
+        "option_1": 0.1454854514548545,
+        "option_2": 0.17578242175782424,
+        "option_3": 0.1503849615038496,
+        "option_4": 0.18068193180681932,
+        "option_5": 0.125987401259874,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:1:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21469265367316342,
+        "option_1": 0.14742628685657172,
+        "option_2": 0.16201899050474763,
+        "option_3": 0.19230384807596201,
+        "option_4": 0.16491754122938532,
+        "option_5": 0.11864067966016992,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21385722855428915,
+        "option_1": 0.14747050589882024,
+        "option_2": 0.1806638672265547,
+        "option_3": 0.15916816636672668,
+        "option_4": 0.1806638672265547,
+        "option_5": 0.11817636472705459,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21571371451419433,
+        "option_1": 0.14154338264694125,
+        "option_2": 0.17373050779688126,
+        "option_3": 0.18152738904438226,
+        "option_4": 0.17373050779688126,
+        "option_5": 0.11375449820071971,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:7:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21989790811730558,
+        "option_1": 0.1466319687718947,
+        "option_2": 0.16815133620258232,
+        "option_3": 0.1847662896606946,
+        "option_4": 0.16815133620258232,
+        "option_5": 0.11240116104494044,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.23718140929535234,
+        "option_1": 0.1581209395302349,
+        "option_2": 0.17961019490254873,
+        "option_3": 0.14152923538230885,
+        "option_4": 0.1659170414792604,
+        "option_5": 0.11764117941029485,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:7:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21669165417291356,
+        "option_1": 0.13563218390804596,
+        "option_2": 0.17961019490254873,
+        "option_3": 0.16401799100449777,
+        "option_4": 0.18250874562718644,
+        "option_5": 0.1215392303848076,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:9:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2518488906656007,
+        "option_1": 0.15520687587447532,
+        "option_2": 0.1678992604437338,
+        "option_3": 0.15320807515490706,
+        "option_4": 0.16010393763741756,
+        "option_5": 0.11173296022386568,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:10:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.19737895158063223,
+        "option_1": 0.140656262505002,
+        "option_2": 0.171968787515006,
+        "option_3": 0.18857543017206882,
+        "option_4": 0.1797719087635054,
+        "option_5": 0.1216486594637855,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2139,
+        "option_1": 0.1338,
+        "option_2": 0.1953,
+        "option_3": 0.1445,
+        "option_4": 0.1865,
+        "option_5": 0.126,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:9:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.20620310155077537,
+        "option_1": 0.15337668834417206,
+        "option_2": 0.2003001500750375,
+        "option_3": 0.14847423711855928,
+        "option_4": 0.17388694347173586,
+        "option_5": 0.11775887943971985,
+        "option_6": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.209,
+        "option_1": 0.1465,
+        "option_2": 0.1709,
+        "option_3": 0.1709,
+        "option_4": 0.1816,
+        "option_5": 0.1211,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:0:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21614583333333334,
+        "option_1": 0.13591746794871795,
+        "option_2": 0.18189102564102566,
+        "option_3": 0.16826923076923078,
+        "option_4": 0.18189102564102566,
+        "option_5": 0.11588541666666667,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:2:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2110055027513757,
+        "option_1": 0.14757378689344672,
+        "option_2": 0.2013006503251626,
+        "option_3": 0.14947473736868436,
+        "option_4": 0.17778889444722362,
+        "option_5": 0.11285642821410706,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:3:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2159079539769885,
+        "option_1": 0.13286643321660832,
+        "option_2": 0.18759379689844924,
+        "option_3": 0.17298649324662332,
+        "option_4": 0.17878939469734867,
+        "option_5": 0.111855927963982
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:5:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.20512051205120513,
+        "option_1": 0.1484148414841484,
+        "option_2": 0.1699169916991699,
+        "option_3": 0.1787178717871787,
+        "option_4": 0.1787178717871787,
+        "option_5": 0.11911191119111911,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:13:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2063063063063063,
+        "option_1": 0.14854854854854854,
+        "option_2": 0.17107107107107106,
+        "option_3": 0.18178178178178178,
+        "option_4": 0.17107107107107106,
+        "option_5": 0.12122122122122123,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:3:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.22058970514742632,
+        "option_1": 0.13173413293353325,
+        "option_2": 0.20109945027486256,
+        "option_3": 0.15912043978010995,
+        "option_4": 0.17671164417791108,
+        "option_5": 0.11074462768615692
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:3:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21877812218778123,
+        "option_1": 0.14158584141585842,
+        "option_2": 0.17578242175782424,
+        "option_3": 0.1728827117288271,
+        "option_4": 0.1845815418458154,
+        "option_5": 0.1063893610638936
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:10:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2041,
+        "option_1": 0.1494,
+        "option_2": 0.167,
+        "option_3": 0.1865,
+        "option_4": 0.167,
+        "option_5": 0.126,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:12:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2012,
+        "option_1": 0.1475,
+        "option_2": 0.1807,
+        "option_3": 0.1611,
+        "option_4": 0.1855,
+        "option_5": 0.124,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:6:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.2021,
+        "option_1": 0.1475,
+        "option_2": 0.165,
+        "option_3": 0.1895,
+        "option_4": 0.1699,
+        "option_5": 0.126,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:10:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.21113224547001702,
+        "option_1": 0.14075483031334468,
+        "option_2": 0.17008709580538592,
+        "option_3": 0.16718390229252178,
+        "option_4": 0.18670537591350486,
+        "option_5": 0.12413655020522575,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

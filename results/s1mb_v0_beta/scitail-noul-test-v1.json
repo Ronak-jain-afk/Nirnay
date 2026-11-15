@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "scitail-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/scitail",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:32:48+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.23121396360000016,
+    "accuracy": 0.66,
+    "positive_recall": 0.64,
+    "specificity": 0.68,
+    "precision": 0.6666666666666666,
+    "balanced_accuracy": 0.66,
+    "f1": 0.6530612244897959,
+    "true_positive": 32.0,
+    "false_positive": 16.0,
+    "false_negative": 18.0,
+    "true_negative": 34.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.07514414559999938,
+    "baseline_adjusted_skill": 0.32000000000000006,
+    "baseline_adjusted_score": 0.32000000000000006
+  },
+  "elapsed_seconds": 31.396204800003034,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "scitail:snli_format:test:10": "f7aa611cb90c1fead31e5dfa66d6596f5e9405d316668e4968f2911ba8aeced9",
+      "scitail:snli_format:test:45": "918d2b4cdd98e4e33854b68e60c80da5a5a4b946a7d0c754d3bafbbe1b1f3e9a",
+      "scitail:snli_format:test:104": "fce89b71670febb6e526d8f0aa38bc5ca4fccdab72bc2fcfc2f418f431fc3e57",
+      "scitail:snli_format:test:112": "5398f6d2a7dfaa917eb7184114fade6ec194ca3ddb3c9035d5fbe1249c769a35",
+      "scitail:snli_format:test:133": "08d3bb15b4b4ad8df58e5d09678c4d8fdd7544279fc19ff3d54a45f1d08871ea",
+      "scitail:snli_format:test:182": "1b85148ad3888c0ac2a92aff4e0545ba85ed378050bbe1a550c2a98a6d2dfbf0",
+      "scitail:snli_format:test:189": "4b9fa85bee76565e214fd4b7427a51b90295158e7acf7f03e32a26c562b7bdf8",
+      "scitail:snli_format:test:207": "4d142875f887fadc667f80bef6fadc63cbee1e268d355974635ebe5aafd2996f",
+      "scitail:snli_format:test:211": "ddea8361cfa273e5089f8c82e4fd5c5f4cefa0fc60d3883276ecf91cee65cee6",
+      "scitail:snli_format:test:234": "8f9e3624dfe5a66f7ad9f1d6b3185b11ad0a2a7d547c639324b48132a9772493",
+      "scitail:snli_format:test:251": "55d294a269de1e183bc3db015c03ec02c7217e7f00b017ea01874856f3f4841b",
+      "scitail:snli_format:test:286": "b23f8bed5006db674b0b65aef953cff2f1859cd84f793a0876f630edd06b02a3",
+      "scitail:snli_format:test:306": "24333ca8c90631b08bea3374f10713802dc5d0329b67417117b7c8e0f53e21b8",
+      "scitail:snli_format:test:315": "ba051ca482471d1b30d857397e87c66abdc1743c72518659892810bc26419c31",
+      "scitail:snli_format:test:327": "6a5e3107ca1cc48413752c36900f5530e9eb4722e07396f232be969c0075f2e8",
+      "scitail:snli_format:test:335": "44115fbc142e38bdcffc22a0dcea624c4c4d12cfff1bd9012e00af78e92fbe52",
+      "scitail:snli_format:test:355": "5daabf124845cf639f7358e071c29b852298ddd1f5d256fe2d429ff10f86fd28",
+      "scitail:snli_format:test:384": "1e8a5ba1dad4a864cfa322544987e5b6b6c114624e64474102219eae0e25acf8",
+      "scitail:snli_format:test:412": "b18045956e71fc0747d13b5a50a35956c9b70f9919aedafc3ec584856ad5bf1c",
+      "scitail:snli_format:test:413": "6825c6c2ddb504561bcb34177f9728ee295da308fc033d851114083e3ce3420e",
+      "scitail:snli_format:test:438": "d2bcf85115e99bc8b167701375eb476c3970555f25cc03b7553f4c3eb82bfc80",
+      "scitail:snli_format:test:456": "eea46d231a34ea033efb781c7b91efa111fd4af450ebd87a1a491fe2491e4887",
+      "scitail:snli_format:test:458": "010e3feb074ca7301be456afa3916cbbcf4c8ec780a8ad6c494a11c2581b7194",
+      "scitail:snli_format:test:466": "397e2e153eba9a9907fed4550d6042ac4e77e8fb58a1aa6f59a53796db484baa",
+      "scitail:snli_format:test:468": "62817fc8d604165b41af13482470fecf60c798d5aca4463a57200d136d2438e9",
+      "scitail:snli_format:test:485": "953085b0b6e9d3cb06b159906b563c4ed79b9588d790df40998a7741ed4d2f2f",
+      "scitail:snli_format:test:506": "fe612283bf42b15de79cb44dbd63e2d18aa300f037802cb01b085bdfb7f3f75a",
+      "scitail:snli_format:test:549": "d83a3cf92ecc440b8848a5612653f2bc026fb44497ccacc50e01d1f669185d7a",
+      "scitail:snli_format:test:579": "3cd284cd68df7b490375ba5a34c0d39ca4150a0c981efb1df992d4c8515ed065",
+      "scitail:snli_format:test:611": "bd03319b86f50b3f3b0713b74e7a2484cdd9d20d30255d153877971d3bc223c4",
+      "scitail:snli_format:test:620": "e88629ef76afa89f7fece78648b0c7f4f258c76e3b199bbdeab77b4246029de8",
+      "scitail:snli_format:test:639": "50de1f69ea3275b8285706c8c82512ce2b0c36ce1421c7a511e2c021a63f6b86",
+      "scitail:snli_format:test:726": "7c3cb2ae5f4c4b889070c8fbe1bff9e309a178997be68752e95050dff342199f",
+      "scitail:snli_format:test:736": "3d1bc1aada627a832799b0fbef738dca4c1b7ac4a53eb9e5f754a1c9479ea7eb",
+      "scitail:snli_format:test:741": "93c590491bebbc4e78f23670da44b3b4fa89fdfa7d90136946de3ce0c6e64b89",
+      "scitail:snli_format:test:747": "0adf9dadac181dab4fae07dfdb57eb13d71071a719a07a616ce29e4cbef78b4a",
+      "scitail:snli_format:test:760": "b19a982a3acbfd6e45899ae827320979730d46f8e9671d4f69f13336295a4a71",
+      "scitail:snli_format:test:783": "83577b69c3b0294ae0182ee649cabfc6de76329f867a017cefebe985741e6eab",
+      "scitail:snli_format:test:790": "8434079cdf28b969ddd271e47720339cfce7baa938c16c68476563e7468f2d26",
+      "scitail:snli_format:test:795": "3ff513989fa5dbc08324981926180ee0968d233aa0b1312d423ef0e425d8237c",
+      "scitail:snli_format:test:801": "0b44191adefdcb6f5cbb19a07ba1d72eac1cfe5f3485325988e2cef6f032faee",
+      "scitail:snli_format:test:817": "8a60483d4068c7dbbe61609d18b8bf29afd6aa7e0ad7349ffc045e644ca1b71b",
+      "scitail:snli_format:test:833": "f6b20bd765fc6e0f7862029aeeae1320a63a31becd0a69f3536fd7da13cf51c0",
+      "scitail:snli_format:test:834": "50d6c8500decca92b39e9f8436c76e0641f941c61557457fdb37839a5b44ba79",
+      "scitail:snli_format:test:854": "7d1a6b161a454a0f649c0f22024c352cdee3eb5757d166816ebf303276f37d6d",
+      "scitail:snli_format:test:899": "79ee06ae14d052155d20e14198923f2e2735343916036ece2b1f6e112833146a",
+      "scitail:snli_format:test:922": "e859249a6cb19ff1777bec80a0a958e51b6102d1316c6d7ff0b696e472cd2fdd",
+      "scitail:snli_format:test:958": "f52a4f9c574067f9cc8581ab62df889713459bc2f0986d2fa79c99c898a9ae32",
+      "scitail:snli_format:test:962": "bc441fdb9c117e6a8a2a67ef469f92e5908fbf4f0a46c2f60aa627f937c22192",
+      "scitail:snli_format:test:1014": "7671975ce0bfd13f7d75c356daa5fb5d31cfd39d33f8ce2f172962f291b36406",
+      "scitail:snli_format:test:1020": "6a83457573429e3173f0f8601d82f1bdc5b1464611bb2472d072b2dd13c1ab0f",
+      "scitail:snli_format:test:1063": "4d5c27049db0ded86de2e2ff86ca90c9a20c42dcc43741925577eeb6eced0f0b",
+      "scitail:snli_format:test:1069": "0d99227b718438d29363128cd4d4ede5579c9a0162431f25509f7019235fe019",
+      "scitail:snli_format:test:1113": "c3a30a0d0901bf17a4b322d08b0fdf7d1bc7079a506193f8124cda8d8a381004",
+      "scitail:snli_format:test:1128": "ca44657b332a8f95337c73368e9bfaad963ea02648d2d74bafe3682abd5e55c8",
+      "scitail:snli_format:test:1165": "6e09fa405fb221ca47d8c15e15405012b24ed102f18e7754f2bf317e01008986",
+      "scitail:snli_format:test:1179": "9df3b69e5188af70d0ce4fe34e586ba0b58ea889e34394bd3be6631148f07189",
+      "scitail:snli_format:test:1191": "cedd72efeb0ce584c94ebeff4b05205f0ce45fda31f617141d1cb7179f6e2fdc",
+      "scitail:snli_format:test:1197": "5ac9add0e4903ff8e13ceec97b4059f85045a9a86f6e98dab9b5da3e362f451b",
+      "scitail:snli_format:test:1233": "28df3b3b1d6356582fe455748e7a417953af673075ace3998667a459c7f3f4ec",
+      "scitail:snli_format:test:1264": "5eb8caa1b425b4537d72717e47517fcf0d2b69d25d1cf100b54a6d5c974e01da",
+      "scitail:snli_format:test:1271": "2c3936da04136c945f723fb449c537242fac0746e8b56a8d575cd76fdb33793b",
+      "scitail:snli_format:test:1285": "4ed2e533b9caef74e8c14712100beada51a4d006f04f7247f9d534a4ffa8d1ca",
+      "scitail:snli_format:test:1286": "a9b4677695ab2ad3942613b67b782c7d1e10d394dee368b4f576b81a73c59279",
+      "scitail:snli_format:test:1300": "1bafdb822224fd9b1b26ffff925186987395045d7796a83b856fbd8d50b0f17b",
+      "scitail:snli_format:test:1308": "e3af409a57e6b4b038ecb0394ab743d49d9e9fd104dd15942a27b70e3c8b4284",
+      "scitail:snli_format:test:1330": "ea49e03b7d8ab2450c16d43ef877bb57678cbacb39a46c3d43b846351b8dd9c9",
+      "scitail:snli_format:test:1332": "e57e2512e3701c9e9f1d3c033aff87df736c4a025419e0af1cd242d7d96820ec",
+      "scitail:snli_format:test:1340": "602c244845085ce6597906dcde47b54e2d429811b50baf166f154cedb8a2e951",
+      "scitail:snli_format:test:1381": "5bbf07105d7e40ec42c2874b475a77b1aac3fc92d959e04035cced128fca51cf",
+      "scitail:snli_format:test:1387": "0e9b0a24293e17a88bc5925ec0842476da0149653d8d288c91f18f10908e424a",
+      "scitail:snli_format:test:1414": "f8a4f00ddd12812a9e343b1dc69c79a9a0d8212b965e82618c10993bcb6a750f",
+      "scitail:snli_format:test:1425": "8dd4e615aa9201586567504c6b21ab51c41e61a523f6a8090238482633cebc08",
+      "scitail:snli_format:test:1431": "5a8a25eff210443ed8571f9a511648e48a8daec68f49e3ae6317163289a38b8d",
+      "scitail:snli_format:test:1447": "64f571c6071754745fbfd5f6ca0fd3a82f63f25047596adcde3dc0bb5960dd90",
+      "scitail:snli_format:test:1472": "73d06041e18ca33c623aabdb097093beecd9d1d8e0f2c1469756e5e7582ec090",
+      "scitail:snli_format:test:1519": "334459375b3238f8659db1dbc68fa88f4f81aa54ffee0bd74a0570578f73c830",
+      "scitail:snli_format:test:1534": "449f9df0d7983072a685db86ba843519770e5cf9d3e7295a139e1e55f68c8579",
+      "scitail:snli_format:test:1538": "005ec6002040e0dfedf65b23bdb304b922367c1254ec76abad9b7d3d27c190d3",
+      "scitail:snli_format:test:1541": "7b3ccb1159f3323481778912c50a7d61993456f45174a33863f2f141cdd57fec",
+      "scitail:snli_format:test:1725": "9c0dbf4c76ef27416dfec8eebcdcd349e1b6947fdaeb5a57ab5c0f9d130a2a71",
+      "scitail:snli_format:test:1740": "07192db8937484843ed7d2c7c03110eb2747d7e581219fb11593dd3b347d2e6c",
+      "scitail:snli_format:test:1771": "88b0d6242a228338ff2b1ff5f477db742fcaa7ffec31a293d8c26ef679945b01",
+      "scitail:snli_format:test:1808": "543b49e166a5d439b09a405902abf19117c0abd36560ac04131b704036426bea",
+      "scitail:snli_format:test:1824": "1d0780346ff1990d0114a98f7651a5498da92767785b35df1991ad62ae24a6c1",
+      "scitail:snli_format:test:1848": "f53e0f3811ea5344a98e0fde4baf463b2e8e8527b940524971c8a7635928a18f",
+      "scitail:snli_format:test:1904": "289079f7e2640de74e6cefb6a2890ddd0e2313ff93dcdbd1cf9a67c50dee5d58",
+      "scitail:snli_format:test:1932": "fedef10fc97f9dc4b28ac5c741baef19d8946966d665ab8211be0795e566d1eb",
+      "scitail:snli_format:test:1960": "b7d298be10b07f57adedf234d2522da284f73dd0fc1a47131f48f897a85dce51",
+      "scitail:snli_format:test:2016": "eca174ad09c1c6e7e2aae77c6218fc8acbae8df9416074b0fd34f556c24cb8ec",
+      "scitail:snli_format:test:2021": "bcca149ac35718d4a97183f438764011b0ea16fe2b35eb6bc2f13ee0a0c2c921",
+      "scitail:snli_format:test:2025": "d9f8eacd6dcf4ee6197d483dd986a8ffef9a960a985998efcf9467ef97a85ecf",
+      "scitail:snli_format:test:2036": "c45e83da2f596597bf4181fb643385a6d58b5edbfb559122c9665ae916d8537d",
+      "scitail:snli_format:test:2050": "3c9ea11901e8201d1ce301237f93ca34aabc439ed59afffb91232472e1d2a6cf",
+      "scitail:snli_format:test:2052": "cbb922b0dffeed607b8014ddb6d3428bba317641e1d116abeb37b9b85cadfb12",
+      "scitail:snli_format:test:2056": "07f85f53b05a90e27982853eebab56c1b243a2c03e850adfeec288e69f0c629b",
+      "scitail:snli_format:test:2093": "f7295aba2e5e5296eb1ed3eca6296d313425552a1afe60c4b3886b55a0918a8b",
+      "scitail:snli_format:test:2105": "75e315e520e001738210801534d34416ede7508908cedd9710e0c4720454175d",
+      "scitail:snli_format:test:2118": "8ede23d7c6975d110b1bedaf0638407a95130dc99650ad78df9ed1fa8c13c921",
+      "scitail:snli_format:test:2120": "fbab16c2c5746079d54c7425e12b553e6d36e18da66f270683eec39ec46f5e72"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "scitail:snli_format:test:10",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:45",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:104",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:112",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:133",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:182",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:189",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:207",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:211",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:234",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:251",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:286",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:306",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:315",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:327",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:335",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:355",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:384",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:412",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:413",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:438",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:456",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:458",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:466",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:468",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:485",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:506",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:549",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:579",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:611",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:620",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:639",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:726",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:736",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:741",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:747",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:760",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:783",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:790",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:795",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:801",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:817",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:833",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:834",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:854",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:899",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:922",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:958",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:962",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1014",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1020",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1063",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1069",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1113",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1128",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1165",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1179",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1191",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1197",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1233",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1264",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1271",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1285",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1286",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1300",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1308",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1330",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1332",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1340",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1381",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1387",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1414",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1425",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1431",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1447",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1472",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1519",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1534",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1538",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1541",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1725",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1740",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1771",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1808",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1824",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1848",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1904",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1932",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:1960",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2016",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2021",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2025",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2036",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2050",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2052",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2056",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2093",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2105",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2118",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "scitail:snli_format:test:2120",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

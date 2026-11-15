@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "openbookqa-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/openbookqa",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:24:28+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.39,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.28,
+    "baseline_adjusted_skill": 0.15277777777777776,
+    "baseline_adjusted_score": 0.15277777777777776
+  },
+  "elapsed_seconds": 29.745020299997122,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "openbookqa:main:test:2": "37d0ebdc1a130e84ec63d44b8e4431bab87ec3353c7cc9c84b6bbd1619622371",
+      "openbookqa:main:test:3": "889412adf2cd57ad64b4642284dbd76264b7d84b05a030ff930514f0cd58ee4a",
+      "openbookqa:main:test:8": "29143f001111c3928f30e451fb323a5922b1eec79219d6e8f0c45004f9ac2f62",
+      "openbookqa:main:test:16": "6d675a6a3fa004629924743f0f743190c6f70046ad5b1f6849b28eed01f6c896",
+      "openbookqa:main:test:18": "cc9117c1c4947a480fa46edcdf746a7707640247f1b787fc2133cece992f562a",
+      "openbookqa:main:test:19": "033c25acf22a3f4ca53699e3da35d390001ff82c5d7f9f46cabaea7a0a21045e",
+      "openbookqa:main:test:25": "9f2f015a91bddb6b947e241a70b25aaa10f9d119b3143ec78eaf69d03105a704",
+      "openbookqa:main:test:26": "74943d9ec4fe1fe30415eae4a5ad9668aa38f4b2cf77418de1df9fd02ac757a9",
+      "openbookqa:main:test:30": "d246855d7a7c3fbe198f06aab57f1403299ab4a92cc63d13288862b287722974",
+      "openbookqa:main:test:37": "535bd792c7b5eceb09bf6fb93cdbcdbcdb6e478417abc5e60ce22f30500aee87",
+      "openbookqa:main:test:43": "f599380e2b8f2b8bcbf8f05f80c2ee709bbf73ac65f9b8fe4fd746bbc04e1730",
+      "openbookqa:main:test:45": "f4765d099c2307871055a4506930a3301c75bd5a53abd442994c0e9aad5f73f2",
+      "openbookqa:main:test:46": "faa770a2c4b53dce9cbc6d8b17d791472495e1ae2cd6acdb89709850bb16dd25",
+      "openbookqa:main:test:61": "fc4c6d908bb14af8a4d97db66049ee96c567c81067da965f3173f66c1f811ded",
+      "openbookqa:main:test:72": "fdeae1fa78114dab58073d452ebd7791d04e124cf60b70fa954fa89407e996b2",
+      "openbookqa:main:test:77": "1adfe107e7fa2260d467375f9160da669a0f889f40f95e76c1877c57ea00339a",
+      "openbookqa:main:test:79": "9aa2e5ec7532c6ee897aa12e1fde619520ac4cc322876d48cc795a9a0a16ef42",
+      "openbookqa:main:test:83": "d894a88f887cb0f218dc7f884a36cae77eaa0fe98b5178fc1de39b41c4b9fdfb",
+      "openbookqa:main:test:84": "d4befd78cf76f25dc19c2d030b2b1665ff5434e247f194a12342c00a58f335cf",
+      "openbookqa:main:test:85": "53dc1fae9e499019931787482ebb0f03be975505d42eb8431ca7887183c0e0b4",
+      "openbookqa:main:test:87": "0b7b57de634f6a3d7718432c6b6bdc3a14be2645741154ff412452de003cf56a",
+      "openbookqa:main:test:89": "0b2955a312a4bf27866dd825486692bacaba863ef7c56c5f0f438c80921befdf",
+      "openbookqa:main:test:100": "4d2cee0f81f9b32e7c75e7601ddfcea15ef2927480f3f43ff3b89a042a3d1866",
+      "openbookqa:main:test:103": "f68fb0b8ce96c8eb2f877c93b0f03dbb23b592276dcb097f2fcb972ae4e1c07a",
+      "openbookqa:main:test:105": "abc8949c1cf92f5c2f72e2b1be4037f92beaf43774e57fe4f4664e8342d22716",
+      "openbookqa:main:test:119": "2f7bc5bc8ad982f5f909458f26177a4995752a2b6f943720253b72f3e3fb482f",
+      "openbookqa:main:test:125": "8007091ed29e17a32b4138e428d01562d6e5a699a2d369eeb1aaf3a9b500ffbe",
+      "openbookqa:main:test:128": "c610b7d71852da88410a74c5ea5f2a53530593eac1514d97b6841ff64c16d8fc",
+      "openbookqa:main:test:131": "4fa084f705cda0fa53cfbec45a3631dc59fbca199cbac9ec7db61aed6ce7fa80",
+      "openbookqa:main:test:145": "33bc822bb4189ec400f123f3737e29a753030508b5cff0d31ed8f0034465f839",
+      "openbookqa:main:test:146": "7f475327cb6de0ac2c48ffbb95ccbfd73f196b0bc6d6c9ea247fffd4fc7cbc14",
+      "openbookqa:main:test:153": "9458597c22486f34ab0a3cf1d0914524b72900e8797698fdc9aa4d5d29c2af89",
+      "openbookqa:main:test:164": "95169cd71de88057c48f5fd4590200e2b182edb1cd99afb743d51758d8c4df4b",
+      "openbookqa:main:test:169": "98a1d1ad37b15b00620368bc36b0a02aa7453e54109a2f294a9f394e7a80570b",
+      "openbookqa:main:test:170": "6eabba32782881094b61f48a9d78774b0e348ce99881bdd9c8f11f7066266b6a",
+      "openbookqa:main:test:176": "9e7bf66f66bff3b33dc3758e3d12a82cca1141846756a1e6770fc823d57db486",
+      "openbookqa:main:test:177": "7a4e771e447f034d175f08321c98fbd08a6c3faf718100694b40a3284b7bad87",
+      "openbookqa:main:test:178": "788b53373cee5d85a4fd78960c2fab02f73d46090a16a64d8f379fb4bcfe180a",
+      "openbookqa:main:test:187": "0c95986b026fa671e59cc3c82e8404e769970b7d3c197d82e38dae37ee88a02f",
+      "openbookqa:main:test:197": "e82449192de2990f1eb4d3cb4a14e77cc25d07327351809564346e1482daf786",
+      "openbookqa:main:test:199": "56928d5cd036e597a48f623fa364252704284e184ae03b6a72dadf56f377d6eb",
+      "openbookqa:main:test:200": "d1a4665bbfa9c682c82d3e900f5951ddf0dd07b3d9952daea5d711f6d399a7f9",
+      "openbookqa:main:test:201": "12873902111c1466fd9457dc166d46d5354cd4088be63a6995825bd3ddbaf9be",
+      "openbookqa:main:test:208": "db5db36cfbd747cd29d405a1ca078df1ae9e0ff06cd8e4c5f63729492bb38710",
+      "openbookqa:main:test:209": "92371c5a97daf16a6e3ef366c5b3232e160343a16cf6040a9a24cb2c3cc601af",
+      "openbookqa:main:test:211": "e06e0885fd4b92c66073bec24190bc84b9840662b21b4d27081cd8a946a25566",
+      "openbookqa:main:test:216": "f796c9c686b15003002c42e6ef205be527ea1543ce7f742ec4a9e892bb45a852",
+      "openbookqa:main:test:221": "f839b3dd27b57fb40fb7c13843c9cc7319e343630809b43dbe88e9129700d29e",
+      "openbookqa:main:test:230": "f47089b288869d245cce3273a4caee7be3dfe45d248bbd584f810a67c3e34cfd",
+      "openbookqa:main:test:233": "330fd5aeba5abc66680ff7814e42edf1a13377a543a7f3dbdc8683bc857f1756",
+      "openbookqa:main:test:234": "da72c2bdbe23308a13bbc699b33dd3d5201302982a0d460dd1b3f28ceac588c7",
+      "openbookqa:main:test:241": "08b09d01ac721f3dfc05d63126ae55f123afc61258933f0ccd82abdba3b860b5",
+      "openbookqa:main:test:243": "9207e49c4ecd99f25d829e74d25f142932b3848414e2fd452cce9c02afafab4e",
+      "openbookqa:main:test:244": "c6d69b96caa07684a85d8c6b6505d498e80357bd16fcb452d9fab21fc5d2b80a",
+      "openbookqa:main:test:252": "67366df3872867dcc9d1acdb69a4dafba6f12f6350bbade980d85dcb419e46ea",
+      "openbookqa:main:test:258": "cf6bfe08da5e54b877c868d272e5901cb7865ff18e0d9dc0500366000d297a3b",
+      "openbookqa:main:test:262": "eff4e4a2784fd483ff54f9d6726f32a040e825e3d12051cd1ddfff275787ea71",
+      "openbookqa:main:test:271": "e6ca2e0b93b4326704ea3dbe12e4453ad9ec556ee127b3d2b2be1be4ba5227a2",
+      "openbookqa:main:test:272": "ed6744ec0e432b8a3392b7285c084b3210a6b7b0b86d96886eb9964e9c07895a",
+      "openbookqa:main:test:273": "98e2e1f9615571dff1724336b6f43244fd8216001882922cf696b38a1c17776b",
+      "openbookqa:main:test:275": "2d43c0013255b788beda8ec2920741c8d320623267e97a25184e4d79e82b856b",
+      "openbookqa:main:test:278": "e4ebd2d18c6422a5f6232d376ff5372064f3ed43c1e4e04976d684ac17f6cda0",
+      "openbookqa:main:test:284": "2620fd19f23666d33f6b6e5ba3838b75cdc71a34de0a535343068656ba5eb7f8",
+      "openbookqa:main:test:285": "65ebc362e7350db8182ff3cdd34abed55020f4a4427bb9304b768d90a2a0c20d",
+      "openbookqa:main:test:292": "0b3406b450ce401775376a24e50b0912035845ffe27685f93c5f3db68bc1435b",
+      "openbookqa:main:test:299": "59c5dfb26275bc4a0102f9d30aeff6fde61ab09fff5ced87dcf3df1e8fd794ab",
+      "openbookqa:main:test:301": "4d5e556af8123c6a5ac42445dc6c903d432bbb4d734208a0b507446c2d6d024e",
+      "openbookqa:main:test:305": "7c082b761d1f11138c6ae8850da259c93a605eac36a7a497fa0fa271923def76",
+      "openbookqa:main:test:317": "9aa152ff18d487132b79161be69521fe357b4222b83c7f72eeaf2dc6c89409a4",
+      "openbookqa:main:test:324": "37f6bcd97ae96430a2865b814398617e93f579970b8758a1ef728b1c13b81bb7",
+      "openbookqa:main:test:328": "f27003fa915f66cf3e51691d241275672929d27048c89829b2b91c6235b466b9",
+      "openbookqa:main:test:330": "bc48a4df6259b58c513a8a7cf3594a79071ed7d923a9eb233ff66b5e0507c46d",
+      "openbookqa:main:test:341": "cffb42598a585df05464350975b7011aa8d4035a8f753554ab3f296e71a73fcb",
+      "openbookqa:main:test:347": "fe33149288500b952463133322524c59e58c537009f69b58ad3de07d2b2eac26",
+      "openbookqa:main:test:361": "54b8fcc0849ec7c25cc40ef258b1bb996e3a4bdedae598a0e536f877b9073b5d",
+      "openbookqa:main:test:368": "08670ecd957ac1d92da661d1c9ee8c8ec1d6770bd3afbec572a1771ba4423d19",
+      "openbookqa:main:test:374": "52f6c1b5cf14a1e9609f341bb948b346286be7a0d7a85e411ec10fbb224831c0",
+      "openbookqa:main:test:390": "c5be1c57d3c320bbe283bc8e2a333de07b16bab637667eed2701745eb3338b58",
+      "openbookqa:main:test:402": "170aad5df0c7504601f62f7160ceaadcf1b6ae5d12a183aad9d08dc97ddd24cc",
+      "openbookqa:main:test:406": "548443f53e383ca54c0e71a0062ad364ee73ef6f2ea592ae6d8463ee748f44d3",
+      "openbookqa:main:test:410": "93830fb316985bc0a02e84c0985f4dccd687b12759fcd465a7c39717662e0df9",
+      "openbookqa:main:test:411": "10b79d0ae492b6f48fe1356b0265e91154860aa765739d523c082a919a4529d1",
+      "openbookqa:main:test:418": "ab66158ca49aefe6b8ea4f14200ac06c150f5583ba37323ae072daa736b829a2",
+      "openbookqa:main:test:419": "61d6c25975d1494f7c680d76766262695a3cc0a24a2dc02723158a0e5321b878",
+      "openbookqa:main:test:432": "7f7fd48ecda0f3e955d7aad3793b98839ca0b47f902332babcb56a942581b705",
+      "openbookqa:main:test:436": "cf8a93c2e70f7013d776a6550e3e98f3f1dcb1abf1de7af6a596e8630a08bbe6",
+      "openbookqa:main:test:442": "a2b1d6edb6aaeb082305e989674f0aa714f9462039a41aa43a74b3474a80e80c",
+      "openbookqa:main:test:448": "bb0577027f409546a8f5450c118ee40a4db1683cd321d9c750a18e5785aaed70",
+      "openbookqa:main:test:452": "b520c3032833270e124a6a977351a90e84cd4c5bdb15f34b1fd0315825d14790",
+      "openbookqa:main:test:453": "1c44ce3647f29393ec9fc1c1dcc5d4a736a67c01a837dc4e6cb2e13b4b3c7de1",
+      "openbookqa:main:test:454": "72daa51827f7a14001dddc1d96c3e1ea4aba7c2618053a0bd5f953cde6527b14",
+      "openbookqa:main:test:456": "489dbd190b4903e1058e896badb038ff0879f70e12f583bc5642ee345b64a385",
+      "openbookqa:main:test:459": "b1f9d9e775e3d47ea4b2e23167c391476d78efbc01de8ab405adb87887fe9ec5",
+      "openbookqa:main:test:468": "4ac5bbbda35209ca694a475584bf3d3cd26213425d4538337ff45bc8258de3fa",
+      "openbookqa:main:test:473": "b4310468dd70fd214ffe9d43c72b8fa69ce00ff99adffb4163310fe4f66d2690",
+      "openbookqa:main:test:476": "eb3246c512df4fdb6e1e64bb88c437a4e67c9903f0d56572bd4a80bdcaa530aa",
+      "openbookqa:main:test:481": "eeac1f7c32f3cd570e2ae084d7b06e45d0be451158d8efa7c3f1fa3744bce836",
+      "openbookqa:main:test:487": "c9d0e9870b9f8677677bada34849c98dff8b98664077baf1f543b22478290281",
+      "openbookqa:main:test:488": "583f3a3650af6d3190d7d8f0f989bbf0d0d3b7a2bf62cbe72a19100163025d1b",
+      "openbookqa:main:test:492": "e093de0fb1fa62bd62406d8789752c550e563af9826d51ab05b08d86d02107f3"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "openbookqa:main:test:2",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2752623688155922,
+        "B": 0.2459770114942529,
+        "C": 0.1039480259870065,
+        "A": 0.37481259370314846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:3",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.39610389610389607,
+        "C": 0.20589410589410587,
+        "A": 0.11708291708291707,
+        "B": 0.2809190809190809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:8",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.25364635364635363,
+        "A": 0.24585414585414583,
+        "D": 0.20389610389610388,
+        "C": 0.2966033966033966
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:16",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2031,
+        "D": 0.1689,
+        "C": 0.418,
+        "B": 0.21
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:18",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.33786621337866213,
+        "B": 0.27147285271472854,
+        "D": 0.20117988201179882,
+        "C": 0.18948105189481051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:19",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3941058941058941,
+        "B": 0.1727272727272727,
+        "A": 0.22827172827172826,
+        "D": 0.20489510489510487
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:25",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.27122877122877126,
+        "B": 0.3531468531468532,
+        "A": 0.2243756243756244,
+        "D": 0.15124875124875128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:26",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.29912904194614076,
+        "A": 0.29522474722194414,
+        "D": 0.24046451096205826,
+        "C": 0.16518169986985684
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:30",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.1768,
+        "C": 0.3984,
+        "D": 0.1875,
+        "B": 0.2373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:37",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2129,
+        "C": 0.2422,
+        "D": 0.291,
+        "A": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:43",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.43273453093812375,
+        "A": 0.1315369261477046,
+        "C": 0.1472055888223553,
+        "B": 0.2885229540918164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:45",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.17905811623246493,
+        "B": 0.21523046092184367,
+        "C": 0.0655310621242485,
+        "A": 0.5401803607214429
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:46",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2871,
+        "C": 0.2305,
+        "A": 0.3262,
+        "D": 0.1562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:61",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.4395,
+        "B": 0.2422,
+        "A": 0.1943,
+        "D": 0.124
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:72",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3629733240083925,
+        "A": 0.3239084823658707,
+        "D": 0.16874812668598263,
+        "B": 0.14437006693975424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:77",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.20589410589410592,
+        "A": 0.4038961038961039,
+        "B": 0.15314685314685317,
+        "C": 0.2370629370629371
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:79",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3974461292897047,
+        "D": 0.31953312051077415,
+        "A": 0.07352354349561054,
+        "C": 0.20949720670391062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:83",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2533932135728543,
+        "B": 0.23003992015968064,
+        "D": 0.2826347305389222,
+        "A": 0.2339321357285429
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:84",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.17852147852147854,
+        "A": 0.15024975024975026,
+        "D": 0.25564435564435567,
+        "B": 0.4155844155844156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:85",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2731268731268731,
+        "D": 0.23316683316683318,
+        "A": 0.12687312687312688,
+        "C": 0.3668331668331669
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:87",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3086,
+        "B": 0.252,
+        "D": 0.291,
+        "C": 0.1484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:89",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4926926926926927,
+        "B": 0.2990990990990991,
+        "C": 0.06256256256256257,
+        "D": 0.14564564564564564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:100",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3687681087021681,
+        "B": 0.2448796083524828,
+        "A": 0.2575681886302328,
+        "C": 0.1287840943151164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:103",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3570786292336897,
+        "C": 0.11219902088120692,
+        "A": 0.26146468178639226,
+        "D": 0.2692576680987112
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:105",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.28091908091908097,
+        "A": 0.2087912087912088,
+        "B": 0.35514485514485516,
+        "D": 0.15514485514485515
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:119",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.293,
+        "B": 0.3535,
+        "D": 0.1836,
+        "C": 0.1699
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:125",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3438,
+        "B": 0.2402,
+        "D": 0.1348,
+        "C": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:128",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2887823394266307,
+        "C": 0.14244331235640795,
+        "A": 0.19218859254819695,
+        "D": 0.37658575566876434
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:131",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.14047357378359476,
+        "B": 0.15126386252372864,
+        "C": 0.21071036067539212,
+        "A": 0.49755220301728437
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:145",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.31018981018981023,
+        "B": 0.29660339660339663,
+        "C": 0.2165834165834166,
+        "D": 0.17662337662337665
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:146",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3184,
+        "C": 0.2773,
+        "D": 0.2734,
+        "A": 0.1309
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:153",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.07925057609457971,
+        "C": 0.6300971846508366,
+        "B": 0.14287145576595534,
+        "A": 0.1477807834886284
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:164",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3460114102692423,
+        "D": 0.1935742167951156,
+        "B": 0.1417275547993194,
+        "C": 0.3186868181363227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:169",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.24949899799599198,
+        "A": 0.25250501002004005,
+        "B": 0.28176352705410823,
+        "D": 0.2162324649298597
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:170",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.37503750375037503,
+        "A": 0.12401240124012401,
+        "B": 0.1689168916891689,
+        "D": 0.33203320332033204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:176",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.22648675662168916,
+        "A": 0.4938530734632684,
+        "B": 0.2000999500249875,
+        "C": 0.07956021989005498
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:177",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2539,
+        "C": 0.1621,
+        "A": 0.2246,
+        "D": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:178",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.29719719719719717,
+        "C": 0.2834834834834835,
+        "B": 0.2697697697697698,
+        "D": 0.14954954954954955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:187",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.5731110889310311,
+        "A": 0.14422597065575404,
+        "B": 0.16668330172671925,
+        "D": 0.11597963868649565
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:197",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2406813627254509,
+        "A": 0.42855711422845694,
+        "D": 0.15751503006012024,
+        "C": 0.17324649298597194
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:199",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3655655655655656,
+        "B": 0.2092092092092092,
+        "C": 0.26786786786786787,
+        "D": 0.15735735735735737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:200",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2893893893893894,
+        "B": 0.33233233233233234,
+        "C": 0.22582582582582583,
+        "D": 0.15245245245245245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:201",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.37496250374962503,
+        "C": 0.21387861213878612,
+        "D": 0.11428857114288571,
+        "A": 0.29687031296870314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:208",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.44184184184184183,
+        "A": 0.06356356356356356,
+        "C": 0.05275275275275275,
+        "D": 0.44184184184184183
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:209",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.38866113388661133,
+        "B": 0.17868213178682132,
+        "D": 0.18068193180681932,
+        "C": 0.251974802519748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:211",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.574142585741426,
+        "C": 0.15718428157184283,
+        "D": 0.2470752924707529,
+        "B": 0.021597840215978402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:216",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4195224298131682,
+        "A": 0.21071036067539217,
+        "D": 0.20781296832850435,
+        "C": 0.16195424118293536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:221",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.35514485514485516,
+        "B": 0.2185814185814186,
+        "A": 0.15314685314685317,
+        "C": 0.2731268731268731
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:230",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.326493844460014,
+        "C": 0.18866980282254028,
+        "B": 0.19747772995696128,
+        "A": 0.28735862276048446
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:233",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3418,
+        "D": 0.1621,
+        "C": 0.3066,
+        "A": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:234",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3555,
+        "B": 0.2148,
+        "D": 0.2402,
+        "A": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:241",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2614385614385615,
+        "B": 0.29270729270729273,
+        "A": 0.17462537462537467,
+        "D": 0.27122877122877126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:243",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3531468531468532,
+        "C": 0.321978021978022,
+        "A": 0.12977022977022978,
+        "D": 0.19510489510489512
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:244",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.28317168283171684,
+        "A": 0.4687531246875312,
+        "B": 0.10938906109389061,
+        "C": 0.1386861313868613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:252",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.16301849075462269,
+        "B": 0.15132433783108448,
+        "C": 0.5700149925037482,
+        "A": 0.11564217891054474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:258",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2380619380619381,
+        "B": 0.29270729270729273,
+        "C": 0.3316683316683317,
+        "D": 0.13756243756243758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:262",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.26706586826347306,
+        "C": 0.23493013972055887,
+        "D": 0.3703592814371257,
+        "A": 0.12764471057884233
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:271",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.21170946148466377,
+        "C": 0.2321910280747327,
+        "B": 0.32780497552203014,
+        "A": 0.22829453491857327
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:272",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.32049229537722634,
+        "A": 0.2491494896938163,
+        "B": 0.31068641184710827,
+        "C": 0.11967180308184912
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:273",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2734,
+        "D": 0.2266,
+        "B": 0.2734,
+        "A": 0.2266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:275",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2695,
+        "D": 0.1758,
+        "A": 0.2949,
+        "B": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:278",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.20689655172413793,
+        "B": 0.07176411794102949,
+        "C": 0.16691654172913545,
+        "D": 0.5544227886056972
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:284",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2639375437894105,
+        "D": 0.1466319687718947,
+        "A": 0.11049944950455409,
+        "B": 0.4789310379341407
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:285",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3672,
+        "C": 0.3555,
+        "B": 0.1875,
+        "A": 0.0898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:292",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3359335933593359,
+        "C": 0.2617261726172617,
+        "D": 0.1777177717771777,
+        "A": 0.22462246224622462
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:299",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.24241817635872284,
+        "C": 0.24532078870983887,
+        "D": 0.31478330497447704,
+        "B": 0.19747772995696128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:301",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.17172827172827174,
+        "B": 0.28291708291708295,
+        "D": 0.38631368631368634,
+        "A": 0.15904095904095908
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:305",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3848,
+        "D": 0.3145,
+        "C": 0.1445,
+        "B": 0.1562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:317",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.33233233233233234,
+        "A": 0.3226226226226226,
+        "B": 0.15245245245245245,
+        "D": 0.1925925925925926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:324",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.20017998200179982,
+        "A": 0.49605039496050396,
+        "B": 0.17678232176782324,
+        "C": 0.126987301269873
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:328",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.1905905905905906,
+        "D": 0.37147147147147147,
+        "A": 0.2990990990990991,
+        "B": 0.13883883883883882
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:330",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.4203203203203203,
+        "A": 0.1925925925925926,
+        "C": 0.1368368368368368,
+        "B": 0.2502502502502503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:341",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.5278278278278278,
+        "C": 0.14854854854854854,
+        "B": 0.14664664664664664,
+        "A": 0.17697697697697698
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:347",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.1504,
+        "D": 0.373,
+        "C": 0.1875,
+        "A": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:361",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3027,
+        "D": 0.2178,
+        "A": 0.3535,
+        "C": 0.126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:368",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3011011011011011,
+        "B": 0.25415415415415415,
+        "D": 0.3108108108108108,
+        "C": 0.13393393393393394
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:374",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.17597597597597597,
+        "A": 0.18378378378378377,
+        "C": 0.06546546546546546,
+        "D": 0.5747747747747748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:390",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.6049555400139873,
+        "B": 0.2321910280747327,
+        "A": 0.08971925267259466,
+        "D": 0.07313417923868518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:402",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.314625850340136,
+        "C": 0.2305922368947579,
+        "D": 0.34583833533413366,
+        "B": 0.10894357743097238
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:406",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4196062756070751,
+        "C": 0.0524632757070051,
+        "D": 0.2966923153792346,
+        "A": 0.23123813330668533
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:410",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3684000399241441,
+        "D": 0.18225371793592177,
+        "B": 0.26120371294540373,
+        "A": 0.1881425291945304
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:411",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.26613226452905814,
+        "D": 0.26613226452905814,
+        "C": 0.1839679358717435,
+        "B": 0.2837675350701403
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:418",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.26396396396396393,
+        "C": 0.25415415415415415,
+        "A": 0.14954954954954955,
+        "D": 0.33233233233233234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:419",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3695064571028131,
+        "C": 0.35779357293022324,
+        "A": 0.14075483031334468,
+        "D": 0.13194513965361898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:432",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.28080687038146596,
+        "C": 0.20770920711004592,
+        "D": 0.4017375674056321,
+        "A": 0.10974635510285599
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:436",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.25392539253925395,
+        "C": 0.3574357435743574,
+        "B": 0.1611161116111611,
+        "A": 0.22752275227522753
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:442",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.20906271881564467,
+        "A": 0.373111933580074,
+        "D": 0.05641692507752325,
+        "B": 0.36140842252675803
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:448",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2876753507014028,
+        "B": 0.3874749498997996,
+        "A": 0.10761523046092183,
+        "C": 0.21723446893787574
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:452",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2402,
+        "D": 0.4219,
+        "B": 0.1699,
+        "A": 0.168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:453",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4975522030172845,
+        "C": 0.18053751623538816,
+        "B": 0.1775402138075732,
+        "D": 0.14437006693975424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:454",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3941452692576681,
+        "D": 0.13557797981816364,
+        "A": 0.06444200219802178,
+        "B": 0.40583474872614644
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:456",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3805194805194805,
+        "B": 0.24975024975024973,
+        "C": 0.22727272727272727,
+        "A": 0.14245754245754244
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:459",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.20289710289710292,
+        "D": 0.3141858141858142,
+        "C": 0.20589410589410592,
+        "A": 0.27702297702297707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:468",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2715,
+        "B": 0.1699,
+        "C": 0.2637,
+        "A": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:473",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2829453491857329,
+        "A": 0.2068138675192327,
+        "C": 0.21950244779698275,
+        "B": 0.2907383354980518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:476",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3785214785214786,
+        "C": 0.35514485514485516,
+        "D": 0.120979020979021,
+        "B": 0.14535464535464537
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:481",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3785214785214785,
+        "B": 0.20589410589410587,
+        "C": 0.2673326673326673,
+        "D": 0.14825174825174825
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:487",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.31018981018981023,
+        "B": 0.2380619380619381,
+        "D": 0.241958041958042,
+        "C": 0.2097902097902098
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:488",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2871,
+        "C": 0.2373,
+        "A": 0.2305,
+        "B": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "openbookqa:main:test:492",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.44184184184184183,
+        "B": 0.1964964964964965,
+        "C": 0.24434434434434435,
+        "D": 0.11731731731731732
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

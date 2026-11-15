@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "babi-nli-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/babi_nli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:45:01+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2520406266,
+    "accuracy": 0.51,
+    "positive_recall": 0.32,
+    "specificity": 0.7,
+    "precision": 0.5161290322580645,
+    "balanced_accuracy": 0.51,
+    "f1": 0.3950617283950617,
+    "true_positive": 16.0,
+    "false_positive": 15.0,
+    "false_negative": 34.0,
+    "true_negative": 35.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.008162506399999936,
+    "baseline_adjusted_skill": 0.020000000000000018,
+    "baseline_adjusted_score": 0.020000000000000018
+  },
+  "elapsed_seconds": 9.761043699996662,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "babi_nli:agents-motivations:test:237": "7f08e2fe2392baec55f0541559224601845ca48422082a44b19db3fca12ddd77",
+      "babi_nli:agents-motivations:test:273": "01acd4891fc3db69bc3f0587bb961f26b0ebe3146bc3729044a9e98906a51868",
+      "babi_nli:basic-coreference:test:53": "ab777baecccbed31aefb5181ba4b3fff1b198ea66c21a5852d6f93e190a1f0be",
+      "babi_nli:basic-coreference:test:147": "e7f26246073db9a92f3239af9f29a23086c65f72bdcedffcc3521c9c96aa1a02",
+      "babi_nli:basic-coreference:test:224": "c9d0887b58970e86d632317a51eb9629ebf8233bf9d80a724b100aa99c71bec2",
+      "babi_nli:basic-coreference:test:280": "eb6a05e40261ab0d9ed6b2fe79b5b5e3ed8618b41c1ee7fe0ee2d90c3a67a5a6",
+      "babi_nli:basic-deduction:test:21": "ccbb2588a826dbe007cd838638fab07e3db91d3f60eb617707f51e70f34c1f7a",
+      "babi_nli:basic-deduction:test:23": "c08f536cf85fc69b23d366bc3103fc3922745f7e6e3d19f447334d14bb09c62b",
+      "babi_nli:basic-deduction:test:86": "035ef254d2ab4dfccb60eb417d9661acea8dbaace5063d1c87e40c13c20fbdc9",
+      "babi_nli:basic-deduction:test:103": "2b95f3d32a54c2c6edb97d095321b59d9b9e6a1d0aa66c88b73e828253ac35ba",
+      "babi_nli:basic-deduction:test:108": "9aeaab3fb9ebdaf7836d90519d5c884ebd47f91da7590d367cce76c8da6cf2bc",
+      "babi_nli:basic-deduction:test:148": "4d4ce2b222b1997cb96c531ba7dcf10e457d9d22d5e391edf7a3168aad5ab600",
+      "babi_nli:basic-deduction:test:175": "2ff33e3b3143586bd46cecff412ade2b1cdb144bc3aaf85bce31fdfc387deccf",
+      "babi_nli:basic-deduction:test:386": "558fb1a85cd102b130a1957b2f44523a847b944bbcab0f7f1a72ddc7dab20ef1",
+      "babi_nli:basic-induction:test:26": "5491ea092532625055353c068b3ae7fcc42944ff0e0cb28a26cc2e7dda2bb9b7",
+      "babi_nli:basic-induction:test:147": "6e30e2988de99bef162307116e9cc661403d5acd375c1b61cc6d632791f11736",
+      "babi_nli:basic-induction:test:398": "79899ee851f9f58a6524cebc1b09e2aa307f1c90cfba7fd541b21ee1f1d50939",
+      "babi_nli:basic-induction:test:495": "46138913a3d25d49da1400d299099fa73655bbd1bbb556330a80bb62f8448fa4",
+      "babi_nli:compound-coreference:test:62": "7327ab25dddb686e343633227dc70c17d1fcdfd9ab9bba1c80b098d69c3a227a",
+      "babi_nli:compound-coreference:test:76": "061da34a92fe1738079da890df18442acbfad6c3fd3a24312616a8ba6cb98f85",
+      "babi_nli:compound-coreference:test:97": "89f8a4ee507a1741fc8fccff392454bfec7baa57f546df961d24486dea6ec37a",
+      "babi_nli:compound-coreference:test:141": "da932a6a448620b01493eab8a03a9f28c31337786d58627dc5814626ea3afee5",
+      "babi_nli:compound-coreference:test:192": "e8858d59da69fe701c13592610f275fe8d5b4e1987305e08da8a62f5e1aee37c",
+      "babi_nli:compound-coreference:test:272": "7a8a7aed022e6b3bfbb74e5406bffd96a86d5742ed9b4a78e2e12d0e8df5aced",
+      "babi_nli:compound-coreference:test:314": "442630d4f1b49b44f8f0fc30baf7f66485a53df83c014af38ffa3c0376e951e4",
+      "babi_nli:compound-coreference:test:323": "160aff6d5706886774df60144d3a24875d7a33e2542c6c3c0bd34b7231794bf7",
+      "babi_nli:compound-coreference:test:460": "76852b08a0c450981703d241587517d7120f7d258e73b1ae5dbf9a5918a0e1f5",
+      "babi_nli:compound-coreference:test:464": "f6664fe7f701fe19e3ddc99ddb5111280e4e24c8fb2ab74aaf1ae2774f1f20b8",
+      "babi_nli:conjunction:test:55": "492c05bae4d411c5299198e35f0c69291d75a18f3d92ea676b8869231f014062",
+      "babi_nli:conjunction:test:145": "8189c0afd89ab09e6f39f72d09ba0d32f3aac46f1c62e760324266514cd402ca",
+      "babi_nli:conjunction:test:291": "cc036c890054a1d96bcb46dd9b9c020a99afbc99b0c55628583a9b36156e4a8e",
+      "babi_nli:conjunction:test:366": "acaf34bc464273c00926102010b96717bcb7fe3b0f6acd93f7ce82a2f46acde5",
+      "babi_nli:conjunction:test:474": "dfc4f6602fccbf8ec67965e35ace76aac381cc6d37093fb7c1e5b3af61b8fb52",
+      "babi_nli:counting:test:241": "585d48a8ae7f5c309db9bf4cf4c34a8269349ba787ade6adbe78d24b7a0ce225",
+      "babi_nli:counting:test:279": "02c103a823467393d11e17488d181ed22bd6f05a2c99221737494b77444a1743",
+      "babi_nli:counting:test:322": "2c25135f22749837d944e3ea0ddd040b85fabbd120c99ce55c728e234c245c6d",
+      "babi_nli:counting:test:324": "e2bc848c36a7e9086112f9adca4147834ce62c592a350e89ff9bc8cb50c891f8",
+      "babi_nli:indefinite-knowledge:test:248": "88eb6eb22ae66eb953f9b578ecc97412f0ac494d3ec991375c374497dfdb829b",
+      "babi_nli:indefinite-knowledge:test:310": "59f165a67c7d6d4fc6ac2943c9224fa8c6fdd4a1e932adfcbac7cb2bfb7a1506",
+      "babi_nli:indefinite-knowledge:test:319": "bb04adef1dbe5875592c060732cf185298492bce6bc38fc2ba71b07327bc8977",
+      "babi_nli:indefinite-knowledge:test:495": "371b51c34f1c3a9af3d2927cab2d564ca549db525797a2df1870e9eb4c8804dc",
+      "babi_nli:lists-sets:test:40": "f9a05e1ebbda549dc0e2f649bb690fa2d12a9627bb1ff5523c01827b6b26b218",
+      "babi_nli:lists-sets:test:303": "05bc417cdd79a300ef44014a7d6c8c9774498d2fb35e6c8dc9ea777b0c087479",
+      "babi_nli:lists-sets:test:376": "e91c57d71d60f0beea34c0102988270e20f89e94a6b5fdb088f2afda9876e5bb",
+      "babi_nli:lists-sets:test:473": "2141cea945764b48733ddace92fd69f7389c42e099546cd2ab00a99d14d191ac",
+      "babi_nli:path-finding:test:24": "0918c4a0489d73339d4074934830a58e3f666fb459fbb7a212ddcb07f8be191f",
+      "babi_nli:path-finding:test:330": "b8380cbc4e5a4217ab6790e6eef590eebc1ac146d5908437c37afaa00b38f7d0",
+      "babi_nli:path-finding:test:332": "e5b5eee7145d361a231ce44eda74c758e313017daea46be5f159852cad7cb77c",
+      "babi_nli:positional-reasoning:test:33": "c804052eb8e3821d599cc29d41d391a44c2f078782332da98bb27273f0e6675c",
+      "babi_nli:positional-reasoning:test:101": "95aa9a14ba0d236377749df1c8ef5737d055c943b974bb38133cf485f6b80f77",
+      "babi_nli:positional-reasoning:test:122": "c2b356c8fb9e4375d1a03dfa427fc33f4cb4d9201ef98c5310ce89dabdd8396f",
+      "babi_nli:positional-reasoning:test:136": "157507a6a662d7fe6d2205101c410a8f9cf19193835af9323ee92f1509891610",
+      "babi_nli:positional-reasoning:test:154": "b1b805aae55ce2a8df5bd85c88757d5c39a8d5dc838fba90011a55968f7ab985",
+      "babi_nli:positional-reasoning:test:398": "97e2a335a7b634b032371fcaaf8d74c45199e49eacbfc09e9dd2feb68f4a822a",
+      "babi_nli:simple-negation:test:7": "475eaa20beb885c00a70128e6980f400bce43c80cc56ece85f1215e297230e21",
+      "babi_nli:simple-negation:test:112": "b5817ddb3972e41ca3af2113817840462b7d01e047f2ba94bc33856ee369d965",
+      "babi_nli:simple-negation:test:119": "0667191be900b9f28e824c9ab6478721c3d70fc05cdf9061b880922abb05efed",
+      "babi_nli:simple-negation:test:237": "c278064af08725384e056018b2a8de77b4d2685d4bf84d6a06f744e51724525b",
+      "babi_nli:simple-negation:test:385": "94378c310ecd48a6cefda2b210aacdefbf1abf10e2f736bc8f4cba3daf6931cf",
+      "babi_nli:single-supporting-fact:test:65": "6f839aa57c2455cc7cde71a8214750facb04ba3a042bfe8ccc9af4b671a710d8",
+      "babi_nli:single-supporting-fact:test:345": "9698611a85fd4c4625b2b5849667f872ddf0e3ec8b48aa68b37878a729fd2301",
+      "babi_nli:single-supporting-fact:test:402": "1c791a87d9b43a3d869aa373772c0fd4280b377ffada881e1d6a24b4101af0b3",
+      "babi_nli:single-supporting-fact:test:432": "37ba828c7d2dc433613eb5741a1a68cb4e8b606497c009c9ec27435f051e1988",
+      "babi_nli:single-supporting-fact:test:473": "f902c05d61c76f4062d7697f1c47dca7ec9d331a07da4d095c1fa853f2bd0115",
+      "babi_nli:size-reasoning:test:26": "043356aa08e845fcf7ed2d732cd6f972e4087a71fbf23b4795f89af8e0b1ad16",
+      "babi_nli:size-reasoning:test:247": "4a38f9dd8ea8b5fca13228a27a330b94795eb794ad7d20579897a6273a96bf9a",
+      "babi_nli:size-reasoning:test:316": "e365d8884ca7afb085ac6fe219fe0b8062fcad45eddc2280e854d647d3070775",
+      "babi_nli:three-arg-relations:test:254": "2cd6548056ce0e9e956dd6cbbf265c8261b839000f9c7d249c92c58f90a4fe83",
+      "babi_nli:three-arg-relations:test:404": "c94b4013b1708af977b1e5db9941ac65dff6f0dbedca758cc00da5ad9373f06d",
+      "babi_nli:three-arg-relations:test:470": "625fc8ed211dbc5bd177a79e5b63b84ffae70a5b48e480bd2e6e84193031316d",
+      "babi_nli:three-arg-relations:test:496": "a6eb4a66de1caff8c0d7a7b94f3de7edee676aa115259f68f4b974adde2defa2",
+      "babi_nli:three-supporting-facts:test:7": "5b6dde4fea9989782e03e0298e0c3fb98cac4f1768e92953793f52034566fb45",
+      "babi_nli:three-supporting-facts:test:15": "69e2d1a81269f925f335ff108b19030a783370c272d59329b7d5fd6d43915056",
+      "babi_nli:three-supporting-facts:test:55": "d122016228359ff2ae37397fe3df9705461b00b18776af20a81e7163458c4f9b",
+      "babi_nli:three-supporting-facts:test:146": "295dcc2401fc6e0b538cacdec645357541ae2d6f4e1045870ef9211d18059a45",
+      "babi_nli:three-supporting-facts:test:461": "8cb7b81cf3b53ed8e20f7753a8bdc801e83c32217ad1ef52be3ad36685e4469d",
+      "babi_nli:time-reasoning:test:144": "4de0e2b060624ded0ca617f6c4e9e742a15ed2eba65d0f1921c894cde258088f",
+      "babi_nli:time-reasoning:test:267": "68967934eadacfb5f3d2a7850b57c4da1b5a48dfbf66622f555956d17802c3a0",
+      "babi_nli:time-reasoning:test:282": "ff9a7a22604b1d9f4e77545e82e0e75b72f26549714f61e22eb3c1e60f2089b8",
+      "babi_nli:time-reasoning:test:310": "5e07a32024bb79f443cb9e34cf50aca99ddab34b552cc38db6cb2277f3ae61e6",
+      "babi_nli:time-reasoning:test:324": "7ecf492a507ddcbe8c311959f1199d4cf05a823a4db722560569fbf4058d0c2f",
+      "babi_nli:time-reasoning:test:393": "7b9942835922a7a159521914579022726cd4df30b59c1d8bd4c3ffcb1c9abe03",
+      "babi_nli:time-reasoning:test:494": "a93d90c7bee6b5793540821aa2251dee8db7bde9e48acda3873291fb6969aa28",
+      "babi_nli:two-arg-relations:test:116": "a5752f1c3f511051a411fccea8c462c90bdba2a89be817848f0af5e7b8bf961a",
+      "babi_nli:two-arg-relations:test:237": "c3a5a88e5ec8a9ce27c5e0749a17f847017835f1de5f95c32861cbf96116e475",
+      "babi_nli:two-arg-relations:test:249": "94fe17f389691e9f564ecb13a498d9636f073ce0e1c9f793382788fdaace2ec5",
+      "babi_nli:two-arg-relations:test:320": "16d1309270d56b66fc271c54af664627212ce1d1eb6086c260d8932970509b33",
+      "babi_nli:two-arg-relations:test:385": "27aa8e428d987b68360fedfb31261c3589103b753f8eb3eb0f8947137f77dddb",
+      "babi_nli:two-arg-relations:test:441": "a00bfb5c351d7873ec7f3430e355be625ac9ec6aefc9db039470fc2c6b96b93b",
+      "babi_nli:two-arg-relations:test:474": "693ec588cba97d9e3195b43264d235939b52829aa5785d0fe929571a28f3b6e2",
+      "babi_nli:two-arg-relations:test:491": "f4245ad6dc7ffa4193f10531fc9793b61eb9a23f5ee248124616020c97636f50",
+      "babi_nli:two-supporting-facts:test:0": "a83ee0e24e869ba0b9bab7a70c371b7bc9826d9356114e042d1efe20b554e0c0",
+      "babi_nli:two-supporting-facts:test:56": "e0765349607c03dc3ef41b3cbedfba7d2e62d4277c4d2f1f9dca4cb13dae6bed",
+      "babi_nli:two-supporting-facts:test:59": "de60aa9ea14bbdd00feb5b349a0d71e45bceacbc61e1cf2fb97bfae24f8505c1",
+      "babi_nli:two-supporting-facts:test:209": "0bf8502270b4c432c4d9efc74dbafa9d6806610bdec78ab36912d989e3342089",
+      "babi_nli:two-supporting-facts:test:302": "bacfbcab3c68cceaea3948fd4af990871e018311e9f1ff0047b92a6a2f0ca4a8",
+      "babi_nli:two-supporting-facts:test:425": "bbeb826dc66fe5cf26754fdb5fa05a2a6b197489fc74b26a8be0ceba1837e42a",
+      "babi_nli:yes-no-questions:test:102": "9d23577b4ffbaa2f73e6eca79dc1697307751ca5943d3dee2a75ac579c976dde",
+      "babi_nli:yes-no-questions:test:330": "60e1e74f9bc910cdac22c9a3cf38aa017a752f6ac744b461284e24e607e546f6",
+      "babi_nli:yes-no-questions:test:489": "8bd9634e2d5eeab3106e606a9cbfa1522816df8f4d6e9951bd343c4ffabdc9cd"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "babi_nli:agents-motivations:test:237",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:agents-motivations:test:273",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-coreference:test:53",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-coreference:test:147",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-coreference:test:224",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-coreference:test:280",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:21",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:23",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:86",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:103",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:108",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:148",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:175",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-deduction:test:386",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-induction:test:26",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-induction:test:147",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-induction:test:398",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:basic-induction:test:495",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:62",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:76",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:97",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:141",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:192",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:272",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:314",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:323",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:460",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:compound-coreference:test:464",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:conjunction:test:55",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:conjunction:test:145",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:conjunction:test:291",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:conjunction:test:366",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:conjunction:test:474",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:counting:test:241",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:counting:test:279",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:counting:test:322",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:counting:test:324",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:indefinite-knowledge:test:248",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:indefinite-knowledge:test:310",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:indefinite-knowledge:test:319",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:indefinite-knowledge:test:495",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:lists-sets:test:40",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:lists-sets:test:303",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:lists-sets:test:376",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:lists-sets:test:473",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:path-finding:test:24",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:path-finding:test:330",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:path-finding:test:332",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:33",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:101",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:122",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:136",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:154",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:positional-reasoning:test:398",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:simple-negation:test:7",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:simple-negation:test:112",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:simple-negation:test:119",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:simple-negation:test:237",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:simple-negation:test:385",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:single-supporting-fact:test:65",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:single-supporting-fact:test:345",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:single-supporting-fact:test:402",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:single-supporting-fact:test:432",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:single-supporting-fact:test:473",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:size-reasoning:test:26",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:size-reasoning:test:247",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:size-reasoning:test:316",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-arg-relations:test:254",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-arg-relations:test:404",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-arg-relations:test:470",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-arg-relations:test:496",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-supporting-facts:test:7",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-supporting-facts:test:15",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-supporting-facts:test:55",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-supporting-facts:test:146",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:three-supporting-facts:test:461",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:144",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:267",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:282",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:310",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:324",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:393",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:time-reasoning:test:494",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:116",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:237",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:249",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:320",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:385",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:441",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:474",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-arg-relations:test:491",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:0",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:56",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:59",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:209",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:302",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:two-supporting-facts:test:425",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:yes-no-questions:test:102",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:yes-no-questions:test:330",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "babi_nli:yes-no-questions:test:489",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

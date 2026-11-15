@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "hatecheck-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/hatecheck",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:08:04+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25866097839999996,
+    "accuracy": 0.5,
+    "positive_recall": 0.14,
+    "specificity": 0.86,
+    "precision": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.21875,
+    "true_positive": 7.0,
+    "false_positive": 7.0,
+    "false_negative": 43.0,
+    "true_negative": 43.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.034643913599999854,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 29.031814299996768,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "hatecheck:default:test:36": "265ff88713b4289e19484c84c4d401c0dccb8b618f2b8ee29f8062879f8eb5e5",
+      "hatecheck:default:test:77": "836fe12a46b58c2155631eef02380852a396450f96c502df3f227920d2bcdc6b",
+      "hatecheck:default:test:91": "0f907021ce33f4459187857aefff199c4af8240e53cbbdf4ea6ac1da953e9b3a",
+      "hatecheck:default:test:94": "7369c311616ab44ad40e2e29a5b8a70a8fc5c9669f002b15ead9c0c381703bc1",
+      "hatecheck:default:test:152": "0cf052d205e178894b2214b5b87c5c2755fbf30be68f6beb7803e983bddf7b9c",
+      "hatecheck:default:test:155": "c062256ec9a87c78f12c9095814f94fcbfc28ca591bbcfb153615afee65fbb4d",
+      "hatecheck:default:test:159": "a6c2ee10ad9ff7773712455d783cdf30dfb8af938c7733bed5d80f5fac13723a",
+      "hatecheck:default:test:223": "9045db65a50212fb3cdbcd4fb1540aa55bb071e5528f5eb4a2797d08e604d318",
+      "hatecheck:default:test:239": "b45c01d69d03e5244b2b4c403fe35eff15146c2278bd9807363a482b19a6bf97",
+      "hatecheck:default:test:281": "a3c2b9fad0635ade680176667f99e7d6eb31e8d731a0992d7f520a62416d2670",
+      "hatecheck:default:test:435": "08cd37cd621954f3b4a060ea868469432120757abb99d744fc5adfe8d2489a4f",
+      "hatecheck:default:test:457": "040c6d276ab028dab74bccbbac70585b791f34f125a7a8ef3a1a390d44b4cbd7",
+      "hatecheck:default:test:495": "075ad8e93fee9e94280c001cc4e4da4fc55d4b26252c4b4ed24dcff5a2fde406",
+      "hatecheck:default:test:551": "933d7d8edf21561a04b59e3987594803c44e64aa55aaf065dcc1b9160a529113",
+      "hatecheck:default:test:599": "c47e641dc2f01f61c72d3f451c3b1e3623094ab149efd540a1e399042e79394a",
+      "hatecheck:default:test:723": "11045c0e92a26de5519f92a96cf4d81509fa1b3051a595ea4e6ef9a919c3b9ee",
+      "hatecheck:default:test:735": "6b16adb2e42bde4c12cb00e73d7f23f7033365b0b41f18cc1edf470edab062f2",
+      "hatecheck:default:test:772": "d9311d3dbc7679240c26f93b713be59d815c554d790bd2e4ad057963a766bc30",
+      "hatecheck:default:test:782": "cf5991f153f84a63ce6d356d43a1784c4a1da71517fe023ec0fb1d2aacae145c",
+      "hatecheck:default:test:830": "0197eb8b1c0f5123de6e347b734be6e41c087411b787f468b6084573bfbc2514",
+      "hatecheck:default:test:996": "a749e9b80fc52c4d19db87611a8bde6c6ffeffc8ccb470fd9290b7fb067835dd",
+      "hatecheck:default:test:999": "5b296f0dbb586f524cf8237618a6f26d5cf16bbf12386eb881b4c0c18c45e81b",
+      "hatecheck:default:test:1009": "f76038c7c2831ed0947fdb655fe13b26e1b0d12cc7ef03a2c528fba2f6da0533",
+      "hatecheck:default:test:1026": "f1c83cb16837f400e9d02f2cf789134b3d4b2a09aa7b93b7a332ba911a094f5e",
+      "hatecheck:default:test:1079": "d3bebcf975bac0ffaa263d0c7dc317a778c5f92c407ecf3b6fd23b97ae2ea564",
+      "hatecheck:default:test:1086": "c0ad0565dcfa7fd8d953997361e91ac81e3f208d04304094180ac3dfae33994c",
+      "hatecheck:default:test:1107": "1e79440dded9636bba679b8ff69c8f6e03bd1d6d1e03091eacf50bb9fa5421fe",
+      "hatecheck:default:test:1185": "e9e131e4239e832ff6af9c2e66032d99866fff4ed079bf47ec9d3b2fb27aa5b6",
+      "hatecheck:default:test:1194": "cd64a3391b76260f7d7a401a0aacd5f37b56a00111e5f2e5379c95e319cae8c4",
+      "hatecheck:default:test:1199": "b587c5cc515b53f53b26fa6cceb06e048c82453af5218c5173eb3d85896d2618",
+      "hatecheck:default:test:1257": "8cf2a1e70c09adf0cbcc3b7d48a7ec1d490b985b147e0dedb054b66e94011f9e",
+      "hatecheck:default:test:1275": "5633801e781d7d2b02d5a7effd0200af8e89a974dab7d75479846a110967d027",
+      "hatecheck:default:test:1293": "5f3823c16f959cdd25fe1ff8b65a03c7eeffe7da37a31f726231fcfda63195d9",
+      "hatecheck:default:test:1306": "a190423fbadb48435eb176a92ed1868f0fcd2f896cc7942b32a6692038f04186",
+      "hatecheck:default:test:1338": "38206b300f226040156d39039586e4f83e7ade45186d1f0e4dba6b0d93918ac3",
+      "hatecheck:default:test:1350": "41c7b35b8759953db5a93bddf76bd9e7d5f5a063bf10d5807da37acdc2eee16e",
+      "hatecheck:default:test:1352": "f41d8934c3550a3cae552a0ab2c4a06f36080fd382efda0a3f71c8b3df8861d9",
+      "hatecheck:default:test:1428": "4e439e4878fa119e346d07487bb47161f0c8f26b331190541cbfb4ad99592695",
+      "hatecheck:default:test:1478": "4db5509b4f8d9e29c913fcea7a791ee2cab35e29376a30529628a87df38b6a94",
+      "hatecheck:default:test:1561": "70d707aa4ea1965dd74385265f0ef319740015530810b09fb70a6573b41e2fcb",
+      "hatecheck:default:test:1609": "57d9a6246463f55d5eb08f18f2d8d665229235aec73b941a6192af08bd8ad4ca",
+      "hatecheck:default:test:1645": "d2a7dbfc97b4904ab78b3fc6c2324f3316a86399a278c3b1fd2c63318df7a241",
+      "hatecheck:default:test:1723": "580828daee917525453e3d0e451b666ca9e1d7c76f9c7dad4a96a0c40102c1ef",
+      "hatecheck:default:test:1748": "d52be11eaf1e981322d0c787c0bbe95a9d927547c20d8a2c4138181e121aa947",
+      "hatecheck:default:test:1764": "3e99c747afbdff43f3e214b592ebbc8f79149fb7bf938e196226b26d1df0bd4a",
+      "hatecheck:default:test:1782": "8164082644bb3c618ebc1fe59313805014c12ee906a010bd612b1f41537383be",
+      "hatecheck:default:test:1794": "bad0718f2489db94bef5a0ce4d388c3f0afbd39bc9740cfeb1b1f59128ce49d1",
+      "hatecheck:default:test:1833": "28d75cf3d3d18c9c69eff0fc65108b1dd56fb9ccaa472a03bfc7aa88b12d6142",
+      "hatecheck:default:test:1836": "4a8040d04a5ccfac9abe6f457f3c604064c38a56fee1a7e3dd04278fa530e937",
+      "hatecheck:default:test:1837": "7ee6145797e62579038f087b75f16c3737030caffdc458b42a74c03754a2b799",
+      "hatecheck:default:test:1853": "ea5bb27a9a5078fae3cd85018c03e85f14eecfd9127321d6163df6d80d707c61",
+      "hatecheck:default:test:1985": "85da17cfbae84a0a8110fcca931af3226f507e25d9c4a5db6a2261cc43527bd0",
+      "hatecheck:default:test:1992": "4ec31e55bfcac43a9feac79bc3d960def3a905a12f479e616d521e38caf54f60",
+      "hatecheck:default:test:2157": "f58364bd08bdad2e62b61967db51681c805b9d15b1015f88bc2178c4b2fb58be",
+      "hatecheck:default:test:2163": "354dd4f4dbe98a51416ab946020e4462a9bee6be9e8449db5b9eb9a439033d9b",
+      "hatecheck:default:test:2193": "5b73da0d46097d6bf341539bac0eadf3de36ad20bcb61d8c62d3a18f0146b6a0",
+      "hatecheck:default:test:2220": "0272bf5bfbcd390cf5b7445f4778036ba1e3b79323592185b11799af82c4e79f",
+      "hatecheck:default:test:2228": "c09ba0e34a2f4e6dc3068500693ef53a4f773bfd8cb749b90babe503206983f4",
+      "hatecheck:default:test:2246": "0b7505a57303a9981ffa325ded56b8e5d359f0bea2eea1dd58c9424dbe405855",
+      "hatecheck:default:test:2290": "6fa519347ea1275c00c1484f2c83a1f3108c51d987e53b835bae34810f0bd7ec",
+      "hatecheck:default:test:2291": "e225419aeffc273475bbeb1b102cf9514bf158f129d9f35af209f7453030fb18",
+      "hatecheck:default:test:2432": "a961e89bde5410ed8d2fe6e9fa634a316fca2ac89d0f20d40c695cfc312f6a7b",
+      "hatecheck:default:test:2433": "0f389202bb55a4332aba6bf795032994a4d4d268d7ea3787a30fb32d7245c9d6",
+      "hatecheck:default:test:2457": "c6dab8cfd3682a07dfd8f3b65aaea7330738f1c70a9f7717e339a15669329575",
+      "hatecheck:default:test:2505": "e88bc3b2a3d43c63edb0b4a7b5b8be44a9f0de311918879aa22700a5fe5db40a",
+      "hatecheck:default:test:2532": "add46069d869aa1c2c1a52a95c50d39d89fea14d13bf1c0d47bda5f54145746b",
+      "hatecheck:default:test:2543": "06ae0b30b500883692fea277a09f37ee15262abff138036d085a19ac8926c7d2",
+      "hatecheck:default:test:2563": "3fc3824ec0b280ae890ab2962eaf1013fef08276a7e1f11903d95697bb872c48",
+      "hatecheck:default:test:2582": "37eb2a8c7d8fa0640a5783b824671d94efd1b697373e0f5bbb1c7a33c2ec7794",
+      "hatecheck:default:test:2588": "90030e4712d66799f6239ae587f8bbcb3e583fb459662daa967d7a511728d3f4",
+      "hatecheck:default:test:2637": "697ac929edfc4442dc06c271fec8e1e00cfad01374a977351ea4089afafb1252",
+      "hatecheck:default:test:2687": "6394723cc51f3c72b9b0e74a151a7c2eb4694f6226c23fd1ca2058da7edbb83b",
+      "hatecheck:default:test:2699": "48f9158709c7e59057c58f6b1174e5efb9f207c55733fbfd50add6c8d2b65c6a",
+      "hatecheck:default:test:2726": "4a7c1f62aada572898280265b3daa2ddd39176946d878bfb2d92bb0e849a930f",
+      "hatecheck:default:test:2775": "5f5f195dfe65463f2c3b474679e0a1b7905bbd1847e55b72e6d8da6cdc63eb47",
+      "hatecheck:default:test:2790": "dc87772a35157db5ef29e9f8916f83fbf5177d57f1412033c005aafbb5478b17",
+      "hatecheck:default:test:2791": "0ea43f979d4339a89e71d432a36ee85377eec88660eb20c781ddeac56c6fa5d8",
+      "hatecheck:default:test:2802": "00ead7dc77cc0ec2bf974e6e401912c299b7548a7c8dede6cb4ee986364a9ec7",
+      "hatecheck:default:test:2828": "fc7b9630b5f6e9142ab0244cc39832dc3f658e8c1527f925ba87c64c87b3b730",
+      "hatecheck:default:test:2830": "66df35bf3ccd16955b53acc1a7f35c2627d54e66159d5aa7f535ba1c49eacbf0",
+      "hatecheck:default:test:2877": "bb6185a27b2853415f315356f038bbd9627d9e99eb0b3bd7eb0a3efb605447a9",
+      "hatecheck:default:test:2901": "a2b07e0417e79c00c1be3936a4fc667290cca4a5f81207ded447402e3851ad47",
+      "hatecheck:default:test:2903": "e9d6e53c8b75a4fe488c235dff9df1cca9aa84c2edce36eb26d0cd106a2f3c22",
+      "hatecheck:default:test:2907": "8c4f20347906c64ed140c0f120e83d5f66d8f9db68f1cd573321ac45212e2bcb",
+      "hatecheck:default:test:2952": "67c6e3dba384777e4d216bc381a4070e9945233ba62773704e6dad48db4c8b00",
+      "hatecheck:default:test:2990": "43ac922e0c3545503dd89a8a71de0032996df685ef746aec33712108ea1b4036",
+      "hatecheck:default:test:3002": "7d1347f3447a56f4295aadee2e191823375bc157e8dab3c388c2ad50e3386b5f",
+      "hatecheck:default:test:3081": "aab8ea5c2c738bf81b5fe4ba0dfef2a3cd1ba116003fba41261118319c527cea",
+      "hatecheck:default:test:3175": "de86b1a1e9a4305dc4951df01505e9e752d46f45f2bc22474822f4b4a7ae828d",
+      "hatecheck:default:test:3213": "527a68f7b9c2f407dbd3f29ae7bab8bad56680c6af94b25f3e27b12daee73ac7",
+      "hatecheck:default:test:3225": "bf9158a18e61d6c798ed619971e6bd1b58db48c125b4362a5b7f01d2ad269abf",
+      "hatecheck:default:test:3293": "7df8ab593b277b422f080541544c2ab93eb4a0264ff11c1bce7297537605ee5a",
+      "hatecheck:default:test:3334": "4612340c940bbbadbeb38e555f80603b6915ab0c37468ab80d5f7c3ca5729fae",
+      "hatecheck:default:test:3376": "550eecf7a7ee025d7565345128b8c24ddea16639d5677ff0386036de51107d24",
+      "hatecheck:default:test:3484": "36dd556c647246676d9ce78e9a6750fe31ba0470c4ebb05af7efbef88abc6efd",
+      "hatecheck:default:test:3556": "e12bf94da1253c7cffdac7de3569c6316d86ce4e8bc904032963a80dafe6815d",
+      "hatecheck:default:test:3569": "2a3e6baff7a28f25d0d76efe85ad1bfaef6b1ec1efa3a17e1405396e4d704142",
+      "hatecheck:default:test:3587": "3a0be69222a25f6d40f2e4c58fa935a62fd4fc807cbf8b40e04528dbb77253f8",
+      "hatecheck:default:test:3595": "8ccaf9caecb3a3e259cf8bb9df4b1122f30390f4247d599f597e1e12b1b51ad5",
+      "hatecheck:default:test:3664": "b9b2704acbe4cd10c10b33297f8c6bc45e9a1d65d552363d8854adef8ae80ec1"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "hatecheck:default:test:36",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:77",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:91",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:94",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:152",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:155",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:159",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:223",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:239",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:281",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:435",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:457",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:495",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:551",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:599",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:723",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:735",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:772",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:782",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:830",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:996",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:999",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1009",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1026",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1079",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1086",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1107",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1185",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1194",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1199",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1257",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1275",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1293",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1306",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1338",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1350",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1352",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1428",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1478",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1561",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1609",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1645",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1723",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1748",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1764",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1782",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1794",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1833",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1836",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1837",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1853",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1985",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:1992",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2157",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2163",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2193",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2220",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2228",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2246",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2290",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2291",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2432",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2433",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2457",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2505",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2532",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2543",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2563",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2582",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2588",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2637",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2687",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2699",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2726",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2775",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2790",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2791",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2802",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2828",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2830",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2877",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2901",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2903",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2907",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2952",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:2990",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3002",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3081",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3175",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3213",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3225",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3293",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3334",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3376",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3484",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3556",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3569",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3587",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3595",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hatecheck:default:test:3664",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

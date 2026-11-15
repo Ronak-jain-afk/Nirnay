@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--citation-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__citation-control-v1",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:14:32+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.33,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.34,
+    "baseline_adjusted_skill": -0.015151515151515168,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 15.737467300001299,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:0:support": "b6b9cd0caec0f17841d188f718aa336c54a8896036808fc89b4ea3716508bfb3",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:2:support": "f63a6ae4dfc5c94c7229b06cdd93c394973f5dd3c6990d4730a893a34805db1e",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:7:support": "5d2cd90fa40b5099c9affd00d62e6f75b6b4cecf03ac516ce44813459f6da480",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:8:support": "c412e6e7002efd1a66f8bdea985162f7385a670aed98681b7b400fe1ead4e4ef",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:9:support": "83dc3b3384ef1eea169155faba6e20ace15624ea3730db600a1c32d0719a0033",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:10:support": "58dc9951292ad41733b59ecc04db6c5dafbaf1dbac443ecf20829b148c2c5fe1",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:11:support": "6b20f6a78d8ccbb167eea4a0e50651037b3c53b0e63038861c8ae751bc874239",
+      "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:18:support": "5cc8513c39cc1dae3ef28d8729144a9be4a134d0a78a2ca83f6e0594e5191874",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:0:support": "1020f67f4d1a3a2a2a7cc605a6bc1cedf284bed7e458fb99cbb2b8eaabbac56a",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:2:support": "20b5070c865b761a831c5da04be4a47cd8e8cf671c99d65762d0fa402a4a20e6",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:3:support": "7bed965b73e31967f48aa691a687de4da9f6b39ba2f74d8c1d57f8c53c3847c1",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:4:support": "1f06f9e1975ff05f7fdfdb85a6732ab1436077c4c8ab9f8c135362dad8206dc0",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:7:support": "676acd5e8efcd83de26a97e9ac986dfd061df3db61237db983ed08e06299fe28",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:8:support": "f667cd9783763373432d082aa5ab2d6444328894e2bba3d9dede6cc4434bb9f3",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:13:support": "b93d7ee3b9059d7c0e2d3635996983469bf4eb12063a23094ba54508fa6d1cca",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:18:support": "f40b90bad2662030af17160a09896091927ceccfad1e59650f2f128d48112bff",
+      "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:19:support": "c106eb6e86fb6f20d55636c68b962d8948fda4acfa29eb523a49a7f96e668c74",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:0:support": "b615734077b759d2de2b2d5e5c71fba3195799f8060943745e6b073b050136df",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:3:support": "2ed7bddacf6795fdd0d664c71dcf75ff09d082a0052704cc298c65a4098b0ce5",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:4:support": "2a2c41958c10c713315bf8c98e7652376f790002a7f77e450a5c65a920f84c02",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:5:support": "49b1575fd401f91f472ba19526e0873cb434d92818b3545a37980c3a9b5b486d",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:6:support": "68a80df9c2a62ae2a3d207333da494428492b835bbdf917f093f47868ec2b7db",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:8:support": "2f03ff0c4275e8ba7f0d81ec2765d392b263f44901b1379629d1266871acc045",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:9:support": "edfdcf087a0763bb9cc75126bcf428bd55e6a31a0e9fe3db0d2483e5376b82ea",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:11:support": "a6a887464981c5280ccdb0514def4778e49752ef87db43a290a9449d316106b0",
+      "open_jev__citation-control-v1:doc-359056485137c254e681:case:12:support": "d05a7a74c2257320d91c94a12d4d8468826a47123c06646d069d37d5c24e516f",
+      "open_jev__citation-control-v1:doc-e91107070cae67127018:case:1:support": "d351f0d0b6bab177cd8ac441d09786b21c21e19f846539e2151670fb3d095da9",
+      "open_jev__citation-control-v1:doc-e91107070cae67127018:case:8:support": "856090d864c30ffc72918c8ca7281cef5618a1e7e5181d7c1b384b661889acc1",
+      "open_jev__citation-control-v1:doc-e91107070cae67127018:case:11:support": "1e5cff03b5e95fe09521fff23c1008d38788ae34d9015020729c62118a4a61b6",
+      "open_jev__citation-control-v1:doc-e91107070cae67127018:case:14:support": "81f9f77f56734a12548c945c9293df768d00d4e9689c0d2823dee03a275ae06e",
+      "open_jev__citation-control-v1:doc-e91107070cae67127018:case:17:support": "033611596df3b064ea56fa2441fba7b8da58cc9be1448988c29f42c407a35b6a",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:0:support": "2a685f57adc1f5d6daad4621713f9448dfebadb3e19a32e8519f55e4240dab34",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:1:support": "59a3bd3a91623539efcfee7715023c7ff51bda5eae9e3c0c91e467b57fac12fd",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:2:support": "99ffad6cb7fc0dbf31ad2370f4cd15adedeeb3a595514a77a32c868fe6d0b131",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:5:support": "d0c9e0abaa34035752d628b5ee7f546acedc8b4595e358e1eb4a3f68f2e3a771",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:6:support": "c70993b4e15cffa88dfed051bb31203de3a81c494198c5d27827f5172e1f983a",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:7:support": "d4706bf4b690b027a020f522fe6ed86b0f8104dfdb5a752441512c90e5e34e35",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:10:support": "0bf7520642590b220d23af4ed83e85f45ab8c94e96d4c7c085c4ffbe57179605",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:13:support": "e0836111d3f3927a6ae8030d4509d05d0c016966784c144b7887a272a1e0476c",
+      "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:17:support": "84bcba513c1566d89f73dbfd2965bad8110468091a8bed8423add0ff060e7d9e",
+      "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:2:support": "0323f88614a2ded521200ff71f2449df1a4e42726449f5088bb72234a79aa626",
+      "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:8:support": "d5dc4fe7d7464eb90601fee7977836690a995727bb08365acfa443c91c50fc71",
+      "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:17:support": "4255afb4a5c9e3230f5e90f21a587ec2ea20534312ae661ec5bc3528c6a5f861",
+      "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:5:support": "f076baa49be48fae8d2d3349cba4ec7c530fd621c35015aa13e18e2cfb91bf1b",
+      "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:7:support": "c3680fd130a903544679031d07c94a45c8f2937b4fbb64c4fb40be5e65b81721",
+      "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:12:support": "4aff0b9f2e38724eafb88e5c8deaec3d4b44538bda3ed9881c2573face23d74e",
+      "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:16:support": "fe4721db61acf1623c4edfe46113c6052d7a2147c37e2936b3b81f1fea37a5e7",
+      "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:17:support": "fdf5d6cedc0bf028c082979c75c57ce49b5279be72ce155c2173eae9679a5092",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:0:support": "65c0472b7e6b250da0e3e9638b62803475f567f55d63d3a02d42eeeb39beac77",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:2:support": "25060b8270c3cabbb47559f53d2df39141e263ea172fa64fb286694d14631df5",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:4:support": "b6b90cf161b71c14dfbef546b3a696c529add0ea7d072220aa64f380945874be",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:6:support": "937e0ad01c3bfc2d7bb2bee9deddf705cebc0ec9dc1c6d71685ca51adda72080",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:7:support": "eaad84f220c8871508dc19765d3bcd6456c6d58d944982d463a9c951a0005bb5",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:10:support": "71be8d65f0d72d60e62f7d37f8c1c4c0753cfa2bca28d6e75ae07469757759aa",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:12:support": "e5621b27af2ce9c92e19ee77aa8bedeea8011a5e2da6ad9c5fddf4bfe05ada6f",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:17:support": "2e736f324ae35f67d948ff5a5da90a4482f60d41d7e0f2c644ce17323effb0a1",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:18:support": "e969f00b7034c29235f3b700dfb8ce2f0dd7731fe014a3cdc0e20bfd4e94dc39",
+      "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:19:support": "2398e2aae482ae435607af358644446146cc6396663dc9233fb380f163352127",
+      "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:2:support": "924accf68850af460055621d5086f5e0289eb830435b8cf4b149570005870a94",
+      "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:5:support": "35ff5cd979dd453442ebbbdb35ae4595da7e7942520a92d1cb31f883de32f0aa",
+      "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:7:support": "17d00d7efa60adc7ac88bb44e7e8d9fa86cb2fe6fc2ed3cfab914c6a6cc7ea1c",
+      "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:14:support": "0c14714aca9d97f499ed0e765c81d8789a4e30aa083a6ee81c48c0abfe892138",
+      "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:16:support": "713361d1727612c2b066e14ca06400a91eedec2ac76bb3cb66ea5fd882b32956",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:5:support": "1c9053b665ec51a6e04a671e8ab15d641c24a7f57fdb036fe1969c107ed515d4",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:6:support": "73d227d6f019c8ce35c16974c175690c9bc9f73f206677e4e73ce007227eb411",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:7:support": "64d517b7c59cdcedc7f47e940e8a46b73bd4a3e90f6d9333907193df10f2c391",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:8:support": "19bbb1d75eb5a448c7ad6e3aae9712bcfe85f35c513890f1793bcff647d5fe38",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:11:support": "939e322c6485cdcb4585b592bbb55fec398e641950aa450f83ce594836a49666",
+      "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:17:support": "abc896b3745ef253576e1eab16e6f177e411b1d77b884e3dd93da38694abe1a5",
+      "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:5:support": "0b91774a98824635aefe64e4c0adc576058a0842d9b038769abdcbd8a1f85c18",
+      "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:7:support": "395f4b56447e15194116e32a7a10ee6edbbcfe6f1549c6567a1400dcc407af03",
+      "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:15:support": "05abf98033bf689eebce911a5cd7cd32d7a482d77cf7bbe401096af2ae61cd51",
+      "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:18:support": "2428cef8adf1b19f4802177f56cbbc8f9ba0fcbcbe165d59e886de17d199e054",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:0:support": "7908b6165b3faf19f24e0de0e4fd859ab0f4627d233d13d108af317b91ab3bc8",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:1:support": "15904289c4fd2abfe9928ce31457ca7aedb7ab77f01a221a6545a650f156a73a",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:3:support": "ef59a56b291d25e37e03361a4f950d747742350a5a046c8dcc595e8de15bf413",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:4:support": "2271dd5b6d006b94a6cc78ed8634adcea18c516be4779e40f66eef60a045b65d",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:7:support": "e8c8e68de7f50fc9c82fef29465562bf2d2cadc4cf77a8cbc251778617cc8030",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:10:support": "1c1717b1e8495d3eec98bf6472c632eb759764923a688f13efafa403d68c1707",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:12:support": "36de0a33dc9bd7b91b66cac345f64d35c2f8798b96bfb20967ed9b0da7112a07",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:13:support": "1b00963f6c5d366928f2ba7482dd735b92b9b3531ad40383599ebf87e0cdbabd",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:17:support": "6d1900c30dfcf4439db4a778518d71890c9bb0846c08c00e67a7e08c094fdec8",
+      "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:18:support": "4de9e655349143f6a1f0a868176491301722fcca375cb6737f2aafaf4cba3d15",
+      "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:4:support": "b3d09322b58b49c3d7ce2f9812f5b8535f96e39f655d89b2cc4c7b2ba039abb8",
+      "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:6:support": "99e955da0073f36b01a13661a7f4438a9245d0598686709e1e77eb08f5fdb7a7",
+      "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:13:support": "dbc78e5595551dc39f041fe8237c54e682a3e7382323f03917aa11f6661f59ed",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:0:support": "b24c56cd5e6403fb046ee2d1b4d467eecb61ec3d8b9de5d346abdf687066478c",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:7:support": "b50f233723a686cc36695683142c053bc24c97efa0982ad528158c88328c47a5",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:8:support": "b664562281c80ac01b842831a445f3f61ae7f0f3ca4e2d54b6fefe1dd6d6df95",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:12:support": "8cd69740646754ae8e8a746ba2b2c9ce73840a889946716738ced61096fa5561",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:17:support": "a161f5add87eaa312acee185f1b6ba31d95e6c4a9e9cd846f7f60f17bcc708df",
+      "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:19:support": "4e7b1c1182bd1ed7f898df9a643748973a377e5f7c22ca466b6642f6241bcdb4",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:0:support": "89e87527c610bb05915bb6a8be0d52f70512b893e9a88c79a777d0bb78e73750",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:1:support": "4c0333d39b3a53303060ca8116e0494ee97caf690c3093823e363f7720b28faa",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:2:support": "5e2ca702dd652bbcb04fcbaa3e821dd17ad520d45c447c2d651b3277519ecaa2",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:4:support": "61462e38db2db7cfd03119f26e7749b8549c4a631779822de67cbfd6285cc0b9",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:10:support": "55b8f7a126dcbb584012e03359c7e45b33e97ae7cf9c5879518c2cabd44e878e",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:11:support": "515b30f496618186e6b04d50ee0ea0a6e9899280dd06a8464929086b5f581f8d",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:16:support": "2c3d017db6a75f96a28522071b27c3a8f67c6bddbb8aba856e4452df929d07dc",
+      "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:18:support": "a5b0dc485e1de0dc32f3ecd26c8d100aa332a2e29326e877bdb6cad2cee8546c"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2924151696606786,
+        "option_1": 0.2885229540918164,
+        "option_2": 0.41906187624750496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4448551448551449,
+        "option_1": 0.21368631368631372,
+        "option_2": 0.3414585414585415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4355,
+        "option_1": 0.2188,
+        "option_2": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.2148,
+        "option_2": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:9:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4316,
+        "option_1": 0.2207,
+        "option_2": 0.3477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:10:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44384384384384384,
+        "option_1": 0.216016016016016,
+        "option_2": 0.34014014014014016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:11:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2793,
+        "option_1": 0.293,
+        "option_2": 0.4277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-c35da12bddd34783a1fe:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4375,
+        "option_1": 0.2227,
+        "option_2": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.289071092890711,
+        "option_1": 0.29687031296870314,
+        "option_2": 0.414058594140586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4585414585414586,
+        "option_1": 0.20589410589410592,
+        "option_2": 0.3355644355644356
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:3:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.45074925074925076,
+        "option_1": 0.2097902097902098,
+        "option_2": 0.3394605394605395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.46048556299330606,
+        "option_1": 0.20781296832850435,
+        "option_2": 0.33170146867818967
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453547,
+        "option_1": 0.2077922077922078,
+        "option_2": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2852,
+        "option_1": 0.2988,
+        "option_2": 0.416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:13:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2891,
+        "option_1": 0.2949,
+        "option_2": 0.416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2734,
+        "option_1": 0.3047,
+        "option_2": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d39df83049dfd2cb8969:case:19:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44384384384384384,
+        "option_1": 0.216016016016016,
+        "option_2": 0.34014014014014016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44770293263937544,
+        "option_1": 0.2081873686317686,
+        "option_2": 0.344109698728856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:3:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4437994194775298,
+        "option_1": 0.2101891702532279,
+        "option_2": 0.3460114102692423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44770293263937544,
+        "option_1": 0.2081873686317686,
+        "option_2": 0.344109698728856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.442912795924483,
+        "option_1": 0.2058735391069823,
+        "option_2": 0.3512136649685346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:6:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3001996007984032,
+        "option_1": 0.2826347305389222,
+        "option_2": 0.4171656686626746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44960464417976176,
+        "option_1": 0.20628565709138225,
+        "option_2": 0.344109698728856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:9:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44033663961526903,
+        "option_1": 0.21130147279831682,
+        "option_2": 0.3483618875864142
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:11:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3001996007984032,
+        "option_1": 0.2826347305389222,
+        "option_2": 0.4171656686626746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-359056485137c254e681:case:12:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.31053105310531054,
+        "option_1": 0.2773277327732773,
+        "option_2": 0.41214121412141214
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e91107070cae67127018:case:1:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453547,
+        "option_1": 0.2077922077922078,
+        "option_2": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e91107070cae67127018:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2846307385229541,
+        "option_1": 0.294311377245509,
+        "option_2": 0.42105788423153695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e91107070cae67127018:case:11:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2778557114228457,
+        "option_1": 0.2915831663326653,
+        "option_2": 0.430561122244489
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e91107070cae67127018:case:14:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4629,
+        "option_1": 0.2051,
+        "option_2": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e91107070cae67127018:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.2109,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.30466953304669536,
+        "option_1": 0.28517148285171484,
+        "option_2": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:1:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4425149700598803,
+        "option_1": 0.2124750499001996,
+        "option_2": 0.34500998003992017
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4487960835248277,
+        "option_1": 0.21170946148466382,
+        "option_2": 0.33949445499050857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.43901708121066824,
+        "option_1": 0.21366496853461192,
+        "option_2": 0.3473179502547198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:6:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.29687031296870314,
+        "option_1": 0.289071092890711,
+        "option_2": 0.414058594140586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4425149700598803,
+        "option_1": 0.2124750499001996,
+        "option_2": 0.34500998003992017
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:10:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.45074925074925076,
+        "option_1": 0.2097902097902098,
+        "option_2": 0.3394605394605395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:13:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.43901708121066824,
+        "option_1": 0.21366496853461192,
+        "option_2": 0.3473179502547198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-7135b1f663f3ea77437a:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.43901708121066824,
+        "option_1": 0.21366496853461192,
+        "option_2": 0.3473179502547198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3457,
+        "option_1": 0.2617,
+        "option_2": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.45941347212491246,
+        "option_1": 0.2101891702532279,
+        "option_2": 0.3303973576218597
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-18793c9c13ef677a2ee3:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.43989590631568415,
+        "option_1": 0.2179961965769192,
+        "option_2": 0.34210789710739664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453546,
+        "option_1": 0.21168831168831168,
+        "option_2": 0.33366633366633364
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4531453145314531,
+        "option_1": 0.21092109210921092,
+        "option_2": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:12:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4512,
+        "option_1": 0.2129,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:16:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.46048556299330606,
+        "option_1": 0.20781296832850435,
+        "option_2": 0.33170146867818967
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-d3c72188f845544a6fcf:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4414,
+        "option_1": 0.2148,
+        "option_2": 0.3438
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2969,
+        "option_1": 0.2969,
+        "option_2": 0.4062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.28517148285171484,
+        "option_1": 0.30466953304669536,
+        "option_2": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453546,
+        "option_1": 0.21168831168831168,
+        "option_2": 0.33366633366633364
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:6:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4512,
+        "option_1": 0.2129,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4531453145314531,
+        "option_1": 0.21092109210921092,
+        "option_2": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:10:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2832,
+        "option_1": 0.3027,
+        "option_2": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:12:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4629,
+        "option_1": 0.209,
+        "option_2": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4512,
+        "option_1": 0.2129,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2715,
+        "option_1": 0.3086,
+        "option_2": 0.4199
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-cf2f889b130701080656:case:19:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44095904095904104,
+        "option_1": 0.2214785214785215,
+        "option_2": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.30601856472701866,
+        "option_1": 0.2826629404132149,
+        "option_2": 0.41131849485976646
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.43901708121066824,
+        "option_1": 0.21366496853461192,
+        "option_2": 0.3473179502547198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.2109,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:14:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453547,
+        "option_1": 0.2077922077922078,
+        "option_2": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b1ca626561b08e100dfe:case:16:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4531453145314531,
+        "option_1": 0.21092109210921092,
+        "option_2": 0.3359335933593359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4355,
+        "option_1": 0.2129,
+        "option_2": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:6:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.30466953304669536,
+        "option_1": 0.28517148285171484,
+        "option_2": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4351084024378059,
+        "option_1": 0.21560595464082322,
+        "option_2": 0.34928564292137076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4437994194775298,
+        "option_1": 0.2101891702532279,
+        "option_2": 0.3460114102692423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:11:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3008,
+        "option_1": 0.2871,
+        "option_2": 0.4121
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fc53995856af4ababece:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4339905915323791,
+        "option_1": 0.2179961965769192,
+        "option_2": 0.34801321189070167
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:5:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4437994194775298,
+        "option_1": 0.2101891702532279,
+        "option_2": 0.3460114102692423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4414,
+        "option_1": 0.209,
+        "option_2": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:15:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4414,
+        "option_1": 0.209,
+        "option_2": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-393593401226cc9036ae:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4375,
+        "option_1": 0.2207,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3079840319361277,
+        "option_1": 0.2846307385229541,
+        "option_2": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:1:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4448551448551449,
+        "option_1": 0.21368631368631372,
+        "option_2": 0.3414585414585415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:3:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.2891,
+        "option_1": 0.2949,
+        "option_2": 0.416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.30466953304669536,
+        "option_1": 0.28517148285171484,
+        "option_2": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.2109,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:10:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453547,
+        "option_1": 0.2077922077922078,
+        "option_2": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:12:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3079840319361277,
+        "option_1": 0.2846307385229541,
+        "option_2": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:13:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.45074925074925076,
+        "option_1": 0.2097902097902098,
+        "option_2": 0.3394605394605395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.44770293263937544,
+        "option_1": 0.2081873686317686,
+        "option_2": 0.344109698728856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-aac693cc6d92426d3c14:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.291,
+        "option_1": 0.2969,
+        "option_2": 0.4121
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3145,
+        "option_1": 0.2871,
+        "option_2": 0.3984
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:6:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.2148,
+        "option_2": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-e53df372e5c7e8833e49:case:13:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3008,
+        "option_1": 0.2871,
+        "option_2": 0.4121
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.30466953304669536,
+        "option_1": 0.28517148285171484,
+        "option_2": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:7:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4448551448551449,
+        "option_1": 0.21368631368631372,
+        "option_2": 0.3414585414585415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:8:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3047,
+        "option_1": 0.291,
+        "option_2": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:12:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4512,
+        "option_1": 0.2129,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:17:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4351084024378059,
+        "option_1": 0.21560595464082322,
+        "option_2": 0.34928564292137076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-fe7aae9cf5805136dc9f:case:19:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.291,
+        "option_1": 0.2969,
+        "option_2": 0.4121
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:0:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3047,
+        "option_1": 0.291,
+        "option_2": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:1:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4487960835248277,
+        "option_1": 0.21170946148466382,
+        "option_2": 0.33949445499050857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:2:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4512,
+        "option_1": 0.2129,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:4:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.3099111687793193,
+        "option_1": 0.28655554446551557,
+        "option_2": 0.4035332867551652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:10:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4487960835248277,
+        "option_1": 0.21170946148466382,
+        "option_2": 0.33949445499050857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:11:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4487960835248277,
+        "option_1": 0.21170946148466382,
+        "option_2": 0.33949445499050857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:16:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4546453546453546,
+        "option_1": 0.21168831168831168,
+        "option_2": 0.33366633366633364
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__citation-control-v1:doc-b66268a8e90abb0bdb28:case:18:support",
+      "question_id": "support",
+      "probabilities": {
+        "option_0": 0.4375,
+        "option_1": 0.2227,
+        "option_2": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

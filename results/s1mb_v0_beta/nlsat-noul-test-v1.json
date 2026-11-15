@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "nlsat-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/nlsat",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:13:16+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2599909407000001,
+    "accuracy": 0.5,
+    "positive_recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "true_positive": 0.0,
+    "false_positive": 0.0,
+    "false_negative": 50.0,
+    "true_negative": 50.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.03996376280000047,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 15.981744699995033,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "nlsat:default:test:792": "72e097c9e4765b386256109d1fb70697c6add5d8eecd536b6e0147a7636e2693",
+      "nlsat:default:test:939": "4fdaaa7df03ca8f36bc5ca56b067f03276efe35e0f279a6c4bb9d175c6c828bd",
+      "nlsat:default:test:1141": "68b096b6d31bbe06845b5cb4649883773222653a1d21dddcf1f800f3d60dba8e",
+      "nlsat:default:test:1190": "4e2e1f9f5fb1aa4b937a9da77b527c7c12337bfca3a947e30bdd3295fa33c99d",
+      "nlsat:default:test:1742": "02a552bc1197535163d94222915126e8a94442e1b499e0e97bb16509f1d339b6",
+      "nlsat:default:test:2546": "e60e6c8159703bd626506a7e79e592b0e93b4947f6132cddaaa7288e84d413f2",
+      "nlsat:default:test:3708": "d47b293fac624895eb1eef472ced54e19c91f578bd3947e14e46da63db1b680a",
+      "nlsat:default:test:4325": "8d5dd0d581772b59112217164e0547baf09d987cb7094c11f09599913c8e471e",
+      "nlsat:default:test:4715": "bdc28f4423798f963c3348728f99c928ac3c167e61e17468d21074db1c413f8d",
+      "nlsat:default:test:4731": "40bdde8c9d976d54b5e421495b6bd7b93dca0f6285904e6e77fd4fd37d2a0423",
+      "nlsat:default:test:5197": "bd69e7c3bc27d6571a42a0a03a923192866643a694fbf926a9b430ce671acc13",
+      "nlsat:default:test:5611": "92a4bef276538e6498afd69b5049db7325f56ffb25efefea4d674af8c8aaa5f7",
+      "nlsat:default:test:6488": "36482fc65cb3056d56b5781d22c8fa0b2cc17556dd6afb8bb3e50bdde846fa9c",
+      "nlsat:default:test:6820": "fa8b50e662d780bb2a17b2a0f17db95ade8807572250bfc3cb2d89f564cf69c3",
+      "nlsat:default:test:6895": "9477c9e5e2287b61e0a2c5c5afbf7b995da367316677aec92daa10ce3369050c",
+      "nlsat:default:test:7739": "8913e495eeb1c16bd9e427059cfe044e8551907714dff8954fe5a303de96d91f",
+      "nlsat:default:test:8296": "9c65d36963c8d8e9d123c1cc3e0f023d5e63ab9b627bb51c62e15bb76e496af1",
+      "nlsat:default:test:8454": "9cf79e75e18794a60279a4ee47b6e9a5070f2fa6e9c57051ea6283d058f5d828",
+      "nlsat:default:test:8774": "a4bd355013d5413eb76cd56c403c26c2beefa0ec485881e371d57f29eacb5f26",
+      "nlsat:default:test:8836": "b46b4d00573f5590b484f190e5666f665b53db8b699c617a379c09ed45d17eda",
+      "nlsat:default:test:9214": "98ae327f0b37b244046b7e503a7dab0179876efbbf261acbc4fb48bb9b5bb6d1",
+      "nlsat:default:test:9565": "2d677f5396afa9952a7cf67c607bc12b3d5974cf87af785e5b003de650fd78a2",
+      "nlsat:default:test:9744": "6c2466f7347932acbe90b6fad0be7c83142dd857b828c9b0c851ab7cddc87c53",
+      "nlsat:default:test:9885": "d5a2e900b562db603300a1ff6275390beeb4b2ca57b67402b9d5689f44d2ec19",
+      "nlsat:default:test:9924": "96de30461dac7fe42d8028c5b79471ebc9ae36f81e2b4e66d7de5122e7538b3a",
+      "nlsat:default:test:10256": "36e2c287be15c71714ce72307199aad6e00d55dcd9ba92419c3ab254dedcd805",
+      "nlsat:default:test:10323": "323ff0e4c7c7b446578d8ea8713e6c44d25f14d1fe15c3dbf0a0a8a22f1f5011",
+      "nlsat:default:test:10364": "6987c19dc2e780554241852cd5665b032396dfe75949fcc0b143e725344464e8",
+      "nlsat:default:test:10516": "062a69243ad2104a02e238e317d0ee6238f837b32734a18f9b7296909be99e0e",
+      "nlsat:default:test:10611": "89cb02ed0433b04e9fcdfe062b91d6884c509d018354dda930adc712773213ff",
+      "nlsat:default:test:10901": "e6e9e9f843d752a3ca7c58d0bc35ca4c4192b35457dc51f10d1cd19b6ab884de",
+      "nlsat:default:test:11127": "1858f1b12d486994397bcef32c878d6f21bd406eba0cfa53e3297a4983d6b671",
+      "nlsat:default:test:11210": "5717e59c10916ba08de16fdc78f7697bc71aad9d44a19160a496c53dbd096700",
+      "nlsat:default:test:11694": "a37999879fe506aa8f3d61cd684717bf39d10ae3f4cfd33f70ed52774b68b2ab",
+      "nlsat:default:test:12158": "5815bc6150d97f55c2b9086883095f2e8c09075b060526b400e58b0df623fbb2",
+      "nlsat:default:test:12324": "06674a392427cfebaa8815c0f28b4d2bf98f6ea9442de086907cb02d5488693a",
+      "nlsat:default:test:12363": "93cc8fc996f90fc61647d9608f4366d756121f582af755ebd3600fa7d114152a",
+      "nlsat:default:test:12455": "ebb0a367ed21d78afec64f16d278b91ed9aeba3201e836884dac977ab53f8708",
+      "nlsat:default:test:12465": "f8657715613804aae5ac9c9ede649cbe5c37f40805cb865757cac0c6b38b4c00",
+      "nlsat:default:test:12800": "a339e0a0f741a30bc5c9711b5e74c49e1bd051b39f882b2162352a007c9865c3",
+      "nlsat:default:test:13064": "a9886618eef157fbb496f864f78edf412cbfb9236f1d1042dee3805bd90122b5",
+      "nlsat:default:test:13160": "febdd58ae2175598d2d93e8bbc8a52839234b0f9eb2a7293e92d16264a4f002e",
+      "nlsat:default:test:13643": "b6e3aa592a3d6e06f0174f30a0246b896df36b1854b527ad5d437fcb0e0efa7f",
+      "nlsat:default:test:13762": "870f3da9741ad93f84c92dd849dd0cc07e5fdbdd11aa6f567e7a58b2db48fcc3",
+      "nlsat:default:test:14071": "c352a436b02fb804d49bc6664eec66a837580427f8ac3288d501977d1e1b5a41",
+      "nlsat:default:test:14107": "88da838bfc1c050a65ad305b3d2ec2ec70223e7b9b4db78fe203651f3f4aa1ac",
+      "nlsat:default:test:14192": "a64accd80598e3e20f06e3c0d6b26d6234c3792a4bb7eb5320b4220850329a70",
+      "nlsat:default:test:14225": "b7b8640a822da66e7e9feaee6d3a13047749f33a6d9ca083cfc3a46eb8016d51",
+      "nlsat:default:test:14484": "6d89c10792f0dc67fdc0666e52f8c302ef0cb0c0e9565b2f5c68bea54d9e3da7",
+      "nlsat:default:test:14588": "f6980fb7e0a5b9c6c1368177ba1e5ef4e45641934f045f4eea8fb96fdd27c92a",
+      "nlsat:default:test:14625": "68fa8f1a31638a0393023675dd19a0ae9c441ec3e592a65ca61ef189a4f5e0f7",
+      "nlsat:default:test:14805": "0fc58544725c73a0e6de65fd2af552f3fbad19e7271de66f157f6184ea568364",
+      "nlsat:default:test:14863": "e7a8fd359c2a5f8ecf79c05454d52bb117767e2a157832dd350a10709142bf69",
+      "nlsat:default:test:15111": "827536b88c98cc110590f7a00be3f5061d630bb1005d10992a3868dad9e4fc69",
+      "nlsat:default:test:15277": "eb7cad8678429dba9ea6a661a8f05a7e1aa6f26ea90987d16ad698a32b7b1506",
+      "nlsat:default:test:15496": "143b09ee9f8fe6b0736999d93ab226723095db9fc31c48335e526632d90abe31",
+      "nlsat:default:test:15497": "58b7e804f6edf536b9266cceaad4ababa3ea8a0ed90ed56ccd92ded3896d1cd9",
+      "nlsat:default:test:15669": "c76c0d8cd22cd7081ede6eefb38e9ddd24ce8c00a43cd5d244de48ed9cc01227",
+      "nlsat:default:test:15793": "5974d765517d32b400cdc9057e2bfeec1b8c1d2604f3be585d95b36b7e35f7ed",
+      "nlsat:default:test:15807": "eaeec38f6ecc0234f1ea71fbff355a85936fe3f70ff190b4bd6162b5288da94e",
+      "nlsat:default:test:16106": "49353dab25511ce39625171a594cbf7c48b905382fe9f4a55c6120b4014ceddd",
+      "nlsat:default:test:16198": "67eb895a0ffcc7af39642eeea100c6bba79a6496e45d3f228f1f310bfd8d4f12",
+      "nlsat:default:test:16421": "af23d0abb7b1d6e543373d4636de55e72335c1e8e06594df22e6fe81ba3e140b",
+      "nlsat:default:test:16465": "4f15d5275e7a679eb0e9559111a5aa73c7adfe48be7ed039bb829587a576e564",
+      "nlsat:default:test:17224": "51513073d4a331557472d728a3ef8f6194d07198c34bc4d353f38793b08870cb",
+      "nlsat:default:test:18727": "f9f0472fc2c574c93d273e00b68be8b1b854c7d1ac3551f87aca454846487aed",
+      "nlsat:default:test:18822": "75edabb63a0b7ee7bee50d19c2b17927b9ec794ccec34a9b454a42eb79d26d5b",
+      "nlsat:default:test:19167": "5fbd9e4e86667045ce0624095d571d3e8872f887023f9d524a0a0934578150fa",
+      "nlsat:default:test:19246": "86d09ff70449480e43e702b69399cc4fd5c03b4085d0e33f53499a90426afe5c",
+      "nlsat:default:test:19295": "c9299ba0b3e777d621766cc081a75d76b510bddd2f204d3328f6ab65bfa1206a",
+      "nlsat:default:test:19976": "ed4f09bf32d6ae149aa232fbe244f95f61b18f5ab67a9c17c3fb28c621ec1010",
+      "nlsat:default:test:20197": "009b5068d983714be687d71a1c2b60119f63d3210f3bbd4b6f80fed4f290ebb7",
+      "nlsat:default:test:20759": "d9af857f5e7f0c9abd826a39a03af32a66379bc7fa9de38f2c4fbc32490080cc",
+      "nlsat:default:test:20900": "002eaee41ba4639439ab474bbdc40780ea386f607daf39ef61ecdade0543a59e",
+      "nlsat:default:test:20946": "26ef2d592d1648e2d94d3ccebcee7e949c8eeb856e64cb695567bb25597f5c81",
+      "nlsat:default:test:21261": "c99aa16fcd6cd1ee18964d2dd096489c61c3f8bd2af30a15b7eddf329dbb34c4",
+      "nlsat:default:test:22034": "9b467930ac12020c18228c414fc9dd09912c3f7fa152c0e8022223cd0cda1438",
+      "nlsat:default:test:22120": "07e7285e2e4cb72808e17d488c8ec95e16f9449c0d6783c21cf1e5b47d7e606f",
+      "nlsat:default:test:22278": "c6e38b791e3673d67709aaf5a97a48ca35df6454752a654ad22cff638e448418",
+      "nlsat:default:test:22402": "6a05c5f6da7fbea33ad605810fbd4c7d3676abb1ca7d640b418958187d5290c9",
+      "nlsat:default:test:22703": "69ea0f55eb3d50412b58702ecaf365babfe9a8a8dce194b488e7c0d90ad4aa24",
+      "nlsat:default:test:23274": "3a5cb3a79cf343fa41f7b9098117ca663dc07733b1fb02224da8a1119564cbfc",
+      "nlsat:default:test:23406": "f5114bb81ede7d7d3834255761df2c0c7df6fe6a9c27cb3e4200d089b5552e8b",
+      "nlsat:default:test:23903": "0dc51ca9c542fa7bf52ed2e7b2db626b7cd2f0a77ac4f0e8ca2597493f38350b",
+      "nlsat:default:test:24680": "943f07764bccf72601c499fdf1873a2aab4c38f7b68f83094315f27358b411b1",
+      "nlsat:default:test:24759": "f01e9da0a82e85852894c4bbdc5c4a2ed524daa4205c5ca9e1f2f77dd0a721ff",
+      "nlsat:default:test:24771": "8e8e71aec5ea0bbdf0c80848cc4711adbd8cdb282b617ebc14426f26049cd6c6",
+      "nlsat:default:test:25031": "bb199992fc85dfccf18acb126bf39338491f3120b1e13f7195b3769e15d0d2c1",
+      "nlsat:default:test:25131": "5725d769bd9dc88940a6355fb82472d3293cbe0e161065dd64feda27da2ae2bb",
+      "nlsat:default:test:25239": "e9432b738637611ce5a11dea70cc6079b55f34fbc143c000f9f5208f5be3ed05",
+      "nlsat:default:test:26130": "afd4e1e63953c03a3f883eb212f6156e96e0cd5190491865e03fd1749aefbb41",
+      "nlsat:default:test:27245": "e194c919aecb9aafa9f9e00ab71f6cf27c02b2c41f3302f3d83edf18ce94ca50",
+      "nlsat:default:test:27413": "9921c45f65c8cfc0a9bd8e7871d2d56e11600aff7367a16c22b1a157f0ead8e6",
+      "nlsat:default:test:27899": "fdda35de1cf7e7d37f6071c028c6f988cca169ee3d273bb7c5bb66d5bdbaf47a",
+      "nlsat:default:test:28239": "ccfdb95c2c9b5feb41395f9d54d20cfc45858cccbce766a93dd49fef403a7f18",
+      "nlsat:default:test:28465": "55d964969c4b79eb5c11bd5f89974088ab3f43fbbb170be254a88136e619eee0",
+      "nlsat:default:test:28678": "e898c27a13d87a2960e3ff3ffcf24c5cccd2227d3188b350e417358824192a92",
+      "nlsat:default:test:29146": "0d7295a3d685620465a6e53d5a547f4e992dec19d42fd8bf15017801c1606440",
+      "nlsat:default:test:29208": "f9c0195e62f17f226a819311f01b0a325707dafa65bd3fd0b01198e64177faa1",
+      "nlsat:default:test:29537": "973decbb5ea0260f44dee02488138f2b3e97c216c6fff4f252740785e060f325"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "nlsat:default:test:792",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:939",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:1141",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:1190",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:1742",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:2546",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:3708",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:4325",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:4715",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:4731",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:5197",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:5611",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:6488",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:6820",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:6895",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:7739",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:8296",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:8454",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:8774",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:8836",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:9214",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:9565",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:9744",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:9885",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:9924",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10256",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10323",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10364",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10516",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10611",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:10901",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:11127",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:11210",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:11694",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12158",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12324",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12363",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12455",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12465",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:12800",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:13064",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:13160",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:13643",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:13762",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14071",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14107",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14192",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14225",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14484",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14588",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14625",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14805",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:14863",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15111",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15277",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15496",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15497",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15669",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15793",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:15807",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:16106",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:16198",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:16421",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:16465",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:17224",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:18727",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:18822",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:19167",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:19246",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:19295",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:19976",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:20197",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:20759",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:20900",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:20946",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:21261",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:22034",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:22120",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:22278",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:22402",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:22703",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:23274",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:23406",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:23903",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:24680",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:24759",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:24771",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:25031",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:25131",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:25239",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:26130",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:27245",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:27413",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:27899",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:28239",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:28465",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:28678",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:29146",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:29208",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "nlsat:default:test:29537",
+      "question_id": "satisfiable",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

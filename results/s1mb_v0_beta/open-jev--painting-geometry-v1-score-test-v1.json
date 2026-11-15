@@ -1,0 +1,429 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--painting-geometry-v1-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/open_jev__painting-geometry-v1",
+    "split": "test",
+    "case_count": 25,
+    "decision_count": 25,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:18:42+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 25,
+    "expected": 25,
+    "succeeded": 25,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.27170858879429494,
+    "normalized_score_rmse": 0.36157812304910003,
+    "constant_score_baseline": 0.5,
+    "constant_mae_baseline": 0.28,
+    "baseline_adjusted_skill": 0.02961218287751821,
+    "baseline_adjusted_score": 0.02961218287751821
+  },
+  "elapsed_seconds": 6.915372799994657,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x3_y1_saturation": "5246bb4d7fad17470ef4697401748322640e7251c5ae9d9923470cfd9fd8e8ed",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x7_y3_saturation": "884f91c7ad36f72625d28e42fb232975b1e25069974180634d80da1a1a133cd5",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x4_y6_lightness": "6ca87e0560cab4c052777518aaf4047090f94928a34eba6eaeb4cff3371fc269",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x3_y7_lightness": "a24d1a7b793c14c470dc61a828a988d4a15c0ec0d1596ce31e140438d9ba4cfd",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x1_y2_saturation": "b3eede88de67247b157a4f1d21474c60239822f272b0b99ab42d3c5cc73ba5ed",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x5_y2_saturation": "08e913955d783d65791bc99fd4539f50398b0f14d4aa2f118d5c1f5f24db5ab2",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x0_y6_saturation": "16c2938e3463b4630d12f998e2191e80f310d84920f4d3585524c58f691be205",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x3_y1_saturation": "1aac0185d75265c609b176fd73e0614ff816df991252964e26dea691703247b9",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x7_y6_lightness": "475ceca8a2b7e5f3f8cbdd9002290339887300d39c719d8554180b28be041c7b",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x1_y7_lightness": "f77aaf15a25e665b6fb691b147c126d82a28d2165d3004d0dfa34365ef388f5d",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x6_y7_lightness": "c5a21a436824ee627ce35720fc23b8d071743864a6098b28e9870a524fdbf156",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y0_lightness": "ecf11f2465646e2627c5cb0dc4d38676dc320bc3b11599b2fd02822d53295479",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x6_y1_saturation": "84664a5d8aab7a655054942ac8a2dfa57c5c357c220342436a6a2312af9a1713",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y2_saturation": "70a14719cbdda36b7dc3f28ac837a0538a97269220aa14856151dd754df8c6ba",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y2_lightness": "cd2ae6fb573840cef713f8a6f2cc80219bada313cb6b1f9cf58c0ae99cd3f714",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x1_y2_saturation": "29275c215293d7cdc0eecaee5ff4bdd0f32f52333ca4bb621f2bcfc47ae5838c",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x4_y4_saturation": "3712668d65d6a1593685aa21d1c5c5fb32fdf08054c6e8bc09a52e7243073358",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x1_y1_lightness": "d1a9185237a706a5ca3d6cde961c9f2289fe0d0f1351dc8f188edcc5818badb9",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x6_y3_saturation": "18197bfd5f9e6380d90f74c0df20d13ef0267c78425c28dff860b10609351e78",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x3_y6_saturation": "f5bfc68de9db5adbfcd3c9f0a259f94972d560c85f8348aaed91a83bb4a7ba93",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x1_y7_lightness": "7f798c2d64d4ed6c729223c4a52baecdbabb9724f998986f9e746e2f44e6678e",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x3_y7_lightness": "dc716a27bd2f7cb89540026f805cbaf29f022412215293f70d8beb9a0259fef5",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x5_y7_lightness": "6d8066983f6ea0aaa4d73799c61ec8a0426f299cb85bc4d5d3512b3ec8c6602b",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:hsl:x0_y3_saturation": "2a1666591f09ba53f54f9e334f2bfe6214b0f1136ea626655b941167e097a077",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:hsl:x4_y5_saturation": "6453202494467c28e161a913561bfdc4ffc0449fa9b7add85e8e4d6bf2157ae6"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 3200,
+      "output_tokens": 25,
+      "requests": 25,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x3_y1_saturation",
+      "question_id": "x3_y1_saturation",
+      "probabilities": {
+        "option_0": 0.1902287940853232,
+        "option_1": 0.3394944549905085,
+        "option_2": 0.4702767509241682
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x7_y3_saturation",
+      "question_id": "x7_y3_saturation",
+      "probabilities": {
+        "option_0": 0.1746253746253746,
+        "option_1": 0.279020979020979,
+        "option_2": 0.5463536463536464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x4_y6_lightness",
+      "question_id": "x4_y6_lightness",
+      "probabilities": {
+        "option_0": 0.1630836916308369,
+        "option_1": 0.23827617238276175,
+        "option_2": 0.23047695230476953,
+        "option_3": 0.18848115188481152,
+        "option_4": 0.17968203179682032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:hsl:x3_y7_lightness",
+      "question_id": "x3_y7_lightness",
+      "probabilities": {
+        "option_0": 0.1719,
+        "option_1": 0.25,
+        "option_2": 0.2207,
+        "option_3": 0.1777,
+        "option_4": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x1_y2_saturation",
+      "question_id": "x1_y2_saturation",
+      "probabilities": {
+        "option_0": 0.02706224315926631,
+        "option_1": 0.6538037486218302,
+        "option_2": 0.3191340082189035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x5_y2_saturation",
+      "question_id": "x5_y2_saturation",
+      "probabilities": {
+        "option_0": 0.18125561433276774,
+        "option_1": 0.4346741191735702,
+        "option_2": 0.384070266493662
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:hsl:x0_y6_saturation",
+      "question_id": "x0_y6_saturation",
+      "probabilities": {
+        "option_0": 0.01887546189953061,
+        "option_1": 0.698292220113852,
+        "option_2": 0.2828323179866174
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x3_y1_saturation",
+      "question_id": "x3_y1_saturation",
+      "probabilities": {
+        "option_0": 0.5343984023964053,
+        "option_1": 0.10484273589615575,
+        "option_2": 0.3607588617074388
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x7_y6_lightness",
+      "question_id": "x7_y6_lightness",
+      "probabilities": {
+        "option_0": 0.4203203203203203,
+        "option_1": 0.07087087087087088,
+        "option_2": 0.11481481481481481,
+        "option_3": 0.175975975975976,
+        "option_4": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x1_y7_lightness",
+      "question_id": "x1_y7_lightness",
+      "probabilities": {
+        "option_0": 0.33366633366633364,
+        "option_1": 0.11508491508491507,
+        "option_2": 0.1678321678321678,
+        "option_3": 0.1678321678321678,
+        "option_4": 0.21558441558441555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:hsl:x6_y7_lightness",
+      "question_id": "x6_y7_lightness",
+      "probabilities": {
+        "option_0": 0.43142742902838865,
+        "option_1": 0.06737305077968812,
+        "option_2": 0.11075569772091164,
+        "option_3": 0.15613754498200721,
+        "option_4": 0.2343062774890044
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y0_lightness",
+      "question_id": "x0_y0_lightness",
+      "probabilities": {
+        "option_0": 0.43967587034813926,
+        "option_1": 0.07282913165266107,
+        "option_2": 0.11134453781512604,
+        "option_3": 0.13675470188075228,
+        "option_4": 0.23939575830332133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x6_y1_saturation",
+      "question_id": "x6_y1_saturation",
+      "probabilities": {
+        "option_0": 0.6129935032483758,
+        "option_1": 0.08835582208895554,
+        "option_2": 0.2986506746626687
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y2_saturation",
+      "question_id": "x0_y2_saturation",
+      "probabilities": {
+        "option_0": 0.5273527352735273,
+        "option_1": 0.1328132813281328,
+        "option_2": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x0_y2_lightness",
+      "question_id": "x0_y2_lightness",
+      "probabilities": {
+        "option_0": 0.4357614568741245,
+        "option_1": 0.07234340604362618,
+        "option_2": 0.1118671202721633,
+        "option_3": 0.13968381028617172,
+        "option_4": 0.24034420652391436
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x1_y2_saturation",
+      "question_id": "x1_y2_saturation",
+      "probabilities": {
+        "option_0": 0.373,
+        "option_1": 0.2227,
+        "option_2": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:hsl:x4_y4_saturation",
+      "question_id": "x4_y4_saturation",
+      "probabilities": {
+        "option_0": 0.5426743953627824,
+        "option_1": 0.10203877673395963,
+        "option_2": 0.35528682790325805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x1_y1_lightness",
+      "question_id": "x1_y1_lightness",
+      "probabilities": {
+        "option_0": 0.15821582158215822,
+        "option_1": 0.23732373237323734,
+        "option_2": 0.20312031203120312,
+        "option_3": 0.1562156215621562,
+        "option_4": 0.24512451245124514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x6_y3_saturation",
+      "question_id": "x6_y3_saturation",
+      "probabilities": {
+        "option_0": 0.15704295704295707,
+        "option_1": 0.29270729270729273,
+        "option_2": 0.5502497502497503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x3_y6_saturation",
+      "question_id": "x3_y6_saturation",
+      "probabilities": {
+        "option_0": 0.20079840319361275,
+        "option_1": 0.3470059880239521,
+        "option_2": 0.45219560878243514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x1_y7_lightness",
+      "question_id": "x1_y7_lightness",
+      "probabilities": {
+        "option_0": 0.16093906093906096,
+        "option_1": 0.241958041958042,
+        "option_2": 0.2097902097902098,
+        "option_3": 0.14925074925074927,
+        "option_4": 0.2380619380619381
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x3_y7_lightness",
+      "question_id": "x3_y7_lightness",
+      "probabilities": {
+        "option_0": 0.165,
+        "option_1": 0.2715,
+        "option_2": 0.2119,
+        "option_3": 0.1758,
+        "option_4": 0.1758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:hsl:x5_y7_lightness",
+      "question_id": "x5_y7_lightness",
+      "probabilities": {
+        "option_0": 0.1611161116111611,
+        "option_1": 0.2578257825782578,
+        "option_2": 0.22072207220722073,
+        "option_3": 0.17481748174817482,
+        "option_4": 0.1855185518551855
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:hsl:x0_y3_saturation",
+      "question_id": "x0_y3_saturation",
+      "probabilities": {
+        "option_0": 0.832416208104052,
+        "option_1": 0.05132566283141571,
+        "option_2": 0.11625812906453227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:hsl:x4_y5_saturation",
+      "question_id": "x4_y5_saturation",
+      "probabilities": {
+        "option_0": 0.6751248751248752,
+        "option_1": 0.12877122877122876,
+        "option_2": 0.19610389610389614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

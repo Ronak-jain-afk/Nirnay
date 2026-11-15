@@ -1,0 +1,4797 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "synthetic-relevance--nanobeir--nanotouche2020-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/synthetic_relevance__nanobeir__NanoTouche2020",
+    "split": "test",
+    "case_count": 392,
+    "decision_count": 392,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-15T08:39:31+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 392,
+    "expected": 392,
+    "succeeded": 392,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.12158102806122434,
+    "accuracy": 0.5760204081632657,
+    "positive_recall": 0.060498220640569415,
+    "specificity": 0.9650850492390332,
+    "precision": 0.5666666666666667,
+    "balanced_accuracy": 0.5127916349398013,
+    "f1": 0.10932475884244376,
+    "true_positive": 10.2,
+    "false_positive": 7.800000000000001,
+    "false_negative": 158.39999999999995,
+    "true_negative": 215.60000000000016,
+    "positive_prevalence": 0.43010204081632636,
+    "majority_accuracy_baseline": 0.5698979591836737,
+    "constant_brier_baseline": 0.12359641815910102,
+    "brier_skill": 0.01630621767114926,
+    "baseline_adjusted_skill": 0.025583269879602577,
+    "baseline_adjusted_score": 0.025583269879602577
+  },
+  "elapsed_seconds": 83.19156349997502,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-1": "7ef988ade8f88f4cccc16c03ff3a545028d22dd36fb934be35f9ffe3024f333c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-2": "746887b5e2876b031b70b2c58eff5de9b5c9de1a50e9e77e1dd577d2440d071d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-3": "7c6c54892828aa48a70ec285e0568fbe2625295081e4cf66cf902bfbd06ac5d0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-4": "630a4168c10aa2e8e0da88ced2b2ccd1771a41c2cd0a75150aef209178fac54d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-5": "1712c9e5f893e3032232c7110e5cc6faa11af101487f2b934972b9a82beabcc9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-6": "c0ad25854a9f0d5dfe56c7f023f8bfb844e45835d08aabf9cba9a593be3a31d5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-7": "592e88b6c994edba76013345e18f9ff0360494828a2cc63b25d5ba0d829408b8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-8": "8ee2f235fa2ba5684b9d7c1ec9fac6e1091e0f4dbf68ed0355f788773a2b4904",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-1": "6703a037cd640f4fb54dae8d46120a3ca8f6b83f475465a258f3f013ff43649b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-2": "ee7e7f030647abcc36289c8877a740d70dae8ab177efdb0847bc9eb20fa9698b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-3": "e839a5720ab5eaefbdb36c2b602ab94375a0f6b008d6beb0bfbcbfdd933e1838",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-4": "17ce4d10ba8381c8a8fcb4bb3c61730fd2f0e770c80534c676bff6795b24975b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-5": "4c8055e8a3cc560534748a83db3a895e485be478ec4a03296718dd521392fdfe",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-6": "b5082422bf01d85bae03fc0302b0c53e8c15de972d868ab593b9313f55fdb05b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-7": "fae01e6b018d6d11b1313e07eb335df77b5a00db3a99f97edd650d40f7b28ddd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-8": "ea68cdf75f349e16bb4cfcaa23a968507de9a1d916e8f9871fc05f6e0b94e5d2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-1": "add40256a9e7df8fac2d6e9d411513d4dec391a4a01cfe95bc76a46b04a8e968",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-2": "1fa32b2f168aca2760cfd250cd3837b97e490e94653a31faf1853a6c29d061c9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-3": "98b4007598d7f2bcbd6910956105d92146eb58f49ea6b1502f64d61d54dc595b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-4": "ecb771f754df2bc467fe2cfcd8fc0973c52919b0b1a2fc31c626fe5fa2b3c1b2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-5": "1c0d7bb9fce73e260bf021f95e3cca296c0697fee3872b8ddbd0ca3c2c7e7eb1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-6": "89ebb476f0750050f25998f88e13453bdd9b6177a6457010a8fac4344cedfdc9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-7": "0f01fb9efe40ca0ee49566d48587b2f9cab62c8b50bc9ff881bc5006d20f2444",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-8": "a2ebf59acdd9c3535f9f88a43af71308d291046aa09f4d9b346b169fc8745389",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-1": "16ad433aec077f6e58ce483e2f4eef4994a3b2df6d04a05d7ca356a6c31b0797",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-2": "d36d06a41eb185c5a3c5bc447dc42378e346006e84827329ea9b6a3377e9c575",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-3": "41cf39ddf69194b142f47f82fb83ef39acfea0ea35a41a8a21fe065b631d7ff1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-4": "c10b63ae1cf05413c2c1a30c92e1669d6f5474735a1a1866810e0abd15391bfd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-5": "a982792b3fcfa6e2774f96fe6e698c6983ee37f249b6cdae130aadef7f17adc0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-6": "495c226aa2080a73a6ff13075e6c677f8abec625e2b58278290f90292599c627",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-7": "24c816512ea885772e614fe00939f1d096c0532782be4c343c011fb0bfd87468",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-8": "323c785a66c06c58efa3c4a916cb3023efb03c755b1bd1af5a35e309fdefc629",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-1": "c15d9ac750aea8c037baa3dad93fa866fa44a0681ecb2bd85938961520f6592c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-2": "a6728822e11fa91201ecbaf10d7925666931f1edcaadf5ec2d4edf77734d129a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-3": "d983fe8c3b30bab34a671ac46b661853e2d2a33fc75fd9a19ada25249af0c2f6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-4": "0aa23c3b4450c4a1088e3eb06e72f91765bd06d17adc8206439a986fe0b4cfd7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-5": "b3950a0c585a1c515db7a346528b6c8e3879b5930d1b31e0e8a4833fe5174c62",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-6": "52b65923dcdd0445e80b851bd3eead4e04b3c6ed0c9bd7e21d8116f7c72b745b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-7": "ec719f1e69535ef4a51bf4a3878534739499939f4ff8eff8cab886f25e1ea481",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-8": "c9de5bdc768b997721978677a5653cda22e394643e3ff25d260da1df917c1c27",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-1": "e321ddd5e1cc980bc06128166c1593a52c47f4e04c17475afe7e5bf85a97f1c2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-2": "86413937e8d58d8692c36bb0a47acfd9efab884dc33f09ed0fb778d224aeb8f5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-3": "1768c9673e6de569db9fea75bd24f4e4c5ec20220d3acb702fb3bc98036ec445",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-4": "fbe64228948e35c0b09790c08e2f368975390809ad5b4a0e15f09f38ea16ef00",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-5": "86f8118e1bedb7bc2fb58672a694aa0558fd55502372993df173faf5608eb43c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-6": "6cd1c3017841692b66cd7d21718c8f5955834ed9e7e50e4e3244db712210d84e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-7": "c2a362daafd0606c832579114bef12129a296cb2a6b21e01255c0a586cc4e1b2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-8": "f44262eae9f816df8e12ad07de021617c61cf8ac8a0a49eba68d1f32a53c6496",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-1": "02d1ad87305c666ba47bf1e89759ed3adbd5cca589789fab453b469d8319ab97",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-2": "7327f5e7bc893a42ee37895422746d84c7a4d3e996105d761f075b35c3cf96ec",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-3": "f86a20f155bf986b5420f0e7536cf8dba518bec0a636a3552d2c0c26163369a5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-4": "74016d25e202df1fe0bcbb8ba1c50ff366d93010f6bdbd1e8fc4c745fd408f15",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-5": "aa1a930fe074b1ef02c25a612a4bbda5f6b495742460067518c53beec0e9dd50",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-6": "1c16568efde7b4ee53981b0ca3b7a5c2edab899abbd3f2792302ec9263d25273",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-7": "9261dc8315bc15ad804e811894bbe408066abc281682faf4175fb4d00b1b8163",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-8": "c9f534e3edd6e0ba36b6f93b186a91740edad74ea3030bc9ce20a02c5066dd3b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-1": "60f2786a518334becf0537a7fbc13900776b25f30bdb103d6b944555d0ebc8c9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-2": "88735427016b76fbe4c5e411b77a9a2c4767a7b23f3c538be9e4c173dcab26f5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-3": "0d95037aa6f3efb3312c41a90b2f8f7e8511617b0daaeb07275d63eee1e6c760",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-4": "337f48491cb1855bec77c51778418c1c5982572832f45cf8f4fd7a0c17d91650",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-5": "e4f221824c503130dd31dc577fabedc839c4f37136fb04eadc3d1395f0daa1bf",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-6": "f2c17fca7e6a1a748eede5c4f046487498a7c057a086f17d504971c6e3e57581",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-7": "ccd078f74fe3ebda4d6c6cb810f85ed7fb8906b632ad7be519eb777ea123d1b4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-8": "01b8e119a5636b0e0dbd27298d0e8018faefe5af34f005cdf9f7a0cd1d264f39",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-1": "5075c3e05275b84774f0c7e35b50e5d23a50a7dea26b18035a51080eca1a7a82",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-2": "4203dddde64dacd8288ec2ba115ce340fea42bb65e5b0cba1a760f6fe69fb455",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-3": "e4d68583a8151534f8c9a8adceca0fa9d264dbb1d634a605ee2f8d794c669b60",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-4": "ef844f28aa1d7c501cefbb10c1274ece73b3a3e2914d5c5169c9c65f93e2c9d2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-5": "674d119b70c9e957ae4755e006b7d946c5fa4d6ef29823e5eed8e28461319023",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-6": "72d4fc668e2bc9102049643fdda2d247b010bc5921390bd14b70b09957611018",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-7": "e4f500fdb14c02522404cfb0dc2d38a4efac95c9eccc2ab4e4132bc433eae019",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-8": "61387f1ecdba0316120c14d99bf3c19e55cceeffa634770f8ec0f8d32424661e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-1": "bdce203d4403a80f6eb024d35d4bd9364173914e383e760335be24abe7720b64",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-2": "cb862c2a8f3c56d47a5d03eb8cc41406df9ca140c4367376802d6e0d4f8d8167",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-3": "57adf8e4dc63346cda2a30342fa28300484ef29a0ec8c566d0cdd10f1bd26337",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-4": "104ab2c76b628a02274024db3f6cd2e1c88dc09351e1e8e6c8f2d2f99387f3b6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-5": "3506940ca3dd948f4282b87b4d59668bf886e384a0408c673c20f21fc268c535",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-6": "23ea638bd99554298a25a34d14d72b1b4bfbc3f1779e5043258de60414ba35b0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-7": "eb1ea76449c496f1880add220b9fe29b987637e9e9d72ff0af6d67a35841b85a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-8": "065ee2a5e09cd45cefab9be4fab748269054d4032716c4a0dfa16e65545334f6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-1": "31b4c3bbd635ec2a36b810740bbb169157431e2d2b34b7245ce40a81aa3bb1d7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-2": "0cd5b9839793960124d5d70133dc7b3a1eec0470b956678e0dcc0d595224a311",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-3": "c9f6be7e67eb8c78d7e355837251130d928b0f461a896306af1a4e219fdb2c13",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-4": "1c900e21399da002ea78ad4e1ce3055ae95f3c5f3cf7c9fb048e3db795b27300",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-5": "533047dbcaa36dd69243d2fb9f64e20dd9879f96ff7e7a8e19b1c77be3094258",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-6": "80761a9f336d53555c94a2100e05ba024303cb18836bfa4866461964f43ed69d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-7": "ea2f6f01633005d362c0a742ec5d69b6ec30bf35b637bc3948aee60ce80bc32a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-8": "cf24a74f8d6116233ee0bda866efb7803c488052e7514a371dbcd93eb6327826",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-1": "71303004b8e8150378a33af08f111bfda5c5770e1b8298f0d7e223d98a67a958",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-2": "dac78cb12c59b848d3f68c1b3e6f9984696b6859273621654627800dc6dfa66c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-3": "01b0da082e91ceb99e74f83816ee13f779ec96800fd6c5450263782241c9f5c4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-4": "60dedfc615ad49421dbf28c21368c7f89a1fbff1d4b837c312f58ec5542be3b9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-5": "a6982af0b25a821eb017990aaee3433be05c8befd0d1000f3639f1eb8a7262d5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-6": "7c14946bb1ff4982f89ba70b5a2c261cb19f1e7f2b12137c0b1a984f72b72d32",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-7": "76d98c03433d41b443b5b8b45d39832ccd73b087e89514bb1c3f6642bd935b32",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-8": "d3f7a3cb15e4bbbd8701d40a13867ba7e3e2c0fc4c4583d88b3ac42da9451efd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-1": "bfa24a8dfae0ba08719ca24cb3e597009944696aabd1bfb6f999b87f11c36caa",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-2": "1f30374fba6634b0aa5ad11db31c510dddc94ac9b6f3ee8d08997fc718aebc0b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-3": "556243f20ba0d40448e1de38e8af421ccf55f2136b97a8bfc5883115c3efb4a5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-4": "6b95c497324b3b6c355733f209e57c6b85b383c73e605bd19d8f774f6fd21ca7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-5": "cc4bb8d26723db88f0b270d3d0890853f3259699ae2cdd307c1d0b98c82da508",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-6": "ae98882793aad2d4d91c5e4de6490d7df8e84ea6bfa6ee3ccbfcac70299c5304",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-7": "088c77235d16d2926fecc5b844cb1a201b6670e65aae29736be63c668786a6f9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-8": "e9444c71dd7a6d7334b88e016ad65cb86f578140044fe58d17f9f319b5454f0c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-1": "05abc0edbae3d73a9e71e2fc55e3a4c65cf3b26265a2382313ebce0c21a517ae",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-2": "9427fcc677c5e1dfebfd1dc4489d7cd41a5ce1ddb50a610f77edabf335e14e6e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-3": "9a8847bf020f3690ffb25b2f1dc132f5dc56633f5f945e2832c08cc090382fe2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-4": "1abd5c8d23ad30630ae62dc13a149b688c620d135d0a394794c804784a504a6c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-5": "b5687fd672845aca43646ffa1a126847c832b20e13a3a6a6f6a8f57b9079a3cf",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-6": "ee42230d6fc043e2c01f2c02549a0ba7da6df2fc67a32aab1d8b0f1481fdae6f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-7": "0e36ab3e4184f2a0fb1cdfbddd67b3d6a85831844622446a79911cbfc6480179",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-8": "5ba2327eaa31ce766bd491951b8fce23632eb2a3b7d97e4ea3fd79fc4d9bfeb5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-1": "d2d0b87d205fcaef210d84c65d7370d30404ff10f1b5c4b9a529926756fd3958",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-2": "bb91c99ba73484acec941518484aa80a110db3a206374db00ee9b7edaa1c968c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-3": "8011b38dbd13008abf904a635100fa83cc2efbbc0f7ab792a408264001060ed7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-4": "0b16b37e5545b2fbfe6fc8f9c7e2356a1226186f273432ca71405be553647b76",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-5": "1b24319196acef984b35a19342f40a7218cf6f75a8db1e112500157f46474ca9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-6": "66143be0b6ab8f75b48d4f59da37c4572eb01572335749fd690f6e305b878df9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-7": "0bf1d7fd2422d66f48da2336d23ea81132bec407d1871e18451ab5281c4fab83",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-8": "73c7d7b61c4952b6c7592fa66237244656c70f36ca263777c1bcd998c72924c0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-1": "4d1565e25b145ca8751e923f880843178eb8a13ec75742c13c7f951c0f66e69d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-2": "51a12fcbc31502d9ecc9d36d89c19fbab17a737eec735a5c76e871ccb5c05478",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-3": "5e11eaf6b12fb7c7817b8a558dcd5662566a267f1746c2c9371423e0cb17b7d3",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-4": "092a49353b295f8aa1f735848ca620e1f95bff3220a3f3415f9d3811bf2b650f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-5": "32d8f68339e7fb0c8de4d3ffcb8c461c62578939b0b38015f6cc0f784684004e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-6": "05a09ad6164a0502b2aa5e742f2f0c0d8bdabc542236f59a1cea456cf5e29776",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-7": "980da48114417114fb64b4d26ebfdee5112d09c67543e0d4b38a976c5bb9bd7b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-8": "faf998cf2ae76fcb2dbc4ea09b09c94189cc05d8833b38f33d7dbd4dbfc12c83",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-1": "b7fe122d009acaa13acd2c033621aa72941eeed7326a21d676b78523e3c0f1a7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-2": "cc919dd1e5d1fb10d46420d1005e5876c72f1c4c86f2f31d87f2df35b56a4934",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-3": "e98bc761286a521a3543291fe475d1acdb30e27103035e1b4177b4d1ae138d0d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-4": "f22fe465417727df5b96178b0b8844b0f983e603d1d9cc1de59270cf065012c8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-5": "1c5eba6297d34289b75dbf04270cf3e5daef7805ef93d695744951a7d9edc69e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-6": "18d374f688f58dbe32069147be64b1b01f1a567e27d49b7fc3e7e9e93c39a3b0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-7": "c0793585843b39ff22dd8fc48bb2364cd8bd0439f5c979ae241e0b77099e5cb6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-8": "25448d70a5f35b1e7d54d88d59a3104d0508c3d3cf058fc40ad2e1d868b18d45",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-1": "f7e3f46d745cd7e1dcecc89ca2468ef26d4803d51f5c375bcceaee949586156c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-2": "5aa5ad13ea68d36f900dcb5c6f5da0fc1755dd7f764fe258a00e9ddcb687ba82",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-3": "a22163d8a56ac204ca58028bddcd4b1964b9d2c5e02fc7d5f5c64bbb2e6925a2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-4": "0e10e78a00199b30970b3877370b41f374a26b43a8c82f2f8dc675635990e7e0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-5": "e24b1d74b084dc2894a1a51e9077820974b8c41767dc7fb9a68fcb21ba1aaf24",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-6": "7433618853758b213175d8c502f452f0c6eb3f9c78a63f6ee6812e546b941fe7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-7": "a37f9b38b14b44d442df59ed6a7d596a96aff67941d171838d0f3b5f2d717c0b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-8": "4f31dc1aa5f8473d8239cc7a1e167d17e7c680f3057ab690e842981e0a2aaca1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-1": "61e751fd0810b18299929a2c9214fb559e2d2d67c1debb08ed3c6e0f9c98cb42",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-2": "886993c201f6ac75737167e4f2d3bdd1e52edeeb57fdf7e3972e1ed5075edd9c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-3": "926eea065c3669c60215e6869c3de824d4f91bff3d9c7ffe6b03018a8c46a364",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-4": "8479f219d1a01fb6a98b24b68a6ffdf5fe44f0ea1ec17963afdeadd649298545",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-5": "0e990a79fd5352b8e4232d6509fa43c6aa6b90b4f9993a1cbf0f4911d1e60437",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-6": "dde96a83104b50df1bb5f710429e077b7869512b37b064c3313ad9e2126ba09c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-7": "e8a9c19f4d47cebb890d13b01d866a542224bd638479b2e892e04336255bc400",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-8": "cabc23a590143c62b902a1c18fc4b358de9a86523c1f31eecdc7054c423b4346",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-1": "deeb71a194f965da0f7e11eef79fa98524338b3b489f99d3670b78b4dc8608a8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-2": "400ab66b9685b5a2f39f33a81757bb6ec4cf357d8e8b621a6d65a5712aae13a8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-3": "ddbf36180cdcd88645ab3839cba2fa11b83290a8be2c34856c5df2e69b320d6f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-4": "c57965733665578ae11236cf7c1b6adac64facc01efc46bae2c32550bc240e78",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-5": "f7439aa4f65afcff75073ff36d864b9f6a63f93caed8405e456f95bde5981ac5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-6": "94cdaee4dc2bcac8507458be481decc6b506b9f5fec785d44dd0a8056f2ae7eb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-7": "fa01a748eda641b1131008ea7f64521c836814868bac41678fee6d4de1a6d26a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-8": "6025fedea13753d5d9d29ac7c373be5a4ce00c25993261444918115870ca8fbb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-1": "0895a1d7ced4278c28ca4758a696eebd337539322f22c4eba5678ecbfbcf7702",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-2": "ca5e7ab6b4c88be6880175d55adf15decfcd6efa536176c6cbf30af2866fe7d1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-3": "40f8990a6db8a97a7053d9ce970112d471f95d5bec4b06c9278e508670941122",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-4": "f62bc7b0c5b037babff29436a1c7baaa17e6e8cf95beecf36be0aef48b151c59",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-5": "6aa8a4130f13451a6f2af1b29b19019262524eda864f1e126789ee9bcf0fbdf5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-6": "f8516d32c54ddba3e435dcc15b19a035b724d28b263ca92ee3870c43889da933",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-7": "8ea93ab40be3742cb6c1e8c93b1e925714516421a5c406c6d1af11f0d369ea7b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-8": "f84a572fef9b157d7dedb348f0988ef39cf9c3ca098d559cd18ab32facd8e85e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-1": "954d0ff0247370d7568b825be99cfa9f92733fbe898a4fb0c9445799d5cb5207",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-2": "e046784251a5a1e26d605d35f18d7f373fbda1141324b0d9bcfbf9c376fab0ca",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-3": "174d71617d145e3411053b9543cb6bae36a14c36398889c01981d6e4d0eb8a8b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-4": "2093e8d62067d2112f5045f12bbdd35b05c6274da2f9bbc5eb49f7a325138479",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-5": "d754f841f45c5beb15a4effb54813a294cba1ae02c682857029bbada0a472425",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-6": "6ac6db0bce8416fea0d6af4e10bf4b3edcadde00269bb98c09656c8c1f82605e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-7": "79ad699e1f96d1e6409977ed2c9b3a7b0c5963fab3708fa87fd50483dd0dc34f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-8": "df2149951a486c9002943159ea0c5f7d41d48411f9ec7a790ebb698f750f51b1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-1": "b093671a69c19cb7e9008b007283aafb8a8786972d6f6a08aa65b06258744966",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-2": "90fb18041a6f4d1d12662ed0036ea814d431b8fcc7904198dd5d6b424d6df9d5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-3": "d07326476a1700b55252a41d29938a1ad7761d7406d7a528658acf269a06e609",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-4": "97cccc39b594111fae28f0b0722d1f860f19f9098cf126d094a04f68d7c77ff8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-5": "dc1519a1833c18a4d28c0119f7fd46801b637e56be91ef8b934545e3ac4d10d5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-6": "337e3bc5a60f5d812b4c3d3eabacfe5854f0cb00d8f6e2afb027e571ddafca6e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-7": "e0bafb6270a902790f2d0f90508105456fffa7617f3eb9c6d960f4740cfbe23b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-8": "7bfa5adf7fe8ee77d9a97f3c3072e0872facec32df348af6be69a9e80d0b0398",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-1": "95145caa207b0d8f15c5202701924c429721fc997b51cd87cb60a7613ed33611",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-2": "3143c2c5dd4448051e45e8ee837cadad1fabaf65d6f3fa3cf31cec606d1a42dd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-3": "f4b188d3f700e259dd4a6dec7c136568e65ef2b56806f4f7af0b1e32f9e8f26b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-4": "2a40e8d7993982aaf58588269367d600ee312d7da98727966844ce4c8258570f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-5": "073be3137a5dda899bac4dea27bf8e4982f64c71ccb82dbaae53b1c3816ef3c4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-6": "76a968f14d06ee768e0315e1b7d59ea351384935170bc8d5cbb97b191e4e0e2b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-7": "87c5eb744aaad00a7b60b51f3005538214a8d1c92f4f64fb3b3bdf180e997207",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-8": "960a5c9254465b6348e54b87363f4967b266bdd3f48695131716895f8da54e6f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-1": "6519e135f3fdf73e76e8ac570a336df72a23a152489ecb153683afec8380a589",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-2": "2b35cb717517cdb7b92147aaa2e70800f932e72533fa5c21af63190ebe781816",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-3": "579674668fd380aeee3815419e6a8f3cb18ea4456f697208eab31b5e82400a57",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-4": "73dc285fb75495cec19e1437d1aa951a64114f9cbf92e335ffaab74e8f405200",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-5": "0fa9839a16dc1c3272342b59580371ebca140344d01e449d771cda99399dacff",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-6": "05ab5b0a5bf5ef499af56be5fa774dd1dfc0c2c9b0a00c2a678f82e8e18591f1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-7": "de33295e1a2d6b8bd9fc3f476a576e4487854807b7d12719da92a9de491cbee5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-8": "282490f4ff1475296c68bc4a4750fd51cace8292aa59ea7889e553ccf467de1c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-1": "fccce68a68f9dde1b073bc6fe121b7a2d1f16b99b376cb995d5b2e76bbbd30e2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-2": "7d5677adf5ad27d79bd92aff982b09c91283d9d0f9f802ab78fb5a6cda7db898",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-3": "67488f0f238728c256de940c6575999b248ea93128ceb8cde2013705f9c81825",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-4": "b64c3c14e77909765b4e77a7359c9447933c5307ca48158e9cea0dba3d206c97",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-5": "3d3724f73e71dd7c92ee8d439c820af1c8b649d1d2ec1a033d42e20660d93f76",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-6": "f22e67088af4adda99af6e6cb7b0bab0eb8c5579cd7e1360fb91bd5da7515fc8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-7": "fcf6e23d61447024ca8508ce9587c649019e08aa26f9e0113d2948cdc67f39cd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-8": "d53a0341809102b37bc1e63519428f06e0ef3b782cf33a227ff2a4edf3fa294f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-1": "c2e382b76749ba24eee502bab6e57a2702831424fdd6d5793f9277308b43d397",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-2": "5d4fc80210c322d61f496a1fe7d8aff9b96aba76f52a701d4956428ac602eb0c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-3": "f90931fe3f79afd1d92bfdf97bee4395717e732fba43eb851d86c5a780dd9a17",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-4": "670cff631423aafdd22c4c514a498dd27dd85efc9a09e79e33bc4d8d76d9514b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-5": "e29818a508e7d51a4d1347f53d43e33f2aae2864c72ea2b522e54c42d99bffbe",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-6": "9fd00b24d56c550e78524b49dc550af6315a810c0ed6bf9e5fd65ed3533a5760",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-7": "ec8cedaca85b1fb1ce8a50c3d293e24263cea7ed8fbc8d4105b1025b2fa3c82e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-8": "9a9c4622c53f6db8414c55644d7f236c66375532c72899023ab0e39edc506075",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-1": "733a15408e7a9e12cd61cc23c837c9f1a041a918f887170399e427a29b86654d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-2": "812a5571a1744003069d09de3257ba629a3f476edc363977085d1656946d2b59",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-3": "6b9b9f720953267854a8aa391ad6d67d53e0dea1d9f1f2d3a1d74544cddfa3bb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-4": "14dfa897f6900ee7d6f8f3d04d09c2dbd55d61637ee41a2921984027fb86dfa8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-5": "4bde644bd35404aaca66c3ef67a472e451fa2f9a2e1eb502050ad60c383dbd97",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-6": "e1ae46a7f17db38c223d2eb99f75a2eac54d5ca73c5aa5e9ccbf70c86ed2efe9",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-7": "be4b943fb5f09c7c3ae7a2939bcaae21af75c92e0bda13c6f710590fb6b608e8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-8": "98e7022db3beac464717d47dcfeee1546ade24d787e3e7f76b7face0e06270dd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-1": "9ab0672286a2186de4665a645f40857a834ffcfbe7771e9e11906cf6457c2bed",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-2": "d961985f215edb0d4e6307e425d89721801d8b758d1c77ac01eec530f3fc6853",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-3": "37171a6e7630c6679ea72a6cead6a9efc1b0b376841fb36752eb3b713fc94d18",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-4": "42db49e1e932810683a95389a1cdc3292c1101b77bdd0f31c1d9b37351bc5892",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-5": "0c01ef65f39468f665ce0a03eaa7f6e5c07248289742c8bf02347432c804a969",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-6": "2c4e85e420a24e6ef3c0ba429fb3447d61bee388ff4841d15df3058aed7007ff",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-7": "8fd78a6bd76042766454542f83cd215822dc6d1948d01628b9907e7b7afa1f33",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-8": "539f90c6ae41b0f7ace11ef91c56e4d36cde4bc237dc8cc53c356acd1bbf48c4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-1": "41383aca91bd033af12e1b9e7d5981ac46f4da67ee88a24de3065d07093b0fc5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-2": "dff5391d6486f63c4c69a59bc8c5e04106e697907bbfc3deed38cabdb0c48fd2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-3": "f096063122fc170b669c15ffa1098abe5ebeda9493450a92b142b6a24ac0da32",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-4": "400069c72c9a6976c288ab8d7ac78224ba56ef6d4d6e8e02a663f405917f7e92",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-5": "1d61e2fa94d9550a992918331eccde98594fd680a12064d87738d2e0cbede402",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-6": "fdd69bcf38029aaa2951d543148694b86cec39a1d393846480350452a87059fc",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-7": "216c3470c8b4b657e3db81f9cb3d562c8c2e2d982b8eca2d7274f4567af2c0c4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-8": "d699df93e873df84d67303bb21d47f175bfa1bcee3cb65a8cefeecf2b4d1f0b2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-1": "a1c671f9e4087b9dfe0de099f773c1b3a49cac21e6340cc790fadd212dc8a944",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-2": "df99cd248953e85511bf04523d121e1b105e1044ed64341b73a1203769912ad4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-3": "74cb7e887d4a7ee29ab4370af8683c6cf79785548b69a6c1c9f8431d4a88b15d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-4": "e32c68ff80f158937450f538b05f103cae840089993c07cd6de8953341f0b60d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-5": "80b174a953f51ae3ed2b5b53b9d4718724aa0d2773ef09ee9af55dc85e353dfd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-6": "fbfa71fc065e0a825759f12d65142a13b8b2f5a5e23c3ffd3befabf2355aafc5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-7": "bbb703231095b3e53ee1bd54447081e9c737923cff423d89e96e253540fa8a80",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-8": "7cfdbc02e56927b2a721a32aae8bd7368165e04c2f0c8e945ee8e7cdfe616518",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-1": "630c01c364b6a726d1dbf388200597c3953061eefb500b1d5760475857ae53a2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-2": "d4b94673e4a46c53e44077460db7d62168460d743b0fb60b4ccb06d51db9ba51",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-3": "00680f695f2dd26a57583e3d4e4b3716962d1ac6e68e182bdc6ce7b5e20f3294",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-4": "1b1559ca273db91a1bfb8bcb3b85cb6a290366e6923e7aa2ced381b4f2563b64",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-5": "be18b1cc27e343bfcfaddf1ac5ab82546187acbe707baea7c94af587e1de892a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-6": "4fe4b86272245eb764fac39e1b88ab6ef894bc0ddf136b3db250291a20d8c7c0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-7": "7c8b7c063a9c62685a6081f72423cd7f3b6d35e15fcbe62200ffd7b02b4d636d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-8": "7b9ac0496146dcae5defddeadcdeb3a4628dd8b7a4b7934af7b79ecb1d0e9ff0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-1": "7c71b9e754f4c111d358ac88c2f5ac2c58302ed5526de9a9bf5857e1344dbb73",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-2": "eb1ed25e2a3c984b22903ffb47c48e102e0e7206271edc0474cfc112262fa148",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-3": "4c5b3fea73ae71d807edea5dc2313115e2c6b2d6c4a6c9feb58ea3f1e37b0c16",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-4": "c4602b72eca764e9d5906f4799fdf492f8f9ae92590d4c4aa7f5be8509063789",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-5": "4d4e003519fc957ae56e9e79770e98ebc5afe4c337bec3619f68a2a302932e60",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-6": "2f11334f5ce5bd676d693c2f2e29688a384baa176c8ba171b5c133a88200cebd",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-7": "d493288ccdf019ca60c0935bb3542cd228b222ffd57a315a783bd38bef003dc8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-8": "5d27a9433610294dfc5f72997a5f9648c7f88cf1199e5ef8c2d74a660172b01f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-1": "2de8ee3ede6ea5b3e34aa4e6d54beaa5df199ed65af9ceda1a497450893b962c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-2": "aa94eff6cfc3582cd37576e453f0b295712f9ebd70fb0599dc0ea16324c357bf",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-3": "17e846910dcb83306a734f98585afa5807cc563108b1cb2d4e63751e80763ba1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-4": "ae6ad6c75642191ad28f402dd7feb2c4a2ebac7ac631878763f82c5d84319643",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-5": "92d6959a83e7c11fc769493929167f5bf7ae7306bb9a184e56c95801ee67282d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-6": "2aa92edfcaa993f15bb023f383ebd0ef780e4563b1c3f83fd762de045d89d10c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-7": "09a01f5617a8223d08300b22993e0b45f79ff35a40251de6c7a95a705cdf656a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-8": "42772e4c142e8fdb2bb89bdbd5fc55bf1589a9852b8c60063cdb96558c9ff509",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-1": "a36f8398ef25f2c218d41d93046188778072ef55a1f83db4fd04cc3d1af9608a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-2": "e43e90593b8283df0fcc6fb7c3db9acbb2e57bc54f4571fffd6a4929b3c9d812",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-3": "689818b6a8b201afcccccfa50aa67cbbc628668e45f05bd2681c7d060ef3f03f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-4": "9a05404a955604fee0b7e2837ee53ddebaf1a50c140e19abea793884acf7ab99",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-5": "f475c605c27c9c7336c189a0db33a06c943740b348fda79887b313c84d891c77",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-6": "f1e728f159f6e58d5010a458b520568724274982523e6d620bedd7e42c26647d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-7": "aeebcebaca8f85b9a8969e64c6b6156fbb1776dbb7151db7da6d352977aa6776",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-8": "aa3bc39aebd3a58d796396c0c9cf2eca3152e0f42a3171f6abc159b6926471ba",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-1": "a1f9add98cd226683debd1cc50ba1ac0abde28651e8143c4e37ea9b2cfff4b98",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-2": "a37e882c8330b6c2a2ce02e912848614287349994cf4a246cf0eb81c04198c45",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-3": "f7318dda21f2b8f8b43ef306dd7b88fcb19546969873e343969300752db38a28",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-4": "d212a97088ace627e7acab0809dd885a8abe07b04fd5374b87d37f16b6c2e44f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-5": "525d6bdc82fd7fa2381ce5224f6bbcef07239c2bb5a1de0b3677915acaf50dc2",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-6": "df585cba28f5ab332866cdd071357049bf158f7c24abf8cbdbbd7dc49fba82ab",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-7": "9e0c7ee7ba32fd7178abde80bc466960812030b6369de2fa8fc7b4847eb3dc26",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-8": "c2d5c4cd61e746419a13cea90a5f01b0b04dc259fc146b5cb39d52773f25a55e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-1": "013805e7a63c26bb38a144ffb45bf2cb1247f5df8fc4ee94fe8aa6bfd568f5a8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-2": "f982e16e4f44766b4291eef053f35ac689572e11fd2dac50181d286bdf005caf",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-3": "d77bd7bf561f24ce2016e6f5071b183e3523b5e31556e770faca14ec5b6e14d4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-4": "06591ce1dff0137d2a07d9372fbbb1ed520b32566df09d996acd2305d3852ce4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-5": "d9ab3f458e4d8c42d574c3b85d5bc742ba82fc0d9be480545476b5ad888ff337",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-6": "7c1d40e28f5f5c5cdb4e6e055522f121c87ecc4369e9145cd6911619564f2ce3",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-7": "46b3b7e2d297cf3d3c1e1cfbaa1694f08e35b99a50e0551b649d0bbb0d2c2495",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-8": "e2b94e00ea3c2051d5eb7b8e58f2214ff09de686c31ddbf78511830c09128d43",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-1": "ed7fd5581fcac8971a61e2da9b8e79c47797d6759b26094ac92b415438d42193",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-2": "ef9360ffb86252a54494d1150f959c3070e71fb5993137a067b82c6142e56a53",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-3": "f6cc1a68ab4e7d46e7db7451b92569d8973867f92e126bf0c55f0a0f75e86dd4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-4": "af3b89ed712876a91e27f7ddf952064ce17cbcbb2696a5d95d9ec0353fed6e37",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-5": "c15b33619e30f478369c6107ec7ce71c58c4ca5494adf230ecbf9602496c6cda",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-6": "437b982ca3ac85c22fac0010ff5e8e0a8ff03173fe37da3b0e7ffc2334d238e1",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-7": "884a9ebea8ce04c5a14064df9cd0b4372090e0337ed8a86bbd1dc47f7ff46069",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-8": "6537ad96d36c84a409292025a7815b4f97f58329c49cb12a2c7a2cc905977f23",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-1": "f02b74819a662297f812894dda4f9a03a4b87451304a9d94bbb17a2eae74f128",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-2": "dc69cc531a8fd1e182ca3371b6b339eec3731eb8ae1e029a78e254cc2d11cd10",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-3": "8f6a2abe7af2acf0a85cfd81b0b6ff059fd7b991a5f76c4a212cbd15bf997edf",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-4": "b2c90d468ab58de2d2094eec160694458d598d253661783622a4fe949ef2269d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-5": "c4dff1998b52541374dff8e630b73d91ca7d342b551e8845649b94e440b3ec1f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-6": "f5ab93dfbf0922846aad56e581b09bdc7faf33dce96dd496aaa4b1802a9ca5df",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-7": "2a5cec9ef236d0a8b6f488463e9c69e0c86358a180e9b608d33004fd6af397cb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-8": "262544a51bd31af390fc3d79f1c5f11be3393f83420a33831a103bb4f9b09c00",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-1": "598ac1e365161555e5c186ed6563d7256be03862c4a13e9a4f853f079e7363d8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-2": "a6ba82d57df51eaaa4a88b988f0cd8630b030c0d713ca4d8f07938717bc587df",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-3": "81cc4a16e64dac23eaa9da777239b964d81fd3ac2aafdd48ad62aeeec22751ba",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-4": "a75a688df12b7ee2ccb7dc409ef3dc97c32a5d50e9e8b33381c8ac27bde62c65",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-5": "913ec20144233b9ef7e091016147eed5acc805979c84b882c1a683ea70ec6feb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-6": "bef5495107ca26bd5c1b021813dfa0870e6cabcb68668e9f0bd350bf72ecd184",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-7": "8324f651c20ce81b70d316953e118d73f06a069cf627dd0147158deecf60272e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-8": "9b2c509f421407fc19c07aaedbcfa49866d30e3e832e81368810e62fcc0be38b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-1": "1e76e22a3eff8f9af41bc20c82d2773d321886e7341904e649df1bbcf1246608",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-2": "b2c1c05bffea7506156b4a33a422e15668ba6a89122e8a19bbb41b60e143dab4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-3": "3a444f8c688ccc42d40dee15a4571905fe7354a6efbc853dce3898af67249f7c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-4": "68b81eae5b0adbbbc50580550cce1c70a7cecf90a1cfcd3a111091cd05732c8d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-5": "5f9c0cc521adf04332cbd82d58cd01bbffe7e195c7eea04ef456ad7cbc7219b5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-6": "a3c8f5f64371f5f0d4b98a3287de073f5f8b72023411885db7ab59c292dfd599",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-7": "9405eacb10ca85f06e9a5dadf751688d7d52d864ef57dc7daaf5c003d8277a34",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-8": "4b174540dc209aadd0c4a7eed3ad6489648548268b8b681a4239902d123113d7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-1": "94d16e72e92432ce918d0cd70d3a48c98e230e257bc71a2d8c0b4926454c50fb",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-2": "56daea39a4bbbd8fc5098d932e5a4f530ef650afa61c0f084504d120ee901695",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-3": "8267d6f9d6cccef2c41dd45d1a6d98f594d54979f8e266a039940347462c4a21",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-4": "aa091473e40d4d189e8c6a8facde36d4df7a294f002a50e765b6a154600654f0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-5": "3d30a3793f856c79a788b98d096f44ed8646617b43fb4293f25936e43ac3441c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-6": "065b356e8c71fdbb69e930703e9f4c76f5b6d6865ea94fc443faed35b93c5eac",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-7": "0ee10b5a49d4ff9e49bdd391c5aca20ba58f13d4186296a8a5a42cad9785bb31",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-8": "8aeeb1b844c144339899203cbec5616075c03c9e0e8a1470ddc3df63aeef4183",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-1": "cc3cf6e325235b2b6680cada84b621f346063f8eb605a47c2ce881047ca0d883",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-2": "01023e188676cebd546d59655d391c4c2b83567b2b0cc89049a387f506c58d8a",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-3": "25919d92a6b8491b8d60a756678710e7a7b17ab60e21b33ff623f0fe8992c4d7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-4": "c6b278c8ec96f3ae5b95b01bdc75becf57e250cd5174c1252483387d880df731",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-5": "539d7c76d2eb3fcff9267b5b3a9f2d16bdbc1506890f15955bcc272d699e98e3",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-6": "c0bdb24bde1213c629d1e95dd7e13f81b94f8b621cb1b6b458d363a9d85ffe89",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-7": "0ab60711b14742e39b5392fe905b3ed5da50b1d28aa3fffc8fc0bff0b29cbe94",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-8": "25f3455084c833935e403b602eb962dc9fe1cec6c63c12e4df11580672651f16",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-1": "723bdb76f2828a7fbce0406c8c434c4a6ccb0933902727bfb6871544d0486a34",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-2": "ba00771ccc2d56940876bc2d7b604948108c98493d22db1c7c5fdc74d06758e8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-3": "c8318ca664ae2a33d197ddde37d7b345984b610f82769bfe8a33b5b5022232d5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-4": "9c3b584467a3abe316b19a7769b185dae71d0c78d046aa698b1eb6f033b43a28",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-5": "c5284d9b6584142efa7212985b2534daba07c59056b22bea44bd23f2bc86ae9f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-6": "5bd6740ad91e04509c45f63b85302c300cbf49964ce37aa27aaefd5183f4541f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-7": "e28247d9282f946dc61dd59f3751d99e157dcdd151bda7d7edcb57af00813fb8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-8": "bec917261af2af8f77c6fd79ad460e1d2382312b67e68e7e386b9650427e638d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-1": "b9e3a003bd05d3fe3c4b2735875df38ad99cf870cf9f3986bdb10eb16b00d477",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-2": "65f2cef5d34ca30ec256fde9505375c4ca6fe38252cdd905072a099fcf248907",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-3": "aedfe07454bb304f5f1002daeb2e6e5b3228b42e5ef5716bf84f4d74ace45da6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-4": "6cd46ea8bf215b60f4d1d26567e583740335eeda164e4ab6ae752a9d92ad445c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-5": "6ec179818d897825a25938e653b070e4faf3372ac34426c37840ab2f15118720",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-6": "d71c72c6b49b6d524e128041cb2de366bde8707fe894657ba2d608c9aa7626e6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-7": "4b38b67152a1cb4913cb02cd4cb8332840743d55b45efc1636542da944face77",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-8": "6c6d18af358ecd64799d86cb9335ce311a30f26ce45f43aa4c67b4ed9c7f5328",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-1": "54f1444df50e1894ad47596cf22a40350e18841db05ed23db9af6ee1101ce8b7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-2": "df0e76c9b66e5c0c0463d9546509ca5d9e9f375db933db877e69b0dfa6c63d3f",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-3": "af4aa6010c33e65458228ffe882255d9216ab102b4a27447b9e9f0a5c38b9b0b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-4": "facd56243eda4af820839e0a57c8b87d7a86b0e402c7a82a63a6ef901ad573a4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-5": "4c57d0002c5131eb2db266e6fdb92136297577b0a4c0ec845247191cc3d5ef21",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-6": "ce85a45f2ba25b970ef5c2f6352645f46b173189c3e45b7c991ac618e5bfc5b3",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-7": "cf091891de56ac18baf5f9b066e92c8939b658788aa52f96f8b38be00b4d2bc0",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-8": "eb0444240240c3dabe2a4cb229c8757337469e6c0c867ed14a09cf95f46f2676",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-1": "318c3aea0335a29f13482cbb8efc15ca69dd8a35886facf7fc62d4a8103b9708",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-2": "00ec867e1fef5d8753ced5051b0a4a20cc096b2d7ef8200769eabe43cd971268",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-3": "fa84f47a29706dd314c9327e981aa98877b33a9c9b47b2ebff894ab29dfcc4c5",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-4": "ad4afae4614abc49bf888ef2817e09a0a8d23d4d9573cd377b719849db7ae3b8",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-5": "44fa238d730148690815ea43c427304a5a77a16ce065eee839bc4bb26efa5366",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-6": "6e4c143cbae25b6bc0e9d506819b2c009266a18e2dd8099fa3ea94a45adbbc0e",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-7": "39ca69b4b34676f9dfb37ceb4d68b1ab4ca5c673196d6684bff018986b71a130",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-8": "d834a56ea0ceff70d539d96faaab9155d54fe3c6b121e24b966c7388569507d6",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-1": "be24ad1423439a24e84ab471c318ba5b48be8677435e5bf9cdd707e6217f2d9b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-2": "bfd5008d8875743c3c2eeb5d83af6804e6a09a8573928a3425b445c8b27e1b78",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-3": "a00080d848b5cdf5f4df2d3e4c96a21f38e6840e16a8bbf4f88730138fc7b5a7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-4": "c3cbc5251b8dce5f0b9658e96f83da51571ab09b2b3b8294e46ce6c4dd21d55d",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-5": "4a12f1272a4cf00961a18cd35996ed44ceb9f9407404f4cc1ab1206f89022011",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-6": "eed4f0a87286b8b8e7afff7bffd2017047cd0c17e2cbae06b7897ad3f494673b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-7": "a4bf6caefa00900278915faa7174312be9bcf5910fe5b1292349d712a120b89b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-8": "536f5de4e71d33f3b3f420d4f532aeb9608aef7014ca77fa7b64dbcaf9bc52ee",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-1": "e8fe29e962fb8fd6f6188cb7859c957792ce8d688a17dc6aadf7db7bd94b8a36",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-2": "560f70a30b4001e37671fad66df4d84171879bd3cb1e6db4e909746f88853274",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-3": "1e9709449477c86bec08aad638a10deb7b014d7d567fb43ddf4810571244d6d7",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-4": "f14fa8325a0c030d2658c1154bfbe4e79e5d303e63cf1bf1ecdce5e9e964a11b",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-5": "f281c09855011244639dce73261c7ff51244d9e37a395ee9a44c912ba2e209f4",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-6": "cd359a2e9b0f604a356d3dc2508f7a9214067e0b11fc73aa89a1bd74b8bef20c",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-7": "5938c70b6114c880dc0f7c62b3fb5fcc332f067620dd7651cbcce71e28d78079",
+      "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-8": "e09dd7dbbd6eb1e07efcdb977bd824b6568c386015ed73b25fcd32776d691c7c"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 50176,
+      "output_tokens": 392,
+      "requests": 392,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:4:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:15:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:35:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:29:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:22:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:43:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:1:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:19:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:37:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:27:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:47:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:13:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:8:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:34:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:40:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:45:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:17:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:36:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:39:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:41:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:31:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:20:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:5:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:11:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:33:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:32:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:12:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:7:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:10:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:14:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:49:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:16:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:42:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:3:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:38:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:30:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:24:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:48:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:9:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:50:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:6:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.7578,
+        "true": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:2:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:18:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:23:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:46:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:21:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:44:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:26:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-1",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-2",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-3",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-4",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-5",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-6",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-7",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic_relevance__nanobeir__NanoTouche2020:hakari-bench/NanoBEIR-en/NanoTouche2020:28:doc-8",
+      "question_id": "relevance_noul",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "open-jev--customer-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__customer-control-v1",
+    "split": "test",
+    "case_count": 33,
+    "decision_count": 33,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:15:22+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 33,
+    "expected": 33,
+    "succeeded": 33,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 1.1543030303030284e-05,
+    "accuracy": 1.0,
+    "positive_recall": 1.0,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1": 1.0,
+    "true_positive": 16.0,
+    "false_positive": 0.0,
+    "false_negative": 0.0,
+    "true_negative": 17.0,
+    "positive_prevalence": 0.48484848484848486,
+    "majority_accuracy_baseline": 0.5151515151515151,
+    "constant_brier_baseline": 0.2497704315886135,
+    "brier_skill": 0.9999537854411765,
+    "baseline_adjusted_skill": 1.0,
+    "baseline_adjusted_score": 1.0
+  },
+  "elapsed_seconds": 5.188882000002195,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__customer-control-v1:customer-control-v1:42:11:refund_requested": "fb7e61af93966694519daf82f5e0ebb9a92886a0034619573eadb1022f9d5419",
+      "open_jev__customer-control-v1:customer-control-v1:42:94:refund_requested": "737a586d68bc44c93bd93265026d5bfdf921e088b4da769214dadc4225a0fa94",
+      "open_jev__customer-control-v1:customer-control-v1:42:148:has_reproducible_steps": "64ed9ff4f04becfe105048d6268b46c4c1b511042f5726f1988c3529164be392",
+      "open_jev__customer-control-v1:customer-control-v1:42:154:refund_requested": "f1ac1eaa0095d43497bdaf955d335009019267a59d9f8fcd4394c97a69242d05",
+      "open_jev__customer-control-v1:customer-control-v1:42:183:refund_requested": "62b96e86d0fe2e920898f340e2a71ce926f6e0130ec52dd0c0b05fbf4978d3b8",
+      "open_jev__customer-control-v1:customer-control-v1:42:193:has_reproducible_steps": "e534c7ccf8587207599524209afdc77c2a1d7aea12e77dc22b5ae9551ab77020",
+      "open_jev__customer-control-v1:customer-control-v1:42:197:refund_requested": "f3e07ae51b676c52e4c59c40519004ddac0bf0083280aa5bf603e888f0192293",
+      "open_jev__customer-control-v1:customer-control-v1:42:198:has_reproducible_steps": "b167974111eb9cf8cad9453cb8cd89bc4d8feeb88a73d8b916786b7437eb788d",
+      "open_jev__customer-control-v1:customer-control-v1:42:223:has_reproducible_steps": "c16d7aee4a4cd54721d68b516e04d5ffefdc120fb243f411d0815e123f04f896",
+      "open_jev__customer-control-v1:customer-control-v1:42:243:has_reproducible_steps": "5128b7165fefe9f6bb9e7a67ba2ed45be62694fda98803fd4ed5e09d01625c1e",
+      "open_jev__customer-control-v1:customer-control-v1:42:259:refund_requested": "d43485aa28e6d2945a3aa35b9537243ad41d492e43ed2a5ea253bda6e843e4f2",
+      "open_jev__customer-control-v1:customer-control-v1:42:315:has_reproducible_steps": "aa55b08f28413c34a0ecba75d81624b2d00b4d510099e79808df00efdfe55fb7",
+      "open_jev__customer-control-v1:customer-control-v1:42:325:has_reproducible_steps": "6aedbf041519dab5a758d23de669606e88ac26ddb518a5300e9e14153892f319",
+      "open_jev__customer-control-v1:customer-control-v1:42:343:has_reproducible_steps": "3f25aca067de2e16cfda0eac402ffdf3b774c64b00e416da1f77ae93093ccac0",
+      "open_jev__customer-control-v1:customer-control-v1:42:377:refund_requested": "898ba67ec9c4735fdbc7e56ea32f6ca24a8dd566feb49683586ca0f06ad662fe",
+      "open_jev__customer-control-v1:customer-control-v1:42:485:has_reproducible_steps": "cd74956033e467a1afd60d01cb9ab091aa384a26094c33cf3a0f4b8728ccfda9",
+      "open_jev__customer-control-v1:customer-control-v1:42:499:refund_requested": "2a9761c3dafec2cfea7754799bdafd096cdf3f70b950c5c84daa1bc3fade1540",
+      "open_jev__customer-control-v1:customer-control-v1:42:516:has_reproducible_steps": "1bc958befdd75671764dce767f4066c133a3ff73dc99851f6555576a2f528251",
+      "open_jev__customer-control-v1:customer-control-v1:42:574:refund_requested": "5cd790b776c1fe510717d115f573f4b128330a7c540e295181fa59f8ee86bf25",
+      "open_jev__customer-control-v1:customer-control-v1:42:581:has_reproducible_steps": "fb808463bd9c7f9ea74936ff61dca0e842cc3c819bdd6236b334973b782b37ab",
+      "open_jev__customer-control-v1:customer-control-v1:42:581:refund_requested": "d31c07d1927ee2d6aef056c44d2b7275b22eed95ce68f1913aaa3a36c980074b",
+      "open_jev__customer-control-v1:customer-control-v1:42:729:refund_requested": "21f76f6f3b1a8d390a9892a764adf1708ebb31a02afa8069289342fb6e929436",
+      "open_jev__customer-control-v1:customer-control-v1:42:765:refund_requested": "9004cad1ae86bea1c893aca61eab29176e01d20aa1a462485734c12a0e7f6212",
+      "open_jev__customer-control-v1:customer-control-v1:42:781:refund_requested": "c009679d4769415e7a818e39fd760debd86573fc1e76c82c35bb4d987d148339",
+      "open_jev__customer-control-v1:customer-control-v1:42:797:refund_requested": "ed0d6e0d33775f2308926f14b89f4a2cb2e7a55d26abb3ac3881a151c057fe93",
+      "open_jev__customer-control-v1:customer-control-v1:42:801:has_reproducible_steps": "4591b98cbe0982ed8f1b36b504f938e12841a8dfec62dfc966625d4d43e3192e",
+      "open_jev__customer-control-v1:customer-control-v1:42:879:has_reproducible_steps": "57f53d1af48e0441a4ef08b608407c2632a1e3eab9d4ea7bf01173b5a67e377f",
+      "open_jev__customer-control-v1:customer-control-v1:42:928:refund_requested": "3945d8c6e7136cb7cdbcfad0574f3373abacfdafa44aa39f5702bba2e9c249cc",
+      "open_jev__customer-control-v1:customer-control-v1:42:943:has_reproducible_steps": "6a7fc2a97ce588917ba67078004aa3d6d4ef0591578fb4fd109a88392ddcf6ff",
+      "open_jev__customer-control-v1:customer-control-v1:42:952:refund_requested": "7534a3e2fba75678531576ccf3df607d907282bb7e64d5807ef4a86d6ce14df6",
+      "open_jev__customer-control-v1:customer-control-v1:42:954:has_reproducible_steps": "b0b1260e9e988e6f1ab8ce342a9a883de0cbe11a74c5084efcc5082e37a1a1c2",
+      "open_jev__customer-control-v1:customer-control-v1:42:964:has_reproducible_steps": "d6e4aab3c51235b0ebc6758094b43d4d5a2943fdbb69babf16bfc23c956567d6",
+      "open_jev__customer-control-v1:customer-control-v1:42:992:refund_requested": "3a8ceed8296d3006045252bb1d87447f141bbb0c29e683d339eb3312355a7a89"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4224,
+      "output_tokens": 33,
+      "requests": 33,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:11:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:94:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:148:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:154:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:183:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:193:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:197:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:198:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:223:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:243:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:259:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:315:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:325:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:343:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:377:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:485:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:499:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:516:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:574:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:581:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:581:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:729:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:765:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:781:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.9996,
+        "true": 0.0004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:797:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:801:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:879:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.9993,
+        "true": 0.0007
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:928:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:943:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:952:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.007800000000000029,
+        "true": 0.9922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:954:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:964:has_reproducible_steps",
+      "question_id": "has_reproducible_steps",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:992:refund_requested",
+      "question_id": "refund_requested",
+      "probabilities": {
+        "false": 0.015599999999999947,
+        "true": 0.9844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

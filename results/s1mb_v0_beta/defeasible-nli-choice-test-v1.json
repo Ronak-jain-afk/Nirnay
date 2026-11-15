@@ -1,0 +1,1281 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "defeasible-nli-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/defeasible_nli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:56:47+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.6,
+    "uniform_accuracy_baseline": 0.5,
+    "fixed_answer_accuracy_baseline": 0.54,
+    "baseline_adjusted_skill": 0.13043478260869554,
+    "baseline_adjusted_score": 0.13043478260869554
+  },
+  "elapsed_seconds": 9.39426590000221,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "defeasible_nli:snli:test:6": "4864127f28a523fca1041b87944fca4b8ca8e2eef8076fe54c615c93f4cd9981",
+      "defeasible_nli:snli:test:28": "88864cb95b7766e791d30e7d2f2a240de38db57a1e24f7a840003056d0ceccba",
+      "defeasible_nli:snli:test:38": "47ac2d13f8940032d1057fbfdc0b75809f2a69b3dcf40a8fa22348fea9c4ce26",
+      "defeasible_nli:snli:test:43": "d7dbbe834498267b1538b7bfd8df3969d92a5873243a848d1b6c4358df2a0dbd",
+      "defeasible_nli:snli:test:67": "efa51117f1699bf314579f08647c9f06477919841c5d2bd9beae974ae9a53cef",
+      "defeasible_nli:snli:test:103": "d51077e4c3d15ec662a2cb03021508b56a724b3ca0013354cb51f6d462fedd06",
+      "defeasible_nli:snli:test:153": "8c9df90122fe977ee5b79973391eba0c4bc2cba5486bdddd4b145a2db5ba6fbd",
+      "defeasible_nli:snli:test:175": "992790a069f12a4df65756d70202425493bbfeb98ed9655b2f3ab9a9acde40e9",
+      "defeasible_nli:snli:test:177": "da01e27c89981a0bc03cac379df835659594d307103c7a135b43c1d20a68d8b9",
+      "defeasible_nli:snli:test:201": "bb9450d89f55a71fc1e9008b1378c8e3d4a270e5b4ed6745e48889f2af406308",
+      "defeasible_nli:snli:test:202": "3628f458f129ed151d81e659002b4b22ea7d00ab2a3095833f5e3f6dfb9700bf",
+      "defeasible_nli:snli:test:205": "37ad05056cb1bdfc950d70c5d15912cef9a8ed8645ffc912a2acc98cb5d926d8",
+      "defeasible_nli:snli:test:244": "024a125cdc0c4cb04b564f0a64815b835248c90d8552e6b7622e029c9808c867",
+      "defeasible_nli:snli:test:256": "38fe96ecfe5625ed4bff36be7590fa088a0a1b279a5a53d5654bf30e442bcc3d",
+      "defeasible_nli:snli:test:257": "e12593123eaba94f3111073cc1ece2e7cd938b8f20712a2ac4a8862530d18c71",
+      "defeasible_nli:snli:test:260": "f4731e4b19fe8e4170d217ab5f99d377afd30e0558fa9a202c96f9dd309ceac1",
+      "defeasible_nli:snli:test:270": "edf9b11b5be991b3cba0b6ee79133b3050b92e84affdf8adcf6a6dc75df6ca69",
+      "defeasible_nli:snli:test:271": "a7280b1221cf180fe5fc4c02c3994423f8c3a68349a700d125eb835395bc1af7",
+      "defeasible_nli:snli:test:280": "8545d3c93b97c87b3260c6e712688d983f2daeed88aa09e638f73ed5d2e6d726",
+      "defeasible_nli:snli:test:292": "d8c0ffd8700609542cc6b21813c036308f026933a23519f830fe7a2a63cad557",
+      "defeasible_nli:snli:test:311": "fc39e63a301d6dd2e25bb28c59c7de19891ee3b3965dc33efbf211b981b438b7",
+      "defeasible_nli:snli:test:317": "854147fe7557398cead5f6d70a6d53f44b41b7f8b50727ea21fbf83430bc2c4f",
+      "defeasible_nli:snli:test:369": "5cafa5a4bf329e87fc8b03d3a03efef36982c5c33755b8da5c53ee14fcd90e82",
+      "defeasible_nli:snli:test:372": "8426fc0e25f8cf81b53fb7575c77231cb66016ae92fe9639ecbfe8dfae12af66",
+      "defeasible_nli:snli:test:431": "6281e8fae55eb5e734e14057d7b6f14e64d6426554d790622d989f6cdab77b1b",
+      "defeasible_nli:snli:test:434": "89968d4404c7d40678a858b2a95a448116548671f427e1236748d8b1ff741c04",
+      "defeasible_nli:snli:test:436": "734de6920946bd4b30f5643fec28f275f172d99db06e85e570fc913caa671913",
+      "defeasible_nli:snli:test:455": "bf595436e3831e8f0765c320f1a6c4c293ad1c1d7129d6b6683c01bc617c600e",
+      "defeasible_nli:snli:test:462": "bbd5bc0c0fee440fe730ac4930371a869dcc7e1880d211d09c2249a5a8e2dfc8",
+      "defeasible_nli:snli:test:475": "9690a48f224e396e2cb2ad4932537b739266cf0d828a0f80082a7a4cb898ff2f",
+      "defeasible_nli:snli:test:480": "170dd6a8a655c27edcd52d8096947d9cf52e7e35fe5f15748a352e32c0fb6d2e",
+      "defeasible_nli:snli:test:489": "4b9b388bbde1f8976757f29e3dd875768b34bc27eb342c40d9073beeb5f7e2bf",
+      "defeasible_nli:snli:test:517": "33bfff6fa911466896575c1ac699567613e0da9ee5deda92be60ce16b83d8410",
+      "defeasible_nli:snli:test:526": "6f452fb50b725ae6b0c0aa9aea8c6672b367d410947a242efba7c676db08c3c3",
+      "defeasible_nli:snli:test:532": "b665c86979065d27f2c5e4ed9ecf2d330a753f19f2b9c31293360014c0a9cacf",
+      "defeasible_nli:snli:test:597": "db82e55f425568ed8039772a83df0f31ee5642930c790361f64b4517918b7379",
+      "defeasible_nli:snli:test:613": "aaaf01d12daf69ece3ff600a2ecc0a15d51bfee09976710e24584af6ce949155",
+      "defeasible_nli:snli:test:619": "08c3d2a70d8541a7762a61f03076381c734c0611239501afd9ccff0c0b21d447",
+      "defeasible_nli:snli:test:668": "77458d8fe786f49c5db919a8e6f44b692bab040b8c9627eb70b6e0200e6a3713",
+      "defeasible_nli:snli:test:686": "a7efd5a35eb28df6ac48bc1d04e9f7b3146cf87050292c2cae05db55754f581c",
+      "defeasible_nli:snli:test:694": "b1d641ea900d8ceebeb07d8b4e1fe0c3c945874201c801ca26b1b5374c0c28a3",
+      "defeasible_nli:snli:test:696": "9f8ec52813dd991e6f1d154f3d052bf09c4a1fcc968a7d5428eb72cf0edd2dd0",
+      "defeasible_nli:snli:test:741": "3cedf3cf4e6f4ce17f82c3f18fefe6f3d25a5343c9c82737a868f8c522c80146",
+      "defeasible_nli:snli:test:757": "7da3c2cf9c24a6944305fdf03ec0bab97632fcd2fbc1132333c1cf45b6ce7ef6",
+      "defeasible_nli:snli:test:768": "e995e0facc702a5e7c9595ded508b23b99fc472a9e91aee4b4e5ab037ade6b57",
+      "defeasible_nli:snli:test:832": "b6f38cba5bdd4ede1ccb7be2032bf971f35143e1d39b64e5a6846edc7f267b60",
+      "defeasible_nli:snli:test:854": "c497e0ab09f8a5dfec2f96501514cb0cac63ceebe7166cc6b8831b61ab657d63",
+      "defeasible_nli:snli:test:889": "3b300b51d5a8e41217dbca70cd0d6b4b47969f8065d33c2ecc702fcdbb172bcf",
+      "defeasible_nli:snli:test:900": "382eacb161bc33ea547afca1e43ca0da50e184f09d5a54675b9a7af82bd50959",
+      "defeasible_nli:snli:test:946": "0416f497b0b6e09f383258b120ca9d6c6d28f444e44f9ffc9e0c35668e1f60de",
+      "defeasible_nli:snli:test:957": "df74f288f217e6d1e6678660e111928288dfd48ab9c99e14778339c1b19b9be4",
+      "defeasible_nli:snli:test:1070": "e03f5454aad12ef07aceed30ac9f4269701fb9e5db9cb819ead8c3f62aef0f29",
+      "defeasible_nli:snli:test:1102": "8a8075c21f7fa0d635666004de8e37d9022f452a80214bc2bc7c0ea38eb46ced",
+      "defeasible_nli:snli:test:1136": "e1cb8ad4095b0ef5584a2513c3df98280d19cfc0aa2bd14f976538924e236266",
+      "defeasible_nli:snli:test:1143": "027fd92629c0a919550b2056fbf91ce29dd42f7c35d935b252543f6a7f09290f",
+      "defeasible_nli:snli:test:1149": "88217dcf35744d127b20b64b912e8026edc0551288d9d7853610bd52b66caac0",
+      "defeasible_nli:snli:test:1161": "fc3527ed58f5362e5f22c62100f69217fd33cdfd4ec8e7369a643ac37a5c2264",
+      "defeasible_nli:snli:test:1165": "cedfe3881446d4db650d3b7b2c63f38456c90db2a4911a22376aab5b709c50ff",
+      "defeasible_nli:snli:test:1187": "5d5736e9bdc4b55180a1bb1478ee2e001242eca023bd70374741bc151d06a378",
+      "defeasible_nli:snli:test:1217": "14d677e4cc5cce4aec7daaf576fc389e54cc97d13ec3b788f917654b500c1562",
+      "defeasible_nli:snli:test:1222": "a2beb530d3889fc37d2b6a72294a1c86b0df7842a765cd201fb1d07946091954",
+      "defeasible_nli:snli:test:1234": "f9e0ca7886b00d4042cc82b4d3ad002ddf1208dc8d15ba4641fc49586cbac8ed",
+      "defeasible_nli:snli:test:1246": "88b086891aa8c805aebc6dd309a4ab7533cf35fe4bf3c87dfd3ec0c8821bc6ba",
+      "defeasible_nli:snli:test:1252": "1d3a1433b32538ed35cf159c29388b06ca018f94ae9fe1ee854f50f3cbdf1a4b",
+      "defeasible_nli:snli:test:1258": "fa39623ff566cb43a21a2d9c6755a533fd4a094b162db7b6e620e578111d1a82",
+      "defeasible_nli:snli:test:1260": "7ca592b9dfa488bfd536a4ff3a758bb17970aeb1e3848afa5f3953d8ebaf86fa",
+      "defeasible_nli:snli:test:1271": "46df500542bf5101270704de84b5f89e9143fe614ef6d9e0d5fcdcfd8b0bfbc0",
+      "defeasible_nli:snli:test:1310": "4056acc93a153a8d04ba1bb6506f9c9d87161294f32002b532ad9bc529905cc6",
+      "defeasible_nli:snli:test:1334": "b1d49dd0b64fcd09574e5c08fc97d999e5755337271bea42dc5732ccbb8c4a90",
+      "defeasible_nli:snli:test:1339": "de79e457394566d35c1b8a31b97854b474b5c30efc7bfff2395db70f73db208f",
+      "defeasible_nli:snli:test:1360": "97d4a913e60b7bf690f1c2e5543242454d89fd3f43ac9e8b569e153dd43a332a",
+      "defeasible_nli:snli:test:1393": "909b3f2f6810650439ead00ab8835a00fe348a1f51d6180c552a0c85cc04feb2",
+      "defeasible_nli:snli:test:1398": "e6165dca5d88d13d32cfb082cedac99304bcfa75d6cdb45bb7f966bc651cbe1d",
+      "defeasible_nli:snli:test:1410": "b7f107dd541ef9a029227bd36008f6997ece101a1f084dca358f34be0cdffd71",
+      "defeasible_nli:snli:test:1421": "34920e7dfce415c351c80f6367135e808b6ff43bdbfbaf0bdc6654559a38ce76",
+      "defeasible_nli:snli:test:1439": "dc79ff869efa1f9bff0f02067e71a6491dce0379333456840179c105bb8e8140",
+      "defeasible_nli:snli:test:1443": "9af2a696d4f2b0bbccd022046594984c0d73577b0b0a1577f2b56becedd5352c",
+      "defeasible_nli:snli:test:1466": "96cc261ac05d55446a5a521e0b03b1649f41a7d7f5ef9a4ba61413f857ff5adb",
+      "defeasible_nli:snli:test:1485": "788ab3f121a0786972cf3f2a12942edc0d75c48f798696fcfc0c8e2f840c6338",
+      "defeasible_nli:snli:test:1487": "34b4fe646b0484c7b59a13483bbd2d23210988e1929158538a924f8a381bbcb3",
+      "defeasible_nli:snli:test:1498": "eb989ba602185e2cafa199f3418a443dd1446545095825d7972a1df440f6fb84",
+      "defeasible_nli:snli:test:1529": "09e06f1fd71aaa31cc19c880cd7be64d7cb3f41e96ed884e3816ee359feb8d37",
+      "defeasible_nli:snli:test:1534": "e6ff34293ca4a432b6385d0cb00a7f8ebe2f2342c920f71131d4c0d338adcaa9",
+      "defeasible_nli:snli:test:1587": "2bc5a3c680f104ee97e964356273320ef37ff251bd1bd23cff07d5b822315e5c",
+      "defeasible_nli:snli:test:1589": "749777d7bd1624b33085b479ac1537ff3b3d87fab0d1e7a32f3f533636a2bf04",
+      "defeasible_nli:snli:test:1597": "b94a1f553e3d2577c16cebccaba4053a2a90fdd717e0c334e6680e3a88834096",
+      "defeasible_nli:snli:test:1605": "d3a3156893a585aef9df37fbad392a634769202fc3e31bac8cb26492f61e4ee0",
+      "defeasible_nli:snli:test:1610": "8d99284458e38a8593e02e9c1d3188e8d592c7b679571c13ab4e7ad808b715fd",
+      "defeasible_nli:snli:test:1629": "54c052e41f7b3d692f1e6e8084d1a2a2ca62499b1e53775734634be5d892232f",
+      "defeasible_nli:snli:test:1646": "33139b9b41953821d55e1f7fdaf749b0915018ff6ce2b7761ea4f2839b4167e4",
+      "defeasible_nli:snli:test:1655": "0b7085f261f8344fdffe158a38b3820773679f761b99dae38723824d6f7c8682",
+      "defeasible_nli:snli:test:1683": "7ca31db6b6e1d677ce54bb3143e74706345346db1fb3fd448340bbd648e059aa",
+      "defeasible_nli:snli:test:1687": "baca865226ef34b3f6f5f7b0b3962842a22413f475f649a00383ac0402c3e50f",
+      "defeasible_nli:snli:test:1694": "b93e4754063ed47f23e8d80fb021956a6a244c7ad761dfd3cfcbc2e2afc03308",
+      "defeasible_nli:snli:test:1700": "7c75cdb37d7576822b20897805217b162490f8271e434d3cdfc7d9989ebe3ee5",
+      "defeasible_nli:snli:test:1703": "b5b56e8fef20d8e14698dbc924daf79bbc29ed217b744d37ec14c933dd5be532",
+      "defeasible_nli:snli:test:1712": "2ba8406c793f113e1faf8d0aa129d2446ab7074492ce3eb337aadf3d8231fb79",
+      "defeasible_nli:snli:test:1796": "7788b85932b7212842d6037f3e0e7bd21cc860c8d86a1dc76499cdd0bd936a70",
+      "defeasible_nli:snli:test:1800": "4d76e277e4bc4262f58b2a21bb68d13bf1739768af66dfa453c39c4f9e458dca",
+      "defeasible_nli:snli:test:1807": "0d960385a64888d1b0b4d890436ae189917f42605b2635b537bb524123348b90"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "defeasible_nli:snli:test:6",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4609,
+        "strengthener": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:28",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4727,
+        "weakener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:38",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4883,
+        "weakener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:43",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4492,
+        "weakener": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:67",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5039,
+        "strengthener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:103",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5,
+        "weakener": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:153",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4492,
+        "weakener": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:175",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4844,
+        "weakener": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:177",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5273,
+        "strengthener": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:201",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.582,
+        "weakener": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:202",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5391,
+        "weakener": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:205",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5625,
+        "weakener": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:244",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4922,
+        "weakener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:256",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5039,
+        "weakener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:257",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4688,
+        "weakener": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:260",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4805,
+        "strengthener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:270",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4727,
+        "strengthener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:271",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4883,
+        "strengthener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:280",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5312,
+        "strengthener": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:292",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.457,
+        "strengthener": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:311",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4609,
+        "strengthener": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:317",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5625,
+        "strengthener": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:369",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5039,
+        "strengthener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:372",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5547,
+        "strengthener": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:431",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4883,
+        "strengthener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:434",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4844,
+        "weakener": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:436",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4922,
+        "strengthener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:455",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4648,
+        "strengthener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:462",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4297,
+        "weakener": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:475",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4961,
+        "strengthener": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:480",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4805,
+        "strengthener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:489",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4688,
+        "weakener": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:517",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4805,
+        "strengthener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:526",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4453,
+        "weakener": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:532",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4648,
+        "weakener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:597",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4805,
+        "weakener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:613",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4766,
+        "strengthener": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:619",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4805,
+        "weakener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:668",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5039,
+        "strengthener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:686",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4453,
+        "weakener": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:694",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4805,
+        "weakener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:696",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4766,
+        "weakener": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:741",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4727,
+        "strengthener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:757",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5156,
+        "strengthener": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:768",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5156,
+        "strengthener": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:832",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5547,
+        "strengthener": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:854",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4727,
+        "weakener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:889",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4727,
+        "weakener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:900",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.457,
+        "weakener": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:946",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4648,
+        "weakener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:957",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4766,
+        "strengthener": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1070",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4531,
+        "weakener": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1102",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5352,
+        "strengthener": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1136",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4727,
+        "strengthener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1143",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4766,
+        "weakener": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1149",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5195,
+        "strengthener": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1161",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5703,
+        "strengthener": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1165",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4805,
+        "weakener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1187",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5039,
+        "strengthener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1217",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4922,
+        "weakener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1222",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4648,
+        "weakener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1234",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4922,
+        "weakener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1246",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4453,
+        "weakener": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1252",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5,
+        "weakener": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1258",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4648,
+        "strengthener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1260",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4688,
+        "weakener": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1271",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4805,
+        "strengthener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1310",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4883,
+        "strengthener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1334",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4883,
+        "weakener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1339",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5039,
+        "weakener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1360",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5156,
+        "strengthener": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1393",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4492,
+        "weakener": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1398",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.457,
+        "weakener": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1410",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4648,
+        "strengthener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1421",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4531,
+        "weakener": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1439",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4844,
+        "weakener": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1443",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4805,
+        "weakener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1466",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4375,
+        "weakener": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1485",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.6144674882276324,
+        "strengthener": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1487",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4805,
+        "strengthener": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1498",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4609,
+        "weakener": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1529",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4727,
+        "strengthener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1534",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4492,
+        "weakener": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1587",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4648,
+        "strengthener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1589",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4531,
+        "strengthener": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1597",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.457,
+        "weakener": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1605",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4922,
+        "strengthener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1610",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5039,
+        "strengthener": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1629",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4727,
+        "strengthener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1646",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.5926147704590818,
+        "strengthener": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1655",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.5273,
+        "weakener": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1683",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4727,
+        "weakener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1687",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4727,
+        "weakener": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1694",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4883,
+        "strengthener": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1700",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4648,
+        "weakener": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1703",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4688,
+        "weakener": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1712",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4922,
+        "weakener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1796",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4922,
+        "weakener": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1800",
+      "question_id": "update_effect",
+      "probabilities": {
+        "strengthener": 0.4688,
+        "weakener": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "defeasible_nli:snli:test:1807",
+      "question_id": "update_effect",
+      "probabilities": {
+        "weakener": 0.4766,
+        "strengthener": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

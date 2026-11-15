@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "esci-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/esci",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T16:57:15+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.26,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.27,
+    "baseline_adjusted_skill": -0.013698630136986314,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 12.683339299997897,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "esci:default:test:3494": "4b1f94e86288f48758329f3b251babc1ee0bae2b61b8f729b7a8eed8331aac2d",
+      "esci:default:test:9588": "25bc4aa7698b0ea6804842bd541f5ae0dd8931230713b265385959b074592e2e",
+      "esci:default:test:14905": "4f6e07d7f08d4d43a7c8050fce09290013fc0c47dfff526c5a785f7a240dc35e",
+      "esci:default:test:14955": "c59ae588689f04b73391d7206771a145a594921e229f06a262fc8c2af44fa045",
+      "esci:default:test:22756": "c6ceffbb8c98fa6853964bf7f2e679f5227a66662edc6efd63fea8c3f84fc4b2",
+      "esci:default:test:24437": "9bc6b832a5f52938278e57e8373e77375735355aec093611c65fd946a78d490a",
+      "esci:default:test:28026": "c2760dcd8273f35591f51e4592450fc2cdeeeb249ba7e7b38af74febc8a0bcda",
+      "esci:default:test:37520": "1a86f1b227f5c1a95b3d3c478558e24332e57f34d7117dde8703973d41692f5e",
+      "esci:default:test:45823": "54ff635497463d6e2c4ae5db24eb393d3da6bbb0e778a18009ea1e91b6bc7612",
+      "esci:default:test:47210": "c57d00fd8b595d0c7f2c99571fc5851fb79afa0b15487806973398cc0134d7b7",
+      "esci:default:test:53628": "3a827b2eeeaa1c329d026280332b4f4da560a4e5a99fa3ed8d3c544f35d565ec",
+      "esci:default:test:69615": "4ed16b531ccb526c362541b90ac10c7a12edc262e51ddf10f0b8087afa5eac6f",
+      "esci:default:test:71013": "38b20d348e3eefbfa5307c76d546bae55f6048653a244e678485a0a5d2c77b61",
+      "esci:default:test:71553": "00dce1b34cb35c46b8cd078c1bde2f6a711f967ff15938a52d7a8348980b31b0",
+      "esci:default:test:76006": "9bb16b74498bc807f32f7cf2800460ad2956090cb85fb39b96629140d5118801",
+      "esci:default:test:84816": "17ed61ac3909e25ce532be1f5967746e4ed9baa4688b8051294530a4d0543410",
+      "esci:default:test:84927": "49a597517896d138c41009106f78f951d6b26a2213771e5d89e7f8ac0bf32aab",
+      "esci:default:test:86567": "08d5204a9958aea3e818b1759d2cd5d6ec3b24403376027bdf6a474a2daccef7",
+      "esci:default:test:87070": "bd6828614a0c22f6b74ca631f4b7d359e711b905cb16efc4a1f518da190aab2b",
+      "esci:default:test:94354": "3070c7154ce8571fade6326fb5044e56408c333839c11eca2b9db5792e4c07c5",
+      "esci:default:test:94584": "559f0d50cd46a765b4f1177c20cb8ec47a22550f5c9666c70bf9d95d5de4bcbd",
+      "esci:default:test:94838": "6f661a68dbb57f00219127edb165f566cda30a0ed5a59fbda5a685608da59118",
+      "esci:default:test:101777": "af01bee808ca9c193e203b0b6a3390193fc944d79d91eb42910eb6b1d1887b3f",
+      "esci:default:test:107582": "0ed8ac023761aef699cd044ecd76feabc161e8229bed31cb7e4745539cf69a3f",
+      "esci:default:test:108910": "afd98745cdc70bffccfdd01f1358469cba6baf6f7f3d59473501d30e71c82e28",
+      "esci:default:test:116355": "51298a748308b06edd1277d0b7aef083b1dc2dc0263cdfa9c1c9bc59e30ea8d8",
+      "esci:default:test:122341": "38aeb68f634f877da190ad2c8d82cca78d3ba4f10ab210839f6c3369c2c20f31",
+      "esci:default:test:130835": "fb54ab0dae16ee81bd1c43310da222b29f02b36aa0a142045bb277ace72ad576",
+      "esci:default:test:132221": "15109a4717c08cb32b96e07d548a9ea8f671e54cba005589e70438e05b7d448f",
+      "esci:default:test:142834": "7d91a49f27f2352f3f5da58777d2908d7cd7ccba408eb3c9404eb5d2e1a0ab0c",
+      "esci:default:test:148651": "528a766c9088993a0e3cf81a35d409c9b13a2d9cb4b64c887d6310fb38d7d71c",
+      "esci:default:test:151181": "ded3331f3699bcb0831c9074a6504fa114835016575e9c07e121b89ab737421f",
+      "esci:default:test:152375": "c1cb63a72b0601593fd3f052d80b1ede1a026ded3e2a0ebef1ffc9e9dcb8d3c4",
+      "esci:default:test:162428": "e05e634bcc623febc256e0bf642ca466041089c4d40f97977842533f55826247",
+      "esci:default:test:169815": "783c3b094d8ac16f94829ad9409f5fe6424295a5809f37bc82cc926150aec910",
+      "esci:default:test:178048": "f6fcff74db16a632fed20eff36b00ac1fa797234a8948c03abd04bf269175195",
+      "esci:default:test:179489": "80006cb5e278c32ab0cddbe849bc9f63d44318b81aeaeb37a2eb29da954213ad",
+      "esci:default:test:182630": "a2c56ab35acda9b8b7f866aa2d37019351aab28be0c4434a3b9e19148ffbf728",
+      "esci:default:test:183864": "c0b0ad1c8185249aa1cc4e1af3d1f36bd731e559814be3a2e8b276348b56f167",
+      "esci:default:test:183922": "e4be2bc9b0ec0bada732d09bc7b959deec51c599aea4ebf5339dcfe6ae817988",
+      "esci:default:test:184837": "666da6ec6882dfb8e3d8ccaff6e6da243e3feb40eaa0303f229f72f6d4ccf5a8",
+      "esci:default:test:185436": "dcec4a659a10c6903a7508cb26d06f2f35d49ca4b0afa0832e4e93abdae11f32",
+      "esci:default:test:185589": "b31da74e211900bc020395a4605fe192538041aa3dc42a4c8163e979c3d9ceca",
+      "esci:default:test:211668": "bf446a42f04bb3bfcfa3be03be6e405a51fc62da47aef547c14a733fcde56886",
+      "esci:default:test:215195": "05e6c8032f6b6690fc264a90779382319c7707d53a21ad0dd005a23dd8e10b69",
+      "esci:default:test:216457": "2c3aea6db5ccc21f670eebe455a0b06d9c29a05c96d3626120bf2d557a02372e",
+      "esci:default:test:221225": "9de408ad7234b1592a1d089160d423d96acec9e20c3709bf4044ec0f3db1337f",
+      "esci:default:test:225712": "ad7b2300a47b0ee1fa180d41aaa84d260e736c659ce03e02cd7aca1507ebac50",
+      "esci:default:test:231588": "bb5ce7b71cd399125e2404ec27ccee12e4317249136b42d99faaeb303eabb63f",
+      "esci:default:test:231595": "7b293769548318e56754665c55f0b991d915aa50e7d05cafa1b67a34f91d32c3",
+      "esci:default:test:234900": "3b89affadb70b099481b63c6fd1c5f9e190725f0a14894846950d5c3549acd15",
+      "esci:default:test:237107": "2984d56ca20f0ccf7f1e53ddc685ea0c240f2175ddbcb4ccbea5ac32f17a90f7",
+      "esci:default:test:241256": "8d495299f35b64bec45eea8d5375ffba142883dcaadbcd35e4b16e1d42b4590d",
+      "esci:default:test:244621": "8c66544b56301fb853b6fc6eb8fe4fed66abd6dafed7b3ba7525ff4fe3f70bad",
+      "esci:default:test:251244": "1b038d8af3e8fcee37d4b4966ce5ad2fbea9d66f3d7021c1803d6dd1cf7a44c3",
+      "esci:default:test:251466": "e958ac806a5a755e4e93e24b2e2b7e558ec6c5c05967e17e6cff436ac73d85e5",
+      "esci:default:test:263942": "7a7e76c3ef78e2b91b00c0983075c677ba5484bb35b5dc1faa5bdb46cd33c5d5",
+      "esci:default:test:271453": "8160467b3ad2be5daeac959acde383836878d4f08d29952ef1ead4697802b5d1",
+      "esci:default:test:277128": "1bfcf0e3e807bb5b066948d7ccc3c617037f52811cb7d17e1b9d967f58521a28",
+      "esci:default:test:288445": "0532411adbedcb3031b3ef35d6a7624a046325cb7b61270d99e02caf0bf694f3",
+      "esci:default:test:288828": "bbe769498265aa0e4c94a658dc2c46e4d28ea79aead673eefb62d9515c84d594",
+      "esci:default:test:293459": "885038a2c633b7f0eea9a2fc4c80ec191116178d783a5ad101c1e6f4c131f52c",
+      "esci:default:test:312895": "ed611f64d0c27d4194b33e3b0a2ac4265be3c1146272d595ddbfd74708b9ea33",
+      "esci:default:test:319530": "ef317fb0519f2e94f90a63a8dc51ea5241684203a901e9e9dce16b972d2c5814",
+      "esci:default:test:320798": "950d5a80423b225f4f2f7cbe44bc8d3f5ba9b8fb1658ecf9d2bdbb3c66c9530c",
+      "esci:default:test:322514": "0e34aef6be8c72e461ed6dc4ec2536f25cd49b1fc134bc9afe483b3330eb9052",
+      "esci:default:test:326950": "b028afd64793b01bc37717925665c3fe712173c61613ce9baa6ffa2a31642a12",
+      "esci:default:test:338228": "723510c9620a1e098905d8dbdbc76e8d754f59bd588112879d530bfad03eae36",
+      "esci:default:test:350571": "f9e30dda7296c50e84613fd7761fe08f30f52c7be3e7167358a2671cd6a61015",
+      "esci:default:test:350587": "08ddf53db4c5ac18162ed47c8cf89d53fb8f8fbc712d3fd3cf4dd81d272200b2",
+      "esci:default:test:351003": "6b567d7002f3e1201b92b2468bc024b7c40f64fd107b8b0b533ecaeadcf2ad02",
+      "esci:default:test:353737": "d5c63b492f4c1c8be7b9e1e104a1d63d30906a3a985882bd68bcdb7aff3d62e2",
+      "esci:default:test:357341": "f3e6507439090d347c478b71e7896adc2add600d7c8edc3e513173ba1d8cb98a",
+      "esci:default:test:362086": "85129089700de60ef87f04bb9168c76b222ca1b47dcf05741a4c921639f8f11e",
+      "esci:default:test:362523": "b452297a689a776771ee60abc0da12a95ffd988497ad4dda90f8fc7d9b908ac6",
+      "esci:default:test:365538": "6a7a5881e3efe8ce53642b28cbc2e355c0cf3529b08804d12f89f62392f976aa",
+      "esci:default:test:367178": "07582cc957f96dc586343919890f452f4b4e951390d500d0b421cbacaf941d6c",
+      "esci:default:test:367796": "cf92365206c8d47fc5aa79ad8ee50edb73f834218a9342dbcb86ca01484dded9",
+      "esci:default:test:370992": "0e20b40c1ad6e40414fe79414609a3032ad901c24800735b04071dd168ee371f",
+      "esci:default:test:394508": "4aa95f0839d8f2fb09f7089e1bba85a6ee5f4d54ac67548ca996b80800aedf03",
+      "esci:default:test:418303": "a57415b84041ff669b402f9367f746edaa00868af342ddea3e09699e5d9ea0e9",
+      "esci:default:test:439851": "b82701831cf9939842a0387e7961329e570e7eafc4e636ad8c8c325b363cb4e2",
+      "esci:default:test:440401": "b07b6e67d107519f8a79e747745b67ad663f44893353fa707fd72629ae083c71",
+      "esci:default:test:440580": "7e243fdd9c21f4d9c517095fc7e19f6257a3356f0073df84e9d4324b64d8c9b2",
+      "esci:default:test:441744": "d0d105247058a90dc7ee1a44f005de2b511ac4e44002f33d7be81a6c62bbcce2",
+      "esci:default:test:472987": "792d85f9b50904779fbbbca236d6e29d7cef386bc3a5df452e294c5b8e440493",
+      "esci:default:test:475290": "98841a3f935eb0d8646bfa285af7002362ace345a46a00ceff54d82ae411ca15",
+      "esci:default:test:476728": "db5528420ccced51d274ba9880151e6e4dc72033cfafb7fe858470ab2c1df3c6",
+      "esci:default:test:494799": "37c26346974674e7963ba79b18904688bde8f03531e8b2ab13fb5cccdb3d092b",
+      "esci:default:test:495340": "74860ac28aeb940aa11b4c7bd9ac93e354acc1459bb92d3936ce6a7ba8dbf13c",
+      "esci:default:test:496823": "c4f5b1d5923ed2a414990f24521662ccd148cc7f22a80381228feaf64a30cd20",
+      "esci:default:test:498620": "f90ab905a21ee69fe60f6368696df5fbe1d226dff1713a9de46629dbe932f9b6",
+      "esci:default:test:504071": "02b7853c9d7b2eff1d5c575e609a4371a9c3b9b46670825b56364748ea334048",
+      "esci:default:test:504147": "a1c4f4fff8cdf1163cc355ebad19b2ae8d29d8d16092c409a11f4cc290268214",
+      "esci:default:test:506708": "45a195bdf35e6ef1846d59208b6c49592baadafa5f84a7cbcd1877fc69b10a8d",
+      "esci:default:test:510051": "8830dd5f72c34589bbdbc50d23923c93026316b5a9a52b2d3ea4fd5f8adbf5e4",
+      "esci:default:test:518760": "69d7f5fec15d0b5438ac3968b0fe79f3cf6140b2c2d540e9cc43514b359bb5d8",
+      "esci:default:test:521036": "bec814747b37163ffa50e0353a83f1194898a504f621c25e9a4d54513bf1340f",
+      "esci:default:test:527798": "92c79b9c33833d6d2e91e7d9b4c70e1a050bd8878f7b98f4807251529ab43b90",
+      "esci:default:test:538522": "97c532e95a286278a40e0a2da08caf9ac83f9f241579e0dadfc00ee7e85f6c2f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "esci:default:test:3494",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2790488560295734,
+        "Irrelevant": 0.13168148666200422,
+        "Exact": 0.3687681087021681,
+        "Substitute": 0.2205015486062544
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:9588",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2853426713356679,
+        "Substitute": 0.24032016008004004,
+        "Exact": 0.3712856428214107,
+        "Irrelevant": 0.10305152576288144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:14905",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.28150966062668936,
+        "Irrelevant": 0.12904194614075482,
+        "Complement": 0.24927420162178396,
+        "Exact": 0.34017419161077184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:14955",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4296570342965704,
+        "Irrelevant": 0.13478652134786523,
+        "Substitute": 0.22657734226577342,
+        "Complement": 0.208979102089791
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:22756",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.37318659329664833,
+        "Exact": 0.38499249624812404,
+        "Substitute": 0.17688844422211109,
+        "Irrelevant": 0.06493246623311656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:24437",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2988298829882988,
+        "Irrelevant": 0.1621162116211621,
+        "Exact": 0.2988298829882988,
+        "Substitute": 0.24022402240224022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:28026",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2139,
+        "Substitute": 0.2383,
+        "Complement": 0.2275,
+        "Exact": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:37520",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.1834165834165834,
+        "Exact": 0.3648351648351648,
+        "Complement": 0.20489510489510487,
+        "Substitute": 0.2468531468531468
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:45823",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.417332268370607,
+        "Exact": 0.3919728434504792,
+        "Complement": 0.12679712460063897,
+        "Irrelevant": 0.06389776357827476
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:47210",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.31868681813632266,
+        "Complement": 0.12070863777399658,
+        "Irrelevant": 0.06796116504854369,
+        "Exact": 0.492643379041137
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:53628",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.24473290064902645,
+        "Substitute": 0.19990014977533696,
+        "Irrelevant": 0.08337493759360959,
+        "Exact": 0.47199201198202695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:69615",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3404809619238477,
+        "Complement": 0.16633266533066132,
+        "Irrelevant": 0.08216432865731463,
+        "Exact": 0.4110220440881764
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:71013",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.21777822217778223,
+        "Complement": 0.24607539246075394,
+        "Exact": 0.29687031296870314,
+        "Substitute": 0.23927607239276075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:71553",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.455054494550545,
+        "Irrelevant": 0.1474852514748525,
+        "Substitute": 0.18948105189481051,
+        "Complement": 0.207979202079792
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:76006",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.17904017633503658,
+        "Exact": 0.31900611161206294,
+        "Substitute": 0.2642019837691614,
+        "Complement": 0.2377517282837391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:84816",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.32636318159079536,
+        "Substitute": 0.22761380690345173,
+        "Irrelevant": 0.09814907453726864,
+        "Exact": 0.34787393696848423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:84927",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2891,
+        "Irrelevant": 0.1572,
+        "Substitute": 0.2471,
+        "Exact": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:86567",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.26586586586586586,
+        "Irrelevant": 0.13003003003003002,
+        "Substitute": 0.2736736736736736,
+        "Exact": 0.3304304304304304
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:87070",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4877634601937868,
+        "Irrelevant": 0.10538407751473378,
+        "Substitute": 0.20976925382079709,
+        "Complement": 0.19708320847068223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:94354",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2736736736736737,
+        "Irrelevant": 0.12512512512512514,
+        "Substitute": 0.21601601601601603,
+        "Exact": 0.3851851851851852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:94584",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3091874561667168,
+        "Irrelevant": 0.15559563170023044,
+        "Exact": 0.31900611161206294,
+        "Complement": 0.21621080052098987
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:94838",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.48873986587929136,
+        "Irrelevant": 0.1300170153137824,
+        "Substitute": 0.20428385546992295,
+        "Complement": 0.17695926333700332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:101777",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.2217,
+        "Exact": 0.3594,
+        "Complement": 0.208,
+        "Irrelevant": 0.2109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:107582",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.6090954522738632,
+        "Complement": 0.12003998000999501,
+        "Irrelevant": 0.07276361819090456,
+        "Substitute": 0.19810094952523738
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:108910",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2471,
+        "Complement": 0.2715,
+        "Substitute": 0.2314,
+        "Exact": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:116355",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.31998001998002,
+        "Irrelevant": 0.1326673326673327,
+        "Complement": 0.19610389610389614,
+        "Exact": 0.3512487512487513
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:122341",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.12331502745881177,
+        "Exact": 0.4173739390913629,
+        "Complement": 0.2057913130304543,
+        "Substitute": 0.25351972041937093
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:130835",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.37481259370314846,
+        "Exact": 0.43728135932033985,
+        "Complement": 0.12493753123438281,
+        "Irrelevant": 0.06296851574212894
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:132221",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.1914191419141914,
+        "Substitute": 0.22752275227522753,
+        "Exact": 0.35353535353535354,
+        "Complement": 0.22752275227522753
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:142834",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.2812281228122812,
+        "Irrelevant": 0.1533153315331533,
+        "Exact": 0.34963496349634965,
+        "Complement": 0.2158215821582158
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:148651",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.21,
+        "Substitute": 0.2344,
+        "Exact": 0.3359,
+        "Complement": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:151181",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.32233223322332233,
+        "Exact": 0.40234023402340235,
+        "Irrelevant": 0.07320732073207321,
+        "Substitute": 0.20212021202120212
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:152375",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2207,
+        "Complement": 0.2168,
+        "Exact": 0.3203,
+        "Substitute": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:162428",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.21539075756063478,
+        "Exact": 0.37229264397644474,
+        "Complement": 0.22227767242239746,
+        "Substitute": 0.19003892604052303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:169815",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3008,
+        "Exact": 0.3906,
+        "Complement": 0.2197,
+        "Irrelevant": 0.0889
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:178048",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5513513513513514,
+        "Complement": 0.1993993993993994,
+        "Substitute": 0.15055055055055058,
+        "Irrelevant": 0.0986986986986987
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:179489",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.20212021202120212,
+        "Exact": 0.36523652365236525,
+        "Substitute": 0.208020802080208,
+        "Complement": 0.22462246224622462
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:182630",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.18633230092916378,
+        "Exact": 0.38245578978918976,
+        "Substitute": 0.1775402138075732,
+        "Complement": 0.25367169547407337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:183864",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3984398439843984,
+        "Exact": 0.3867386738673867,
+        "Irrelevant": 0.0566056605660566,
+        "Complement": 0.15821582158215822
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:183922",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.31982026959560655,
+        "Exact": 0.47978032950574134,
+        "Irrelevant": 0.05901148277583624,
+        "Complement": 0.14138791812281576
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:184837",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.3188463849389145,
+        "Substitute": 0.22591628279591427,
+        "Exact": 0.3500901261766473,
+        "Irrelevant": 0.10514720608852393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:185436",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.279160419790105,
+        "Complement": 0.12983508245877062,
+        "Irrelevant": 0.07176411794102949,
+        "Exact": 0.519240379810095
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:185589",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.32046023011505753,
+        "Substitute": 0.23741870935467738,
+        "Exact": 0.33996998499249625,
+        "Irrelevant": 0.10215107553776889
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:211668",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5396936630293323,
+        "Substitute": 0.27960756832515765,
+        "Complement": 0.13494844328761638,
+        "Irrelevant": 0.04575032535789368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:215195",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.26757324267573246,
+        "Substitute": 0.20507949205079493,
+        "Exact": 0.30856914308569144,
+        "Complement": 0.21877812218778123
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:216457",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3011011011011011,
+        "Irrelevant": 0.13973973973973974,
+        "Exact": 0.351951951951952,
+        "Complement": 0.2072072072072072
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:221225",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5229293635727845,
+        "Irrelevant": 0.13557797981816366,
+        "Complement": 0.1717454291137976,
+        "Substitute": 0.16974722749525428
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:225712",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.3235851881425292,
+        "Exact": 0.41521109891206703,
+        "Irrelevant": 0.08284259906178261,
+        "Substitute": 0.1783611138836211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:231588",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.29516564908417575,
+        "Irrelevant": 0.13101791612451205,
+        "Exact": 0.344109698728856,
+        "Substitute": 0.22970673606245623
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:231595",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.33026513256628315,
+        "Irrelevant": 0.11085542771385692,
+        "Exact": 0.3868934467233617,
+        "Complement": 0.17198599299649825
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:234900",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.33773113443278363,
+        "Exact": 0.44897551224387805,
+        "Complement": 0.1454272863568216,
+        "Irrelevant": 0.06786606696651674
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:237107",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4434,
+        "Irrelevant": 0.1709,
+        "Substitute": 0.1689,
+        "Complement": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:241256",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5465720567659406,
+        "Substitute": 0.1805916450129922,
+        "Irrelevant": 0.1010393763741755,
+        "Complement": 0.17179692184689188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:244621",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.33450175262894344,
+        "Complement": 0.18187280921382074,
+        "Irrelevant": 0.0670005007511267,
+        "Exact": 0.4166249374061091
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:251244",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.37658575566876434,
+        "Exact": 0.38827289981020874,
+        "Irrelevant": 0.08780341624213366,
+        "Substitute": 0.1473379282788932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:251466",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.566966966966967,
+        "Complement": 0.16516516516516516,
+        "Substitute": 0.12902902902902902,
+        "Irrelevant": 0.13883883883883882
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:263942",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2023023023023023,
+        "Exact": 0.28548548548548547,
+        "Substitute": 0.23653653653653656,
+        "Complement": 0.27567567567567564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:271453",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.518981018981019,
+        "Substitute": 0.2,
+        "Complement": 0.17072927072927074,
+        "Irrelevant": 0.1102897102897103
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:277128",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5460808786819771,
+        "Substitute": 0.1491762356465302,
+        "Irrelevant": 0.1038442336495257,
+        "Complement": 0.20089865202196702
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:288445",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2451,
+        "Substitute": 0.21,
+        "Complement": 0.2578,
+        "Exact": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:288828",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.14535464535464537,
+        "Exact": 0.39020979020979024,
+        "Complement": 0.2087912087912088,
+        "Substitute": 0.25564435564435567
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:293459",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.3222677732226777,
+        "Irrelevant": 0.1474852514748525,
+        "Exact": 0.3437656234376562,
+        "Substitute": 0.18648135186481352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:312895",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3010709638674807,
+        "Complement": 0.21699529576618956,
+        "Exact": 0.3929536582924632,
+        "Irrelevant": 0.08898008207386648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:319530",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5772341487768347,
+        "Complement": 0.12091862206689964,
+        "Irrelevant": 0.07658512231652521,
+        "Substitute": 0.22526210683974038
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:320798",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.30067972810875654,
+        "Substitute": 0.16883246701319474,
+        "Irrelevant": 0.10685725709716114,
+        "Exact": 0.42363054778088766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:322514",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3301,
+        "Irrelevant": 0.1465,
+        "Exact": 0.3203,
+        "Complement": 0.2031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:326950",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.31022080127884905,
+        "Irrelevant": 0.18243580777300433,
+        "Complement": 0.27315416125487063,
+        "Exact": 0.23418922969327607
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:338228",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4722277722277722,
+        "Irrelevant": 0.13466533466533465,
+        "Complement": 0.17362637362637362,
+        "Substitute": 0.21948051948051947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:350571",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3678990081154193,
+        "Complement": 0.16831980763450557,
+        "Irrelevant": 0.07243763149984972,
+        "Exact": 0.3913435527502254
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:350587",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5270364817591204,
+        "Irrelevant": 0.10204897551224389,
+        "Complement": 0.17671164417791108,
+        "Substitute": 0.19420289855072465
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:351003",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.36133613361336137,
+        "Irrelevant": 0.12301230123012301,
+        "Exact": 0.32813281328132815,
+        "Complement": 0.18751875187518752
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:353737",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.16908599459405346,
+        "Complement": 0.21703874261687858,
+        "Exact": 0.3401741916107719,
+        "Substitute": 0.2737010711782961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:357341",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5555332999499248,
+        "Complement": 0.1340010015022534,
+        "Irrelevant": 0.07871807711567352,
+        "Substitute": 0.23174762143214822
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:362086",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5630630630630631,
+        "Complement": 0.14764764764764765,
+        "Irrelevant": 0.0947947947947948,
+        "Substitute": 0.1944944944944945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:362523",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.24987506246876562,
+        "Exact": 0.48215892053973014,
+        "Complement": 0.16401799100449777,
+        "Irrelevant": 0.1039480259870065
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:365538",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.3398,
+        "Irrelevant": 0.1338,
+        "Substitute": 0.2061,
+        "Exact": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:367178",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.23827617238276175,
+        "Exact": 0.417958204179582,
+        "Irrelevant": 0.1298870112988701,
+        "Complement": 0.21387861213878612
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:367796",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.1963,
+        "Complement": 0.2373,
+        "Exact": 0.3672,
+        "Substitute": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:370992",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4175824175824176,
+        "Irrelevant": 0.17172827172827174,
+        "Complement": 0.19410589410589413,
+        "Substitute": 0.2165834165834166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:394508",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5343450479233227,
+        "Irrelevant": 0.1136182108626198,
+        "Complement": 0.14337060702875398,
+        "Substitute": 0.2086661341853035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:418303",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5319979969954932,
+        "Irrelevant": 0.12078117175763645,
+        "Complement": 0.1897846770155233,
+        "Substitute": 0.15743615423134702
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:439851",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.32403798100949527,
+        "Exact": 0.4294852573713144,
+        "Substitute": 0.15522238880559722,
+        "Irrelevant": 0.09125437281359322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:440401",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.30632430812268957,
+        "Substitute": 0.2575681886302328,
+        "Exact": 0.29663303027275456,
+        "Irrelevant": 0.13947447297432314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:440580",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.305127178049269,
+        "Substitute": 0.2269176847586621,
+        "Exact": 0.352092930102143,
+        "Irrelevant": 0.1158622070899259
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:441744",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4668,
+        "Irrelevant": 0.1279,
+        "Substitute": 0.2012,
+        "Complement": 0.2041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:472987",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.32374675454363894,
+        "Substitute": 0.2574395845815858,
+        "Exact": 0.335430397443579,
+        "Irrelevant": 0.08338326343119634
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:475290",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3125,
+        "Complement": 0.2246,
+        "Exact": 0.375,
+        "Irrelevant": 0.0879
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:476728",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.3125,
+        "Irrelevant": 0.1641,
+        "Substitute": 0.2109,
+        "Exact": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:494799",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.2893893893893894,
+        "Exact": 0.4223223223223223,
+        "Irrelevant": 0.1065065065065065,
+        "Complement": 0.18178178178178178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:495340",
+      "question_id": "relevance",
+      "probabilities": {
+        "Complement": 0.2828040742959856,
+        "Exact": 0.3861593768723786,
+        "Irrelevant": 0.09017375674056322,
+        "Substitute": 0.24086279209107248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:496823",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5127254509018037,
+        "Irrelevant": 0.1496993987975952,
+        "Complement": 0.1565130260521042,
+        "Substitute": 0.181062124248497
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:498620",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.2233766233766234,
+        "Exact": 0.31998001998002,
+        "Substitute": 0.2263736263736264,
+        "Complement": 0.2302697302697303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:504071",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.18478478478478477,
+        "Substitute": 0.24144144144144145,
+        "Complement": 0.23363363363363363,
+        "Exact": 0.34014014014014016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:504147",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.4766,
+        "Substitute": 0.2119,
+        "Irrelevant": 0.1133,
+        "Complement": 0.1982
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:506708",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.1504,
+        "Substitute": 0.2441,
+        "Exact": 0.3496,
+        "Complement": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:510051",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.17362637362637365,
+        "Substitute": 0.2263736263736264,
+        "Complement": 0.19610389610389614,
+        "Exact": 0.4038961038961039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:518760",
+      "question_id": "relevance",
+      "probabilities": {
+        "Irrelevant": 0.15300928236350933,
+        "Exact": 0.3450444156103404,
+        "Complement": 0.268988921050005,
+        "Substitute": 0.23295738097614532
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:521036",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.28866699950074887,
+        "Exact": 0.5070394408387419,
+        "Complement": 0.1219171243135297,
+        "Irrelevant": 0.08237643534697953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:527798",
+      "question_id": "relevance",
+      "probabilities": {
+        "Exact": 0.5982982982982983,
+        "Complement": 0.11971971971971972,
+        "Irrelevant": 0.0962962962962963,
+        "Substitute": 0.1856856856856857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "esci:default:test:538522",
+      "question_id": "relevance",
+      "probabilities": {
+        "Substitute": 0.3222677732226777,
+        "Irrelevant": 0.12208779122087791,
+        "Complement": 0.18068193180681932,
+        "Exact": 0.37496250374962503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,1281 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v0-beta-v2",
+  "benchmark": {
+    "id": "miqa-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/miqa",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "checkpoint-latest",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-11T17:12:25+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.7,
+    "uniform_accuracy_baseline": 0.5,
+    "fixed_answer_accuracy_baseline": 0.56,
+    "baseline_adjusted_skill": 0.318181818181818,
+    "baseline_adjusted_score": 0.318181818181818
+  },
+  "elapsed_seconds": 29.73735250000027,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "miqa:default:train:0": "7bffbd902afaefe2d5e40cf54c2ff65265eff2c4d52a2e906e2fa8bfb7d077fd",
+      "miqa:default:train:1": "5fdf03368e3772d564c00f633d66a9869bdd216cf2f0b60509ae6c7c34c1b7eb",
+      "miqa:default:train:2": "8d0e68ecc00e0d9097dde337d37bc0684fa324bd10c3d80712a07b09bd11bde0",
+      "miqa:default:train:4": "f52480c1d8dc5521046667d32fd23ade46cdc7532d70e86a5017f9e313c8ba53",
+      "miqa:default:train:10": "caa884de34fccb1d0aec6ecd8af14052ed3f516f5497cabdaace5796124f19d3",
+      "miqa:default:train:12": "cfb31ba16fa5c6a306ed3efaa12c3b1bf9b26ac43e2377102f50988d05c0428a",
+      "miqa:default:train:13": "7e9c07b7c4527998b97ca1e0ab6b32cbf153c990d444f08aa87f0e579adffc17",
+      "miqa:default:train:15": "77c9c5d560de22fc174731f19cc1a59cb380d314482cb65c3cabe065b2c6a0c7",
+      "miqa:default:train:16": "8187de078afa7fb621ab20c56cbc1a69d60501a2ced16f3c3e1dd485c835536a",
+      "miqa:default:train:19": "89bbd4105f42527b607003a6d3e3b080e3e889179e204c99750f3fd48af6f313",
+      "miqa:default:train:22": "8ba1dc8e09cefbad0142e53f78caf374bb239b8c25c88cc9a0e8f5ed63fa2bc6",
+      "miqa:default:train:23": "a4cf430e26e1f27ffe1098d749a7a3201702581f041a24b82e97922c360ac4b3",
+      "miqa:default:train:29": "bb5fd72af7d63e8fa435c0e18701ea9228952bbf258ee9f8b924b8a525fb61c9",
+      "miqa:default:train:33": "8446b0764c32a5ccc22111b21ac0d933d79c0b6c00d589902089d279812f1766",
+      "miqa:default:train:37": "52e8c86aa82e6bc2464876e086881e320ad259258e19472b0fdd3dd965f56cdb",
+      "miqa:default:train:41": "5517abcfd687d5df853d982f9de228fee275892d74e63bc4a21d065f0de007bc",
+      "miqa:default:train:43": "afce82a140d2922ce4baafa3977e93b96c9736269a066d572267d7231ab01fff",
+      "miqa:default:train:44": "01f2a68d59ed99b8dc7bf9e7b78f16b5e5731c59ee7beff1b8601215e7276012",
+      "miqa:default:train:49": "b83e3d1dc922bc870e2cafeb746c9130efcb2db7e3bbc9bd779928416c1066ba",
+      "miqa:default:train:51": "db7ded0d33fd96e375b15b8e39cc3688366630c10252017147f887f1fd57cad6",
+      "miqa:default:train:53": "71573bc39ee08abd509e13185ac51884227501a9ac264e21bff099e1d6cc65f8",
+      "miqa:default:train:54": "545adeae75343cedd5390d9c5326d0c85b81c4b9a357a624b7326ee199d00dec",
+      "miqa:default:train:55": "c1a2974e2cbbc0a4eaa6288529fdeec7135274044024903a1984fc5b59003837",
+      "miqa:default:train:56": "75480fe7ce2dd772ba86eff39a852af1be01d55f75344871a7cc034eeb0f8d59",
+      "miqa:default:train:58": "a0357705bb8a5be9de6fdbb34addabf98454c028754bfdaa517ea38ea66155d2",
+      "miqa:default:train:64": "376ca566cbe4b9d70f3d27c031bca2572146c38c8429180f0ba9713681f92e95",
+      "miqa:default:train:68": "5f8a453b8a003a3277caff2ee48cf18a28eb7a159b890f142d286fa5a73a501d",
+      "miqa:default:train:70": "165a7d785a0249e58907e7f6bf06a12ba1d6cbc8b36f637cd3cfb0b54e3e0917",
+      "miqa:default:train:73": "0b8178b02691d0c2b315866c39a6798cbc70813948c66f1a0491a405b43e8dd5",
+      "miqa:default:train:75": "300e2af111047e9389730fb834df9a4ee2e36358427d0a9c26402e12cd03a6fa",
+      "miqa:default:train:83": "32b8201f695292538a65f3a8b0ab4933e1d2119cfa24028732efd7b2a526441b",
+      "miqa:default:train:87": "26e69d9e8035a0f6e42e7ccd37f3366104028f767e33ec01625fc37ccdff6b82",
+      "miqa:default:train:88": "0533f1059cab3ddc801edf7b33e664cbbe66ad7ae4a4cc735d77b474bb248a93",
+      "miqa:default:train:90": "32580c2ab65e2c72191600ee68743d8c0e31d56080d067ac29a9d6296dd3bf7f",
+      "miqa:default:train:92": "1aefe26caba24fbc5b068464abcfa0e03f0d939407986a592abaf96c01df17d0",
+      "miqa:default:train:94": "ea241f42c3e7c878e88539c691529df08c588293d7b599362c749deba995d1ea",
+      "miqa:default:train:98": "bce5762e452b3bc579f3cdcf22569b4afcd21e5331509af0229de8ea1e30836a",
+      "miqa:default:train:101": "a4a39659bf779909fb891c4a51b57dfc8b69fda2ec58dda94689efda4ff20b14",
+      "miqa:default:train:104": "e982c7dffe8f8feda7ed1de322e444be13b62e183f4bc0501945ae0525f3c949",
+      "miqa:default:train:106": "9e1b5f39ac8a4147c7eba698c87e84116878964bfc59c8a6182cffe341db8799",
+      "miqa:default:train:113": "ba3c5cfd82e78400107b207381aa3e1648e7a645c684273320437623feabaecb",
+      "miqa:default:train:115": "341565d476664b5cefd9582fcbac0932298695eb51a3521bf7bdaf19bdd32de8",
+      "miqa:default:train:117": "2765cf63f61d4356a1ef55d71574819615686b8e4566ff535aec248fa513dd42",
+      "miqa:default:train:118": "6c06e3c64c9a777d679db6a314eef4429f377a2c28cb6a37851f6229fb6e7c0c",
+      "miqa:default:train:121": "61f9d1db8b2b20948184649eda46572b6358d9f036729242b6d0529b9fd6206e",
+      "miqa:default:train:122": "63dd6cd68db312591c042ca72c91aaf928075500179ce2a1ff2b450b6db61524",
+      "miqa:default:train:123": "5e70e05f2f6fda773995f755e874c6f0330c6a3c3c60356c17f3d5e1235ca741",
+      "miqa:default:train:124": "6c27cd081fafa3e9222f7a775d460748d97a3e21f2f46d51cc3e6db9eadad2d7",
+      "miqa:default:train:129": "16af355aa88ba6dfb9c9725591adc2b6e906ff7baec5781aaafbe110e71bfe97",
+      "miqa:default:train:131": "3d8725c31e50fdf65d9b5c3e4eca782dce9db045deab6d7f5519e057e0951017",
+      "miqa:default:train:134": "b982924a0c4c93075081799995e0a270d5b5f52d7404cdcff9063f5186501b80",
+      "miqa:default:train:140": "2041af6f12d1a00d34ca6b108a798f9f80f311e774e7cb5ccae3ebed9e426194",
+      "miqa:default:train:144": "828d69e940f1bbc2c2ce47c3bfeb809f3b3f189a08230e9056244b8138871a33",
+      "miqa:default:train:151": "320629f06fe931d681c384a279f66dc41782b944027e4bac27ac8d58e89bcf1a",
+      "miqa:default:train:153": "dd71d4350a3c6a3d05a3a4392b278e463ca15ddc7ed2a0cf3a254a4367028762",
+      "miqa:default:train:154": "54ce06073166a5a80a918ce33e0fff3cc41bb5e301d3c88fe43b4a4c14bc3bd4",
+      "miqa:default:train:160": "09f2f310cf128d5dd83dcd0919354decfafb6d4020828dd625a7a323c04aa027",
+      "miqa:default:train:162": "87de9b944913cb8697a87fa7f82019d6347e85054b8f48433098603d755fba42",
+      "miqa:default:train:164": "52cccc9a3ccfaf5922dfa0e177cda8550592871c11f077ca5c0311f7d5f0e86f",
+      "miqa:default:train:170": "7d95c497afc8144aa1386643c30efdf03079f2abf32f13a1708462907cf7e4ab",
+      "miqa:default:train:175": "3a4c9501e166e81d64b904a8f7c0907d4398994ae60099c5109d9313b5b1c7d8",
+      "miqa:default:train:179": "574c8361e809061b3284e64e7fe9bf0965c5fc5ce854a7f945f6e4a28aae05b0",
+      "miqa:default:train:180": "42e1c5d09cd436a2dd882c0b1f1b5e5f934f8231079a312562ea60b451f8d9ea",
+      "miqa:default:train:184": "2fc4e0a7929c300c46a39167bfd5c1e8b7afda4b977ee425a34f4b805cce1137",
+      "miqa:default:train:186": "a226740b6901bf72bd85b7e9c9f7992b12f2395e069ac39e0a75ab39e6600135",
+      "miqa:default:train:190": "3465f91956fe37d8c80dd51766aed2d6ea7ae6375981fed49a192ce47e132370",
+      "miqa:default:train:192": "581fe2ca160970dca77d7df59e599cdfa6a4924e309b98f2695d5d8997f6295c",
+      "miqa:default:train:195": "c48184d4a72b3e29439138754cd83f98e7c7a726f088a5a0bc1c16d26ff32966",
+      "miqa:default:train:198": "13d5ac91ff40fe74aad7298a36ffb4b35eb3fc07f58e59efbf1842a2d41d2a0d",
+      "miqa:default:train:200": "54021b6cb1bbd0f05a0dc916d66d8200cb50d3a70bd282fff1bd28f01d7d8ed3",
+      "miqa:default:train:202": "141eb5ad6ab05a6d8164f94703cf2551d85011a4c69d7c97033fba562ac95e2d",
+      "miqa:default:train:205": "8c23574ab57f9415c742714caa068871c236f0e049196e566c22a2fe8c9cb066",
+      "miqa:default:train:206": "022748e162b33acf8cf6a4b0d6bcfe395b1295c0f4aa76ac311c92fc26f14cc5",
+      "miqa:default:train:210": "14e625e026bf92b370f38d83812b3bd5205d47550bc768f0deb1099fb914d2f1",
+      "miqa:default:train:217": "350519beaec157257cd265e28d5edeb5c1a0aca13fd11eec282ef2b251c885b5",
+      "miqa:default:train:218": "150c6e11f36103225b0c0581d78768e1ab48c2c5f5a345cd30e64f47d0d1b933",
+      "miqa:default:train:221": "52382ed2197949c85566a044c54fd1faf627d19c38066246a7d34d25aa4286ed",
+      "miqa:default:train:224": "326e4fa23b9f048f26f7421ea621626ce153e38e007a9f49c954d24dd5ed4f48",
+      "miqa:default:train:226": "08a0cd9c82a32bffab7a9a053217f9faf68998d49bddd6acc626a26821f994aa",
+      "miqa:default:train:227": "308ce2761a1c754311f3a77c95fe73cb35a204dc8da762e6453c36bdccf9970a",
+      "miqa:default:train:228": "627625879283c850856c7f260492e8a5a3257df428f743c7ae72e1b23854df98",
+      "miqa:default:train:229": "2855afc4c7a3e9949946a7319e24ae7e676a67a0d5b6cc69d89f131bf7f29cdf",
+      "miqa:default:train:230": "86167255040c68a18e954ba1353d2163b955063f2af753549324fa5183896550",
+      "miqa:default:train:237": "5ada7f6c258d3b536f9ca55ff1c8305a99296a3f2eb48f9bf29abdfd64864b85",
+      "miqa:default:train:243": "5c63e01ec710f9603401d9c27ae85a252778f1948ae3eeebf20ac187a3ebc217",
+      "miqa:default:train:246": "4c044f1b486638bc7c8e4e0f13c520a667bd8dac944eca17934b351053e4f338",
+      "miqa:default:train:250": "1fcf994605c96cdd6b9dc5f187d8fb77a1b0ab7f992d216e0e6e5accb5719b2e",
+      "miqa:default:train:252": "981788b55b67ebeaeebab00f42fdc803e0606fc5652f53a868c7ef4cbc37a1a3",
+      "miqa:default:train:253": "819d08647033b9bac84e915dfdef1e8512b7a67b69c23f62814787836c3bc6af",
+      "miqa:default:train:258": "289540634762012a11043846fec7bae925c0aabe5bfd6ec6c1e3332a18bc39eb",
+      "miqa:default:train:264": "f61a2d5e6566ec6084e8d47e4d0528c195994b7c5660b11c35a34ba452c5cebb",
+      "miqa:default:train:274": "2efaf3bc993d524a486899c140b7795c5c2c60e43bb1215de412d4c8e48db85d",
+      "miqa:default:train:275": "a164cb8a05ebcdabff57845c75a2ec28c7b1e529388169e30f480ef147958e8e",
+      "miqa:default:train:276": "5a666d28d38ec1a1630005b518bb5ff4da8ebc2426fa7ecfef4ede09569cac18",
+      "miqa:default:train:277": "1f9e3182a3ed3ead3c0ce56393bea51df4fe6a4d98d79be586a5b1c8c7e565f1",
+      "miqa:default:train:282": "4777e97b81f830d237ff7963ed57fc5310cea93fe42299be2ff85fde448ecf9d",
+      "miqa:default:train:285": "6fa39f36759c10604e3234efdc3ba6956f156b55e7eb19f0de6709d78ca95367",
+      "miqa:default:train:295": "6d99983354fc682e13248ae4ae8ef77d388215aa3e3eca8bf50fa9d84822e1c4",
+      "miqa:default:train:296": "0455356d868efe06b6d80d2e008386f93670f0d0929ba10a47b62aea23acb536",
+      "miqa:default:train:299": "6d4098c6951d779814126c7df5b5c114d6ec0c9849f724a61657cc7ce2d411bf"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "miqa:default:train:0",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.418,
+        "a": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:1",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.332,
+        "b": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:2",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6549555843896596,
+        "b": 0.3450444156103404
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:4",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5234,
+        "b": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:10",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.3555,
+        "a": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:12",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4961,
+        "b": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:13",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.668,
+        "a": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:15",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6222823364392346,
+        "b": 0.37771766356076547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:16",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4648,
+        "b": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:19",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5586,
+        "a": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:22",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4648,
+        "b": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:23",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4492,
+        "a": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:29",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5965069860279442,
+        "b": 0.4034930139720559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:33",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.1484,
+        "a": 0.8516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:37",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5742,
+        "a": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:41",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6822355289421157,
+        "a": 0.31776447105788425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:43",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.651062980337359,
+        "b": 0.348937019662641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:44",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5312,
+        "a": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:49",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6549555843896596,
+        "a": 0.3450444156103404
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:51",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5965069860279442,
+        "a": 0.4034930139720559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:53",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.7056592474298832,
+        "a": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:54",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6653641919647331,
+        "a": 0.33463580803526705
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:55",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.2852,
+        "b": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:56",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.37374749498997994,
+        "a": 0.62625250501002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:58",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5039,
+        "a": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:64",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.793,
+        "b": 0.207
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:68",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.7279831680192366,
+        "b": 0.2720168319807635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:70",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4805,
+        "b": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:73",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4297,
+        "b": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:75",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.7279831680192366,
+        "a": 0.2720168319807635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:83",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5234,
+        "a": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:87",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4219,
+        "b": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:88",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.7368263473053892,
+        "b": 0.2631736526946108
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:90",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5781,
+        "b": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:92",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6328,
+        "a": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:94",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4609,
+        "b": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:98",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.38553251177236747,
+        "a": 0.6144674882276324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:101",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.3450444156103404,
+        "b": 0.6549555843896596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:104",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4727,
+        "a": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:106",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4961,
+        "a": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:113",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5039,
+        "b": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:115",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5742,
+        "b": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:117",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4609,
+        "a": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:118",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.332,
+        "a": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:121",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.31112224448897796,
+        "b": 0.688877755511022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:122",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.37771766356076547,
+        "a": 0.6222823364392346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:123",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4648,
+        "b": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:124",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.3555,
+        "a": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:129",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.661456767858932,
+        "b": 0.338543232141068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:131",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.543,
+        "a": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:134",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4375,
+        "a": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:140",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5742,
+        "b": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:144",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4414,
+        "b": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:151",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.7227,
+        "a": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:153",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6144674882276324,
+        "b": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:154",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6003992015968064,
+        "a": 0.39960079840319357
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:160",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.7609390609390609,
+        "b": 0.23906093906093906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:162",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.781981981981982,
+        "b": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:164",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6003992015968064,
+        "a": 0.39960079840319357
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:170",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4453,
+        "a": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:175",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6927855711422846,
+        "a": 0.30721442885771544
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:179",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6953,
+        "a": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:180",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5742,
+        "b": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:184",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.543,
+        "a": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:186",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5898,
+        "b": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:190",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.3594,
+        "a": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:192",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.3816250876665665,
+        "a": 0.6183749123334336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:195",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4844,
+        "b": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:198",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.38792415169660677,
+        "b": 0.6120758483033931
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:200",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.793,
+        "b": 0.207
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:202",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.781981981981982,
+        "b": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:205",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.661456767858932,
+        "a": 0.338543232141068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:206",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.5273,
+        "b": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:210",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6120758483033931,
+        "b": 0.38792415169660677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:217",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.22582582582582583,
+        "b": 0.7741741741741741
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:218",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.38792415169660677,
+        "a": 0.6120758483033931
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:221",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.7279831680192366,
+        "a": 0.2720168319807635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:224",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.8155844155844156,
+        "b": 0.18441558441558442
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:226",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6445,
+        "b": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:227",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4034930139720559,
+        "b": 0.5965069860279442
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:228",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.7344,
+        "a": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:229",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.1827827827827828,
+        "b": 0.8172172172172172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:230",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.25,
+        "b": 0.75
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:237",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6797,
+        "a": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:243",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6367,
+        "a": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:246",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.608183632734531,
+        "b": 0.3918163672654691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:250",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6797,
+        "b": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:252",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.651062980337359,
+        "a": 0.348937019662641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:253",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.40738522954091816,
+        "b": 0.5926147704590818
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:258",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.6367,
+        "b": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:264",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.62625250501002,
+        "b": 0.37374749498997994
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:274",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.4922,
+        "a": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:275",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.4453,
+        "b": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:276",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5156,
+        "a": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:277",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.5,
+        "a": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:282",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6588822355289421,
+        "a": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:285",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.3672,
+        "b": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:295",
+      "question_id": "inference",
+      "probabilities": {
+        "b": 0.6003992015968064,
+        "a": 0.39960079840319357
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:296",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.418,
+        "b": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "miqa:default:train:299",
+      "question_id": "inference",
+      "probabilities": {
+        "a": 0.3672,
+        "b": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}
