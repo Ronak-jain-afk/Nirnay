@@ -1,0 +1,993 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--entity-alignment-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__entity-alignment-control-v1",
+    "split": "test",
+    "case_count": 75,
+    "decision_count": 75,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:51+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 75,
+    "expected": 75,
+    "succeeded": 75,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2771206237333333,
+    "accuracy": 0.5066666666666667,
+    "positive_recall": 0.15384615384615385,
+    "specificity": 0.8888888888888888,
+    "precision": 0.6,
+    "balanced_accuracy": 0.5213675213675213,
+    "f1": 0.24489795918367346,
+    "true_positive": 6.0,
+    "false_positive": 4.0,
+    "false_negative": 33.0,
+    "true_negative": 32.0,
+    "positive_prevalence": 0.52,
+    "majority_accuracy_baseline": 0.52,
+    "constant_brier_baseline": 0.24959999999999993,
+    "brier_skill": -0.11025890918803438,
+    "baseline_adjusted_skill": 0.04273504273504258,
+    "baseline_adjusted_score": 0.04273504273504258
+  },
+  "elapsed_seconds": 9.882550600001196,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:4:manufacturer_agrees": "04482b40bd33db07994ceae91f707bbf7043f4d899d37f8e0113e0b33d99582a",
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:7:name_agrees": "408b997961c2e9910b4377529caac3aa44cb548982437d3c4456ef9dca283d05",
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:8:manufacturer_agrees": "4c048b3c6a28910ef1087e920ef8293d08927a6e500259f6b2fcff8bf905787d",
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:9:manufacturer_agrees": "ad996b63c9afe54bc8c461256ff841d032ce6167c89943bd7727a869430e7ba4",
+      "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:3:name_agrees": "d04166f3eb68b264e62bb92b90bad76c5efd9fc49473170ae05c52b9cca8f9f2",
+      "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:6:capacity_agrees": "8109ebf1740aa30155b332b6c385ccf95e3e251b6c1c80c58f127f5d3c58d30b",
+      "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:12:name_agrees": "1c81d6348bcb22711701a2abd051bc6b35c3dd77c8ea25780ebc5715e9805af7",
+      "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:13:name_agrees": "32bdfaca05201aaddd392eb20e2579f6dbc4d87bb352aea870f7a95d08236eb4",
+      "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:3:name_agrees": "5e135db9a52622cf223430a9a7070e0ef467d41cad17bf2cc176f447418e23ad",
+      "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:3:capacity_agrees": "da236e3a3b4e792791e27079b3dbf2285059592522db40f51d17a97531ba075b",
+      "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:8:manufacturer_agrees": "97d0b138bcf2c805b2c760c5da7080346a2a38e3573f8c7e749ef36f4c057225",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:0:capacity_agrees": "33c923faa4282fcb7e4d62342b2eae0a601e6ff5bc2af0b6b33e2ca6fec47e95",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:5:manufacturer_agrees": "b366df73d26b0a30a296fa1985a51352b4b433d3fc8477696ad9d108a7848b23",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:6:name_agrees": "150c80f613ce2291a2ababedd7d944e24a44de07578aa824fc7ac24fb81cbbd3",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:8:manufacturer_agrees": "f2031967ef018606cb7d3356f612d00fb0fc8118d7db15c66a61adef770649cf",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:1:manufacturer_agrees": "6da57b47a2aa362a1b2b527dacbab7442a1526389b25cbe84c7cdde0a0168bb4",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:4:capacity_agrees": "400aa6e7b77a1885db9e70b5d791f90376f95246e8c1334e51820991a88a80ad",
+      "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:2:name_agrees": "463e809adf0af22cb0e023a2683020fd2601a563d7b111f0c77fbcfcf17c637c",
+      "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:4:capacity_agrees": "9e00c466b0424e905790bece0544f77c259df80580be9ca6fbe649060fd0fecd",
+      "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:9:name_agrees": "90e9bdcd3473d3d9eff5ab5b54434e80cd4a669b8a46e89285686ff91a6b6554",
+      "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:9:capacity_agrees": "282c4455449123dec63e78b05ad02c84cb146e51b59edd9c896dcaeabfd74d53",
+      "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:0:manufacturer_agrees": "9154b486f7ccc88974e8f4439106889237292f3d279b455005221104edd77d30",
+      "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:6:manufacturer_agrees": "2f4d04eaf5cc99a34be2780ef31aab28f07f7600f855e19c27579eede03bba31",
+      "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:10:manufacturer_agrees": "80fc99f63e332a46f0df3fdf77b9c0846f435a226d54e8a78a403300139836d8",
+      "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:12:name_agrees": "a56b4bb9f7d00453fe9783b7fa113390eb2fa92e6e63512dbc88882797425dec",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:0:manufacturer_agrees": "f0262a48312909bb11b58d4b4c5c3116260fc10e0eab55be3db4a4e437ca0fa7",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:3:capacity_agrees": "5ad114ee8de968a574faab3b4a7cb7065626c36151e7a02877e2e1c08c083371",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:name_agrees": "eaae48ebea91d7d3ef787b377e5e3ac52d3560678c903cd6f6149a2fdb5a96f0",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:capacity_agrees": "feaf368b74a63c5c7528b8cc0bd53221ffe18f2d7bf298952c38d4b11bc28c81",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:13:capacity_agrees": "ebf9394228745785c9e7a687e61f38154915050b150dc847afaf775b4d35b564",
+      "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:1:manufacturer_agrees": "66818039fd4eeee45e77de723ca1747b340013bc43cdaabcaf3efee5ffd5ebcd",
+      "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:3:capacity_agrees": "5b360151e9db9fda5f517f695a6dfd3e5d6e839eb470830a7d5c49c9da0985f8",
+      "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:7:name_agrees": "0ac43325560cd757c34f20c89e6476636d6bf78ae8289cc9f6e0ce563a45c19c",
+      "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:13:name_agrees": "04ec741ebb967447a370ce6ec3ead81dae18e2f3cb4b8afd34a1c321bfc3d1eb",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:2:name_agrees": "325a7a6db242fb408bfe8b0d2d5238efc39b13c61cf9ad27acf929192153baff",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:3:capacity_agrees": "aac36d28122644feaacbbdcde383b04bc0ee0ce9c3d790f419669ed90dd2d1e2",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:7:manufacturer_agrees": "b53cf4e8ce623f76597ec08ebac0ac9a4b1082f29fd13350bcf4d3426961af5e",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:7:capacity_agrees": "919b25f7edb76ae1d3afa0c95becfc76bfeaf11d4a2881116fc5b3c032ede42e",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:9:capacity_agrees": "7be58c6197791c9c38cbf43917a67e78daf28b60b7ae019ac5acd2aafa1670a3",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:12:capacity_agrees": "3a5089f3ec5e9e866582d46fd0723207c21c0d2eb80016a07bf48523eb67c33b",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:13:capacity_agrees": "0d1b704b87ee88d80bcefc49b9c135382b2496d23b883d78f43d59bcb9d2c155",
+      "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:7:name_agrees": "25b7fb041f7e0cf2113ff8b823bc2834e20196e2bd8b5338350070e6f13fa4b5",
+      "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:13:manufacturer_agrees": "930c185359639e20beafea4ce66bfb432a04dc9ea122dbd53d069a9d8d5e07d6",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:1:capacity_agrees": "d6d7dd2276a8734584a71ac7c23e51b0cdd841bbafeebdafc9a566893c844c44",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:5:manufacturer_agrees": "d07befc83e26e6a0d3cc394b776cd66f3149f9f4db5660ca1c081f0d496e1da7",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:8:name_agrees": "3d92d84b008437d9e58b661e754c16504d944bd6f427850466373b2b20905351",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:8:capacity_agrees": "eb96b7075fad8d1370c3221a12ffa08c1a7d4230c2e9507641267813fecd4205",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:13:manufacturer_agrees": "8230800d48381a902f0bb435e4bda078a3a9d38f291116b1d13e8fd495c3d7a1",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:0:manufacturer_agrees": "08ddf350d18edc952842aedd25b4f0c018985cdd4632b0978a8c5144c566c554",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:5:manufacturer_agrees": "e2a3806303ddfcd0f3ffecf1fc68a1a067369de0bf16d63f2f519140b9ecf855",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:9:manufacturer_agrees": "dc79fc948e6bd0ac8130d91ceeeb39cdf5db8f9bedeeaf410c87d79eb0d6ad5f",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:10:manufacturer_agrees": "5e23328bdda187637abcb5cc1f14b882c21cbdac8e65e06befc9235d0f26001f",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:13:manufacturer_agrees": "e5501ca0a0dc8ca1d99a5067b9fd433c839d2e479c840650c19d40e65dabe893",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:2:capacity_agrees": "3d68b99fa64d7d7cb8ea585c97181ebd23b916c503d484177820aa00f0805501",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:3:name_agrees": "bae4d04d08594f8659520545ae18748bfd4852a470042cc37caa695f3e73bd28",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:3:manufacturer_agrees": "7a67c11c935a4591365c02ff7f74339d58267847ef1ddf91d57f7420cf26794a",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:5:manufacturer_agrees": "53e9dd5b326f28e6eae3a942aebbe3bebe5fe9a9c7e20bd391a9f420ea04f0ae",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:12:name_agrees": "c9ad1421422b987bed70ae1d45268010830bc2c17ecf32713b5026950258d744",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:13:manufacturer_agrees": "fe1a72f6d5e9a0b66e7dd481b03a0fcacaca5272e4cb5e096c59d1bdffbe1dbb",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:0:capacity_agrees": "82b3d7bd25a94eca44b79687bb67206369d618cdee201a00e5c10f4e03bcd905",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:1:name_agrees": "4d2e3bc19f3cab400f67366696de6effaef93b001b41270f7f3882fd7209d870",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:3:capacity_agrees": "e72cebc6f20c248e8567b195b2c7f322d3170e65cf3a84672d5a69b142da8dd4",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:4:name_agrees": "f924fabd8c950bb5492e45dba866e4de9200f703bd5a407c6588bba08b178ab2",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:8:manufacturer_agrees": "0bf46140f8c686db70a8055d36dab6c219023c7b8e11d5f855ef6b100a49c134",
+      "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:12:manufacturer_agrees": "e1252217d1c8b24d900dcc8766f91e1ba00ff18a5c96ff20058355bd5e0e46b7",
+      "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:0:capacity_agrees": "add74e12605a7c97e4b98898837ce632063e896e2a6e96cd02c5c5f6246fe35f",
+      "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:3:name_agrees": "bace4652d4ca48290b88edcee6df8d0d484ee8537b86f392666516a7ac4a9343",
+      "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:4:name_agrees": "ecc2dc7592191ed5ba5cd423d821048692d117e9422674ae50cc9b3f1b120813",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:3:capacity_agrees": "e7615fa2820c87026f70db2ccd015a0539a74b1cbfaf1be34492f0885fafa2b8",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:6:capacity_agrees": "1cd6facf3b7cf374857b3a181747c6ba5ddcc9343ad93a0721bdf7493516e4aa",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:9:name_agrees": "cff0460b91d41350e59b92f5b9839018ce8488444a2cb11881899f4b0d10a003",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:10:name_agrees": "76d8a609ee9f85993137487b62e734640de72464c2633d19f4cd76d874469fdf",
+      "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:4:name_agrees": "d28f538b52e0580ce5523609b27c30c63191aef0f818f9a8bcc8e5a68984a0a9",
+      "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:7:manufacturer_agrees": "e2bc127263a18a0148f195b174d5265e729c9a1dffb0ee5806ce49585af4a7c5",
+      "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:8:capacity_agrees": "75776343415c97a20b4e24414a052f7b93f43a37fb25a909e9b9dc3bacce5a23"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 9600,
+      "output_tokens": 75,
+      "requests": 75,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:4:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.7549,
+        "true": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:7:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:8:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9753000000000001,
+        "true": 0.0247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:9:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:3:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:6:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:12:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-06f1e6066410cf7d16b6:pair:13:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:3:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:8:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9866,
+        "true": 0.0134
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:0:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:5:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9057999999999999,
+        "true": 0.0942
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:6:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:8:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9937,
+        "true": 0.0063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:1:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8843,
+        "true": 0.1157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:4:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:2:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:4:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:9:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:9:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:0:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:6:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8989,
+        "true": 0.1011
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:10:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-b7535db6792c2328963c:pair:12:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:0:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:13:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:1:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.895,
+        "true": 0.105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:7:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:13:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:2:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:7:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9534,
+        "true": 0.0466
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:7:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:9:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:12:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:13:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:7:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:13:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9534,
+        "true": 0.0466
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:1:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:5:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9126,
+        "true": 0.0874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:8:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7715,
+        "true": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:8:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:13:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9497,
+        "true": 0.0503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:0:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:5:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8311,
+        "true": 0.1689
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:9:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.7979,
+        "true": 0.2021
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:10:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:13:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9331,
+        "true": 0.0669
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:2:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:3:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:3:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:5:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8774,
+        "true": 0.1226
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:12:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7959,
+        "true": 0.2041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:13:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9573,
+        "true": 0.0427
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:0:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:1:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:4:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:8:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.9923,
+        "true": 0.0077
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-004ef146755370e56301:pair:12:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.8887,
+        "true": 0.1113
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:0:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:3:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:4:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:3:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:6:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:9:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:10:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:4:name_agrees",
+      "question_id": "name_agrees",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:7:manufacturer_agrees",
+      "question_id": "manufacturer_agrees",
+      "probabilities": {
+        "false": 0.937,
+        "true": 0.063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-cd43e951985059af0f7b:pair:8:capacity_agrees",
+      "question_id": "capacity_agrees",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

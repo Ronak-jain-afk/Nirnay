@@ -1,0 +1,572 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--reasoning-control-v1-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/open_jev__reasoning-control-v1",
+    "split": "test",
+    "case_count": 34,
+    "decision_count": 34,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:38+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 34,
+    "expected": 34,
+    "succeeded": 34,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.45625927835224317,
+    "normalized_score_rmse": 0.5285085249918537,
+    "constant_score_baseline": 0.7083333333333333,
+    "constant_mae_baseline": 0.34313725490196084,
+    "baseline_adjusted_skill": -0.32966989691225135,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 1.929747000000134,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:101:ordinal": "7b675a315ed81d5dff70bfae717c177207f57adc59c66567cd4a72eb064c5fde",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:117:ordinal": "ba7ffe758ccdf1e6f38939191d84a77526f7c491c092300f65986bcf6b89c911",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:239:ordinal": "121e98ed5d327f36b4c0c92a51002ef1f1752efd9513b59fe911f5f28241b784",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:266:ordinal": "59f321f9661277268c7055509ceb4e93b45fa84708daf4a6cf8b099ea59ec5d5",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:357:ordinal": "19ec0d2d788149333591c8f2bd8620f965f3a38bada4f2712c213cd02e359a83",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:364:ordinal": "18469ce81553f538ba0f333d06b95a0adab9bcbe32eca9cbc003c9bae38e70b7",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:385:ordinal": "6d3d8b4bcc1b0d29737ab1fddd8226f1b43054f746553b70aec968fd02091372",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:407:ordinal": "e3c0834b8229ca15eb263037fa57e3956191000bffd5fb478ead521926c83c81",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:444:ordinal": "6ccfd2d9fc26f482ff07e9767f756fc824d69a2d2be8e6b0063cf6d6659be0e9",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:649:ordinal": "03b0eebdc5cb898a18ff4599ab7a7bf55396d43b6d04dd1c5bb78cec9944c6c0",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:719:ordinal": "bdaf140868960262ca90d6b70b2ab25a00e01790fd1bd2087670d16d033d7811",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:824:ordinal": "425dd61a269dcfbc35db4d16496e9b45524e0d4e6398ec11063eb011f9bc449f",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:834:ordinal": "d77733adab4c549624941263d55a08c191ed6dee37a4ba278242b27071012b93",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:923:ordinal": "323c752228f54de923709c53d2824f6dea83329d6647285375a69f3f8f9fabfe",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:941:ordinal": "eca5589b59341cb859813bb1ae4c33f85ea52b1d9b79483813381c20328c168f",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1055:ordinal": "3642c6d65300061676308070086364e0ec8ef5c0691f821c2909ba042c98041c",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1296:ordinal": "5fb1bd8a935582059cb94ba09c9caab76f149e08010ab386b42d74a13e50a357",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1306:ordinal": "ae606773756676d6ccae2ae7cbd376d6e838d07295f4543da7b50fac522964b3",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1499:ordinal": "c0bda9b82b86e63815baa1855327457d9228a34b88f849c6961b9a303fbedd30",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1638:ordinal": "b8ea2b376ee68483a911d202ee8070e80b80b6022c78cf2e0ebf49d2271b4a53",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1738:ordinal": "b6205fe707a062e41d684a09915396fbf6507dac6ef5f044f0b0cfaea785bef9",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1916:ordinal": "1e0e93be6460ee3184a4ed188f53af11f521da11cc800b776c14ccda16071fc5",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1937:ordinal": "3645af83ef100e44fbbf18d8ea67636cf88503678098570e72c34f24cdc6dbb5",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1951:ordinal": "1fea00307cd9126807b39efa3cd74b0478e726dd404e016748450b462bf5ae77",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1954:ordinal": "782b517ce2e4952773fe46d81055ae5946cf875ac500d80c9c951e3a8d2725ff",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2101:ordinal": "833f8218bf572675d46fcd543c7e7fbe4752021817ac039bcadaad9bad418e50",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2135:ordinal": "10f5c215502077405d804efc67b5b82fbf159c1d3ef44ccd486a6019c1a12765",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2275:ordinal": "593503e2bac9839889e844315f97770af351dfee7b80b4778f07abed8ddb1a8c",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2277:ordinal": "1872fd2e2d9cca79bf92fa6839a0797c5773f54630bcf03f343c42aa45d1c242",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2322:ordinal": "b763d2d161f01e7a1754961461a5b2b78c44d0f6f16f3878db449060b89bbeaa",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2325:ordinal": "08bacb8b6c5e968b97f2df47740290cf92ad02bf8e7edb20ae90250589b741e0",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2333:ordinal": "410db120b3bd46cdc1b819f977466f13c66f13f0327d0cfbbf8d3b2f8d4672a5",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2493:ordinal": "379cb93876d6e05a535e2d594e07ed44abc3a08ada9f0f4fe7b5ab2f175d640e",
+      "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2494:ordinal": "fc70fd8088579db3985fb4d8458648260a096619ded161e416146ea38b046685"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4352,
+      "output_tokens": 34,
+      "requests": 34,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:101:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2233989409531422,
+        "option_1": 0.2068138675192327,
+        "option_2": 0.18243580777300433,
+        "option_3": 0.17074632830452594,
+        "option_4": 0.21660505545009492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:117:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8890885494659079,
+        "option_1": 0.056803434161924724,
+        "option_2": 0.016771488469601675,
+        "option_3": 0.03733652790256564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:239:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.16798320167983202,
+        "option_1": 0.15528447155284472,
+        "option_2": 0.16018398160183983,
+        "option_3": 0.15718428157184283,
+        "option_4": 0.35936406359364065
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:266:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.215015015015015,
+        "option_1": 0.1896896896896897,
+        "option_2": 0.16716716716716717,
+        "option_3": 0.1954954954954955,
+        "option_4": 0.23263263263263262
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:357:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2197,
+        "option_1": 0.1885,
+        "option_2": 0.1709,
+        "option_3": 0.1973,
+        "option_4": 0.2236
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:364:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2092092092092092,
+        "option_1": 0.1905905905905906,
+        "option_2": 0.16516516516516516,
+        "option_3": 0.2092092092092092,
+        "option_4": 0.22582582582582583
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:385:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2148,
+        "option_1": 0.1807,
+        "option_2": 0.1729,
+        "option_3": 0.1992,
+        "option_4": 0.2324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:407:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.18243580777300433,
+        "option_1": 0.1609551403736637,
+        "option_2": 0.16585073433909484,
+        "option_3": 0.17074632830452594,
+        "option_4": 0.32001198920971125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:444:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.22072207220722073,
+        "option_1": 0.21092109210921092,
+        "option_2": 0.18261826182618263,
+        "option_3": 0.17481748174817482,
+        "option_4": 0.21092109210921092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:649:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8755253151891135,
+        "option_1": 0.07914748849309587,
+        "option_2": 0.019311586952171306,
+        "option_3": 0.02601560936561937
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:719:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8717974379503602,
+        "option_1": 0.08646917534027222,
+        "option_2": 0.01621297037630104,
+        "option_3": 0.025520416333066454
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:824:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.870751699320272,
+        "option_1": 0.08636545381847262,
+        "option_2": 0.016993202718912435,
+        "option_3": 0.025889644142343064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:834:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.15414585414585416,
+        "option_1": 0.13756243756243758,
+        "option_2": 0.15414585414585416,
+        "option_3": 0.14245754245754247,
+        "option_4": 0.41168831168831177
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:923:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.18161816181618162,
+        "option_1": 0.18161816181618162,
+        "option_2": 0.24022402240224022,
+        "option_3": 0.39653965396539653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:941:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.22247752247752245,
+        "option_1": 0.21268731268731267,
+        "option_2": 0.1785214785214785,
+        "option_3": 0.17362637362637362,
+        "option_4": 0.21268731268731267
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1055:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8629548180727709,
+        "option_1": 0.08006797281087566,
+        "option_2": 0.020891643342662934,
+        "option_3": 0.03608556577369053
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1296:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.18323353293413175,
+        "option_1": 0.18323353293413175,
+        "option_2": 0.18612774451097805,
+        "option_3": 0.18033932135728542,
+        "option_4": 0.26706586826347306
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1306:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.27677412915460625,
+        "option_1": 0.30801477193332666,
+        "option_2": 0.41521109891206703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1499:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.1621162116211621,
+        "option_1": 0.15041504150415042,
+        "option_2": 0.16501650165016502,
+        "option_3": 0.1572157215721572,
+        "option_4": 0.36523652365236525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1638:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.21682168216821682,
+        "option_1": 0.1855185518551855,
+        "option_2": 0.1709170917091709,
+        "option_3": 0.20312031203120312,
+        "option_4": 0.22362236223622362
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1738:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.27874251497005986,
+        "option_1": 0.4249500998003992,
+        "option_2": 0.2963073852295409
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1916:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8633863386338634,
+        "option_1": 0.08840884088408842,
+        "option_2": 0.0177017701770177,
+        "option_3": 0.0305030503050305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1937:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8392964221467121,
+        "option_1": 0.09124525284829103,
+        "option_2": 0.027783330001998802,
+        "option_3": 0.041674995002998205
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1951:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.8331664330062087,
+        "option_1": 0.09973963548968556,
+        "option_2": 0.02673743240536752,
+        "option_3": 0.04035649909873824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:1954:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.18123752495009982,
+        "option_1": 0.16566866267465072,
+        "option_2": 0.17644710578842315,
+        "option_3": 0.17644710578842315,
+        "option_4": 0.3001996007984032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2101:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.1738,
+        "option_1": 0.166,
+        "option_2": 0.1689,
+        "option_3": 0.1768,
+        "option_4": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2135:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2197,
+        "option_1": 0.1914,
+        "option_2": 0.1641,
+        "option_3": 0.1943,
+        "option_4": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2275:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.21460685383155162,
+        "option_1": 0.18633230092916378,
+        "option_2": 0.16974722749525428,
+        "option_3": 0.20491557598161658,
+        "option_4": 0.22439804176241385
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2277:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.28517148285171484,
+        "option_1": 0.4296570342965704,
+        "option_2": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2322:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.9128220491312162,
+        "option_1": 0.05072897942879968,
+        "option_2": 0.013680846814459757,
+        "option_3": 0.022768124625524265
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2325:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.166,
+        "option_1": 0.1738,
+        "option_2": 0.168,
+        "option_3": 0.1582,
+        "option_4": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2333:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2578,
+        "option_1": 0.4531,
+        "option_2": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2493:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.1611161116111611,
+        "option_1": 0.1484148414841484,
+        "option_2": 0.17381738173817382,
+        "option_3": 0.1416141614161416,
+        "option_4": 0.37503750375037503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__reasoning-control-v1:reasoning-control-v1:76109:2494:ordinal",
+      "question_id": "ordinal",
+      "probabilities": {
+        "option_0": 0.2383,
+        "option_1": 0.4746,
+        "option_2": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

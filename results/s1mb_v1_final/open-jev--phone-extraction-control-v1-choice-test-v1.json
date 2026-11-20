@@ -1,0 +1,1205 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--phone-extraction-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__phone-extraction-control-v1",
+    "split": "test",
+    "case_count": 79,
+    "decision_count": 79,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:29+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 79,
+    "expected": 79,
+    "succeeded": 79,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.1518987341772152,
+    "uniform_accuracy_baseline": 0.24240506329113914,
+    "fixed_answer_accuracy_baseline": 0.4177215189873418,
+    "baseline_adjusted_skill": -0.45652173913043476,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 14.215106100000412,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__phone-extraction-control-v1:phone-case-560468704d4c851f41b6430d:selection:request:span": "cffaf4f2d58851b852ccce3c8a90a7b39e68029c6fa823f9c6e6f50405330749",
+      "open_jev__phone-extraction-control-v1:phone-case-a9a66f4b7f635b2d16246f1b:attributes:span_1:region": "ddf51812045c48b96d238756f4e68f1b3a7585a661ba00be7fb7f5d2d807d0a1",
+      "open_jev__phone-extraction-control-v1:phone-case-098ddd58ca96a93ec3560ea8:attributes:span_1:region": "14688b69a18b692fd821d142213c1b1f0c1887e5f3657d671ce5b1acf8030e82",
+      "open_jev__phone-extraction-control-v1:phone-case-6f08a25ed1c2f6de25eff13c:selection:request:span": "8a31b5529095fd23b736a58bb08b996ca68a311ff0c557dd791cd76cb2e7a20c",
+      "open_jev__phone-extraction-control-v1:phone-case-0ce3a8468585df94264c1d87:attributes:span_0:region": "21770301ecab35a1c28414d90440b2951191c790f0f3d4f173f98cf47af5c378",
+      "open_jev__phone-extraction-control-v1:phone-case-97c027de61e47b3d970d8a5e:selection:request:span": "697bd6ff9a4c539f4545d9233c85fc459deb086812ad23079e42dc2bd2b6e218",
+      "open_jev__phone-extraction-control-v1:phone-case-2823f804af4f8bd4e27beca6:attributes:span_1:region": "38e3d257abf4eded16c0025bf84d858c56d3056cafd85c401226af3b8dc05884",
+      "open_jev__phone-extraction-control-v1:phone-case-effa9b77183df42d9565dd65:selection:request:span": "e098e7a538e046e254b66694819e2aa4eaf0ee6f8e6a3ccdc096f5bd20a68c65",
+      "open_jev__phone-extraction-control-v1:phone-case-fbf32e7b5e4810c5409f6093:selection:request:span": "3655c880e7f12d9f98c44f7494f138707232eb4aff880c7a7931abfff9889ac7",
+      "open_jev__phone-extraction-control-v1:phone-case-7d3506017269c96094d8af86:selection:request:span": "99b95953b4ca99ada66975ff5ac6e75e30ee9a8ce2be457e8dfe22c211c02c12",
+      "open_jev__phone-extraction-control-v1:phone-case-af5515f03419602976ffdd31:selection:request:span": "48571edd70dfe069c5c343f91ae6e067bfc6375526774d262ff69044749dad28",
+      "open_jev__phone-extraction-control-v1:phone-case-81e8259f7d1a6117237e5523:attributes:span_2:region": "0ae6552d8ef900d8d7a906dfff2169a056009e444469d2d4482d3aa5bf5603c9",
+      "open_jev__phone-extraction-control-v1:phone-case-fdfd016774509afa16e3d589:selection:request:span": "189f8f4e253945ea86f3b5e8e0924eb9c20a01f9d2e9f85f2d89fdd18f331b8f",
+      "open_jev__phone-extraction-control-v1:phone-case-a840c46bf3a380debf70aa83:attributes:span_0:region": "13e268c794be31ca3b0e6c5abe3caa97422dbf734534f153be530207a93dbb76",
+      "open_jev__phone-extraction-control-v1:phone-case-240f0024cc016ae2f2d29505:attributes:span_2:region": "c865449e4d8f1102c1e8a95614f461800eca62d0cd41b88aff545bb3d9222ecf",
+      "open_jev__phone-extraction-control-v1:phone-case-91507274d214c209e2c538a8:selection:request:span": "aff813c31e5e5662da43fa7ed3cee91122ae077035eed1b4a7ae10e0b5c811f0",
+      "open_jev__phone-extraction-control-v1:phone-case-7558ff6a40f47c21380367c2:selection:request:span": "6aee82a496509ec53235b81ae153652686c025f0a30666c608a1a4f779541bbe",
+      "open_jev__phone-extraction-control-v1:phone-case-8d8541f8ee5aee60f37f5e41:selection:request:span": "ed600f1975b0d9545a3f50616989c448015f32b77c4782461566feb4e77bbf1c",
+      "open_jev__phone-extraction-control-v1:phone-case-564831b9f31ff15717a20523:selection:request:span": "9f22c709d205109fa11aa31f2692d2754dd24efa880e61ae5e67e7a64af69d8d",
+      "open_jev__phone-extraction-control-v1:phone-case-940015ac980dab9226787f90:attributes:span_2:region": "a21be8bb73f065acb8eddd2a7094211bedd426184e028883031037d447f7623e",
+      "open_jev__phone-extraction-control-v1:phone-case-d3c87ca8035144f0003e4104:selection:request:span": "ca5ef3b4e4427e33d2d6f93b4b6b01ae6be0e16f2383b4079c1dc28234cdfe07",
+      "open_jev__phone-extraction-control-v1:phone-case-173034c3974df7eedd56f5f3:selection:request:span": "0ff7dc8ed5959118660d1df67b535f97df0cce228e601bf84a78163cbf65d684",
+      "open_jev__phone-extraction-control-v1:phone-case-3c9dbf7f162131fe8aca2fc0:attributes:span_0:region": "63574bae37be52453405c9aaa1070b58b4d6dc10d0210b00b6ffa87a71103f6c",
+      "open_jev__phone-extraction-control-v1:phone-case-fd0bedd1fe05484de7ee7ebd:selection:request:span": "e166e7b202f0cd4fb7cdc066224a6bd28da0ae52016f56a2df1924bb2b06bd95",
+      "open_jev__phone-extraction-control-v1:phone-case-05d5252824ba7313edbfd92a:selection:request:span": "eadd9da485f0e664556c4f202cf335202abc26a6a0ffe9cdae451efdeab87684",
+      "open_jev__phone-extraction-control-v1:phone-case-4c9f6cd01b77c2408510172c:attributes:span_3:region": "540ffd12e467af6767911ad7ca8ffff264e2904abf6a5540ec1b9ed98898fe0a",
+      "open_jev__phone-extraction-control-v1:phone-case-6aed9dfdb7d31d2084d2430d:selection:request:span": "9ccadd0308d542759ec32c5d27ae07f67022b26d0d7066495a966487e537dc30",
+      "open_jev__phone-extraction-control-v1:phone-case-6aed9dfdb7d31d2084d2430d:attributes:span_2:region": "6865d6f3ad49ccd35e518f89589d32e47a2575bdf9b72fc44852ef5e1619fd0e",
+      "open_jev__phone-extraction-control-v1:phone-case-db4d11a8ed4cb806fbbb06c4:selection:request:span": "e306ee2b53343ce09f0ddbe57898b14f94e66179462ce818eb02049ca655405d",
+      "open_jev__phone-extraction-control-v1:phone-case-d511aaf31cefa5201c586c0b:selection:request:span": "939214aa36fe9aaa7175448c27eb75b663b67270d3e11ff71d6f4e5c11fa623f",
+      "open_jev__phone-extraction-control-v1:phone-case-9f7512b1452e1f6731703f84:selection:request:span": "3e127738e44d64a63bad51e28ea891728fe217b4b1ea319743970d0a76363e06",
+      "open_jev__phone-extraction-control-v1:phone-case-76a2539d427089399411ed70:selection:request:span": "090236f00424ba4c5ac414f5a9696d3a52aa95a3333c86e8d03b8a7b832aae57",
+      "open_jev__phone-extraction-control-v1:phone-case-935fbe64816237deb30f94d6:selection:request:span": "9c646854cc768125fa5a6ea293a404fb66d8ed439a5f00f90489457d50d63b77",
+      "open_jev__phone-extraction-control-v1:phone-case-96b4488b5f53c6e7be36e326:attributes:span_1:region": "0fac1d4f8dab6ca08789622632d77466e2694f5114e921276a4c6e15ebc8a73a",
+      "open_jev__phone-extraction-control-v1:phone-case-96c500cc792b26244f9cb781:selection:request:span": "ab889010679c63857f4389371aa1469679c3b1a5be184fc28d598357f5967d43",
+      "open_jev__phone-extraction-control-v1:phone-case-724b1149f3a5a003164aff31:attributes:span_2:region": "061a9cd8253cfb5a938900d0ce2bb2fc8b31e10e1b08aeafb867d63a1451a890",
+      "open_jev__phone-extraction-control-v1:phone-case-57fc500ce4407df41c9babf5:selection:request:span": "27ab9d81158334583cbea9efe7702df0deebfa26af7dca69a983e848923aecf8",
+      "open_jev__phone-extraction-control-v1:phone-case-aa11f3a769b60f3987413c3e:attributes:span_1:region": "e92454f82392357f424b13d2e5939c495b6c0652e5216417cc54ff57892911b0",
+      "open_jev__phone-extraction-control-v1:phone-case-a83f50e91eafcd916ae542cb:selection:request:span": "dc970c46b4896dee0e4cffcbcc4e3480e08598b15609ddb944b9b4ee652e1dbf",
+      "open_jev__phone-extraction-control-v1:phone-case-1532a99396bd10ddf7afa392:selection:request:span": "01ec3a5e65fe2612626bc358a095b7567614b123b548e3a96cef0d51fe087d18",
+      "open_jev__phone-extraction-control-v1:phone-case-f224e033b355f48598bf3cde:selection:request:span": "a057317c18f75df75fea5293242d4400692dcb77a6c13b0daa87bc0ceedfa61a",
+      "open_jev__phone-extraction-control-v1:phone-case-954c9318a51610c3d11e151b:attributes:span_1:region": "e4a5c375088aa6bb1300f9ebb70a1eb4a61e02fc64582fec5d57bd5961382767",
+      "open_jev__phone-extraction-control-v1:phone-case-8a21be64f9407e5cb9788668:selection:request:span": "ee8cecdfd2a603e92be3c4038e54a35aa7655b0c0737977bb66a217c3995eec9",
+      "open_jev__phone-extraction-control-v1:phone-case-5464803d6d11a5cf40427340:selection:request:span": "86ac0d55ab7cf305887023af4d8e55f60a56a76fc00aac1a51442c4e0eb53e03",
+      "open_jev__phone-extraction-control-v1:phone-case-e03a107512342e875593ecbb:selection:request:span": "b2312ad758e8f366659fdf9460d2665d11d5498183be26fb25f73117d07aeef6",
+      "open_jev__phone-extraction-control-v1:phone-case-b98876d57edf395571c09cad:selection:request:span": "87902562578a4cf496e1b60cfca6901a23106237229ad5b381260464eeafcfa8",
+      "open_jev__phone-extraction-control-v1:phone-case-1f5c66a68e5ff8766211a12a:selection:request:span": "4409444a5a1697c2d5b3c9974671394f44ae093e6b37bce8f7955bd0ea6f1c79",
+      "open_jev__phone-extraction-control-v1:phone-case-f411475eaaa5f466bc75b3c8:selection:request:span": "cd0f6a3c362a8ae8c311712e118ab877be1c5dcb052b17ec669de78f3f2652b6",
+      "open_jev__phone-extraction-control-v1:phone-case-99f626581038ef4dbf35c0ad:attributes:span_0:region": "5869c645614391b735aa19a3c1a5c8207081c1c707141f39801447b73798f8e4",
+      "open_jev__phone-extraction-control-v1:phone-case-a3c55954970b44114a8abad0:selection:request:span": "a787f9ad13f49a1b7e1174d9922f9c288ef580e7ad7994434198f80e4567fa41",
+      "open_jev__phone-extraction-control-v1:phone-case-914a6d04ff0379d0da25eb9e:attributes:span_0:region": "9378e971da135cea6038bafd8628dfc29c4c255c21d5e15b47ef0cce49b4f711",
+      "open_jev__phone-extraction-control-v1:phone-case-0689de81abc573a647802bcb:selection:request:span": "9205d4777bd0570b69f22c97bc91bccdc15ae09fbd6603c691b2ee0c1bf02b6f",
+      "open_jev__phone-extraction-control-v1:phone-case-c7a7ae2610e57bb8a7306361:selection:request:span": "4c5cf0111d70d9d64b9074ad6729660c13da0649c4ef8693d8022f816c89e3f3",
+      "open_jev__phone-extraction-control-v1:phone-case-4e797fe761d9ba01816c4274:attributes:span_0:region": "71c608235762af3ea391fbc7b7820c82438b33a572eb601310955996ed4661e0",
+      "open_jev__phone-extraction-control-v1:phone-case-953f7503919d7d47fc8afaf1:selection:request:span": "3705ca95f6a09cbabbf5e63c1bce93a6880a98350931ba93827c3b9528ebac33",
+      "open_jev__phone-extraction-control-v1:phone-case-30a68276a6f5ee927195090e:selection:request:span": "5f2fa91a66ff21e5fa7346acf56d175484814c52ec4ea3e46d478b67015b7438",
+      "open_jev__phone-extraction-control-v1:phone-case-24d000e91179fb8babdaab62:selection:request:span": "7acc54d8a70b7850c0782e21e40f0a2ef678775be0f91ddc31fb3a97b8f31930",
+      "open_jev__phone-extraction-control-v1:phone-case-24d000e91179fb8babdaab62:attributes:span_0:region": "2ef58a2cd936794b99d8e99902358b9b7d482adebfdef47676d10e2211691d31",
+      "open_jev__phone-extraction-control-v1:phone-case-290004e7137c374a7259d5ee:selection:request:span": "8769b8f189fff1a5c478c2a550ca391b3a7baba56485f2d3fb520f24aa7a8b1d",
+      "open_jev__phone-extraction-control-v1:phone-case-304c5232af7d1cd29a8e4dc2:selection:request:span": "657c15c513941f24366854b40377884eaf84d8375ffe8f8de310da0f59e45bb4",
+      "open_jev__phone-extraction-control-v1:phone-case-0e0ed341789cd00dc43f98ae:selection:request:span": "b14ee33423c0b75972193b21305b2de9e825fd7ed339907130deda7ed21fd080",
+      "open_jev__phone-extraction-control-v1:phone-case-58ada602d77545fd2a975ce6:selection:request:span": "78bc26777fb1f51a93e0fedd4c06af3f641dbfe03cf00e36610fc5982e7d4a0f",
+      "open_jev__phone-extraction-control-v1:phone-case-170f1911140191d625f381a8:selection:request:span": "513907d9eea53b7da631a0b83f40bf2cfe1b4f0518bb69e4272610113dbb82da",
+      "open_jev__phone-extraction-control-v1:phone-case-780ee74644c768dd954e7196:attributes:span_1:region": "258df75fbe45f73ab82bb841e842e9b6da1fdb68aa92d3fc93e3a32fc04fb27a",
+      "open_jev__phone-extraction-control-v1:phone-case-8b2ccf8c8f73bb37343f72cf:selection:request:span": "f719a6517712e5d5697fe5cb2bafc3f3295e60807672be7aaf8ef8dd85b99771",
+      "open_jev__phone-extraction-control-v1:phone-case-49ae995e08931480a0d864c9:attributes:span_1:region": "742b55d3fc0eb48606596300ae70e4b941299790ec8192143c864c2687b652e8",
+      "open_jev__phone-extraction-control-v1:phone-case-29a4e55dd54042fea733f653:attributes:span_2:region": "0f4a1a917887ea54d445ea1ab4671c766ccaa68833a0f5479beeadc091ab66aa",
+      "open_jev__phone-extraction-control-v1:phone-case-a5356f849612a507578fc017:attributes:span_1:region": "9b0cc0ccd1696053145f129d307856455bce4ca3075f56926307755dfea6f7ad",
+      "open_jev__phone-extraction-control-v1:phone-case-7a42107cb2f73d688b169155:selection:request:span": "f4ba2c43b5d68a56d0fc7bd349908c9927f27fdb6691e1ed614052e995f52ea0",
+      "open_jev__phone-extraction-control-v1:phone-case-b8cb08a6aabc477d25f9ba14:selection:request:span": "a146910a85cd2460bfbdd976a56bf8adcbb91653e48d67365412b3ac6dbe67b7",
+      "open_jev__phone-extraction-control-v1:phone-case-a8436a2e5e443a2de4241df4:attributes:span_2:region": "8781d42373e971edb12b9ea3ce01823a9f98c8c1c4ca823ec6b4d2453014df1d",
+      "open_jev__phone-extraction-control-v1:phone-case-28b231c12497fa26cd833c35:selection:request:span": "0869f8a81010943c16bf42f03b5496c9a2e3c2c1d67b8282ce57c534b57716f4",
+      "open_jev__phone-extraction-control-v1:phone-case-c7c0b3803734c7411fbedaf7:selection:request:span": "5ed5da2ad2db0c5d599b0c444859ae11e53468f608fe9ed74923e8bf3fcd8121",
+      "open_jev__phone-extraction-control-v1:phone-case-708a7abc04d274191e9341c5:attributes:span_1:region": "e1241cc3c8df221edaa6d101d508637bc24cba7a5d682bdd087cd9b7226c40f7",
+      "open_jev__phone-extraction-control-v1:phone-case-ae1eb1c04416408202eacab6:selection:request:span": "ec69669eea039d754754d7d849e5d11d27f074ac04426d88d5ae6bc234ffc8c1",
+      "open_jev__phone-extraction-control-v1:phone-case-77c5fcd557ce783b26478864:selection:request:span": "95888090b56bff70e886a5bddcaee2838a86d2a3e9424c6bdbec71201ec90dee",
+      "open_jev__phone-extraction-control-v1:phone-case-908013f7c211e917443677a3:attributes:span_1:region": "78c570c3d7bfd6532c1b8ff703b3c44bbaef3f2543aa6f363badbad36a7e3234",
+      "open_jev__phone-extraction-control-v1:phone-case-808b35ad76054b71bfe209c7:selection:request:span": "acc1597e45f1ae580098a5960ec71d4767be81a0200a21481fdb4b3041d9b91b",
+      "open_jev__phone-extraction-control-v1:phone-case-2932ab273a93d03d39d10aed:attributes:span_1:region": "2536880ed65e55848dd34d6a4ec4688561865005a1b6b2bea6989eb8ce66a8ab"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 10112,
+      "output_tokens": 79,
+      "requests": 79,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-560468704d4c851f41b6430d:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5224074258908075,
+        "option_1": 0.12576105399740492,
+        "option_2": 0.12765745084339755,
+        "option_3": 0.22417406926839006
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a9a66f4b7f635b2d16246f1b:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2871,
+        "option_1": 0.1514,
+        "option_2": 0.1719,
+        "option_3": 0.166,
+        "option_4": 0.2236
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-098ddd58ca96a93ec3560ea8:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2753724627537246,
+        "option_1": 0.1640835916408359,
+        "option_2": 0.1640835916408359,
+        "option_3": 0.16108389161083891,
+        "option_4": 0.23537646235376464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-6f08a25ed1c2f6de25eff13c:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5262475049900199,
+        "option_1": 0.12864271457085827,
+        "option_2": 0.12674650698602793,
+        "option_3": 0.2183632734530938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-0ce3a8468585df94264c1d87:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.21991991991991994,
+        "option_1": 0.4106106106106106,
+        "option_2": 0.1007007007007007,
+        "option_3": 0.1075075075075075,
+        "option_4": 0.16126126126126125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-97c027de61e47b3d970d8a5e:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4975522030172845,
+        "option_1": 0.15216305325207313,
+        "option_2": 0.1424717754021381,
+        "option_3": 0.20781296832850435
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-2823f804af4f8bd4e27beca6:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2023023023023023,
+        "option_1": 0.44964964964964965,
+        "option_2": 0.1085085085085085,
+        "option_3": 0.0957957957957958,
+        "option_4": 0.14374374374374374
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-effa9b77183df42d9565dd65:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.41754070522425324,
+        "option_1": 0.17171111777045248,
+        "option_2": 0.19708320847068223,
+        "option_3": 0.21366496853461192
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-fbf32e7b5e4810c5409f6093:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5117,
+        "option_1": 0.1465,
+        "option_2": 0.1318,
+        "option_3": 0.21
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-7d3506017269c96094d8af86:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4473,
+        "option_1": 0.165,
+        "option_2": 0.1924,
+        "option_3": 0.1953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-af5515f03419602976ffdd31:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4574574574574575,
+        "option_1": 0.17107107107107106,
+        "option_2": 0.13783783783783782,
+        "option_3": 0.23363363363363363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-81e8259f7d1a6117237e5523:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.41024102410241026,
+        "option_1": 0.1396139613961396,
+        "option_2": 0.0859085908590859,
+        "option_3": 0.1484148414841484,
+        "option_4": 0.2158215821582158
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-fdfd016774509afa16e3d589:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4141,
+        "option_1": 0.1982,
+        "option_2": 0.1523,
+        "option_3": 0.2354
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a840c46bf3a380debf70aa83:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2441,
+        "option_1": 0.2256,
+        "option_2": 0.168,
+        "option_3": 0.1504,
+        "option_4": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-240f0024cc016ae2f2d29505:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.4025012506253126,
+        "option_1": 0.1504752376188094,
+        "option_2": 0.08064032016008003,
+        "option_3": 0.14657328664332164,
+        "option_4": 0.21980990495247624
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-91507274d214c209e2c538a8:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.6333700330297267,
+        "option_1": 0.160344309878891,
+        "option_2": 0.20628565709138222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-7558ff6a40f47c21380367c2:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.38441558441558443,
+        "option_1": 0.17852147852147854,
+        "option_2": 0.22537462537462538,
+        "option_3": 0.2116883116883117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-8d8541f8ee5aee60f37f5e41:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4487960835248277,
+        "option_1": 0.15516035567988812,
+        "option_2": 0.18143670696373268,
+        "option_3": 0.21460685383155162
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-564831b9f31ff15717a20523:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.42228005204684216,
+        "option_1": 0.16514863377039338,
+        "option_2": 0.20628565709138225,
+        "option_3": 0.20628565709138225
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-940015ac980dab9226787f90:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.25587441255874416,
+        "option_1": 0.208979102089791,
+        "option_2": 0.1503849615038496,
+        "option_3": 0.15528447155284472,
+        "option_4": 0.22947705229477053
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-d3c87ca8035144f0003e4104:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.3968571714543089,
+        "option_1": 0.17395656090481432,
+        "option_2": 0.22290061054949453,
+        "option_3": 0.20628565709138222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-173034c3974df7eedd56f5f3:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.42618356520868783,
+        "option_1": 0.16424782304073665,
+        "option_2": 0.21409268341507356,
+        "option_3": 0.19547592833550195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-3c9dbf7f162131fe8aca2fc0:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.20401839264294283,
+        "option_1": 0.43142742902838865,
+        "option_2": 0.11955217912834866,
+        "option_3": 0.10245901639344263,
+        "option_4": 0.14254298280687727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-fd0bedd1fe05484de7ee7ebd:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.41214121412141214,
+        "option_1": 0.1689168916891689,
+        "option_2": 0.22752275227522753,
+        "option_3": 0.1914191419141914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-05d5252824ba7313edbfd92a:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5541458541458542,
+        "option_1": 0.2263736263736264,
+        "option_2": 0.2194805194805195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-4c9f6cd01b77c2408510172c:attributes:span_3:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.35811623246492985,
+        "option_1": 0.1565130260521042,
+        "option_2": 0.09488977955911825,
+        "option_3": 0.15170340681362726,
+        "option_4": 0.23877755511022045
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-6aed9dfdb7d31d2084d2430d:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.38631368631368634,
+        "option_1": 0.17662337662337665,
+        "option_2": 0.2341658341658342,
+        "option_3": 0.20289710289710292
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-6aed9dfdb7d31d2084d2430d:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.3650174912543729,
+        "option_1": 0.13863068465767117,
+        "option_2": 0.09805097451274364,
+        "option_3": 0.15912043978010995,
+        "option_4": 0.23918040979510247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-db4d11a8ed4cb806fbbb06c4:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5156515651565156,
+        "option_1": 0.24022402240224022,
+        "option_2": 0.24412441244124414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-d511aaf31cefa5201c586c0b:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4766,
+        "option_1": 0.1543,
+        "option_2": 0.1406,
+        "option_3": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-9f7512b1452e1f6731703f84:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4233766233766234,
+        "option_1": 0.17072927072927074,
+        "option_2": 0.2,
+        "option_3": 0.20589410589410592
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-76a2539d427089399411ed70:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4702297702297702,
+        "option_1": 0.15024975024975024,
+        "option_2": 0.1834165834165834,
+        "option_3": 0.19610389610389609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-935fbe64816237deb30f94d6:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.6055,
+        "option_1": 0.1816,
+        "option_2": 0.2129
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-96b4488b5f53c6e7be36e326:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.26343656343656346,
+        "option_1": 0.15414585414585416,
+        "option_2": 0.19220779220779222,
+        "option_3": 0.16193806193806196,
+        "option_4": 0.2282717282717283
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-96c500cc792b26244f9cb781:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.3242324232423242,
+        "option_1": 0.19431943194319432,
+        "option_2": 0.2617261726172617,
+        "option_3": 0.21972197219721973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-724b1149f3a5a003164aff31:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.4060375849660136,
+        "option_1": 0.13174730107956817,
+        "option_2": 0.09226309476209515,
+        "option_3": 0.1591363454618153,
+        "option_4": 0.2108156737305078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-57fc500ce4407df41c9babf5:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5029444056293043,
+        "option_1": 0.13933526300029944,
+        "option_2": 0.157899990018964,
+        "option_3": 0.19982034135143226
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-aa11f3a769b60f3987413c3e:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.38835048456389254,
+        "option_1": 0.11459686282345889,
+        "option_2": 0.10780297732041164,
+        "option_3": 0.15705864721750426,
+        "option_4": 0.23219102807473277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a83f50e91eafcd916ae542cb:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4141,
+        "option_1": 0.1787,
+        "option_2": 0.1992,
+        "option_3": 0.208
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-1532a99396bd10ddf7afa392:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.459,
+        "option_1": 0.1582,
+        "option_2": 0.1855,
+        "option_3": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-f224e033b355f48598bf3cde:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.47759257410919254,
+        "option_1": 0.1481185747080547,
+        "option_2": 0.1783611138836211,
+        "option_3": 0.19592773729913165
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-954c9318a51610c3d11e151b:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.3732239343606164,
+        "option_1": 0.12507504502701622,
+        "option_2": 0.10896537922753652,
+        "option_3": 0.1690014008405043,
+        "option_4": 0.2237342405443266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-8a21be64f9407e5cb9788668:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.3847615238476152,
+        "option_1": 0.16798320167983202,
+        "option_2": 0.20607939206079393,
+        "option_3": 0.24117588241175883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-5464803d6d11a5cf40427340:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5434891402262035,
+        "option_1": 0.22290061054949453,
+        "option_2": 0.23361024922430185
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-e03a107512342e875593ecbb:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5166332665330661,
+        "option_1": 0.14388777555110221,
+        "option_2": 0.13987975951903808,
+        "option_3": 0.19959919839679358
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-b98876d57edf395571c09cad:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.46726726726726725,
+        "option_1": 0.16126126126126125,
+        "option_2": 0.1827827827827828,
+        "option_3": 0.18868868868868868
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-1f5c66a68e5ff8766211a12a:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.416,
+        "option_1": 0.1602,
+        "option_2": 0.1904,
+        "option_3": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-f411475eaaa5f466bc75b3c8:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4805,
+        "option_1": 0.1484,
+        "option_2": 0.1797,
+        "option_3": 0.1914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-99f626581038ef4dbf35c0ad:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.3650174912543729,
+        "option_1": 0.16401799100449777,
+        "option_2": 0.10294852573713144,
+        "option_3": 0.14742628685657172,
+        "option_4": 0.22058970514742632
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a3c55954970b44114a8abad0:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5117,
+        "option_1": 0.1309,
+        "option_2": 0.1445,
+        "option_3": 0.2129
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-914a6d04ff0379d0da25eb9e:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.27315416125487063,
+        "option_1": 0.19712258966929766,
+        "option_2": 0.16585073433909484,
+        "option_3": 0.14437006693975424,
+        "option_4": 0.21950244779698275
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-0689de81abc573a647802bcb:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5005005005005005,
+        "option_1": 0.13883883883883882,
+        "option_2": 0.14854854854854854,
+        "option_3": 0.21211211211211212
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-c7a7ae2610e57bb8a7306361:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5156515651565156,
+        "option_1": 0.24022402240224022,
+        "option_2": 0.24412441244124414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-4e797fe761d9ba01816c4274:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.3965,
+        "option_1": 0.1572,
+        "option_2": 0.0898,
+        "option_3": 0.1504,
+        "option_4": 0.2061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-953f7503919d7d47fc8afaf1:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4,
+        "option_1": 0.15904095904095908,
+        "option_2": 0.24295704295704298,
+        "option_3": 0.198001998001998
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-30a68276a6f5ee927195090e:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.37072927072927075,
+        "option_1": 0.18341658341658346,
+        "option_2": 0.2351648351648352,
+        "option_3": 0.2106893106893107
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-24d000e91179fb8babdaab62:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.40080080080080077,
+        "option_1": 0.16226226226226226,
+        "option_2": 0.22192192192192192,
+        "option_3": 0.215015015015015
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-24d000e91179fb8babdaab62:attributes:span_0:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.38693215929557734,
+        "option_1": 0.14848909345607367,
+        "option_2": 0.09915949569741844,
+        "option_3": 0.14848909345607367,
+        "option_4": 0.2169301580948569
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-290004e7137c374a7259d5ee:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4199,
+        "option_1": 0.1592,
+        "option_2": 0.1777,
+        "option_3": 0.2432
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-304c5232af7d1cd29a8e4dc2:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5853146853146853,
+        "option_1": 0.18931068931068934,
+        "option_2": 0.22537462537462538
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-0e0ed341789cd00dc43f98ae:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4316431643164316,
+        "option_1": 0.1562156215621562,
+        "option_2": 0.17381738173817382,
+        "option_3": 0.23832383238323834
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-58ada602d77545fd2a975ce6:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4370629370629371,
+        "option_1": 0.15314685314685317,
+        "option_2": 0.17662337662337665,
+        "option_3": 0.23316683316683318
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-170f1911140191d625f381a8:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4731258132319087,
+        "option_1": 0.1466319687718947,
+        "option_2": 0.163246922230007,
+        "option_3": 0.21699529576618956
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-780ee74644c768dd954e7196:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.26146468178639226,
+        "option_1": 0.19122789489459488,
+        "option_2": 0.14826656009591369,
+        "option_3": 0.1609551403736637,
+        "option_4": 0.23808572284943555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-8b2ccf8c8f73bb37343f72cf:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5786786786786786,
+        "option_1": 0.1905905905905906,
+        "option_2": 0.23073073073073075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-49ae995e08931480a0d864c9:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2949,
+        "option_1": 0.1553,
+        "option_2": 0.1768,
+        "option_3": 0.1533,
+        "option_4": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-29a4e55dd54042fea733f653:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.4102,
+        "option_1": 0.1533,
+        "option_2": 0.0859,
+        "option_3": 0.1338,
+        "option_4": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a5356f849612a507578fc017:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2653611749425517,
+        "option_1": 0.19412528724148265,
+        "option_2": 0.1658507343390948,
+        "option_3": 0.15126386252372864,
+        "option_4": 0.22339894095314214
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-7a42107cb2f73d688b169155:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.5508,
+        "option_1": 0.2158,
+        "option_2": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-b8cb08a6aabc477d25f9ba14:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.44685314685314687,
+        "option_1": 0.15704295704295707,
+        "option_2": 0.19510489510489512,
+        "option_3": 0.200999000999001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-a8436a2e5e443a2de4241df4:attributes:span_2:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.38299149574787394,
+        "option_1": 0.13676838419209605,
+        "option_2": 0.09234617308654328,
+        "option_3": 0.16218109054527263,
+        "option_4": 0.22571285642821412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-28b231c12497fa26cd833c35:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.3945,
+        "option_1": 0.167,
+        "option_2": 0.2139,
+        "option_3": 0.2246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-c7c0b3803734c7411fbedaf7:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.48098098098098097,
+        "option_1": 0.13583583583583583,
+        "option_2": 0.1856856856856857,
+        "option_3": 0.1974974974974975
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-708a7abc04d274191e9341c5:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2559,
+        "option_1": 0.2295,
+        "option_2": 0.1699,
+        "option_3": 0.1328,
+        "option_4": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-ae1eb1c04416408202eacab6:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4702297702297703,
+        "option_1": 0.15514485514485515,
+        "option_2": 0.18441558441558442,
+        "option_3": 0.19020979020979026
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-77c5fcd557ce783b26478864:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.416,
+        "option_1": 0.1709,
+        "option_2": 0.1934,
+        "option_3": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-908013f7c211e917443677a3:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.2412,
+        "option_1": 0.2305,
+        "option_2": 0.1826,
+        "option_3": 0.1357,
+        "option_4": 0.21
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-808b35ad76054b71bfe209c7:selection:request:span",
+      "question_id": "span",
+      "probabilities": {
+        "option_0": 0.4043,
+        "option_1": 0.1768,
+        "option_2": 0.1914,
+        "option_3": 0.2275
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__phone-extraction-control-v1:phone-case-2932ab273a93d03d39d10aed:attributes:span_1:region",
+      "question_id": "region",
+      "probabilities": {
+        "option_0": 0.35722138930534736,
+        "option_1": 0.13083458270864567,
+        "option_2": 0.1088455772113943,
+        "option_3": 0.1659170414792604,
+        "option_4": 0.23718140929535234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

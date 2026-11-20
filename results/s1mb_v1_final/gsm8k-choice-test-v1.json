@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "gsm8k-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/gsm8k",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:37:03+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.39,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.3,
+    "baseline_adjusted_skill": 0.12857142857142861,
+    "baseline_adjusted_score": 0.12857142857142861
+  },
+  "elapsed_seconds": 12.609525299998495,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "gsm8k:main:test:5": "23fcb47848c3a7e79e8db2f0e6f6639d468dc7d3d8c89a8841dbdc52869b0410",
+      "gsm8k:main:test:15": "b59cc559a9fd3685a9842592da8e8b9135d24039c27538880532510af85944f8",
+      "gsm8k:main:test:36": "aea95234e460ff5b0537bd862d016ddd7dec74d6a9e557386dc7540954daf855",
+      "gsm8k:main:test:42": "37aa0a4b4d7f545e0aaf1c114dd5db0f46969c18fcae195e8e43532305eadd2d",
+      "gsm8k:main:test:89": "c9dc01442f3bbfe0636eb6dffb4f52610c57275f6efd9ba3efebe8781546b5e8",
+      "gsm8k:main:test:108": "da741f952b012e3f78bc77f45e390e38901422853e238aec978364b2c8dd1606",
+      "gsm8k:main:test:109": "cd4a583642e950ff4a4bcab14947fc96dc719520ff1ed06872cd61a4e7335691",
+      "gsm8k:main:test:121": "c83fd71a28a3356b34a0a15799cb8dcd4ee1b1963824233b72a473c57ffa6b33",
+      "gsm8k:main:test:129": "54c6f30834e117c207fcab411e9c679fe635c5c7ae49ca8736fe14d8c251cbd5",
+      "gsm8k:main:test:130": "99f6c34acef5c9d3d6dbb5fd2d039c5bbed462effd8945287184fd5c75f290e9",
+      "gsm8k:main:test:148": "e3f0ca59a99f9121cf84ba2084c1ea38629c677b59ff6d1e4c73344843314d6d",
+      "gsm8k:main:test:150": "2ea011dabe09f72f244a54c9e36cdab5773278338cdabbadd5bfdb494572f461",
+      "gsm8k:main:test:195": "1b4e96b7f7865a28f959fdb80dacc0e4e69eb251355b8fc722db844d8eceb786",
+      "gsm8k:main:test:205": "1c2cc95e17c13e4d53e72cbd973106085aa8ce1129c1f330d317967295684ee3",
+      "gsm8k:main:test:223": "5b429d0ef8affee3425da1c1e25119c258f7efbb04de524476bcf4b18e2b8f41",
+      "gsm8k:main:test:226": "c4eba2be073c154432a9e4a90b886c92e1603c5644f113297538fc6fa5f9662d",
+      "gsm8k:main:test:241": "11ba76cc3b5bc804d09cd1bf5a985b4231351309daeaaf731b2c30d68d9d1ebf",
+      "gsm8k:main:test:257": "1100ca4b70ce5f8e6099a6084a892ce8530bf45060e42e975d4b69e3181d9db8",
+      "gsm8k:main:test:264": "565c3c1bed58f384b213c0158d7475d169bd864d3eba3c9b60a767f36e092345",
+      "gsm8k:main:test:276": "5203946fe9a48e2fbd835516d12bc45dea4cc610ac716004b6609ecf0bdda358",
+      "gsm8k:main:test:284": "92be377fae929b34f463350be1de219e21301d5dddd828d9b6500d2314fa9cc7",
+      "gsm8k:main:test:298": "6b269bbdbd5e583579f24065da6c30c8bdef78913de3fb09d6048655143cb977",
+      "gsm8k:main:test:299": "5bee6725cba7839fb180be18a6565a453849bfab369c752285f55149a8781e86",
+      "gsm8k:main:test:305": "a0f3f96df606371f0a451e49b31a46f08ec8ddc056a6f1803bdb0af9c73a9a9b",
+      "gsm8k:main:test:308": "4b21d777f41d743a8560a8dc3388fc7f1aa3563488415663342fed3d4efb2d1d",
+      "gsm8k:main:test:324": "7332a63b2a3f3711f89fd8c0ccbf7aeb7bf01c3ad12f5054d71d2ffeca621a30",
+      "gsm8k:main:test:329": "0ce842adaf4fe3168ecca141a94b48852d74ee5ee5229e704139f4c2fa3f3e9e",
+      "gsm8k:main:test:340": "9680a664b7329c7c7a88775cb0e1dd71560e9e499a1e525849da2e481640499e",
+      "gsm8k:main:test:344": "790827a9fc3ccb64b29ed62bde912b28e7e6384c10d0c87f4c3dbc3ef25b0df9",
+      "gsm8k:main:test:353": "337b467ef2ec32b0608ce64cef46c6240fba954461f4a58907324ec99c414e75",
+      "gsm8k:main:test:354": "74314f3e930749287ff24a5aa411d81b3de17f1c22949338b4c54d9105261564",
+      "gsm8k:main:test:369": "75d5701dc18321847b06a926778c921f3084cb9eb18b43f1e0d87bfd8464612d",
+      "gsm8k:main:test:372": "fe7ecf9db50ca363cbb68e470213da481b189f159e1a5bdaaf31c5449e3561ea",
+      "gsm8k:main:test:378": "f6621d5c1a2d71f4dd067ba0db80c02cc4a8bd319fbdf175739cbeff47738af4",
+      "gsm8k:main:test:406": "c6d2dc9b5b04a8c1dc6582bdeeb03a6e912fa41561553f383f917c00f03c9f11",
+      "gsm8k:main:test:409": "df8a09ffdc95255668c13f3a8f22e56f845cfa62500a9d2408cfbbcd458dbff5",
+      "gsm8k:main:test:426": "a6c1a7222d634754f7fdb1aad687af6684dbe1877f728c74851d7ae9309a1bec",
+      "gsm8k:main:test:441": "d2ac7d5e207b2521f6f80c7242d8718cf6eb4f31ac91f4418199351b13c4f343",
+      "gsm8k:main:test:462": "9022186f6b0ac8a92b47affb18b2d2d49ceeeac6f1aabf89f42796a5a6887365",
+      "gsm8k:main:test:519": "bf2c979da8e4bb0422bdeef87df1548f538a7f273ea3b9405ae9b87989b6d11a",
+      "gsm8k:main:test:523": "e464df4bb05fe7dd4c1aa204c52fd6a7d96119948662183a2ff6e582b6d8b2cc",
+      "gsm8k:main:test:533": "5cda63a02ffacbe9b9401ca1da28e0767bd135e72db06aa61a7e8e3c8a83f093",
+      "gsm8k:main:test:541": "c8c5677beb0f8906e4166529f0a9472ef047233fa47a96219d105df1d9835e5e",
+      "gsm8k:main:test:593": "070df6e4320083ec545104bf043a148bef05e4e06443fbca39e810ba542f7c13",
+      "gsm8k:main:test:616": "82f955444f9b2cabc0d108f2deaccdf66b4c02dc246c3e9af5b3e818758c0967",
+      "gsm8k:main:test:622": "b21b0bb9311d28aeea1726276e06d9baf03b323f8f60e89fdc53a06aae013c64",
+      "gsm8k:main:test:652": "1c006e09e6a3d779593bd344c29b85915119b0487bc6c283fdde994682204278",
+      "gsm8k:main:test:657": "c93805bf32669219535efd3a46881150af2f7e26478f201819e378f940d928cc",
+      "gsm8k:main:test:659": "c9a46dcbcf6e733f1934a2aa9c2d54c1064d7b5fcffb3d55867c67c7570ec550",
+      "gsm8k:main:test:680": "6c54b99ff4d50ab7614ceae138625c6a50ba061de36e464bd57984c0406e22a5",
+      "gsm8k:main:test:681": "78ab231039b883665bf28ef91b25554a48174fb14001e98ba59afa1760a32251",
+      "gsm8k:main:test:688": "b339f40e4168c59f3fa0bd5463c9bf789ab2154d381f4fcb9213090bd14e87a6",
+      "gsm8k:main:test:690": "0c1c4390e11b91d6c0157ad2c0ce0d95d395e0e098e8037f35c78ab2a62bd0e9",
+      "gsm8k:main:test:701": "2283db69d52c9fd7074432d63f1ab9d02257b3b5c0e22890e96900ecbe888ee9",
+      "gsm8k:main:test:722": "572d8e917de63739119b020cb5698f4da4be7e8d4dca1b0ea807855a5e2894c0",
+      "gsm8k:main:test:734": "6a3fa423e77a408ad42f80f2c374277325eaf202c96ebf70a72a3fc3edfa8bd8",
+      "gsm8k:main:test:751": "e7345265618c2a8adb6b7c595ca864589576e040ee3ac495120d82edbc6699f0",
+      "gsm8k:main:test:770": "5fc4b2a8f4be99e4a55d2e7608c3ffc4de118475ad9a4c8ea19e1a7a3df7cc43",
+      "gsm8k:main:test:774": "cdc7da905137412659c96dc83b7c06c6b13e93b67b67306f944cbe06517d82a8",
+      "gsm8k:main:test:791": "477c1b152906ba90e9d6e6489650bad2aed8e138a07cc3b45159517c2758f193",
+      "gsm8k:main:test:803": "1de09e58908f87e2e94ca97b01434b71c6601cbb28af70c4e6818fe65a248978",
+      "gsm8k:main:test:808": "f9d882972746631b75dcd4e92e314d255d0e9b920e641956e64f29b88bbf1593",
+      "gsm8k:main:test:813": "0263cd39579e8df40c74974d3f5d648626c48f7587ba6c8f86ba1108dbdbdbdd",
+      "gsm8k:main:test:829": "5f9c4d6f11af02399ab04a298f9ee37929f7a4b0a85352d851cca9a58bda6d59",
+      "gsm8k:main:test:855": "62c377b6f4ba3a075b12690d6c03c77e0461140cbd9bcd532519419692a4ccfd",
+      "gsm8k:main:test:866": "47c80fe923119768c824afffcafbe82486e15b1e11a08d431d23c80b09f939a7",
+      "gsm8k:main:test:897": "4d779f97b297e35ed94e3113a54ffaab843efbe442a7984114637007fd878e5d",
+      "gsm8k:main:test:909": "3151286a2b7d70ad10369e1c1d36b7d52b9d2babed5a8efdd37898c7cbd6db77",
+      "gsm8k:main:test:932": "09597f30668838ed09db3dfac6f4ffd2281c1a337d8d1387e9fcc15a66f75112",
+      "gsm8k:main:test:940": "ed2e7ac56ced3e742dcd36e29bde0ef2221756a6809556d1c29089c36dfb75b2",
+      "gsm8k:main:test:951": "0e14a72b89e0b8cdc09e6a00bc03bcde4c19bb83ccb8b58af8d34cd79c583eb7",
+      "gsm8k:main:test:971": "fb97b999b87c85a848a912efbf38ee9a99867a1a79b9f6c71959bf09652ed0e4",
+      "gsm8k:main:test:980": "749d96f918e6d6c91fb0d36e14f7ae78089f90a345d2fc755c02e47207ce4a95",
+      "gsm8k:main:test:982": "ef8314e3cba893338209e385734fb57c2733504df7784782e8a89c333e3d95db",
+      "gsm8k:main:test:991": "1ce42f02ff982528a61424395b43a4dcc18ae04347874408d044fd2f2cd23889",
+      "gsm8k:main:test:997": "57946d44f0e50976ac4310299f9d1d8d4eba1a56cf5be7383cd345c4e945ce26",
+      "gsm8k:main:test:1033": "08dc80f7359d1081743a22f6ffb229d315dd89d665fe58be4330de25307b2b0d",
+      "gsm8k:main:test:1055": "71a6aa0b9eabc7a71179eab69cdc24ba37a49048613a8ebedf91318214974e8d",
+      "gsm8k:main:test:1063": "36fd98aafb629f1ac44a7fb44c0b42a7b5cb9a35355c4d74523e5ccd70c6855c",
+      "gsm8k:main:test:1081": "e169f738099b0b569b7555262b0699ce40fff93107ee8fd7e0c6a2fbaf267c65",
+      "gsm8k:main:test:1098": "455c2c5b6ff9b9ab3ca01165accef6f1954632864a2423cc3edc126ec44cedf1",
+      "gsm8k:main:test:1099": "1037c08509cc6efc2444b778425926c77e09925a7943b7e918fb3ee72778896e",
+      "gsm8k:main:test:1133": "fdea70545e835da306ea1f5135936d98181bd3a6dde4fb8e32eadd257e760462",
+      "gsm8k:main:test:1143": "7ab3a282f676da5bbe88b1d1ade74eacadf9cb78470387d0734bba8e027eff1a",
+      "gsm8k:main:test:1144": "c9d99b330c576dcd7a072aa086f8efc054cf100006ba438b359b188cfdfb8d4f",
+      "gsm8k:main:test:1147": "2f53d1e5edb347ce24f2db06e0a7316e8b47f4f1aeff8c4c89f91c64d251828e",
+      "gsm8k:main:test:1164": "0e1f12aad78a33bd0c2ca0317b52c4211a780097c138b5f7498460162f44d2c8",
+      "gsm8k:main:test:1170": "a6e28010796023f515e62d439552a908cf692204e471bc00c13909d1edba8733",
+      "gsm8k:main:test:1192": "e9fb49381699f31007fda7ad75abf4b99bbbd2c55b57914dfcc3d28b666a8dfd",
+      "gsm8k:main:test:1194": "f215393fc8c8545abfb97c96b8a892436ae3c51cd89ca93b0794c03287d9b3a3",
+      "gsm8k:main:test:1202": "a5864aeb5cde4430b05e27e98f7b18446646bba3dcb67f1497a8d0d9a57f25a3",
+      "gsm8k:main:test:1220": "42375b1d67f3b5ae230c8df025d4379a7195731e22794f6e3d814eeb8b666f44",
+      "gsm8k:main:test:1223": "0cb40fd5035934146aef08386b6891f3517dd6d2e912e952a7d9fd7c687b27a0",
+      "gsm8k:main:test:1225": "af548df077ddaa028adbfad6b904b3e2c42df099da7913df097481eed2022e0d",
+      "gsm8k:main:test:1228": "9760854007a3134a05c45a78e3d5c2fb59af6a0a5ea26dc20e3cc01a0c024f55",
+      "gsm8k:main:test:1266": "454aac7301b0dc622b9fde971205b7d203ec7c42dc850091d314ba138c1a68f4",
+      "gsm8k:main:test:1271": "ef30adb6042b31f12f7202697c010f872d6836a49055339c09ca0b05dcadd329",
+      "gsm8k:main:test:1306": "a13edb1253cc2d4387f5bde8da8e6d5a019f234960f98019e399708e5082672d",
+      "gsm8k:main:test:1307": "eb5925239c7acdd5507a97b8cad19428fb4291a3a9129ccbdf88d68818d34b8d",
+      "gsm8k:main:test:1316": "35b7af325cd52dea585e6af99414d723dd4f8dd27d40a1d6e73a35da7746e747"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "gsm8k:main:test:5",
+      "question_id": "answer",
+      "probabilities": {
+        "64": 0.4277,
+        "114": 0.248,
+        "59": 0.1348,
+        "84": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:15",
+      "question_id": "answer",
+      "probabilities": {
+        "75": 0.13933526300029944,
+        "122": 0.15500548956981733,
+        "128": 0.07016668330172672,
+        "125": 0.6354925641281566
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:36",
+      "question_id": "answer",
+      "probabilities": {
+        "87": 0.13302614444555746,
+        "75": 0.10367624962436141,
+        "79": 0.04327356506060303,
+        "72": 0.7200240408694781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:42",
+      "question_id": "answer",
+      "probabilities": {
+        "28": 0.40624062406240624,
+        "76": 0.3359335933593359,
+        "26": 0.07520752075207521,
+        "21": 0.18261826182618263
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:89",
+      "question_id": "answer",
+      "probabilities": {
+        "29": 0.10034081796311146,
+        "26": 0.5012028869286287,
+        "28": 0.14585004009623093,
+        "24": 0.2526062550120289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:108",
+      "question_id": "answer",
+      "probabilities": {
+        "46": 0.3961038961038962,
+        "38": 0.13656343656343656,
+        "48": 0.1434565434565435,
+        "50": 0.3238761238761239
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:109",
+      "question_id": "answer",
+      "probabilities": {
+        "31": 0.23363363363363363,
+        "28": 0.4945945945945946,
+        "48": 0.17697697697697698,
+        "38": 0.0947947947947948
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:121",
+      "question_id": "answer",
+      "probabilities": {
+        "17": 0.4746,
+        "47": 0.2275,
+        "27": 0.1641,
+        "39": 0.1338
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:129",
+      "question_id": "answer",
+      "probabilities": {
+        "10000": 0.4451219512195122,
+        "9999": 0.13764494202319072,
+        "9990": 0.30647740903638543,
+        "10010": 0.11075569772091164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:130",
+      "question_id": "answer",
+      "probabilities": {
+        "30": 0.5971028971028972,
+        "-20": 0.1326673326673327,
+        "5": 0.12877122877122876,
+        "26": 0.14145854145854148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:148",
+      "question_id": "answer",
+      "probabilities": {
+        "29": 0.1089544772386193,
+        "10": 0.4748374187093547,
+        "-20": 0.14657328664332164,
+        "30": 0.2696348174087044
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:150",
+      "question_id": "answer",
+      "probabilities": {
+        "-8": 0.2158,
+        "-3": 0.3145,
+        "-46": 0.2256,
+        "4": 0.2441
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:195",
+      "question_id": "answer",
+      "probabilities": {
+        "12": 0.3638093330662928,
+        "22": 0.1477067895053074,
+        "17": 0.11295814139795714,
+        "15": 0.3755257360304426
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:205",
+      "question_id": "answer",
+      "probabilities": {
+        "103": 0.2197,
+        "78": 0.2305,
+        "98": 0.1709,
+        "48": 0.3789
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:223",
+      "question_id": "answer",
+      "probabilities": {
+        "19993": 0.14635364635364634,
+        "19998": 0.32977022977022974,
+        "20000": 0.30439560439560437,
+        "19980": 0.21948051948051947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:226",
+      "question_id": "answer",
+      "probabilities": {
+        "33": 0.10559503553197877,
+        "40": 0.699829846862176,
+        "13": 0.08898008207386648,
+        "45": 0.10559503553197877
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:241",
+      "question_id": "answer",
+      "probabilities": {
+        "6": 0.35779357293022324,
+        "18": 0.1916107718490339,
+        "2": 0.13975372910201223,
+        "-44": 0.31084192611873057
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:257",
+      "question_id": "answer",
+      "probabilities": {
+        "5600": 0.5314125650260104,
+        "5595": 0.18957583033213285,
+        "5603": 0.11874749899959984,
+        "5625": 0.1602641056422569
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:264",
+      "question_id": "answer",
+      "probabilities": {
+        "350": 0.474505098980204,
+        "397": 0.12787442511497701,
+        "400": 0.3593281343731254,
+        "375": 0.03829234153169366
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:276",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.40836334533813523,
+        "9": 0.22178871548619447,
+        "7": 0.12264905962384953,
+        "-3": 0.2471988795518207
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:284",
+      "question_id": "answer",
+      "probabilities": {
+        "360": 0.5580419580419581,
+        "372": 0.15024975024975026,
+        "365": 0.15514485514485515,
+        "348": 0.13656343656343656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:298",
+      "question_id": "answer",
+      "probabilities": {
+        "475": 0.11070036966729943,
+        "504": 0.5892696573084225,
+        "501": 0.09321610550504546,
+        "500": 0.2068138675192327
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:299",
+      "question_id": "answer",
+      "probabilities": {
+        "31800": 0.42422422422422423,
+        "31797": 0.23463463463463463,
+        "31799": 0.07137137137137137,
+        "31812": 0.2697697697697698
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:305",
+      "question_id": "answer",
+      "probabilities": {
+        "9": 0.3434565434565435,
+        "4": 0.3531468531468532,
+        "7": 0.13656343656343656,
+        "-21": 0.16683316683316687
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:308",
+      "question_id": "answer",
+      "probabilities": {
+        "-1": 0.16426426426426427,
+        "10": 0.31671671671671675,
+        "9": 0.14954954954954955,
+        "6": 0.36946946946946946
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:324",
+      "question_id": "answer",
+      "probabilities": {
+        "26": 0.3411518115580397,
+        "11": 0.1491166783112087,
+        "12": 0.16857969857271185,
+        "14": 0.3411518115580397
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:329",
+      "question_id": "answer",
+      "probabilities": {
+        "12": 0.5317849634598057,
+        "19": 0.13294624086495144,
+        "14": 0.3030333366703374,
+        "13": 0.0322354590049054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:340",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.22784176264396597,
+        "7": 0.14772158237356034,
+        "4": 0.5202804206309464,
+        "3": 0.1041562343515273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:344",
+      "question_id": "answer",
+      "probabilities": {
+        "9": 0.3570786292336896,
+        "3": 0.2380857228494355,
+        "2": 0.18533320011989207,
+        "27": 0.2195024477969827
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:353",
+      "question_id": "answer",
+      "probabilities": {
+        "13": 0.10630432610650413,
+        "32": 0.36487161554600855,
+        "21": 0.07413328004795683,
+        "20": 0.45469077829953036
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:354",
+      "question_id": "answer",
+      "probabilities": {
+        "49": 0.1329994992488733,
+        "48": 0.6963445167751627,
+        "47": 0.03375062593890836,
+        "45": 0.13690535803705556
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:369",
+      "question_id": "answer",
+      "probabilities": {
+        "1198": 0.1472055888223553,
+        "1194": 0.3372255489021956,
+        "1202": 0.3703592814371257,
+        "1173": 0.14520958083832333
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:372",
+      "question_id": "answer",
+      "probabilities": {
+        "30": 0.3362362362362362,
+        "15": 0.3148148148148148,
+        "5": 0.07137137137137137,
+        "55": 0.27757757757757756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:378",
+      "question_id": "answer",
+      "probabilities": {
+        "20": 0.20418167266906762,
+        "15": 0.47478991596638653,
+        "17": 0.024009603841536616,
+        "40": 0.2970188075230092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:406",
+      "question_id": "answer",
+      "probabilities": {
+        "150": 0.5541458541458542,
+        "190": 0.11998001998001999,
+        "207": 0.16683316683316687,
+        "200": 0.15904095904095908
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:409",
+      "question_id": "answer",
+      "probabilities": {
+        "168000": 0.3190380761523046,
+        "167975": 0.2993987975951904,
+        "167988": 0.19959919839679358,
+        "167995": 0.18196392785571144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:426",
+      "question_id": "answer",
+      "probabilities": {
+        "36": 0.5770036929833317,
+        "14": 0.1754666134344745,
+        "31": 0.08284259906178261,
+        "11": 0.16468709452041122
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:441",
+      "question_id": "answer",
+      "probabilities": {
+        "80": 0.5778110944527736,
+        "92": 0.17081459270364818,
+        "130": 0.1376311844077961,
+        "76": 0.11374312843578212
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:462",
+      "question_id": "answer",
+      "probabilities": {
+        "74": 0.19581047381546135,
+        "71": 0.19870324189526184,
+        "64": 0.549426433915212,
+        "121": 0.05605985037406484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:519",
+      "question_id": "answer",
+      "probabilities": {
+        "277": 0.2109,
+        "280": 0.6094,
+        "283": 0.085,
+        "281": 0.0947
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:523",
+      "question_id": "answer",
+      "probabilities": {
+        "54": 0.3226226226226226,
+        "74": 0.21211211211211212,
+        "62": 0.16226226226226226,
+        "75": 0.30300300300300304
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:533",
+      "question_id": "answer",
+      "probabilities": {
+        "293": 0.12147852147852146,
+        "305": 0.09020979020979021,
+        "288": 0.1795204795204795,
+        "300": 0.6087912087912087
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:541",
+      "question_id": "answer",
+      "probabilities": {
+        "38": 0.200999000999001,
+        "52": 0.4,
+        "50": 0.18531468531468534,
+        "57": 0.21368631368631372
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:593",
+      "question_id": "answer",
+      "probabilities": {
+        "-47": 0.2891,
+        "3": 0.1289,
+        "-4": 0.209,
+        "4": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:616",
+      "question_id": "answer",
+      "probabilities": {
+        "-15": 0.29059316956261233,
+        "10": 0.4232075094867186,
+        "17": 0.06680647094068304,
+        "-10": 0.219392850009986
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:622",
+      "question_id": "answer",
+      "probabilities": {
+        "7": 0.4357178589294647,
+        "19": 0.16508254127063532,
+        "9": 0.11385692846423211,
+        "27": 0.2853426713356678
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:652",
+      "question_id": "answer",
+      "probabilities": {
+        "72": 0.2637,
+        "80": 0.1699,
+        "75": 0.3672,
+        "78": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:657",
+      "question_id": "answer",
+      "probabilities": {
+        "329993": 0.14174174174174176,
+        "329988": 0.1847847847847848,
+        "330000": 0.5161161161161161,
+        "329996": 0.15735735735735737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:659",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4331668331668332,
+        "3": 0.16683316683316687,
+        "6": 0.25954045954045957,
+        "-47": 0.14045954045954048
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:680",
+      "question_id": "answer",
+      "probabilities": {
+        "20": 0.3274777921948298,
+        "32": 0.22517217287154406,
+        "24": 0.23585188142529195,
+        "22": 0.21149815350833417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:681",
+      "question_id": "answer",
+      "probabilities": {
+        "298": 0.2834834834834835,
+        "300": 0.16226226226226226,
+        "299": 0.39489489489489493,
+        "308": 0.15935935935935935
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:688",
+      "question_id": "answer",
+      "probabilities": {
+        "96": 0.30300300300300304,
+        "104": 0.15935935935935935,
+        "100": 0.08408408408408409,
+        "120": 0.45355355355355353
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:690",
+      "question_id": "answer",
+      "probabilities": {
+        "5760": 0.1787,
+        "5756": 0.4219,
+        "5750": 0.1553,
+        "5765": 0.2441
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:701",
+      "question_id": "answer",
+      "probabilities": {
+        "200": 0.32259033129816833,
+        "150": 0.2639375437894105,
+        "180": 0.18086277649884897,
+        "196": 0.23260934841357223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:722",
+      "question_id": "answer",
+      "probabilities": {
+        "248": 0.18531468531468534,
+        "254": 0.2263736263736264,
+        "255": 0.4370629370629371,
+        "251": 0.15124875124875128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:734",
+      "question_id": "answer",
+      "probabilities": {
+        "17": 0.3145,
+        "-33": 0.4043,
+        "13": 0.1123,
+        "21": 0.1689
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:751",
+      "question_id": "answer",
+      "probabilities": {
+        "41": 0.13079536370903277,
+        "50": 0.3863908872901679,
+        "43": 0.04566346922462031,
+        "46": 0.4371502797761791
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:770",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.16816816816816818,
+        "4": 0.6334334334334335,
+        "-6": 0.10700700700700701,
+        "3": 0.0913913913913914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:774",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.2578,
+        "7": 0.2217,
+        "10": 0.2178,
+        "8": 0.3027
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:791",
+      "question_id": "answer",
+      "probabilities": {
+        "75": 0.3809,
+        "100": 0.1777,
+        "88": 0.1914,
+        "93": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:803",
+      "question_id": "answer",
+      "probabilities": {
+        "9": 0.3554644535546445,
+        "11": 0.18748125187481252,
+        "-3": 0.31836816318368166,
+        "59": 0.1386861313868613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:808",
+      "question_id": "answer",
+      "probabilities": {
+        "16": 0.6963445167751627,
+        "-8": 0.0958437656484727,
+        "62": 0.08462694041061593,
+        "12": 0.12318477716574862
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:813",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.22929363572784492,
+        "2": 0.19902088120691375,
+        "7": 0.11509641322809469,
+        "6": 0.45658906983714653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:829",
+      "question_id": "answer",
+      "probabilities": {
+        "13997": 0.1610355857656937,
+        "14000": 0.4900039984006398,
+        "13993": 0.22740903638544585,
+        "14007": 0.12155137944822071
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:855",
+      "question_id": "answer",
+      "probabilities": {
+        "14": 0.4941494149414941,
+        "63": 0.18161816181618162,
+        "9": 0.12111211121112112,
+        "13": 0.20312031203120312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:866",
+      "question_id": "answer",
+      "probabilities": {
+        "28": 0.3086,
+        "78": 0.1963,
+        "25": 0.4629,
+        "38": 0.0322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:897",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.2029985007496252,
+        "21": 0.351424287856072,
+        "2": 0.32993503248375816,
+        "-1": 0.11564217891054474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:909",
+      "question_id": "answer",
+      "probabilities": {
+        "38": 0.3633363336333633,
+        "48": 0.31053105310531054,
+        "63": 0.22362236223622362,
+        "43": 0.1025102510251025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:932",
+      "question_id": "answer",
+      "probabilities": {
+        "34": 0.45482710373775737,
+        "74": 0.2518488906656007,
+        "24": 0.0971417149710174,
+        "28": 0.19618229062562464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:940",
+      "question_id": "answer",
+      "probabilities": {
+        "330": 0.20117988201179882,
+        "305": 0.35936406359364065,
+        "280": 0.14258574142585742,
+        "260": 0.29687031296870314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:951",
+      "question_id": "answer",
+      "probabilities": {
+        "293": 0.11858141858141859,
+        "300": 0.7492507492507493,
+        "312": 0.06973026973026974,
+        "310": 0.06243756243756245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:971",
+      "question_id": "answer",
+      "probabilities": {
+        "100": 0.20412041204120412,
+        "95": 0.28712871287128716,
+        "104": 0.40624062406240624,
+        "80": 0.1025102510251025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:980",
+      "question_id": "answer",
+      "probabilities": {
+        "40": 0.6015398460153984,
+        "90": 0.1718828117188281,
+        "70": 0.08789121087891212,
+        "89": 0.1386861313868613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:982",
+      "question_id": "answer",
+      "probabilities": {
+        "12": 0.3223,
+        "11": 0.1914,
+        "7": 0.1445,
+        "-8": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:991",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.32390848236587066,
+        "15": 0.17364372065141373,
+        "16": 0.23708662204016384,
+        "25": 0.2653611749425517
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:997",
+      "question_id": "answer",
+      "probabilities": {
+        "6580": 0.23627637236276375,
+        "6598": 0.13478652134786523,
+        "6600": 0.37696230376962303,
+        "6593": 0.251974802519748
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1033",
+      "question_id": "answer",
+      "probabilities": {
+        "3": 0.1836,
+        "4": 0.4336,
+        "2": 0.1543,
+        "14": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1055",
+      "question_id": "answer",
+      "probabilities": {
+        "2279": 0.0894,
+        "2304": 0.75,
+        "2307": 0.0752,
+        "2305": 0.0854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1063",
+      "question_id": "answer",
+      "probabilities": {
+        "300": 0.36086695964842186,
+        "317": 0.1813823411905713,
+        "320": 0.42139432680783057,
+        "323": 0.03635637235317619
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1081",
+      "question_id": "answer",
+      "probabilities": {
+        "190": 0.19359359359359357,
+        "200": 0.1905905905905906,
+        "195": 0.2912912912912913,
+        "196": 0.3245245245245245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1098",
+      "question_id": "answer",
+      "probabilities": {
+        "23": 0.10139720558882236,
+        "29": 0.07405189620758483,
+        "30": 0.14231536926147706,
+        "26": 0.6822355289421157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1099",
+      "question_id": "answer",
+      "probabilities": {
+        "52": 0.2692307692307692,
+        "22": 0.17662337662337663,
+        "-5": 0.2692307692307692,
+        "2": 0.2849150849150849
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1133",
+      "question_id": "answer",
+      "probabilities": {
+        "50": 0.18766890201181063,
+        "53": 0.11049944950455409,
+        "52": 0.35582023821439296,
+        "54": 0.3460114102692423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1143",
+      "question_id": "answer",
+      "probabilities": {
+        "297": 0.17996995493239862,
+        "300": 0.42443665498247374,
+        "310": 0.12178267401101653,
+        "350": 0.27381071607411117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1144",
+      "question_id": "answer",
+      "probabilities": {
+        "9": 0.3457,
+        "29": 0.1797,
+        "34": 0.3262,
+        "14": 0.1484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1147",
+      "question_id": "answer",
+      "probabilities": {
+        "20": 0.2217,
+        "22": 0.2021,
+        "25": 0.4336,
+        "27": 0.1426
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1164",
+      "question_id": "answer",
+      "probabilities": {
+        "29": 0.16624937406109164,
+        "34": 0.48703054581872807,
+        "9": 0.09043565348022033,
+        "16": 0.25628442663995993
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1170",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.2873873873873874,
+        "-3": 0.2873873873873874,
+        "-8": 0.1827827827827828,
+        "2": 0.24244244244244242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1192",
+      "question_id": "answer",
+      "probabilities": {
+        "280": 0.4355,
+        "283": 0.3223,
+        "273": 0.0986,
+        "305": 0.1436
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1194",
+      "question_id": "answer",
+      "probabilities": {
+        "1225": 0.21560595464082327,
+        "1200": 0.435108402437806,
+        "1150": 0.15316215406134479,
+        "1175": 0.196123488860026
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1202",
+      "question_id": "answer",
+      "probabilities": {
+        "17": 0.2696348174087044,
+        "20": 0.5549774887443721,
+        "19": 0.06933466733366683,
+        "31": 0.10605302651325663
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1220",
+      "question_id": "answer",
+      "probabilities": {
+        "-18": 0.2755377688844422,
+        "27": 0.2540270135067534,
+        "32": 0.3888944472236118,
+        "7": 0.0815407703851926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1223",
+      "question_id": "answer",
+      "probabilities": {
+        "15": 0.3590050943961642,
+        "33": 0.12586155229247825,
+        "-2": 0.18929177904305264,
+        "8": 0.32584157426830485
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1225",
+      "question_id": "answer",
+      "probabilities": {
+        "-2": 0.39338677354709417,
+        "-1": 0.19468937875751502,
+        "0": 0.250501002004008,
+        "3": 0.16142284569138277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1228",
+      "question_id": "answer",
+      "probabilities": {
+        "11": 0.2699048572859289,
+        "30": 0.4675012518778167,
+        "31": 0.15643465197796694,
+        "29": 0.10615923885828742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1266",
+      "question_id": "answer",
+      "probabilities": {
+        "149": 0.2597740225977402,
+        "197": 0.18068193180681932,
+        "172": 0.40035996400359963,
+        "147": 0.15918408159184083
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1271",
+      "question_id": "answer",
+      "probabilities": {
+        "44": 0.4945945945945946,
+        "43": 0.2092092092092092,
+        "18": 0.17107107107107106,
+        "33": 0.12512512512512514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1306",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.20607939206079393,
+        "12": 0.35736426357364265,
+        "7": 0.23047695230476953,
+        "6": 0.20607939206079393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1307",
+      "question_id": "answer",
+      "probabilities": {
+        "8": 0.33026513256628315,
+        "-2": 0.1396698349174587,
+        "12": 0.11965982991495747,
+        "15": 0.41040520260130064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "gsm8k:main:test:1316",
+      "question_id": "answer",
+      "probabilities": {
+        "242": 0.1932067932067932,
+        "226": 0.1170829170829171,
+        "230": 0.49360639360639363,
+        "227": 0.19610389610389614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

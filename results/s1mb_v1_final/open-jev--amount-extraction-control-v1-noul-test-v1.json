@@ -1,0 +1,861 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--amount-extraction-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__amount-extraction-control-v1",
+    "split": "test",
+    "case_count": 64,
+    "decision_count": 64,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:38:47+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 64,
+    "expected": 64,
+    "succeeded": 64,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.41263852296875003,
+    "accuracy": 0.484375,
+    "positive_recall": 0.0625,
+    "specificity": 0.90625,
+    "precision": 0.4,
+    "balanced_accuracy": 0.484375,
+    "f1": 0.10810810810810811,
+    "true_positive": 2.0,
+    "false_positive": 3.0,
+    "false_negative": 30.0,
+    "true_negative": 29.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.6505540918750001,
+    "baseline_adjusted_skill": -0.03125,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.61061410000002,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:5:attributes:span_2:is_credit": "d4856baa75d0f4e0b7addb6a2ec330d734836179972b1306f215f9b3f6a789c8",
+      "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:6:attributes:span_1:direction_known": "e14009d54d39563200edd6339685ca7ec0dde232f1b1bec45982a27b5acfed20",
+      "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:8:attributes:span_4:is_credit": "da8c198409e3bb6427537c347b0d12b9ca6db8b7162c17134eb5a7981818b5de",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:1:attributes:span_4:is_credit": "825a661bba9236210403e56d9bc1abe55a446809b595fe077f7aae18ce8fa294",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:selection:request:target_present": "1cccad156ad511f7fa0f43fcc36cf42716c12662d6f54684fe8ebbbb1771bd81",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:attributes:span_2:direction_known": "42e170b35637b42e3016463ac0bdd9e79da991fffbe1c8ec01a1a004759269ec",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:4:attributes:span_1:is_credit": "c822c2fdd7f2ded2e4562727af609a47c6abafeee635fcb14ff24e0136b8d575",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:5:attributes:span_4:direction_known": "685b824da6b73b1b817277852a49a45b53caccbe509b5ee2e4accd66e1af987b",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:6:attributes:span_2:direction_known": "2eae07a5a6fcbd2ec2bd4497522ececf277e65003d69d876d8da6c3971975332",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:8:attributes:span_0:is_credit": "81a78e9b129d37717d51dcf994a005692729f29f596d41dcddcea4ff8a5e6249",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:13:attributes:span_3:is_credit": "7f5f6fd29fa39fb456ccdb37de702b061824e14aed4bff60f0d311b1b3a5e513",
+      "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:15:attributes:span_1:is_credit": "11c35aea0dd91114745084b0bb76c540fd47a9e99b7fbdeb291df3cf7cd78671",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:1:attributes:span_4:is_credit": "b44e241ac544dfd71016e198f93198c7c670628489d43b4747e5b3098576cd59",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:selection:request:target_present": "dbcf67d4332e8d87a5d8e72fd256df9e7c0ecffe86dd8ebbd6e93e854bbf61f1",
+      "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:attributes:span_1:is_credit": "0d48a0bedb09b3ccde2411f63278ef873448e8a9c959dc06b428ae3d968387a3",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:0:attributes:span_3:direction_known": "b2b48913218b19238134c471d5d90337c20897c9adca5634ca7338c485ceb3d3",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:7:attributes:span_4:direction_known": "4ebfe16fba84590f315c384b9efbc1ebea620ce6e04066eb26f5afbeb8ae9f60",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:9:attributes:span_0:direction_known": "31163203144dbf80439ec44cc3ef0bf0d47dc25a4c691ed1fbb2997c90ae1b13",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:9:attributes:span_1:direction_known": "06687690471120d942217818c2addc57bb66e890ceb4eb4538f78e9b2127c852",
+      "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:12:attributes:span_2:is_credit": "68e0f282eb8c39701e572a94ae190463135d4bbe8e4b5972b4c20716f877af20",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:0:attributes:span_3:is_credit": "fce7e46961b603a59c44977697896b69dbc726f652fe4081b0a1ae38712c4c5a",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:2:attributes:span_0:direction_known": "f207e92fea990fd758474239e998ad4648ce1ff1cb0702126c76950ac34fb266",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:7:attributes:span_4:is_credit": "0afeaf58d8920b9b80038bd981a7431fff0e157efadc028c1acf1a141c966de8",
+      "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:11:attributes:span_0:direction_known": "9131f4bf5b865befe188a6b7acd8b7d67302ca9fc11d5570201d727969921529",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:5:attributes:span_3:is_credit": "3732f23951ce87a06d4dbb840bdef095f7fe13fc2a4f933088207d1b743bf7dc",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:5:attributes:span_4:is_credit": "1fe244e51b341c02018345d8a99540c579df9fdbeff596f8fbe9c971b3f9064a",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:6:selection:request:target_present": "eabc422e89868abab985cdf525f204956a4af886d97345dd79412e5d852adf09",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:6:attributes:span_1:direction_known": "ce06c7f0e4aebac608b698af993075b355fe37ea0f48164dbbb77efd790d97ba",
+      "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:10:attributes:span_1:direction_known": "aebed64ccb9ee365f62d8f1d419b20b65d295ee48d724c2037a2a461da2dcdd5",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:3:selection:request:target_present": "7f45411445ae3254195887b993cc312ca2ee0643dd740d16fe83f0a3de87f4ae",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:6:selection:request:target_present": "3ee5c243c886cd264fae183025a72f8b94ed9175576d8e41f90a8adc89b01168",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:12:attributes:span_3:is_credit": "2cb87e43080a04bede6751e4a6b3399db02e4f098f936e1f551844957b477da1",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:13:attributes:span_0:direction_known": "6dd37503acdbf2e742fd3fdbc4045db50cb50b9fa87d826a7f5cea6ce06307e3",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:15:attributes:span_0:direction_known": "64051b1d25a701617a935597ad77a00dcc6da10d420191579c3d89c3e7e69263",
+      "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:15:attributes:span_2:direction_known": "9abc6ab89ab193b821e61e592b56f7b0dd0c9161851f5d6048368da76b162c80",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:1:attributes:span_0:is_credit": "2eab1859a30480b38461100f4cf051d853d075d35996c92a9c68a30063536ae9",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:2:attributes:span_4:is_credit": "071078c0940be8a101d97e6ba8899dc166e9fb207783a5648c3a4f18b96fb713",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:5:attributes:span_3:direction_known": "4ed0ef7ee5221a96d882eb4793a4ac384f7366bf80d13e5a110b17ef4f52ad68",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:7:attributes:span_2:direction_known": "c7c7cfc40a961f59fc34c464f2f592d5d80060342db6c171da72702d7104913b",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:9:attributes:span_1:direction_known": "69851eeade0dd2856817baa92dd1783221a8e98fc4b7a97c23349af4d261700f",
+      "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:10:attributes:span_1:direction_known": "88177f42be224e9bd919b3e39a0a441a0ce70b4edc6400783a31a300f8177942",
+      "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_0:direction_known": "af4bfdd70e557bc138626fcae2789093b5bd459a268ab37c66a5db1190c011cb",
+      "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_1:direction_known": "029a44dec995bea99e82472627b27344975deb287dacae64d76e954bada299d4",
+      "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:10:attributes:span_0:direction_known": "543a8afe21b6bdf8c92833fb6566b61d1fbbf5ed44afc13f2f51fa4b8296bab3",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:0:attributes:span_2:is_credit": "e3016bc915adcb3b00ae4ac53fc892f47c87f368191d18d3fa88feee1e704556",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:4:attributes:span_3:is_credit": "68055678e8f9e89f0ef5fa9f64ac277e55328dc36b7bbc05235bdefe8964f5d2",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:9:attributes:span_1:direction_known": "f016969b877534c73ca3589e079b6a80396ec50f55b850b05ed69798c855ea4c",
+      "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:10:attributes:span_3:direction_known": "3710edd8447d4af1e8b19fb00d3c85a32ae3f7cc65f1b2b55612065dd63d0b32",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:4:attributes:span_3:is_credit": "64e3bf32acb10d17509c6fe82f449ac1c1b5ee38612ba8262271ef8fbae972f9",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:6:attributes:span_1:direction_known": "005a1fe6b8eab109d57d6d8e22cdd9dabb1060840407e2f8260d1b11af067ac0",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:6:attributes:span_3:is_credit": "8df742ed2808d9e8b840885fa285093db62dda0a4a7a865365e7465f9b770f95",
+      "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:10:attributes:span_1:is_credit": "643456d56bf28f9e2733ddbc85714cbe235c849c83874cc279cb288d7d3f9ffe",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:0:attributes:span_3:is_credit": "df7433c470594df2209cf0a518cd823411e86245a0781bf271d4de82552350b8",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:3:attributes:span_3:is_credit": "ce1914c85cbc6fef3a990fd947c3adaf559b05f03c6d6345c0171a81adbae10d",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:5:attributes:span_0:direction_known": "c478b74bf974e7c5e28d1a32caae54ffb6dedc480b93be985f3e9161f14e3e6e",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:6:attributes:span_1:is_credit": "40ab9d87eebc9f85fa24c6364394eddfddec666d01bf22ff6b2a340f8d3f4e8b",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:9:attributes:span_1:direction_known": "9aa8432285813bf8877a19a63662d123a15a848d480d6a93c9cfda8afaaec567",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:12:attributes:span_1:direction_known": "241b40d25efbb237c803629d92fb8a2e922a670254733d223118e9c259314a6c",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:15:selection:request:target_present": "fc5af85ed684186600d8e7f4fd3ee67aa6541b53f0e469f5f9f0cb786628c959",
+      "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:15:attributes:span_4:is_credit": "4b768c9b2da320b3696ed42267e4aec9498f0f330eff9f5de32f7c09e320bb0c",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:5:attributes:span_2:is_credit": "3f25c9414a20cffedaaf70dc2b02247ad2b184f219b32352c0b9049a713bb71d",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:7:attributes:span_3:direction_known": "067bbe68f7582c83039e56c4d587fbf3a11c27ff78f606ec17db9c7b01375b70",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:9:attributes:span_4:direction_known": "e72746da8d5d6b94ea484a0fc9470eac29676bda9ee5e26112e4830cef5f17ee",
+      "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:11:attributes:span_1:is_credit": "4e33196f556a4ede31270b71917ec073ddfa22ac99d28d274684f8202f84a5a6"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 8192,
+      "output_tokens": 64,
+      "requests": 64,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:5:attributes:span_2:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9048,
+        "true": 0.0952
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:6:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9307,
+        "true": 0.0693
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-3774cd44bda9afd3f49f:document:8:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9004,
+        "true": 0.0996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:1:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9355,
+        "true": 0.0645
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:3:attributes:span_2:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9716,
+        "true": 0.0284
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:4:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:5:attributes:span_4:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9969,
+        "true": 0.0031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:6:attributes:span_2:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9668,
+        "true": 0.0332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:8:attributes:span_0:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8916,
+        "true": 0.1084
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:13:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9263,
+        "true": 0.0737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-6ae20636f4298e4e8414:document:15:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:1:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9204,
+        "true": 0.0796
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d122f2632e940706dd04:document:3:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:0:attributes:span_3:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9675,
+        "true": 0.0325
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:7:attributes:span_4:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.8809,
+        "true": 0.1191
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:9:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9694,
+        "true": 0.0306
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:9:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9661,
+        "true": 0.0339
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-aa736dfa6ec8efbb8450:document:12:attributes:span_2:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8008,
+        "true": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:0:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:2:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.988,
+        "true": 0.012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:7:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-b30f9112c06d7777e512:document:11:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9583,
+        "true": 0.0417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:5:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9492,
+        "true": 0.0508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:5:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9482,
+        "true": 0.0518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:6:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:6:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9473,
+        "true": 0.0527
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-a0c771f614dfb05dbf90:document:10:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.96,
+        "true": 0.04
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:3:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:6:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:12:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:13:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9709,
+        "true": 0.0291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:15:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-06fd214af577fe0f5c99:document:15:attributes:span_2:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.8057,
+        "true": 0.1943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:1:attributes:span_0:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8477,
+        "true": 0.1523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:2:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9536,
+        "true": 0.0464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:5:attributes:span_3:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9928,
+        "true": 0.0072
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:7:attributes:span_2:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.975,
+        "true": 0.025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:9:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9224,
+        "true": 0.0776
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-e478b899c244b6f3da70:document:10:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.8823,
+        "true": 0.1177
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9746,
+        "true": 0.0254
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:7:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9592,
+        "true": 0.0408
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-455ea79333bb4a3938bb:document:10:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9952,
+        "true": 0.0048
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:0:attributes:span_2:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8721,
+        "true": 0.1279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:4:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9019,
+        "true": 0.0981
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:9:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9497,
+        "true": 0.0503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-d2889c5082154eb1259f:document:10:attributes:span_3:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9365,
+        "true": 0.0635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:4:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:6:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9583,
+        "true": 0.0417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:6:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9399,
+        "true": 0.0601
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-fd2522dfc7f7de3a33ff:document:10:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9446,
+        "true": 0.0554
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:0:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9587,
+        "true": 0.0413
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:3:attributes:span_3:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9621999999999999,
+        "true": 0.0378
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:5:attributes:span_0:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.985,
+        "true": 0.015
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:6:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9185,
+        "true": 0.0815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:9:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9943,
+        "true": 0.0057
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:12:attributes:span_1:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9141,
+        "true": 0.0859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:15:selection:request:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-69e5eaf47e83661f8964:document:15:attributes:span_4:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.915,
+        "true": 0.085
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:5:attributes:span_2:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9336,
+        "true": 0.0664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:7:attributes:span_3:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9248,
+        "true": 0.0752
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:9:attributes:span_4:direction_known",
+      "question_id": "direction_known",
+      "probabilities": {
+        "false": 0.9661,
+        "true": 0.0339
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__amount-extraction-control-v1:document-family-c87ced0e7be48de220de:document:11:attributes:span_1:is_credit",
+      "question_id": "is_credit",
+      "probabilities": {
+        "false": 0.9057999999999999,
+        "true": 0.0942
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

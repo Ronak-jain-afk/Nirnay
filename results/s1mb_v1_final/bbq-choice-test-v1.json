@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "bbq-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/bbq",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:15:28+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.28,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.4,
+    "baseline_adjusted_skill": -0.2,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 16.321887100000822,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "bbq:all:test:53": "d56449b5893218370bad8c90fef542bf3b419781d536e21466d573dcac701f15",
+      "bbq:all:test:54": "72553ef7e0563a6cd8be758103b749f8f65cfb29b9d6e463ebf502aa604dad2a",
+      "bbq:all:test:56": "f5316c7264d559e8944fda441d8188b0984aab24c7c6bf72bbbd3f7a6b18d2b1",
+      "bbq:all:test:64": "9e1a9d45a030fa76a319a7ebaefc53775dc8d56086d6790d155a3330b00d9859",
+      "bbq:all:test:78": "e10c5c50b89a967f0f30cd27a3e541045a3ef4bbbe383d5dd7f64321f413a0fd",
+      "bbq:all:test:88": "b4b0feb4077a8c95b37a210d00b86fa261e7f8c45095fc6ca1bfaadc472c9021",
+      "bbq:all:test:94": "71f8cd2488367bfb1ebfd6a75737da99a8df061b92266ae8fedc0a8feb1b7675",
+      "bbq:all:test:95": "648e7719a519e3c0560ea09ee5e343401b1df76c462f133a50e4151fe8d3f76a",
+      "bbq:all:test:115": "aed47dd12afd76123b8108f7275ef4497e1ea8fc54f8ac55338ac65dc426ebba",
+      "bbq:all:test:119": "d3bd56884cd3bf2c7178b604583bf7e619dbb05751034944cb189dd5fe5ddfc2",
+      "bbq:all:test:135": "8003994165521808103de45988389ce8876d80e43a058d250442a9ed0d873ca0",
+      "bbq:all:test:147": "755eaa5797fa426a8b612bd45c9c428f3df0c35654db35cb49b0967787ab920b",
+      "bbq:all:test:159": "40f16bf5b3b86c6e9b4c4cb8d203654e925d78d623034a2031df43552e5153e4",
+      "bbq:all:test:160": "05846afad5c971e7988ea0bc7199c5c3100d43e39ef0c0447245606376828a11",
+      "bbq:all:test:182": "d8ae2db96e6b6be459e6aeef2927c98c71f220ad697e106c7fdd224d3a4cc424",
+      "bbq:all:test:194": "484a5de98646216c07cebd94b4bbe9392f61b2e947fb9905569f61898f65d183",
+      "bbq:all:test:195": "a0f4e5cc8e0fa58a1500bf1db6838eae7e2959530f8ee6eea049aa85c0e8e0af",
+      "bbq:all:test:204": "59acd5fab8ff89d8a2e1dcacd15b4e883cc6dee510b5e1f78a6a5f4676576ab5",
+      "bbq:all:test:215": "d96452f43fa5fff9706de8ca3858b6e6b3f48378821dd42b30c713fd28e02f20",
+      "bbq:all:test:227": "b9aa172aa12c77606533ee1b9989ee1b6eb0636d19dc6baa54468b18aaed6db5",
+      "bbq:all:test:230": "0de067871bb242cd5b4e62d4722e2e119c26b308639efbe83d337f62148f2b6b",
+      "bbq:all:test:239": "95cc17b4d3bef2dff68a06841ee1d88deb8b2cfcf1cb2309fa473d094e0b9f4b",
+      "bbq:all:test:242": "3ec1e9d67975090b58ea958fab736e1574c0baf5e493656bf4eb5c0a99bec2a5",
+      "bbq:all:test:248": "3079ff1d5cb51cb033798a42e444221675d5cc2b162d0af89f53be17b40bb11a",
+      "bbq:all:test:264": "7305de1687fc74ad053cdc2677f8b8296b3e9670282da8f132c0370da51c0759",
+      "bbq:all:test:270": "33ce1a6c85b72c13b475ccf4321b6b9b503f0d72575eec7c051cf8755533292d",
+      "bbq:all:test:282": "6aa6fd0453fd154c801cd3f351be91d9419bbb75d6085dd6b8ce416709f537fb",
+      "bbq:all:test:284": "90a7f27113ca04844490fa0083da48daff8bbc2c7a8f5125d4c007f481c486aa",
+      "bbq:all:test:291": "b93e818d198c6743f658d7632e72777cc264ccfdd3bf10b9160683db7b094edf",
+      "bbq:all:test:319": "4e79b1be33bf5c1440c1d10f6844156e953cab29f0419b3c551039ff9e3b4941",
+      "bbq:all:test:321": "6289672d2cb20cf836e9938ea6e96b019a9cadd2f68184f533f8ea2734b7e260",
+      "bbq:all:test:340": "db29c6979d72901f9ba77c1ce7885f5a2a4abe4ab043fcc9a7503d976aceb8c0",
+      "bbq:all:test:343": "eaf7dfa8ac60240ed7812f247bbc8fac29deef699e1b1a9680fdafeb5fd5da21",
+      "bbq:all:test:344": "2b5c93ac4811a0d62ab388c0eefd857ac2f5b19c4e9156805d89c1bff40db735",
+      "bbq:all:test:352": "2d8a1096789f49873461229c23ef14506c18de19e34b962745949ffd0cefc936",
+      "bbq:all:test:369": "bc0df90792208dc09c11a40369c4171029e98425bc65dea593feb87bd02de134",
+      "bbq:all:test:380": "51e3ef73967539bd824c98ec12975f09ce43a772ceab23885045a10dc20cfc56",
+      "bbq:all:test:383": "3080ac464d08d2c5707416c73faa6e6c1a168abfd086bd5df9cccff9cd1bf13f",
+      "bbq:all:test:388": "da77dd0c07ecd4519da06115e0a6d8c9baaf111034a414696fd87d807ff5a951",
+      "bbq:all:test:395": "f0b278b41415e4e8778eeddf109a1f19a192bb7f69c2b38354f542d31e1fb848",
+      "bbq:all:test:403": "c69d89f7711e59247f8a055af1122290fd86cd7c725a034a2c6301beab4c1e21",
+      "bbq:all:test:411": "61cbfdc84c41318bca39adc72aae26313119de05ced6f9c4ef377bf782fbd171",
+      "bbq:all:test:417": "bc479b009e8c55c78e43750b5d039d37998f54fc24ce30ba29e3d3f637d3c6cb",
+      "bbq:all:test:421": "2d56c02f394f19a148993e824b395b9ef9264be4a3a5571eccd5189ce5d43549",
+      "bbq:all:test:425": "acd666bbac11130b15f5f377eb5223a021bcc409a15888059bb5e3b1ec9bb9c1",
+      "bbq:all:test:427": "189e13aef18ecbe1fcacaf73bad4777f6e7f1ed980afe6f6d4dbc8902f163809",
+      "bbq:all:test:434": "5b88ca380f9a59300e3932b69fcd43bdbf51cec157dc9d9ef6895bbc77fa1295",
+      "bbq:all:test:439": "9f3ededb9f135d4b8b329024c944dac658791f9ae9718d35ba96f040da579558",
+      "bbq:all:test:453": "69bbca5094814692b19caa26a4f6d8506fe2fd355e5778e495625a82c287b1b5",
+      "bbq:all:test:477": "c8fcf807b09b2da210ea311937f4936a3ff1cd4db3d1bc44731545ef8a406ed1",
+      "bbq:all:test:506": "e267fcff46cfb0a6a9eafb95e2b70949f68ae3ce6c312154201c16a685b7b9ea",
+      "bbq:all:test:518": "9b7491e68450b34e1a701d0fea7d725fc2b071e4965521f253cd9fc7b3ffb5ab",
+      "bbq:all:test:519": "69740a656b10d3aa0b3516e1672fcde42cdd1786ae6b2786da0bb9e30b7c1738",
+      "bbq:all:test:524": "71430c412fc6162b87ff9373cc77ba27fcef6678d31d5da852f1431737b74bac",
+      "bbq:all:test:530": "7e191f70819cf9d1c203258c4921da68f17b321ead000ad208f03d5eb5585582",
+      "bbq:all:test:537": "f4feb05cb1badc411ef6924f245789ac1db926f756acd3ea2125a3ac77262304",
+      "bbq:all:test:550": "b4be26bfc72edffc404f45248d5f37811955d9d515943efb2b719f137798b51d",
+      "bbq:all:test:556": "fe57145442e652821452a6355fbd71a954bbd4977a030e1220eacdbc05c72e32",
+      "bbq:all:test:562": "772a5c55f08de81759318e64fea9167a37f7cd094eb90d03e9194f64ea9dce62",
+      "bbq:all:test:567": "3f798b90144563b9b0fc4e05911809d4e236abca2a1b5508995ea07bcbfa5758",
+      "bbq:all:test:573": "097b70372396ff545617efc649796e5cc174eb3c29314e53bdcb50336883dad5",
+      "bbq:all:test:577": "c8ca9c488f39a9dd03d24f31233eba92d2884b9c3ffc01a5f3b3a06c3e5a695a",
+      "bbq:all:test:596": "a4565f7409d0147143600b7765b7520f59a4b3bf644273ba588ec28c211fe986",
+      "bbq:all:test:601": "64f2ac64e844f9dfe0b00a4e2e1933e53b82e6673c98a24ad7e6c70f1f0f0d0c",
+      "bbq:all:test:608": "ec62a6967936303e1b04e2a9d8984b5d960e21642ff5f5fbe573fceb7cd5b9b5",
+      "bbq:all:test:613": "4cce9fbd2ff927a1b50125d9c0abc92c507b1278cc0dbf3f7918d5992cc1bc70",
+      "bbq:all:test:623": "62be08993e50a448a048a89c664b0d40e8c815d5ae0b6887578058876363fe0e",
+      "bbq:all:test:625": "160cd0d99302ae1da9ff4fff5c852b1a34dc442083781e3df3ae7f3d3c1440cd",
+      "bbq:all:test:629": "b82ed81bdafb4a1e2d227d5b1ed9efbbcdff16760e1b3e4fd9a3cb9479a98fac",
+      "bbq:all:test:657": "bebcc46dd7b3cf0c8c86051e279575c8460f4e49daebf03a0689058a6bbb3522",
+      "bbq:all:test:658": "cd45cec14ff4d46b7ebc835bb69f4fb39a8b6c9c55266e807c046452b788ebaf",
+      "bbq:all:test:670": "d95434f031640cdbfeea416d82506e9de8e2a68f25c0ab7472090ee1b0ce5e33",
+      "bbq:all:test:677": "a97f96917139516e9458ead73b47cf243ca0928905f30aaaadd7992bf91285c7",
+      "bbq:all:test:689": "cd776f3e6e87e1446a9ef6210c9ef10dc31eaf0a65fd74af6b344076c3d098c8",
+      "bbq:all:test:690": "c235efa4dbbafceafdc0053df53adce4ca0c3d5ab501376047865f19b4810572",
+      "bbq:all:test:696": "e378fe6c02342415976cb606dba7bf5e4ff9c2740ee8b1ade851277c8b776544",
+      "bbq:all:test:707": "bb817495ad0759ac0510ee036ee2657dcbaa8ceb99ff053fc33ccedc8cec3317",
+      "bbq:all:test:717": "16aa50a27135927d65ca10e8472553a1d2aa19607cbf5c15b65545aa625c2e9f",
+      "bbq:all:test:746": "afb79b6864ace3fb3d20b400faafb69831b63b44128ece9ec41b65f8b6fdb9a6",
+      "bbq:all:test:748": "f6252037020bf33a45cbc694354128984078bfcf44a02c905a659d2982b076f8",
+      "bbq:all:test:752": "50e869e9c0720323a89ed9f40b45cc3047e5c418b0ac2ca68373c5c65ffa80a9",
+      "bbq:all:test:755": "eddc18a46f71e9d595aa19fa52b4fdeb6bb8203ea8e8b70ff1356c0636325df3",
+      "bbq:all:test:765": "249a2877ba835eaffeb7eaf0d95cf4941a2c5be4db1485ee07d2c246be6e6a3f",
+      "bbq:all:test:766": "08ad844422d8360e59be92351a69bea66436db785d2d95f2379c6f03a65949a2",
+      "bbq:all:test:772": "b02f0c62f803ae606b198bc6fc63637053333d7537ecfe45d76238bbff892b5f",
+      "bbq:all:test:778": "187ec5b50e662d7dc0a7a010b2839c9e68abeff2602d0f421c5a3597e87a246d",
+      "bbq:all:test:801": "6c5a9abbd1c10dc70a7586136ec44d9def1eb97d0a703f598012f105a9958280",
+      "bbq:all:test:802": "a55a42f5832653c954edc7d7f3b10bcd4954fcdef4aca1cee2bdb53eb79054dc",
+      "bbq:all:test:832": "0e41e70dc0bcd78bb2cdedb42724b3ff50fb364602af04ad78dd541573f8c813",
+      "bbq:all:test:837": "7f1ee2f8b65f2142183db619c0a78a7217e2e8ade3a4c22e0644ffd0412afe5a",
+      "bbq:all:test:849": "19faf19b8bd6601bf79aae6aa3eaa649f5c8714053eb9303e6fb004deef41dc6",
+      "bbq:all:test:857": "9acda0f013500880f8ce6691dae4e52ffb5093714c090acdf491476ddf7789c4",
+      "bbq:all:test:862": "a9f530634f70fd00f4caa94c1bb996c2fac840b9b8ff2685daf3a92d04745035",
+      "bbq:all:test:875": "b4a214eb65ab99f4409c92aac3c3a42f5008ad78835c8bea1a4e11e7f343bf0b",
+      "bbq:all:test:879": "e3ed6ea7ef9f2356601187870ae7a176ddb4f6fcd3171235e8af01c9862fa810",
+      "bbq:all:test:894": "e7321d6e79e69afbdfc413ebdb26020828ea661b79f8e8ad4faa161ffd80d19d",
+      "bbq:all:test:945": "6d4df6b2a9ee7354e87d97edccdd4e76ca091eb03f60168f24a3d6851cffb954",
+      "bbq:all:test:968": "bff97f070efdf2ebf5be97f566560a28bd2daa8fdb168eb1191eba55ff0f30b0",
+      "bbq:all:test:974": "86e1252a2d21aab7ef9ba6cc4becdc44a33c3d20189d5b1877978ba48eb10458",
+      "bbq:all:test:994": "7bcc9a926e9cabe27a3f81ca81ee97dc0fea74fa458c6deb040f6ed88d529a6d"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "bbq:all:test:53",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4414,
+        "2": 0.4219,
+        "1": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:54",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3066306630663066,
+        "0": 0.3066306630663066,
+        "1": 0.3867386738673867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:56",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.13757618143670697,
+        "1": 0.5892696573084225,
+        "0": 0.27315416125487063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:64",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2578,
+        "0": 0.4453,
+        "1": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:78",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.167,
+        "0": 0.6016,
+        "1": 0.2314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:88",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3023976023976024,
+        "1": 0.4546453546453546,
+        "0": 0.24295704295704293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:94",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.2876753507014028,
+        "2": 0.375751503006012,
+        "1": 0.33657314629258517
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:95",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1306387225548902,
+        "1": 0.5965069860279442,
+        "0": 0.27285429141716566
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:115",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.4733627077909073,
+        "1": 0.4048668135389545,
+        "0": 0.12177047867013818
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:119",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2559,
+        "1": 0.416,
+        "0": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:135",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.6178178178178177,
+        "2": 0.16126126126126125,
+        "0": 0.22092092092092092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:147",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1719,
+        "0": 0.4902,
+        "1": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:159",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.5968047928107838,
+        "1": 0.30424363454817777,
+        "2": 0.09895157264103843
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:160",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3047,
+        "0": 0.375,
+        "2": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:182",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.34766523347665235,
+        "1": 0.38086191380861917,
+        "2": 0.27147285271472854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:194",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2246,
+        "0": 0.375,
+        "1": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:195",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.39646035396460355,
+        "1": 0.3437656234376562,
+        "0": 0.2597740225977402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:204",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2793,
+        "1": 0.332,
+        "0": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:215",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1621,
+        "0": 0.5664,
+        "2": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:227",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.20589410589410592,
+        "1": 0.5033966033966034,
+        "2": 0.29070929070929075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:230",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4102,
+        "1": 0.3086,
+        "2": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:239",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.4,
+        "0": 0.18631368631368633,
+        "1": 0.41368631368631376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:242",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.11487230846269403,
+        "2": 0.7355032548823235,
+        "0": 0.14962443665498248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:248",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.5145708582834331,
+        "2": 0.2963073852295409,
+        "0": 0.18912175648702595
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:264",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4945945945945946,
+        "0": 0.15545545545545544,
+        "2": 0.34994994994995
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:270",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.6144674882276324,
+        "1": 0.1213305280032061,
+        "0": 0.2642019837691614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:282",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.1895,
+        "1": 0.498,
+        "2": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:284",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.48244824482448245,
+        "1": 0.1855185518551855,
+        "2": 0.33203320332033204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:291",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.23286573146292586,
+        "0": 0.5831663326653306,
+        "1": 0.1839679358717435
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:319",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.5742,
+        "1": 0.2178,
+        "2": 0.208
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:321",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.1641,
+        "0": 0.5742,
+        "1": 0.2617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:340",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.37229264397644474,
+        "1": 0.3333666034534385,
+        "0": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:343",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.5781,
+        "1": 0.2158,
+        "0": 0.2061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:344",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.17024048096192385,
+        "2": 0.5166332665330661,
+        "0": 0.31312625250501
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:352",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2578,
+        "0": 0.3027,
+        "1": 0.4395
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:369",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.12687312687312685,
+        "2": 0.6282717282717282,
+        "1": 0.24485514485514484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:380",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.5876040517500752,
+        "2": 0.25664426837829707,
+        "0": 0.15575167987162772
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:383",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1170829170829171,
+        "0": 0.6868131868131869,
+        "2": 0.19610389610389614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:388",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1689168916891689,
+        "0": 0.6484648464846484,
+        "2": 0.18261826182618263
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:395",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.36008415990381726,
+        "1": 0.36008415990381726,
+        "2": 0.2798316801923655
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:403",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.42422422422422423,
+        "0": 0.42422422422422423,
+        "2": 0.15155155155155156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:411",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.18004207995190863,
+        "1": 0.6183749123334336,
+        "2": 0.20158300771465784
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:417",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.08807615230460922,
+        "1": 0.6496993987975952,
+        "0": 0.26222444889779556
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:421",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3086,
+        "0": 0.3086,
+        "1": 0.3828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:425",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1131868131868132,
+        "2": 0.7140859140859142,
+        "0": 0.17272727272727276
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:427",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.3398,
+        "1": 0.3516,
+        "0": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:434",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.39489489489489493,
+        "2": 0.46136136136136136,
+        "1": 0.14374374374374374
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:439",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.45029940119760475,
+        "1": 0.23003992015968064,
+        "0": 0.3196606786427145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:453",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1543,
+        "2": 0.6406,
+        "0": 0.2051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:477",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.45165165165165166,
+        "1": 0.22772772772772773,
+        "2": 0.3206206206206206
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:506",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3906,
+        "2": 0.2852,
+        "0": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:518",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.293,
+        "2": 0.3125,
+        "1": 0.3945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:519",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2617,
+        "0": 0.3809,
+        "1": 0.3574
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:524",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.21560595464082322,
+        "0": 0.4351084024378059,
+        "2": 0.34928564292137076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:530",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.3379,
+        "1": 0.4219,
+        "2": 0.2402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:537",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1826,
+        "2": 0.582,
+        "0": 0.2354
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:550",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.35811623246492985,
+        "2": 0.3307615230460922,
+        "1": 0.31112224448897796
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:556",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.25247971145175835,
+        "1": 0.5870153291253382,
+        "0": 0.16050495942290352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:562",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4911823647294589,
+        "2": 0.250501002004008,
+        "0": 0.25831663326653304
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:567",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3554644535546445,
+        "0": 0.26757324267573246,
+        "2": 0.37696230376962303
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:573",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4434,
+        "2": 0.4707,
+        "0": 0.0859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:577",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.1504,
+        "2": 0.5,
+        "1": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:596",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.4873739894201018,
+        "0": 0.3567222277672422,
+        "1": 0.15590378281265596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:601",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4457457457457457,
+        "1": 0.3304304304304304,
+        "2": 0.22382382382382382
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:608",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.5544227886056972,
+        "0": 0.35332333833083457,
+        "2": 0.09225387306346826
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:613",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.2436370895298932,
+        "1": 0.37229264397644474,
+        "2": 0.384070266493662
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:623",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.28548548548548547,
+        "0": 0.523923923923924,
+        "2": 0.1905905905905906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:625",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.664698228405565,
+        "1": 0.1417275547993194,
+        "2": 0.1935742167951156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:629",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.18631368631368633,
+        "1": 0.4917082917082918,
+        "0": 0.321978021978022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:657",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.4355,
+        "0": 0.4043,
+        "1": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:658",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.2720440881763527,
+        "0": 0.5753507014028056,
+        "2": 0.15260521042084169
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:670",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.2179961965769192,
+        "1": 0.4339905915323791,
+        "2": 0.34801321189070167
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:677",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.1641,
+        "2": 0.5195,
+        "0": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:689",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.11174412793603199,
+        "0": 0.694952523738131,
+        "2": 0.1933033483258371
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:690",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.18287431146720082,
+        "0": 0.7706559839759639,
+        "1": 0.04646970455683525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:696",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.1754491017964072,
+        "1": 0.5067864271457087,
+        "2": 0.31776447105788425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:707",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.46243756243756245,
+        "0": 0.38241758241758245,
+        "2": 0.15514485514485515
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:717",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.165,
+        "1": 0.6133,
+        "0": 0.2217
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:746",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.526825856728944,
+        "0": 0.3355979618343491,
+        "1": 0.13757618143670697
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:748",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.5434891402262035,
+        "1": 0.3049744770293264,
+        "0": 0.15153638274447
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:752",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.23293413173652694,
+        "2": 0.6744510978043912,
+        "1": 0.09261477045908183
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:755",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2932932932932933,
+        "0": 0.2082082082082082,
+        "1": 0.4984984984984985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:765",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.47507507507507507,
+        "1": 0.2316316316316316,
+        "2": 0.2932932932932933
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:766",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.4765523447655235,
+        "2": 0.35936406359364065,
+        "0": 0.1640835916408359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:772",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.1562156215621562,
+        "2": 0.3984398439843984,
+        "1": 0.4453445344534453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:778",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.31808191808191805,
+        "2": 0.19610389610389609,
+        "1": 0.4858141858141858
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:801",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.5536480686695279,
+        "2": 0.18514821838506837,
+        "1": 0.26120371294540373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:802",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3633,
+        "2": 0.1855,
+        "0": 0.4512
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:832",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.13367968828054752,
+        "2": 0.5307223498851035,
+        "1": 0.3355979618343491
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:837",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.11384553821528612,
+        "1": 0.7424969987995198,
+        "0": 0.1436574629851941
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:849",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.24074258908074658,
+        "0": 0.5107296137339056,
+        "1": 0.24852779718534784
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:857",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.5278806687356091,
+        "1": 0.31084192611873057,
+        "0": 0.16127740514566022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:862",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.2832,
+        "1": 0.2656,
+        "0": 0.4512
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:875",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.18086277649884897,
+        "2": 0.37733960564508057,
+        "1": 0.44179761785607047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:879",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.22317596566523604,
+        "1": 0.6082443357620522,
+        "2": 0.16857969857271185
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:894",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.3535,
+        "0": 0.4629,
+        "2": 0.1836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:945",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.6595404595404596,
+        "1": 0.13366633366633368,
+        "0": 0.2067932067932068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:968",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.4487960835248276,
+        "1": 0.20191827355380157,
+        "2": 0.34928564292137076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:974",
+      "question_id": "answer",
+      "probabilities": {
+        "2": 0.14088176352705412,
+        "0": 0.5714428857715431,
+        "1": 0.2876753507014028
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "bbq:all:test:994",
+      "question_id": "answer",
+      "probabilities": {
+        "0": 0.14735264735264736,
+        "1": 0.6516483516483517,
+        "2": 0.200999000999001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

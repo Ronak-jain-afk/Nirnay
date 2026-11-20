@@ -1,0 +1,1601 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "s1mb-generalization-diverse-choice-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/s1mb-generalization-diverse-choice",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:44:14+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.47,
+    "uniform_accuracy_baseline": 0.22851190476190467,
+    "fixed_answer_accuracy_baseline": 0.2433333333333333,
+    "baseline_adjusted_skill": 0.29955947136563876,
+    "baseline_adjusted_score": 0.29955947136563876
+  },
+  "elapsed_seconds": 5.429810600000565,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "synthetic-choice-001": "6f523c9a775b205b6bcaf0d154bf3d06de81313f51cd665e3ff7f04eaa8481de",
+      "synthetic-choice-002": "5b205d9042b0f41f1d41e9214f33861d2d830297ba75eaae8a8f28308252f1f8",
+      "synthetic-choice-003": "b82c3e52be9408c805a5bc2f04d550dd57aaa10652fcac0fe30793f040b29538",
+      "synthetic-choice-004": "eed5f8897bdff3355f889d671bcdfb5ccd27814e0092caa28bcbddc06870d251",
+      "synthetic-choice-005": "332a850e79209d1bddae5cc565008cb6babb969c163ff7c7f754051f52129505",
+      "synthetic-choice-006": "36a7cedd526ce0c7d19a15396e54c801fc42d80535589f9231e3756caf4669f7",
+      "synthetic-choice-007": "dfcffb86302461b15cd57683ce35917ba406366e0c512b0679c4e11b17979243",
+      "synthetic-choice-008": "fe6ba069fcd75928468df4d627cddab247fe707822ddac3aa16287ffc8dcfe5f",
+      "synthetic-choice-009": "93ed51487ec0bcfeab61a983af95f10c545de1bbddd5d767d09180563f4022d0",
+      "synthetic-choice-010": "855b1c39fff90227f7c5de214b6e23790e872afe5adad52ea50c108044e5ac2b",
+      "synthetic-choice-011": "e25c9f59f16274a70dd4b2d60293b880a38a00be4543af6a73857daa16e73e5f",
+      "synthetic-choice-012": "0c999c838912c8fceebdc00b1919ce54ce40e6f4d0c5de011d4061058bb2f9d6",
+      "synthetic-choice-013": "1fb32bd94105ab5dc1a2d7948e6a2547ba71895cade174413b4e9bd66415c9cd",
+      "synthetic-choice-014": "74338239d5b1145e2cc4f856ac79eba6b3c2539fae0d33fb1610cb164d076c2c",
+      "synthetic-choice-015": "f27a47fdae373762890881419963b344c669ee1aa09781a26631623cdd9bbbdb",
+      "synthetic-choice-016": "1ab938094b839413cf339c523a7a6aa9bd896b6e5ff376c174980d28e9d78882",
+      "synthetic-choice-017": "dbc95c0e759662d900ac69a0f32458880522984c65236118eedf3764396bbc93",
+      "synthetic-choice-018": "a987825877d1ba59b2c4aa7186f706a08e707d3ecd1de41f5ed37b72d1979cd7",
+      "synthetic-choice-019": "3ddb09963e3ae506f62e9ff4ded033f7cb8376b931a54e50a3bc3a8aaa4d0620",
+      "synthetic-choice-020": "b200a088a3bfa7fe23becac067d6b1ecd6141a431fc59b587c0732daaa4b093a",
+      "synthetic-choice-021": "8fbee78c44c2b1099868216bd7d6a704e4f844cf28c27e27752e968845b77335",
+      "synthetic-choice-022": "499c0ebb9ef6079d4450f64a5802e271b85d96708a0a01f41bff94485aafd3b7",
+      "synthetic-choice-023": "4036c7a1c43757bc3b237f51302e4e235563d8eb2e4f4b68a1d41bb7416fea67",
+      "synthetic-choice-024": "2e683886869e544521021f1d4ae9a4e236117e44a551139b9217672f2d80cee8",
+      "synthetic-choice-025": "b9b7da86e98361ea96d314f4c2814e16dd929eb6600f22f0a7d1e9c2fcd5effd",
+      "synthetic-choice-026": "5683b3998dec3a14e4b7433eeebe17e00164d90aa19b5fa3e1e51edd27d99fe9",
+      "synthetic-choice-027": "b23a1cc0df9dba977aa824b16cb85c68eb67eccc88d21b7adadf0b682221ed6e",
+      "synthetic-choice-028": "f4d2187802ba63d2a86d43a295ca1ef882f75055205073a060d11989e9c1e6d9",
+      "synthetic-choice-029": "3b580a69a56db4e3f30672c341f6e71a81b990c7c90bff14a2ad385b39c09b74",
+      "synthetic-choice-030": "0fb41f7d3e4f3eb5244f0805ece799abb1aebb5e933bbf676cbb3b81dcfc3bf0",
+      "synthetic-choice-031": "bd783b84452bacc737b2e0da1fab7dab747ffe2a2c95407fbaefdecf9e4c7892",
+      "synthetic-choice-032": "f2268d6acbabc4ed1e37bfc7fa1045cd3c3055b7ce79f9b223701f2fe3fe4a56",
+      "synthetic-choice-033": "fcb8d7c24c4347cbe8da66ade2b1dfe512abf6031e3861ef6576d80aeaa103c6",
+      "synthetic-choice-034": "82292388f3f624acd0fdc3331252ef4f18b663eb05016dff13bf7319f793967a",
+      "synthetic-choice-035": "e087dbd746bfad8e10609f8913a9da5d393b5d065985e1c0592a4b1baa99393c",
+      "synthetic-choice-036": "54f3d71d69aafe9f2e0fc3726520f7d180a34b39ee90352bf7931ba28a1e285e",
+      "synthetic-choice-037": "56f6e348425abb925014557400a71a1be1efffb4dd497f8d0be8248ae5c0e1eb",
+      "synthetic-choice-038": "86d3bf931b03359d037e01b6e4b33796217a29bb2e291f699d77b67a58ac66f8",
+      "synthetic-choice-039": "822c23820ef6241008700669ca042bebf571183b47cccef15f2a735441671ed8",
+      "synthetic-choice-040": "275eb52a96024e04ea6b4f6095219cb2ad3290cc03b451686c0a06d8f63fa87f",
+      "synthetic-choice-041": "60ff30154bedaf0d650beec1cef483a5abb5ee261db50a0de4813adc7aa1c641",
+      "synthetic-choice-042": "bcde6f3f707e0ac30b6c7d94fe9ba1ff8430ee2b88e9ed30fed65bfb1e54a5fb",
+      "synthetic-choice-043": "24dfc7f4ea254792ee0ea14ef5886bc5f8f719e1dff3b01b9401e024476b5914",
+      "synthetic-choice-044": "70d068a1fc98cde46dc9e9bc3505d8ebae3ea7406e4ea21808f755d94657590e",
+      "synthetic-choice-045": "a8d71524f848499ce5a4ddd20a155ae84eba48261eecb06cdf7eec11cc32d7db",
+      "synthetic-choice-046": "b6fade323c49a8acc8511d4fb426d1b6b6793fc091b1e2b45bd7014c8ff1854b",
+      "synthetic-choice-047": "1e0ff473a7c011ad3ba219e0db09e4f919c418cd0b2404f014f0e913d5139b99",
+      "synthetic-choice-048": "1c27cccc5d76ff6a24e3a459c4f009d6ea8f7d383c78a47fb3063a7ed6ddd774",
+      "synthetic-choice-049": "7febe967f1245d4ea04d3b5578e35d9b1e43b78a54863fb7df7adc1bdbe912fd",
+      "synthetic-choice-050": "2a6427eb004047b447fbea9f5f7c95bcc3bfed5066dc52cc0d4de635c65d9b37",
+      "synthetic-choice-051": "501e847a4d17e97a0ed143c341040d12de590ba60c70b884dcd5f8810cf1f843",
+      "synthetic-choice-052": "374f97e9643820d7da8a3478e0911020d53f2f3c7914c4f03b5405576f830e5a",
+      "synthetic-choice-053": "5b899e09bd953e2fc871d5ef65a9a03727ef7d4a3b4d54dc3f96d5c27a1ffc15",
+      "synthetic-choice-054": "c8b774cb4b31145c7d1deeb8b8a87cdc213440505c064898c640b030b74397bd",
+      "synthetic-choice-055": "155f9f98dc6e3118b9d7be6fef6ea9907b8810bbd73784eeb638be9f446601d7",
+      "synthetic-choice-056": "6734f693059f3c9207b17ad58fb1b10edf4c81d6940db823f4579f4d371cea42",
+      "synthetic-choice-057": "418c946afa9c53b6c9145bb87a7dd93af4d7f9c90c9714615cc70ee92a8b55aa",
+      "synthetic-choice-058": "0ece6415e8da7e0d2335ea084ebd19482b7413918378d8282a9fb1313df8a189",
+      "synthetic-choice-059": "5c503e193a0a632c11db297c72ff909dc4249d0d82856bd3e77bf19e04c8eb17",
+      "synthetic-choice-060": "2bd76329673b83456a6da9c830c1e90080cc113ea5714f3aa8e818550397df06",
+      "synthetic-choice-061": "35e0826029a1788675db0b1e9a8e88530c83603b868ffaf26c5b9383ef8c7aa8",
+      "synthetic-choice-062": "10a2eaba0a268988bfea62440acc778dc9cafaa6757975d42737d6147d99edad",
+      "synthetic-choice-063": "c8dc219d4b9c52c6bc6022a1c2d08c400d3cb3a7042556ad33c49030e0565ce6",
+      "synthetic-choice-064": "9ebcc64769bc6d9154439a8d1f11cfdc325ef5aff5646987b7e5fe7cf4011450",
+      "synthetic-choice-065": "2daa201e8db69402fa91311ca6235fa5b23c90271ee56c96c468ff8ccf417728",
+      "synthetic-choice-066": "d25472e3ddd761b67630e01fe8ad686a43633eb9d01a59059df606d4cab29412",
+      "synthetic-choice-067": "a179b11d96435df714ab726fab27640c05afcca8fc9672e549dea60358c2688f",
+      "synthetic-choice-068": "4c0d5c504b55ccb3be88773ca23bff145b1b41326067374b471e59342b5c1624",
+      "synthetic-choice-069": "a6350e8fd3013df5c6689028f2e941603874c7dcf13c8721193da36070da3c62",
+      "synthetic-choice-070": "4028fc6b2bba69ad6388f04b90ac16c964128e07c596805b7939226af7abf4bc",
+      "synthetic-choice-071": "6d3ceac61d9863aff243d6d4e090d62b0f005904c9463654b1dd9e8bca5d4259",
+      "synthetic-choice-072": "911b5d60fd60fa58b0f75ced111a789b59b99576f558109c0dfa00758ecdbb89",
+      "synthetic-choice-073": "3da44384a64e9965da16dea828b910482fc820cade7dd0abc83fc9c6db331460",
+      "synthetic-choice-074": "040b0a161e459b585db898f0b740c02c5dc3598b4132f8ee0ee0ad56ea29cf50",
+      "synthetic-choice-075": "61e958d46517242ccbc887e0ffa8dc608b2cd053f13a05faf16f9d516f2b9a21",
+      "synthetic-choice-076": "e1658deeb58584d39ba36319546990e9a22cc7a859d54d8310a72527d880bac2",
+      "synthetic-choice-077": "1e9cf7cf1e2f3dccffbf7ea59cb28a151ae2471c5a193699a69571a47ca025b5",
+      "synthetic-choice-078": "072edc6f75e58dc908914e6ec96dcec9330acf836f279174841f8cde9d1cc93d",
+      "synthetic-choice-079": "b0d7d9f34d1dfb5a188bdfc494088dfaa5deff66617bbd6a21de872cb49dbb45",
+      "synthetic-choice-080": "9580ac68bcd0fb26ad13d28e7f5f64d217b4f438e4ca2c13c476b026861e9a1d",
+      "synthetic-choice-081": "0b7ac193bbbaf138f267905f93289037b7c19bd0cc1218dd38b14b6e49cca253",
+      "synthetic-choice-082": "a110c6518cce83834f23f986323b4bd304d5fa2e5cc67778267eea5c6c70f764",
+      "synthetic-choice-083": "6ec5e0d1d7c9bb57683b42454d3a414cef2ae7a9dd3f50e98b1020714218dc03",
+      "synthetic-choice-084": "2a2559392a1a36902284bf871b9a0eb429dd562e2d4c51c569c16fa3baac540a",
+      "synthetic-choice-085": "85efc66cee34009946fe6f0acbe7268deeaf706b82835a450b37745adfd3497b",
+      "synthetic-choice-086": "cde7e59d48374cff53145cc8ef090b73084a009d3865de15638e782a23de0e22",
+      "synthetic-choice-087": "df3237f6a11b92fa7ffc88a5c0c286f2a5440b52c87081462079cb64d5e1e832",
+      "synthetic-choice-088": "ead1b7f75e51645f189f19d10d70088566efdedc86feeec171989ae7cf798216",
+      "synthetic-choice-089": "2e0fc2c96853669ad027120ed7f668bcbc310dea6ebe6eda1efc986156c31597",
+      "synthetic-choice-090": "6178136cca9e987a5a5d300750ef0ed5d75d194e66dd5a4976eb3aa8850ad9ad",
+      "synthetic-choice-091": "d51e173e66c1969b9779c46609befec1f77bf3165e67d03c08412c3b789258b5",
+      "synthetic-choice-092": "ecb8deaa35c024f61e16feef04dd6a16e0e63412ede752b3171a096be8378893",
+      "synthetic-choice-093": "2fd777c1d6cb09655372e239f4419e4ced3b08d06069da299027cde4737a02dd",
+      "synthetic-choice-094": "d84d44ad0db691d6b05ad951d6db105f2705233b4046b93b670e86be87f04fa1",
+      "synthetic-choice-095": "21aa6616581b1b0f5e37672123ea53feb60708518dfba0151be2303417f034c6",
+      "synthetic-choice-096": "7da2eecf7b8ba7ce5a9db7b3d213c83ad5c082f1d7b41820b091e1e8d4266176",
+      "synthetic-choice-097": "422e0412e9015932cd5c304b633a1815f97d08f5d01e94dd6f50a16abd3d7e80",
+      "synthetic-choice-098": "f26a3737cd955ad0b8a130b98f0f1aceaeb6cd1dfd249ec6119b22823c05dbe9",
+      "synthetic-choice-099": "78235a2854e13e9bd0d2727e54d27149425f93d7dd649b8ccc0fc279d2287f51",
+      "synthetic-choice-100": "a0aba87020cf0d32fc1ec97bde51f727637324269c1555c7467fbef47704652f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "synthetic-choice-001",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14347087621140975,
+        "option_2": 0.4546907782995305,
+        "option_3": 0.050954141272854435,
+        "option_4": 0.29463482865421126,
+        "option_5": 0.025277250474572886,
+        "option_6": 0.030972125087421323,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-002",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.27691232274815264,
+        "option_2": 0.17845016976233277,
+        "option_3": 0.1452965847813062,
+        "option_4": 0.1989215098861594,
+        "option_5": 0.09706411024565609,
+        "option_6": 0.10335530257639305,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-003",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.30122171039455237,
+        "option_2": 0.15161225716002402,
+        "option_3": 0.14470258361706387,
+        "option_4": 0.09192870018025236,
+        "option_5": 0.18876426997796916,
+        "option_6": 0.12177047867013818,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-004",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.32787049065654045,
+        "option_2": 0.44698710902368344,
+        "option_3": 0.02947936444488858,
+        "option_4": 0.05026481462975917,
+        "option_5": 0.10442690116918157,
+        "option_6": 0.040971320075946845,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-005",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1475,
+        "option_2": 0.1455,
+        "option_3": 0.084,
+        "option_4": 0.2285,
+        "option_5": 0.3945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-006",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.273482044613384,
+        "option_2": 0.04611383415024508,
+        "option_3": 0.16414924477343204,
+        "option_4": 0.0728218465539662,
+        "option_5": 0.18555566670001,
+        "option_6": 0.2578773632089627
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-007",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3538538538538538,
+        "option_2": 0.40660660660660664,
+        "option_3": 0.23953953953953955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-008",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3945,
+        "option_2": 0.1719,
+        "option_3": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-009",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.45555555555555555,
+        "option_2": 0.06546546546546547,
+        "option_3": 0.30300300300300304,
+        "option_4": 0.175975975975976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-010",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5432716358179089,
+        "option_2": 0.16608304152076037,
+        "option_3": 0.006203101550775387,
+        "option_4": 0.27353676838419205,
+        "option_5": 0.0064032016008004,
+        "option_6": 0.004502251125562781,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-011",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2111111111111111,
+        "option_2": 0.15935935935935935,
+        "option_3": 0.12802802802802804,
+        "option_4": 0.1954954954954955,
+        "option_5": 0.1837837837837838,
+        "option_6": 0.12222222222222222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-012",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2578257825782578,
+        "option_2": 0.2812281228122812,
+        "option_3": 0.09470947094709471,
+        "option_4": 0.22662266226622663,
+        "option_5": 0.1396139613961396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-013",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.908836744882676,
+        "option_2": 0.09116325511732401
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-014",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3516,
+        "option_2": 0.2539,
+        "option_3": 0.1562,
+        "option_4": 0.1006,
+        "option_5": 0.1377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-015",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1932647146997102,
+        "option_2": 0.20595583091835717,
+        "option_3": 0.07224942540221846,
+        "option_4": 0.25572099530328773,
+        "option_5": 0.16298590986309583,
+        "option_6": 0.10982312381333068,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-016",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1455,
+        "option_2": 0.2773,
+        "option_3": 0.0806,
+        "option_4": 0.0747,
+        "option_5": 0.2031,
+        "option_6": 0.2188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-017",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.44357743097238894,
+        "option_2": 0.33413365346138457,
+        "option_3": 0.1250500200080032,
+        "option_4": 0.09723889555822328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-018",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3868934467233616,
+        "option_2": 0.2833416708354177,
+        "option_3": 0.1216608304152076,
+        "option_4": 0.1216608304152076,
+        "option_5": 0.0864432216108054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-019",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1447025836170639,
+        "option_2": 0.4518325655918286,
+        "option_3": 0.10564790706989786,
+        "option_4": 0.08752253154416184,
+        "option_5": 0.21029441217704786
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-020",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2402,
+        "option_2": 0.1602,
+        "option_3": 0.1387,
+        "option_4": 0.1699,
+        "option_5": 0.1523,
+        "option_6": 0.1387,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-021",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.26773386693346674,
+        "option_2": 0.416208104052026,
+        "option_3": 0.10695347673836919,
+        "option_4": 0.20910455227613808
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-022",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.21298519407763106,
+        "option_2": 0.20618247298919568,
+        "option_3": 0.17386954781912764,
+        "option_4": 0.17877150860344138,
+        "option_5": 0.13095238095238093,
+        "option_6": 0.09723889555822328,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-023",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3594,
+        "option_2": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-024",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.33186725309876053,
+        "option_2": 0.14934026389444224,
+        "option_3": 0.15713714514194324,
+        "option_4": 0.14254298280687727,
+        "option_5": 0.11465413834466213,
+        "option_6": 0.10445821671331468
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-025",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3261673832616738,
+        "option_2": 0.292970702929707,
+        "option_3": 0.38086191380861917
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-026",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2517231045849565,
+        "option_2": 0.21855958445709717,
+        "option_3": 0.1473379282788932,
+        "option_4": 0.16681650184796723,
+        "option_5": 0.1326540805114374,
+        "option_6": 0.08290880031964838,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-027",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2421031587365054,
+        "option_2": 0.4373250699720112,
+        "option_3": 0.12345061975209916,
+        "option_4": 0.12345061975209916,
+        "option_5": 0.0736705317872851
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-028",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.8633,
+        "option_2": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-029",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3634090227068121,
+        "option_2": 0.2578773632089627,
+        "option_3": 0.07372211663499051,
+        "option_4": 0.059317795338601584,
+        "option_5": 0.09912973892167651,
+        "option_6": 0.14654396318895668,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-030",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.17305575017515765,
+        "option_2": 0.5591031928735862,
+        "option_3": 0.26784105695125615
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-031",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6406,
+        "option_2": 0.2354,
+        "option_3": 0.124
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-032",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.27512487512487516,
+        "option_2": 0.29270729270729273,
+        "option_3": 0.14635364635364637,
+        "option_4": 0.16583416583416585,
+        "option_5": 0.11998001998001999
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-033",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.30832250974123293,
+        "option_2": 0.23998401438705166,
+        "option_3": 0.18143670696373268,
+        "option_4": 0.10830252772504746,
+        "option_5": 0.16195424118293536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-034",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.19510489510489512,
+        "option_2": 0.321978021978022,
+        "option_3": 0.12977022977022978,
+        "option_4": 0.17752247752247755,
+        "option_5": 0.1092907092907093,
+        "option_6": 0.06633366633366634
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-035",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.24534534534534536,
+        "option_2": 0.7546546546546546
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-036",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.24819855884707767,
+        "option_2": 0.4222377902321858,
+        "option_3": 0.09427542033626903,
+        "option_4": 0.05984787830264211,
+        "option_5": 0.058146517213771017,
+        "option_6": 0.11729383506805445,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-037",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.056315526709935095,
+        "option_2": 0.709835247129306,
+        "option_3": 0.13070394408387417,
+        "option_4": 0.0236645032451323,
+        "option_5": 0.07948077883175238
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-038",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5541458541458542,
+        "option_2": 0.09460539460539462,
+        "option_3": 0.1053946053946054,
+        "option_4": 0.2458541458541459
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-039",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2908545727136432,
+        "option_2": 0.14252873563218393,
+        "option_3": 0.1215392303848076,
+        "option_4": 0.4450774612693653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-040",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6950914725582326,
+        "option_2": 0.14545636309107268,
+        "option_3": 0.15525342397280817,
+        "option_4": 0.004198740377886634
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-041",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.23727627237276275,
+        "option_2": 0.1845815418458154,
+        "option_3": 0.17678232176782324,
+        "option_4": 0.16798320167983202,
+        "option_5": 0.1376862313768623,
+        "option_6": 0.0956904309569043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-042",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2111111111111111,
+        "option_2": 0.3069069069069069,
+        "option_3": 0.13393393393393394,
+        "option_4": 0.34804804804804806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-043",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.09851133979418523,
+        "option_2": 0.7766010590468579,
+        "option_3": 0.12488760115895695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-044",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1581051369178493,
+        "option_2": 0.7300619628223067,
+        "option_3": 0.009394363381970819,
+        "option_4": 0.016789926044373377,
+        "option_5": 0.03198081151309215,
+        "option_6": 0.05366779932040776,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-045",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.11626976185711427,
+        "option_2": 0.023313988393035823,
+        "option_3": 0.048629177506503904,
+        "option_4": 0.02761656994196518,
+        "option_5": 0.7699619771863118,
+        "option_6": 0.014208525115069042
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-046",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.11879503602882306,
+        "option_2": 0.28933146517213776,
+        "option_3": 0.35968775020016014,
+        "option_4": 0.09387510008006404,
+        "option_5": 0.08306645316253003,
+        "option_6": 0.055244195356285025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-047",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.14842968593718744,
+        "option_2": 0.21194238847769553,
+        "option_3": 0.05791158231646329,
+        "option_4": 0.16023204640928188,
+        "option_5": 0.2988597719543909,
+        "option_6": 0.12262452490498099
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-048",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.014805922368947578,
+        "option_2": 0.08643457382953182,
+        "option_3": 0.6291516606642656,
+        "option_4": 0.2696078431372549
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-049",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.40738522954091816,
+        "option_2": 0.5926147704590818
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-050",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.248,
+        "option_2": 0.2158,
+        "option_3": 0.1934,
+        "option_4": 0.1992,
+        "option_5": 0.1436
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-051",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5156,
+        "option_2": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-052",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.27528988404638144,
+        "option_2": 0.310375849660136,
+        "option_3": 0.0775689724110356,
+        "option_4": 0.19422231107556978,
+        "option_5": 0.14254298280687727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-053",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.017334669338677357,
+        "option_2": 0.007314629258517035,
+        "option_3": 0.6418837675350701,
+        "option_4": 0.06192384769539079,
+        "option_5": 0.2152304609218437,
+        "option_6": 0.05631262525050101,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-054",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.7887056471764119,
+        "option_2": 0.048775612193903056,
+        "option_3": 0.03368315842078961,
+        "option_4": 0.029685157421289358,
+        "option_5": 0.06396801599200401,
+        "option_6": 0.0351824087956022,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-055",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5202283196475065,
+        "option_2": 0.23863408772281197,
+        "option_3": 0.08021229721610255,
+        "option_4": 0.085119166833567,
+        "option_5": 0.03615061085519728,
+        "option_6": 0.039655517724814744
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-056",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.20224156909836888,
+        "option_2": 0.06154308015610928,
+        "option_3": 0.32252576803762634,
+        "option_4": 0.07675372760932654,
+        "option_5": 0.2932052436705694,
+        "option_6": 0.043730611427999604,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-057",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3672,
+        "option_2": 0.1021,
+        "option_3": 0.2949,
+        "option_4": 0.0571,
+        "option_5": 0.1787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-058",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.06937631394533987,
+        "option_2": 0.09480428471318451,
+        "option_3": 0.14465912503754128,
+        "option_4": 0.34217639403343675,
+        "option_5": 0.19451396536189808,
+        "option_6": 0.15446991690859946,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-059",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.024134835942954024,
+        "option_2": 0.36810611349356737,
+        "option_3": 0.6077590505634787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-060",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.516064458012211,
+        "option_2": 0.10509458512661396,
+        "option_3": 0.08307476729056151,
+        "option_4": 0.13101791612451208,
+        "option_5": 0.06455810229206287,
+        "option_6": 0.10019017115403864,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-061",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.04271281384415325,
+        "option_2": 0.9572871861558467
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-062",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.18670537591350486,
+        "option_2": 0.17008709580538592,
+        "option_3": 0.15937531284412854,
+        "option_4": 0.16518169986985684,
+        "option_5": 0.17789568525377916,
+        "option_6": 0.14075483031334468,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-063",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.21948051948051947,
+        "option_2": 0.10539460539460538,
+        "option_3": 0.40979020979020975,
+        "option_4": 0.2653346653346653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-064",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.16018398160183983,
+        "option_2": 0.251974802519748,
+        "option_3": 0.44915508449155084,
+        "option_4": 0.1386861313868613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-065",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4805,
+        "option_2": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-066",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1582791395697849,
+        "option_2": 0.07573786893446724,
+        "option_3": 0.06593296648324162,
+        "option_4": 0.5080540270135068,
+        "option_5": 0.10215107553776888,
+        "option_6": 0.08984492246123062,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-067",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2674395362782331,
+        "option_2": 0.16400159904057565,
+        "option_3": 0.18938636817909255,
+        "option_4": 0.15220867479512293,
+        "option_5": 0.12592444533280034,
+        "option_6": 0.1010393763741755
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-068",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0859,
+        "option_2": 0.1631,
+        "option_3": 0.1143,
+        "option_4": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-069",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.23073073073073075,
+        "option_2": 0.17107107107107106,
+        "option_3": 0.16616616616616617,
+        "option_4": 0.14854854854854854,
+        "option_5": 0.17107107107107106,
+        "option_6": 0.11241241241241241,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-070",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.5781,
+        "option_2": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-071",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.0862533692722372,
+        "option_2": 0.3256464011180992,
+        "option_3": 0.11750024957572126,
+        "option_4": 0.3802535689328142,
+        "option_5": 0.0582010582010582,
+        "option_6": 0.03214535290006988,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-072",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1924384876975395,
+        "option_2": 0.09231846369273854,
+        "option_3": 0.4766953390678136,
+        "option_4": 0.15533106621324264,
+        "option_5": 0.07081416283256652,
+        "option_6": 0.01240248049609922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-073",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4453,
+        "option_2": 0.2832,
+        "option_3": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-074",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.6630391373801917,
+        "option_2": 0.027755591054313095,
+        "option_3": 0.02525958466453674,
+        "option_4": 0.05970447284345048,
+        "option_5": 0.21445686900958463,
+        "option_6": 0.009784345047923321,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-075",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10684657671164417,
+        "option_2": 0.40409795102448776,
+        "option_3": 0.44317841079460274,
+        "option_4": 0.04587706146926537
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-076",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.10948759007205765,
+        "option_2": 0.2462970376301041,
+        "option_3": 0.3576861489191353,
+        "option_4": 0.0500400320256205,
+        "option_5": 0.0322257806244996,
+        "option_6": 0.20426341072858287,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-077",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2715,
+        "option_2": 0.1445,
+        "option_3": 0.1562,
+        "option_4": 0.1719,
+        "option_5": 0.1592,
+        "option_6": 0.0967,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-078",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3940665268204974,
+        "option_2": 0.3940665268204974,
+        "option_3": 0.10438517630606331,
+        "option_4": 0.04994506043352312,
+        "option_5": 0.05753670961941863
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-079",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4329505741387918,
+        "option_2": 0.1892161757363954,
+        "option_3": 0.11452820768846729,
+        "option_4": 0.26330504243634545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-080",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.1515060542379666,
+        "option_2": 0.297107975582908,
+        "option_3": 0.27559291504052835,
+        "option_4": 0.06934854398078655,
+        "option_5": 0.1515060542379666,
+        "option_6": 0.05493845691984389,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-081",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.028562868271247377,
+        "option_2": 0.2750424448217317,
+        "option_3": 0.6202936182962149,
+        "option_4": 0.07610106861080596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-082",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3379,
+        "option_2": 0.5586,
+        "option_3": 0.0466,
+        "option_4": 0.0569
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-083",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.4805,
+        "option_2": 0.4121,
+        "option_3": 0.1074
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-084",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3650174912543729,
+        "option_2": 0.22058970514742632,
+        "option_3": 0.14742628685657172,
+        "option_4": 0.09375312343828086,
+        "option_5": 0.0751624187906047,
+        "option_6": 0.09805097451274364,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-085",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2950180072028812,
+        "option_2": 0.08843537414965988,
+        "option_3": 0.13875550220088034,
+        "option_4": 0.13875550220088034,
+        "option_5": 0.22569027611044418,
+        "option_6": 0.1133453381352541,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-086",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.932853717026379,
+        "option_2": 0.012290167865707436,
+        "option_3": 0.014588329336530776,
+        "option_4": 0.0402677857713829
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-087",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.16595021493551937,
+        "option_2": 0.2196341097670699,
+        "option_3": 0.4803558932320304,
+        "option_4": 0.01719484154753574,
+        "option_5": 0.06927921623512946,
+        "option_6": 0.04758572428271519
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-088",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.24697651174412794,
+        "option_2": 0.1728135932033983,
+        "option_3": 0.12053973013493254,
+        "option_4": 0.2254872563718141,
+        "option_5": 0.12783608195902052,
+        "option_6": 0.10634682658670665
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-089",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.31478330497447704,
+        "option_2": 0.36753077769993,
+        "option_3": 0.13782404163747372,
+        "option_4": 0.17986187568811932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-090",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3810905452726363,
+        "option_2": 0.10255127563781889,
+        "option_3": 0.10945472736368184,
+        "option_4": 0.0864432216108054,
+        "option_5": 0.2501250625312656,
+        "option_6": 0.0703351675837919
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-091",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2275,
+        "option_2": 0.2275,
+        "option_3": 0.2139,
+        "option_4": 0.1426,
+        "option_5": 0.1885
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-092",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.28936042438194376,
+        "option_2": 0.20528475628065257,
+        "option_3": 0.4144730257231508,
+        "option_4": 0.09088179361425282
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-093",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3792792792792793,
+        "option_2": 0.20330330330330332,
+        "option_3": 0.21991991991991994,
+        "option_4": 0.1974974974974975
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-094",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.8649433924456467,
+        "option_2": 0.13505660755435328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-095",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.2696348174087044,
+        "option_2": 0.0977488744372186,
+        "option_3": 0.15337668834417206,
+        "option_4": 0.1216608304152076,
+        "option_5": 0.22371185592796397,
+        "option_6": 0.13386693346673337,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-096",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.32410276916924924,
+        "option_2": 0.12886134159752075,
+        "option_3": 0.06178146556033191,
+        "option_4": 0.38468459462161353,
+        "option_5": 0.10056982905128461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-097",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.291029102910291,
+        "option_2": 0.36913691369136914,
+        "option_3": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-098",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3087543771885943,
+        "option_2": 0.18469234617308655,
+        "option_3": 0.16508254127063535,
+        "option_4": 0.12306153076538269,
+        "option_5": 0.13096548274137068,
+        "option_6": 0.08744372186093048,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-099",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.3492507492507492,
+        "option_2": 0.1756243756243756,
+        "option_3": 0.23906093906093906,
+        "option_4": 0.23606393606393605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "synthetic-choice-100",
+      "question_id": "judgment",
+      "probabilities": {
+        "option_1": 0.243758737767126,
+        "option_2": 0.1804473736768524,
+        "option_3": 0.04513680846814459,
+        "option_4": 0.35500299580587175,
+        "option_5": 0.15018973437187935,
+        "option_6": 0.02546434991012582,
+        "option_7": 0.0,
+        "option_8": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

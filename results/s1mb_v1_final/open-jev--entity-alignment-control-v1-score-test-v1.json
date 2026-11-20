@@ -1,0 +1,407 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--entity-alignment-control-v1-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/open_jev__entity-alignment-control-v1",
+    "split": "test",
+    "case_count": 25,
+    "decision_count": 25,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:55+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 25,
+    "expected": 25,
+    "succeeded": 25,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.3785989474280862,
+    "normalized_score_rmse": 0.4186818855564033,
+    "constant_score_baseline": 0.5,
+    "constant_mae_baseline": 0.28,
+    "baseline_adjusted_skill": -0.3521390979574506,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 3.544100900000558,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:0:match": "489e16b630eff773ce4fd7488613fb7f746e0ab757d2c6b7c299aefa574034f4",
+      "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:1:match": "3328b375e20ed40f622b04db07ad43ff82301ce7822ac98ac9f00e3f2be37ff7",
+      "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:7:match": "82dd95b546bfcf2e93636c6b33c39b56f28b57617f94300557f18f1074aaba2c",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:9:match": "e79fc5f4ffc541804ae48ba84173833edc2e83bf920d96769e760148861f6f99",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:12:match": "8db039736df976e3286e90f8995368937432de92e2f75660c1895863308ff1ba",
+      "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:13:match": "8632bb66d50e73619fa33b0955187139239f1dee0a15b688f8bb405ed5b0b713",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:1:match": "094e2ac26449dd0696694ad294ea376f2a9d8d955b120363f9a2e36ac4bccdb9",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:2:match": "e4594bc859810f967b14614c8d4329c6c7a230a091c4c7fb0fe9805895e7eba8",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:4:match": "f419ecaf595bab45f803f66f9244fe78a0719ec81496c3c29fd39a511d91df56",
+      "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:9:match": "1dbdc7da1eac7dc684cb4391adb851d153deedd5423f536c0fc4a551b0ac3726",
+      "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:0:match": "d7be0e48d5a824861c5fb6517cba3f0650928e9c5bef48a0f361cfc347358dcc",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:match": "097b3848842c3969cdc077e588f015885a788e2694b6f58170ca598ea40ed84e",
+      "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:8:match": "6ab2b41080c03615171bb42aff7f07af938acfb33fa301bb9e663a3fb38d6664",
+      "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:7:match": "621019c06927f39ce07869f1718d0e3e2764bc12715a4aeb3e7c963447e97514",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:0:match": "63893dc6e4b59929daa337e7f549987f39592c1ee76cc72b1c43da7f8164733b",
+      "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:13:match": "80a4bc6f3e7c2fdb1368afdbaee8227b2876d9555f131b1d57567d5a6f9f9635",
+      "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:1:match": "ffb2ca959295f36748ba554c569017c895af7a2a4ee48f020a0bc05fc123db02",
+      "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:6:match": "179b8c7e96e0e11e6c2bfff14ede3a0d7fecc8ce09fe20cc027cc28e06433380",
+      "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:2:match": "741fd7247a05e339150033e4eea6424f571dffd5cf80c12bbce88b77814bb247",
+      "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:12:match": "53fc703636ce96aa87624b6c11c4554e25de6bceb92d2cc06c695247c885a546",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:2:match": "ce84bff0900ebda28c80d8a863cb96e8614e05ed489c7712484311a94166a3b8",
+      "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:12:match": "55cfd8edca5a5b5142462969f527a232322ba98e656e1ae92e14c7be3c77cd5b",
+      "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:6:match": "12f58f91e4c6594e7d5347fe59c982a586aa00142e7cb98a49f522e143c438b1",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:6:match": "1c999f5863a8a697f873889d5d6e08f845eecd2101753cf26878e4589fcf06f3",
+      "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:13:match": "d891b164957b85ee4ab8b42ae68d40ce0e485365ef3703fb158630ff3188e724"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 3200,
+      "output_tokens": 25,
+      "requests": 25,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:0:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.2832,
+        "option_1": 0.3809,
+        "option_2": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-1eacfde15e68c40a7fab:pair:1:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7355032548823235,
+        "option_1": 0.07771657486229344,
+        "option_2": 0.18678017025538307
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-53cfd4a99961f8b78cae:pair:7:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.780107849011384,
+        "option_1": 0.061913321350109844,
+        "option_2": 0.1579788296385061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:9:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.6559376249500201,
+        "option_1": 0.10685725709716114,
+        "option_2": 0.2372051179528189
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:12:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7523952095808384,
+        "option_1": 0.06337325349301397,
+        "option_2": 0.1842315369261477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-013869043209499de0c5:pair:13:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7415326206414228,
+        "option_1": 0.07703067239484465,
+        "option_2": 0.18143670696373268
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:1:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7492507492507492,
+        "option_1": 0.06733266733266732,
+        "option_2": 0.1834165834165834
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:2:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.3008,
+        "option_1": 0.3574,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:4:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7724730323611667,
+        "option_1": 0.055833000399520584,
+        "option_2": 0.17169396723931285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-3e0cd03392df89672134:pair:9:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.6768152228342513,
+        "option_1": 0.10706059088632949,
+        "option_2": 0.21612418627941912
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-77df4ac935b3a68d15d5:pair:0:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.2876753507014028,
+        "option_1": 0.375751503006012,
+        "option_2": 0.33657314629258517
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:5:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7822168819465305,
+        "option_1": 0.048663262240913184,
+        "option_2": 0.1691198558125563
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-92722527baeb0ef53f36:pair:8:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7592425608656448,
+        "option_1": 0.07634505560565075,
+        "option_2": 0.16441238352870455
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-11f1f3ab52b7bdf106e3:pair:7:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7624624624624625,
+        "option_1": 0.0898898898898899,
+        "option_2": 0.14764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:0:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.293,
+        "option_1": 0.3652,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-652725c163017ec7843f:pair:13:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7621572943766259,
+        "option_1": 0.08545127076245747,
+        "option_2": 0.15239143486091652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:1:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.6917458729364682,
+        "option_1": 0.10305152576288143,
+        "option_2": 0.20520260130065032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d60f2b15a1566743136a:pair:6:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.6836,
+        "option_1": 0.1016,
+        "option_2": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-aeb10340c33fe2e900d5:pair:2:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.2832,
+        "option_1": 0.375,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-e95308b88445dc1cb05c:pair:12:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7276915373059589,
+        "option_1": 0.08162243365047571,
+        "option_2": 0.19068602904356535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:2:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.28517148285171484,
+        "option_1": 0.37696230376962303,
+        "option_2": 0.33786621337866213
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-0d799c0ead61965acecf:pair:12:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7312312312312312,
+        "option_1": 0.08598598598598597,
+        "option_2": 0.1827827827827828
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-75041b120d96af260044:pair:6:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7637669592976856,
+        "option_1": 0.06574221867517957,
+        "option_2": 0.1704908220271349
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:6:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7311580422380142,
+        "option_1": 0.10069062155940345,
+        "option_2": 0.16815133620258232
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__entity-alignment-control-v1:family-d41a6109536b8952fe6d:pair:13:match",
+      "question_id": "match",
+      "probabilities": {
+        "option_0": 0.7804975522030172,
+        "option_1": 0.07023678689179738,
+        "option_2": 0.1492656609051853
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

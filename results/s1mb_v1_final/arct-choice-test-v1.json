@@ -1,0 +1,1281 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "arct-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/arct",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:14:06+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.51,
+    "uniform_accuracy_baseline": 0.5,
+    "fixed_answer_accuracy_baseline": 0.53,
+    "baseline_adjusted_skill": -0.04255319148936174,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 15.280657799999972,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "arct:default:test:0": "e957753f1aad39d3241def43ff578dd187c0aba9b5e93ed5019346b30991c03c",
+      "arct:default:test:8": "702b6270894e756e2edaed95ddf0c043fd24f262e4eaebec891a8c88e261dce2",
+      "arct:default:test:10": "0f3ba7e431ec99d64ac79138f00b0b2e26f7c69256f88e02db70b57b33ab2a72",
+      "arct:default:test:14": "f7134f8e6c1a43d52679fed7c8e97ff076da7af70f132b939b74a0bcb76eecad",
+      "arct:default:test:15": "922b6dc00b4f50a5fa7c88c989bf02856431e4a24a603498b822ce3d92538f3c",
+      "arct:default:test:21": "06c545b5213c4e61f848f2c6ea6928c0cd88feed19fbde0e2c78625542d249c7",
+      "arct:default:test:23": "e67db9186662ff2fc725b5bcf7c2df034740b91f5362560e8460d7458d45033b",
+      "arct:default:test:27": "f660aa08fcce6fa1b1c17b31f1d30231bb391e943454d8428ea55192e0af33e0",
+      "arct:default:test:29": "0cc381404e2612c3b9e41c5f5fa01b075e908f0ad2dbc2a1523a6bdbbc0d187b",
+      "arct:default:test:35": "21c6cdaef6ad48f54d3a34ad78ec849c5de1b537621d492bebf86ce2482b51b4",
+      "arct:default:test:41": "14a28c13bb95b599f97ea2f91770e47e2b882457517dbf6470aa22dac2783ce0",
+      "arct:default:test:42": "b2a3adb5ad60db928fff3f0722c86fed3a47fbd9f33161146a7ecda60531b5cf",
+      "arct:default:test:43": "b3bb2c8c8a8f7be7a8244745bb4b30abfe84067d051aefbc5b7f577bed7b9463",
+      "arct:default:test:44": "3681d14f8c4351581ff84e8507342dc17173ea33ae9561125dcf415a3e8ee88a",
+      "arct:default:test:51": "3a1833ff468ffdc9fbddbc255a867fccbb7bd72318f6330deae02d736887b60f",
+      "arct:default:test:54": "1e2a9f9e007c4f8efe1322e6f1de8e3b0937a0621543cc29e0093a9e046fa527",
+      "arct:default:test:56": "25367713ba488d6d044ea73bce7e318b7d56abc6b543f3634ed6559e53a0ba4e",
+      "arct:default:test:58": "6f5103f49db074ed6f96354590039c8810dc90625c3e016f30d2d99d6767e82b",
+      "arct:default:test:59": "e2bf24f5488d7dcaf0b911cc366cfb6da194fb4e8ac66652c967065e53dd7ca7",
+      "arct:default:test:61": "416610fba724ac37a19d3a2323066b1ea75d78991685fb6e40349ab6730889f0",
+      "arct:default:test:67": "f06375203adc2b91fef59d480f974d58bbcbbbdc0e28b1da82431c7b232599a6",
+      "arct:default:test:71": "91f641072fe4c3efc1fe27be74be788128dc9d03e1adac90dc96ffe9640b32e6",
+      "arct:default:test:77": "3419844400e460b707caf75024cb2e12820457b9e624a205155e3f3bfd68d3ed",
+      "arct:default:test:78": "64dbc0dfd19f97b040bf0223e97fe84cbe042cb5466b7e6f64a935a7cbb7377a",
+      "arct:default:test:80": "ba6aaca8e426e6a6be5ee1e6bb23a30aa1e5405d5c6c8f34845509459a81855c",
+      "arct:default:test:87": "efbc327d814dde1b5a60b16edfe9b009f614844ba9cefc202263eb01a5adb59f",
+      "arct:default:test:93": "8a6b18d7bb2aa61be0b4764b91dc213a26485516ace582d3c589181dea18ccd2",
+      "arct:default:test:95": "e334da89284afc546582f77c14d565236cb119688f674eb52c3c741f472a3d03",
+      "arct:default:test:98": "8686b89b1f857957047fc57c2c64082c437e4ca1e2e1f1749ada10baaf2e42f9",
+      "arct:default:test:113": "27292dd76867748155ff4292e3d7e383b64eb157f9a217b335798951f815a9cb",
+      "arct:default:test:118": "20187527872051523ab03a3d2141e4dcae843910649809d745049da5eb256848",
+      "arct:default:test:122": "35939270378a5b7433ec56bf7eaa3771e6a3d9e4d7db0bb9825a0bccbdf73d07",
+      "arct:default:test:123": "519d6c9949257558e78fe19ed4ab5924643c9828d3e43b5923fc8e6f56f7a647",
+      "arct:default:test:136": "cac8f828ec5d8b590d8521c689d2ae54b470d34d5fe262cee3da30d06674a2c0",
+      "arct:default:test:141": "0d2e70dfd604c842bea1db5224971cf130419067539fc648840d56328f8edea2",
+      "arct:default:test:145": "035b651e1550d2e73ba6c6fe14bcdd8aaf84211ff68e44cdce4547b7afcc4df2",
+      "arct:default:test:148": "0ffbd1ca84883dcc57f2a9f550cdfccc57247ccbc14513925feaa0f81dda8be3",
+      "arct:default:test:160": "0cbaff70e17e8802d54e8512a714f9eacb7565174859ed9d9d397d9db53eb9dd",
+      "arct:default:test:169": "cb3fa85d05f515bffa17b96a4f32e6c6834b188d68d4327d5506b1dce3c67b9d",
+      "arct:default:test:170": "d3ec6836d8870a78a220b530f069d726399b8e9e6206426b2cf86486c3f0716e",
+      "arct:default:test:172": "22619689cb665152dc8c84fee825f35156d5175d89600459b739f3f25d7d5616",
+      "arct:default:test:174": "d166bd5e6f408dac8e963bd3c3488c154e58b10e88418b0ef8418b8bfbe64301",
+      "arct:default:test:178": "3b9ae7f1d13e0685cdc6412ad1ec6e6bdd3053837ccbf98ce888d26195005013",
+      "arct:default:test:182": "2f227906bbe719ef0594a7eead7493c51771cbdd2eb1350a86d59fd8d9ff5c37",
+      "arct:default:test:185": "13108f5654aef69bc67ae4098c8c3089359149786c88a4ff6670c755b727c000",
+      "arct:default:test:186": "7691c460e324809a474b1be62026438a27eda97d3a390de4ae675be021b8bac1",
+      "arct:default:test:187": "ae9af5a6d3368962ddd07a0c9a28c11ba0440c0ee0e4a49840d15b9dd43c1f80",
+      "arct:default:test:188": "8f3412924ae94b3dfb9e62d17b28d61213239486ba749cd838f8fc5a7ea2ee22",
+      "arct:default:test:190": "19711a27ae61f2c85804c95c01247aed4635551c93141b2ea612e6f9ce1923c5",
+      "arct:default:test:193": "724bc10ba98d4a5b1252bf1edab26591c30ffb1240f5fdd2a49ae25929ddb1e3",
+      "arct:default:test:196": "e4acfc8f40d28dc860e7e65fa44f77198b960039d5f154600dfc31c566b9e21c",
+      "arct:default:test:200": "275d227dc8b73d27344cbe80c776cd1059b34ad063b617c3635ffe8320e2c7ae",
+      "arct:default:test:207": "e7db03fb8a6e8528b8d7723aaac08da5f8e88f96dc1d02e83c8ba0c5e3b2547d",
+      "arct:default:test:209": "6df42fc5d8b313ad7d501b4b8df170beb915d8267049391b8f9c19664dcab13d",
+      "arct:default:test:211": "fe1e9332a78b3a6e90639892b16a6556e0c453932987d37ae016168651f46ee6",
+      "arct:default:test:212": "3e85680592c995ac9200beb2cadc8b5fdc5a93f0374adeb6c3fe4f66c9a387b5",
+      "arct:default:test:215": "3ef5054b549965adba82e31760242d0547cfab59f147297b1d0fdca4f9fc5599",
+      "arct:default:test:218": "f72f1e80a229e86a2c3d531292641907073d3832a967b765991028fecc7e04ea",
+      "arct:default:test:220": "4ee58ca1cd69e96fab6cd81a7c77750fd45da69d7cbe69de22eba897fc4443bd",
+      "arct:default:test:221": "2ed9db6899ab85a0d5a7cb21186889f510d38470174eae4ea1e850a6d654f7d4",
+      "arct:default:test:228": "629a02b2dadb1652f48cdb8bc601a60ba858e06498d581da16575c86bf49a538",
+      "arct:default:test:229": "e47274de9f5166e32f477a3b6ee516da9f7c09343c58571c8a4bab127b8bd23a",
+      "arct:default:test:230": "4b1879852fc4f13c0103226b3f2ee45b81450d6417ddbcbbef9b71b633db506a",
+      "arct:default:test:239": "30ba0f2d7503879460d569c077f6301d075ec9fc3c0f5ac9ca54be4117e7b79b",
+      "arct:default:test:256": "6e064826f55b48f4d9b39615d2bcb658ad27b132f54f14d4139140ee5550624b",
+      "arct:default:test:259": "f6b85fc057c0f13e66a723d7eaf8f35bcdd6cdbfc7fb7f1d957ecceda8cf246d",
+      "arct:default:test:265": "afafd1991ba9accb66d7bbd29ca8bfda9527eaf5045faa6ba611baf339d95724",
+      "arct:default:test:277": "36ad97068239bb7a1749d75832a41b4aebd334530cc567fe837a9a6dbaebf54b",
+      "arct:default:test:278": "8008f29a114220d4b88ace73784efa922aa4cc64b03f50ab3d24e1c185292db4",
+      "arct:default:test:280": "2d671d7fa0a322234e8149c55d1f0dedb434a547dbbb21ae31f0d3bcc383c40e",
+      "arct:default:test:284": "cfc353f5beeeaea6c5d2a9b70e474db60c0ae3cafba946511d239495e7a59fb4",
+      "arct:default:test:294": "acb2d9f924b4b9493002ac077816727831c73efd46aad77c3d5f2ecd1793be0c",
+      "arct:default:test:302": "98d0c3b125e7d70f0117a7c84130d17af89d250c8e0b0261a588dfa30cfbeb1c",
+      "arct:default:test:304": "751568fd709d3268c981deefe5a8288a3002af1ec5187c8cda119f64d4e34f18",
+      "arct:default:test:306": "fd3c1814b0011265cb0c56fc55b1be29babe5129d84fdb3ea6f6570236afc8a2",
+      "arct:default:test:307": "14ad1a39f8847ee67ea21966ad33c78760fb4a058ea0485526beddafde35e14f",
+      "arct:default:test:323": "d6df9be28c5475963335d6246f46b803dcc3ea2c040e6a496ea249e17425c031",
+      "arct:default:test:329": "6ea4b09ae9a6052d156b7081e226d28bc8861adee3e9957774dc183a935be83a",
+      "arct:default:test:330": "f710944d24439344ff394d5324547d8cd18fbe2ca47081cfe5dc64c550a5ddad",
+      "arct:default:test:332": "58df09c10cb51c41c31d1473d3acf93df02264b4dc1bf4b6dfed266f524c4e46",
+      "arct:default:test:336": "3d73d714f05938424f8a3695aca0496773ada69492452ec67bcb2c12d8413692",
+      "arct:default:test:339": "157c06c521c3a344a4cbdc053ad807fb7422b6da891d48279c03ce661aac0613",
+      "arct:default:test:340": "cb5bb6f2612e50a4d6f394be66c9bb7012118606eb774766bbf4a811f61d195c",
+      "arct:default:test:354": "0b1e8629439e4998baaa2644d913b9a34f44e736500fd404d1826c9e90926088",
+      "arct:default:test:355": "821ba9a5adbec4eae55d7f425133817ce6997cc935eac4fb66a20a974c0868f4",
+      "arct:default:test:357": "49e57e96323a6472d0ab91bbd5d294f6b0463f7c6f3bf0bbed07a950ded86ef5",
+      "arct:default:test:362": "991e4ae0ee643f1437aff8ae61d0d98de4851f20f070b247b229195fd70c9403",
+      "arct:default:test:367": "55cadfca08e964d1ba9d1d057562970e26fe5c641b34149bca950826523c3b09",
+      "arct:default:test:379": "9ae2a552d9d115efe5ae406428b00e9d1d8e40ec930ee619649fb42f89b8836f",
+      "arct:default:test:382": "6570f8babd36ce88fd5d8baafedd939b9f58c39829967fccaf06247b45ecf847",
+      "arct:default:test:389": "220d19d67e13e03f9f1389957eba003f42b2ee820a684a52621988da64383105",
+      "arct:default:test:395": "65828f7b0581b2c6463063d36705149c02fd89cf9f463ca61dda57ab88e746ae",
+      "arct:default:test:397": "ebc603e6aad2c21fb71246d3f7cce999a4fd711d605313fb513341d7a2e4fdd3",
+      "arct:default:test:398": "67bd94ade1d888f6dd3ab11697759bc0f30bc68f207c674d5497e977549c50f6",
+      "arct:default:test:414": "53bf541e1e6a696742609903d67f972e952df6ccfb377542324022f72e1a9354",
+      "arct:default:test:417": "3870a576bba850b6827d34876821eebb4b028938c4af530749bdb14aa08dbe59",
+      "arct:default:test:419": "0d7e7ca69033cb89c822390c6a7ace962ceabd979e18a9643cd6f40c2f79b9bc",
+      "arct:default:test:425": "b26f63617334db0af8982b85cea884bdcc08ce70daa2a10035ed578ebfb7938a",
+      "arct:default:test:427": "7b639e8b58785adb48dec5c100bebd350e992e8adb73db73fefcf60830e4d74b",
+      "arct:default:test:429": "97c9159ebc0ca03a29026900e5e55836b6016ead5f506d51b9e18c162a43f02f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "arct:default:test:0",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4219,
+        "1": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:8",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.418,
+        "0": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:10",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.39960079840319357,
+        "0": 0.6003992015968064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:14",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.3516,
+        "1": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:15",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5703,
+        "1": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:21",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5156,
+        "0": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:23",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5273,
+        "1": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:27",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.582,
+        "0": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:29",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.6289,
+        "1": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:35",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4531,
+        "1": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:41",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5742,
+        "0": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:42",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5,
+        "0": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:43",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.2969,
+        "0": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:44",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.543,
+        "0": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:51",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.34111776447105785,
+        "1": 0.6588822355289421
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:54",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5469,
+        "0": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:56",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4414,
+        "1": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:58",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4492,
+        "0": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:59",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5312,
+        "1": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:61",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.651062980337359,
+        "0": 0.348937019662641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:67",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.2852,
+        "1": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:71",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.31776447105788425,
+        "0": 0.6822355289421157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:77",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.6328,
+        "0": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:78",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5234,
+        "0": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:80",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.31776447105788425,
+        "0": 0.6822355289421157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:87",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.30721442885771544,
+        "0": 0.6927855711422846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:93",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4766,
+        "1": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:95",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.3281,
+        "0": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:98",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.37771766356076547,
+        "1": 0.6222823364392346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:113",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4688,
+        "0": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:118",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4844,
+        "0": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:122",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.38792415169660677,
+        "1": 0.6120758483033931
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:123",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5352,
+        "1": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:136",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4453,
+        "0": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:141",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.608183632734531,
+        "0": 0.3918163672654691
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:145",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5,
+        "1": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:148",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4805,
+        "0": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:160",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5117,
+        "0": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:169",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4492,
+        "0": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:170",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5625,
+        "1": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:172",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5273,
+        "0": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:174",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4883,
+        "0": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:178",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5742,
+        "1": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:182",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.40738522954091816,
+        "0": 0.5926147704590818
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:185",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.30721442885771544,
+        "0": 0.6927855711422846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:186",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.661456767858932,
+        "1": 0.338543232141068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:187",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4297,
+        "0": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:188",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5078,
+        "0": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:190",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5469,
+        "1": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:193",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.3711,
+        "1": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:196",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4219,
+        "1": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:200",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.3633,
+        "0": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:207",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.3711,
+        "0": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:209",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4297,
+        "1": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:211",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5117,
+        "0": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:212",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.6588822355289421,
+        "0": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:215",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4102,
+        "1": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:218",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4609,
+        "1": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:220",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5352,
+        "0": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:221",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.6367,
+        "0": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:228",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.20389610389610388,
+        "0": 0.7961038961038961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:229",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.418,
+        "1": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:230",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4453,
+        "0": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:239",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4688,
+        "1": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:256",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5508,
+        "1": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:259",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.17107107107107108,
+        "0": 0.828928928928929
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:265",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5781,
+        "0": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:277",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5625,
+        "0": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:278",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4492,
+        "0": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:280",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5312,
+        "0": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:284",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.2812,
+        "1": 0.7188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:294",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.6445,
+        "0": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:302",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5312,
+        "0": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:304",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5391,
+        "0": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:306",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5965069860279442,
+        "1": 0.4034930139720559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:307",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4336,
+        "0": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:323",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.582,
+        "0": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:329",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5703,
+        "0": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:330",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.10370741482965931,
+        "0": 0.8962925851703406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:332",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5078,
+        "1": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:336",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.3594,
+        "1": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:339",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4531,
+        "0": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:340",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.5156,
+        "1": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:354",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4258,
+        "0": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:355",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.6406,
+        "0": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:357",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.6144674882276324,
+        "1": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:362",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.33463580803526705,
+        "0": 0.6653641919647331
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:367",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.418,
+        "1": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:379",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.3450444156103404,
+        "1": 0.6549555843896596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:382",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.38553251177236747,
+        "0": 0.6144674882276324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:389",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4219,
+        "0": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:395",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.4297,
+        "1": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:397",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.3672,
+        "0": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:398",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.2563871355575594,
+        "1": 0.7436128644424406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:414",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.6719,
+        "1": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:417",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5391,
+        "0": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:419",
+      "question_id": "warrant",
+      "probabilities": {
+        "0": 0.6367,
+        "1": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:425",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5781,
+        "0": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:427",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.5586,
+        "0": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arct:default:test:429",
+      "question_id": "warrant",
+      "probabilities": {
+        "1": 0.4688,
+        "0": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

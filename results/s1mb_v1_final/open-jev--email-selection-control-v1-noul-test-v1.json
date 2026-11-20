@@ -1,0 +1,717 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--email-selection-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__email-selection-control-v1",
+    "split": "test",
+    "case_count": 52,
+    "decision_count": 52,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:41+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 52,
+    "expected": 52,
+    "succeeded": 52,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.28425208846153843,
+    "accuracy": 0.5,
+    "positive_recall": 1.0,
+    "specificity": 0.0,
+    "precision": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.6666666666666666,
+    "true_positive": 26.0,
+    "false_positive": 26.0,
+    "false_negative": 0.0,
+    "true_negative": 0.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.13700835384615373,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 9.351554799999576,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:0:target_present": "adbd69a446321a774afcccc9c3314307c830e1f5b218f8f1d5b9ed62e4cf5407",
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:9:target_present": "effd67dc934dc7556b0b71d6c43841e31d409cf6ccb26bbcef9aa847eaa048c7",
+      "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:12:target_present": "7867376c92f487053b8d0deec5fefc4bb58a307fb08088fc08998f00278adb11",
+      "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:3:target_present": "b331dd618750f899249d6132455992e51b40460db0202bb480062a8a1f8c9348",
+      "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:4:target_present": "c9352a1806518cf9f84b43ea14fbc08c924b1e81132d315b2c458a044c753357",
+      "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:11:target_present": "adfee175c71b7be2eea5d67905fd9c377133bd409e0c0fdcf673f108264618b8",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:0:target_present": "1908bd711609d7354834b3f50f23c0995fdafa9ac78080d2cd681dfd539d8e91",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:1:target_present": "b9afdfe2151f5ec91e870749459261b5dda092c6b69c3c18e31d16afba56fb85",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:4:target_present": "edf592ddd4815078bb12b031fdac867d8e2d16272f0fbbdf52dad5dc33b4fadf",
+      "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:11:target_present": "bb2a6571bf0991d3e1e5bb0670c75202c447b7ba5ef9f9575d61e9dcf1b75973",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:3:target_present": "5902594f7468988b1c8995826ef145021b7345dc22da610785a837a33446378c",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:6:target_present": "556831adc188dc865d33ec5d32a17048af1f2dc4455b4f4759ea6f24d9257ef6",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:10:target_present": "34bf3e2f839fc23d936ee1f59ea389ecd67017b8ff2f5da82877c2a7338b9ab6",
+      "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:11:target_present": "c243b49deaa3cf990b356f00b94cce9cd9e2220fd361f09cb2a482f1923c7a8d",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:2:target_present": "cdd1db133dc8a8a6fe290b815bd5fee8b59307fe24e0a5c51abd4edcc1bf9338",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:3:target_present": "50f48d17c1adcb26994608a8d795cbfc19ed76f70b3e8c59251a25faab94c313",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:11:target_present": "9f9431e2ed740d38ea5749d4e07fd1ac958e945cf2b5c9bf864074a9e0eec18b",
+      "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:12:target_present": "8498daa37c06f936835d6f4831fa4eabb90cd872a5198ebfef8a2b7439c8b202",
+      "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:3:target_present": "08dc23d24439b883451cff3307486280453ab77692dc9e9a930a4ff2573cf4c5",
+      "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:6:target_present": "f3e6075bc993d524a9c83ebd81bd047381341015497b3d2c8771f82fe71ad773",
+      "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:10:target_present": "e5d7017d902671e86a48beb85239dbc8c72b61b71dc79893f76abc575db80c95",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:4:target_present": "a6dc9a766ca35f0e0dec75d609ec383df2a5c9f769e8ae7dd47cef43452a2a38",
+      "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:6:target_present": "153439d2aa17a1bf36f29750a3b98f4f6a88094dc1d349e4215ba99517cce166",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:3:target_present": "48f9459ccb2aef1d45beebbde70c33dfa2075b4cf9a5dcfd8ce480f623711b6b",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:6:target_present": "c44d7918c37ef3630779ecb87209921fb0dfc0165ce66641259130589f8d075f",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:8:target_present": "70164982296fc0d669ebbd5560ee1151c6c153643508e591dac0eae3470bc805",
+      "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:11:target_present": "61c54a728a9912ac754a657dfb632982a50900b5340750302ca5a4a3d70213fb",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:0:target_present": "e4e7f16a6eff8377ced0fe6ff559a01f2704602dac6cd14ca38090080ab488a9",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:5:target_present": "f34b06b1be55a59d8d5f88e6dc855bc2fbc55e36d4e3c411cddba01dd9330dd5",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:10:target_present": "122a21797d45b66cbabf7e26ec52cb4e5ecd9333a005f046b963cdd67d69a872",
+      "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:11:target_present": "f96995534ab6a46cbc0f6820d8ac40d487b0a84c8829a20123b0fa5679a101bd",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:5:target_present": "dc76a7dd37295bd99d595d22f0e0ff3b6dee39e38699ba857ee26e1d2740de3a",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:8:target_present": "52c3e63249d2537fd8c63b2e379ca45479d7afd64d7b557df101ff5e37641f7a",
+      "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:11:target_present": "8f9d457f2a06ef5696c301892abe3f65ec6faa61db4325d0d7735b8ad49ac61d",
+      "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:4:target_present": "7630120d394c13ff9d9006ae74f00a8c37d7cd9bc878988b2d5b7de185647caf",
+      "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:5:target_present": "db00346fb8cefcb6531348ee404a2590a9d65016aa219130db90c1a1bda8c7dd",
+      "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:11:target_present": "8dcfc4f6f0be846bd7d229ed7f90cfe19f2404b01fa48a9c98625c79465608df",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:3:target_present": "e3611ed0f2fdfdb0212473e0e6ef41cf86ded775378d13402b7bc77f1a7a1416",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:4:target_present": "5042b9f24054815ac44ac57830563d12059e7d3b874b631bd90c40e0029c77d3",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:6:target_present": "d978667c000f5ad24bf0c00736edc75bbb15fe608dbcbdc232099780d5516aff",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:7:target_present": "b2f12be83bf80b586b5d6c8f58141c3b1c72f51f6e109dc509efc03a3cf65946",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:8:target_present": "26cad85f9643446c093525e3171448ac57243939e0172a4ec8da5266c68741f6",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:11:target_present": "7a2df8ca82dca0e366af7b71dd80a7c0db92145dc39b0edc5c0184dc272d606a",
+      "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:13:target_present": "c99900cff681547a63210ea0ae6e02d0d26c05851e54be597b3d461e4ccba4ad",
+      "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:1:target_present": "7d9b80784551c76ebb465ffcb113c49d92614264de73afe61f9cd073eb8742b8",
+      "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:8:target_present": "609c880d4268b0afb0a04092108e1ecab56a4bb93ed1a71f8712efb76caff348",
+      "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:11:target_present": "8953f4a028fdb5cfdb330250f7803055b0370bde956dc72b06a1da1e69e549d2",
+      "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:4:target_present": "4f7178beeca6de8b3c4ac628a2e6ef715b3243acaeb18f90d7c1420b813f52fc",
+      "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:10:target_present": "f05a5245965df0d73ea1d985dff4a9fb463a3789cd429a1fce3b8c327c844184",
+      "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:3:target_present": "2d5216cbe72b9497ca0e64a42b0fd0160b7daa2491934c9372616c99c6b154df",
+      "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:8:target_present": "72757d12d86d2a835790f8629a18145a27186a01f6fe009f8590e08ecb120d8b",
+      "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:9:target_present": "ae6edfc8ed3241675622a8877c97b3f82d11441cae855e17b35585cda4347f89"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 6656,
+      "output_tokens": 52,
+      "requests": 52,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:0:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:9:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30469999999999997,
+        "true": 0.6953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d81c27cb354218d1ced7:document:12:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-cc5dcd3f320dcb84d383:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32420000000000004,
+        "true": 0.6758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:0:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2812,
+        "true": 0.7188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:1:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.26949999999999996,
+        "true": 0.7305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4db98c88b6fd2ae16e0e:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2539,
+        "true": 0.7461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:6:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.26559999999999995,
+        "true": 0.7344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:10:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-d013a8a80dfa5ee437bb:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:2:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-8d473b977827d7411e8a:document:12:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-eec9a0cde669236b068b:document:6:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30469999999999997,
+        "true": 0.6953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4e4917e77c6ca8654909:document:10:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.3086,
+        "true": 0.6914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-238620d958d66aca1d01:document:6:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:6:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:8:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-b5755b5d832b7034d075:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:0:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:5:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:10:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2812,
+        "true": 0.7188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-ce395efa83d51e14c50b:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:5:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:8:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-f3ce63c56fd34426ef73:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32420000000000004,
+        "true": 0.6758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30469999999999997,
+        "true": 0.6953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:5:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-c455d9f60afa1cef7c96:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.26949999999999996,
+        "true": 0.7305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:6:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.26949999999999996,
+        "true": 0.7305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:7:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:8:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-3c0b149d62222996921e:document:13:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:1:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.30469999999999997,
+        "true": 0.6953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:8:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-4575dddf4ef8a2905929:document:11:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:4:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-6a2096ab5c9ef5280f23:document:10:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:3:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.25780000000000003,
+        "true": 0.7422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:8:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__email-selection-control-v1:contact-family-fe0ce872041b2b2d6f0e:document:9:target_present",
+      "question_id": "target_present",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

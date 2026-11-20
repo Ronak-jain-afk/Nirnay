@@ -1,0 +1,319 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--customer-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__customer-control-v1",
+    "split": "test",
+    "case_count": 17,
+    "decision_count": 17,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:39:49+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 17,
+    "expected": 17,
+    "succeeded": 17,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.8823529411764706,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.3235294117647059,
+    "baseline_adjusted_skill": 0.8260869565217391,
+    "baseline_adjusted_score": 0.8260869565217391
+  },
+  "elapsed_seconds": 0.9928703999994468,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__customer-control-v1:customer-control-v1:42:11:category": "e16858c8d8f779c618800691ac5dbfdad179feea08dbbe99f3155982bee02e12",
+      "open_jev__customer-control-v1:customer-control-v1:42:25:category": "a7973ed316422bbf8a017cf58fa9c4e6c895813dd6623bd648ae3d3c581d8004",
+      "open_jev__customer-control-v1:customer-control-v1:42:112:category": "99e450822ac02cbf7d296634cebfba5ae1107ac334c800397a28c804df033cf8",
+      "open_jev__customer-control-v1:customer-control-v1:42:152:category": "5c834b87f23a56cf24257b0579f3358e53e6352bd40cd34dccf667e72d5aac0e",
+      "open_jev__customer-control-v1:customer-control-v1:42:176:category": "f803465d312ce92d469b68be0a7592ce7c09868b910051993447e37de5cf07f4",
+      "open_jev__customer-control-v1:customer-control-v1:42:186:category": "ab2b4b596ad6cff662a8aa116e391705ed56c79911da2ffb767b8f92fb62dc33",
+      "open_jev__customer-control-v1:customer-control-v1:42:366:category": "1716feb78efb7d81e96a9059ee5f34df895830414d78a4addbcc257527dab4ee",
+      "open_jev__customer-control-v1:customer-control-v1:42:479:category": "f05e54c8442971fe38141b1af381f73dee1e7326c9342bec62765772e09f4144",
+      "open_jev__customer-control-v1:customer-control-v1:42:511:category": "b56bdf0af01408a260284115398b0a3b71f6c7d4ec59ff99cf4bce843b665a64",
+      "open_jev__customer-control-v1:customer-control-v1:42:519:category": "a5b1ab35c454a816ab6b05eaff86ea0a59d0ae81554004ebad1bb88a2b4df76c",
+      "open_jev__customer-control-v1:customer-control-v1:42:688:category": "fd52437880d54be4d36eb77addce92937c8822a2599683beba6d14f6401025ad",
+      "open_jev__customer-control-v1:customer-control-v1:42:691:category": "85120a70623153b34c073b2607228363042a9b9fac00005ba8f0a649d5b294c2",
+      "open_jev__customer-control-v1:customer-control-v1:42:757:category": "e2c09a3f232f806e65bea4ed5355bf75ca35d68a6c19aeff01689ff65d7fe062",
+      "open_jev__customer-control-v1:customer-control-v1:42:781:category": "b09484faeefb62f22b92746b4c912cc253ea8453e51048ec2ef243f94ab70697",
+      "open_jev__customer-control-v1:customer-control-v1:42:928:category": "e7c059c2420a8a3de4eeecbf06846c27e6cc8685e4b75988a40b30d2443d1c58",
+      "open_jev__customer-control-v1:customer-control-v1:42:952:category": "b26935d3ab94980e5dea19c24ef2df8f752287001325104070960debd7b61ad8",
+      "open_jev__customer-control-v1:customer-control-v1:42:964:category": "88724df4269dee980c48331c9de550b04b460430024b2cbe87e7c1634d0a87c2"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 2176,
+      "output_tokens": 17,
+      "requests": 17,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:11:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 9.998000399920017e-05,
+        "option_1": 0.0,
+        "option_2": 0.9998000399920016,
+        "option_3": 9.998000399920017e-05
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:25:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0,
+        "option_1": 0.0,
+        "option_2": 1.0,
+        "option_3": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:112:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0,
+        "option_1": 0.9999000099990001,
+        "option_2": 0.0,
+        "option_3": 9.999000099990002e-05
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:152:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0,
+        "option_1": 0.0,
+        "option_2": 0.0,
+        "option_3": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:176:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 9.985022466300549e-05,
+        "option_1": 0.0,
+        "option_2": 0.9985022466300548,
+        "option_3": 0.0013979031452820768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:186:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.00019994001799460164,
+        "option_1": 9.997000899730082e-05,
+        "option_2": 0.0,
+        "option_3": 0.9997000899730081
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:366:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 1.0,
+        "option_1": 0.0,
+        "option_2": 0.0,
+        "option_3": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:479:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 9.997000899730082e-05,
+        "option_1": 9.997000899730082e-05,
+        "option_2": 0.9997000899730081,
+        "option_3": 9.997000899730082e-05
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:511:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0,
+        "option_1": 0.0,
+        "option_2": 9.999000099990002e-05,
+        "option_3": 0.9999000099990001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:519:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.6357463804293559,
+        "option_1": 0.0012980529206190713,
+        "option_2": 0.00019970044932601097,
+        "option_3": 0.36275586620069894
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:688:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 9.998000399920017e-05,
+        "option_1": 0.9998000399920016,
+        "option_2": 0.0,
+        "option_3": 9.998000399920017e-05
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:691:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0,
+        "option_1": 0.0,
+        "option_2": 0.0,
+        "option_3": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:757:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0005997001499250374,
+        "option_1": 0.00039980009995002505,
+        "option_2": 0.003398300849575212,
+        "option_3": 0.9956021989005498
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:781:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.0005994604855629931,
+        "option_1": 0.49175741832350883,
+        "option_2": 0.5073433909481466,
+        "option_3": 0.00029973024278149657
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:928:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 1.0,
+        "option_1": 0.0,
+        "option_2": 0.0,
+        "option_3": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:952:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.00019994001799460164,
+        "option_1": 0.515445366390083,
+        "option_2": 0.48425472358292515,
+        "option_3": 9.997000899730082e-05
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:964:category",
+      "question_id": "category",
+      "probabilities": {
+        "option_0": 0.4603935670762161,
+        "option_1": 0.0006992308460693237,
+        "option_2": 0.5385076415942462,
+        "option_3": 0.00039956048346818495
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--ir-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__ir-control-v1",
+    "split": "test",
+    "case_count": 17,
+    "decision_count": 17,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:57+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 17,
+    "expected": 17,
+    "succeeded": 17,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.29411764705882354,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.2647058823529412,
+    "baseline_adjusted_skill": 0.04000000000000001,
+    "baseline_adjusted_score": 0.04000000000000001
+  },
+  "elapsed_seconds": 1.7286760000006325,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:17:more_relevant": "e6c851b60567b048c0e959461e638e8030d651b1c5c2aade76e0e20cb7f836de",
+      "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:20:most_relevant": "bf8d8da0d0db89b54deb965d1593ca5b01cf4f879465d2fdb124b61d588ed0dd",
+      "open_jev__ir-control-v1:q-417de1dce3683a37:20:most_relevant": "39a2bceceea673c0f55040a8afbba79a104f1846e0d6401579727629047a0d09",
+      "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:17:more_relevant": "17bb068c07dd051a2593fb75c5c9c7181dcbffdeca78c16b8a6ebca36f6faf13",
+      "open_jev__ir-control-v1:q-46d5003b2672731a:20:most_relevant": "e99429b244ba187309767a115ae52378d29cb9cd61618ddc01382aa42d7f0158",
+      "open_jev__ir-control-v1:q-559f1366098336e9:18:most_relevant": "c5c31a0ca6ffad00aae6bbd240aba3fa380ef9d09c5ee4f9902ee5a1d2ff5b2b",
+      "open_jev__ir-control-v1:q-bd87a6b8f45afc9c:17:more_relevant": "696a3ee8a14258c716cb4fca5de591f57768cb883f940d5748c92944691066d4",
+      "open_jev__ir-control-v1:q-6922565138965545:20:most_relevant": "126ed4b29ad1ff467fda706913f0abacc8e048297bd65c5caa873083cbf5542c",
+      "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:20:most_relevant": "159b5e82bf2e6653dfeb6adf44c6a688c22f0e77e2cb007969a3dfc53c68378f",
+      "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:19:most_relevant": "8bb9806576a0c7d93708ebf25fbef27df45bf553df76d1aa038eba9e04efd0c7",
+      "open_jev__ir-control-v1:q-9c6da545a0141bfc:20:most_relevant": "90e6d246b4676c7af8a8d2a001be2d8a5a6f719780617453cf3bb9455ce97397",
+      "open_jev__ir-control-v1:q-2895c6dade496579:18:most_relevant": "ba865a9c6b2c25b03ef230482bf4567b82e8fbcda8e9a049e0dd6d7fb69e76ea",
+      "open_jev__ir-control-v1:q-11aacd01ac0af2f9:19:most_relevant": "3bbb9d10b2768450f1cd79cd7cad959310d4e29cbb6041d0eaa66beda342ae83",
+      "open_jev__ir-control-v1:q-11aacd01ac0af2f9:20:most_relevant": "b9582a7364f2949d44d2faee05ff587d2e9b71208a22f908529dc00509c685db",
+      "open_jev__ir-control-v1:q-79ee1d06a67a51ef:17:more_relevant": "0f1b8c76181c78e9c277a048f349eb0ed5441272fcc02d12e01ee0b0dfc5b41b",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:18:most_relevant": "1d2cd9b21177862fb7de01205e49a7e2f810421b782bf32b4a11170fc13ddc93",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:20:most_relevant": "9c1c827e807c19d0e3c5335347e9ce54b63db085cf2bcca7add7560160f4e659"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 2176,
+      "output_tokens": 17,
+      "requests": 17,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.4961,
+        "option_1": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-b1d8ca7aaa929b56:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.15918408159184083,
+        "option_1": 0.16108389161083891,
+        "option_2": 0.18848115188481152,
+        "option_3": 0.17678232176782324,
+        "option_4": 0.14258574142585742,
+        "option_5": 0.1718828117188281,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-417de1dce3683a37:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1583425082574317,
+        "option_1": 0.160344309878891,
+        "option_2": 0.18766890201181063,
+        "option_3": 0.17886097487738964,
+        "option_4": 0.14372935642077872,
+        "option_5": 0.17105394855369832,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.4961,
+        "option_1": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-46d5003b2672731a:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1590568488360476,
+        "option_1": 0.16195424118293536,
+        "option_2": 0.18633230092916378,
+        "option_3": 0.1775402138075732,
+        "option_4": 0.1453691677490259,
+        "option_5": 0.16974722749525428,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-559f1366098336e9:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2305,
+        "option_1": 0.2383,
+        "option_2": 0.2734,
+        "option_3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-bd87a6b8f45afc9c:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.5,
+        "option_1": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-6922565138965545:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1572,
+        "option_1": 0.1602,
+        "option_2": 0.1875,
+        "option_3": 0.1787,
+        "option_4": 0.1455,
+        "option_5": 0.1709,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1580577480267759,
+        "option_1": 0.1609551403736637,
+        "option_2": 0.18833050254770708,
+        "option_3": 0.1795384154261165,
+        "option_4": 0.14437006693975424,
+        "option_5": 0.16874812668598263,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:19:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2305,
+        "option_1": 0.2383,
+        "option_2": 0.2734,
+        "option_3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-9c6da545a0141bfc:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1572157215721572,
+        "option_1": 0.1572157215721572,
+        "option_2": 0.18751875187518752,
+        "option_3": 0.1787178717871787,
+        "option_4": 0.1484148414841484,
+        "option_5": 0.1709170917091709,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-2895c6dade496579:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2295,
+        "option_1": 0.2373,
+        "option_2": 0.2734,
+        "option_3": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-11aacd01ac0af2f9:19:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2295,
+        "option_1": 0.2373,
+        "option_2": 0.2773,
+        "option_3": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-11aacd01ac0af2f9:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.1582,
+        "option_1": 0.1582,
+        "option_2": 0.1885,
+        "option_3": 0.1797,
+        "option_4": 0.1465,
+        "option_5": 0.1689,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-79ee1d06a67a51ef:17:more_relevant",
+      "question_id": "more_relevant",
+      "probabilities": {
+        "option_0": 0.5,
+        "option_1": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:18:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.2305,
+        "option_1": 0.2383,
+        "option_2": 0.2734,
+        "option_3": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:20:most_relevant",
+      "question_id": "most_relevant",
+      "probabilities": {
+        "option_0": 0.15921592159215922,
+        "option_1": 0.1611161116111611,
+        "option_2": 0.1855185518551855,
+        "option_3": 0.1777177717771777,
+        "option_4": 0.1475147514751475,
+        "option_5": 0.1689168916891689,
+        "option_6": 0.0,
+        "option_7": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

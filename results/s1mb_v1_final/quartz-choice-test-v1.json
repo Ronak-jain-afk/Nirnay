@@ -1,0 +1,1281 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "quartz-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/quartz",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:43:41+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.56,
+    "uniform_accuracy_baseline": 0.5,
+    "fixed_answer_accuracy_baseline": 0.58,
+    "baseline_adjusted_skill": -0.047619047619047394,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 5.389284299999417,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "quartz:default:test:10": "43a87acf601268a71190bfbcfbf5f5106a496699701d90152be12cba28493f1e",
+      "quartz:default:test:26": "3646e6a9fed5e7c590bb266b30c289d30c5bee76a197b547ef080d233ff9c426",
+      "quartz:default:test:37": "00672d0da9ff1651e1838317d14e04a7795456a000bc0a11247c7b64eba36c42",
+      "quartz:default:test:44": "f92e2d4cc3cd990bdf2b0543e67f8e90725670138d5c612faf74061532be922d",
+      "quartz:default:test:47": "be52e44ecf758bdedf077cc7ce69c3825680f47d39034427110a92f23f770582",
+      "quartz:default:test:49": "a8d8b470b79c7b765292314356e44f4179bf6cd8e81f66b4a543d4efc9c5e979",
+      "quartz:default:test:54": "a48e4a68fd3ff7ae1dd5afa06e660e9d04d9ea1f2956fdf503433e96c60d58a1",
+      "quartz:default:test:72": "e5bb57d3901484e8aaac5496b097d200120568450181d883d3d7a269d46a7adf",
+      "quartz:default:test:75": "2df2c6f8dbacf13dfde1c9c8fa07cbef64f48cf789995c67482f8d94f35fbb4b",
+      "quartz:default:test:80": "bea8eace8f0989044a71bafe18eaf4c54b92b5b617682fd4557f3a0fe5e1f9b9",
+      "quartz:default:test:85": "e51f371c0f75266e1eeeac84b49bd571d622738511ba8a0e202afc25fc56c756",
+      "quartz:default:test:97": "4f4baa21dadcb498234161742610fde32f02bd557d57e190d7f16a7e7b2d0860",
+      "quartz:default:test:100": "95f170d3e0cd29d8c3954ff7997cf4b079beae0f20eaf4b89ca10f07d8ce1fe6",
+      "quartz:default:test:102": "c98b555f0356a1d8c9b8c4f2b2a480a8d6cf65aea964f887988b43b17c1317dc",
+      "quartz:default:test:104": "4454a3b931a1218913d9aeebf842ad784d66bdc9712bb3958546b561aa434136",
+      "quartz:default:test:109": "2b7ede1cd8b1c9e89c5a667eab80077f2787e9c48327e0340e248c3b3a82d6e6",
+      "quartz:default:test:129": "2a264146243914ad86d69ca22fba1124055026927a7d9bd19b48d38cc9c34fa8",
+      "quartz:default:test:135": "e208d2b02cf417bb39a7e784af3687bde6a78ccda4da7f439e62dc4614de0640",
+      "quartz:default:test:143": "ea6132e807d6df8a8c5191e2dfef2418502f7928bfdbac5acc2af38566528e47",
+      "quartz:default:test:164": "52e3c97a910951e580ac6d06af4413bb9c4aaca8b3b36686ce7b163dbacb4708",
+      "quartz:default:test:176": "10876c660e3894083ee5cd5a9ad0a38aba4db50af3c9364854a60797ccbf6d4f",
+      "quartz:default:test:182": "4c5ffae0e892218702ef7043dd9086400a330127a3828217b02206468fe17a32",
+      "quartz:default:test:197": "8946d953a9b1910b3b33f96227e062ae3b5fe0e3dad77c25bed963e60ac8f689",
+      "quartz:default:test:207": "bdedc2a102e7514524672ea5f1cbd14bb2588d40d4c75f6a618bd7b66697f4f6",
+      "quartz:default:test:208": "dcd5333ce5538f40bfce76d1c9c862943b23b54a941e08de7145bd7c6569bbb3",
+      "quartz:default:test:213": "7f9ee264663fa768bbaae0b9e3368088e2f5b7905e9b3b00a14f1e7f917f4c3e",
+      "quartz:default:test:222": "2f74b4dfe7e074ec884bf63289a66307398188adb16d42922878dfda83a7a72a",
+      "quartz:default:test:235": "92de68df0d5a60489e72f3992779c26f377412d7cfb11ffc8fef85b67381faec",
+      "quartz:default:test:238": "b93192346c2018f6ff69bc3048becf62b497f6a3ed700b7467efdf1b699317e9",
+      "quartz:default:test:243": "f7c1a07f18385dba97b8ef5a20b787aeae9f1e15cc29824448a4e43690e32fe9",
+      "quartz:default:test:256": "66f0998a34a18b63694229bcd77a0f8ba5163c8fea44f1374f04ece527fc8564",
+      "quartz:default:test:261": "1ca3c685d75f5cc8431a1d122a41498ccaf582038e1b1d4b91fbf0c6451326d8",
+      "quartz:default:test:262": "715abe90f9c9c9238ddf3b105aabf09564f7a5be6a37b1836a360aaaf810044e",
+      "quartz:default:test:266": "a77de110b82a8954027da86deabe8d800111b257f8eb23f3560ac0f58ebfb34d",
+      "quartz:default:test:272": "c9fb7ea19d1a40aa42ff82b1ab2c8b9fffdc6b94c522f212bb0decefdd60fc8d",
+      "quartz:default:test:279": "2307cb9746ac83707f45b3f99612665f436856383ba68d895d05fc39def46bad",
+      "quartz:default:test:283": "897c686e741fd80c5a230f7ddd0621b8930f0758d9d781c384d47f22213ebfb7",
+      "quartz:default:test:302": "2a9662ad35184e1a2c5c3d778375841db6868eacfd2c1f0bfd6cb6316c4d475b",
+      "quartz:default:test:311": "fb6748c7a91af457996f6704e06924d0711f3505368ceed739e34dadb3939c9a",
+      "quartz:default:test:321": "0c3260ea708750ffa5e10062755d38fa9d49bd919bb28f5721c9b0cb14383c66",
+      "quartz:default:test:349": "dc4537908ce117e1466d60f78540288d5fe5a74d52ecc62ba8957016a163019a",
+      "quartz:default:test:351": "a9e1c0d3d74e07c39a550d5e4083fe5c7b2b401177564d0840102f938a95bb4e",
+      "quartz:default:test:368": "801643fe69766034a4a871f9012aeb0298c86ebf37c7042a59812b2e2b6571ab",
+      "quartz:default:test:379": "f18c822a9a1748ffaacacf782df081f2fca7cad827ecb4a657097d678ee1d4e1",
+      "quartz:default:test:381": "b9b3cea9eca8f4e8471b737d7b1a7fff5c00355818cc1a7e44b48e9c77b0c158",
+      "quartz:default:test:383": "171d7a6a301b358e7659aefcaf58a9e46105820236d0321bf48f17a214a3d26c",
+      "quartz:default:test:399": "895038231de81e66f00c6cb8d8e07291a49e973c8d5b5760f2fe667768f5d779",
+      "quartz:default:test:409": "fe68c36aa23fcbe4402aa4003b2938a4a91062d4b2ce137b8a2da1df63486e71",
+      "quartz:default:test:420": "29edd64bddd6b51012c59e6b663f1e597a57bcbe29b13d36427edfdc2f6396d1",
+      "quartz:default:test:422": "880f03fef59d9bf242480d3cc1afd3a8a1dd066da1004674f666a1809a8946e7",
+      "quartz:default:test:423": "472bc34c4e99e6b14faed9c09d48e5e52fd798a0f73d12ea2e8aa68cf9204355",
+      "quartz:default:test:443": "c11fc38d4ad3b4d8077243b0b22bde2ea2ce9f5bcc6c45066c8f4fecd9426e24",
+      "quartz:default:test:446": "df4e14612933754b99573a7a1965a352f328b5e8415ac9e1d12077ee29aa0a85",
+      "quartz:default:test:460": "b44aea524e00f9dec529fd714cedc2352007e347bd705913e8740c0a2a97c845",
+      "quartz:default:test:466": "fa982ef263bbd0eecfe585962c076737608f631b9dd72951c895783ba6c70989",
+      "quartz:default:test:469": "0cf36905e1ff017b1e2f96e95dfb03b4776b2779cfabc770edd06e9c560f8118",
+      "quartz:default:test:471": "ef689ce580f589ffebcc719694c8cdf7ef4121785439730fce2b4f2a7a05f442",
+      "quartz:default:test:477": "2dab69e57c59e789d46c5fe1034b20cc84e9bdd4c8eefe8cb3a010e6de0ecc85",
+      "quartz:default:test:483": "c7cc7736924615dc97674070444f447fe95fe3b970b6bbaa1d530aef79957d97",
+      "quartz:default:test:489": "6f7a82232649ec09023c9c510d42a8aecee371fc41fff9ae8fd0eac345787a27",
+      "quartz:default:test:490": "a4e7897bba4ab8338ae9b38b7ed7a2db80d68795107c6200f872a5ec947c1133",
+      "quartz:default:test:500": "c24b050563ddcbab66eccf0056726758edfad0cfffc0b7412757d6fe104ebc56",
+      "quartz:default:test:531": "1b4e414da002285fbb9db19c944da4b686eaecd06b21d5302cbbe18562770631",
+      "quartz:default:test:544": "f1848bb9a83f446b4117271864eaab2de8e3e84bf4b552957e304ba7a7b97207",
+      "quartz:default:test:546": "16e3ce21bcb6cdcc77c457c5a4b333fe21599dfac51dfa7ff631dc59ebdc71fe",
+      "quartz:default:test:547": "969f7a7052294eef8d070083cef231552e4ba4771ebf34ae59f9efc30587b828",
+      "quartz:default:test:548": "281622c175ddcfc4bee6496dc887d81bf011ad9fc4b44e8abfa7738fb32e8331",
+      "quartz:default:test:552": "3be7d070cc8ed5bc61d45845ddc80364dc6afa8c3d71ff41a4b890ac7756dc8b",
+      "quartz:default:test:555": "2bb10181c680cdd4b32eb5c05bb01cbac502b66587e89f79850d6839ae65902b",
+      "quartz:default:test:557": "9adce4938658540926a4e2548593200428ca88853303a86e113aabf2091d6c3c",
+      "quartz:default:test:558": "44695ab3288a753729ee4593740c9fb61d8266b66c3bc9970c036e7736d2494a",
+      "quartz:default:test:569": "d2d87e7bacfd038f5f778251b9117f6403710a21ee34bb95a93ba3307061388d",
+      "quartz:default:test:570": "e7f7163929242eb7d249b8271eb9613858d9e9e81a2d649bc2209b973ae60068",
+      "quartz:default:test:571": "2af75a3a06a8f7a5da176e0415bd4539eb221bad8831411b31a8872bc4ca656b",
+      "quartz:default:test:572": "fe1f68c74d3ae898c35df03b4222e63a6054e698124137a943c8b38309794ea3",
+      "quartz:default:test:595": "813e49c93682aa1ed57624bd4d5f46846317190bd7319f55215b312715e3d535",
+      "quartz:default:test:604": "d550e7735eda0537db6319ed0d26a202526b23f08b58d2352527255ea6d62382",
+      "quartz:default:test:609": "9865361884958e5bdedca3b36bc4bc509d8705ac6580d0cb2665f9332f9fb8a8",
+      "quartz:default:test:636": "961b214c2f6a29d288afb7cc0a8e2420e4d2502ece474e6dbf041d157c776ea3",
+      "quartz:default:test:641": "c0dffe95fe6159383bd69fd45f7f89042b8896d06510d940e610bab3ed88b682",
+      "quartz:default:test:642": "e5f47ab69d0c9f397fb50a7cb44544de3c01fcd14ce1abaa1a2e04a6e96fb30f",
+      "quartz:default:test:646": "21c7b08132970b7035814c457e321aa145008122671b469cf52bc1bb6d4925e5",
+      "quartz:default:test:649": "4fe9982d272f3003c6097876263af46c6378160f935b4d0b04539827d8363eb8",
+      "quartz:default:test:666": "77e6776f65bfe4c0376d8919be94bb1fd1c7c2edfee46f18a228035efbdd654e",
+      "quartz:default:test:670": "5278e873bd5d4c6f8f753f7aca34ec9f23103a676d46b2835e98dd6d4c9ae0f8",
+      "quartz:default:test:688": "c355e9c9f01e7880aedd56fb132685c448fb686af93a6dc3637b5be26a9270c5",
+      "quartz:default:test:689": "44bfa2d687ba3b150a8b7415cafe0f917874ec17d07a50dd778931c2f5c0e604",
+      "quartz:default:test:691": "be17b694c072435eeb0564c3eae16db43c985d63c2a089cac7d7b99b92271457",
+      "quartz:default:test:695": "260bf2c0af3275cc8542ad635478a60b29a2865f54fb381c3a8d000af0cc51aa",
+      "quartz:default:test:700": "eab68b8ff2d32f348cfb8c3e079bffd0404186f8fd5531f34bb9aff6889461ce",
+      "quartz:default:test:704": "5b4352fbf040a29e48d6294078df7521fa445fd7f2554c93761dcc91b83779ea",
+      "quartz:default:test:706": "5f0d8b5c625b4acd308f127224d8f206fe77434961c75de1e72a5371bfe369f0",
+      "quartz:default:test:708": "bfaeb85e7cbdfdc2d23288ab13b5319eadc6bb9a62f8a5c6bfbec18f300d32d7",
+      "quartz:default:test:731": "f808d7bd4fb943b44912fcfe21aa493a3c41c54b1ea8d092d0eb11937bca3c0d",
+      "quartz:default:test:748": "be173b840edf783605cfca0fc880af6fe7b3e3f87443491d24c83fff6e4aabf8",
+      "quartz:default:test:759": "bd7cbd845b86808d2eb7b0f177132987ae8a395720eac311c37aebf89380a7f7",
+      "quartz:default:test:760": "ef76d00a92122a2e135e94dd6d12a93930e55f3001c5a53836e3ffef81f5d138",
+      "quartz:default:test:762": "6382df0428dcd311ac03d2031dbd03b46952766fc35879d6ea2bfcdd48cf20b2",
+      "quartz:default:test:777": "9ed978edde9e7d7bfd2b03338aa50d24bc89a7b54d20799795c1538147062bf7",
+      "quartz:default:test:779": "ae5dbdc148d24530149a32a68f42572088564c9907ac9d31beeed05b6dbed5b1"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "quartz:default:test:10",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6588822355289421,
+        "B": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:26",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.781981981981982,
+        "A": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:37",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6588822355289421,
+        "B": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:44",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5312,
+        "A": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:47",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5625,
+        "B": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:49",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.348937019662641,
+        "B": 0.651062980337359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:54",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6367,
+        "B": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:72",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6222823364392346,
+        "A": 0.37771766356076547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:75",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2539,
+        "B": 0.7461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:80",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.457,
+        "B": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:85",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5,
+        "A": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:97",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2280666733206907,
+        "A": 0.7719333266793093
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:100",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5586,
+        "A": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:102",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.62625250501002,
+        "A": 0.37374749498997994
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:104",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4102,
+        "A": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:109",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6445,
+        "B": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:129",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.33463580803526705,
+        "A": 0.6653641919647331
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:135",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5,
+        "A": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:143",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4844,
+        "B": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:164",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5781,
+        "B": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:176",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5469,
+        "A": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:182",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.7095518514821838,
+        "A": 0.29044814851781614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:197",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2631736526946108,
+        "A": 0.7368263473053892
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:207",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4258,
+        "A": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:208",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.8460079840319361,
+        "B": 0.15399201596806386
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:213",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.29434075257011677,
+        "B": 0.7056592474298832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:222",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6588822355289421,
+        "B": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:235",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.7188,
+        "B": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:238",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.661456767858932,
+        "A": 0.338543232141068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:243",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.7546546546546546,
+        "B": 0.24534534534534536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:256",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5352,
+        "B": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:261",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6445,
+        "A": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:262",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2720168319807635,
+        "A": 0.7279831680192366
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:266",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3516,
+        "B": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:272",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.457,
+        "B": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:279",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.29434075257011677,
+        "B": 0.7056592474298832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:283",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4141,
+        "B": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:302",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.24534534534534536,
+        "A": 0.7546546546546546
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:311",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5195,
+        "A": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:321",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5234,
+        "B": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:349",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3816250876665665,
+        "A": 0.6183749123334336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:351",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2563871355575594,
+        "B": 0.7436128644424406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:368",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5625,
+        "A": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:379",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4141,
+        "B": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:381",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5926147704590818,
+        "B": 0.40738522954091816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:383",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5078,
+        "A": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:399",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6222823364392346,
+        "B": 0.37771766356076547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:409",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6653641919647331,
+        "A": 0.33463580803526705
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:420",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4219,
+        "B": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:422",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5078,
+        "A": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:423",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4688,
+        "B": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:443",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5965069860279442,
+        "A": 0.4034930139720559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:446",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.543,
+        "B": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:460",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2563871355575594,
+        "A": 0.7436128644424406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:466",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.218018018018018,
+        "A": 0.781981981981982
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:469",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.20389610389610388,
+        "B": 0.7961038961038961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:471",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6992,
+        "A": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:477",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5469,
+        "A": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:483",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4414,
+        "A": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:489",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6003992015968064,
+        "A": 0.39960079840319357
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:490",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.7056592474298832,
+        "A": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:500",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.7397054403366395,
+        "B": 0.26029455966336035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:531",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.07558662006989515,
+        "B": 0.9244133799301048
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:544",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.6222823364392346,
+        "B": 0.37771766356076547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:546",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4727,
+        "A": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:547",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4141,
+        "A": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:548",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4414,
+        "B": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:552",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5781,
+        "A": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:555",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5312,
+        "A": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:557",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4766,
+        "B": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:558",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2539,
+        "A": 0.7461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:569",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6822355289421157,
+        "A": 0.31776447105788425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:570",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6484,
+        "A": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:571",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4688,
+        "A": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:572",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5859,
+        "B": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:595",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.6588822355289421,
+        "A": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:604",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.313872255489022,
+        "B": 0.686127744510978
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:609",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5586,
+        "B": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:636",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4922,
+        "A": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:641",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.651062980337359,
+        "A": 0.348937019662641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:642",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2656,
+        "B": 0.7344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:646",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5078,
+        "A": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:649",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3672,
+        "B": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:666",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4375,
+        "A": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:670",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5078,
+        "A": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:688",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.1562,
+        "B": 0.8438
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:689",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2280666733206907,
+        "B": 0.7719333266793093
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:691",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.31112224448897796,
+        "A": 0.688877755511022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:695",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4531,
+        "A": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:700",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5965069860279442,
+        "B": 0.4034930139720559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:704",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.21168831168831168,
+        "B": 0.7883116883116883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:706",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4453,
+        "B": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:708",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3816250876665665,
+        "B": 0.6183749123334336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:731",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5469,
+        "A": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:748",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4688,
+        "A": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:759",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5391,
+        "B": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:760",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5078,
+        "A": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:762",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.668,
+        "A": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:777",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.5234,
+        "A": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "quartz:default:test:779",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.20389610389610388,
+        "A": 0.7961038961038961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

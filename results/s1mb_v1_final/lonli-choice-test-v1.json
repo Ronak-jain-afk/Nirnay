@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "lonli-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/lonli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:37:58+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.25,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.39,
+    "baseline_adjusted_skill": -0.2295081967213115,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 6.840354500000103,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "lonli:default:train:8660": "06d29ec667638caf7452050de7ea2b0629dbfd74e95e7007708b5e888021a3c6",
+      "lonli:default:train:9748": "8392f2c6a6773e416f3ff17b35969afd116299d3dd626249dec5220a27f21ddf",
+      "lonli:default:train:10467": "0eecaaf20fc8de0824098cfb76c7366a7e2f0de84c27082cafb9f3583e68f942",
+      "lonli:default:train:10535": "bce4a7bab397e6a74ebf6a959f4114789e33bcd25e90c2b39f38928a397c5fbf",
+      "lonli:default:train:11607": "720ab1b8c5e2ac64a3591a223b4435ae81c3ea1a26113b83c57819af4d6124b1",
+      "lonli:default:train:13019": "abece0016484426a045488ef6cfc3280c36fbf5985b4bc677c8ae023b2c30cbc",
+      "lonli:default:train:14382": "7f4f8c1da142cf3ab6965862fcf83019728e8f557ed9624da9bc010f63a32bb4",
+      "lonli:default:train:14891": "7a9561579b81e22354dce10d9c065c34dd1fc30c670a3adeec682e3ac56c7e0a",
+      "lonli:default:train:21264": "a4f14cb605c94d52c9918fc37f8753b3120d073472c234c350bf6887128362cf",
+      "lonli:default:train:21432": "0c56f928629daf643222b21285e9bfc75e7c88a23f9ec37628606ee3e4e77e58",
+      "lonli:default:train:24941": "f1b3e4e13c8bbfcf15e829a258e3778365f81ff9ad096ac6764f33d732e7b137",
+      "lonli:default:train:26863": "e7b93ae1eb64c0d9922ced829a2e85782772ca5b08b37642bcba3919875b0871",
+      "lonli:default:train:36978": "660e1cbbdd4d33b4e0df90cdfffdd704d4d50b49565062916759b56bea3c0c3d",
+      "lonli:default:train:39852": "fa8aa7019a4347d8025cb33ca94207d1a4987e6a4580070ba33c15e06a5592ab",
+      "lonli:default:train:46390": "ca498a3ff82352972806eb1b73a87f9b7f72546fac10e9a86264aaedb7f5a906",
+      "lonli:default:train:54434": "579a3575dae8073ab31a10e177382764ccbf0d1361b3c3cc231ed9ba0f456a99",
+      "lonli:default:train:58964": "ba77ad8d32ad2e6103c369db9503289f15e7da748691ea87f52ad36f6eafa12e",
+      "lonli:default:train:59409": "acc06b0888b7088920f42904610f171fee6158ad162757ac3d3abcd1a93fc5a7",
+      "lonli:default:train:66992": "ee5eb035e00325934f5249933350bed59fc8edda48e5cdb9132e522a68e366fb",
+      "lonli:default:train:67392": "7a929fda60a24e98f45a6f190d0eb0888ab5357a1c96074688a04cc169b8d716",
+      "lonli:default:train:73460": "126196412a8be2f60cbe9f9aadb4699eaa5814b05e3fd33dc859ba31e0eaf0e0",
+      "lonli:default:train:76468": "823fe98a527a9086825c3760afd72d344fd1b66f4e843a7c393fc313e63fb105",
+      "lonli:default:train:77918": "7f9b2a5593e01fb9ad2e3d8966356101ba2639c177824ff1e3ae33d38fbdd14a",
+      "lonli:default:train:79184": "74e82e5d7050f32b614f6cab57f3ddbdd73a6f469edc09a09c7f65d4ecec923a",
+      "lonli:default:train:80000": "ed0ff7178b3d1b39645aab4eafa01ef1474ba2d06e72372aad7e9912aaab956c",
+      "lonli:default:train:80354": "f4e562c6fb1adf2fc505a819b950153a3414aba28d4a9608f0fe4be76daba992",
+      "lonli:default:train:80680": "6447175406ab1fb54ccce0d77bc25d162cafdc28b7179aab1be99f8d3118ba04",
+      "lonli:default:train:82510": "8359d78b132f1d4c5d12739471f7b19a0a1cc169f924009ec93388c195196f1d",
+      "lonli:default:train:85133": "738117ee2444d897b52a0607c6627006d865b848d72d2029d2c7c6f72c244eae",
+      "lonli:default:train:97535": "a3540957edce41d46f49eb506ea1d650cdcffb0e2241cb61ec1414669072ab6c",
+      "lonli:default:train:98285": "acb166b95bbf0d2c641a47dae70c7be801bde7a2d9aa498335d9cd3024041a1d",
+      "lonli:default:train:101591": "4a411bd502a97217eb5571c33db3a604995eee2cf2d1b24288100a288051ed8f",
+      "lonli:default:train:106865": "d5513361a6739c34441f9ea3c9f84189d4b3a18dfd0cb171ae6aba60fdc751a2",
+      "lonli:default:train:109177": "425dac16d7b9c2ce5270578b745aa57e82a21aad181560107419c34abda6ac3a",
+      "lonli:default:train:109626": "e66ba2e7e4af861ac5433e4810ad9958fd30491dafc739807e7d5f6698e747a5",
+      "lonli:default:train:111139": "2a50c967e505055d01712418c706185d0ca46dd02061205625e2e5d0235f3b42",
+      "lonli:default:train:118697": "f9da51b9f278fe1072c948e6c0d2ef2bd808e87782deff2a3f65f24ed384a477",
+      "lonli:default:train:120697": "dea3083f76737cee17a79fae3384ca78623006740ae3f4475c5ae0d9f2363d1b",
+      "lonli:default:train:124353": "6f46571f5195de6c255dfbe17940f128b352ed40f6c7bca5652cefffbe1923a8",
+      "lonli:default:train:134079": "f61af8ed72917318d1bd6a975da495025acf3c6073c0f9c1082a950866ecf1e8",
+      "lonli:default:train:142245": "e63a885806d1e9e8501f418dabf43c439c1c2f0923bb1d94baf0bb9242037c47",
+      "lonli:default:train:146272": "ee9f1ac46e6a2b11a718b5f4efc699e6bad051073bfb3335b179ffbe1c8a32eb",
+      "lonli:default:train:154463": "a0752230791ccec2d72cab5769409b4f77f5b3d15682aa057caa768f3661e8ae",
+      "lonli:default:train:155288": "ec4344c997bab63844acfd1277665293f486bf205ebcc44d6e9a2dfa35207bcd",
+      "lonli:default:train:167098": "7d8f727a2eaa9c6cd7ecff1687308b1d723038c19f919fe7b1bf35c41e278c3f",
+      "lonli:default:train:168949": "6c5bf0356c3434d5633222496eb888322cf39b19ca2f9b4bcd6cfa58cd0190d8",
+      "lonli:default:train:178554": "8aa86240c34fb9e28f0822e96ca9ff631d7e57ce118eb3d29384e8eab7484df5",
+      "lonli:default:train:182972": "f97eba8bd3664837a673d1ff868062c8be44ec678ad6db3d366f6c3b06569ee1",
+      "lonli:default:train:184828": "ab2e86d2c7ba89b06181847853211af2dded5debc9736dd5483f7bfb6cb1afba",
+      "lonli:default:train:189604": "f55bab3b961770ab585f09933dfd536a6f27080689ff8adf0938d18f4603ae1d",
+      "lonli:default:train:199136": "edc4eec6069c0c8d044e2d1498b42cec6fba8b0a9cfc592831c718993f13e65c",
+      "lonli:default:train:204787": "f061ab3d66747a819ee1a0d1827fbf59261250cf7606c7e801b54689df23ee85",
+      "lonli:default:train:209661": "b446a066db020eafed6d815bc5f7a27261095cd2883b20410e55b8e9e2c699c9",
+      "lonli:default:train:211896": "39c031bf875f0f58d6532aeffff59d24ccd6238a69e423193d679d87c5e6c799",
+      "lonli:default:train:212062": "1853fe23ac2d500e577e5e324fd4a78e69cf363d48c76703696cb759f8ee5a3b",
+      "lonli:default:train:212590": "b43015759ea4d5234d326cbe9e85e4f2f3abdf3d2510a9205b1d107dfb1cb23d",
+      "lonli:default:train:226311": "f219a3daff55e800a759ab0d39ecb12fc8feaa940d8e0f961d13745f925ef4b7",
+      "lonli:default:train:226571": "7ff8f9ee42f3a986edd33fe721248ae7af2daeb0a44e8508c38a9a6d5faca660",
+      "lonli:default:train:227001": "ae98817847dd1c5c9ede7fe4a5afb24e943182e940e7ecf87d9f5297aabe3863",
+      "lonli:default:train:228674": "9635861eafc4cad112f0f03b5646f1ca96ea6f448989bc2b7f73a5f77ed3c04f",
+      "lonli:default:train:230371": "09fd357abba8e2df99d8921b2efaca0e6180cb904f3b6f618cf80ff4dc51ea5a",
+      "lonli:default:train:231642": "016a2b5a6fb2fd9a1cbd155deb3534f695c630d75bc3a523fc75ce475c0cafaf",
+      "lonli:default:train:235216": "05a8179432aa60527cdc676943c949a59dcf69283836a45f231f13d04c252842",
+      "lonli:default:train:236144": "ff8646a0ae3c7002ed6c251da87b7d4627f0643e1efce114a5fecf083e7d8c1c",
+      "lonli:default:train:237184": "2ff7419e043ac236946a3c27a2078d5c2b73c505c04b8cc4169f1f15a7b7aaf1",
+      "lonli:default:train:238380": "bd0e0f3d7d5a417f237a149e67cb40d1cdd41a1a7c57c83a7400dce904e1c157",
+      "lonli:default:train:238537": "3eecfbf90b1b5cce960611fe079ed399e717d627fb9fb8f67727fc268ca0a322",
+      "lonli:default:train:245616": "be9a41fa6085eac72ae2ad4f78954182a8aab1d570839520bb11f0fd291fcb88",
+      "lonli:default:train:249396": "96301c933c082a9eddbb8153b52fffb84b405511f69ea9d3334927583a64b326",
+      "lonli:default:train:250144": "aa9ed8c8fdb0c5f6c1bd5cdba997130efe9a5b312c5b763579fe76ceadab1d11",
+      "lonli:default:train:250157": "44c00de9b3c9b961c97943c3a84a382faea246b24d1a8345c392d91c4cba1545",
+      "lonli:default:train:250266": "4d871b96df3dedd17e136e43c35db09a492f159f685e29c73a355fbc8e847212",
+      "lonli:default:train:255595": "36c34b8ae739c0c3b40669d0edfa4aaec045392210190616b9e7f2975b0e7d6f",
+      "lonli:default:train:257894": "01dbe276bb5dcaf0a629b05ce763050e1e6e9ff6dcc82e02391b5c97d022769a",
+      "lonli:default:train:261980": "e92d4771470199f2e66cf2f26b9954ff1f7de046e9aa221b1fe76f4eac0bfb97",
+      "lonli:default:train:264407": "8a7afaf80d8d0f53ea6ed12b1ae0ad642557635c8b4968a313a916ff8d1ee058",
+      "lonli:default:train:264808": "d93f2a8342e248809bf95960e6047cff97c65d6449f4c3a5acf060483eadf41d",
+      "lonli:default:train:276000": "856a662426cc541a1226a5d4326aa38821d4fc36e056ed49f8e2afc7b24604b5",
+      "lonli:default:train:290110": "487feed87eb1183932c54ca677622b8113ab534e9ace013a3a2ea54bdd760dc5",
+      "lonli:default:train:290302": "9994d9b16cf9bd7cad6946185bcd15313ba739cb6b2cbfab05e3455f9a6fc3be",
+      "lonli:default:train:290465": "38533beb838850322f3089e724dfec131515bceef2190647a48bd6728f7c7943",
+      "lonli:default:train:293772": "05a909141f6bc5e16d1808695b846264d04b103592a45a7064efe0df3be96e9a",
+      "lonli:default:train:294072": "f116d4e8b0cbc4714bcdc6e2f4e86c95ac74c4e0ae3c16e02bbbee2657ba40ac",
+      "lonli:default:train:300722": "fc91c19d6b9d71c32299b39fb35cd7ac83564c68164e83d6ad04ba061485f85e",
+      "lonli:default:train:305358": "e450079c632d7e2754be9f4d86ad0475cd72b122f9755be111a59ca06c525dc4",
+      "lonli:default:train:308983": "4ab7de2525cedb8f88d8617d6012061e9a38f6c9c421192e24e31337da8cca89",
+      "lonli:default:train:315559": "be50a714eb3999fc6fe4f1d3b1641e160d9916206fae220df354a1f57d02a731",
+      "lonli:default:train:317045": "e3b1a64119566ae7db8c67c535371fd4cb955a3d1b9ababb7ad2dd55b4900a34",
+      "lonli:default:train:317743": "94094e9dd00128d35f328b475696a411a5c4c78ef34ec81887788f60db38ae37",
+      "lonli:default:train:324454": "5ccd0266707f515ba9c00953d6cb3a20c2a46e7f02aaa471b905604c90623a08",
+      "lonli:default:train:324798": "28873181580ca014c95cb710f6d55fbf860b90a26ce519927c9f969ff1c1a81a",
+      "lonli:default:train:333476": "ec382dfa31f14859c48dfaa4bd62e14cc227861c8903a3103bc13d0d728961bd",
+      "lonli:default:train:335069": "b3b2e44ada991e62ccb4aaf7afed6d137602528a62b79445eb3c51f8ce741679",
+      "lonli:default:train:335507": "32bf95f605d2df978fc57cd471966d30615daeb957495c0ae08f7da449012b3d",
+      "lonli:default:train:350295": "68e07db9e17d8561ce96b356cec2694b4921514a20956a82aef9d8d54aa787ac",
+      "lonli:default:train:354498": "fda797f14835f324c534e4d9bb940e418430bee83ef7fa76946c603a436d4cf7",
+      "lonli:default:train:357889": "a977bcab51b6561d8b706f9f6fbd125fc502ed53e684c12bd9926d640dc9c214",
+      "lonli:default:train:359424": "60d2b369faee651fcec71a7ca9536439eba22c406678aafc4df3b6cf7ef49f9f",
+      "lonli:default:train:360471": "c8ba40f848bb1947f251f30ff7e1fe233339cdd7899418985abed1e5ce25073d",
+      "lonli:default:train:360845": "1970b4b716ea564ba1e4d49e8faf5c89a265e372583d119181ecc101a5f276fc"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "lonli:default:train:8660",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.23751376238614752,
+        "neutral": 0.44379941947752977,
+        "entailment": 0.31868681813632266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:9748",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3418,
+        "neutral": 0.3828,
+        "contradiction": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:10467",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3672,
+        "entailment": 0.3281,
+        "contradiction": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:10535",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.29355775974351267,
+        "contradiction": 0.3229135357178639,
+        "neutral": 0.38352870453862337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:11607",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2578,
+        "neutral": 0.4004,
+        "entailment": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:13019",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.29434075257011677,
+        "entailment": 0.3391556043517317,
+        "contradiction": 0.36650364307815153
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:14382",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3398339833983398,
+        "contradiction": 0.3359335933593359,
+        "entailment": 0.3242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:14891",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2793,
+        "neutral": 0.4082,
+        "contradiction": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:21264",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3184,
+        "neutral": 0.373,
+        "contradiction": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:21432",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36133613361336137,
+        "contradiction": 0.3398339833983398,
+        "entailment": 0.2988298829882988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:24941",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2656,
+        "entailment": 0.3789,
+        "neutral": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:26863",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2734,
+        "entailment": 0.3301,
+        "neutral": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:36978",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3203,
+        "contradiction": 0.3633,
+        "entailment": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:39852",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3359335933593359,
+        "contradiction": 0.33203320332033204,
+        "entailment": 0.33203320332033204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:46390",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3613,
+        "entailment": 0.2676,
+        "contradiction": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:54434",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.26613226452905814,
+        "entailment": 0.375751503006012,
+        "neutral": 0.35811623246492985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:58964",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.291,
+        "neutral": 0.3789,
+        "entailment": 0.3301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:59409",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3242,
+        "entailment": 0.3613,
+        "contradiction": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:66992",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3086,
+        "contradiction": 0.3398,
+        "neutral": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:67392",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3223,
+        "contradiction": 0.3125,
+        "neutral": 0.3652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:73460",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3047,
+        "contradiction": 0.3047,
+        "neutral": 0.3906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:76468",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2233989409531422,
+        "neutral": 0.46638025776800884,
+        "entailment": 0.31022080127884905
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:77918",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2969,
+        "neutral": 0.4375,
+        "contradiction": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:79184",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2642019837691614,
+        "neutral": 0.41679190461877563,
+        "contradiction": 0.31900611161206294
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:80000",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.4171656686626746,
+        "contradiction": 0.3001996007984032,
+        "entailment": 0.2826347305389222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:80354",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3711,
+        "entailment": 0.332,
+        "contradiction": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:80680",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2949,
+        "neutral": 0.377,
+        "entailment": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:82510",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3913435527502254,
+        "neutral": 0.35617673579801623,
+        "contradiction": 0.25247971145175835
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:85133",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.39574807865056394,
+        "entailment": 0.2436370895298932,
+        "contradiction": 0.36061483181954285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:97535",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3633,
+        "entailment": 0.3301,
+        "contradiction": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:98285",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3594,
+        "contradiction": 0.332,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:101591",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.24144144144144145,
+        "neutral": 0.4184184184184184,
+        "entailment": 0.34014014014014016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:106865",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3222677732226777,
+        "entailment": 0.29687031296870314,
+        "contradiction": 0.38086191380861917
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:109177",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.33006699330066996,
+        "neutral": 0.3847615238476152,
+        "contradiction": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:109626",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2436370895298932,
+        "entailment": 0.39574807865056394,
+        "neutral": 0.36061483181954285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:111139",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.31112224448897796,
+        "entailment": 0.35230460921843687,
+        "contradiction": 0.33657314629258517
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:118697",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3672,
+        "neutral": 0.3457,
+        "entailment": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:120697",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2852,
+        "neutral": 0.416,
+        "contradiction": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:124353",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.4023,
+        "contradiction": 0.2754,
+        "neutral": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:134079",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2754,
+        "neutral": 0.418,
+        "entailment": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:142245",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2597740225977402,
+        "entailment": 0.3847615238476152,
+        "neutral": 0.3554644535546445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:146272",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3672,
+        "contradiction": 0.3281,
+        "entailment": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:154463",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3398339833983398,
+        "contradiction": 0.291029102910291,
+        "neutral": 0.36913691369136914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:155288",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3828,
+        "contradiction": 0.2988,
+        "entailment": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:167098",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.35811623246492985,
+        "entailment": 0.320941883767535,
+        "contradiction": 0.320941883767535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:168949",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3379,
+        "neutral": 0.4023,
+        "contradiction": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:178554",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3418,
+        "contradiction": 0.3008,
+        "neutral": 0.3574
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:182972",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.32944111776447105,
+        "contradiction": 0.3196606786427145,
+        "neutral": 0.3508982035928144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:184828",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.26952695269526955,
+        "neutral": 0.42384238423842385,
+        "entailment": 0.3066306630663066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:189604",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3437656234376562,
+        "entailment": 0.33786621337866213,
+        "contradiction": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:199136",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3242,
+        "neutral": 0.4082,
+        "contradiction": 0.2676
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:204787",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.34311377245508984,
+        "contradiction": 0.3079840319361277,
+        "neutral": 0.34890219560878244
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:209661",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3242,
+        "neutral": 0.3672,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:211896",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3125,
+        "contradiction": 0.3086,
+        "neutral": 0.3789
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:212062",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2383,
+        "neutral": 0.4512,
+        "entailment": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:212590",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3945394539453945,
+        "contradiction": 0.2988298829882988,
+        "entailment": 0.3066306630663066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:226311",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.27004008016032066,
+        "neutral": 0.4188376753507014,
+        "entailment": 0.31112224448897796
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:226571",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.33526300029943107,
+        "contradiction": 0.32947399940113786,
+        "entailment": 0.33526300029943107
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:227001",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.414058594140586,
+        "contradiction": 0.29687031296870314,
+        "entailment": 0.289071092890711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:228674",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.31900611161206294,
+        "neutral": 0.41679190461877563,
+        "contradiction": 0.2642019837691614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:230371",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3594,
+        "contradiction": 0.332,
+        "entailment": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:231642",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2773277327732773,
+        "neutral": 0.3984398439843984,
+        "entailment": 0.3242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:235216",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3477,
+        "neutral": 0.3867,
+        "contradiction": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:236144",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.24341907716945252,
+        "neutral": 0.4339905915323791,
+        "entailment": 0.32259033129816833
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:237184",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.38866113388661133,
+        "entailment": 0.34766523347665235,
+        "contradiction": 0.2636736326367363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:238380",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2969,
+        "contradiction": 0.3379,
+        "neutral": 0.3652
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:238537",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36593186372745495,
+        "entailment": 0.2798597194388778,
+        "contradiction": 0.35420841683366733
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:245616",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2715,
+        "entailment": 0.3867,
+        "neutral": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:249396",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3809,
+        "contradiction": 0.3535,
+        "entailment": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:250144",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3203,
+        "contradiction": 0.293,
+        "neutral": 0.3867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:250157",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.35420841683366733,
+        "entailment": 0.31312625250501,
+        "contradiction": 0.33266533066132264
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:250266",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.33203320332033204,
+        "contradiction": 0.36523652365236525,
+        "entailment": 0.30273027302730277
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:255595",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2754,
+        "neutral": 0.4082,
+        "contradiction": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:257894",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3164,
+        "contradiction": 0.2969,
+        "neutral": 0.3867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:261980",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2383,
+        "contradiction": 0.4258,
+        "neutral": 0.3359
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:264407",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3164,
+        "neutral": 0.3926,
+        "contradiction": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:264808",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3301,
+        "contradiction": 0.3789,
+        "entailment": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:276000",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.18631368631368633,
+        "neutral": 0.4761238761238762,
+        "entailment": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:290110",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.36716328367163287,
+        "contradiction": 0.31836816318368166,
+        "entailment": 0.3144685531446855
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:290302",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2993987975951904,
+        "neutral": 0.3913827655310621,
+        "contradiction": 0.3092184368737475
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:290465",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3333666034534385,
+        "contradiction": 0.29434075257011677,
+        "neutral": 0.37229264397644474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:293772",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.2949,
+        "contradiction": 0.3145,
+        "neutral": 0.3906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:294072",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2734,
+        "entailment": 0.375,
+        "neutral": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:300722",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.35811623246492985,
+        "contradiction": 0.3307615230460922,
+        "entailment": 0.31112224448897796
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:305358",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3281,
+        "neutral": 0.3496,
+        "entailment": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:308983",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3203,
+        "entailment": 0.332,
+        "contradiction": 0.3477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:315559",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3477,
+        "contradiction": 0.3203,
+        "entailment": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:317045",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.18051948051948055,
+        "neutral": 0.46043956043956047,
+        "contradiction": 0.35904095904095906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:317743",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2305,
+        "neutral": 0.4453,
+        "entailment": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:324454",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3437656234376562,
+        "contradiction": 0.33786621337866213,
+        "entailment": 0.31836816318368166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:324798",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.3229135357178639,
+        "contradiction": 0.3229135357178639,
+        "neutral": 0.3541729285642721
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:333476",
+      "question_id": "relation",
+      "probabilities": {
+        "entailment": 0.4199,
+        "contradiction": 0.2715,
+        "neutral": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:335069",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.3418,
+        "neutral": 0.3652,
+        "entailment": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:335507",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3437656234376562,
+        "contradiction": 0.37106289371062895,
+        "entailment": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:350295",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.29434075257011677,
+        "entailment": 0.37229264397644474,
+        "neutral": 0.3333666034534385
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:354498",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.26952695269526955,
+        "entailment": 0.3066306630663066,
+        "neutral": 0.42384238423842385
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:357889",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.33137039624713044,
+        "entailment": 0.3528296237149416,
+        "contradiction": 0.315799980037928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:359424",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.27004008016032066,
+        "entailment": 0.33657314629258517,
+        "neutral": 0.39338677354709417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:360471",
+      "question_id": "relation",
+      "probabilities": {
+        "contradiction": 0.2598,
+        "neutral": 0.4277,
+        "entailment": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "lonli:default:train:360845",
+      "question_id": "relation",
+      "probabilities": {
+        "neutral": 0.3281,
+        "contradiction": 0.3535,
+        "entailment": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "argument-quality-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/argument_quality",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:14:22+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.45,
+    "uniform_accuracy_baseline": 0.3333333333333329,
+    "fixed_answer_accuracy_baseline": 0.51,
+    "baseline_adjusted_skill": -0.12244897959183673,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 15.416519500000504,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "argument_quality:argument_quality_ranking:test:128": "0650c5aefc97e44f17db8338b1a2a260f75e63a2dfe6719e70319f3d7b622a3b",
+      "argument_quality:argument_quality_ranking:test:131": "3e90093036a8e5c907f1766dfb728b94be70336b5041ec317fa54c3e8227021d",
+      "argument_quality:argument_quality_ranking:test:204": "e545b81ea7f0c7ab5def0e37fcd0c7117e202f38a7e9410b532dc6889ecfff9e",
+      "argument_quality:argument_quality_ranking:test:327": "ffddd8bac488751d15b9d4d085679a8e7b0771f88dc9820db647cb7466d385ef",
+      "argument_quality:argument_quality_ranking:test:393": "bd3890fa29f2953dddcbe44940ba7cc81551b47941f7f5598a8b1a953a887e1c",
+      "argument_quality:argument_quality_ranking:test:436": "d98e9e03928d3517f83d058bb2c28676f7bbd67646d1ef421132c87ec67090eb",
+      "argument_quality:argument_quality_ranking:test:477": "90376fdf7c7e06074682ea976c68b6ba3938e762af6cddd84c0754a6e9c24d00",
+      "argument_quality:argument_quality_ranking:test:492": "3b962598d7bb3b889950defd0d3f31ec81ab14d49fa5dc5a2a9b355b70f6c0bf",
+      "argument_quality:argument_quality_ranking:test:566": "fc35d1cdfbdaf22d18fb27c3404c194ee87fee346550082850e4c1a9cb315f12",
+      "argument_quality:argument_quality_ranking:test:603": "10f6130e89d0b3f3892e6baf6d477cbe97d31218d9a0bc1b96b0b1a11229256b",
+      "argument_quality:argument_quality_ranking:test:664": "01ad23b90cacf5ba64461874aa16ba6df97f6feec7f24757b946fc0df2bcaf74",
+      "argument_quality:argument_quality_ranking:test:776": "a04a4a1fe3182cdcaabee0e66f9d45747d8374a5d36e48060e3aa53d7940c07c",
+      "argument_quality:argument_quality_ranking:test:864": "9d37c01ab1f662472481d9f6939d287ad46a66e7b0dd138647b92ce3a6082e5d",
+      "argument_quality:argument_quality_ranking:test:1043": "ba9830e6d745fe049ccbe7cf7255288794fdfc12b76a9e40fe472dcd88f44c39",
+      "argument_quality:argument_quality_ranking:test:1071": "c1f1358b3e4a94998cd0a3149802d1e19d270fd8b0f437ff9bdabe672ae59409",
+      "argument_quality:argument_quality_ranking:test:1134": "038dd8c5b08e032ce57987ca5e2453213f0cee4ab03a7c673d453674219761a4",
+      "argument_quality:argument_quality_ranking:test:1185": "959344b01139a9254830c2df316b918571fc340a2b13b0e34090b5567436f278",
+      "argument_quality:argument_quality_ranking:test:1206": "dacc67dd2ec84a8f0d6c7d71fbc18f158dd35a6609f53a591c5a47e34cd64e3d",
+      "argument_quality:argument_quality_ranking:test:1272": "64c38b68ce338aa1181b1c5300d3d38e89d6bdc2858d96155ddd43f38b812dce",
+      "argument_quality:argument_quality_ranking:test:1442": "22f9418d470d219626f6b8290bbdf2286e18c9bdc13d7d4de56ff8f372818855",
+      "argument_quality:argument_quality_ranking:test:1499": "a10e35136a3ae812f3147c2d2e7a2cce48ca9be94bb273ecb90ddfc8a52d00eb",
+      "argument_quality:argument_quality_ranking:test:1546": "dcda080e8c6c4b68e27769ee97e11d560e373a49b1cb7e083f8e5bc9b8614821",
+      "argument_quality:argument_quality_ranking:test:1560": "7d4abfad660a8ef2ccd4fa6631a7ceb6e4d4f2160e99953706e300a70886e81a",
+      "argument_quality:argument_quality_ranking:test:1590": "4ce669b4459c176c1b05e84081a3a8c5da08f4d7ac33b823f3dd347a1b21d82b",
+      "argument_quality:argument_quality_ranking:test:1602": "b2f3224b2040b962cdf76c36fb6e0f792fb1557c4ade08d88fceb2a940a7c410",
+      "argument_quality:argument_quality_ranking:test:1697": "3fd1bf98308da4f5a82505178052ccaada4caf01b7eaea00fe791e1ce0c83b5a",
+      "argument_quality:argument_quality_ranking:test:1724": "dd11b6245e69735d4a0ab56a07387271f6cf3ee218f186f8402076d51360e8ef",
+      "argument_quality:argument_quality_ranking:test:1777": "ff97e9d67b20d21c9434c3d6d2e7408458b66683b23ba25841aa47a4c9a75293",
+      "argument_quality:argument_quality_ranking:test:1870": "75c2ebfd3e5b6a2c82f788120eb396865704b93d8b3fb7b299e99eb4896601e0",
+      "argument_quality:argument_quality_ranking:test:1880": "2f9585eabd5648cc86bd81f938bad86292cf2b20d9ed71b890b50909ace1f7b0",
+      "argument_quality:argument_quality_ranking:test:1976": "544f0fbede0d1d66cbf0ed7bbe040774b219c2e0020efc2df56bf6f425d0b9e5",
+      "argument_quality:argument_quality_ranking:test:2123": "83a4bb19118afce2aa3cadace1cdf60c282ee4f2babaded5ff8c66efaa65bd1c",
+      "argument_quality:argument_quality_ranking:test:2178": "250b9956b5fec965507cfc01353c519e32b632661fa371cb9a944174503a7546",
+      "argument_quality:argument_quality_ranking:test:2369": "ea3466b5517fe0468cd6719acd7ce5231d450a17b0bffe957314d82cedf0ee63",
+      "argument_quality:argument_quality_ranking:test:2436": "7c6a689c54e57e0437bdd658a0464f635bbd213f227da69eb31be9784ac5cf93",
+      "argument_quality:argument_quality_ranking:test:2444": "580911f519fe47f3566055dde8dab53501b993575bf8b2daeeecefe2493d6d2e",
+      "argument_quality:argument_quality_ranking:test:2499": "4d7b47db4fd5e75057e645afa70e1f14af90e56893835e2f6e3a908b42c2d0ff",
+      "argument_quality:argument_quality_ranking:test:2504": "76443087c8e2be5d9ca7bd43adbd7490bc7fbd0f11c75417aeb9c1e6dcb7852c",
+      "argument_quality:argument_quality_ranking:test:2625": "745a763a8cb8fa2bde0cd8199a1a102db733ff23ecc15ff7ccae8fe83d8b779d",
+      "argument_quality:argument_quality_ranking:test:2627": "a372c201a8613debe2a70aca410223cf4c24e1b6058a28e5acd54a77127f8c30",
+      "argument_quality:argument_quality_ranking:test:2787": "4a1f8077ec31f9df1b379b3ee492669e37c1bd7aee49a9fb6b865742157140b1",
+      "argument_quality:argument_quality_ranking:test:2798": "720c9a4cff8f95b670660722b774fc361a283c250b7e8066b9d6a2f4f06207d3",
+      "argument_quality:argument_quality_ranking:test:2850": "1d6a8519676868a475f749851ea64b2d6e10a1b8b529e528abbc2d60f4a2e64f",
+      "argument_quality:argument_quality_ranking:test:2930": "0077da8d6f34055f04ac4b66e96125dce25aa412c75b7d271aa6bd64efe7a15f",
+      "argument_quality:argument_quality_ranking:test:3191": "3be246327f5660f9e28e832e91d516c89f5ae0f15928ee189a81c2684b74bedd",
+      "argument_quality:argument_quality_ranking:test:3261": "320da889fa5c281daacc0c6d5d86a5f6ca55d8a61470b7e9f8d75bdadd062a3e",
+      "argument_quality:argument_quality_ranking:test:3379": "0215de233ba2724b99392cdf985b454237bbcd2461a0c229664d1921b2c0bc39",
+      "argument_quality:argument_quality_ranking:test:3491": "90f103621ec531d675d400c5d581bfaf38fc8ade9aef5f9449012cd48d3066d9",
+      "argument_quality:argument_quality_ranking:test:3511": "35c6d7a109bb23a848709b4b2640ff2ae059922c11aee146f47a6d2a34da4a1d",
+      "argument_quality:argument_quality_ranking:test:3558": "1d73c75cfb7c1e32068dcbdf6e982ad5872bf7e24232e50f9124bf2b6e692eee",
+      "argument_quality:argument_quality_ranking:test:3570": "6b34ce15fd21c1a8b091beaab729aeb28f60776d15beedc97f333c3e816190bc",
+      "argument_quality:argument_quality_ranking:test:3833": "409bc3d6b7d54d2f33092a82dc79cbdb66e03a4cad52a26f9748f7293acf196e",
+      "argument_quality:argument_quality_ranking:test:3981": "d98f90f57a6198a9a3ac7c7d38ad8b40219002cef5ba7ac3d0012eea61b4953f",
+      "argument_quality:argument_quality_ranking:test:4097": "f3d652a0e2369c545cb2b5d95a716feff8aa27dbe71b6cccfb35cf65f78f32fb",
+      "argument_quality:argument_quality_ranking:test:4153": "ec6e19cf32bb32194c3fcc95cf835d0f2ca5e815d9225e630087c8acc9fba71d",
+      "argument_quality:argument_quality_ranking:test:4174": "3c354510f55aaa6be6d6169ccc36ca93e92f2b009ebc4e44d01fd2e42d5c0f75",
+      "argument_quality:argument_quality_ranking:test:4272": "908e555f845dcc1f4bd8c1f77f5c4d5d7d12246f54615b76b77ea0995229326c",
+      "argument_quality:argument_quality_ranking:test:4278": "45aea4f163f0d402a8a06d1b74dfcf7abe897da786913551715df17a36e467cc",
+      "argument_quality:argument_quality_ranking:test:4386": "8694534e1f05ef60ed686d91f7e611f4664dff4fc79ce68315b603c14d3d057e",
+      "argument_quality:argument_quality_ranking:test:4491": "7cf568ead0109cc60c11e0876f2335d032ec16762ac32fc757adf62c1c5fdfdc",
+      "argument_quality:argument_quality_ranking:test:4494": "0eb294bf1d47ae5ab772c750c1e93163d1490f3662fa315b01163a18f28a0a48",
+      "argument_quality:argument_quality_ranking:test:4538": "8813eeacd66825f460a035c85ab82ac7312865cdcf9ec589d69fac1fed01b213",
+      "argument_quality:argument_quality_ranking:test:4586": "97023ad4176079cb86f7dd577d43b5dab52027c0b8ce4fcf5a875989eccbe8a5",
+      "argument_quality:argument_quality_ranking:test:4707": "ac6ff7b3bae07dbe3e97be61450e4f153a01f3b3df5c73abde408a9a14c14688",
+      "argument_quality:argument_quality_ranking:test:4713": "4f1bd894954d1923ed21cf77b4526b49da46b69e2c6e2f49bde9027b0cc35139",
+      "argument_quality:argument_quality_ranking:test:4778": "3aa9db274956418fe11ca8914e04b5b44d636b8f3e4daf9b96bb5c081a60341b",
+      "argument_quality:argument_quality_ranking:test:4779": "95e012cf807e32ed8824f01a7b599ffe0780470503a7421310eed62e71f8f38b",
+      "argument_quality:argument_quality_ranking:test:4784": "d4fcd6e8a177d03457c6954fdde16d6e685f9974f0a38254ea528e02e985204f",
+      "argument_quality:argument_quality_ranking:test:4842": "61a04e48d9a743f7a41444c77af7ffec7c81da042593993fd4d446ca445f55c0",
+      "argument_quality:argument_quality_ranking:test:4868": "d4c0e465e6d7c7fd5af2a2685f9ea74cb78fd495ddbff0110c42c055418d0581",
+      "argument_quality:argument_quality_ranking:test:4889": "83be925f0d89199e611ad2eca013d93f4f81c87da274d0335aa6822bba3ae8a3",
+      "argument_quality:argument_quality_ranking:test:4902": "97234cb545e1b486974ef5b38ac307286580efe5e52c101085c7cc384b95cda9",
+      "argument_quality:argument_quality_ranking:test:4917": "e040b302afcb7b63c3ab4215096fb7012a601f50344714de1256e89c3272e48c",
+      "argument_quality:argument_quality_ranking:test:4919": "0f99d8eac380775c1b4333f5e2736e1aea568f720028b7e301d1d5cc58223a47",
+      "argument_quality:argument_quality_ranking:test:4943": "367ee9346d246cc415c7314177dddd8bde24a2a26afce0e192855ce88ea4bfc3",
+      "argument_quality:argument_quality_ranking:test:5072": "6b9151f084c889f2a7a4a9dc4a8d690c476231e843c361e2803b062557f9f6d5",
+      "argument_quality:argument_quality_ranking:test:5129": "728cdad109c7db75fa8119d3a8ecfec1a6e1eaa5ddaab22706e1ede022c2e7a1",
+      "argument_quality:argument_quality_ranking:test:5145": "1faa5a85a559d438a68eeff111631c4213250e20b23e76e9c3996c44af6c67cd",
+      "argument_quality:argument_quality_ranking:test:5194": "4dcfab7f460954ccaea6715141120cef1e6411dab4f9bac77ae463ba536f9455",
+      "argument_quality:argument_quality_ranking:test:5208": "a8be2c643e8f69d48b85d71c80d80d080cefec2af5fb93d1fb07d068113f2ce4",
+      "argument_quality:argument_quality_ranking:test:5221": "26b722b637d21902da995c2769fb0777410119905460a08a2687d67a79adeda2",
+      "argument_quality:argument_quality_ranking:test:5225": "9764e811355d2bb018090e728005738d1aa6bf37e6fd67d120f725df82bf71cd",
+      "argument_quality:argument_quality_ranking:test:5226": "addd7fbf87273f9ce3987eaef9f4861fd09a89452396ba71523c9942e3918604",
+      "argument_quality:argument_quality_ranking:test:5296": "0efcdc738bc9c6f84c83f72fcc189a8f89ac16d384ebf4ed53f5833a8bd76efc",
+      "argument_quality:argument_quality_ranking:test:5317": "d165177d80a2ebd8a1e3e3f947eeb585ef9c998d11174a0d7541f7371ccb5fd9",
+      "argument_quality:argument_quality_ranking:test:5371": "8a6a093aef9d6e940f1778b4d493f43596a56d6bc7860f64f24b25de80df202b",
+      "argument_quality:argument_quality_ranking:test:5403": "549ed13d9d794d7412a73fb89f85b11ad56b632b65b83846d155ca03d1137440",
+      "argument_quality:argument_quality_ranking:test:5450": "ecf1afd1fd3008ed8433f5afb3c2d60208cf43421f2e239c2c60eea39281283f",
+      "argument_quality:argument_quality_ranking:test:5451": "3b404c30feeef56a2f41ecaef2b904bb60a465f60dfbca19453952a079e91c63",
+      "argument_quality:argument_quality_ranking:test:5471": "4f9685b4b9b7a6f1469848fa7bfa10162622232984d93e371fbcbe6bd5f4a368",
+      "argument_quality:argument_quality_ranking:test:5536": "073d57559a7de98849b4594c6ed5646c0c7fb41f826c091ac08a02106e79542e",
+      "argument_quality:argument_quality_ranking:test:5609": "404c8137ca4db5674f1838d6fa17686f37867379d71dbdfdec5aea908edfc203",
+      "argument_quality:argument_quality_ranking:test:5627": "9ce45f63f1ff06aa175364d1b6ce96ecfd3f8be2f7b57e3dc0f51ee5c264db90",
+      "argument_quality:argument_quality_ranking:test:5682": "7a7012956af85b5a808c949c1159a8191ae01d2fbe4d9b285426e11859a3bae2",
+      "argument_quality:argument_quality_ranking:test:5748": "6654661daf86ce1c76b0019b4b52590da29d999afbb96e5e0b8f99fc67b90dc6",
+      "argument_quality:argument_quality_ranking:test:5883": "a39af4006e054f71210d3378da194b944953562a3d9151bced1c4dbeec713106",
+      "argument_quality:argument_quality_ranking:test:5886": "dd750ef39aa152d544e38b27988ebbc72a9e06bd8b6748bfba92c0ba1e6ea5dd",
+      "argument_quality:argument_quality_ranking:test:5921": "b3ab0adb040791b233559274486825d7ee5c37d682ae0dc7f1124f939e294c31",
+      "argument_quality:argument_quality_ranking:test:6126": "00634155ce0fe305303d4f2425599b82ae7af7a79b360a4d57d53c40806b32db",
+      "argument_quality:argument_quality_ranking:test:6157": "e429ed232faa2fb997aa9cbadc645eef08657326204fc3d770787ffe8227d69d"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:128",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.157899990018964,
+        "against": 0.5886815051402335,
+        "for": 0.25341850484080247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:131",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3261673832616738,
+        "neutral": 0.34766523347665235,
+        "for": 0.3261673832616738
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:204",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2004004004004004,
+        "for": 0.12312312312312314,
+        "against": 0.6764764764764765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:327",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.1758,
+        "against": 0.4629,
+        "neutral": 0.3613
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:393",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4027027027027027,
+        "for": 0.24144144144144145,
+        "neutral": 0.35585585585585583
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:436",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.07190066092529541,
+        "neutral": 0.18095333466853597,
+        "against": 0.7471460044061686
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:477",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4277,
+        "for": 0.2637,
+        "neutral": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:492",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3945,
+        "neutral": 0.3477,
+        "for": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:566",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.3516,
+        "neutral": 0.3613,
+        "against": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:603",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3847615238476152,
+        "neutral": 0.33006699330066996,
+        "for": 0.28517148285171484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:664",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2723169508525577,
+        "for": 0.20270812437311936,
+        "against": 0.524974924774323
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:776",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2002,
+        "against": 0.5508,
+        "for": 0.249
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:864",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5593831363909474,
+        "for": 0.08461846585219308,
+        "neutral": 0.3559983977568596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1043",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.16293706293706295,
+        "for": 0.15024975024975026,
+        "against": 0.6868131868131869
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1071",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.10850850850850852,
+        "against": 0.7390390390390391,
+        "for": 0.15245245245245245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1134",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.2227,
+        "against": 0.4375,
+        "neutral": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1185",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2642284569138276,
+        "for": 0.14869739478957916,
+        "against": 0.5870741482965932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1206",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4727,
+        "for": 0.2168,
+        "neutral": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1272",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.08881118881118882,
+        "neutral": 0.3297702297702298,
+        "against": 0.5814185814185815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1442",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.46243756243756245,
+        "for": 0.2390609390609391,
+        "neutral": 0.29850149850149854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1499",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.20589410589410592,
+        "against": 0.4585414585414586,
+        "for": 0.3355644355644356
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1546",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.24949899799599198,
+        "for": 0.16342685370741483,
+        "against": 0.5870741482965932
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1560",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3887,
+        "neutral": 0.3125,
+        "for": 0.2988
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1590",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1953,
+        "against": 0.4824,
+        "for": 0.3223
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1602",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3828,
+        "for": 0.2793,
+        "neutral": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1697",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1838758137205809,
+        "for": 0.10025037556334501,
+        "against": 0.7158738107160741
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1724",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2617,
+        "for": 0.2656,
+        "against": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1777",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.09743384121892541,
+        "neutral": 0.2682437850842021,
+        "against": 0.6343223736968725
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1870",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.1699,
+        "neutral": 0.3223,
+        "against": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1880",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.09270729270729271,
+        "against": 0.6555444555444556,
+        "for": 0.2517482517482518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:1976",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.11107784431137724,
+        "neutral": 0.2885229540918164,
+        "against": 0.6003992015968064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2123",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4688,
+        "neutral": 0.3027,
+        "for": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2178",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1484,
+        "against": 0.5977,
+        "for": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2369",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.45941347212491246,
+        "neutral": 0.326493844460014,
+        "for": 0.21409268341507356
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2436",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5753507014028056,
+        "for": 0.09589178356713426,
+        "neutral": 0.3287575150300601
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2444",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5117,
+        "for": 0.2344,
+        "neutral": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2499",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1937681595030558,
+        "for": 0.09788598336839996,
+        "against": 0.7083458571285443
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2504",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.16126126126126125,
+        "against": 0.6373373373373373,
+        "for": 0.2014014014014014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2625",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.31836816318368166,
+        "neutral": 0.3437656234376562,
+        "for": 0.33786621337866213
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2627",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.19710289710289708,
+        "for": 0.13556443556443554,
+        "against": 0.6673326673326673
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2787",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2949,
+        "against": 0.416,
+        "for": 0.2891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2798",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.41292585170340684,
+        "neutral": 0.320941883767535,
+        "for": 0.26613226452905814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2850",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.27004008016032066,
+        "neutral": 0.3307615230460922,
+        "against": 0.39919839679358715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:2930",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5892696573084225,
+        "for": 0.13367968828054752,
+        "neutral": 0.2770506544110301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3191",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.40664731204324756,
+        "for": 0.18670537591350486,
+        "neutral": 0.40664731204324756
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3261",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.3652,
+        "for": 0.2852,
+        "neutral": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3379",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4258,
+        "neutral": 0.3125,
+        "for": 0.2617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3491",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4355435543554355,
+        "for": 0.26952695269526955,
+        "neutral": 0.29492949294929494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3511",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.1085085085085085,
+        "against": 0.5005005005005005,
+        "neutral": 0.390990990990991
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3558",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5127254509018037,
+        "for": 0.1565130260521042,
+        "neutral": 0.3307615230460922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3570",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.054221688675470184,
+        "against": 0.6018407362945178,
+        "neutral": 0.343937575030012
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3833",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.31112224448897796,
+        "neutral": 0.35811623246492985,
+        "for": 0.3307615230460922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:3981",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.20428385546992295,
+        "for": 0.19747772995696128,
+        "against": 0.5982384145731158
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4097",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.11263105341987019,
+        "neutral": 0.2671992011982027,
+        "against": 0.620169745381927
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4153",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4023,
+        "neutral": 0.3223,
+        "for": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4174",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.27394789579158313,
+        "neutral": 0.430561122244489,
+        "for": 0.29549098196392787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4272",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.0977,
+        "against": 0.5625,
+        "neutral": 0.3398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4278",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.27004008016032066,
+        "for": 0.31112224448897796,
+        "against": 0.4188376753507014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4386",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2285,
+        "for": 0.1504,
+        "against": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4491",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.1065065065065065,
+        "against": 0.5943943943943943,
+        "neutral": 0.2990990990990991
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4494",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4956539114796683,
+        "for": 0.19412528724148267,
+        "neutral": 0.31022080127884905
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4538",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.09134567283641822,
+        "neutral": 0.2755377688844422,
+        "against": 0.6331165582791396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4586",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.251974802519748,
+        "neutral": 0.31836816318368166,
+        "against": 0.4296570342965704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4707",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.196123488860026,
+        "against": 0.46438205614946554,
+        "neutral": 0.33949445499050857
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4713",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4031062124248497,
+        "for": 0.2681362725450902,
+        "neutral": 0.3287575150300601
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4778",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4883,
+        "neutral": 0.2656,
+        "for": 0.2461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4779",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.08573709951092924,
+        "against": 0.5419702565126261,
+        "neutral": 0.37229264397644474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4784",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1951243880507543,
+        "against": 0.5736836846837846,
+        "for": 0.23119192726546106
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4842",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.15124875124875128,
+        "against": 0.48001998001998003,
+        "neutral": 0.36873126873126877
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4868",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.27315416125487063,
+        "for": 0.23319012888400442,
+        "against": 0.493655709861125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4889",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.2871,
+        "for": 0.3203,
+        "neutral": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4902",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4336,
+        "neutral": 0.3164,
+        "for": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4917",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.20079840319361275,
+        "against": 0.5380239520958084,
+        "for": 0.2611776447105788
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4919",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.11395954336070498,
+        "neutral": 0.3188463849389145,
+        "against": 0.5671940717003805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:4943",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2852,
+        "for": 0.3125,
+        "against": 0.4023
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5072",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.084,
+        "neutral": 0.3066,
+        "against": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5129",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.1067505492310765,
+        "neutral": 0.27691232274815264,
+        "against": 0.616337128020771
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5145",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2795515964367931,
+        "for": 0.18086277649884897,
+        "against": 0.539585627064358
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5194",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.22995991983967937,
+        "for": 0.2025050100200401,
+        "against": 0.5675350701402806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5208",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.24802480248024802,
+        "against": 0.45704570457045707,
+        "for": 0.29492949294929494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5221",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1797,
+        "against": 0.5469,
+        "for": 0.2734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5225",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.09588217613465584,
+        "neutral": 0.21921651137160605,
+        "against": 0.6849013124937381
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5226",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.14664664664664664,
+        "against": 0.6334334334334335,
+        "for": 0.21991991991991994
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5296",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4711711711711712,
+        "for": 0.21991991991991994,
+        "neutral": 0.3089089089089089
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5317",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.36913691369136914,
+        "neutral": 0.291029102910291,
+        "for": 0.3398339833983398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5371",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.2720440881763527,
+        "for": 0.33266533066132264,
+        "against": 0.3952905811623247
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5403",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1221,
+        "against": 0.6914,
+        "for": 0.1865
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5450",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.1572,
+        "for": 0.1045,
+        "against": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5451",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.06936936936936937,
+        "against": 0.6100100100100101,
+        "neutral": 0.3206206206206206
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5471",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.12197802197802196,
+        "neutral": 0.3473526473526473,
+        "against": 0.5306693306693306
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5536",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.2390609390609391,
+        "neutral": 0.3414585414585415,
+        "against": 0.4194805194805195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5609",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.15704295704295707,
+        "against": 0.4995004995004996,
+        "neutral": 0.3434565434565435
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5627",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.4370629370629371,
+        "neutral": 0.362937062937063,
+        "for": 0.2
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5682",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.16716716716716717,
+        "neutral": 0.3421421421421421,
+        "against": 0.4906906906906907
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5748",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.24344344344344343,
+        "for": 0.23263263263263262,
+        "against": 0.523923923923924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5883",
+      "question_id": "stance",
+      "probabilities": {
+        "against": 0.5306693306693306,
+        "for": 0.1805194805194805,
+        "neutral": 0.2888111888111888
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5886",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.04394834317749525,
+        "neutral": 0.2482731004104515,
+        "against": 0.7077785564120532
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:5921",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.16873126873126876,
+        "neutral": 0.29270729270729273,
+        "against": 0.5385614385614387
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:6126",
+      "question_id": "stance",
+      "probabilities": {
+        "neutral": 0.19859719438877754,
+        "for": 0.12034068136272545,
+        "against": 0.681062124248497
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "argument_quality:argument_quality_ranking:test:6157",
+      "question_id": "stance",
+      "probabilities": {
+        "for": 0.2414172755479932,
+        "against": 0.4437994194775298,
+        "neutral": 0.31478330497447704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--ir-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__ir-control-v1",
+    "split": "test",
+    "case_count": 28,
+    "decision_count": 28,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:58+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 28,
+    "expected": 28,
+    "succeeded": 28,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2352993953571429,
+    "accuracy": 0.5,
+    "positive_recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "true_positive": 0.0,
+    "false_positive": 0.0,
+    "false_negative": 14.0,
+    "true_negative": 14.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.05880241857142843,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 1.5314469000004465,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__ir-control-v1:q-417de1dce3683a37:6:relevant": "09e1a6513a89c0623160aa38b28c9a03661b7196f31bbab18af6350f7fd214d6",
+      "open_jev__ir-control-v1:q-417de1dce3683a37:7:relevant": "b13f0b6e2ea37614d9011c0437dfbd57d5e6356fabea97499b0cb3161e6a388c",
+      "open_jev__ir-control-v1:q-3b01d3bae312dbf7:6:relevant": "da52c6d8339549cd94b80fc8f9b821332e67f9ae61f06b6d43dd01f37a15ab7f",
+      "open_jev__ir-control-v1:q-8f3f2688ae3c0c3b:5:relevant": "744760fae5141e971d53035e5c3cf4a629483ba692d5975b15d9b1956f7d6bc8",
+      "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:0:relevant": "dda391fe5c2b1b5d340f7684b2f6c4aa1a18e68b9d98fd88b43f315e50074ed2",
+      "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:6:relevant": "4848763f2114247adeb594c19f2ad190ddac4107dd5d27f19bf5abfada36145d",
+      "open_jev__ir-control-v1:q-cc6469cf9a883296:1:relevant": "9dc40cbfa5bacbcbf63149d8657e787a75e620e6b87ebbc59af1cdce71d883b8",
+      "open_jev__ir-control-v1:q-cc6469cf9a883296:7:relevant": "973deb976771fe7eb3e3311c2d22990b1e0ed813fdecb8e6800bf4a4a79cfc1d",
+      "open_jev__ir-control-v1:q-46d5003b2672731a:6:relevant": "d660c25766f725e7b21f58513e1fa649313f462cbd1283dd4cbc96ff1c0e6280",
+      "open_jev__ir-control-v1:q-46d5003b2672731a:7:relevant": "f026af75be751f47d85e1bceaa41453d6bbdacb1947b748d376d85439564a7aa",
+      "open_jev__ir-control-v1:q-3de8bd0343147c50:4:relevant": "d333cd35560648a81441159eaac88b3f72cbfbf7fabd3d2ea612fb0190ea9473",
+      "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:4:relevant": "01e42632a829f2c48a52a888b52577becf4acfdb74550f1d1493ee1de3c18b60",
+      "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:6:relevant": "3113ed2d6d7c7489f3836e49e062796cab26f4068120ec857169cd5b015203d8",
+      "open_jev__ir-control-v1:q-2209d4d0ecc7221a:4:relevant": "43403db25a0d641f65f1ba270438ff011eed01d29328b296908127bf70501ce2",
+      "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:2:relevant": "63c0343c7c02029cf31e5779dbaa52e2649e5ca69392be3acc0b8404831c1d66",
+      "open_jev__ir-control-v1:q-90db874e2bdac887:4:relevant": "73e0e3c8611a7c30f952a5edd0d589aa5131c3977a0af55b3b6fca1ef6a35475",
+      "open_jev__ir-control-v1:q-621f0849b5b2133a:3:relevant": "92ab5a82d5a92451d872722432ed575dc5b809a4e6b6808eb869a4e55ad9e8fe",
+      "open_jev__ir-control-v1:q-86c8be87c7fa3df7:4:relevant": "0e3a06b3f3a68705b960125c1ac7486c1d81d52e5241f321718e1692eb8b69d9",
+      "open_jev__ir-control-v1:q-8732216a5ab50a41:2:relevant": "d7f7bf8f8304736ed87ee0405cfcbe55e5243fbf2eb1d1b40e381a0e8e63a6e1",
+      "open_jev__ir-control-v1:q-2895c6dade496579:1:relevant": "d976031085c959f92d8f26a9064041894781b5701dce065a28b8b584ab583fad",
+      "open_jev__ir-control-v1:q-60154f6c7e597f18:4:relevant": "c61b185f1974f8d539d7de5629ba529594472372807ecf9b85db356f1d233fa9",
+      "open_jev__ir-control-v1:q-52227ed43e3ebfc6:6:relevant": "ca66c7b1dc9344e87b5c9bd06e388dbbcec835e0df6f945273bf6b35f96fb522",
+      "open_jev__ir-control-v1:q-79ee1d06a67a51ef:1:relevant": "72548a686f1f256de6f435306e4f8681ef53e24bef4d144925e783693c3e049d",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:1:relevant": "e4a7197f157063f9dd20ea047259bac6d10729749ee4d90e085df3cbc2ffc915",
+      "open_jev__ir-control-v1:q-aea7cb67621d59de:6:relevant": "113da9cd608cdf5e83f4b022ed7071500bc65484f8cfcfff229f1d877ca458b5",
+      "open_jev__ir-control-v1:q-79f8769d8c02116e:7:relevant": "ef2e04817897ce4327baf611b252c832d627c49f82a78198bc30bc17f1eb684f",
+      "open_jev__ir-control-v1:q-7381b27ca4784897:4:relevant": "087a516a2b45f18f97ebfcd2ea58a5285a66d11a2e4409fe88674b46518b0127",
+      "open_jev__ir-control-v1:q-7381b27ca4784897:7:relevant": "5aa4cd11d7e6a25860d4670f952fdc59583f54e479b5477949a3b63ba2617096"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 3584,
+      "output_tokens": 28,
+      "requests": 28,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__ir-control-v1:q-417de1dce3683a37:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-417de1dce3683a37:7:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-3b01d3bae312dbf7:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-8f3f2688ae3c0c3b:5:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:0:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-d6a4aa26e3024f4d:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-cc6469cf9a883296:1:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-cc6469cf9a883296:7:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-46d5003b2672731a:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-46d5003b2672731a:7:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-3de8bd0343147c50:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-1b2a7d0cd350e4e9:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-2209d4d0ecc7221a:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-ce6cf7d8577dc2e4:2:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-90db874e2bdac887:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-621f0849b5b2133a:3:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-86c8be87c7fa3df7:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-8732216a5ab50a41:2:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-2895c6dade496579:1:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-60154f6c7e597f18:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-52227ed43e3ebfc6:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-79ee1d06a67a51ef:1:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:1:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-aea7cb67621d59de:6:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-79f8769d8c02116e:7:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-7381b27ca4784897:4:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__ir-control-v1:q-7381b27ca4784897:7:relevant",
+      "question_id": "relevant",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

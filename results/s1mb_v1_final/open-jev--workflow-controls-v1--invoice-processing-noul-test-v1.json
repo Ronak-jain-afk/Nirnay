@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--workflow-controls-v1--invoice-processing-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__workflow-controls-v1__invoice_processing",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:42:34+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.22436289010000007,
+    "accuracy": 0.74,
+    "positive_recall": 0.5641025641025641,
+    "specificity": 0.8524590163934426,
+    "precision": 0.7096774193548387,
+    "balanced_accuracy": 0.7082807902480033,
+    "f1": 0.6285714285714286,
+    "true_positive": 22.0,
+    "false_positive": 9.0,
+    "false_negative": 17.0,
+    "true_negative": 52.0,
+    "positive_prevalence": 0.39,
+    "majority_accuracy_baseline": 0.61,
+    "constant_brier_baseline": 0.2379000000000002,
+    "brier_skill": 0.05690252164775167,
+    "baseline_adjusted_skill": 0.41656158049600656,
+    "baseline_adjusted_score": 0.41656158049600656
+  },
+  "elapsed_seconds": 7.756643499998972,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:SCHEDULE": "64826271d2ff49c07a8dff94ff6d02432d7e2a2eabf333ca38b642117fef6c8d",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:REQUEST CORRECTED INVOICE": "a86b3d173afe55cbbd19292dd57571a2a83b4be9c29d67f8fbe4d21c8e9e19f0",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:HOLD": "d95d557dcd546e3f7af0bf22a2ba13fd167e4dde147b8c247be13c756ce8509f",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v1:HOLD FOR DOCUMENTS": "d4ab9e86b02314d01b84c5ac9c3e38e21854afe68d3da42549ad4281f117c194",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v2:SHORT PAY": "c7efcd9f15a56b22e0e241c0f48b425f7c70251d002dd4f476b3d58b5e33fec7",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v1:ROUTE FOR APPROVAL": "f30128ee870430be0090848ad3a96343e685f455c5748d25c0f1d6494f3f3d36",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v2:DUPLICATE": "6dc9a773a0acac970e965b335fb71b6d13a644848e31f6aceed96bfe15f490d7",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v2:HOLD": "8cd32ff629b769d9f8bd3cfde326f14c2acb3068710ba993fa573304756dedab",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:13:v2:FRAUD REVIEW": "93a8cd75df3f4fff959c17b42b84f34685f5a1c75065cb1877dd5a8308eeaa70",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:13:v2:DUPLICATE": "b7a7fb3ea2cb1361d1bd9ff34d593de296a711daa65d46178dde77c5270aabe0",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:22:v0:HOLD": "de51b7225e4842703f347d42fa4c8536c30a003f77849b75a5b44c12160c4085",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:22:v2:FRAUD REVIEW": "a9efc1f2703436eaf9f93cf15a3932b2b16c502c7f032d8f627363ed25862f2b",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:27:v0:ROUTE FOR APPROVAL": "b9ade8012011abdc1241aecd5fca1501ede0946800b2c2be894408dbe10e30ae",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:27:v1:REQUEST CORRECTED INVOICE": "02eb4040282118900d64118dcc4952bc1d7211927305875bbd954a71fac58ed8",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v0:PAY": "bc6ba9edab2c82aa831cab1be9233bf4e2c367edb5cf806a23992df892cae442",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v0:SCHEDULE": "10f3bb24a792a43ac193e394177d1d4024ed694ae3917376050f2376a6e4c3cb",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v2:DISPUTE LINES": "35a50058c61c3752fca4d1a084204b0feff9e6d05eda182b155cc160d759fc4b",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:SCHEDULE": "5994831b18a8f14a6f45ddb2a7a3261c0c15c2dcc02868fceef42be35e15baa8",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:REQUEST CORRECTED INVOICE": "4d7595bc2d5f85613e6092c2126e21ec655347dc5d36fe763c5fb36badb7e3e7",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:DISPUTE LINES": "9356968fa49ace070433e14fbff206cf843f8e3779bb250c0e690ad090317568",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v1:ROUTE FOR APPROVAL": "ae89cb1e47eb2094f97910d5debf9225c1ac621ebd316b8b537dca69192a189b",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v1:DISPUTE LINES": "2ea08fe6b4523b114269bf05687d23504f7a75a5d97846a1e4f72ecea24668dd",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:49:v1:SHORT PAY": "b37c5184435dcde994b47bdb987685cacff5556327c9b83d0061a21bf5d5f0ba",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:49:v2:PAY": "ae0faf6de2e34aa3ad645fd2b67d764ff4513c619066f98a65e4fd6fb8a04c7e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:72:v2:SHORT PAY": "6991a0f967da83411d7fdd97fbceb565206e2998aa6f50d87ca4b7d9c730fab2",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:72:v2:DISPUTE LINES": "7d851bd98370b7f1ce79ef1f380e08a19f0185200e70992d0434e709785620e1",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:77:v0:DISPUTE LINES": "3439cc416fdf5359e89db1e4b71b0e707699fa495477c2b4856702142e6d8c8e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:77:v1:HOLD FOR DOCUMENTS": "30b01d7063d813384d0da250bb7c94ecd1445a90339494cd6c977f66f9024ce2",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:PAY": "86c00b85d0d3368234a7cf1e3c9736ce936dfa79d6eae7b5d71b7e76a36ba670",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:ROUTE FOR APPROVAL": "7ff869a0f6d9d15173226a55fa2869deeceb576de63b204019e367eaa0a1db4d",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:DUPLICATE": "73723300845f677284bf63901ce150fbe2f500770ff0d1a12e7e9eacbdbb9e08",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:95:v1:DUPLICATE": "7eb44e46b373c053707039c1b006ae4b73f1cd1d16a0020e8aecc47243b3715c",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:SCHEDULE": "d264676dfe6403f3a69b348c9a71396f617f166b7f1fb7e966603bf02f1721fa",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:REQUEST CORRECTED INVOICE": "b4ecccb9bdc2551cb8f6d05ab76b309cab8ffb23fc1a16c40b5ed4c0aa796879",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:DUPLICATE": "8ce8e4f4bbf9c79a80e3f996b9595365fcc8926e608b8577e3ddcaa3118ddac5",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v0:SCHEDULE": "563ce10853733f8162abb018dfa35a6720c11c7dba6093db9c092b4391264f7e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v0:HOLD": "707b6f9d81f43e984c0d36aaba1f5215193123a3c2554f0f5ca5c285e6a18b0d",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v1:REQUEST CORRECTED INVOICE": "a06161e5cd25e37c9f5e2661e516f6e8aa355c8e11a5461bc3ab45ae1749b567",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v2:HOLD": "83ec770693b13e7bd5a5d3d4044d484919d39bf12c2e1ea1e33bef8dc647e22f",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v0:PAY": "3fbf7f7e6381bd278345a56cf32c50e84348ae1bc1652fd0a5f4fd3fc22c27b2",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v0:HOLD": "37ed06d4594bde56eb2c69fb8fa1c99f185dba953531c15a053825b33d8d77f9",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v1:SHORT PAY": "b8b9b83bd7cdd6ecde9a53024dfbd776435eb4ef6a1bbdbe0d4610e3ad8ff949",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v1:DUPLICATE": "3c120bb1ca5bd0bf58bdb93c5e6431dae239883747bb8ef7f50737c87f43839f",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v2:HOLD FOR DOCUMENTS": "2d979b5bd1630c2c438980f6a713edabe23184b18aec0e58b5fe687d2336a506",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v2:HOLD": "2dc82bbe0dc2cdc6eaf5f1cac764f2c76e76e9f3240c4668468740892e1c9243",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v0:PAY": "2126f8ed5cd068307dcffc177c19bdae7324ba611ceca1a23f8f12e18123b863",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v0:SCHEDULE": "f8f26f9738ba6d1e0b5bbbfc1ab7f826081ebc3762e31242367c61e3d38228d7",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v1:HOLD FOR DOCUMENTS": "8a6e6435fe229200da6a1ffc0831bd669fe5e30deea2ff7572c53bc863f30afb",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v1:DISPUTE LINES": "188581e4455462a0e9e580b6e57d57bd6acd61ee3d0b840c656f5d8d521d2282",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v2:REQUEST CORRECTED INVOICE": "5b35e939344fce3754dbf94ca854482082da6ee447a01d1e2c2d28e08850ef53",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v0:SCHEDULE": "15cd8064a28b6d20f6e356f90579f0250f5a8834b1070b06f4761fb2442081f8",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v1:HOLD": "ac7ead8d10f6e857eb6414122767bb2a8b7c256a8f3fc27abe689353ca0929b9",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v2:PAY": "0ba7b18a6a54f280c1e912c8127e9ff0c89d550c577f023a8554e872e04afae1",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v2:SHORT PAY": "97d0e73fee3a92dc2a6ea4155870657b4f3e62afa4f134987b7ec743bedf6798",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v0:SHORT PAY": "1e9389cfbc494bc15da415eeae765c4550fc640c51c4dbeb90fc6a0080ed4945",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v0:HOLD": "9a679f06ec5c39eb3768b1ef3736e4f26c6e6f2f200c27535aed197df7873a0e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v1:SHORT PAY": "d2b5cec139e8c82f522c684634dfebc321ac7287021140ea0b8654a344bf0594",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v1:DISPUTE LINES": "943355f711c66121214644f4d2bacf28d0ea0544f651b20f9646d90f4730a9f9",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v2:SCHEDULE": "bb6ed818319eef99860af99f02e5e04f84d50f1332f6e16d313c8d5ac8c59139",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:167:v0:SCHEDULE": "f9955ef77ffd4755b1b45ac6981e80f4695beafc09ed276a292730cf0a784a10",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:167:v2:PAY": "7be5fd022c6e88daf7ce29fa693fe1e88befc7e8a095cb5ea8d7229c751191d3",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:173:v0:PAY": "3b3384ba5b09d188860ae7c79096e07bfaca65970c893b58967c5a4e3b57195a",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:173:v0:HOLD": "18a9c5abe4424ee38f08691112958ca8a222cbbfe520de2e8c52d5584b9e62c5",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v0:SCHEDULE": "d625cca58a866ad898c04ff2e3f3c1cb1a296b3ddb298cbce251a4e9b46e3223",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v1:SHORT PAY": "2c395ebfe753e0d0aef618808744cc90a5f239f8add9991b93b86ba32c8f50c3",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v1:ROUTE FOR APPROVAL": "ba592b2f65147b31f542d25755f0ce196289072761462f05c9159525319301f0",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v0:ROUTE FOR APPROVAL": "714fe534683418e0dfc01d7d861805cbb14220905283095d0217a3de50e5c7a7",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v0:DISPUTE LINES": "8e933d2d0e248d981b5d921084c9b57ab1aa589604e6a81c83a1321094ba24c6",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v1:SCHEDULE": "1ab109925198d2c8df4e5cb6522d0ec3d365143ed9fd6b74a908e87e29e7df8b",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v2:HOLD FOR DOCUMENTS": "6982ba41206df383d78a4b8ec3528ad910010be2bd91b278e030f43501f4063c",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v2:DUPLICATE": "1830623f0d023830d41ce7fd4c64e23f1e3b3cf2e9f1a701a741510842f4062e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v0:SCHEDULE": "caab36aa34be2b623eb17f339d7d904fd847d7f06e96f98cf2f304c436fbb64e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v0:HOLD FOR DOCUMENTS": "4e284626be143450dbafb72f5284e9416e95f3035044861893b4e364607a9e6a",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v1:REQUEST CORRECTED INVOICE": "945a20942ba33538835f400cc122ad5e38d3fbd6c350031c9c9057b6b8e13dd1",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v2:DUPLICATE": "b84d66eb0612cc0f59f2cc7ba1ac5dd5279d76d55fb2b0839f24b39884bb53b8",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:209:v2:DISPUTE LINES": "8926782e3f4e47ebcad0ec4e34ea6de3c9dd7d0e714d834e31cb1f0aed8bc70f",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:209:v2:FRAUD REVIEW": "ef5abada18e28beed7e19ed45d1b1d781bf1224f372da90b2c842ce7f872537d",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:ROUTE FOR APPROVAL": "da961afd97ec148a694f89268c4e519269bbd2abfba472c644fb16e74e9996ce",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:REQUEST CORRECTED INVOICE": "9810f5c58face9ec736c5e2f7114f8a50a1bffac82ae28facfd955232028845d",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:FRAUD REVIEW": "b659bc52e42cd8c84dc463559cf1a328f3f2f64de86d5f49241a11b049a294b0",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v1:FRAUD REVIEW": "0c707259f47501420da59f2e6c12e8b8a97f8820bc12ee253f4d5654c0ddcb47",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v2:REQUEST CORRECTED INVOICE": "bce4718b867c4db59b80805fd3ebb581e6fb2d32dad6e706b3c385d4c41eef74",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v2:FRAUD REVIEW": "bb73f32639902255aea103fcb5d0631756834473fbfadd61a5fcd88dd0a2f20e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:HOLD FOR DOCUMENTS": "8533e629be140eeb67ce05049b8ba7e7f660ff435dece5218e4affb2134468a4",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:FRAUD REVIEW": "4c9a574b74f754591cf8846cdfa4d9017fe5c9da799b5ba3282a5dc539a2d876",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:DUPLICATE": "0c2669fcdcb107406461b4a66d76a3b4fa898178f36fb03f0d85e6ada0ea9362",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v2:REQUEST CORRECTED INVOICE": "fccea36f56b9aab409da1febfc0b931424c827450f8438a682576451055e3d4f",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v2:DISPUTE LINES": "6d0f5154781b9fef5fe7eadc7dbe235c95a2b2bd9a1c0207a860263eaa8689a3",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v0:DUPLICATE": "b13f04ee6427b8edfba894a54d2b44e741195d560b6715e7184ff77bd8af3e1e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v1:HOLD FOR DOCUMENTS": "75db2a172cd73f3922806cb0a188e3844b60fc2dd471345a51bf5f101c253c13",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v2:HOLD FOR DOCUMENTS": "14d41a7190b36e54cc8ae03d324bc7598cd3f764a4bd691e50dca056618ec881",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v0:ROUTE FOR APPROVAL": "7ca2ffa8597f65ed87d40395acdb785c0fffd01ccda0dda1ce8508d057a7656e",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v1:SCHEDULE": "0af2fcbd3c9c5599dc490ef7c26ed0e6a41816de7f8d6c0a1654d4cbe3c0a2b4",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v2:FRAUD REVIEW": "53949556068e116a240ce582a83cab0783eebdab16db5dea436be098f523a25a",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v0:PAY": "8694d3e6d8828d0f5d20718f5620f560c175b2e57d8b504a6cd984fc3167cc70",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v2:SHORT PAY": "dba264d7584c820f0b32aa2ab53aedfa0cdeb97f06d279fb80f34e525e50f265",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v2:HOLD FOR DOCUMENTS": "f14e3b87bd1ac215c521b7f114261fbb6300e91dcc54a22c319ca2c4739cf970",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v0:PAY": "7858788390c2fcc9a1524b53305070e3c637a0d61a11416daf2d42ace2cc7ad3",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v0:ROUTE FOR APPROVAL": "5db6e023297b7bb615556b022c354eecb0922646b82576386c9c8cfa4e55aee6",
+      "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v2:ROUTE FOR APPROVAL": "b45f13fea9235b297782dd77aee090fe4b7372e782397f31f05bc2881c6f225a"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v1:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:1:v2:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v1:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.17969999999999997,
+        "true": 0.8203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v2:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:12:v2:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:13:v2:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:13:v2:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:22:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:22:v2:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:27:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.23440000000000005,
+        "true": 0.7656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:27:v1:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7666,
+        "true": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:37:v2:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7744,
+        "true": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v0:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v1:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.17969999999999997,
+        "true": 0.8203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:45:v1:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:49:v1:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:49:v2:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9991,
+        "true": 0.0009
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:72:v2:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:72:v2:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:77:v0:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:77:v1:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.22660000000000002,
+        "true": 0.7734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:91:v0:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:95:v1:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:143:v1:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v1:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7637,
+        "true": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:147:v2:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v1:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v1:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v2:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:155:v2:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v1:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v1:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:159:v2:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v1:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v2:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9996,
+        "true": 0.0004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:165:v2:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v0:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v1:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v1:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:166:v2:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:167:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:167:v2:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9978,
+        "true": 0.0022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:173:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:173:v0:HOLD",
+      "question_id": "HOLD",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v1:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:183:v1:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.18359999999999999,
+        "true": 0.8164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.23440000000000005,
+        "true": 0.7656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v0:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v1:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v2:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:198:v2:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v0:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v0:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v1:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7637,
+        "true": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:201:v2:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:209:v2:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:209:v2:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.8125,
+        "true": 0.1875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v0:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v1:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v2:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:215:v2:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v1:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v2:REQUEST CORRECTED INVOICE",
+      "question_id": "REQUEST CORRECTED INVOICE",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:221:v2:DISPUTE LINES",
+      "question_id": "DISPUTE LINES",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v0:DUPLICATE",
+      "question_id": "DUPLICATE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v1:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:226:v2:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.22660000000000002,
+        "true": 0.7734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v1:SCHEDULE",
+      "question_id": "SCHEDULE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:227:v2:FRAUD REVIEW",
+      "question_id": "FRAUD REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v2:SHORT PAY",
+      "question_id": "SHORT PAY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:231:v2:HOLD FOR DOCUMENTS",
+      "question_id": "HOLD FOR DOCUMENTS",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v0:PAY",
+      "question_id": "PAY",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v0:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.22660000000000002,
+        "true": 0.7734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__invoice_processing:workflow-controls-v1:invoice_processing:42:237:v2:ROUTE FOR APPROVAL",
+      "question_id": "ROUTE FOR APPROVAL",
+      "probabilities": {
+        "false": 0.23829999999999996,
+        "true": 0.7617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

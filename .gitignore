@@ -33,6 +33,7 @@ datasets/
 # Scratch scripts & temporary logs
 scratch/
 scratch_*.py
+space/
 tmp/
 *.log
 

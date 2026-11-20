@@ -1,0 +1,406 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--snake-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__snake-v1",
+    "split": "test",
+    "case_count": 25,
+    "decision_count": 25,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:45+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 25,
+    "expected": 25,
+    "succeeded": 25,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.6133333333333334,
+    "uniform_accuracy_baseline": 0.3333333333333332,
+    "fixed_answer_accuracy_baseline": 0.35333333333333333,
+    "baseline_adjusted_skill": 0.40206185567010316,
+    "baseline_adjusted_score": 0.40206185567010316
+  },
+  "elapsed_seconds": 1.3420805999994627,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__snake-v1:snake-v1:2232308eeca6b250025a01d6:action": "3c080f1313bf1a449fdf1f33f978d826321c8ca6edd9c997afa8c45b7ab9f7a0",
+      "open_jev__snake-v1:snake-v1:3e935f09712957c42e89031a:action": "a99a60aa1e08633cd9d74f2c59aab7a241016107c721a79a052eff6d7859b69f",
+      "open_jev__snake-v1:snake-v1:390df5d14ba89009915c3191:action": "24ec3ac00ba2e65a49fe7dd00ecc463f626266cc8bace18a709c77c37c61b17c",
+      "open_jev__snake-v1:snake-v1:5702c361a11daf583ce6de8a:action": "fdeea598f14b003b4d8e757127131bdc70f8f62bb0a45c6cfd5b5de04bdc1359",
+      "open_jev__snake-v1:snake-v1:9d59e083331ad10c53bcdc3f:action": "0cad9336c10c537dc3edb1b8c1e592d84260918098cc6c3b5d80596e29bf26b2",
+      "open_jev__snake-v1:snake-v1:7a0a429f7ae62a85b634d9bc:action": "fa83e5576d48866492672f6f4088e740fdf9dc1beb1837d993b0e407b9cdf043",
+      "open_jev__snake-v1:snake-v1:c5c6c21a9046ff4745fbb077:action": "37ae29720424dd3ca4b5c515a3967b2074ec10fd4a1ee02de17ce4eeede5edeb",
+      "open_jev__snake-v1:snake-v1:a0ce0976cfdbcf7dac711d38:action": "58b8dceb454f08b2198531b79d043adfefb35ba18cb912804977ce4808daeabf",
+      "open_jev__snake-v1:snake-v1:10b37b4dc1c40060365098be:action": "f0c39d272cf36197d0b23b9e6dd243f51b3a86ca1959632d4e266223d884fbdb",
+      "open_jev__snake-v1:snake-v1:93253fcace7d017d8514e7a0:action": "664fab6562f33a1f0c04d5d99133631a7efe57fbc36d6efed7fd2cb63bfc1a4d",
+      "open_jev__snake-v1:snake-v1:fa26624b1f09f825ddc08ed9:action": "7915d24e6228376fbb6d5c7c0dede49dfe2b23cde1ceeb0aca65bf3799ff299a",
+      "open_jev__snake-v1:snake-v1:11e86b6a8a640e83490c763b:action": "d83e0e9e63dc872a71bd658e0f2ffbd0893ffcccf5766db7b4f4b80f78c530cc",
+      "open_jev__snake-v1:snake-v1:f183e61df5b007b77523b7fd:action": "87731297227d422caafb9bb24e6104b94a53e739bd942345ec1c58079cb529b1",
+      "open_jev__snake-v1:snake-v1:dd4ee3fac52263be4f6405f9:action": "143bf53aad6b3b12237736ac255b1e364b8afc4f2937c1c942699557d27e49d6",
+      "open_jev__snake-v1:snake-v1:0df98d4d1761aff4468fc9e7:action": "39cb794a2a7623c9156caac7a49f8e09ace17ce55d2309cbf1eda05eccae5232",
+      "open_jev__snake-v1:snake-v1:277c59e41e49dc215b38be5b:action": "ff06e08b9291fd7b13c726468d7a66018145fce7052facd66cfe5ed68b6c5e22",
+      "open_jev__snake-v1:snake-v1:4b53d3909d5dd1501dbb696f:action": "275f0b5403f921dde957b658ab28a8363476892316b0a9a106074fd8dec5fbf5",
+      "open_jev__snake-v1:snake-v1:0b26a42dda10857a41c6aa39:action": "9daa482345371d5b2b0575f93622be53cc84046927ecf5deb9a75443cc9e22af",
+      "open_jev__snake-v1:snake-v1:fb8a0aacef9fcd13b384d9d1:action": "d14aacc52b8fe1631326128f4ef2df16fe6416d1bc976e1fc454e44b7e884bf4",
+      "open_jev__snake-v1:snake-v1:337b2e1211a90fbcf150bd71:action": "06225a405a319c82dd605552abd3e10d623e181512d10dc16841f77c3107d811",
+      "open_jev__snake-v1:snake-v1:755ad0cf0934b8923b4c6a13:action": "a1f2c2e92ed4f6ca2b8319c7d80331142cef8322e7a1a247f488395062f13079",
+      "open_jev__snake-v1:snake-v1:13da130864ba79bf2c41f7ce:action": "77cabe583a8b6f8b7f06563de48430645cc1344dc282a1348210f63abe63aebc",
+      "open_jev__snake-v1:snake-v1:327e1e82d1271dc5c97f0c39:action": "dd695ed876609aed0625dc839e3eb048045134e102481202ee7107ebf35cefbc",
+      "open_jev__snake-v1:snake-v1:788a08809ac692186f9760bf:action": "4bb11fce4a1a79adabad7e34b9a599e4d277dcc7ded94612f81f4fd12de050ad",
+      "open_jev__snake-v1:snake-v1:7d18e51f63b36519f8912605:action": "92cad16e594ce0146558b112821160a9fbc4a7d6d1168ee9fda662f6e45bc08d"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 3200,
+      "output_tokens": 25,
+      "requests": 25,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:2232308eeca6b250025a01d6:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2555932880543348,
+        "option_1": 0.00309628445864962,
+        "option_2": 0.7413104274870155
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:3e935f09712957c42e89031a:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4186698717948718,
+        "option_1": 0.5634014423076923,
+        "option_2": 0.017928685897435896
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:390df5d14ba89009915c3191:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.24750499001996007,
+        "option_1": 0.5341317365269461,
+        "option_2": 0.2183632734530938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:5702c361a11daf583ce6de8a:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4023,
+        "option_1": 0.252,
+        "option_2": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:9d59e083331ad10c53bcdc3f:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3867,
+        "option_1": 0.2715,
+        "option_2": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:7a0a429f7ae62a85b634d9bc:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4555099589630668,
+        "option_1": 0.012811530377339607,
+        "option_2": 0.5316785106595936
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:c5c6c21a9046ff4745fbb077:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3972547840897706,
+        "option_1": 0.25247971145175835,
+        "option_2": 0.3502655044584711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:a0ce0976cfdbcf7dac711d38:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.007300730073007301,
+        "option_1": 0.9805980598059806,
+        "option_2": 0.0121012101210121
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:10b37b4dc1c40060365098be:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4047047047047047,
+        "option_1": 0.24924924924924924,
+        "option_2": 0.34604604604604605
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:93253fcace7d017d8514e7a0:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2082082082082082,
+        "option_1": 0.26006006006006005,
+        "option_2": 0.5317317317317317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:fa26624b1f09f825ddc08ed9:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.001198561725928885,
+        "option_1": 0.2067518977227327,
+        "option_2": 0.7920495405513384
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:11e86b6a8a640e83490c763b:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.25633577081037767,
+        "option_1": 0.004106981869177602,
+        "option_2": 0.7395572473204447
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:f183e61df5b007b77523b7fd:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1875,
+        "option_1": 0.4629,
+        "option_2": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:dd4ee3fac52263be4f6405f9:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.13003003003003002,
+        "option_1": 0.5161161161161161,
+        "option_2": 0.3538538538538539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:0df98d4d1761aff4468fc9e7:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0040076144674882274,
+        "option_1": 0.43632902514778077,
+        "option_2": 0.559663360384731
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:277c59e41e49dc215b38be5b:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2888111888111888,
+        "option_1": 0.21168831168831168,
+        "option_2": 0.49950049950049946
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:4b53d3909d5dd1501dbb696f:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5462990710218759,
+        "option_1": 0.0010987913295375086,
+        "option_2": 0.45260213764858653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:0b26a42dda10857a41c6aa39:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.44073889166250624,
+        "option_1": 0.5499750374438341,
+        "option_2": 0.00928607089365951
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:fb8a0aacef9fcd13b384d9d1:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1328,
+        "option_1": 0.5,
+        "option_2": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:337b2e1211a90fbcf150bd71:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.0020038072337441137,
+        "option_1": 0.3483618875864142,
+        "option_2": 0.6496343051798417
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:755ad0cf0934b8923b4c6a13:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.04803275414419813,
+        "option_1": 0.058717795086878376,
+        "option_2": 0.8932494507689236
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:13da130864ba79bf2c41f7ce:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.008498300339932015,
+        "option_1": 0.9803039392121576,
+        "option_2": 0.011197760447910418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:327e1e82d1271dc5c97f0c39:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.8207103551775887,
+        "option_1": 0.11475737868934466,
+        "option_2": 0.06453226613306653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:788a08809ac692186f9760bf:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.22872872872872874,
+        "option_1": 0.24734734734734734,
+        "option_2": 0.523923923923924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__snake-v1:snake-v1:7d18e51f63b36519f8912605:action",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.195026962252846,
+        "option_1": 0.009187138006790493,
+        "option_2": 0.7957858997403635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

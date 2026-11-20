@@ -1,0 +1,1477 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "arc-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/arc",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:13:51+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.42,
+    "uniform_accuracy_baseline": 0.2533333333333333,
+    "fixed_answer_accuracy_baseline": 0.32,
+    "baseline_adjusted_skill": 0.14705882352941174,
+    "baseline_adjusted_score": 0.14705882352941174
+  },
+  "elapsed_seconds": 15.394189799999367,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "arc:ARC-Challenge:test:27": "7615d8e54a804687a2262b4c771234696a1e1a59cc82d419162ac53f69f455c8",
+      "arc:ARC-Challenge:test:35": "12ded5edf06a7dad833859649c5927cabd2e403febb3835c75f33d96b4db18f5",
+      "arc:ARC-Challenge:test:37": "f78dba46b3aae5af22465621ea163247e2de0a371896956eaf321505671fb376",
+      "arc:ARC-Challenge:test:74": "e2520a1b80e032f9900bf88da989d34ed8ab16bf2ac61c77df035df4b51e989a",
+      "arc:ARC-Challenge:test:77": "661dca249faacb348e69edea52669a39239f2df356ef464bbe359abb0d6186c2",
+      "arc:ARC-Challenge:test:94": "8f36fced49e1bdf5f63078e9e6f256ed0ebd39895484c5075b66771a42906ba6",
+      "arc:ARC-Challenge:test:147": "e75de75f4a1284f4e69b0641483a18f66c2b900bddd024e93918f9701393eb0a",
+      "arc:ARC-Challenge:test:278": "5083d8b3639b9b58ee7922314face6e902f9028393fc4285167075992eea535b",
+      "arc:ARC-Challenge:test:314": "bbb984227097190bd5be9a6c75d187a07819f49eedb5683954183ef02195f250",
+      "arc:ARC-Challenge:test:429": "110ab59c81d7abe7930316b223c52a4daf8dc3543b8bde2602b627d96fdff31c",
+      "arc:ARC-Challenge:test:432": "af47c8e78f4900bb5a31757f7b2bf6bc3e017582875bb2932c1aa5a97d1c565c",
+      "arc:ARC-Challenge:test:466": "f38959f6e88e189d167108fdf911bf8023758c8daf899b8fbdb85ba04e292792",
+      "arc:ARC-Challenge:test:604": "f1467919b6c556314faadf578cfd869315815d5161a40bf83aaeeafa48e64491",
+      "arc:ARC-Challenge:test:625": "36fc75668ba9a49231d75042fff039367ab11edefc8c0ac85c0ea34b857bea42",
+      "arc:ARC-Challenge:test:824": "50b4f788ad465b7c94ebd1007f5af918ec195d729afe307bbe52567d1ee3d239",
+      "arc:ARC-Challenge:test:832": "b29f4caa1608559ddd24a71fd18e7185b2b85fd0a2381b3f9d12e069d5af4505",
+      "arc:ARC-Challenge:test:919": "07ae629b0bf73c30109055fb853b04bba7bb68074338b60f4035af3e37356ac3",
+      "arc:ARC-Challenge:test:925": "d5ffd14eec15a8091ebf3c42c5cf2318e44384f438f9a5b49e3454c17b92b430",
+      "arc:ARC-Challenge:test:934": "e05dfbf3dfe4ad1a07c154c42d7c81293c1e7ab5396325e40026936f13385025",
+      "arc:ARC-Challenge:test:999": "d6853be466941fe2c33f983c5756993b07ebda2d6b1eec3bf37ce6d3236fc98a",
+      "arc:ARC-Challenge:test:1009": "2a5d213a4ce2c90fcc093be04ede1058fd01290c3926dafb62ae7cf5f9f5e7c5",
+      "arc:ARC-Challenge:test:1059": "ba5c72e8882acba11c26764ce4090c9b1b15d47ce6fdc3b0d8d691c415a73bbf",
+      "arc:ARC-Challenge:test:1121": "64ac743dfb99b1f6c416719c815875aa1fe12dab03c7d5ae7d91756f49e81b1e",
+      "arc:ARC-Easy:test:40": "cb23a752bf3aab204ce5f614af7c1e0dc328461ac8b412bce34e13d6c52de704",
+      "arc:ARC-Easy:test:64": "58cdbaaec3ae4630ea2235e056868e64058f6e867316a4bbe804f20f1511a12b",
+      "arc:ARC-Easy:test:65": "cf5a9bbdd64646a1d35896f430ee9133bf60e8b04e6762cecd7911a7f87a1955",
+      "arc:ARC-Easy:test:93": "d321f5e770b103e287e05c28e6b0f211f9aa3ae5a32b90bf6044f05f2a1e9135",
+      "arc:ARC-Easy:test:115": "e6ed8ff54ed91daeb0c4402d41ca8f50e448248ad3603d9df9ec36335214248a",
+      "arc:ARC-Easy:test:130": "5c8aa13232064e3dde2578eb225b4fef026569aac222372f0b63675d7aeeadcb",
+      "arc:ARC-Easy:test:145": "10f565ef461e0d27e8d51fa46481dfa1ec473c6ab56ecebd3a62b6c18dbe1cd6",
+      "arc:ARC-Easy:test:170": "8a56ed2204364b94cb653f595caa79d17c5f9684a112ccbcbb5ef3584f1f2c2e",
+      "arc:ARC-Easy:test:238": "f2107946218c9b5c4cff4fef73ca32b5166c925d9e133f7be65c55113494d656",
+      "arc:ARC-Easy:test:270": "338c47c69b367ec6f6ff4c9b23754bc604a82d2c39f26fe8b3e322b671e7b41b",
+      "arc:ARC-Easy:test:285": "5f8811f5f2e81836b6324471905906bf0f809012b2d4f3e0cce87f4a8d765cba",
+      "arc:ARC-Easy:test:291": "8166638ab17fc6f46611bbcebf13ad4554867f52e3bf59d535709e36488a1ea8",
+      "arc:ARC-Easy:test:329": "aca7272959c151b2f49bd8e9594b6fab88590aa87c746bb289210d72f05b9091",
+      "arc:ARC-Easy:test:358": "e40e2f8f4e4931e56fd9cb78b9c8e8381c7715b97ea71b13cc9ab4572a30761f",
+      "arc:ARC-Easy:test:400": "7f6bcdf7ae9252aef1dbd61041366f7174b17ee7a8df1e7c26de901e91fc1918",
+      "arc:ARC-Easy:test:445": "9687a57091da4dbf8eac544ac8716509c99c6fd326ffcf0a403af1f78c7556f7",
+      "arc:ARC-Easy:test:454": "140a22a9e5c33d3464d80c0c2b3cd2e3d588000c8028eba92326e22df4903abc",
+      "arc:ARC-Easy:test:467": "bc662c624ddf483794f962d8f509c24368fc24ea11b6d04269e80c12f31041ee",
+      "arc:ARC-Easy:test:499": "0a436027abb6a9adffe6b6e65494d8dd3b065461954509e75eb650acafd12a64",
+      "arc:ARC-Easy:test:519": "910227d1798e399744337a7fbfd11c32c34c9c1bdb40333752e5edd2048affc7",
+      "arc:ARC-Easy:test:523": "383639c62a0f43aab1748808841dfd7e33d8804fe308306d840475fe909a9c39",
+      "arc:ARC-Easy:test:560": "5068f775eb42ddf8cd19cb8b9990e23f12f228c2ce2f6063a4c8ef83209861ba",
+      "arc:ARC-Easy:test:604": "c17ef9e29dd0ada07325cc10d73c5fae24b581a65543a59be8cd5f38c767c92d",
+      "arc:ARC-Easy:test:631": "7c8e9f36d1cf592646937cb10c691c6ce9ae2738eee4acb4a9f088438bba0668",
+      "arc:ARC-Easy:test:653": "1b8292a36fcbf9a3e52ee93d627e0394ee48f129fbef0c84889d655ec7459c44",
+      "arc:ARC-Easy:test:669": "cf9658207ba4d7a7826488d92e0124e6acde9e189edf037c335450df31dc22c9",
+      "arc:ARC-Easy:test:724": "96beef634a78dcc1f35c3817432ab1e95bd7251ba25172b1a65fd1fc4fe08a74",
+      "arc:ARC-Easy:test:768": "c29f36e18f9f62a9a23e0c766772c63f8b574cf6bf7855789cb5ce489a317fc3",
+      "arc:ARC-Easy:test:773": "3fbe7ec6910b8bc44e6f26ee18c9a3e3268b7f8a620002ba8c4d0d95a42ba7b9",
+      "arc:ARC-Easy:test:830": "ccc5f5c0a610b98a48a87ac859189484a4d899e04ed1394ddfea89b140056016",
+      "arc:ARC-Easy:test:859": "37810636dd5b215791071ed24ff6aa9a24559e192ea214fedc025743e89605a8",
+      "arc:ARC-Easy:test:904": "7e019883e772a4cd17ee9fcd0e181d231eac32314f8f6388a3e5ba2bfc264823",
+      "arc:ARC-Easy:test:946": "cad7bbca9024add369939aa4aa4d02334f11cc2c9391c440fcd7c5c12153d302",
+      "arc:ARC-Easy:test:961": "99672011eaef7055945bdb7a4feeb1d4fabcb6c4494a55f654471523c962defb",
+      "arc:ARC-Easy:test:1066": "7f3b361c51f2344b96c16770f83a6cc4d6ec8bcb45cd3bfd05d7df0abb0da429",
+      "arc:ARC-Easy:test:1078": "51865b168eaf11c04d7d35a218d1843ad63a43c42797022259f10ca1c4422ab4",
+      "arc:ARC-Easy:test:1095": "ca079b36bac53c7d86d9dc63147d9e13ee0cf90593401a0ca8566b16c68cfcbe",
+      "arc:ARC-Easy:test:1100": "f687465e15e5633c68b306fd6288b968260a2a830c8a65ec8bd3f79c8628262c",
+      "arc:ARC-Easy:test:1252": "281184396a02db932e2193dbb3670a1d59033ddd2e6b34b9fc3d110562575bb1",
+      "arc:ARC-Easy:test:1256": "3af1856a8721cd5ef9b647dfaf8b9fc3ded9cace245d5b6b48b2ace1629defa7",
+      "arc:ARC-Easy:test:1273": "edfd14a83b9dd504b9c7e4daaa072045ecaaef0dc45a6f77ae09ae22347d2630",
+      "arc:ARC-Easy:test:1288": "380d24ba3982ec75a927a1814053d9ea7591c21b58de749a81bb12479a768135",
+      "arc:ARC-Easy:test:1323": "d2ab6da08c6877e0b66e6b4f45ee7dfa8b52c070cacc423ba76ad9be806c8545",
+      "arc:ARC-Easy:test:1328": "967ba04498962168e923026cc157c8c8c144607e29ddf0f9e81331768f4a4442",
+      "arc:ARC-Easy:test:1330": "94bbdd6869e5e80f4619e4a75970605ce7aa95c024a367ff0be750b13d11dba2",
+      "arc:ARC-Easy:test:1372": "1b684156884727ca45667a8914e919ee3b16bb71fdfd6e41dd535f199dda59cc",
+      "arc:ARC-Easy:test:1463": "ec0a762ccc3388d6450888a0d73ae62bcfadeb2ff5937a0de1f9421a6bc3dc68",
+      "arc:ARC-Easy:test:1544": "9bf6eae2475b3cbe647ee960516d991041cc620f7199b76d70e6ed464f452a0f",
+      "arc:ARC-Easy:test:1553": "ed3e9d33d326a478ecaf39305cf25d9ef10dcb8252724284a97b3842f357ac33",
+      "arc:ARC-Easy:test:1561": "aebf90654096eb3ea5b09e67c8f7432ba363601448528c5a8bf5516db5279e19",
+      "arc:ARC-Easy:test:1590": "110bee2ed503251fbef50e3daca3a4a1a7eab7eb37491b266c0f9bfe22583397",
+      "arc:ARC-Easy:test:1623": "93a285bfcf858bbf3cc6e0d48889ca417c8abc78ef00931623cfa9676a326c21",
+      "arc:ARC-Easy:test:1642": "e88e0d6b4bc913ddad443662ba3c48097db513d5d69146ed3161f50e4852b95e",
+      "arc:ARC-Easy:test:1658": "22f503872822e1869109c8fa544e4ded84b820c7c131370be56385549ff36fda",
+      "arc:ARC-Easy:test:1677": "3f09b7b9b36e0a6e0afc30785004e651e902c5287eef2e3557965269057aba03",
+      "arc:ARC-Easy:test:1690": "09a305a6ce212b9e04929b297f5d663264c694ade51884174a976e1e15601cc8",
+      "arc:ARC-Easy:test:1717": "8bfd55fbf02709537c113c862cc47fca8c7166a024e74d9616abb9818916154b",
+      "arc:ARC-Easy:test:1720": "653c51b3ccaaf87fabfbd45897b4ae6ac54df44c2ca932b146f37bc4cd7bad2a",
+      "arc:ARC-Easy:test:1772": "bc63e565c269530cb1811c4b32eb2045bfc24dccf01efcec8ce55a38e523b616",
+      "arc:ARC-Easy:test:1786": "3fb013ce2a0c9ccfcd32f06ad5c0513d1dedccee5b21558e61cc7ee89c857e4b",
+      "arc:ARC-Easy:test:1794": "8afe7e817f399de042e66aed0515495fb7504477d6226ccd5a89c89b15d2fbd1",
+      "arc:ARC-Easy:test:1795": "a052da5a33c61db30713f09c263d15a78378c9d16b51eae96e41123df6d4f4d3",
+      "arc:ARC-Easy:test:1880": "3c2cbae2c026bb274c2f4297fb0d35f9c964d1ce2ad575ca34cf0b172cf96831",
+      "arc:ARC-Easy:test:1928": "67b1dd351113789944cd5fab496d9706d772b31110e64a0ea401d33a2459cd2b",
+      "arc:ARC-Easy:test:1951": "b598d5262d554d89173e8c6f4644b0e2d568cfead576ee953029cbcfcc971c95",
+      "arc:ARC-Easy:test:1970": "8919d65f2eef83018d6d145d8078bc514afa0c30152a6d87f30337b5694c86ae",
+      "arc:ARC-Easy:test:1973": "92dda925b10fbf0e513b078ac78d97cc2fe4794b27845aa2a61ee0ee08d333db",
+      "arc:ARC-Easy:test:1992": "cc4f36d6f48db1b7e53374f27d4d13bd2f69fc8ef783bde2bf3ea7f13b39519f",
+      "arc:ARC-Easy:test:2008": "4db71102b4bef83a23fb57759cda3fcffdf8a880ead320b550a3de91f1554d03",
+      "arc:ARC-Easy:test:2133": "34b88df3f532a846eef4f588418f5355dfded4386e370540a708f0edc962d347",
+      "arc:ARC-Easy:test:2248": "dd4b47d58e641c54f7290bec086226423ff8861f1a5ce74f13b128efaf0e291b",
+      "arc:ARC-Easy:test:2315": "ddf855d26cb0608cc3e1444453724133db4a7ddfa8681aa252d2e7624dcbe917",
+      "arc:ARC-Easy:test:2317": "36e60e1a331885be6911bc84231450becb2253f567b82e5a171febf7cc8b6a92",
+      "arc:ARC-Easy:test:2322": "915f62097a76e905a7f1bad4d934d46f24c1c4b34e60a4b120be85ccfa33a741",
+      "arc:ARC-Easy:test:2328": "d3af5baf1130c43862ec35561b0afe7b84d5c93801e8b55a804af236fbe84516",
+      "arc:ARC-Easy:test:2354": "cb314edf59558a6420f0a88b27d7bd16efd15cf20ac3c8f87dee573c7a06cd91",
+      "arc:ARC-Easy:test:2374": "c35ced306ba86e9f2af25f316ef1fe7cc88b639d62cb45eb62b57f5a2a2a7f85"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "arc:ARC-Challenge:test:27",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3477,
+        "C": 0.2275,
+        "A": 0.207,
+        "D": 0.2178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:35",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.27702297702297707,
+        "B": 0.3297702297702298,
+        "A": 0.17072927072927074,
+        "D": 0.2224775224775225
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:37",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3027,
+        "D": 0.1602,
+        "A": 0.1992,
+        "C": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:74",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3242,
+        "A": 0.209,
+        "C": 0.1211,
+        "B": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:77",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.27512487512487516,
+        "B": 0.24685314685314685,
+        "D": 0.16193806193806196,
+        "C": 0.3160839160839161
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:94",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.11575787893946972,
+        "A": 0.47293646823411706,
+        "C": 0.16608304152076037,
+        "B": 0.24522261130565282
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:147",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2559,
+        "B": 0.3027,
+        "D": 0.1602,
+        "A": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:278",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2576711644177911,
+        "B": 0.24107946026986507,
+        "C": 0.08345827086456772,
+        "A": 0.4177911044477761
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:314",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.4571371411423427,
+        "B": 0.3673101930579174,
+        "D": 0.03591077323196959,
+        "C": 0.13964189256777032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:429",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3438,
+        "A": 0.3047,
+        "B": 0.1523,
+        "C": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:432",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.185778668002003,
+        "A": 0.7589384076114171,
+        "C": 0.03044566850275413,
+        "B": 0.024837255883825737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:466",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2912912912912913,
+        "B": 0.3733733733733734,
+        "D": 0.1974974974974975,
+        "C": 0.13783783783783782
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:604",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3945,
+        "D": 0.2363,
+        "A": 0.1133,
+        "C": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:625",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.1877628680152213,
+        "D": 0.5946324854796715,
+        "B": 0.044462247146004406,
+        "C": 0.17314239935910272
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:824",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.27356413848308986,
+        "B": 0.6526916149689814,
+        "C": 0.018310986591955174,
+        "A": 0.055433259955973584
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:832",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.35297054418372437,
+        "D": 0.15696455317024463,
+        "C": 0.07658512231652521,
+        "A": 0.4134797803295057
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:919",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.27004008016032066,
+        "B": 0.18006012024048096,
+        "C": 0.19178356713426853,
+        "D": 0.35811623246492985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:925",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.2063063063063063,
+        "A": 0.13973973973973974,
+        "B": 0.14564564564564564,
+        "C": 0.5083083083083083
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:934",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.31982026959560655,
+        "A": 0.436844732900649,
+        "B": 0.1019470793809286,
+        "C": 0.14138791812281576
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:999",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.29522474722194414,
+        "D": 0.22384623085393932,
+        "A": 0.32455701271398535,
+        "B": 0.15637200921013114
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:1009",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.18785692816351068,
+        "B": 0.25247971145175835,
+        "C": 0.2993688007213706,
+        "A": 0.26029455966336035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:1059",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.22870583525172655,
+        "A": 0.38905014513061753,
+        "C": 0.13882494244820337,
+        "D": 0.24341907716945252
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Challenge:test:1121",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.25,
+        "B": 0.2422,
+        "D": 0.2168,
+        "A": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:40",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.29716745070563505,
+        "D": 0.22870583525172655,
+        "A": 0.326493844460014,
+        "B": 0.14763286958262437
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:64",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4964475132592815,
+        "A": 0.4808365856099269,
+        "C": 0.00570399279495647,
+        "D": 0.017011908335835085
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:65",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3008,
+        "D": 0.1709,
+        "A": 0.2871,
+        "B": 0.2412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:93",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3867,
+        "A": 0.3301,
+        "B": 0.2832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:115",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.25561881929877134,
+        "D": 0.3043651982818899,
+        "A": 0.18439716312056734,
+        "C": 0.25561881929877134
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:130",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.6552826043539045,
+        "A": 0.20281605751947274,
+        "B": 0.08827641302176953,
+        "D": 0.0536249251048532
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:145",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.27702297702297707,
+        "D": 0.23316683316683318,
+        "A": 0.16003996003996007,
+        "B": 0.3297702297702298
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:170",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.5265628120631116,
+        "C": 0.2116037547433593,
+        "D": 0.10675054923107648,
+        "B": 0.15508288396245254
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:238",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.4348477284073889,
+        "B": 0.19600599101347976,
+        "A": 0.10973539690464303,
+        "C": 0.2594108836744882
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:270",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.34766523347665235,
+        "D": 0.23927607239276075,
+        "B": 0.17768223177682232,
+        "A": 0.23537646235376464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:285",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.20489510489510487,
+        "A": 0.3648351648351648,
+        "C": 0.2634365634365634,
+        "B": 0.16683316683316682
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:291",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.34766523347665235,
+        "D": 0.21387861213878612,
+        "A": 0.1513848615138486,
+        "B": 0.287071292870713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:329",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.2561305174657192,
+        "A": 0.34010609548593734,
+        "D": 0.19747772995696128,
+        "C": 0.20628565709138225
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:358",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.6595404595404596,
+        "B": 0.06923076923076923,
+        "C": 0.13756243756243758,
+        "A": 0.13366633366633368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:400",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.19747772995696128,
+        "D": 0.2101891702532279,
+        "C": 0.3303973576218597,
+        "B": 0.2619357421679511
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:445",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3239084823658707,
+        "B": 0.059746228394445,
+        "D": 0.030972125087421323,
+        "A": 0.585373164152263
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:454",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.1543,
+        "A": 0.375,
+        "D": 0.1641,
+        "B": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:467",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.40409795102448776,
+        "A": 0.14152923538230885,
+        "C": 0.3787106446776612,
+        "B": 0.07566216891554224
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:499",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3281,
+        "D": 0.2432,
+        "C": 0.2715,
+        "B": 0.1572
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:519",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.4199,
+        "B": 0.1924,
+        "A": 0.1221,
+        "D": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:523",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.1837837837837838,
+        "B": 0.39489489489489493,
+        "A": 0.31671671671671675,
+        "C": 0.1046046046046046
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:560",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.1816,
+        "B": 0.2598,
+        "A": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:604",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3616616616616617,
+        "A": 0.3089089089089089,
+        "D": 0.16326326326326326,
+        "B": 0.16616616616616617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:631",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.19510489510489512,
+        "D": 0.18241758241758246,
+        "A": 0.27512487512487516,
+        "C": 0.3473526473526474
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:653",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.12593703148425786,
+        "D": 0.09905047476261866,
+        "B": 0.609095452273863,
+        "C": 0.16591704147926034
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:669",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.3418,
+        "B": 0.2734,
+        "C": 0.1641,
+        "A": 0.2207
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:724",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.19810094952523738,
+        "B": 0.10594702648675662,
+        "D": 0.12203898050974514,
+        "C": 0.573913043478261
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:768",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.27315416125487063,
+        "D": 0.2575681886302328,
+        "B": 0.22729543410930167,
+        "A": 0.241982216005595
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:773",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.3496,
+        "B": 0.1963,
+        "D": 0.1416,
+        "C": 0.3125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:830",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.10144782825761357,
+        "C": 0.6825761357963055,
+        "B": 0.08137793310034948,
+        "A": 0.1345981028457314
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:859",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.30140280561122246,
+        "B": 0.19468937875751502,
+        "D": 0.18296593186372748,
+        "C": 0.320941883767535
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:904",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.4395,
+        "B": 0.208,
+        "A": 0.0908,
+        "C": 0.2617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:946",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.18967070363326996,
+        "A": 0.46922230007006305,
+        "C": 0.0967871083975578,
+        "B": 0.24431988789910922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:961",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.31808191808191816,
+        "C": 0.07902097902097903,
+        "D": 0.27512487512487516,
+        "B": 0.3277722277722278
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1066",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.13471916849890067,
+        "C": 0.5348790725564662,
+        "A": 0.11762942234659206,
+        "B": 0.2127723365980412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1078",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.13750748951467942,
+        "B": 0.17455562212901937,
+        "C": 0.5733972438585979,
+        "A": 0.11453964449770321
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1095",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2263736263736264,
+        "D": 0.29660339660339663,
+        "B": 0.2233766233766234,
+        "C": 0.2536463536463537
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1100",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.29716745070563505,
+        "C": 0.38124311880692624,
+        "D": 0.172054849364428,
+        "B": 0.1495345811230107
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1252",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.24632168952056852,
+        "C": 0.17986187568811932,
+        "D": 0.11440296266639977,
+        "A": 0.45941347212491246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1256",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3638093330662928,
+        "D": 0.11295814139795714,
+        "A": 0.15942319246945724,
+        "B": 0.3638093330662928
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1273",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.21458541458541455,
+        "A": 0.2849150849150849,
+        "C": 0.41368631368631364,
+        "B": 0.08681318681318681
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1288",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.251974802519748,
+        "3": 0.1454854514548545,
+        "2": 0.24317568243175683,
+        "4": 0.35936406359364065
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1323",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.35177588794397197,
+        "B": 0.29114557278639314,
+        "C": 0.2696348174087044,
+        "D": 0.08744372186093047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1328",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.31415443012686045,
+        "C": 0.1551293577065228,
+        "D": 0.1756068324842673,
+        "A": 0.35510937968234935
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1330",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.1367,
+        "A": 0.1729,
+        "B": 0.2334,
+        "D": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1372",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.30300300300300304,
+        "A": 0.3089089089089089,
+        "D": 0.21211211211211212,
+        "C": 0.175975975975976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1463",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.46922230007006305,
+        "B": 0.15053548193374036,
+        "D": 0.23951556400760687,
+        "A": 0.14072665398858974
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1544",
+      "question_id": "answer",
+      "probabilities": {
+        "4": 0.29516564908417575,
+        "3": 0.1847662896606946,
+        "2": 0.344109698728856,
+        "1": 0.17595836252627367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1553",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.145631067961165,
+        "B": 0.6725052547292563,
+        "A": 0.10509458512661393,
+        "D": 0.07676909218296467
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1561",
+      "question_id": "answer",
+      "probabilities": {
+        "1": 0.2812281228122812,
+        "4": 0.36523652365236525,
+        "3": 0.19631963196319632,
+        "2": 0.1572157215721572
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1590",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.21029441217704786,
+        "D": 0.4889845784097737,
+        "A": 0.10905267374324054,
+        "C": 0.1916683356699379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1623",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.16424782304073665,
+        "A": 0.2385146631968772,
+        "C": 0.3929536582924632,
+        "D": 0.20428385546992295
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1642",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.5072927072927073,
+        "C": 0.24295704295704293,
+        "A": 0.11318681318681317,
+        "B": 0.13656343656343653
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1658",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.5979989994997499,
+        "A": 0.11965982991495747,
+        "B": 0.10255127563781889,
+        "C": 0.17978989494747372
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1677",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.4770293263937544,
+        "A": 0.27564808327494744,
+        "C": 0.24732259033129816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1690",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.15705864721750423,
+        "A": 0.28494355080427614,
+        "D": 0.2809471475671895,
+        "B": 0.27705065441103005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1717",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.1348809285571343,
+        "C": 0.2521512907744647,
+        "A": 0.5862517510506304,
+        "B": 0.026716029617770667
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1720",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.30632430812268957,
+        "A": 0.19412528724148267,
+        "C": 0.21660505545009492,
+        "B": 0.2829453491857329
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1772",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.2969,
+        "D": 0.0156,
+        "A": 0.0156,
+        "B": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1786",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.11449464088951217,
+        "B": 0.04006811579685465,
+        "D": 0.8177902434138035,
+        "C": 0.027646999899829713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1794",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.252,
+        "A": 0.1543,
+        "B": 0.1992,
+        "D": 0.3945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1795",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.24217578242175783,
+        "D": 0.23537646235376464,
+        "B": 0.23537646235376464,
+        "C": 0.287071292870713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1880",
+      "question_id": "answer",
+      "probabilities": {
+        "B": 0.3535,
+        "C": 0.1592,
+        "A": 0.2041,
+        "D": 0.2832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1928",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2809471475671896,
+        "D": 0.2907383354980518,
+        "B": 0.15516035567988812,
+        "C": 0.27315416125487063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1951",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.42710205712003196,
+        "A": 0.15698022768124625,
+        "B": 0.10774915118833632,
+        "C": 0.30816856401038545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1970",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2363,
+        "C": 0.3965,
+        "D": 0.1553,
+        "B": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1973",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.28936042438194376,
+        "D": 0.16815133620258232,
+        "B": 0.3773396056450805,
+        "A": 0.16514863377039335
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:1992",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.2985313218103706,
+        "C": 0.1902287940853232,
+        "B": 0.5112398841043061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2008",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.45895410458954106,
+        "D": 0.1640835916408359,
+        "A": 0.19728027197280273,
+        "B": 0.17968203179682032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2133",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.4155844155844156,
+        "D": 0.3004995004995005,
+        "B": 0.13756243756243758,
+        "A": 0.14635364635364637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2248",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.29716745070563505,
+        "D": 0.10949854869382444,
+        "A": 0.38905014513061753,
+        "B": 0.20428385546992295
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2315",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.19178356713426853,
+        "B": 0.26613226452905814,
+        "A": 0.15460921843687375,
+        "C": 0.3874749498997996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2317",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.1699169916991699,
+        "B": 0.24022402240224022,
+        "D": 0.2812281228122812,
+        "C": 0.3086308630863086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2322",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.648140743702519,
+        "A": 0.06687325069972011,
+        "B": 0.0819672131147541,
+        "C": 0.2030187924830068
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2328",
+      "question_id": "answer",
+      "probabilities": {
+        "A": 0.09520952095209521,
+        "B": 0.09520952095209521,
+        "D": 0.1572157215721572,
+        "C": 0.6523652365236523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2354",
+      "question_id": "answer",
+      "probabilities": {
+        "C": 0.3070605908863295,
+        "D": 0.3482223335002504,
+        "B": 0.25818728092138205,
+        "A": 0.08652979469203807
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "arc:ARC-Easy:test:2374",
+      "question_id": "answer",
+      "probabilities": {
+        "D": 0.35617673579801623,
+        "B": 0.26810940787496246,
+        "C": 0.17322913535717863,
+        "A": 0.2024847209698427
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

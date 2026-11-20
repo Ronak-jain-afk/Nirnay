@@ -1,0 +1,489 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--vizdoom-basic-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__vizdoom-basic-v1",
+    "split": "test",
+    "case_count": 33,
+    "decision_count": 33,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:42:10+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 33,
+    "expected": 33,
+    "succeeded": 33,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.0,
+    "accuracy": 1.0,
+    "positive_recall": 1.0,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1": 1.0,
+    "true_positive": 16.0,
+    "false_positive": 0.0,
+    "false_negative": 0.0,
+    "true_negative": 17.0,
+    "positive_prevalence": 0.48484848484848486,
+    "majority_accuracy_baseline": 0.5151515151515151,
+    "constant_brier_baseline": 0.2497704315886135,
+    "brier_skill": 1.0,
+    "baseline_adjusted_skill": 1.0,
+    "baseline_adjusted_score": 1.0
+  },
+  "elapsed_seconds": 2.0864856999996846,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:1:noul": "a96c91192736fbaacea414316118a6b5aecd097cc3f78de2d479e20fbf66d0b9",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:2:noul": "9b874b131d3073d08540459554828a2608c99d5f17ef84291a63f6bf25503ec6",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:7:7:noul": "4b2426191647d5b9345f3f5c06cd7a863f4c1feaaaeeaf2f9c1013f59c5fc1fd",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:15:7:noul": "adbc6d2766fba80d8719bb4c35237a94616905c90ead82db28e5b8beaae5be4f",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:0:noul": "8bb2a7971ee34199e85a3fe9b0a13ea049db1ea7f2a42970e9b847aa85d549f1",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:41:0:noul": "877b251ae91a601ee001a1bed59dab6c5524cb2cae6256c2761b71d8dd76756c",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:102:6:noul": "59263ab4b67b5bef6eb3dc51d9e35135e1f895c4d3c1db3d5abf1bafc018237e",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:2:noul": "a91135c9901980dec7b1b52ac63d7cf8e45aa40f631e03f2b1ceef6d14d8d31d",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:9:noul": "6cdb060706bf63beeba1a629dd1d6372bb70e1637aaaac53257504c799f94d74",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:3:noul": "15d53f832224b638b971901c567a6c4aa1fc8a65719aed6763c6506810490165",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:5:noul": "f14511b1ed8bb31119ac362a632819bfdd603e4b2132572b6cf0cd58c4761c42",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:125:1:noul": "bc9c1f0d12d7926edb741fd4e7bf56299e2ce4446e7238eef5e300181e2d219e",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:125:3:noul": "3106f2cde33aabb7452c993015b9a3948d964ad97a447adb49e69720b79c1b47",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:181:5:noul": "e8d5f9792141781a8b0d7065e4d13ec89a221a1c4bff36633519a193bb5d9535",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:186:6:noul": "057051b90afc22fe7719a2e828ba96d8ca1a41d8e7d3013271b2e90d96cd2f22",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:192:4:noul": "fde9482a33eb48c94157ee2ea4f1b8adf34a509135ce0054ee43852e972a407e",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:211:1:noul": "7ca2b4b30cdd4f3594c2b48ee54016533a9b84ca1b4ebef943e31872ca1a6c5c",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:216:3:noul": "15a76155f37d87b6242a011bb6829f578218c08b387df22a8ad7170fa858890a",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:220:0:noul": "02d7a709b60a0a1a9bf3b4e210bb3869db73ea8a6a118b8aa998c6c5fd8438bf",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:223:3:noul": "17e6652112bbcc3ddf4a23cd8f7d1cf07f90bb3a4bc99f81c7e6571d29bbb6ae",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:6:noul": "b6140d0fa7009f18f59c76eb44958b550364407e2dd3e37a5335460e9024be7a",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:242:1:noul": "722ef5288afb1aa9095e5f9366a1da437d0a10fbcbf238365e4e2ab657b3e098",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:261:1:noul": "2b7ea957036c9375a07b50496bd5d33b2206588d913bb1517ed81d9fef95f99d",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:290:2:noul": "2c2e422d492e18e34ae32c21c65799e87f4aed46926657532cd6ceeeae5083fd",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:0:noul": "7881b1908daa6c76ee7a535b14c63ae244acb956f577f493ea6e4fe91dc07d47",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:4:noul": "9803fa80ffb65b1f5aa1d215245672059281f4be1344dae0b58ec221ea9fcee0",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:346:2:noul": "4d7e1444d9fa3b57002f4eccf3cd1a05c4d6d4587eb3ea1b653427224481d36f",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:346:7:noul": "97cbcf51068a72e31cd5c257f012dc536579c9f09ec596042982edd437eaa5ea",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:2:noul": "4c7dfe34417813c7d6e5531f43549ce13b688d4a609ba769965206402432406c",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:4:noul": "34585415012a42d1f84e8399ac620e56c46540ad7c48a238a67463241619516a",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:9:noul": "a4f20defe822e6294345b4396ef79e898b41d5810a8bab6d491fb98e5878714d",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:2:noul": "68c608a8842bcb378b7219e79b7f316a726cbdc8bfe7c8a2e645bfb46727b049",
+      "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:3:noul": "b16e9411f6c8bc32cfffe01026394cc48a9f9ed117cf85e7feff393de67ecd83"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4224,
+      "output_tokens": 33,
+      "requests": 33,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:1:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:3:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:7:7:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:15:7:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:23:0:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:41:0:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:102:6:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:107:9:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:3:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:120:5:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:125:1:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:125:3:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:181:5:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:186:6:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:192:4:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:211:1:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:216:3:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:220:0:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:223:3:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:236:6:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:242:1:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:261:1:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:290:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:0:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:333:4:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:346:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:346:7:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:4:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:373:9:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:2:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__vizdoom-basic-v1:vizdoom-basic-v1:190919:id:384:3:noul",
+      "question_id": "decision",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

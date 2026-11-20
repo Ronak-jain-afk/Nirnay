@@ -1,0 +1,582 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--drone-control-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__drone-control-v1",
+    "split": "test",
+    "case_count": 32,
+    "decision_count": 32,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:02+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 32,
+    "expected": 32,
+    "succeeded": 32,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.09375,
+    "uniform_accuracy_baseline": 0.17812500000000006,
+    "fixed_answer_accuracy_baseline": 0.2875,
+    "baseline_adjusted_skill": -0.27192982456140347,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 7.763675199999852,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__drone-control-v1:drone-control-v1:parent:cf28d8a24c4b5c430d38f753:climb_available:maneuver": "1427bb179dc932429a4469cf335d4c56de13396d3ff7698d3b674059dfd2a4ed",
+      "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:imminent_geometry:maneuver": "f80a3ef842888c0e5b85fad9a9b3ae7aa70c458eb837e8e08ce18d0b1b7cfa96",
+      "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:observed_failed_scans:maneuver": "3dd1b029c1db61566f88783c5b3cc996d981b12a3ff6e2ac33a9588b9c84ea18",
+      "open_jev__drone-control-v1:drone-control-v1:parent:90f3ebed13729f9267d2a0e5:climb_available:maneuver": "79e3b12dad8d9caa4172486b29e313cdb4945af9e6a4cea94e7c5b4ed1c3bd44",
+      "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:imminent_geometry:maneuver": "d4667b3b44096d37300fec42b296c5bfa1eabab4cd99c36d043e57a98a380bb7",
+      "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:climb_available:maneuver": "f9bc2f6ce4e605e81cb47433437d4237993c73b63a78b6b6d4f660da8ffbd6c5",
+      "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:observed_failed_scans:maneuver": "3fdd0d610e0a3e6af6c02f4809efae044f2688958b46cdac23b8a2404c4f74f5",
+      "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:climb_available:maneuver": "23d70e0489cfc2ea85c7ab777e3ea4c6dc84a48d2891cef18953abe053a585bb",
+      "open_jev__drone-control-v1:drone-control-v1:parent:6639b47fc4ab1d334584a70a:climb_available:maneuver": "89e603db5bc1f40d480f7699f8385a98b8e84b8f4786f90491a7ded933438ada",
+      "open_jev__drone-control-v1:drone-control-v1:parent:64f8f0d70ef6d1425fb13eea:climb_available:maneuver": "a73e171c01a34907220c6f74a60712a2d14a8e783a1d212ab939e619342112bf",
+      "open_jev__drone-control-v1:drone-control-v1:parent:6e26c82e1bb07773ab7165bf:observed_failed_scans:maneuver": "abbd2a19158b0e922458cb0343c3835637e4ced519c8d63323cfd201b3ea8734",
+      "open_jev__drone-control-v1:drone-control-v1:parent:a9a7d37c61a1ae29d8d1fb17:imminent_geometry:maneuver": "b20d79249bf20cbd456dbabdab6dd494d4ff456f5a3ddf8a2e5e4bea0a9813f5",
+      "open_jev__drone-control-v1:drone-control-v1:parent:b8074ea5eed476a8d1f4c04b:climb_available:maneuver": "be9b4b57b67def479cff0befc742106769e35166f1e39b75bc88cdbdde852af2",
+      "open_jev__drone-control-v1:drone-control-v1:parent:ffe581cb4cb4a4a31a9c1151:climb_available:maneuver": "2211e4d39e067d59861b8f71a7867d77067194109665d729a099fbf4b7ef0817",
+      "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:observed:maneuver": "9b267e5c2bcab15bfbf1b8c630ea6044f30b7c3afce670c9e066da37b3055d31",
+      "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:climb_available:maneuver": "8fb9b0455dcdc1870c4f4fb45351dbe0fefaf7052baa8804b1e8b2372842799a",
+      "open_jev__drone-control-v1:drone-control-v1:parent:1d5919204bb5e899284c41fb:climb_available:maneuver": "ddd3fe069a9a55d222e5922552c1f2a6798865a4bd4c71c6069a884a44429d70",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:observed:maneuver": "77716e5b53b9633bf26b0efe22b7d2e74e872ce9b8aad27c25e0f20fa41765df",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:imminent_geometry:maneuver": "f09523bdf8f6427597ef5e597e2de4b097b6e2324985108397c0a630881f4c01",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:climb_available:maneuver": "b83888371ec1933974c31c850886bbefdc52f7ccb0d3f8625ed70f3412146d8b",
+      "open_jev__drone-control-v1:drone-control-v1:parent:9eb4034b1d5aba7b4dd39b0c:climb_available:maneuver": "925ad8d87443c6fc3a8c764c7cfc0a5fcbf092e141e09aad1e95c0eea4cab429",
+      "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:climb_available:maneuver": "a6dcdde7cb24749ea88b690774c816daaccff441b3f9214bb74249be4e696f3d",
+      "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:id_and_order_permutation:maneuver": "e2451dbce2a388ad16dd1c2c1461fb7eabf13b5bb5277da4d4d8d14bf1fb5668",
+      "open_jev__drone-control-v1:drone-control-v1:parent:7cb17abec4f0763cb5e97f3c:observed_failed_scans:maneuver": "f1f8c3fdd767eb5c8c07dac11b7f307790fd4d28b26c016ddbeb4afbd8123146",
+      "open_jev__drone-control-v1:drone-control-v1:parent:124f25955747f8f126b1ba06:climb_available:maneuver": "726ff26ef338ef758bd7ad3ab2ad8981ab4dcac94fddbd728816924ec3037ec1",
+      "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:observed_failed_scans:maneuver": "db38bcd23134f0388cc356f9b6f3beaa549d44717a6fff83f7ac291f0876d357",
+      "open_jev__drone-control-v1:drone-control-v1:parent:e7e8475180f7b72ee9f02c5c:observed:maneuver": "7a03edf3980970e3fe4a35e394d2887013be5d99fa3720da0132a0bdd088aadb",
+      "open_jev__drone-control-v1:drone-control-v1:parent:228e397f021d25e858aa3a3e:observed:maneuver": "9407b09df38a416b34e01e4c10f508a64c3d137a6b5bf72c83faea84ba9f730c",
+      "open_jev__drone-control-v1:drone-control-v1:parent:bf01e4009a65518ced36b4b0:climb_available:maneuver": "397b5aac4162d9ae7438449b9eabe867a60b8b83e0a1de68e56c34e248cad1cf",
+      "open_jev__drone-control-v1:drone-control-v1:parent:bff5f070c33d638b6520241c:climb_available:maneuver": "a8edbf15eae8e289cf0906ee1a6491b7d63078eb2493280fc3961250ac2287a8",
+      "open_jev__drone-control-v1:drone-control-v1:parent:3ba6f739686320d02f2f350d:observed:maneuver": "ed6f12ef4b97022cf0eafb531870551d08a5292d20ebab106f235fa4b2bd0455",
+      "open_jev__drone-control-v1:drone-control-v1:parent:d1f9a8ee65a76020dbe1dd40:imminent_geometry:maneuver": "5f0cee2cd78fe76dec8970f805bacb245569f385f17220f4663d6ff2436e0f41"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4096,
+      "output_tokens": 32,
+      "requests": 32,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:cf28d8a24c4b5c430d38f753:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.22245529917091197,
+        "option_1": 0.15023474178403756,
+        "option_2": 0.17271001897912294,
+        "option_3": 0.16292078713415242,
+        "option_4": 0.14823693936669663,
+        "option_5": 0.1434422135650784
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:imminent_geometry:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.16483516483516486,
+        "option_1": 0.14735264735264736,
+        "option_2": 0.20489510489510493,
+        "option_3": 0.15024975024975026,
+        "option_4": 0.20189810189810192,
+        "option_5": 0.13076923076923078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:observed_failed_scans:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.166,
+        "option_1": 0.1484,
+        "option_2": 0.2031,
+        "option_3": 0.1436,
+        "option_4": 0.2061,
+        "option_5": 0.1328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:90f3ebed13729f9267d2a0e5:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.1834165834165834,
+        "option_1": 0.11998001998001996,
+        "option_2": 0.1805194805194805,
+        "option_3": 0.1834165834165834,
+        "option_4": 0.1834165834165834,
+        "option_5": 0.14925074925074924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:imminent_geometry:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2129,
+        "option_1": 0.1348,
+        "option_2": 0.2266,
+        "option_3": 0.1816,
+        "option_4": 0.2441
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.22961480740370185,
+        "option_1": 0.14367183591795898,
+        "option_2": 0.14847423711855928,
+        "option_3": 0.21300650325162582,
+        "option_4": 0.17388694347173586,
+        "option_5": 0.09134567283641822
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:476e98da9588e61a6b576575:observed_failed_scans:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.215015015015015,
+        "option_1": 0.16036036036036036,
+        "option_2": 0.215015015015015,
+        "option_3": 0.17307307307307307,
+        "option_4": 0.23653653653653656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.23442344234423443,
+        "option_1": 0.11571157115711571,
+        "option_2": 0.1709170917091709,
+        "option_3": 0.1855185518551855,
+        "option_4": 0.19431943194319432,
+        "option_5": 0.0991099109910991
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:6639b47fc4ab1d334584a70a:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.20620310155077537,
+        "option_1": 0.11965982991495747,
+        "option_2": 0.19439719859929963,
+        "option_3": 0.16318159079539768,
+        "option_4": 0.2306153076538269,
+        "option_5": 0.08594297148574287
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:64f8f0d70ef6d1425fb13eea:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.21279360319840082,
+        "option_1": 0.12883558220889554,
+        "option_2": 0.17671164417791108,
+        "option_3": 0.1903048475762119,
+        "option_4": 0.2000999500249875,
+        "option_5": 0.09125437281359322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:6e26c82e1bb07773ab7165bf:observed_failed_scans:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.24117588241175883,
+        "option_1": 0.1464853514648535,
+        "option_2": 0.1630836916308369,
+        "option_3": 0.1933806619338066,
+        "option_4": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:a9a7d37c61a1ae29d8d1fb17:imminent_geometry:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.26343656343656346,
+        "option_1": 0.14245754245754247,
+        "option_2": 0.17752247752247755,
+        "option_3": 0.16483516483516486,
+        "option_4": 0.2517482517482518
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:b8074ea5eed476a8d1f4c04b:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2165834165834166,
+        "option_1": 0.13366633366633368,
+        "option_2": 0.17172827172827174,
+        "option_3": 0.19120879120879122,
+        "option_4": 0.14925074925074927,
+        "option_5": 0.13756243756243758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:ffe581cb4cb4a4a31a9c1151:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2501000400160064,
+        "option_1": 0.14755902360944376,
+        "option_2": 0.15436174469787914,
+        "option_3": 0.2139855942376951,
+        "option_4": 0.14755902360944376,
+        "option_5": 0.08643457382953182
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:observed:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2031,
+        "option_1": 0.1768,
+        "option_2": 0.168,
+        "option_3": 0.1611,
+        "option_4": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.24217578242175783,
+        "option_1": 0.125987401259874,
+        "option_2": 0.1640835916408359,
+        "option_3": 0.20997900209979,
+        "option_4": 0.16598340165983402,
+        "option_5": 0.09179082091790822
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:1d5919204bb5e899284c41fb:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.17886097487738964,
+        "option_1": 0.1466319687718947,
+        "option_2": 0.15543989590631568,
+        "option_3": 0.1847662896606946,
+        "option_4": 0.1993794414973476,
+        "option_5": 0.13492142928635772
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:observed:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.23142314231423142,
+        "option_1": 0.1689168916891689,
+        "option_2": 0.18261826182618263,
+        "option_3": 0.16701670167016702,
+        "option_4": 0.25002500250025
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:imminent_geometry:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.22462246224622462,
+        "option_1": 0.1777177717771777,
+        "option_2": 0.17481748174817482,
+        "option_3": 0.1611161116111611,
+        "option_4": 0.2617261726172617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.22158920539730137,
+        "option_1": 0.16201899050474763,
+        "option_2": 0.1776111944027986,
+        "option_3": 0.152223888055972,
+        "option_4": 0.1806096951524238,
+        "option_5": 0.10594702648675662
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:9eb4034b1d5aba7b4dd39b0c:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.1973,
+        "option_1": 0.126,
+        "option_2": 0.1299,
+        "option_3": 0.2539,
+        "option_4": 0.1855,
+        "option_5": 0.1074
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2330504243634548,
+        "option_1": 0.17553669495756366,
+        "option_2": 0.14817773339990015,
+        "option_3": 0.16774837743384924,
+        "option_4": 0.17064403394907637,
+        "option_5": 0.10484273589615575
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:id_and_order_permutation:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.2344,
+        "option_1": 0.1768,
+        "option_2": 0.1582,
+        "option_3": 0.1689,
+        "option_4": 0.2617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:7cb17abec4f0763cb5e97f3c:observed_failed_scans:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.20760554945603352,
+        "option_1": 0.20760554945603352,
+        "option_2": 0.1520111787603553,
+        "option_3": 0.16957780217586585,
+        "option_4": 0.26319992015171173
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:124f25955747f8f126b1ba06:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.16998499249624813,
+        "option_1": 0.17878939469734867,
+        "option_2": 0.16998499249624813,
+        "option_3": 0.20520260130065035,
+        "option_4": 0.17878939469734867,
+        "option_5": 0.09724862431215608
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:observed_failed_scans:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.251974802519748,
+        "option_1": 0.13478652134786523,
+        "option_2": 0.18948105189481051,
+        "option_3": 0.16698330166983302,
+        "option_4": 0.16698330166983302,
+        "option_5": 0.08979102089791022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:e7e8475180f7b72ee9f02c5c:observed:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.24487960835248274,
+        "option_1": 0.13757618143670694,
+        "option_2": 0.1785393146168448,
+        "option_3": 0.17364372065141373,
+        "option_4": 0.2653611749425517
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:228e397f021d25e858aa3a3e:observed:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.17780668401040625,
+        "option_1": 0.10456273764258556,
+        "option_2": 0.22473484090454274,
+        "option_3": 0.15239143486091655,
+        "option_4": 0.23253952371422854,
+        "option_5": 0.1079647788673204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:bf01e4009a65518ced36b4b0:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.1935742167951156,
+        "option_1": 0.13101791612451205,
+        "option_2": 0.15543989590631568,
+        "option_3": 0.21309178260434392,
+        "option_4": 0.18766890201181063,
+        "option_5": 0.11920728655790211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:bff5f070c33d638b6520241c:climb_available:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.20387573668964137,
+        "option_1": 0.15413045649785234,
+        "option_2": 0.17171111777045248,
+        "option_3": 0.20976925382079709,
+        "option_4": 0.17171111777045248,
+        "option_5": 0.08880231745080411
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:3ba6f739686320d02f2f350d:observed:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.24522261130565282,
+        "option_1": 0.1377688844422211,
+        "option_2": 0.17688844422211106,
+        "option_3": 0.1582791395697849,
+        "option_4": 0.18269134567283643,
+        "option_5": 0.09914957478739368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:d1f9a8ee65a76020dbe1dd40:imminent_geometry:maneuver",
+      "question_id": "maneuver",
+      "probabilities": {
+        "option_0": 0.22167783221677834,
+        "option_1": 0.12788721127887212,
+        "option_2": 0.20507949205079493,
+        "option_3": 0.18948105189481051,
+        "option_4": 0.25587441255874416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

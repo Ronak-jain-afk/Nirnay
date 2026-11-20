@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "laya--ag-news-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/laya__ag_news",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:13:20+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.79,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.33,
+    "baseline_adjusted_skill": 0.6865671641791046,
+    "baseline_adjusted_score": 0.6865671641791046
+  },
+  "elapsed_seconds": 15.380930199999057,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "ag_news:default:test:0": "b323df83266bb7d17b5e355220077b6c62f807ed70f831795eebf403c6fcca4f",
+      "ag_news:default:test:6": "32bc70504875f40a9481cc23d9b0898b28adcbf88d82f83d1aa73e82260f1535",
+      "ag_news:default:test:29": "9ef970ee49ce4e2fee7c56b7f23f81ad7a4fbc0f180c007909471887f19f388b",
+      "ag_news:default:test:102": "fb8da30c6f0788acf17dabfd270c4665481a5e55543a79f8fc0209b740fafc70",
+      "ag_news:default:test:149": "71546732e56e96b0f9dc8f05eccd22c1ba6dbfe8ff38b6c9b05fff82420b9034",
+      "ag_news:default:test:177": "9596d8cff5ecdc9a5d6ee3e11beed6ec0b2b6e3e0b183ea17f329d151d124ce2",
+      "ag_news:default:test:221": "5b919b147d02092b10e6113c461a0fb501cceee88b6553921586a8d2c8186f96",
+      "ag_news:default:test:289": "50c2129a94adc18cfae8f117903e32ac2c1bf41e49f577cfef25d5fa04870d72",
+      "ag_news:default:test:345": "e4b338fbb8006693c0dbebdf9c504a740daedcf850d35b4eca0f588cfe786e1a",
+      "ag_news:default:test:358": "81ae0df90347acc4a13d91591091a6a089016951d132dd1dc7c3aeeef69b67df",
+      "ag_news:default:test:370": "ebac7dca0f88dbc655e08af6aff520a7feac7f916950d8f1f09105e9219fbc77",
+      "ag_news:default:test:440": "dca6ad85608babf9ec216c187566e01f3150574c55b5eb8be4c464d2a9280ed9",
+      "ag_news:default:test:496": "3c57b365087616b2c8f817346849a252a69b8930a2fb828a840a0048a41d3b71",
+      "ag_news:default:test:595": "aa1f1cae31a804224294276799985480546522b747c627b687feef738ceca164",
+      "ag_news:default:test:673": "c9cad30df1fa6bc3ad7bd1fc6afafb609e5b021241e1b31d652ea075afff3020",
+      "ag_news:default:test:690": "0f16eeeed1dd4afa2920ce35735868e22e26b16e50c51a3aaaf00255580cdc56",
+      "ag_news:default:test:695": "1d5d26e15bd7fd268353e2bfd5b296ebaad6bbb76eb0b81565bd538c83fb414c",
+      "ag_news:default:test:1011": "ec48db0531c87ff21a6a8d291863228a2e116ae0357e55f9921d702329d8bb5f",
+      "ag_news:default:test:1059": "372ade13e3e350a18d0f76522e14bd36addd5e33448bdad58ed38b186427646f",
+      "ag_news:default:test:1065": "3bba35a53171ea15fae34d93830f4d339333d672d21ed413b1eaae3383d12a7d",
+      "ag_news:default:test:1100": "b635f62ee1f4ffcca2f5bd386f903db353b11f600772b10ffd3b39e66c30826b",
+      "ag_news:default:test:1134": "bba3e3452abb1189f1fe54113287fa16157135b312421fb9115c626df742e500",
+      "ag_news:default:test:1182": "29e0da33255bb576f7900e89c914305dcdbd2b43eb8115b3995c87224db07b7f",
+      "ag_news:default:test:1226": "e4bcb722e069174d9d6c921588ce04e5f0c5120971746957d6f6f05ad8d21506",
+      "ag_news:default:test:1262": "0dcab5806e9856d7f5661c46c033d3e0e51f154ff17d799d516abeae221ab702",
+      "ag_news:default:test:1351": "cc2aac36b1781ff6ecadaf7cd30c92acdca922479cdb674ccfa3fa81be298463",
+      "ag_news:default:test:1519": "1cd756a7b980ec230ddc05a7abd6015aef1d09052ee95f0a8b8cbbc5fb5ebfa1",
+      "ag_news:default:test:1556": "0b7b568dc4d3d9b6e2bc798a25479714a03ac2b2314f40e1cd24c065c96d7ef0",
+      "ag_news:default:test:1594": "ce533f0552727d3ece0259620b77504aed8ebdd5e24ee12ae7308dd40b22ac77",
+      "ag_news:default:test:1601": "5ad26de9592c7387ac9e8a3e5e1aae52d133eeda22569d68deec5147cffba6d7",
+      "ag_news:default:test:1722": "757b67d1cc5a02763830b916e8ab9db17d130c8c597b9738e4881b9a161b4422",
+      "ag_news:default:test:2034": "aae48898e6656f432ab3b892670e3a4b61ebb46a8e09ad9bb1a0703f8375afd9",
+      "ag_news:default:test:2054": "f411c6e52b2a7af4f91d962fa7963714f525501147a4af74d97cfe9b316553be",
+      "ag_news:default:test:2226": "271914a93b8f43d6e204adba8b11e314614a0d13891e0878921f70a42d586f69",
+      "ag_news:default:test:2298": "a65548fb493dc680a045e6c74bd7fedf176ccfb24c429118c3a619f1e636eb43",
+      "ag_news:default:test:2325": "23350a74370d1875de17f2ee1bf76f17372dd1898c2ee3fc835a728a0b4c7185",
+      "ag_news:default:test:2331": "7c1633c30d7d7989e75f11e915145361204712469662ae279f3f6f85d2827fa5",
+      "ag_news:default:test:2499": "6b7b76950ea1d989b41e62eab9aa5b675eb6868a1e0543c6aa65c8100d68d087",
+      "ag_news:default:test:2670": "a5f550829a19ecf898201af92df84e491b2ccfd2560370c1afe3ae0246ded8fc",
+      "ag_news:default:test:2853": "22c684e2ba9da3d033424c07888beefbdace816719bbcd8d0f6b20f7a7cd5544",
+      "ag_news:default:test:2880": "f2626ded0d1d71f435447c00d2d8d3affd73c18f1c485105c85a55f2ff92e69a",
+      "ag_news:default:test:3056": "d81fbf7cb569c6cf4c25a12fb01d34521c589c2ae0bcf9c9846b2e2ee8e83226",
+      "ag_news:default:test:3148": "c91c10d158fa93baf359dbd9ace086e6018473b5a1e027ecc9a3ce32ff5bfd53",
+      "ag_news:default:test:3187": "12ca370eb6d43ecbcc42881d585b83b066e95afa423122a07f0f5df936d8e372",
+      "ag_news:default:test:3236": "6a95642ffe6d63bb4c1912c8f89e8508d8f0195ece93393abc5313ffd25a9d4a",
+      "ag_news:default:test:3294": "c271f838544ce6deb29e425f4194f7f1e6f65f6ec1b4eec0ed89cee96ed295b3",
+      "ag_news:default:test:3339": "39c2aa4589d8576d3483ed863f41764919ee678b30ac513b416e73b7321c5574",
+      "ag_news:default:test:3463": "34d3f99b0d93281dcacde3877457690f9f5cd79f5b0a11393085162b107edb4c",
+      "ag_news:default:test:3477": "3609536374d09fb28556b1c6a1fc9e2987c0a4c2fc505e442034de211068f704",
+      "ag_news:default:test:3558": "affa0e2ddf44806723b8c9fd40161dd66a796e52a826484729e0ebdfc0089dfd",
+      "ag_news:default:test:3668": "9e5a572feeae98ae56ccdc8d6c58f604c99cbda14b3d41ee98303789b284cf15",
+      "ag_news:default:test:3674": "e9ee74c1fe38462fc67ad44bfdcd1afd09c8a12c6949529c85715414595075df",
+      "ag_news:default:test:3683": "ae0e1a7c6b0abc157df764bcc92e4526253f728ca9a478aad481632a0b277511",
+      "ag_news:default:test:3754": "66de2432cb84111a0728b681b362178bb2c92945bddd424e22d7fc7be1c27b8b",
+      "ag_news:default:test:3783": "d218b7e7fa52ee9cb31137df21373b538ebdd0a40a80b73b548cc553c9751960",
+      "ag_news:default:test:3785": "a80880cf9a98c36da8d456aed5956594d32389c20a526c9a24a4a60131ff927d",
+      "ag_news:default:test:3950": "d6603839dfac57b322f1f4bee67f5ce39d2c4f70e40fb9d48a7088b568fb2344",
+      "ag_news:default:test:3977": "23e5abc0c4f1c923f117ef5a499f317956ae5c17a3969427f54062de4ee6f34e",
+      "ag_news:default:test:4071": "dbd468142d5a077930be682302754a1e852d47ce20fe2987b8b24b289cf97bf3",
+      "ag_news:default:test:4275": "38755399bae80772527631626455129af42115667279c3968aa27c59f477286c",
+      "ag_news:default:test:4307": "2ed015a6dd06aa082ce43ff9a3846e0868e8a07a849a4f173c78acf833de5e9e",
+      "ag_news:default:test:4351": "5a6cc387389e0d002d864561bb0ad653e49c7ba6465432e8ff0b698ab5226a51",
+      "ag_news:default:test:4513": "f8cf3551e78a987f4a9affe1418bf96f4f80d7b33630934b9b9248280e57ad6c",
+      "ag_news:default:test:4525": "1c03fa3e2096443a8969e892ea74c62b1e70a16beeb1d8956146eadd1606e3da",
+      "ag_news:default:test:4823": "c50d16e79e0082b9f12db818934bc7d60cdb8e8f6f3a59e9f0ff61bc642bedaa",
+      "ag_news:default:test:4987": "b1c0c98836eea818009f418d0f0cb678e2dd5d327feef6c79a5bcc0ee4972519",
+      "ag_news:default:test:4999": "2f3f8e2753cbae66d9019bcdb71e6a498222184576bebdc7f29d6a8f67ac00f4",
+      "ag_news:default:test:5043": "c6796d27faf214647965889464ef68d6cdc1c871fc5faf0db9521e2266c501a2",
+      "ag_news:default:test:5103": "7933e6c90efa16558b43810f25017ca8bbb88ec7fe6109b86fd9594075e52dd4",
+      "ag_news:default:test:5119": "bc0b380e9a5565d0ac51e6308955dd12fa7564339fb2a104fecd49c14757b63a",
+      "ag_news:default:test:5142": "fbb40870a13d0ad012ad4d58d2ca3f5d2f6db296c582f7c349a5709bb9eaed95",
+      "ag_news:default:test:5299": "4f04d59e911e99ff96b5e58fb18adf4360e55ce43d80f47a50e46df15b1299c6",
+      "ag_news:default:test:5300": "fc3bd092f61405e8eb7063d498086bccb16c5b4b791c363c052a5f20608c8798",
+      "ag_news:default:test:5366": "438ddc0071cc2ee9e5e65ffa73dbcc0f0d2ce38a914709ad6c066d03b0051a9e",
+      "ag_news:default:test:5418": "6d32d63b2f33dad8841f36d19286cbf8415fa7e0cd286a3de71fc7f04e1067c7",
+      "ag_news:default:test:5547": "fe187681bddec1c6d389913defb815418f0819e2ca644483eed28eb83644af18",
+      "ag_news:default:test:5595": "a5ba17c5695ec4c6ac89876eefc4fc8466ab7dd17d658547afb98a8f3636568e",
+      "ag_news:default:test:5648": "1082e77f28e3e1e3f1be7b789b2930a991b6c897a6c8ecb3da8dd97f17d60b9c",
+      "ag_news:default:test:5683": "423c2f7479023ab9b609b8a7e06d3ec110a82252cbe12d3d9f6d8af274228fdc",
+      "ag_news:default:test:5807": "577aeeca24992db659aa77208185981ebea5537aad5be53a8e4999d9140fb0f8",
+      "ag_news:default:test:5861": "4e32f5940e5f4b0180d29faee729ded873900683cd5a3865892fd084d6dea16b",
+      "ag_news:default:test:5864": "afc04ddab3127a4a27dfcc60bdf0257bec95d8ecc408c1474d733b0cfd024cae",
+      "ag_news:default:test:5876": "30acc69cbc0d4ff7f2c9fcd09b652e27a275bd5c51940cfac243fd3c7469a602",
+      "ag_news:default:test:5928": "9ef83c0fa44bed4153e80d5fd0593275c9b311d25460c0e0a15af23bd721cddf",
+      "ag_news:default:test:6011": "197b5a4da9c048cd75cabfab16c28f248046305e637b8fa759dbb746a0d767a4",
+      "ag_news:default:test:6102": "aa00ce9743d8ffb35c0ab2a752647627874acf01f76506985a53af9112ed9483",
+      "ag_news:default:test:6136": "7ff84f93aa11f8dcf81eb806df85adde9b53858f6ca17c5d858241fa9f2502f4",
+      "ag_news:default:test:6256": "a76ba3871540729cdf8efe31c8df1869941133fc833291d12bdf76ae1dadeaaf",
+      "ag_news:default:test:6268": "27915d5d5729a80af7706db614646ba2e85e149a71cd1a004e2cbbad6750e0e2",
+      "ag_news:default:test:6478": "3540ca10ed02af2827d3d3807eef67055ed6b776eb07a0c54db01771ef4ef2c4",
+      "ag_news:default:test:6620": "f691a4e43bd69343812d15a6995e1419116715d082b19bf50f918d629249f223",
+      "ag_news:default:test:6639": "583a96c47cbb15b804d3189a09735af8e463391c0552f59bae793f5d23283953",
+      "ag_news:default:test:6763": "2e7ffef4e4956fe94663887b91eba7089ded69cda4b5499224f49e20036d1e24",
+      "ag_news:default:test:6814": "c6fdacc1afc1af12c0886371e8d949bc669f051f6e570fe33a48eceb2e536d72",
+      "ag_news:default:test:6815": "26b31390f74d706e956254355f33ffd5e0ccf863f1cacc5d9309805ccf08c596",
+      "ag_news:default:test:6918": "2e1883d369ee440d563cc1ddcc11c6a657a9258cec7839685e529fd06719ea19",
+      "ag_news:default:test:7091": "6dc30355bed0e42d3b5e3a7dc4bb0a0d0ded9748e3ffa364e79a8702ac338809",
+      "ag_news:default:test:7303": "66fa50774be6b26a9cf792bdbca8b0262384d3189e436a9064aeb69bc3f5bf1a",
+      "ag_news:default:test:7541": "21f5a6d0a8c6a8f718dae0d27bf1ac596c228e3e3fb0049038d848930279a71c",
+      "ag_news:default:test:7545": "6d04017627e897609707548e8c882cf8e2adf381f866344d7c1705e757645546"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "ag_news:default:test:0",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.10362434921906287,
+        "business": 0.7430917100520624,
+        "sci_tech": 0.013516219463356027,
+        "world": 0.13976772126551862
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.3121254494606472,
+        "sports": 0.061925689172992404,
+        "sci_tech": 0.5735117858569716,
+        "business": 0.052437075509388725
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:29",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.16974722749525428,
+        "sports": 0.7493256069537417,
+        "sci_tech": 0.04705764811669498,
+        "business": 0.033869517434309125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:102",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.27611790655704826,
+        "world": 0.14788449969921794,
+        "business": 0.02767194706236214,
+        "sci_tech": 0.5483256466813716
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:149",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.335329939103524,
+        "sports": 0.627832684436458,
+        "sci_tech": 0.020365378855944895,
+        "business": 0.016471997604073075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:177",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.7881542149420695,
+        "business": 0.018877347183379942,
+        "sci_tech": 0.04954055133839392,
+        "world": 0.1434278865361566
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:221",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.15348418101722067,
+        "business": 0.06798157789347217,
+        "sci_tech": 0.0237284741690028,
+        "world": 0.7548057669203043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:289",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.11212060702875398,
+        "sports": 0.803414536741214,
+        "business": 0.0196685303514377,
+        "sci_tech": 0.06479632587859424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:345",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.24952590078850184,
+        "business": 0.619922147918954,
+        "sports": 0.004790897295139235,
+        "sci_tech": 0.12576105399740492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:358",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.0815081508150815,
+        "sports": 0.8477847784778478,
+        "world": 0.016501650165016504,
+        "sci_tech": 0.054205420542054204
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:370",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.7252944699540826,
+        "business": 0.06238770213615492,
+        "sci_tech": 0.026152924735476143,
+        "world": 0.18616490317428627
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:440",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.2578257825782578,
+        "world": 0.25002500250025,
+        "business": 0.3359335933593359,
+        "sports": 0.1562156215621562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:496",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.26514924628132175,
+        "business": 0.5887990416292302,
+        "sports": 0.04851752021563342,
+        "sci_tech": 0.09753419187381451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:595",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.0618638994212732,
+        "world": 0.8419477150269408,
+        "sports": 0.02704051087607264,
+        "business": 0.06914787467571343
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:673",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.06391690801957454,
+        "business": 0.5969239988015579,
+        "world": 0.3043044042744432,
+        "sci_tech": 0.034854688904424246
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:690",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.8021636782530301,
+        "business": 0.10708203946709406,
+        "sci_tech": 0.02864870279475108,
+        "world": 0.06210557948512471
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:695",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.5965069860279442,
+        "business": 0.048702594810379245,
+        "sports": 0.22614770459081837,
+        "sci_tech": 0.12864271457085827
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1011",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.20252530313658684,
+        "sports": 0.020442930153321978,
+        "sci_tech": 0.5088686241106324,
+        "world": 0.2681631425994589
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1059",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.8472763618190905,
+        "world": 0.06126936531734133,
+        "business": 0.03388305847076462,
+        "sports": 0.0575712143928036
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1065",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.289071092890711,
+        "sci_tech": 0.07229277072292771,
+        "sports": 0.16018398160183983,
+        "world": 0.4784521547845215
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1100",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.08244229039672231,
+        "world": 0.19226541421005297,
+        "sci_tech": 0.6909163585490158,
+        "business": 0.03437593684420906
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1134",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.6914,
+        "business": 0.0752,
+        "sports": 0.1367,
+        "sci_tech": 0.0967
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1182",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.6413696435722868,
+        "world": 0.1290548658390068,
+        "sci_tech": 0.19363235883059673,
+        "sports": 0.03594313175810974
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1226",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.2263736263736264,
+        "sports": 0.09120879120879123,
+        "business": 0.06583416583416585,
+        "world": 0.6165834165834166
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1262",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.16493402638944424,
+        "sports": 0.08536585365853659,
+        "world": 0.302578968412635,
+        "business": 0.44712115153938425
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1351",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.03908045977011495,
+        "sci_tech": 0.06586706646676663,
+        "sports": 0.7574212893553224,
+        "world": 0.1376311844077961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1519",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.037815126050420166,
+        "sci_tech": 0.060524209683873544,
+        "sports": 0.1279511804721889,
+        "world": 0.7737094837935173
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1556",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.1088455772113943,
+        "business": 0.8159920039980011,
+        "sports": 0.03388305847076462,
+        "sci_tech": 0.041279360319840086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1594",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.5831079050195371,
+        "sci_tech": 0.10960825568580303,
+        "world": 0.16441238352870455,
+        "business": 0.14287145576595534
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1601",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.13667266546690662,
+        "sports": 0.7498500299940012,
+        "business": 0.03589282143571286,
+        "sci_tech": 0.07758448310337933
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:1722",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.47426801239132604,
+        "sports": 0.3317677625662036,
+        "business": 0.06225642050564604,
+        "sci_tech": 0.1317078045368242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2034",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.06210557948512471,
+        "sci_tech": 0.6769508163878594,
+        "world": 0.2034458579585295,
+        "business": 0.05749774616848643
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2054",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.054509018036072145,
+        "sci_tech": 0.011623246492985972,
+        "business": 0.025851703406813628,
+        "world": 0.9080160320641283
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2226",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.8344813816511929,
+        "business": 0.021164021164021163,
+        "sports": 0.10092842168313866,
+        "sci_tech": 0.04342617550164719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2298",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.1572,
+        "business": 0.5586,
+        "sports": 0.0781,
+        "world": 0.2061
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2325",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.0841009211053264,
+        "business": 0.028634361233480177,
+        "world": 0.8095714857829395,
+        "sci_tech": 0.0776932318782539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2331",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.5856071964017991,
+        "sports": 0.033183408295852077,
+        "world": 0.3338330834582709,
+        "sci_tech": 0.047376311844077965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2499",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.064,
+        "world": 0.1611,
+        "sports": 0.7227,
+        "business": 0.0522
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2670",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.2057913130304543,
+        "sports": 0.025961058412381426,
+        "sci_tech": 0.027159261108337492,
+        "world": 0.7410883674488267
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2853",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.046534851208308366,
+        "sports": 0.47982824046335126,
+        "world": 0.4232075094867186,
+        "sci_tech": 0.05042939884162173
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:2880",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.10019017115403862,
+        "sports": 0.7506756080472425,
+        "sci_tech": 0.05625062556300671,
+        "world": 0.09288359523571213
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3056",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.4300870783705335,
+        "sports": 0.028125312781503355,
+        "business": 0.04133720348313483,
+        "world": 0.5004504053648283
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3148",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.4586789247526731,
+        "sci_tech": 0.04267013090836414,
+        "world": 0.182472269411412,
+        "business": 0.3161786749275507
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3187",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.7371942086869695,
+        "sports": 0.09216175736395406,
+        "sci_tech": 0.05951073389915127,
+        "business": 0.1111333000499251
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3236",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.07770101131470912,
+        "business": 0.700110143186142,
+        "world": 0.0549714629017723,
+        "sports": 0.1672173825973766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3294",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.15027977617905677,
+        "business": 0.7532973621103118,
+        "world": 0.05615507593924861,
+        "sports": 0.0402677857713829
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3339",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.050464674727690624,
+        "world": 0.23423603477565705,
+        "sci_tech": 0.18836814230038973,
+        "business": 0.5269311481962626
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3463",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.05177928828468613,
+        "sports": 0.5231907237105158,
+        "sci_tech": 0.018992403038784487,
+        "world": 0.4060375849660136
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3477",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.7372678250449372,
+        "sci_tech": 0.07309766327142002,
+        "sports": 0.10285600159776315,
+        "business": 0.08677851008587979
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3558",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.06635355251324074,
+        "world": 0.8080343759368442,
+        "sports": 0.07854501848705907,
+        "sci_tech": 0.04706705306285601
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3668",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.0868045150334632,
+        "world": 0.05434022575167316,
+        "sports": 0.031665168314853664,
+        "sci_tech": 0.82719009090001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3674",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.3684368137352765,
+        "sports": 0.06917548412856858,
+        "business": 0.3684368137352765,
+        "world": 0.1939508884008784
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3683",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.6881881881881882,
+        "sci_tech": 0.015615615615615615,
+        "world": 0.25225225225225223,
+        "sports": 0.04394394394394394
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3754",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.3162102738356986,
+        "world": 0.23915650609634223,
+        "business": 0.41964821107335604,
+        "sci_tech": 0.02498500899460324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3783",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.03315027458811782,
+        "world": 0.7255117324013979,
+        "business": 0.03364952571143285,
+        "sports": 0.2076884672990514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3785",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.32953978236997106,
+        "sci_tech": 0.09893181591294797,
+        "business": 0.04512329040630927,
+        "sports": 0.5264051113107716
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3950",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.8572144288577155,
+        "sports": 0.06503006012024048,
+        "business": 0.04208416833667335,
+        "world": 0.03567134268537074
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:3977",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.5745447268361017,
+        "world": 0.359615769461677,
+        "sports": 0.019411646988192914,
+        "sci_tech": 0.04642785671402841
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4071",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.04346957130008994,
+        "sports": 0.7572699110622565,
+        "business": 0.05486159688218247,
+        "world": 0.14439892075547117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4275",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.03608195902048976,
+        "sports": 0.16691654172913545,
+        "world": 0.7262368815592205,
+        "business": 0.07076461769115443
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4307",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.09738503155996393,
+        "sports": 0.21621080052098987,
+        "sci_tech": 0.0914738002204188,
+        "world": 0.5949303676986274
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4351",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.16418209104552275,
+        "business": 0.10945472736368185,
+        "sci_tech": 0.6409204602301151,
+        "sports": 0.08544272136068035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4513",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.039603960396039604,
+        "sports": 0.9023902390239024,
+        "world": 0.039603960396039604,
+        "business": 0.0184018401840184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4525",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.49960031974420466,
+        "world": 0.14538369304556356,
+        "sports": 0.03687050359712231,
+        "business": 0.31814548361310957
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4823",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.11965982991495747,
+        "sports": 0.6995497748874437,
+        "business": 0.03421710855427714,
+        "world": 0.14657328664332164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4987",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.14347087621140975,
+        "business": 0.585373164152263,
+        "world": 0.23998401438705166,
+        "sci_tech": 0.031171945249275655
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:4999",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.03369326134773046,
+        "business": 0.7537492501499701,
+        "world": 0.1933613277344531,
+        "sports": 0.01919616076784643
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5043",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.24190970834998005,
+        "world": 0.22043547742708752,
+        "sports": 0.022672792648821417,
+        "business": 0.5149820215741111
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5103",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.07748377433849225,
+        "sci_tech": 0.7488766849725411,
+        "world": 0.109236145781328,
+        "sports": 0.06440339490763854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5119",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.7703473821203324,
+        "sports": 0.023325658224046454,
+        "world": 0.1476624286715387,
+        "sci_tech": 0.058664530984082496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5142",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.2757308770524629,
+        "business": 0.7000400480576693,
+        "sci_tech": 0.006107328794553464,
+        "sports": 0.01812174609531438
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5299",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.07405189620758483,
+        "business": 0.8499001996007984,
+        "world": 0.043612774451097805,
+        "sci_tech": 0.032435129740518966
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5300",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.44020432692307687,
+        "business": 0.4264823717948718,
+        "sports": 0.07532051282051282,
+        "sci_tech": 0.05799278846153846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5366",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.6452097307037741,
+        "sports": 0.022624887376113723,
+        "sci_tech": 0.0466513164480929,
+        "world": 0.28551406547201924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5418",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.7344,
+        "world": 0.2314,
+        "sports": 0.0091,
+        "sci_tech": 0.0251
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5547",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.2270685697175367,
+        "world": 0.11058987922946402,
+        "sci_tech": 0.1086934823834714,
+        "sports": 0.5536480686695279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5595",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.6144674882276324,
+        "sci_tech": 0.11932672076946198,
+        "business": 0.07243763149984972,
+        "sports": 0.1937681595030558
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5648",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.2755377688844422,
+        "business": 0.4143071535767884,
+        "sci_tech": 0.07763881940970485,
+        "sports": 0.2325162581290645
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5683",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.18666800120108096,
+        "sports": 0.09388449604644178,
+        "sci_tech": 0.17205484936442797,
+        "world": 0.5473926533880492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5807",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.11005407570598838,
+        "business": 0.7276186661325856,
+        "sports": 0.016623272581614258,
+        "world": 0.1457039855798117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5861",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.15948707673812862,
+        "business": 0.15648166700060107,
+        "sports": 0.04618312963334001,
+        "sci_tech": 0.6378481266279302
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5864",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.7029594081183763,
+        "world": 0.14257148570285944,
+        "business": 0.008998200359928014,
+        "sports": 0.14547090581883623
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5876",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.14051569058564858,
+        "sci_tech": 0.7964221467119728,
+        "sports": 0.00989406356186288,
+        "world": 0.05316809914051568
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:5928",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.30629370629370634,
+        "sci_tech": 0.2038961038961039,
+        "world": 0.3922077922077923,
+        "business": 0.09760239760239761
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6011",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.6489191353082466,
+        "sports": 0.06034827862289832,
+        "sci_tech": 0.08646917534027222,
+        "world": 0.20426341072858287
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6102",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.08486421725239617,
+        "world": 0.08775958466453675,
+        "business": 0.04343051118210862,
+        "sports": 0.7839456869009584
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6136",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.328461307438182,
+        "world": 0.6139753729102012,
+        "business": 0.01431574732205426,
+        "sci_tech": 0.04324757232956252
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6256",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.16298590986309583,
+        "sci_tech": 0.04876586389527331,
+        "world": 0.04656740281802739,
+        "business": 0.7416808234236035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6268",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.11552670993509734,
+        "world": 0.17353969046430354,
+        "sci_tech": 0.5343984023964053,
+        "business": 0.17653519720419372
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6478",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.2891,
+        "sci_tech": 0.0586,
+        "business": 0.3359,
+        "sports": 0.3164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6620",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.07235064545181628,
+        "sports": 0.8403882717902532,
+        "world": 0.05133593515460823,
+        "business": 0.03592514760332233
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6639",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.7224110355857657,
+        "sci_tech": 0.01529388244702119,
+        "sports": 0.0348860455817673,
+        "world": 0.22740903638544585
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6763",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.23015476784822766,
+        "business": 0.0745881178232651,
+        "sci_tech": 0.24473290064902645,
+        "world": 0.45052421367948076
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6814",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.06258762267174044,
+        "business": 0.7276186661325856,
+        "world": 0.14179851792509512,
+        "sci_tech": 0.0679951932705788
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6815",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.13066480335396286,
+        "sports": 0.06967458574565781,
+        "sci_tech": 0.7759033739269315,
+        "world": 0.023757236973447796
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:6918",
+      "question_id": "topic",
+      "probabilities": {
+        "sports": 0.7421257874212579,
+        "sci_tech": 0.025797420257974202,
+        "world": 0.18158184181581843,
+        "business": 0.05049495050494951
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:7091",
+      "question_id": "topic",
+      "probabilities": {
+        "world": 0.7691154422788605,
+        "sports": 0.08735632183908047,
+        "business": 0.06736631684157922,
+        "sci_tech": 0.07616191904047977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:7303",
+      "question_id": "topic",
+      "probabilities": {
+        "business": 0.5924965076830971,
+        "world": 0.23877469566952705,
+        "sports": 0.02354819397325883,
+        "sci_tech": 0.14518060267411695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:7541",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.5630630630630631,
+        "world": 0.173973973973974,
+        "sports": 0.03223223223223223,
+        "business": 0.23073073073073075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ag_news:default:test:7545",
+      "question_id": "topic",
+      "probabilities": {
+        "sci_tech": 0.04769539078156313,
+        "world": 0.8728456913827655,
+        "business": 0.026152304609218437,
+        "sports": 0.0533066132264529
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

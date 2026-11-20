@@ -1,0 +1,1407 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--tic-tac-toe-v1-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/open_jev__tic_tac_toe-v1",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:42:07+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.37,
+    "uniform_accuracy_baseline": 0.32416666666666627,
+    "fixed_answer_accuracy_baseline": 0.34,
+    "baseline_adjusted_skill": 0.045454545454545414,
+    "baseline_adjusted_score": 0.045454545454545414
+  },
+  "elapsed_seconds": 6.18242680000003,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:....OXXXO": "ebdfba0fdcdf47f8e4fcc336fc7a0a5329394dd37d8062f1f4fc8304185dea5e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:...O.XXOX": "da48674e25375bb58b0575898db1e1335ec7fbc2396f94023628ee67ffea9ce9",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:...OOX.X.": "21b60fc4f5d051ba2b7558b5227c7bc0be33e32243329d55014d32ed9a03e03c",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:...XO.OXX": "6cc4942b58ce698b3213018e44d8753ba5412cf33b1c7d18aec7374187256a5c",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:...XO.XOX": "35b82b9bfb3f3e64d7d76ab7cb44b0c5149f88102978d7906e4b4ed38ea4add2",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:...XOO.X.": "6ab3498cf1060bbd16a9df00fd148c31d01184aee50c99847dc3e57423415996",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:..O..XXO.": "ba595ab8a45eb8ee6e8ed7e717fb48ec7c85a82de9653bb21e56f9cd90053982",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:..O.XXXOO": "8059dec847a916190f15a7ec93056166ec554bca445a133f7d355f6f9f907cee",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:..OOOXX.X": "df1470a3d4c3e746d5869f42994ece0a2bf99fdc85dfb3569a5da6aaeef108dc",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:..X.OO.XX": "dcd5a437b90cd0c5b0e010a1bcd6077d0273274682752620bbed817085934d37",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:..X.OX.XO": "9bf578bbe80a4795af353986496f54909330a4b6fd7d60642632be99c63f098a",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:..XOOX.XO": "4eaf5b90c02a90f6f7b1acad1c23f70c58bc76cf83b5b89abed3d6012d897358",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:..XOXXO.O": "c043282732d8ec1e42948e674b03d1fda6e192cb53428fd6e498e9499ece55df",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:.O..OXXXO": "db2d533e807ade82d8477c9d25a9645b756e4f7a798807ca8f8d35cee8afd6a9",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.O.OXXOXX": "6b28617d5813f35de5fd7328fb5e607b4ad85cd67924906b03414f0dd99f9c31",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXX.X.:.O.XXO.X.": "2a5e133b42d7d91e879040578269f8005f146b6404d20e1027875dc0772d64a2",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.O.XXOXXO": "69bb31d96d5de94b782cdaa1828af9b69b2e1d800528cd3e021cc478b2421e0e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:.OO.X.XXO": "a690af9a9bd93691bf9f7eb0cd52c2d8b29b3d76239f9648e9e4ad5ee9bfb3a4",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.OOOXX.XX": "8e50d411733beaf9da8201210ea09a4d6142c5bf582b1785b687a17e5b2737eb",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:.OOX..XXO": "67362a6bc57e470131a48dabfb3204da93a5000348b432af0736fa0159fb31d2",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:.OOX.OX.X": "2715bc33742429d6be9dc001bbe625c8db36eabd28b6b69e8e784fc3e1bccdc1",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:.OX.O.OXX": "b7b202baa469b8f10b98798111a9f294a2f6ca8578b24484949d3c0cc87158bd",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:.OXX..O..": "3e9d9d1d093382b4db23d09bb4c98faddb85bed7dad4547c864f3cb5f143bc48",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:.OXX.XO.O": "1c695fe4d15a0cbee1c57ea8892bb4a8c32c2d70f28ee2534dd9ec18cf251250",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.OXXO..XO": "c92eac52bf60b0a73b6315a3a1f9427af22289d9ad029a07ee71012878d9e746",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:.OXXOO..X": "39a98069f0c57a607dc02fc4f7cadd2e282c9eb727cc2c1001c1bb568307966c",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X..OX.O.": "de03e008ad031d724c93094f932eb1ccd77536fcec5de37488376d8ad4da0d60",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:.X.OO.XOX": "986b3dc17f56a31c80e322c39cbacb509d6ddce02ec2539e2a4e5fcc73e6b26b",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.X.OOXX.O": "e13619d8df9eeb5ea90d9304612896ce9e4e4396a02fdbdf5215402dff020110",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X.XO..O.": "51623fe3eb7c92e534cca89f1bf2e4763bd367b6c3531e9d855d4dc766dcaa21",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X.XOO...": "d9e78bfa6cdf586b55e1a4cf5d4275548e3ea9f7f331e0876c88219c8b16ff4e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXX.X.:.X.XXO.O.": "74ca4b73b833b3427947b2d6b3638c85db8a232aa6a4bcec34b8363b82cade68",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:.XOO..X..": "068e66ec00037d4b087d1054ad8de55b623c8b6cbdf470d884d86b00265d2600",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:.XOOOX..X": "a9b6bdd8b5649baaa76e5dce28aa9f5495aab659d70913dc8625b8fe75e3d63f",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.XOXO..OX": "dd739cb7e08cbec98773cb34ee093e40eff858224cbc32445b454e429c4b5a8f",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:.XXO..OOX": "c95b886e5f6ecebf503fab5ff52b53c98d4c7999b4cfdc17642aef0a1c81e0fa",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:.XXO.XO.O": "fc566a5ccf2ffab0d1ab8851f3091f06b32438082f0e864d77dd633da724d90b",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:.XXXO.XOO": "439d9cd3714ec3c0a3c8e9494be5de597761988a8178c45b6e4cb6277d873aa0",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:.XXXOOX.O": "a9fe1f9a6409637161191d492a812bcc00143a32d8e7014e285ee81aa0f3898f",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:O..XOOX.X": "b00630484f93dc88ab0d4458154ccec1db0d4c37bb914fd034a7c71078aef004",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:O..XOXO.X": "a8a304ac594582a2ddec308917eb293c43dcd9ef67bbbf43490060cab8fb987e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:O..XX.OOX": "d040f99d6ae1c4afedddd027ef25f24cf1bdfec222010df157dcdb77f6749d47",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:O.O.X.XOX": "f4d67c562f407bb7831aa74bca0b388c357cf9a6b1b66ec51294a37efde5aad0",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:O.OOXX..X": "abb81b187be413ac9ac1a1ddd551f9e7e84c33d0aadff5e821a893450f27a00a",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:O.OX.X.OX": "6db39156fcce7ab9286f8eab63ec9ab3a5f14c699083eb71408e79a2878c39bb",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:O.OX.XXO.": "d521ee4855425a2431e7888f33bd8a8ed295ab970f5b3b8bd8a111ac80b6ca8e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:O.X.XOO.X": "48823bae05782bc5fd477e489834d07d75dd4dc245d669e7d161e9925624e507",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:O.XOOXXX.": "a2129d3d6c3e6b94001217b0aa58312d71feac8eda6850014a9cffb97d84da8c",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:O.XXOO.X.": "8f8340f3b8abbef306f2a0f6a50d23ce9c8d7faa43e428fd2bed36d375d5ed34",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:O.XXOXO..": "6de2b7850525d19863a2c28a30b00aa7ff0390ab8e8e564bd1c4317b700adba4",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:OO.O.XX.X": "4118edd565670c1852f2796db19b1107abe8e600e541d9122fcc85fd01f05f15",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:OO.XXOXX.": "221a7023a1749956698079408b3632f85d545c4aea7ad4b140457283a560ea91",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:OOX.OXXX.": "6027dab6e7b1959868d38f35a335f5c409c65332ef76ca75152f37893841c666",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OOXXX.O..": "4dc57a5665983daa678fe2f731360ba8e4f0bc7a2c30f612767f7f83b137ed93",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:OX...OOXX": "8b55c34debe242141451cc118ef1f7b93b624523bac07a6c21aece0b0ff3773f",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:OX.XOOX..": "1c4b42d8d89cfde011efb6f85442f8fa46d6a827a069838db5fd0e505036b559",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OXO.XO..X": "06920946c34a0a42058b4159d782177c62cffbd05c7ac0bf371bfdcbcf527993",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OXOOX.X..": "d6543d528b5bfa4c4a3ec26e4f3f36cc90e741bb975074b8ac539e1fc49afd8a",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:OXX..OOX.": "ff880edadab7d9eb8212aebf89f324fb3219fda942a4f6e8a44dbb3b0cfa17ea",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:OXX..XOO.": "a4b88fd99da6da49e70721f9769d289e3ad5a3bbc6b3339b9136e307c994e4ee",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:OXX.O..OX": "da28f435b00a3b6bf570a4a2fb49540adbdf6b75d9bd5f66399041f40f9b3edf",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:OXX.X.OO.": "a939307565d289f53030ee7306711a2d19dff925eb8b1871d873cce389f44d45",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:OXXXO....": "23009139756006444ff30e6b2e5d7c7b17f616bf91a3c6e2926dc6ef86b3bef7",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:X..O...XO": "9d70e0b446d20e86e75b251c6d8438e91d4f87465b502dd1693afa61a4242de9",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:X..OO.XX.": "ed742d389c0841ed92b3683b0b1d7c8572a4a14016903b2187966cd091c8d7c5",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:X..OOXXO.": "525f9c2b51f9392ed3abe42f3211aa417458f2d18ce294ceda213b3c78017980",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:X..OX.OXO": "5e31d2aae9f7f960ce80703456ff7544a1ded530a36c0f571646b43271baba7d",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:X..XO.OX.": "2bcfc22cab76aab3a08ded7b6f4f4444027c658391149d3d911be01460e0c20e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:X..XOOOX.": "0ec8b7b96dc506261bb412fbd66b94ac2001d44ae31cb3120f4221e0bf9344db",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:X..XXOO.O": "68f9930638faf810e883910b2f977bc60fe37e95b410c7110ece707c8e33a0b6",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:X.OOOX.X.": "e06888472a8bd64a48626f60f252ec8d20b590c18090629950fef35d4fc3521d",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:X.OOX.X.O": "8c0859ccc74f47c656795da2a30b57b5b1af602471258f51e65286c5860ab94b",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:X.OXOO.XX": "bc7b8608934939922bd70365529244fd1b647046ca299549cfaf1c9c8c8015e0",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:X.OXOX..O": "78678c34d436c416d67f97dc305ac7316f4a0c3c5077109e390ad0e399cbaa71",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:X.XO.XOO.": "89d6e5dd4566d5dd99c67deb0d60882ae56833ee1cfe5ac2bd7fec0a07601d09",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:X.XOOX..O": "b22d6f2f7f41e3b3e14a0600c97074124ab442c78f8a9f70d3c6cc68cc04cee5",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:X.XX.O.OO": "9ad119e4414f99ee29d6d695e9435cedb8a4d4423a48426f26cd322e404c6b24",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:XO...X..O": "747abcc52264f97d760e577d7042e75eb57f938b4ab103fc8e075bf62efcae1a",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:XO..O.XXO": "c851ce114e2fb9caec53c5aba2d25be64ce550656390ed8f82c59ca1acdce8fb",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XO.O..XX.": "838873fc95caa1c57b57227fe08588b99e6566f303b3226629163cd5261f587d",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:XO.X.XO.O": "43c38c8c7f321416e7570ad672c5b45c70311c1e7e469ccb2df291dd06c61f07",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:XOO..OXX.": "5c05a11c68fe158286f85b9bca39143716a8d94f5445ab97ff9973ceda5af66d",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:XOO.XX..O": "a9fb4d33be3ad6b202399117da5e99c114ef94fd3d2dfdfe763dc5209676c8bf",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:XOOXO..XX": "0cd4f080f34a85c5d23a484b119d0584903ae34f55657442bcdca3fa78748d6e",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:XOX.OO.X.": "fa30914c2205c0a4b175c61190c86a875d95c7eeb879c434f0cd4cb4ff401a08",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:XOX.OX...": "450443e745bbc216e6d6d3cb7ce2367919aec8bd9f80f5def0f41c0782ecb14c",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:XOX.X.O.O": "bbc88e761b8377371d4a9799cdc582db3a5b071999effabe3b7aa3198fbba183",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:XOXOO..X.": "f1273cbf66a036b70e9a19ef441d4bb1eadb668af692c13a8a894c2ff8639c89",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XOXX.O...": "918f6adb5820493fcb739e57562206f6621c91e0e5f3ade51e552531c606c9d7",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:XX..O.OXO": "adba73dc5db1a7d5e48b68e7676a97531896ddd6e5e591216a4de2e5faab64c5",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XX.O..XO.": "2f9f3e0363ad95fda6edab382f0741b911bdcedd08a6a8f009cf78de784fa142",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:XX.OO.X..": "7f8693d5fa00a99daa02037af87bdd679c337c7dc57937e5d395d4cfad57f2f1",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:XX.X.OO.O": "8975d75624b5bed706215bce72d6febc31a308b01c2d30076433af61ea48cf1d",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:XXO.O.XO.": "013cf554367f6cf166674f583118f21513a66b4413ada31938bd0cce1f1a3c74",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:XXO.OX...": "2c50337671c8c9a76fc0ec7810737451b06683d55ad5c71dff32bbe5757b87b0",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:XXO.OX.O.": "88198d5e2d5813a012b52390498120bc0aabcee9f357a7096dec37046541e1d4",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:XXO.X..OO": "58c199627380785072d8edfefa58bcae24fc60ab570bcd99407c32d1cb0b34c2",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:XXOO...XO": "3df764649e0cc19ddd17e95dd4e8b63329d239125bf1608831c1fb8aaf3bf455",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:XXOX...OO": "c586a2d38613731af397ea63d69ae41a29cd48373f0a0886ba7a0cc7065ae815",
+      "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:XXOXXO.O.": "e7d8564e3111e7fd52236e4970615284586e4f8db33ae40bf2cfc442362ad403"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:....OXXXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.33396660333966605,
+        "option_1": 0.1474852514748525,
+        "option_2": 0.292970702929707,
+        "option_3": 0.22557744225577442
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:...O.XXOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.23853853853853854,
+        "option_1": 0.0918918918918919,
+        "option_2": 0.22382382382382382,
+        "option_3": 0.4457457457457457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:...OOX.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2539,
+        "option_1": 0.1123,
+        "option_2": 0.2002,
+        "option_3": 0.2168,
+        "option_4": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:...XO.OXX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2951951951951952,
+        "option_1": 0.14854854854854854,
+        "option_2": 0.3148148148148148,
+        "option_3": 0.24144144144144145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:...XO.XOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.30049950049950047,
+        "option_1": 0.14825174825174825,
+        "option_2": 0.31418581418581415,
+        "option_3": 0.23706293706293705
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:...XOO.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.25751673159524524,
+        "option_1": 0.11417440815103387,
+        "option_2": 0.20097892318449706,
+        "option_3": 0.21366496853461195,
+        "option_4": 0.21366496853461195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:..O..XXO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2421031587365054,
+        "option_1": 0.08246701319472212,
+        "option_2": 0.10735705717712915,
+        "option_3": 0.4607157137145142,
+        "option_4": 0.10735705717712915
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:..O.XXXOO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4483033932135728,
+        "option_1": 0.2183632734530938,
+        "option_2": 0.33333333333333337
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:..OOOXX.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4546453546453546,
+        "option_1": 0.21168831168831168,
+        "option_2": 0.33366633366633364
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:..X.OO.XX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3261673832616738,
+        "option_1": 0.14258574142585742,
+        "option_2": 0.20117988201179882,
+        "option_3": 0.33006699330066996
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:..X.OX.XO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.32977022977022974,
+        "option_1": 0.13756243756243752,
+        "option_2": 0.18141858141858141,
+        "option_3": 0.3512487512487512
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:..XOOX.XO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.43121190928164654,
+        "option_1": 0.19412528724148267,
+        "option_2": 0.37466280347687086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:..XOXXO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.44033663961526903,
+        "option_1": 0.21130147279831682,
+        "option_2": 0.3483618875864142
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:.O..OXXXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.37072927072927075,
+        "option_1": 0.38241758241758245,
+        "option_2": 0.24685314685314685
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.O.OXXOXX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5156,
+        "option_1": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXX.X.:.O.XXO.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.26586586586586586,
+        "option_1": 0.2502502502502503,
+        "option_2": 0.218018018018018,
+        "option_3": 0.26586586586586586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.O.XXOXXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5039,
+        "option_1": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:.OO.X.XXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4883,
+        "option_1": 0.2305,
+        "option_2": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:.OOOXX.XX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5781,
+        "option_1": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:.OOX..XXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.37147147147147147,
+        "option_1": 0.44184184184184183,
+        "option_2": 0.1866866866866867
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:.OOX.OX.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3785214785214786,
+        "option_1": 0.4487512487512488,
+        "option_2": 0.17272727272727276
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:.OX.O.OXX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.37696230376962303,
+        "option_1": 0.26757324267573246,
+        "option_2": 0.3554644535546445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:.OXX..O..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1748,
+        "option_1": 0.3594,
+        "option_2": 0.1621,
+        "option_3": 0.1543,
+        "option_4": 0.1494
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:.OXX.XO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2351648351648352,
+        "option_1": 0.515084915084915,
+        "option_2": 0.2497502497502498
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.OXXO..XO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.34890219560878244,
+        "option_1": 0.25538922155688626,
+        "option_2": 0.39570858283433136
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:.OXXOO..X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3223,
+        "option_1": 0.3945,
+        "option_2": 0.2832
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X..OX.O.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.24022402240224022,
+        "option_1": 0.22562256225622562,
+        "option_2": 0.1406140614061406,
+        "option_3": 0.2148214821482148,
+        "option_4": 0.1787178717871787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:.X.OO.XOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3652,
+        "option_1": 0.377,
+        "option_2": 0.2578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.X.OOXX.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.37266460185832745,
+        "option_1": 0.3902487761015086,
+        "option_2": 0.23708662204016384
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X.XO..O.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2393,
+        "option_1": 0.2363,
+        "option_2": 0.1455,
+        "option_3": 0.2217,
+        "option_4": 0.1572
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...OOX.X.:.X.XOO...",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2461,
+        "option_1": 0.207,
+        "option_2": 0.2002,
+        "option_3": 0.1465,
+        "option_4": 0.2002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXX.X.:.X.XXO.O.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.26586586586586586,
+        "option_1": 0.2502502502502503,
+        "option_2": 0.218018018018018,
+        "option_3": 0.26586586586586586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:.XOO..X..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1036036036036036,
+        "option_1": 0.4711711711711712,
+        "option_2": 0.16036036036036036,
+        "option_3": 0.13973973973973974,
+        "option_4": 0.12512512512512514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:.XOOOX..X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2441,
+        "option_1": 0.4629,
+        "option_2": 0.293
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:.XOXO..OX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2676,
+        "option_1": 0.2793,
+        "option_2": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:.XXO..OOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.375,
+        "option_1": 0.4473,
+        "option_2": 0.1777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:.XXO.XO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3828,
+        "option_1": 0.4395,
+        "option_2": 0.1777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:.XXXO.XOO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.6588822355289421,
+        "option_1": 0.34111776447105785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:.XXXOOX.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.6758,
+        "option_1": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:O..XOOX.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.27394789579158313,
+        "option_1": 0.430561122244489,
+        "option_2": 0.29549098196392787
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:O..XOXO.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2597740225977402,
+        "option_1": 0.4472552744725527,
+        "option_2": 0.292970702929707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:O..XX.OOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2715,
+        "option_1": 0.4199,
+        "option_2": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:O.O.X.XOX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3984,
+        "option_1": 0.3008,
+        "option_2": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:O.OOXX..X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2982333566224174,
+        "option_1": 0.4210999101706757,
+        "option_2": 0.2806667332069069
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:O.OX.X.OX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2051,
+        "option_1": 0.5156,
+        "option_2": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:O.OX.XXO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.17662337662337665,
+        "option_1": 0.561938061938062,
+        "option_2": 0.2614385614385615
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:O.X.XOO.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2266,
+        "option_1": 0.3691,
+        "option_2": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:O.XOOXXX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2280666733206907,
+        "option_1": 0.7719333266793093
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:O.XXOO.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1417275547993194,
+        "option_1": 0.38514663196877186,
+        "option_2": 0.4731258132319087
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:O.XXOXO..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1844155844155844,
+        "option_1": 0.30439560439560437,
+        "option_2": 0.5111888111888112
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:OO.O.XX.X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3789,
+        "option_1": 0.4238,
+        "option_2": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:OO.XXOXX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5664,
+        "option_1": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:OOX.OXXX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.31112224448897796,
+        "option_1": 0.688877755511022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OOXXX.O..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3203,
+        "option_1": 0.2695,
+        "option_2": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:OX...OOXX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2695,
+        "option_1": 0.1914,
+        "option_2": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:OX.XOOX..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3535,
+        "option_1": 0.2539,
+        "option_2": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OXO.XO..X",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.18051948051948055,
+        "option_1": 0.522877122877123,
+        "option_2": 0.29660339660339663
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:OXOOX.X..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2637,
+        "option_1": 0.2949,
+        "option_2": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:OXX..OOX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1902287940853232,
+        "option_1": 0.5112398841043061,
+        "option_2": 0.2985313218103706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:OXX..XOO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.198001998001998,
+        "option_1": 0.483916083916084,
+        "option_2": 0.31808191808191816
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:OXX.O..OX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.33526300029943107,
+        "option_1": 0.27288152510230557,
+        "option_2": 0.3918554745982633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:OXX.X.OO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3418,
+        "option_1": 0.2637,
+        "option_2": 0.3945
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:OXXXO....",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.19220779220779222,
+        "option_1": 0.3316683316683317,
+        "option_2": 0.13856143856143857,
+        "option_3": 0.3375624375624376
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:X..O...XO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.11762942234659206,
+        "option_1": 0.2059764141515091,
+        "option_2": 0.3727763341994803,
+        "option_3": 0.12692384569258447,
+        "option_4": 0.17669398360983413
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:X..OO.XX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.21411411411411413,
+        "option_1": 0.2834834834834835,
+        "option_2": 0.1856856856856857,
+        "option_3": 0.31671671671671675
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:X..OOXXO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2316316316316316,
+        "option_1": 0.38708708708708706,
+        "option_2": 0.3812812812812813
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:X..OX.OXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2617,
+        "option_1": 0.459,
+        "option_2": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:X..XO.OX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.14272845561004904,
+        "option_1": 0.34210789710739664,
+        "option_2": 0.16715043539185268,
+        "option_3": 0.34801321189070167
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:X..XOOOX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2448796083524828,
+        "option_1": 0.3687681087021681,
+        "option_2": 0.38635228294534923
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:X..XXOO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2559,
+        "option_1": 0.457,
+        "option_2": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXXO..XO:X.OOOX.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1289128912891289,
+        "option_1": 0.4355435543554355,
+        "option_2": 0.4355435543554355
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:X.OOX.X.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.23951556400760687,
+        "option_1": 0.4007606846161545,
+        "option_2": 0.35972375137623863
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:X.OXOO.XX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1992,
+        "option_1": 0.8008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:X.OXOX..O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1434565434565435,
+        "option_1": 0.561938061938062,
+        "option_2": 0.29460539460539464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:X.XO.XOO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.21170946148466377,
+        "option_1": 0.5073433909481466,
+        "option_2": 0.2809471475671895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:X.XOOX..O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.320941883767535,
+        "option_1": 0.41292585170340684,
+        "option_2": 0.26613226452905814
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:X.XX.O.OO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2051,
+        "option_1": 0.5234,
+        "option_2": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O..XXO.:XO...X..O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1094,
+        "option_1": 0.1216,
+        "option_2": 0.4316,
+        "option_3": 0.2139,
+        "option_4": 0.1235
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:XO..O.XXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3145,
+        "option_1": 0.3105,
+        "option_2": 0.375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XO.O..XX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.09769023097690231,
+        "option_1": 0.4804519548045195,
+        "option_2": 0.1308869113088691,
+        "option_3": 0.290970902909709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:XO.X.XO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1328132813281328,
+        "option_1": 0.6523652365236523,
+        "option_2": 0.2148214821482148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX.OX.X:XOO..OXX.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.1992,
+        "option_1": 0.4922,
+        "option_2": 0.3086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..O.XXXOO:XOO.XX..O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3001996007984032,
+        "option_1": 0.4171656686626746,
+        "option_2": 0.2826347305389222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.XXXO.XOO:XOOXO..XX",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3816250876665665,
+        "option_1": 0.6183749123334336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:XOX.OO.X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.216016016016016,
+        "option_1": 0.3675675675675676,
+        "option_2": 0.4164164164164164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:XOX.OX...",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.16002397362900808,
+        "option_1": 0.3121566277095195,
+        "option_2": 0.17271001897912294,
+        "option_3": 0.35510937968234935
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:O.O.X.XOX:XOX.X.O.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3125,
+        "option_1": 0.3281,
+        "option_2": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XXOO.OX:XOXOO..X.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.24295704295704293,
+        "option_1": 0.3492507492507492,
+        "option_2": 0.40779220779220776
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XOXX.O...",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3655655655655656,
+        "option_1": 0.23263263263263262,
+        "option_2": 0.12612612612612611,
+        "option_3": 0.27567567567567564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OXOXX.O:XX..O.OXO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5156,
+        "option_1": 0.2324,
+        "option_2": 0.252
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:...O.XXOX:XX.O..XO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3418,
+        "option_1": 0.4004,
+        "option_2": 0.0752,
+        "option_3": 0.1826
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXOX:XX.OO.X..",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.3984,
+        "option_1": 0.1797,
+        "option_2": 0.1426,
+        "option_3": 0.2793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:XX.X.OO.O",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.39489489489489493,
+        "option_1": 0.4477477477477477,
+        "option_2": 0.15735735735735737
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..OOOXX.X:XXO.O.XO.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2773277327732773,
+        "option_1": 0.2734273427342734,
+        "option_2": 0.44924492449244924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:....OXXXO:XXO.OX...",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.17171111777045248,
+        "option_1": 0.32584157426830485,
+        "option_2": 0.151233642992708,
+        "option_3": 0.3512136649685346
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOOX.XO:XXO.OX.O.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.207,
+        "option_1": 0.375,
+        "option_2": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:..XOXXO.O:XXO.X..OO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.2885229540918164,
+        "option_1": 0.2846307385229541,
+        "option_2": 0.42684630738522955
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OXX.XO.O:XXOO...XO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.5165815048592325,
+        "option_1": 0.1937681595030558,
+        "option_2": 0.2896503356377117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.OOX..XXO:XXOX...OO",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.48634863486348634,
+        "option_1": 0.20312031203120312,
+        "option_2": 0.31053105310531054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__tic_tac_toe-v1:tic_tac_toe-v1:.O.OXXOXX:XXOXXO.O.",
+      "question_id": "decision",
+      "probabilities": {
+        "option_0": 0.4883,
+        "option_1": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--silent-failure-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__silent-failure-control-v1",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:43+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.3045493699,
+    "accuracy": 0.5,
+    "positive_recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "true_positive": 0.0,
+    "false_positive": 0.0,
+    "false_negative": 50.0,
+    "true_negative": 50.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.2181974795999999,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 5.342217499999606,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__silent-failure-control-v1:sf-de36c09376b4d4c96c1f0639": "b8463d9a33cff44c7c4de17986644c435df7f145595dc5aece3c987f9608f786",
+      "open_jev__silent-failure-control-v1:sf-2bc4f7f821b1d9ec155569b1": "215668b6a4a0ac93d34ccde437ac457ad02bbd0c6fe01fcc2a30dfadcf6e4d75",
+      "open_jev__silent-failure-control-v1:sf-1b6b6fcaf1882bd38a8045df": "19fa4d692fe9aac9c58908215486668e39df3dc7b80f535ddf373aad8e1bdc92",
+      "open_jev__silent-failure-control-v1:sf-14493133e9cd027eacee271b": "9dda6555e837df9eec0be4b83705ca9ed943343cbbe929d0e1d389ca12daa113",
+      "open_jev__silent-failure-control-v1:sf-c5cd3b65bf69a025d0c29874": "eb696f817d2e19b0ee5055a365dce2feb96146dd79fd0605f40376e1cfc22106",
+      "open_jev__silent-failure-control-v1:sf-57b596fa6f4258cd7c1a5658": "61034d0878c149f0bfb27d5e97c425966e79ddcd7fb83112880dc271934ec45b",
+      "open_jev__silent-failure-control-v1:sf-33c901a1b4465a3c2822e72a": "5ffd0cb8c9f6edbe4ae4fea6d938598a956e82e67f5d82935057bf98dcea2715",
+      "open_jev__silent-failure-control-v1:sf-24ea594d39251a53345eb02c": "1091cc7a9373ee9cd4491315638f68fc7433dea47dcb62952f7f1b36fc13b4d2",
+      "open_jev__silent-failure-control-v1:sf-42afeba28c5f230612d859ea": "a6849e1d074eaaa6118c532e36cd9e41bf002582c6fb38b7a7ac7bc34e8c1890",
+      "open_jev__silent-failure-control-v1:sf-49381fb80a71412d5d5a6b23": "61e95c6e052a688e069c91f8723004f6483e93818a8bd42c93ef794febefce72",
+      "open_jev__silent-failure-control-v1:sf-b40faa23aad1f8efa50b21d2": "cf97dc07efd71f1d8e1e6d1b619c7764f588e60cb95b0afed465b892de2ee9c3",
+      "open_jev__silent-failure-control-v1:sf-e490f82ed575ad2b4a01b02a": "be3d21f52af15106ecfea55b77042d242092d96efb47ffb12458fb7e112b1d50",
+      "open_jev__silent-failure-control-v1:sf-e884d8605a282e070ebd438e": "38b713caa85a9c5ea0632971e63b045a82dca6d55b64ecf025003304610896de",
+      "open_jev__silent-failure-control-v1:sf-d38ca9d741726c29b38f115e": "978ccbc09f391183bb8d44ccc4ae9f6af5e376d50ca0dc5bb72258171b9c33f5",
+      "open_jev__silent-failure-control-v1:sf-6b1054b50b999b9afb53dbf9": "0f4f957d74b077976075f8af907eaa3c52d7d452a5642c6a3d0e992940f309bd",
+      "open_jev__silent-failure-control-v1:sf-151fb07dae7a61ce711a2758": "d254e4878c0cf76eff6545f4f454ea87bbca0900196f5a311718868c61a720f9",
+      "open_jev__silent-failure-control-v1:sf-a4a3b43082128c2d6aba168c": "a455822207d9cf430f2161ad2f23e284a6713d0958894adb79ca43b3802559ec",
+      "open_jev__silent-failure-control-v1:sf-bc49ca8ac823dcfa5c3d20ba": "2063924a847288b9b985954266529326b85bb379b02fd472fe5b919870576820",
+      "open_jev__silent-failure-control-v1:sf-3c3a33aa340a2027bf03f7ad": "f90229daf3330b3d8fedb0982c1ee89c9ed5d7485c0a23a873fb2de828456b24",
+      "open_jev__silent-failure-control-v1:sf-01ad364a411599d5b9103168": "dd24d465236204c8f7535fca7d834b3f5ca89fd73718f866c9f2163314b410f7",
+      "open_jev__silent-failure-control-v1:sf-503e56c1d4e88f0cc561e595": "267ff71d03a3ed8fdfaf1ba493bdb1acfa717f2830209949c7679fb11d5360d7",
+      "open_jev__silent-failure-control-v1:sf-63fc77b8c1f48b18371140e5": "8c06c97e08a79d9a62f4f992da128c7a31093089d61abec246466865f6813ee8",
+      "open_jev__silent-failure-control-v1:sf-dd835f8e1d86899765dda884": "4af199bd0235ad23587c859f0b2b2ba14a8d5ec1af9147a125bd72112f0bccfd",
+      "open_jev__silent-failure-control-v1:sf-a8499b06ffd05fb88f4707cf": "dd9523681f064b3fcb2aa07d6f7193e9aedb56faa52115598f294fbb264c28ee",
+      "open_jev__silent-failure-control-v1:sf-f916445997b9a5959d819b0d": "b5d897488020781d340371931340e3c5bce93bbc5035d67550aa8e3a066226b4",
+      "open_jev__silent-failure-control-v1:sf-4b4d86d8ca9e6f114d00c3f7": "9bfbe5c0a7af0c916423cda95aba3bddba960518738ea35c11e1ea985ffdf3ea",
+      "open_jev__silent-failure-control-v1:sf-b4f9128e93f6b43ba08f8b64": "d5d3e6ac9229fff372c23b54fa3bb1e7efd6e2a838d86e5065450372ea814ea0",
+      "open_jev__silent-failure-control-v1:sf-35448760d09a77844a275293": "bc9d0af4ddbe3fdd1b3ba43ed43e81a0f774bd7a20c893d5f627faba9a452699",
+      "open_jev__silent-failure-control-v1:sf-00a421b1746e71f6809e5a1e": "6e9e34c453912d208ad6cf683752c8f018e78274a2a1a0cf1a859a239c2c0deb",
+      "open_jev__silent-failure-control-v1:sf-64493c67639e587924816a5e": "29bb2286f52b5700acc40583a80d1bfa0f517f6dc4ffc2cd6493cedaeb42b374",
+      "open_jev__silent-failure-control-v1:sf-186245d028f71bd22a1ca013": "8557990fa58068b8825bf70798c577a4e70793df66515bf89deec245cef1f7db",
+      "open_jev__silent-failure-control-v1:sf-8a1f3e8bd04f6dabaaae95e3": "41f56a5fc916f262c644582fb8bcb7504c63d65223a1760856727f7ec6a48552",
+      "open_jev__silent-failure-control-v1:sf-52b652b3c9754b55b1c050cf": "e7ad8f5cdd8c5e9e7a9e096d513403487838207292130802047f5a506d631bcc",
+      "open_jev__silent-failure-control-v1:sf-75505ab35e816cd12df7fb17": "9af735d44daa6d10b5f63d2ee82ffa591eec664f3700726f639511e9b0f2ecca",
+      "open_jev__silent-failure-control-v1:sf-3b7c0a15b99699f7fabe6aae": "fc7e4aeaf2aa2a06e3ba8213171235ad374f45f8258013702ed5286295e4b133",
+      "open_jev__silent-failure-control-v1:sf-ac4e07a0e6b06723ef6f870a": "36bef11117ea74088c5e6b72859dd60529b8929781176c8ae24dc30be257aa22",
+      "open_jev__silent-failure-control-v1:sf-5fde98351a33058740706f04": "543d9cafc73f44ec38edaeadbfe6da0e9d216b28fc1b0c686522f4f5ee721681",
+      "open_jev__silent-failure-control-v1:sf-85b89a56d09e852f7fa9348c": "6a7a30e622dc5a813c2a32790270cb16233416b42f9dc322b82ce47a87e4d841",
+      "open_jev__silent-failure-control-v1:sf-76fd5980af1b8cd986a71b21": "43409b129b7ea01255e94f4130fb3a39215ea5c146cb650ac0da59860ca0be2f",
+      "open_jev__silent-failure-control-v1:sf-13ffc1c63493d401a9c562d2": "7949f51d50f753f33f7ae16eb87de2267c79fda244d3d89919180737939a8a65",
+      "open_jev__silent-failure-control-v1:sf-32aa687cc866204d554aa58f": "5526c352d761ac25becbff94750442dcbc99666eaef13b82dabcbab835856f85",
+      "open_jev__silent-failure-control-v1:sf-cca1b5f75d375f0381341925": "414b2ed3baea038f49de58c528500037ce495bf511c1f4665face16c92d6101e",
+      "open_jev__silent-failure-control-v1:sf-3e2db6e2efde91383ec8f8e9": "d4bc4c3ce149afc3cf043f7e37b72d8320977374d05ce1985310a70b1403266e",
+      "open_jev__silent-failure-control-v1:sf-db6bc2ef42d6fe7693b7a356": "4c2f0ac8cea38b13da0f03f97b0b082d56d95f8e00599922450f13fabfe97d02",
+      "open_jev__silent-failure-control-v1:sf-fbf865d16ed5d1f835d1026b": "e74d8785e4452323c0799e5ed66857d2d04429a055de0bfc11be3cabfcc98baf",
+      "open_jev__silent-failure-control-v1:sf-05d1b676a4b310ef649563b4": "95e39e4962feb5ccebe20e9ce23bd76a313215cbe353a157bafb2a5c3ae199d4",
+      "open_jev__silent-failure-control-v1:sf-337e89c4abadd5446346733c": "9c5029f767d01b29358531bac867e8d713fe4395b0b45d1003fd3376f09a02a5",
+      "open_jev__silent-failure-control-v1:sf-1dfd0bd1240eb308f70f349b": "df187d60ae248630ddd01bf3bf9689e5449057f4d917dcb12dbb5afdf1b939e1",
+      "open_jev__silent-failure-control-v1:sf-c9f01d8ba932d89b253f0675": "4db8f844a35a79f1f60699091db790459743be52ba23987ed23526f1b87a1b6f",
+      "open_jev__silent-failure-control-v1:sf-e14479fee9b6df2e1f4bc9de": "1a6e72a6ff5606c9de4c1fe548e8e044dad9f5ea21af1766c919fe1b06859622",
+      "open_jev__silent-failure-control-v1:sf-96c23100bdf5a63c0068c43d": "70b8f8efb298739ddf22dc2a3f15a5f2aa19de7cb1426d0d73908cfe5ce76316",
+      "open_jev__silent-failure-control-v1:sf-93a0b6536ee9ec5101dc21c4": "49d915762a8b61ee263e6979d250cccadfcabf2122bdc84c6a29eac4899bad70",
+      "open_jev__silent-failure-control-v1:sf-acf2363237ed25ea22faa988": "eb449fb5e0bb8224e97b15b2a82e0c8f410a5735298679e4761901d7e1e8e2b7",
+      "open_jev__silent-failure-control-v1:sf-c793f3a4bb326a7d8517aac9": "3195252a92197bde090ac26dbd80d20fecded7b8394203654756dd16ed1699ee",
+      "open_jev__silent-failure-control-v1:sf-231cdae9a7f90c348e65eb5a": "2d9f1aef27ceeb59f52ff982a2f0395a626835ad195b63d03d3d98045783c330",
+      "open_jev__silent-failure-control-v1:sf-2ebb799f2c08d9bc8d87c383": "ce9d1393f2333f99959517bd83186a5140246d11e24b6bc0ac5c35c196d7fcd6",
+      "open_jev__silent-failure-control-v1:sf-13d891fcfdf48b2f5713e2bc": "c6b716c90ea0bc2ebb548d72f922eec2d8872ba356960b609c74eedf485bf162",
+      "open_jev__silent-failure-control-v1:sf-2933bdf1ef60c2cc05ce8e22": "5a557c6edf3db8e0a134ca4bb26b34b2a1095558f9cb281c4573b69dd435b751",
+      "open_jev__silent-failure-control-v1:sf-86bb8bfb4f02694995496d43": "5dbcd9eb6d883044d7af6ec13a054c94f90b32686dff2d740bba78756a4b6340",
+      "open_jev__silent-failure-control-v1:sf-988886bfb6d2d7da4970682b": "6d0ce9d10c40f762c12f2d89acdfbd696f63e7ea4a01539bec52341f3ee6298d",
+      "open_jev__silent-failure-control-v1:sf-22efda3fc5559b343e319dd6": "48fc7a518f04500496907666a31093626f34c3a1075fa39f86f52d0cc2de77bd",
+      "open_jev__silent-failure-control-v1:sf-f5f04514bf342a47d3a58ec5": "a967410fc5192b9b6d5b03b5cea1de486b789a2c65161abee1ff724e94e439d3",
+      "open_jev__silent-failure-control-v1:sf-404fbd111e6129bb628bb4ea": "3c10070ea671cf087f8ee0522496e16bad60e9cd9df7c9d54721e5fd42306402",
+      "open_jev__silent-failure-control-v1:sf-03fa8e94793277a3fc0aa8bb": "eb4a5bd1b0a737419dd4038be8bf1a5b936dfb8266231ef825374951183a7611",
+      "open_jev__silent-failure-control-v1:sf-49a92fab81e2fa05bdc0efa3": "9b7d0cd8f3ad1434038f4cc44553d01ef59ff6d71b420a977b3910dac08057d0",
+      "open_jev__silent-failure-control-v1:sf-0f46206111dddca70e1aac1d": "d23d59cbf50190555a356c5b27c7e784aaf251e5cd569cf052b510a68d2aced2",
+      "open_jev__silent-failure-control-v1:sf-31c37ec67fbc4f05e243bcf7": "ce00075afa28015e5c18201b11865b77f87dd7ed1d666e05c238fc27c945f380",
+      "open_jev__silent-failure-control-v1:sf-3ed32ad9a1ed67b8418ea3f5": "c589fb4696736558fca37e34ba0bd0ea2ff97281698501a093e702a94362dbec",
+      "open_jev__silent-failure-control-v1:sf-a9e0b06aa1c842a01f9c9ad0": "a8b8840427f6daca08a58769ca22b9f58749714802649198cb81160b1b88421f",
+      "open_jev__silent-failure-control-v1:sf-9cad3674aa5b0a7e8dd60dc8": "0ec853ffe72439db8669b360d1fdd1473d9271d7034274f7a015c49813874222",
+      "open_jev__silent-failure-control-v1:sf-57af7f5820f59bf718e07b25": "7e00ee988074125a8e499165f3da7dd9479573a294e6ea7eb709e4c7e8f63136",
+      "open_jev__silent-failure-control-v1:sf-5653109c0256f7c8bc2a9062": "929bbc0aed7e9b32fb10323e0adc57b9b7d4641c875f1c233a036bcf56943631",
+      "open_jev__silent-failure-control-v1:sf-ec8dce854372887bba53b2b1": "0287c7f52061eae4abf9286c526434a8efe3e932ff147d1010c48616af44c0a6",
+      "open_jev__silent-failure-control-v1:sf-a9317af09cf49eb6c7e46ade": "716ca9a19cc2d8f7393405825827088e9b9a54a14f9a00d9d40ac7114f74846f",
+      "open_jev__silent-failure-control-v1:sf-802d048d4a9fb613fc6fdb2e": "f7808258532f82925a74fc086fa9bcca3fda0b2946eacb5f0393641fa3d81dee",
+      "open_jev__silent-failure-control-v1:sf-945d004a8137834077291dbd": "89730d4bc531af67691ecff372f3657f3ac325cf17b528eeac988361bf3d4014",
+      "open_jev__silent-failure-control-v1:sf-92f797eea1673f1706239460": "bf7401776d8eee763b0c61a7fbd46f5c65144fd60181166d5f968634fee3f6ac",
+      "open_jev__silent-failure-control-v1:sf-1f51f4ae8f2ee916c890276b": "f6729f1bb729baba816f0900b0c9bbaf1ed9f7ca6ff5ed73bb86c11daba176cf",
+      "open_jev__silent-failure-control-v1:sf-6f3c6b3e17e396975c4f63ec": "040ebd1af0805ec91c3cbca7a097a59110a8f0f15f6b81c51aa1511b05814534",
+      "open_jev__silent-failure-control-v1:sf-e7ca328436502906c8b491cc": "e34e2880874725a16e9b6fbee97866dabd79dc4840686ce9a8f20a8ef2798942",
+      "open_jev__silent-failure-control-v1:sf-33e2d5b129999a80860e258c": "b8d9f701c5605e176b7802204dcc4ebdb1eaca15b60ee2823cb1c26dfb8f0e3a",
+      "open_jev__silent-failure-control-v1:sf-64a84892223097a599a48c00": "c5ebc915ddf96a14dab4a57bfe45c4ee86a749609fe2636aa533e041fa227ce8",
+      "open_jev__silent-failure-control-v1:sf-e7018f56be6c5477cbc106c9": "a2915778d6dddc68f3c71f6233edcc01bbd078930f0a64ed57aa53d70a49ed76",
+      "open_jev__silent-failure-control-v1:sf-30623412b63618e9bc48e29f": "a250a4b6297c603c1bd4671005b9905e77a2980cd64ca6e7decab820de83f66a",
+      "open_jev__silent-failure-control-v1:sf-6d99bb8f8709214c9869a09d": "ab43f70fea7772cd2472507825747fff87a3ce2df7d83c9cf39449812de6c8b3",
+      "open_jev__silent-failure-control-v1:sf-05ead11ee35bc08d56e6456c": "48c32afaf3e3d519dfd680e24486ecab0cc9ca8f15866d8be5e19527b4da8d4f",
+      "open_jev__silent-failure-control-v1:sf-ef376e3a84ceffbaa5b636ab": "e7865322b083a699b4d2e6322927e762ca19bade434d4afdcd764129e80d1098",
+      "open_jev__silent-failure-control-v1:sf-b6b3e54d5bba9065b371e924": "e75eb5bf76aa2cce608b9c77ca25d482be08855bd77bbc8d996d823bb5552462",
+      "open_jev__silent-failure-control-v1:sf-c418f6724b28a8929b8878a4": "2814a8e32dc38132accc36afb583ff55bcdc63dd2bf741f4d58acb00d5ec385e",
+      "open_jev__silent-failure-control-v1:sf-878ef2e02857440c5bf361d9": "b818c3e1a8fbb91f199f34511e811ca9ed368a250887d8f08d81a208318532d5",
+      "open_jev__silent-failure-control-v1:sf-0dedcdf6900b1ccabc8f4292": "e561b263e00195abf9b2f36f5035fe47e84f87d0a0e42f4631ca8ed00cba82b6",
+      "open_jev__silent-failure-control-v1:sf-c59e6693dc38bd0cacad9e7f": "146595e3a7f878c46eff86b16029733ee3aaf548ec078fa03647a01ae5b5e0cd",
+      "open_jev__silent-failure-control-v1:sf-37aa39b66d6eeb26b4d236b2": "0cb252ba7efa5cb7e22d869713c7dc274cb4013a95ff3f6624d189f3a0ce0be6",
+      "open_jev__silent-failure-control-v1:sf-4cdc42108ac17e662fd60017": "1d0feb4179d83c1ef62d3ba45eda4cd9a2a47fc29a48aca634cd5cda524dbec6",
+      "open_jev__silent-failure-control-v1:sf-f5651de67d06fe3ff12dabee": "6b360bfd3c6461fae9b96a4dc1b61e1b93f130446f65a6b1f07af7312aa5b2d5",
+      "open_jev__silent-failure-control-v1:sf-1d5e7dfed84b832aada19421": "a672d9c781d078cb14b0a288b207989c7d632180bd1b4693b4bc2fc69a1f2c1c",
+      "open_jev__silent-failure-control-v1:sf-9ce90d7d785e1a0ef0355b9a": "ffedff1562f53f5b1f16038cdec5329edbac45dd6d47ca06fd41718822ceff43",
+      "open_jev__silent-failure-control-v1:sf-007115a630a57061500a5660": "07a94d00a972737380baf2c8457822325cb62b43ce0851fdac7d7dcde85738de",
+      "open_jev__silent-failure-control-v1:sf-aa2483ad901f39474980d5b1": "3b11ec33dbe3090e9a6ee1df9357b628edc2af45b60a55d0b76c30429852e4b9",
+      "open_jev__silent-failure-control-v1:sf-abeb10554a392e0f456777bc": "17db5fbf9bea5aa84bc09cba7438f37b40c95c7d4b695f4a5aff0f85373a8f6b"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-de36c09376b4d4c96c1f0639",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-2bc4f7f821b1d9ec155569b1",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8901,
+        "true": 0.1099
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-1b6b6fcaf1882bd38a8045df",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8418,
+        "true": 0.1582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-14493133e9cd027eacee271b",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.9019,
+        "true": 0.0981
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-c5cd3b65bf69a025d0c29874",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8359,
+        "true": 0.1641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-57b596fa6f4258cd7c1a5658",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-33c901a1b4465a3c2822e72a",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-24ea594d39251a53345eb02c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-42afeba28c5f230612d859ea",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8438,
+        "true": 0.1562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-49381fb80a71412d5d5a6b23",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-b40faa23aad1f8efa50b21d2",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7549,
+        "true": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-e490f82ed575ad2b4a01b02a",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-e884d8605a282e070ebd438e",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-d38ca9d741726c29b38f115e",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7881,
+        "true": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-6b1054b50b999b9afb53dbf9",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8573999999999999,
+        "true": 0.1426
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-151fb07dae7a61ce711a2758",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-a4a3b43082128c2d6aba168c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8613,
+        "true": 0.1387
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-bc49ca8ac823dcfa5c3d20ba",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8633,
+        "true": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-3c3a33aa340a2027bf03f7ad",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.9019,
+        "true": 0.0981
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-01ad364a411599d5b9103168",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-503e56c1d4e88f0cc561e595",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7666,
+        "true": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-63fc77b8c1f48b18371140e5",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-dd835f8e1d86899765dda884",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-a8499b06ffd05fb88f4707cf",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-f916445997b9a5959d819b0d",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-4b4d86d8ca9e6f114d00c3f7",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-b4f9128e93f6b43ba08f8b64",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8701,
+        "true": 0.1299
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-35448760d09a77844a275293",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8652,
+        "true": 0.1348
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-00a421b1746e71f6809e5a1e",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-64493c67639e587924816a5e",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7666,
+        "true": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-186245d028f71bd22a1ca013",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-8a1f3e8bd04f6dabaaae95e3",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-52b652b3c9754b55b1c050cf",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-75505ab35e816cd12df7fb17",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-3b7c0a15b99699f7fabe6aae",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7715,
+        "true": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-ac4e07a0e6b06723ef6f870a",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.752,
+        "true": 0.248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-5fde98351a33058740706f04",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-85b89a56d09e852f7fa9348c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-76fd5980af1b8cd986a71b21",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-13ffc1c63493d401a9c562d2",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7744,
+        "true": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-32aa687cc866204d554aa58f",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-cca1b5f75d375f0381341925",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-3e2db6e2efde91383ec8f8e9",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-db6bc2ef42d6fe7693b7a356",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-fbf865d16ed5d1f835d1026b",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-05d1b676a4b310ef649563b4",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7637,
+        "true": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-337e89c4abadd5446346733c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-1dfd0bd1240eb308f70f349b",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7715,
+        "true": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-c9f01d8ba932d89b253f0675",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-e14479fee9b6df2e1f4bc9de",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-96c23100bdf5a63c0068c43d",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-93a0b6536ee9ec5101dc21c4",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-acf2363237ed25ea22faa988",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-c793f3a4bb326a7d8517aac9",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-231cdae9a7f90c348e65eb5a",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-2ebb799f2c08d9bc8d87c383",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-13d891fcfdf48b2f5713e2bc",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-2933bdf1ef60c2cc05ce8e22",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-86bb8bfb4f02694995496d43",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-988886bfb6d2d7da4970682b",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-22efda3fc5559b343e319dd6",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-f5f04514bf342a47d3a58ec5",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.791,
+        "true": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-404fbd111e6129bb628bb4ea",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-03fa8e94793277a3fc0aa8bb",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-49a92fab81e2fa05bdc0efa3",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-0f46206111dddca70e1aac1d",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-31c37ec67fbc4f05e243bcf7",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-3ed32ad9a1ed67b8418ea3f5",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-a9e0b06aa1c842a01f9c9ad0",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-9cad3674aa5b0a7e8dd60dc8",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7822,
+        "true": 0.2178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-57af7f5820f59bf718e07b25",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8057,
+        "true": 0.1943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-5653109c0256f7c8bc2a9062",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-ec8dce854372887bba53b2b1",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8701,
+        "true": 0.1299
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-a9317af09cf49eb6c7e46ade",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-802d048d4a9fb613fc6fdb2e",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-945d004a8137834077291dbd",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-92f797eea1673f1706239460",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8496,
+        "true": 0.1504
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-1f51f4ae8f2ee916c890276b",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-6f3c6b3e17e396975c4f63ec",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8418,
+        "true": 0.1582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-e7ca328436502906c8b491cc",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-33e2d5b129999a80860e258c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8154,
+        "true": 0.1846
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-64a84892223097a599a48c00",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-e7018f56be6c5477cbc106c9",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-30623412b63618e9bc48e29f",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7979,
+        "true": 0.2021
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-6d99bb8f8709214c9869a09d",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-05ead11ee35bc08d56e6456c",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8457,
+        "true": 0.1543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-ef376e3a84ceffbaa5b636ab",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8593999999999999,
+        "true": 0.1406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-b6b3e54d5bba9065b371e924",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-c418f6724b28a8929b8878a4",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-878ef2e02857440c5bf361d9",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8311,
+        "true": 0.1689
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-0dedcdf6900b1ccabc8f4292",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-c59e6693dc38bd0cacad9e7f",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8573999999999999,
+        "true": 0.1426
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-37aa39b66d6eeb26b4d236b2",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.8809,
+        "true": 0.1191
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-4cdc42108ac17e662fd60017",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-f5651de67d06fe3ff12dabee",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-1d5e7dfed84b832aada19421",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.791,
+        "true": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-9ce90d7d785e1a0ef0355b9a",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.7822,
+        "true": 0.2178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-007115a630a57061500a5660",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-aa2483ad901f39474980d5b1",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__silent-failure-control-v1:sf-abeb10554a392e0f456777bc",
+      "question_id": "is_silent_failure",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

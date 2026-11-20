@@ -1,0 +1,7893 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "civil-comments-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/civil_comments",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 700,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:17:45+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 700,
+    "succeeded": 700,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.11731492399461296,
+    "accuracy": 0.5716913330255609,
+    "positive_recall": 0.49816525024280056,
+    "specificity": 0.6059277764530927,
+    "precision": 0.37052810940281006,
+    "balanced_accuracy": 0.5520465133479466,
+    "f1": 0.4249698153971041,
+    "true_positive": 110.7879047114402,
+    "false_positive": 188.2120952885598,
+    "false_negative": 111.60397159354761,
+    "true_negative": 289.3960284064524,
+    "positive_prevalence": 0.3177026804356969,
+    "majority_accuracy_baseline": 0.6822973195643032,
+    "constant_brier_baseline": 0.08872692397768597,
+    "brier_skill": -0.32220208630377645,
+    "baseline_adjusted_skill": 0.10409302669589326,
+    "baseline_adjusted_score": 0.10409302669589326
+  },
+  "elapsed_seconds": 102.55680659999962,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "civil_comments:default:test:562": "966e15c68c3826443618326ce124b98b7354e9e6196934e3122ba63e600b25ac",
+      "civil_comments:default:test:1390": "f3fe9fe8de2b27e99f666bcb51b9b372e7178bcd5087d7ce8ac8b2487aecbc40",
+      "civil_comments:default:test:6079": "0753ca1e53ef26f59915d5601f4990a6fe578dbd9e32b15efd2aaee11340eda3",
+      "civil_comments:default:test:7734": "a8a2cc28982c7a1edc558f1f780f2a58b935c6651520c005d9610e906966d0ff",
+      "civil_comments:default:test:7924": "c0ce5e9a9aa85c9b475acd9e61e4cfb8fde2a13fcf806e7b375f65c8dafc639e",
+      "civil_comments:default:test:9241": "4a11dd71702d1b0d9992600eeaa59b3cdb47849f3212d423ac863197a717c45c",
+      "civil_comments:default:test:9411": "bd48f1547710d66c8ea002fe14a6c79552b60bfe001df742caa96374d29fc485",
+      "civil_comments:default:test:9799": "44db50c4ebb000c3f0b5ddf5d7e67363867078bc6641af13cf0d67c08d5b691e",
+      "civil_comments:default:test:9925": "59adf25eeca27657a25b69276990f3a561c87c47e6e23046f4baf5492c0677a4",
+      "civil_comments:default:test:11635": "6d09bc239385b8bdc03c4c0afe4801ee79408e84587167a8e4d67722af71d328",
+      "civil_comments:default:test:12357": "c60340327573193e2771f585dbe299e02def98485649857cde07c8e44bc359a7",
+      "civil_comments:default:test:13948": "5240f48786640ce008a317e5dd05ad775edde63e473aa5bb212c0b53bfe86df7",
+      "civil_comments:default:test:16401": "ed707c077b0ec87fd04e1525e73afdf12f0efa85d5f15a47481d423216020600",
+      "civil_comments:default:test:18510": "efb78b37d0637948586308796265f983443bf04e422a06df895ab9e39b71de48",
+      "civil_comments:default:test:19292": "3801ccf5b56568bf77b885ef7f9398b9d268d80a1b8388bc4d36e366585791a7",
+      "civil_comments:default:test:20195": "605cfbe7c9429b653f1ed3d6b55cba9814287ae6837734941a1f2f209463bcf3",
+      "civil_comments:default:test:20495": "7ee7fcfbccf2b3a6916c79ed4f789f9adc2ac024aae39a762f3c2356866100cb",
+      "civil_comments:default:test:20529": "6139e2649776af72fad636eedbda45ea1d85a0a8adafd338aa4d9c88be0cbf73",
+      "civil_comments:default:test:21188": "8da00ced0cfc3d4a248b3c3b9bfadbcaaab365a9090a5d29463b0c8ac70287e2",
+      "civil_comments:default:test:21719": "8bd486db16b1e3407dd10e89dfd6c1e7382e0214db3a2b69af1f0982a02b6d24",
+      "civil_comments:default:test:22259": "7c6403fb1ae66985bb2173b8de1600d6a1b19110f9d6bb0afedfcd6b5a039869",
+      "civil_comments:default:test:22749": "6b257d76680542bbbbc891950471e1ea7d2654791d782f1707ade82d46487511",
+      "civil_comments:default:test:25115": "b4c78919975a704018ed6e8b5d7bbd93e77701584cfd2fa6b96c6aea030344f9",
+      "civil_comments:default:test:25602": "82e4b3a11c37b02390883f2a37eb353e74d7137b2abdd67b3a560224c2ae0a10",
+      "civil_comments:default:test:26038": "0007a032f0ea4bd2129584257690323de7fc298c92db34c0670f92bfd7e35f78",
+      "civil_comments:default:test:27365": "a08b613246cba61114b679c6e2d6f1336abb45976a6092cc3502235cfcd761bf",
+      "civil_comments:default:test:28934": "cae4cc280e3356282b4057222534a50a6a1b88f78f20923439fc5257480ab418",
+      "civil_comments:default:test:29165": "30149a55fe67514af483174b7e902ff03fd8c6a5519e0d91abe22a8d8f6ef3e4",
+      "civil_comments:default:test:29287": "30f34802ac4b05d284f3c81edf82bf91bbb9072ffc123695d3cbd145094fa67f",
+      "civil_comments:default:test:29402": "069638069e292417402852262c7133a08703e4d28a7d2ac70a22ad21e76611ec",
+      "civil_comments:default:test:31759": "127939e97fb9f7536f738bb7cc41d6bb809d17658ff72d4a82a010c82ae44518",
+      "civil_comments:default:test:31903": "317f44d7f7ca6259aa5d79756745a3723796fb8dffb8a8e2249fd74935eb9a6f",
+      "civil_comments:default:test:32069": "549c94677dd9d19bdeb37fef16c8c3214eeaa55fdf937cac92f04c7f2b65c683",
+      "civil_comments:default:test:32534": "ef83c15dc6c6561f24c2bc60700d72787a23a503e0c71c7f61e398e8a3b703e4",
+      "civil_comments:default:test:33098": "780e89da2d12d369aaca7572832bf8f206e139e1d105f4763f595608e27c9ba0",
+      "civil_comments:default:test:33666": "f50a1252fb85d4ea0409060e507066fbd15f49257b2b1ca5dd02ff026643ff89",
+      "civil_comments:default:test:34549": "d4e332d027cd9ab25e163b64d26f766974a1dc6fe5d9c54b0b323803244783c8",
+      "civil_comments:default:test:35388": "1c5f3b365c29a90302aadfb7c6d8baa99ea64d6964c5ba6eaf2527d9223c22c9",
+      "civil_comments:default:test:37559": "ebc6a9833cb12ec3be3e85d31259668daf9d7b10ae04bb43a02e2657a376a0e3",
+      "civil_comments:default:test:37849": "4199966c7a9c57384a24e6c2f8e441a01dbd41840838e037f409c8ad277ef2f5",
+      "civil_comments:default:test:38159": "8a9beae0865e02fd8fe48f551d2d044883d5298dbb851725952f2d765d9ee814",
+      "civil_comments:default:test:39706": "f90b917a3b52e5de182ebd17ac947ec532863ea9f04e60ba3ce25b5bbcc621ce",
+      "civil_comments:default:test:41198": "b681012b871e85534c685a1d6e3fd14209ff1bff4156cf0277610a1d90a975c1",
+      "civil_comments:default:test:41710": "b87ad4d20c54fce60f9aed018346e125fb82fb63816944a2db627685fd2235e0",
+      "civil_comments:default:test:42492": "6f7d3434f618f943df9378fcac1f317a521fa59cfce2fecb38a3ee178cf47f3c",
+      "civil_comments:default:test:43184": "1e0341d8303ec2a51d2fc2d7428337f0722e26e7adc9dc8c34752f4d87b9d5f2",
+      "civil_comments:default:test:45120": "9c0b81a589da915dcf60fff19fbf3644160bfe35804e98a21c7413404c8ba510",
+      "civil_comments:default:test:46129": "cbfb8ffd069f8704324becd4e335e5355dac45e7ec66012f8aa7f3369f618bb4",
+      "civil_comments:default:test:47637": "317f7dbea798689b3adb8b3f8682471a536e77b1aa49f5f6b613491c9d9bd9e9",
+      "civil_comments:default:test:49473": "cc77201b2e775fb7cd513575fb6585f7fbc47a686bc6e4de982d6083f21d5e71",
+      "civil_comments:default:test:49651": "41098afc2b76c50c081a8a0d043064f9973dd5e5a647cd12dd127ce903d923a6",
+      "civil_comments:default:test:50495": "be95e9a4678ab13495acdf9cc350912a923a4542f65e6027cceabd05a6f3293a",
+      "civil_comments:default:test:52809": "194c8fabd2929eb1e72f7c89a4c8d41a99d212136e7db02d810715a3d1c80c65",
+      "civil_comments:default:test:54409": "d2daf339fd6e578c7898504efc3813a1f1742f56d74e214b6ca6b24a910ce8ba",
+      "civil_comments:default:test:56181": "0dd83081c0b785a6a3b59f08ea3d8aefed0f3f5015507c64c5b205c7034d1a3e",
+      "civil_comments:default:test:57932": "381e8df54f3bc5a6c759c767eb93b7479b4bbc0fcdb1a898f340843706a5a493",
+      "civil_comments:default:test:59001": "4d0aece7c059eb51478ea692e522e4647314774654659e9097a996fd43441834",
+      "civil_comments:default:test:60388": "6d6562080a0f21402497870b50af94e4afce9fcd11c77c7eeb9c7a72ff104c48",
+      "civil_comments:default:test:61970": "51eb133038d9da10ecb57db7e744bb6e48f1a4c0c25dd6a876ba930fbf7095c7",
+      "civil_comments:default:test:62445": "c5e96d2e4901c3c56f0ce26c577d0f11afd2d2d1a142eba826c784804501c38c",
+      "civil_comments:default:test:63766": "c45c91ad49d61cd698ba92c1bf3426aa15b7d65aa15723f4051de5e41bbeb8a6",
+      "civil_comments:default:test:66479": "2fa9920b8195d2c552bd29a4ace840241130a381ce15aa13a3ab18b7841e7112",
+      "civil_comments:default:test:66615": "52a9be35ce2c22f916e6359c380ae0d0d603178f6de22fa17aec3efdd0d390b0",
+      "civil_comments:default:test:68256": "1be1c1bbdad815aa8dab1d2cedb33e2fa48dbf1712c0d63abe11a186aec798bc",
+      "civil_comments:default:test:69311": "aa0e17e485a778d490ba36b6264658c47c80b486076eb410c73a1cff0c07fb2a",
+      "civil_comments:default:test:69922": "670c1ba36954e05bd40e948edeb13a93946654722c7ddc175b4c1154ad00f68f",
+      "civil_comments:default:test:70282": "cd330906983d484db3ab0040862052300c44caf7dbc0506f9ed35d369a2f5ffb",
+      "civil_comments:default:test:71629": "63ce2c89dc5e2cb76ffdaf4aebaa29abd656d2218a8003f1222209af686a73a0",
+      "civil_comments:default:test:73135": "66925a005a6bd7c2a9a4427d3e4c1808b7a72650fb2d345e5999d937d86fab0c",
+      "civil_comments:default:test:74328": "fe0ccfb07824bee92c7ba477ec9a7686c6be3a5daa1a18b5089dcf522c38b809",
+      "civil_comments:default:test:75872": "85f59190cfeb07fd2100583aaa0da7f3ac535db80b279c6eadced124d973c953",
+      "civil_comments:default:test:76078": "00e1b20f1ca00f06ffaecc224e264c37bc1ad482e7d13a0ee7947a0da6c05310",
+      "civil_comments:default:test:77407": "8a4a8ccce7c602463919a91cd0d1aab9411f621ce5a96b0e3dddfc61b48f8d2d",
+      "civil_comments:default:test:78003": "ad55a1f0afc3c36f29fc004f30ee26f7aa6a12f680a63d30ed5405e17e4b5597",
+      "civil_comments:default:test:78870": "119a119017aff6f7acfeef4a03df33828ee1fa5b82ce24cfa416369450dee4a5",
+      "civil_comments:default:test:79758": "61564a17bc3b12fe58b1d71121ffd8de811c0de8b5acc4698a504708be41f307",
+      "civil_comments:default:test:79926": "b96d0cec0640c1e3e684b0f1bfc567f7341a982ab99f8e421e3bd1fa648e8953",
+      "civil_comments:default:test:80265": "77d52049a998452265050ce44f9c03939859ad08dce222496b48a96fff50a284",
+      "civil_comments:default:test:80641": "62508450b4562b951c327fbbf6b1890d0b93fe6d6a89d222f1813a3eb758b49e",
+      "civil_comments:default:test:80829": "8b235ea813aae560c78917b54f62d4bba5990843518da04bbc55b36d6e520879",
+      "civil_comments:default:test:81151": "0d0d68dc48e5c94eacfff781a8c02d38b071cd73fd8d852607feccdd83f2ec8b",
+      "civil_comments:default:test:81755": "27335484c0b1abb2df3ea05c43f190619da78a8d77a85b2fdd4e84f9611347b6",
+      "civil_comments:default:test:81975": "2fabb98df2982d37b111ba1274e2c12089b997d41da04cc9e2704ae9b5b2e869",
+      "civil_comments:default:test:82844": "389f8054fa9a78d75aff31b0889beb9f88cb742af972fdfe3ab109ec51b715f7",
+      "civil_comments:default:test:82887": "6d871d504400f6ec14867ec591fe5d3a1a87f722dce8e9505989a3b83cdb6d02",
+      "civil_comments:default:test:82936": "d2524be528017632639b0fd2a43d3b7cd9c4b9cba71f2f8b6b0f8d8ed5c30f8e",
+      "civil_comments:default:test:83840": "b311a93a31991cdc489bfa5875d5a7a06be192f31d4715421d115234df1f1f93",
+      "civil_comments:default:test:87583": "7171f14fcba5c8cffb9b2bc110ed7907272f0ffffc5125f530f1eb7f1b51397f",
+      "civil_comments:default:test:88224": "90557ea974919f35a23f2435984d7acd5a41e99c53559e6330dcb864cd567997",
+      "civil_comments:default:test:88557": "0b13dad641e7c0e9bfc5c150d511d60acfb56cc099896101a5752b8dc45a0ed2",
+      "civil_comments:default:test:89355": "4f84866f70d674b3d6e2a7c68f39fa3609bdc2e018c5118ab585a9c8c92cc28c",
+      "civil_comments:default:test:89710": "c4798203948dc3921b51f48fc62189c8187cf8db15d4e06e21f03c03cf32f3f6",
+      "civil_comments:default:test:90096": "b7c8ab9cffb61c80daffd824fbe53e33812e82f24573c5b6ca8161dbc0af416f",
+      "civil_comments:default:test:91788": "450270668ff89c308515ef3cc8df33640bcb2593805f67570aaddcb34b702569",
+      "civil_comments:default:test:93850": "254f034539ca50b1db5641752c6228d8802d82d13d4cbfd37614849263bf37d4",
+      "civil_comments:default:test:93982": "68529318d8bcd50fcbd8076a4eb256d9ef1fd0136e85d5bc8d834f864a6a949e",
+      "civil_comments:default:test:94272": "6a7ea27fad6af260fa5b57a6d4b8b812013825657f89aaf38cffb919a20958f9",
+      "civil_comments:default:test:94647": "49870c3f71e46fc888671df2aada2a0dd7d2b1fca379189d4007d49e2b0d3740",
+      "civil_comments:default:test:95630": "c91c0dce35b6f9c0cfef49eb770c559c791ba00d8a1ce30a1d570457048dd53d",
+      "civil_comments:default:test:97248": "de04b832a1577eebe836639b2bf195819fc23a17c644417039a2492a2c2a07e1"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 700,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:562",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.19530000000000003,
+        "true": 0.8047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:1390",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:6079",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8857,
+        "true": 0.1143
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7734",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:7924",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7666,
+        "true": 0.2334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9241",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8105,
+        "true": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9411",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9799",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:9925",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7744,
+        "true": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.8057,
+        "true": 0.1943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:11635",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:12357",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:13948",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:16401",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.23440000000000005,
+        "true": 0.7656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:18510",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.29690000000000005,
+        "true": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:19292",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.29690000000000005,
+        "true": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.20699999999999996,
+        "true": 0.793
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.1602,
+        "true": 0.8398
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.26559999999999995,
+        "true": 0.7344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.19920000000000004,
+        "true": 0.8008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20195",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.17969999999999997,
+        "true": 0.8203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20495",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:20529",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21188",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:21719",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22259",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.2539,
+        "true": 0.7461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:22749",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25115",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.1523,
+        "true": 0.8477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:25602",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.26559999999999995,
+        "true": 0.7344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:26038",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:27365",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:28934",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.18359999999999999,
+        "true": 0.8164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.2539,
+        "true": 0.7461
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.25,
+        "true": 0.75
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29165",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.1523,
+        "true": 0.8477
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29287",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8398,
+        "true": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:29402",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.75,
+        "true": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.22660000000000002,
+        "true": 0.7734
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31759",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:31903",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32069",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:32534",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7549,
+        "true": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33098",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:33666",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:34549",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:35388",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.2148,
+        "true": 0.7852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37559",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.26949999999999996,
+        "true": 0.7305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.26559999999999995,
+        "true": 0.7344
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:37849",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:38159",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7715,
+        "true": 0.2285
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:39706",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7979,
+        "true": 0.2021
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41198",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8457,
+        "true": 0.1543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:41710",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7959,
+        "true": 0.2041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:42492",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:43184",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:45120",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:46129",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.18359999999999999,
+        "true": 0.8164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:47637",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49473",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3086,
+        "true": 0.6914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:49651",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.14839999999999998,
+        "true": 0.8516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.29690000000000005,
+        "true": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.25780000000000003,
+        "true": 0.7422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:50495",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:52809",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:54409",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:56181",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:57932",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:59001",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:60388",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:61970",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.21089999999999998,
+        "true": 0.7891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:62445",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.8076,
+        "true": 0.1924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:63766",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66479",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:66615",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.20309999999999995,
+        "true": 0.7969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.24219999999999997,
+        "true": 0.7578
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.19530000000000003,
+        "true": 0.8047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:68256",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.23050000000000004,
+        "true": 0.7695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69311",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7549,
+        "true": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:69922",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7549,
+        "true": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7979,
+        "true": 0.2021
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:70282",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7637,
+        "true": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:71629",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:73135",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:74328",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:75872",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7744,
+        "true": 0.2256
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:76078",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7578,
+        "true": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:77407",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.26170000000000004,
+        "true": 0.7383
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.21089999999999998,
+        "true": 0.7891
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78003",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:78870",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79758",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:79926",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.25780000000000003,
+        "true": 0.7422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80265",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80641",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.2188,
+        "true": 0.7812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:80829",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.75,
+        "true": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81151",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81755",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:81975",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.75,
+        "true": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82844",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.17579999999999996,
+        "true": 0.8242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.1875,
+        "true": 0.8125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.19140000000000001,
+        "true": 0.8086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.2812,
+        "true": 0.7188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82887",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.17190000000000005,
+        "true": 0.8281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:82936",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:83840",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.752,
+        "true": 0.248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:87583",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88224",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:88557",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.29690000000000005,
+        "true": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89355",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3086,
+        "true": 0.6914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:89710",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:90096",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:91788",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93850",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7803,
+        "true": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:93982",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94272",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:94647",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:95630",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7637,
+        "true": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "toxicity",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "severe_toxicity",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "obscene",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "threat",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "insult",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "identity_attack",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "civil_comments:default:test:97248",
+      "question_id": "sexual_explicit",
+      "probabilities": {
+        "false": 0.7881,
+        "true": 0.2119
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

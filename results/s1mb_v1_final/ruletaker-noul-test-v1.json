@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "ruletaker-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/ruletaker",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:43:52+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25259044450000007,
+    "accuracy": 0.52,
+    "positive_recall": 0.16,
+    "specificity": 0.88,
+    "precision": 0.5714285714285714,
+    "balanced_accuracy": 0.52,
+    "f1": 0.25,
+    "true_positive": 8.0,
+    "false_positive": 6.0,
+    "false_negative": 42.0,
+    "true_negative": 44.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.010361778000000266,
+    "baseline_adjusted_skill": 0.040000000000000036,
+    "baseline_adjusted_score": 0.040000000000000036
+  },
+  "elapsed_seconds": 5.145329599999968,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "ruletaker:default:test:3647": "21136f5cf7de5657121121678b5b56400be45e3c9074cc0bd2896447b8cce4a3",
+      "ruletaker:default:test:4032": "5e57ab86de4afd995a3956dc2719e4b2c7e7c645c8121fffb57d20e198bf8198",
+      "ruletaker:default:test:4487": "e087016d6ae4539d1fd23d82738a377d5cc9c1f8d373c1ae26d9e5431a5f72e1",
+      "ruletaker:default:test:4928": "1ffab9cde8490df06bc5731ee7d2d4f427bf4e10f286fab1773a5b5cef27027b",
+      "ruletaker:default:test:5710": "2be31f9dfb7e3457b5116c10efacb0208bd20223e77b1b8192af6c88f3fcb6b7",
+      "ruletaker:default:test:7008": "f120898bb72019feb024482f7212842ce03834d121997539bdc3697a69ea2ff2",
+      "ruletaker:default:test:9821": "954332780ee849cf64fa1c6532523d8151edadb0a81e560aa07d70349350c61f",
+      "ruletaker:default:test:10033": "66077f47728c0fa5cb2721828703ed66e0438fe7772896580c7821bf67fff77e",
+      "ruletaker:default:test:10566": "e6e85a41d860a0a7ef5aa5e995ada06c0ae7002d4e61091f7d65b65fc4057207",
+      "ruletaker:default:test:11610": "1aba5ace3d30b5bda4faed8acac02e20162e982bce0cd257bba1508f9361c397",
+      "ruletaker:default:test:12056": "af201e7d9c9fc29826cc49f59b410bfef930ab8b220c4c982d150d249b23dccd",
+      "ruletaker:default:test:12225": "2f6f7c71e04e85d94816c4b17f2fab8ac92d60ec6635a01dd190995507c1c774",
+      "ruletaker:default:test:12384": "593b3b478e17511c5c4d995125534fc9ad865a59bc61c41a4047cdffcac48e0f",
+      "ruletaker:default:test:13127": "70fa982880d2fe3ae9d7162dd30c1b237e12b7fd0c6e2d6042205b4e0af3d275",
+      "ruletaker:default:test:17410": "f9e35781ed2b90ae71b53fd3cd6bb1f13c2547fcc60f01c44074bd35684a2a8e",
+      "ruletaker:default:test:18113": "4c4b5d16b4e4577ce226528fb652665a45a2b83e35842c6efd76aab554f0a2b2",
+      "ruletaker:default:test:18537": "2eed63dc4f1f01efb66997da45480496363eeeab7cc0a4a7df4b7f8d17d27333",
+      "ruletaker:default:test:18719": "3888ca958f869d4e8d78882c3873dfe9342b7e88550d05134caed9f51b3ee5c1",
+      "ruletaker:default:test:19246": "dcd3469f5584a84e020be90f0288ffa36c43b36b06b6b3c08f3a9c2913d1f4b6",
+      "ruletaker:default:test:19827": "70de768ce9324266fd2ce4ff8b2ae241552b6947ea0debd5c6ef1638c81c59fc",
+      "ruletaker:default:test:20386": "4f40cc83d628c2657577a8d3f14723478eafd7a28145a745293c79bde2b8f342",
+      "ruletaker:default:test:23336": "5e75967ffa78876845ee038a945e2b88fa686cd1e0e399a33d173f26b3947e06",
+      "ruletaker:default:test:23609": "55827479e8a9de641ce8e69e5a3ec1a27c569c6a5dcb71e08221589e557bdb32",
+      "ruletaker:default:test:24043": "e23383aebb4d5ce916b50fcc1ebac8180d86d3031e5be8dadd2e04a9e5dbd43c",
+      "ruletaker:default:test:24458": "a1a380d9bd0171df1e25426f568f742eca2c5a6287fa3ce9dc2d4871858eea37",
+      "ruletaker:default:test:25281": "71e7490991b54311bf977520e1248c835851f53ce49f0dc3ca513235fd824bbf",
+      "ruletaker:default:test:25400": "65451d1423c1c505708c40b7b372157f7c3c684f6d0833f68e2092ab9bde5a43",
+      "ruletaker:default:test:25629": "40e7fd0293f46ab62b501503370b2a4f95658b3390ca523061dee7fb5154049b",
+      "ruletaker:default:test:27847": "92f9df1e9b70793f8fd933ab4217f0229ed8b2b1dd78f0fb996d05c0b87eae03",
+      "ruletaker:default:test:28222": "ed16708337e1962fc545c3639256548660d66df9b2af69021f8e0b44a3791f0d",
+      "ruletaker:default:test:30173": "5ae88055fd633aa9629523df2dfa386509c263a0965cad0be0d5224a090ce644",
+      "ruletaker:default:test:31793": "18a0f90ca88f178cc2c68bbc759a885d0327e93c886de90d95780585084525eb",
+      "ruletaker:default:test:32306": "26dea51f5ebe2dbb2bce54d933f0b9c84c3682c7f293b2b4b269e81c61604873",
+      "ruletaker:default:test:33205": "b15ac4e4a558e5e0a580ff427a9a78d81cac8f7c8c505b59704229bb0b040a91",
+      "ruletaker:default:test:33955": "16a76dc1b64a27580c41a106ce8ea1dfb588d0dd8dfbbd7b2275e95e0436c867",
+      "ruletaker:default:test:34964": "7ea0fc27393b5488482ee7e1f93abdb8f2d8e1603ce5a942cd83b993b4fddfa9",
+      "ruletaker:default:test:36225": "7b693d3a39b71258c95e662bc2ee4215a606a1b4a58ef5c36ebb8c07579964e3",
+      "ruletaker:default:test:39038": "a1406f37399048a3da2a9cff9f841ca4ee5a56aa4e7646eb416b041d59040275",
+      "ruletaker:default:test:40539": "604f68600376d64d25ea13250dde03c54e7edf2f77a4c403c8e4fc92bbee1c57",
+      "ruletaker:default:test:40657": "99fbe12c6f763caa037f7917adbe336a8e3acf6ee661025930edaee5a05f9d72",
+      "ruletaker:default:test:40783": "860caa43c7e86ecf01ce396ff2966e9e3d3f6bb720c8743220699650a5e00e54",
+      "ruletaker:default:test:40929": "64bfc6b27f442a93ccc54ff5583e7056bad662e358a40a161751416e5a3228b0",
+      "ruletaker:default:test:42357": "509c8db8478ca77be313281c595e7af489a1ae8dd3f12e8ead531b5b2bb85194",
+      "ruletaker:default:test:43250": "fdd2886434d63f911bb353789e02b351506d42ea3e3c5513b4b320def6f1dfd5",
+      "ruletaker:default:test:43737": "71785b82c0696ba022eb63a081d109fdfbf0e5d7955d1a53a1c17666e5d731ca",
+      "ruletaker:default:test:44164": "e802a7877054cc3bc8eb635bd789a49687b0b20b2247a8cd85331f783f0202f4",
+      "ruletaker:default:test:44287": "2b58f456cbccd1b051b644b937b1e18576c40d83ebad07f463c1808aeb2b71d5",
+      "ruletaker:default:test:44493": "f233c2e32644b6bcab7967051b32c88f1ad3e9504c6bf579955c4ee3e710f26a",
+      "ruletaker:default:test:45711": "b12d593194af7008722fb80c67e8f4db765768dc0120310c68b442912fb5b260",
+      "ruletaker:default:test:46227": "928155aad4479a3e0d2fdee4bca7b7049c167a41ca853f32438e7833d80d2f02",
+      "ruletaker:default:test:46258": "af5b0a77dae41eb8801a39b85c7bf5068e78fc84ebc759f668594b0888b5c118",
+      "ruletaker:default:test:46455": "90883a3ef605804785858f1f2f6927187b3b67af8f95542865218b943888e4e0",
+      "ruletaker:default:test:48328": "6e4471eecd1e57aa16fcdcf056f4f7d1ba569d5ed14e82827691168858a6f49f",
+      "ruletaker:default:test:49385": "dfcfb1a4bffe64111d202f7a6bc61ba57b5876cda788e67744336ab5bb0b2fe5",
+      "ruletaker:default:test:51749": "eda39215cf4c1612ec3c0ce3909d21bcfc09ebe90716aef261b20f01942b5314",
+      "ruletaker:default:test:51857": "af686693eea8a870a52a27053cfc5cf0567a4ce7e9148fe48652635b6d6c7375",
+      "ruletaker:default:test:51985": "bfe8c91daa45f6c34224e9761d7c47bed668369f4af80a1770e2715538876863",
+      "ruletaker:default:test:53569": "3b2e09c869ca2a5dc66bb8f4f7891994658b7614206d98d916f67072abfecf1e",
+      "ruletaker:default:test:54604": "e9ce102e23a2296453af153c008c847328707abdf98c1b7c26aadbce79a2a613",
+      "ruletaker:default:test:58422": "4efeaaf9204c8b55c26b95e8269f9675f5960bede40f586d1c525e3981e6a87e",
+      "ruletaker:default:test:59756": "17d355f7a58750088c06584737dd2d1dc7afe2af0876ec68cdb94fdfa7fbd744",
+      "ruletaker:default:test:64279": "33e576d21d61d25702a2f2e99530561d9e569f6a1f91f8b859aa02de1b4d8462",
+      "ruletaker:default:test:77867": "f5d0cf5451317ee17cefafb002a17c2781bb7818ed124e2a30e2cd752a21f35e",
+      "ruletaker:default:test:78237": "91b1b4d81f74e9cec407f2f7f3c2ab213be357259c5bba072ef64502a5e24609",
+      "ruletaker:default:test:78785": "58a9127a33a7b656b0cfd10a0fc77d460273aaea4c537bc56846cb4a8bde259f",
+      "ruletaker:default:test:80191": "cef517953de4734602545e6e756d8ec1d3418accd9d2f58aecf6f59914a7ac43",
+      "ruletaker:default:test:83198": "cd34819b9aa6fc4ab338a1189c9570ff08c973ca7cb697690721057289e9c89b",
+      "ruletaker:default:test:84807": "9cf0c58d49476160f28d62892c4c5427dbae2754876962d24bd0e1d797435d9e",
+      "ruletaker:default:test:85201": "a49d8fdb5dc5676e082456f4aabb902a7f5f3f7d1ea1f2e352dd7ce79adf8ea9",
+      "ruletaker:default:test:85847": "c51cc8a752207950ed0fa74fc0f78e8e2750cb44154ff9d7b0f7edded519c881",
+      "ruletaker:default:test:87344": "ebcba5e8fedab4d6cea20ce205417cf48603dfa8aee21fc0f87d3d7e78e83bf0",
+      "ruletaker:default:test:88043": "cc8a630afe118f358af85927a17887b47cec2ff4bbe3518d1669ecbbeb5e7095",
+      "ruletaker:default:test:89101": "fae2f3dc0e364ea55efd06fab16e9c8b9475930251e57a6a80e3a312af6b3089",
+      "ruletaker:default:test:89248": "7b4318caea8f1a090372437896dce5724ba08ec1a9e8c45bd543bdd3502a955e",
+      "ruletaker:default:test:89317": "627597ce710957115bf0f418d3ac9cc13d02a615b076439640f7e47f4b03ab14",
+      "ruletaker:default:test:90711": "6ec0755e5c861458fe0989079de94e7493de8ad267ec50441bfc4efa54e82f2b",
+      "ruletaker:default:test:95271": "c0e19eb6f7b3bfdc2598bf532b995531a3d4bb1c9f2743b787f382fc6b03994a",
+      "ruletaker:default:test:102012": "680efeeda499665c2c9e195174bb0882dd85f928cde063b69380f032e3051e70",
+      "ruletaker:default:test:104499": "40d06f0a88dd23cbf886159733b26d8b1b9faf1394d765e4fded5bb926882497",
+      "ruletaker:default:test:104744": "fbc978c319bee9faa4ce99093277f9419f7b61251aceaf507f78511609b13bb7",
+      "ruletaker:default:test:116209": "3e70f5e265082fbe6ebf93e486fa3f8442b4b26646eecde25eb07e146aa65d77",
+      "ruletaker:default:test:135164": "281e80e5b74c72f09f6bec94aa8eb8696aff5e20d9f77f3df62ab520a31e9fb3",
+      "ruletaker:default:test:136035": "4ba3197b264845c48ac3e4c16c72597c017905e8090a2269bc39786e38976ba6",
+      "ruletaker:default:test:137265": "48bdb52171b96587b95d73108c8f796dba38cdb35bbae473606f12fc753f8fb7",
+      "ruletaker:default:test:138441": "8bae031f12b7a243719de491620973876033532b2492d0802c60716d2c54b79b",
+      "ruletaker:default:test:138690": "d134cc84569cb7a020983ba1b77aa34f506fa8005d5bb0328bf926e1d9a61fdc",
+      "ruletaker:default:test:140576": "ee5eac7234ade559c87cdeeaa7937eb93604659724e81c237c2f391c20fc7452",
+      "ruletaker:default:test:141171": "02d2f51b9b11727f1a3a233c5e79a730e906c80662891e2db2e5b606a580c30f",
+      "ruletaker:default:test:141772": "61d41e8c3e18a58fabb7a012d005fb5f75a2a767c0a902fd84af39da81190dcb",
+      "ruletaker:default:test:142033": "b37f1039dbefb3df3f36081fd147533d6006dabca14aa2636d2932bb9c608d2c",
+      "ruletaker:default:test:142656": "67282314573ccce41da0dd0c484f7ed9fdd8ee9ece69cfd1dc7b67ee7ceb2afb",
+      "ruletaker:default:test:144044": "1fa02d7f3667458d486c0c402ed5349386eb8364798ba1d54c8ede0ec32d23d8",
+      "ruletaker:default:test:145739": "8215879b33611259412ee16f851d3a5137524097bab5f3855b466f28271b91f1",
+      "ruletaker:default:test:145966": "1a086b9b54b0fc92c893cfbce59a7aaf966a0bbd427767ced5b149420717931c",
+      "ruletaker:default:test:148755": "9b62b4937bf750782d2d23820da3481ad2f0637fb7caf1a465e813487af9b8ad",
+      "ruletaker:default:test:149812": "b43b34d7dbb6594e74bf7ed6e30ff20da3ed5e09c3906e59696aba6a4f0d5375",
+      "ruletaker:default:test:150316": "daa9a5d3e087f4e6b3d17e47240fc31a652d108c6b4776a54b487938bb8177b4",
+      "ruletaker:default:test:150910": "a2758dafde953561f2714520ff8382628cb958c7b08d3230cf47b3b1ef811171",
+      "ruletaker:default:test:151653": "b06c16bdeb9ed010e45f75fad8226ad7e9264e67197f8ccdc16f4a5cb6ad1063",
+      "ruletaker:default:test:151809": "1a20c864fc28dd797ac7af0cffc9343e6e76e0bc0b8caa80405a61017f51570e"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "ruletaker:default:test:3647",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:4032",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:4487",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:4928",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:5710",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:7008",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:9821",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:10033",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:10566",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:11610",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:12056",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:12225",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:12384",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:13127",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:17410",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:18113",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:18537",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:18719",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:19246",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:19827",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:20386",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:23336",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:23609",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:24043",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:24458",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:25281",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:25400",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:25629",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:27847",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:28222",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:30173",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:31793",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:32306",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:33205",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:33955",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:34964",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:36225",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:39038",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:40539",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:40657",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:40783",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:40929",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:42357",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:43250",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:43737",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:44164",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:44287",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:44493",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:45711",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:46227",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:46258",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:46455",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:48328",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:49385",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:51749",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:51857",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:51985",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:53569",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:54604",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:58422",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:59756",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:64279",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:77867",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:78237",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:78785",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:80191",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:83198",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:84807",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:85201",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:85847",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:87344",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:88043",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:89101",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:89248",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:89317",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:90711",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:95271",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:102012",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:104499",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:104744",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:116209",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:135164",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:136035",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:137265",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:138441",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:138690",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:140576",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:141171",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:141772",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:142033",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:142656",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:144044",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:145739",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:145966",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:148755",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:149812",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:150316",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:150910",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:151653",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ruletaker:default:test:151809",
+      "question_id": "entailed",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

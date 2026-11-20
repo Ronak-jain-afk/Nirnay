@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "hans-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/hans",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:37:10+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2684211902,
+    "accuracy": 0.5,
+    "positive_recall": 1.0,
+    "specificity": 0.0,
+    "precision": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.6666666666666666,
+    "true_positive": 50.0,
+    "false_positive": 50.0,
+    "false_negative": 0.0,
+    "true_negative": 0.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.07368476079999997,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 7.237092600000324,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "hans:default:test:98": "21f8923e78b3ef706b99a7a1725357615d4db8f6273e34883ddf15bdc0e0c66f",
+      "hans:default:test:654": "a01085637e2595fceb4d18c17250f87e4276e6f8d782124fdea0b76fdabc2265",
+      "hans:default:test:752": "3a1087310b12e54196a1129205b110fd235064d493a52b70f381486ddb566f8c",
+      "hans:default:test:818": "277f3c78502c2e675a006a363d7cac26ff2a8f5b0c561e25e31d91723d37fc20",
+      "hans:default:test:887": "1e018dd8e483a4ef1141ee0c2f7b63ed09dfc0495c88d270df3ada082502c3dd",
+      "hans:default:test:1666": "15f7e33ac0628bad68f15325a252ed3c0e7ccc8ebf1ee244501405801b19c2a6",
+      "hans:default:test:1772": "c26dfb0f44cfe4d3560c95e44f4ba046600bdeab09de9324431d86af79ab0826",
+      "hans:default:test:1784": "bafe9b9c71bfec182457d347076571ac33f212ad8c1d0b7499af0fa4c1cd895f",
+      "hans:default:test:2069": "e3409e0739d945d11e0db18dedb8fa5614011623be58cfd969d63dc4e1d8c412",
+      "hans:default:test:2152": "7844a5e59013de71c9ea71fefaa8aeb57d87b3f71641ef4a5c0cf182c3b64210",
+      "hans:default:test:2268": "f177c6f1703f5d12987dc0f6ea31be0a34b71253813763f6030e5190108b1a7c",
+      "hans:default:test:2416": "ddcd4b9be7bcedbc872230f8d4acd593dfa79763098550e5dabfbbf87092f73b",
+      "hans:default:test:2463": "3e2d01380a30b476a75dfe75e4af86dc92dd3f61212bedce78646941343dc5f0",
+      "hans:default:test:2605": "a5b4ef27c4b160a905cf989c944a4f4c040c8b878a7572504dcc6fe3d8e439a2",
+      "hans:default:test:2649": "cdfe737d1f90633bcc21c8960b6fcdfdae071919f087ae002d593f14df39e67c",
+      "hans:default:test:2678": "0c308b7313b82748c69fbd6891746a5646a3a32c725984e696cf97954ad920a7",
+      "hans:default:test:2922": "07c4177b7884c3d138aac99c2ccbdce48ed2a8c044fa60f977e454032121b96f",
+      "hans:default:test:3171": "71f2e2a96b7fe1323ddd123e66b4562a130313c6cc9546324611e323b4cc3eee",
+      "hans:default:test:3490": "0a32ec22774b40b5ac840f4a008c031b022ecfefdb0dbb960b14d09ff303d99d",
+      "hans:default:test:3517": "c723385a5e20b46e6ff4e2b666b09150927f3249d5d70b351ee30d83b7775f99",
+      "hans:default:test:3846": "6bf638633a968327bcdd28aa69085e7b75c9d400f9423377c28395940fd3a964",
+      "hans:default:test:3945": "28a88a4e729d3e6c129bf3bac3f1ff6994509184804c0a5a8ceaa688f79a42d3",
+      "hans:default:test:4343": "802a4cd28b924cc8bbb45105a3e79450001114888888c9e4dffdd89f1ba9a7ef",
+      "hans:default:test:4451": "15baf8bfdfea976d1f6ed0626ff87c037dd26d9dc1a1697476f3e054f92d706b",
+      "hans:default:test:4452": "9d2cac042fb1626a61cabe53a8eeef4e2e698839d07467ccb84689e6ae682a04",
+      "hans:default:test:4537": "0f98b1efcfa59164949d1340947e089fe6142c9d7758fa5e787a7e2eb0662143",
+      "hans:default:test:4638": "68d504358c8a2fdc366e22720eabd7a25beca83f62b38af0cd7f4ac3648059a0",
+      "hans:default:test:5176": "875d1502b7484d3f26226cb479a63c0de553ae708bbb9498fc851231fbcaee7a",
+      "hans:default:test:5509": "59e7c88ce92e8619dfb27d5c16effa8409fcf66decea7f7a6ab73ff488f790cb",
+      "hans:default:test:5625": "c40b4be8329ab7e7cdcd42e4cbe9752f1a421e228033bcf0dfa2810d7a4e209b",
+      "hans:default:test:5977": "c0f946c84aa3dd638b418e7f6c219aa9763aa6cb7999cadce476334700059afa",
+      "hans:default:test:6157": "ca90fffbafe268b75ecd2a34744865d5bb4671930f4af51172ff8c5e926907a5",
+      "hans:default:test:6192": "c8cd2a0b2ec5f7a244361dc7d6a1aab2d3c1a94ba9bd4847282abaa697e779f9",
+      "hans:default:test:6226": "a4e2cba346ce3d3a68e98d0f3c01b9b8f2dd362cdffb63c975df3802f1dc6021",
+      "hans:default:test:6357": "c4cc69b37738d8f75a3728292367aff630cd74e197704843cfa1890cb99ff762",
+      "hans:default:test:6505": "f54968ee757adb6f25e5c2963c01f0e08aa6140841de8a56e210c1a0179c71d9",
+      "hans:default:test:6814": "292907d42eb3e3856357411a4a157b1713aa23ef5124eacd2e78669e3f5dfe4f",
+      "hans:default:test:6834": "10cf14a8f1fb08c2cdb054ce245a9eabda4a583929a15fd75d87af66ad7bb159",
+      "hans:default:test:6963": "523743ebfbf61f11fdf2f70faf65614c1435116e446a7e66ebeff5a9bed163ab",
+      "hans:default:test:6987": "d47003b136460b23ff4d3a8f85540814e408feca2fc63b1fe395c10be16775fd",
+      "hans:default:test:7063": "2ca60353baab6035688ae1f0c30008a99b54d3bdb43bc111eb24cab834b6e5d8",
+      "hans:default:test:7069": "e5b248c5666dad7757a463080cd7b1bd5103417b54e4b164c1fb67b2c1f54003",
+      "hans:default:test:7178": "3dda68d50c85206294e7749905736484b0668b431db43eddb21b3d6832a6c3bb",
+      "hans:default:test:7204": "5da6ff081eea6dc884a534dd58f2d47c1ec5e74738bdcc10ddc3386b060ec24e",
+      "hans:default:test:7278": "538514da6d367ba120c1b43a9a7982d7283f10cd9838eed2bcae76dec07cb222",
+      "hans:default:test:7498": "fdcf33fc84952a9122b98b20b75cd4617b38798688de45653dcebf9b992fa2fe",
+      "hans:default:test:7650": "1be516eab7fec53c1e914c1e01156a3a00d41629bcc83e09bf1fc9218ebaaf27",
+      "hans:default:test:7789": "5596e23669c4f79a9d2388d81de545806a05f94abfc2a948944b8239ee282905",
+      "hans:default:test:7830": "25c27a0dd95eec8d4fcb6489579471097f10dea310f78b49b877cd3fa0f469e1",
+      "hans:default:test:7912": "122dfba693e5328dcc4d28724c534e8b932de6a5db5295bffd48aab7d942e1f7",
+      "hans:default:test:8055": "320379ecf91d518c941c1eec8cdb69916ceb708365c13bbeb1ef5edbb00295ca",
+      "hans:default:test:8130": "5d3deeafada51015562d0dc2d0d1aa3ccf71e12183e31a85df280bfb66173bce",
+      "hans:default:test:8270": "b29a59c3459107233ed1bd1f7ab52dfdc7fc1ba4b02f7f509984e8f0da98a2fe",
+      "hans:default:test:8375": "7b0789d49021415801acd7257d527098c9dbca9849321d1cf21c684e70e6c113",
+      "hans:default:test:8414": "a2e4120602d013677ad1ee9065fc887f155ecccbfd48062cfbd5e410d2748341",
+      "hans:default:test:8659": "1d5849803656233b9bde0686af53c37b23589a18e1bd194f652b8c99f495321f",
+      "hans:default:test:8710": "44e7f1d5534884a293665de45fb51baad75aa02a1cffe91f855d22ed302e08fe",
+      "hans:default:test:8915": "90aae33b840441168dabce903ab377e9f1d4d6b650cc7b1bb7ae41085620d979",
+      "hans:default:test:9108": "c7104e5d8353f397f856f4b3dbc012d3491138c4bbf5c4cdc8d2e3f9a3ebb82f",
+      "hans:default:test:9159": "0fa7e8a9d93d1306507d9972fd72bc7df9de0715d1fa3c45e7739763fe1b43af",
+      "hans:default:test:9181": "02b58f3d41ba54337ffe2dc394705ccea305a1bfea60b0ab65c2b205c0f419c5",
+      "hans:default:test:9192": "22867422a39c255e66c7c4736f617f9134fa30ed31074f40d598d6118483a972",
+      "hans:default:test:9343": "6521102b0fde2a122dc6d27df340e58d0fab346fc34aa04792fb1ed8e79f4268",
+      "hans:default:test:9447": "b5dc8e11150ca5c49d0cffe049c14ae514c299bb11489338d1b4996aab406466",
+      "hans:default:test:9482": "092802bf88a9c7c12569968347a202de73ff8071fecacd9ac0756f7fa965cefa",
+      "hans:default:test:9606": "d3fb3928f3eed0c3b8c575b039724bc190393816e1be5bf66ef6b05707877308",
+      "hans:default:test:9668": "5c77f1c51f0b1f69c230578df12a54617f075904bab7b44781910de1a4d8acf6",
+      "hans:default:test:9697": "dd1635df77a2260f68e8fcef4a49553bb161d739eb50ae5c7bbe197ac91ac548",
+      "hans:default:test:9708": "45df47f15bd598c7626e798d4ff61d9efd04117de2f72782839cc6d96aea34a3",
+      "hans:default:test:9711": "21e8ca3af1b4d91cb8751e2d8f0522c8789829f01e748407cb5fe12c90211675",
+      "hans:default:test:9821": "f5ec4c340e17af5305226fae2f04a8c0746ac3fb31ccfae698fb8f79adcfcf40",
+      "hans:default:test:9883": "cb6c23fc84a07ec2aa5eb43cb86c2e8aeecdb97636f91e3bf7af6a8fb117ed1f",
+      "hans:default:test:10055": "412be81ab1722a89e7e72a4d6fcc722e36683a0a94a4edd51f9af497e638a237",
+      "hans:default:test:10177": "2afd8ddc479eed5b7e6160af9084a1d2260d8391e8424a140a3fa7b022371778",
+      "hans:default:test:10181": "783f0253a11e370c5a60f8135d8b1557ae2ff256ba940e97b6bca0192c81c759",
+      "hans:default:test:10596": "7a89407ca6067a1742c02325a176b459fb8e1858f62479956395cf6bba5c76ed",
+      "hans:default:test:10779": "79252a9369f07aba52568eb3023df0b441e53dc6aa009f36844d4990ca7f9de8",
+      "hans:default:test:10810": "ea9a1d7de81d5b79de9f366415be2627973da2be85f78b87d01153736948d757",
+      "hans:default:test:10999": "5c4149d596c64b6cff10fef8d77dbd7ebf47ce8d2d51a792981f459e2e311dd6",
+      "hans:default:test:11205": "16345bd7cdb704a8b28e6ba5e3d4221bb5ca8d7abd1231acd6111e70c975790c",
+      "hans:default:test:11489": "6938699a90dd40f4d8aef76b0d3376f5d4667b6b7808562deba34667495da125",
+      "hans:default:test:11558": "82ada4195b93af4dd1c5b7dfd648f557551be301351eacc1d38ec35afbd3b1cf",
+      "hans:default:test:11757": "0ef59c15ac2c683894e0eee876e03dea205e2bc08c242430c9e424a33be587cf",
+      "hans:default:test:11923": "b330f22eb942de274e61ce03a0b11dfff3d58c2e271d06e6fc746e200a122ed0",
+      "hans:default:test:11989": "55a547d228bf607bd4c41eb8e1081bc799c6cdc0835e79bc7dcbce13e62a1789",
+      "hans:default:test:12107": "6cef5567c05273890beadde2f31087cbbd0111d0f5cfccbe7dfa77e2f636e6fa",
+      "hans:default:test:12200": "bd737a241f1074a34273de279605385f0fe03a00e138c26c5b76d1ea1485e44f",
+      "hans:default:test:12420": "18677f4b19c4d2039e2b8f3fae9a2d12db5ecd27b33cbec8326a2312eea89959",
+      "hans:default:test:12459": "39062673c10a4eb86d668cc68606f2a796d2ea4de5b3e2faf0d049ffc8dbdf03",
+      "hans:default:test:12856": "f4d5551dec9c548f7703a04c5972de3b73ca446d745f9fd8f7a081796b076124",
+      "hans:default:test:12967": "69d3468c8fc8908a5fddb812b83fcc5fc5e702e76043a0e3013d488d4ef4cdc2",
+      "hans:default:test:13357": "a238ef4079ca5359d652c86e50df3da49547b4fc43377b883a49587f54a228d7",
+      "hans:default:test:13489": "906d3b6507feaeba2d12c17cc7222665d1127bbaa560a2c82977ca70acdf7458",
+      "hans:default:test:13698": "26acead87a21c3addcc715edf7d2d6cfc7203e14c8e619871a5ce0efd77fcfd8",
+      "hans:default:test:14035": "1e09104d702c027fb73a5c06c93455c16fdaaf97969dae3654f1cc9aeab86f60",
+      "hans:default:test:14294": "354336adaf7fbff1b5c6c3d1aa9a7ad8bc75af89d0d80fc9bfe98f7ab7619dfb",
+      "hans:default:test:14301": "d8784dd0d0d148111a243167c8c9546221260ca92aad2193b51f439f8a390738",
+      "hans:default:test:14474": "9b4b7bea85202b832cdabcc3e010a7eb409801ca29e7f1660d3e5005206d4c8c",
+      "hans:default:test:14888": "ae5a0e9be1ed5bf4c12790740ee1ba53e147c7a768e443b85ec8663922f58291",
+      "hans:default:test:14976": "054ef49354845ce42f1fea2c40b55351621c121ba2c789f26b1d13efa2ba8598"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "hans:default:test:98",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:654",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:752",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:818",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:887",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:1666",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:1772",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:1784",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2069",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2152",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2268",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2416",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2463",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2605",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2649",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2678",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:2922",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:3171",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:3490",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:3517",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:3846",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.29690000000000005,
+        "true": 0.7031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:3945",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:4343",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:4451",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:4452",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:4537",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:4638",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:5176",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:5509",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:5625",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:5977",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6157",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.23440000000000005,
+        "true": 0.7656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6192",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6226",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6357",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2734,
+        "true": 0.7266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6505",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6814",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6834",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6963",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:6987",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7063",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7069",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7178",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.29300000000000004,
+        "true": 0.707
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7204",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7278",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7498",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7650",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7789",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7830",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:7912",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8055",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8130",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8270",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8375",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8414",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8659",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8710",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2812,
+        "true": 0.7188
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:8915",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9108",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9159",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9181",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9192",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9343",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9447",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9482",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32420000000000004,
+        "true": 0.6758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9606",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9668",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.25780000000000003,
+        "true": 0.7422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9697",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9708",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9711",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9821",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:9883",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10055",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10177",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10181",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10596",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32420000000000004,
+        "true": 0.6758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10779",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10810",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:10999",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11205",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11489",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11558",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11757",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11923",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:11989",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.23829999999999996,
+        "true": 0.7617
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12107",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12200",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12420",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12459",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12856",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2773,
+        "true": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:12967",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:13357",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:13489",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:13698",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14035",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14294",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14301",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14474",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14888",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "hans:default:test:14976",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

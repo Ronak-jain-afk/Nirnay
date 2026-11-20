@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "winowhy-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/winowhy",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T16:04:58+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2559930515,
+    "accuracy": 0.48,
+    "positive_recall": 0.96,
+    "specificity": 0.0,
+    "precision": 0.4897959183673469,
+    "balanced_accuracy": 0.48,
+    "f1": 0.6486486486486487,
+    "true_positive": 48.0,
+    "false_positive": 50.0,
+    "false_negative": 2.0,
+    "true_negative": 0.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.02397220600000005,
+    "baseline_adjusted_skill": -0.040000000000000036,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 5.652311399999235,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "winowhy:default:train:33": "8075910866611a3f547c4f9c394463f0add0a4b172fc08da8cf115394b9a3c4c",
+      "winowhy:default:train:34": "a7c16f07cca56c2ef4a1d66dd1853cc261d2b5edf73e34d586ad7d44c4f8ef26",
+      "winowhy:default:train:107": "ad1865382f96b4508de9f06d1ef5d58c2445d64cb1f74474dd3cf57b46f5d55a",
+      "winowhy:default:train:130": "545c2fcfd6be96180180f8dd7594811ea30754315cea7230d9f39f7a3d27fb64",
+      "winowhy:default:train:166": "775443d30ccadfbc2525d693210ac7263e44f602204a4f025edfdc7c9c4bdf3f",
+      "winowhy:default:train:171": "e81ec31103c9538085a841ea6d2b374d19d52a7471ff60492fa4181ac210dd62",
+      "winowhy:default:train:188": "40e767392760fa9cbbf465c6ab86bd70da0404022d7f716a72b6d6acc2b5e62e",
+      "winowhy:default:train:191": "68546f1d171c2aa0edf5b9ea38679fb7405e90058f20d98a1249040bb8a3080f",
+      "winowhy:default:train:231": "d9450efce6ffd752bd05fd26aabbf3c795247c83a0546c5d5423cabaf6984f62",
+      "winowhy:default:train:237": "4590717ce4c32cf9a69ef14658dd2030e15652f02fe6e4289badcb14cb1fd5e8",
+      "winowhy:default:train:243": "25f36c55c82ff2eadeab8d9967f765fd3c43765b2595ec77dc44fd591d138a2b",
+      "winowhy:default:train:303": "2119eef28f8ecfddd3493aa8e52d5545fb0c729f27b135778bb495943d6ec855",
+      "winowhy:default:train:314": "97fae35b064dc932db12852447852488fd7a35a64d35df6ba338a2ebb6c60cf3",
+      "winowhy:default:train:322": "d0f6edb605e4761bbca4fb4a45806268e1d19ec8b719f54030d92676fef82010",
+      "winowhy:default:train:432": "e001c2d90c7730d7918bc931953f7228de27605e17eb9a822c9c9ffa9db2ad90",
+      "winowhy:default:train:437": "2294f544064c23201e122703537c7ee7305b8086d6338b17b946d64c06bab6f8",
+      "winowhy:default:train:463": "884cb53173a730b664a8d3ed5b232b24fabd6a065a7aba2467e9e99363859c4e",
+      "winowhy:default:train:488": "cd651425048eb3fe135ee48e0720f1b83274dd3af543ae1d595736aadc0e9d32",
+      "winowhy:default:train:551": "779ea42ed9b1b9fac6264a0d1f47416010a991f5989ab6c60838695089673bf9",
+      "winowhy:default:train:600": "35b62fc965a89a220f3eb9f5db66a39f3eb2d159839f8336eba13360496eb30d",
+      "winowhy:default:train:663": "c4c3f75f4c5f93de34020f099d77ad1d740edd8571fa1b2ceaa703e60b8eb1ae",
+      "winowhy:default:train:667": "4ec09bc7fb6d92ec610d25beb24a72cb9bc2d4c8d35dea0ad3f31c2c93bfe433",
+      "winowhy:default:train:668": "c25345573ffec01659911cf7be31e72ad18f0954e20e04d2deef6a53b87b026b",
+      "winowhy:default:train:698": "d4352e44fcf01ddfcb4ef93f248c48122885f9755726ca61713634aaa844d1be",
+      "winowhy:default:train:700": "2e18843e55ce812abf7e3620c0efeae2b7bdcc41e2f75508f22fd2f4ebbcb5be",
+      "winowhy:default:train:739": "c8dd49b7e29d353ccee2bacb290285de08f5a525db16ffbb50be75e757801fd0",
+      "winowhy:default:train:778": "7b4767e507f7d330b48bb28c83e1272d7b0eb448bdccdc93a7298257d7a0d077",
+      "winowhy:default:train:824": "0fb51e88e8b0b7251cc623ad6880a52cae7283f347731d54d425b4af2184927d",
+      "winowhy:default:train:841": "1637ff9c3c5793ffa03b16b20430aec82a4ec33119e0e4a1490c40450f17cf14",
+      "winowhy:default:train:851": "af4234d17defdebdd0ed32e3515de3529e9198e1a52237d0127450a105b2cef3",
+      "winowhy:default:train:852": "225dacc0a0ed06a9ad3af28febe3f0c7263e60deeb7560ab7e24767a05d264ca",
+      "winowhy:default:train:940": "46cbfb81a64123b66f34185fc774b8bd8ea3aac50caf96fca7ce00a95d5a1f6d",
+      "winowhy:default:train:941": "953f9b6dd1118c4bc8e0489c08ebbabaf682c68ac10ca2e602b1a6283f3eebf3",
+      "winowhy:default:train:945": "f77214db999b817d65f2130391c7059dbfa387c5b893a7fbff60ff458a965ca7",
+      "winowhy:default:train:949": "c1e09431682a21577292a4ba5216342313b001c43fbd9acd6afefc3237957bbe",
+      "winowhy:default:train:972": "29fb7541517f738b9828b38fb5903750c3acca2a9480c1c07ccd3a24f30fa7f3",
+      "winowhy:default:train:973": "916958d3f537cd0ac0113fbbb03ccd4fd5902d37d4cb40cd3c94dbeadd46c17c",
+      "winowhy:default:train:1013": "477c27a4b971bba61f92adc7e8354b2501193b0f1be3b2a98e2f11828cca01b0",
+      "winowhy:default:train:1105": "58d32f2e42a98c47ee680cad1d66b362138e70654ec8474d3f6517a5778cdcea",
+      "winowhy:default:train:1182": "201c1792a78c8e153f22faa3fc6dc205b5685f2811cc9114a3e5fb0c3da3e370",
+      "winowhy:default:train:1214": "032ea33eb95d2bb166cf0222f05d693998d6872bd0e2706c17d376927b38c26b",
+      "winowhy:default:train:1266": "a7504396b586c3557b2443a1ec545f915bd915cc4bdbad87e351751d7d3c0e48",
+      "winowhy:default:train:1292": "4ff6b7c68500649f51916b93fa8f60da64958466cb446b0b11504e5b3651cb5c",
+      "winowhy:default:train:1297": "b704ea9cf69128e73d8e104ec048aff4d09bf8784708b95d51e7834ef309561b",
+      "winowhy:default:train:1307": "049279b00aba5d9881fe4219e03e7df7ed338343450f26ef6a2d779d6000a774",
+      "winowhy:default:train:1317": "4d522a4a33a728304a9c41bf6324f56af3eeab0b8c06371891e536cad28582b9",
+      "winowhy:default:train:1333": "8e98b6dbdcd7890fdfe4540a610e4cc600b8439a894c194587e52290aa3e7f36",
+      "winowhy:default:train:1367": "01ec74d3ee1754bf4db75d85fb204b9bc94e9386b755d198158143531fb4c6e8",
+      "winowhy:default:train:1368": "63f2da72e4b448f4deae955acc85071d2f919a3af74d936386b4e0e27b9cb80a",
+      "winowhy:default:train:1383": "e76d7ca7699546909a8bbfa81e793f611aec1479b4112f0c7871854c9d777611",
+      "winowhy:default:train:1400": "63fcf1e1bd20e6ab9b84589c694ba3c2591b9528e02397059075f2402596cd85",
+      "winowhy:default:train:1414": "94c4e27a56e2406d2bf89d6d1ac863051191c75c1ebefabd4ab42b4638d1a91b",
+      "winowhy:default:train:1429": "9c5299089359bf5f125d2eb08e1a04f103741215c5798a38ca85b71e63e23ee1",
+      "winowhy:default:train:1463": "07d4a38598a0c54b08c0b3bd62e2419827589b5bf6ef0498ffe4feabd6f17cad",
+      "winowhy:default:train:1466": "43acbd33e79fcd5ee7d0e20fc35a34733946356d0bec8dd3dd786d72133cce53",
+      "winowhy:default:train:1483": "86b40f044457ac66fee35a0e31d5fcd03e74887b51c0a42e8b035506e0a6ace6",
+      "winowhy:default:train:1496": "88ea73dc35dd3574a6da8d022cca82c471e2e72c4bc620366aca58edc4d66d81",
+      "winowhy:default:train:1519": "1f92f8eae56de7b3f7d8d1f61e8a4eee9ada63ca44bc0eacfae15abbf1639eef",
+      "winowhy:default:train:1534": "d2bcdc6daeb8cd4e32546770e1af12f6779dbcecd52eeb70079e93125fb875d2",
+      "winowhy:default:train:1592": "75039e14c90063477ea401e9747be16fdcda50193621e905dbe06a9b1f01d4d3",
+      "winowhy:default:train:1625": "f5efad79fbebecb3b0860ee54765dc14cfc32b4ba0b6ab8ef39cefc36028aeb3",
+      "winowhy:default:train:1639": "ece0380fdc9da8f8aeee29e8cd3f5bbc01910763872d943a744ce48bd0f88159",
+      "winowhy:default:train:1665": "070ec90cd165d0bbf02345793278d3dddc9334de29fba168199ca542b5bb4c7c",
+      "winowhy:default:train:1676": "2943915d1c6cdcc397417a12022bc9ef0277016d1e20c9e1bfd1edf219a86da4",
+      "winowhy:default:train:1722": "665804e8aed083e375c888389291009d10250bdc5e0de4a7e41fc33755a834a0",
+      "winowhy:default:train:1946": "10941bef7b43626a9e587df9ae06c969c2bb6aea26eb1626f25f47f9e09b0efa",
+      "winowhy:default:train:1949": "0f562115885df6119d5bf6caa44dc950f9a9a8a18a5cfb0ec1f6e2d47e90a9ed",
+      "winowhy:default:train:1975": "0a1fdc899ced09faa620a438504b9df697e8b97a91ae4b821815844768ef70ef",
+      "winowhy:default:train:1985": "b12d9b95200f2cd65243d4de69f29f96c6ce546ab811673225bc7f1cf4099a7c",
+      "winowhy:default:train:1997": "8c455c23e994f21a81e5a2e593b6c4ed9c18221aa6eaa029aa1e699a87864bb2",
+      "winowhy:default:train:2000": "311211489b721397198469b0e49f3d408875105cfbd1bc693ac0b9d76bce6be0",
+      "winowhy:default:train:2021": "bd91f7c6fca03785389387507b63a049ffb2cf73c19d19d4761005fe711e90fe",
+      "winowhy:default:train:2095": "03114b4eb7fa5b716f2b0e25d0e91f7a00420ccc3af7435c25d557c11e0d3d12",
+      "winowhy:default:train:2114": "ce7edd6c3d4abb26b0fe2a99a75254419f43a301836eec252743e2565cf5dd1c",
+      "winowhy:default:train:2149": "5d58a2a716fe80af874ac5abb563809d347b1cd8d4bfe8ec03b0aaa328c8a9b7",
+      "winowhy:default:train:2203": "ff2c3e8663bc92b2b9a926bdc07e496e3b0ff1483f612a69b6272e7f8b0fed6a",
+      "winowhy:default:train:2221": "731604990a8b57b2a7c573c5f0650b3ebc2a243146353c47976608241c95a981",
+      "winowhy:default:train:2268": "a1e1f8b8493b6bd1cddbb2233115ac294809e21cfd07e20317f5ab211c74a61c",
+      "winowhy:default:train:2290": "144e9436b2b9a97e38f43fc0ce3bd236a86f7d801e2d1ddb580876c2acb7ac3b",
+      "winowhy:default:train:2319": "6febc7c4675d10593b7b61998396b9e6caceee975e159366c29158182464514a",
+      "winowhy:default:train:2332": "c6d79457745c516ad0537a40c12905b0837c5638d386dff1296d851282808942",
+      "winowhy:default:train:2342": "58d0bf6ad86d62ca8d668f4752f53349f119e5799d4c4d925a94e21847418c06",
+      "winowhy:default:train:2356": "bd436d32e3ab05f22271b53840ee2f1fb4426a7376f6b8941363c288fa49a6f0",
+      "winowhy:default:train:2360": "a2da26a9c98164a8f421e80cf1cb9c61b51c46327fe1e37706979f2e4d0398c3",
+      "winowhy:default:train:2369": "eaf5df54efd9a99b3865f6256164a8e3b4ceebd65b3fe2cdabcdb350d19e294f",
+      "winowhy:default:train:2374": "1028a1a3b9295ff31eae4f53fa8572b8271efe2baa34e75ea36c4832100bd4b5",
+      "winowhy:default:train:2460": "b319caf4de4483d1752e6cb1b97d46ab72e5599f1fe535c1df6ff877ccabb046",
+      "winowhy:default:train:2461": "ad1c865076bb23dbd42a493fe40629be197b0c261c4775fd28d9b3976764a9b3",
+      "winowhy:default:train:2471": "fb1c91f5603c7567f48533d95129227e8c0143b7595ebce049bc62b8f00bdafd",
+      "winowhy:default:train:2478": "0be823a128cfa2f64ba733606e15a04551a9aee2c01e6b8c2b3427c434d0069f",
+      "winowhy:default:train:2529": "a303e43c6da7658a732e0e83b748eb59135905e5cca75bd7706cd6c84ba9a45b",
+      "winowhy:default:train:2538": "83e0e4f144b6dfe34975b10751b07f78eae9a9c7dc8614c78cdb0ff56f9e2371",
+      "winowhy:default:train:2572": "7f2645ab32db178e52c8e36a712587eccb9100e74ea068123206e5c7ae603689",
+      "winowhy:default:train:2581": "3892ef91ccd4cc79cd203cb08d24b432a7ed17099e52cccaf773a0c54f7577fc",
+      "winowhy:default:train:2627": "3f2bc5dd462e354cda1307a714a0219a679cd2e321a25f434fd4ac48dde371d6",
+      "winowhy:default:train:2648": "af50ceefa5e75a7c562db60e79b302ab2cd767061abbb349d88db0a1820dab01",
+      "winowhy:default:train:2702": "bbc63c1e81d51d0be1030eafda3118d6eded3a4d84ee29cb69b44ce7e0c7712f",
+      "winowhy:default:train:2794": "3b688bd73331b74b0b968b872673902828643a13af0b8068d11724cc2e16e2b1",
+      "winowhy:default:train:2809": "45257d25680951402d20f8e39f5e71bc4e725507097b08284df856d78a74f47d",
+      "winowhy:default:train:2843": "38dac27add6c0cc93a98ea48c6aea3bfaf32d8ab0dce6600453187e9f2b770c2"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "winowhy:default:train:33",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:34",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:107",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:130",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:166",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:171",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:188",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:191",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:231",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:237",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:243",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:303",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:314",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:322",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:432",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:437",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:463",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:488",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:551",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:600",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:663",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:667",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:668",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:698",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:700",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:739",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:778",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:824",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:841",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:851",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:852",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:940",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:941",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:945",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:949",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:972",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:973",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1013",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1105",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1182",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1214",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1266",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1292",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1297",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1307",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1317",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1333",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1367",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1368",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1383",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1400",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1414",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1429",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1463",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1466",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1483",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1496",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1519",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1534",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1592",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1625",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1639",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1665",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1676",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1722",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1946",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1949",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1975",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1985",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:1997",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2000",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2021",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2095",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.32420000000000004,
+        "true": 0.6758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2114",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2149",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.30469999999999997,
+        "true": 0.6953
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2203",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2221",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2268",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2290",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2319",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2332",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2342",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2356",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2360",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2369",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2374",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2460",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2461",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2471",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2478",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2529",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2538",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2572",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2581",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2627",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2648",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2702",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2794",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2809",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "winowhy:default:train:2843",
+      "question_id": "valid_reason",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

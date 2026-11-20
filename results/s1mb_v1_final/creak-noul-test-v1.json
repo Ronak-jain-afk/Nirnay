@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "creak-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/creak",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:25:54+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.24620900429999998,
+    "accuracy": 0.61,
+    "positive_recall": 0.76,
+    "specificity": 0.46,
+    "precision": 0.5846153846153846,
+    "balanced_accuracy": 0.61,
+    "f1": 0.6608695652173913,
+    "true_positive": 38.0,
+    "false_positive": 27.0,
+    "false_negative": 12.0,
+    "true_negative": 23.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.015163982800000086,
+    "baseline_adjusted_skill": 0.21999999999999997,
+    "baseline_adjusted_score": 0.21999999999999997
+  },
+  "elapsed_seconds": 13.413883699999133,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "creak:upstream_contrast:test:0": "714a8efe1f46c0a9f9c320484d3e1e71c742eec34373a5df786a9f529468340d",
+      "creak:upstream_contrast:test:1": "6002ad44bb20942ddc3b955d5fdad6456a6b434d1b13335770c1cb5abf917c3d",
+      "creak:upstream_contrast:test:11": "879f35070ac14b224d554ad8a7aa341272732f40bc7b1964293f7c1428667c97",
+      "creak:upstream_contrast:test:13": "8f14231c10c76b2d066e65e452f9a0da9cb0cedd7d4f92045223b9dbb8e76a58",
+      "creak:upstream_contrast:test:14": "9db3e60683861d4c334943e5e9a756549fb068b7fdabdbac0f24e7c75523c303",
+      "creak:upstream_contrast:test:17": "3e1fec6188a12af3e111069811ed1d16c032e30f5e9db17f060aca9f73dd647c",
+      "creak:upstream_contrast:test:25": "e150bff6519850b303495dfcc2de0a363f9ae582da3f650610e985749219e3b7",
+      "creak:upstream_contrast:test:31": "e8ad8583361a51570e612a8de8f4a70bcd6e0726791f168ccb7faf44f3ce603d",
+      "creak:upstream_contrast:test:32": "d3256b6f44a51a39fe4dea731de41846ef9fedc05f37f87f61b8a38d371e40d7",
+      "creak:upstream_contrast:test:34": "c9d12c7b8ec47aefb31f77f855bb40f2335b262970b92b50bdb2f21ee5a52752",
+      "creak:upstream_contrast:test:36": "d7d84eea700f9dc58a38b778e5b1a7c039cea5dfa62d354484cc473f9e04dd9b",
+      "creak:upstream_contrast:test:38": "d9f5473170d510ad041790aa62356a2f5bccde3e0337fc92fec8780eef454eb9",
+      "creak:upstream_contrast:test:40": "9eafa7302908934f2aa6bc781e6e9ba41b02ae19e1588c91571f0fd8e4bd19e5",
+      "creak:upstream_contrast:test:45": "67ebd995efbd6b4a9416de8af4e00802bdde16fdad16682a1cb99141f70f6f94",
+      "creak:upstream_contrast:test:49": "eed89bb86ce34ec5508054643dd9bf1ed2a64ac3868d622f9888a840908fdfd5",
+      "creak:upstream_contrast:test:60": "841b45eff80a7ba75d5f47f8fbfc2a5d4226402f4469351cdf391d8ec586200e",
+      "creak:upstream_contrast:test:63": "8549f1784555de5f659ca473590709859667e71789852cb89963a5094d362c14",
+      "creak:upstream_contrast:test:65": "7085ab584560ccc525b7f44ec1eb7c249ddfeefa1f6de827e5d634a0e81c51bd",
+      "creak:upstream_contrast:test:73": "571e8406f08da11df11446a17742a0935c9e161cd6725156522f7c8e58a42e9f",
+      "creak:upstream_contrast:test:77": "dc098ffbb9b3b46cc065e6c45efb52d562e025a96b3954bbde62f8edd0453117",
+      "creak:upstream_contrast:test:78": "35958a8798198fb592f04e4081dd1a217d92094be708da67100300029d6f8132",
+      "creak:upstream_contrast:test:79": "68f7acf1312103b2d94ddac42615928aff47a2e437e6ad1b76f08359346f8bff",
+      "creak:upstream_contrast:test:80": "074643d96ff878af2735e06d45652e04ef55329e24f3f3de00af5934b9b70baa",
+      "creak:upstream_contrast:test:81": "47b830d3f8a4b4f7c24c8e5925605f84ea32adb66f9a585fa314d1b388e30459",
+      "creak:upstream_contrast:test:83": "bb27a2fb8e79996ada24b875730d5aa65717535f3e9eba1889ff7cdc9cbb5184",
+      "creak:upstream_contrast:test:86": "3538196abbd02bfcc9c783b152e7c08a9718c8b46092a84badec20b92a5408f6",
+      "creak:upstream_contrast:test:87": "1b9001be815e678aa9a9b5f8ae4cea61ded180ff185eb05b3caaaa75da5824bf",
+      "creak:upstream_contrast:test:92": "82cda503b215d0f07ac995fdcb790ed2d10cd2b7006fbc33bf8a85c016e9ab9f",
+      "creak:upstream_contrast:test:95": "4923f786e76391bf6e69aeeb59b3f5dabdfc8b58860790ed940e574e36adaa62",
+      "creak:upstream_contrast:test:98": "c5b75fe1fe003928992252ab56d017f0926401a2f8679e12520f63d1b79b6992",
+      "creak:upstream_contrast:test:101": "5fecd7b86f8b2876ff8df40139879adbf1ba534317412dc271fa96edfb6741aa",
+      "creak:upstream_contrast:test:109": "4bc011fb594d0f0542bf3a7d373bcb854f3f3f355443be12e2fbca3a36050787",
+      "creak:upstream_contrast:test:111": "953353eff582a7a66db1885de3245d5e79e45cfbee32d3e1763b873a191f743d",
+      "creak:upstream_contrast:test:124": "f97682433f5d20b26a97b7568654d691a6ad37d162df4aa68abf40750c267362",
+      "creak:upstream_contrast:test:134": "313225315de7e0fb0cab10ffd1ee861ac3a93263a2ad339d3c560ae977b2f33a",
+      "creak:upstream_contrast:test:136": "e559440a67ad3df4f13556dea1c0b7ed974fb534d75e3d9c41ba35bec46cf482",
+      "creak:upstream_contrast:test:142": "c25333a769aa1c0002cf1f5a782673f60064847ad6308d17afff67c43c99f863",
+      "creak:upstream_contrast:test:150": "3ef3cec6b657f3ab3bcc1bb79c3e105c98e0a3f74417158dce19fc42a1d15a37",
+      "creak:upstream_contrast:test:164": "a99178afbeedc04e67b567a1b9de5630ff6f13ff84579499be6381b5d12d5297",
+      "creak:upstream_contrast:test:166": "ba86ac067049d9973f148e52042acc4bc09f98d17982a525fad447ee2abe05c0",
+      "creak:upstream_contrast:test:172": "901ac0b75d72ae5e80f73385f42000afbc179c78e010c6472c6c9b5d1b6cfd7f",
+      "creak:upstream_contrast:test:180": "5c80c7f37a214aedb2511aa2294411e47ef5fca3be2b1e8eeca5c9d603adcbd6",
+      "creak:upstream_contrast:test:189": "7545111d15a4e1ae4ccee9339f6a94a7aff132e6cb27a832746385ac8829fe05",
+      "creak:upstream_contrast:test:195": "d8bd0b3fe0c6a0039279b100d349aa172a3faa25619018c32f7b65959271cc11",
+      "creak:upstream_contrast:test:199": "2515c3057760aa45d3c79a91efaee729c9946fe68c107b72fe8a5d8498a9e7eb",
+      "creak:upstream_contrast:test:203": "70798ac58b204e7a2320bf877141b23875a3a64fe2cfcc2d27a052eee6853a19",
+      "creak:upstream_contrast:test:209": "a2b1e3a0fee4f6f1e182ec9c0d021d03a6b612b059e3e732e6145425adca23eb",
+      "creak:upstream_contrast:test:210": "55984aeee3cd15bbdcd76b42dcddfe5ece2edece46cdb712020614bdbb93eb27",
+      "creak:upstream_contrast:test:219": "6e615c940a1da0f463d521a5fcc6040572de2ed30d6d64bd8dded64998d6d40b",
+      "creak:upstream_contrast:test:224": "710fdf5f9a4f7ccbbc600f32abc72428d67b88dff0ba2d7dd0aeb1dcf12c2de2",
+      "creak:upstream_contrast:test:228": "9d2254512e9f454a955b004191b7484bf2b56e1aa06b1b1091abd8720bef6811",
+      "creak:upstream_contrast:test:233": "ff72f0e641381e831ee697895b7865087cf498ae2724e015685a85bed596f829",
+      "creak:upstream_contrast:test:238": "383f36bf07c979593d72e31022b015c32856187925dc8502f82934d31c3b31de",
+      "creak:upstream_contrast:test:242": "edd68d7e85abfee08def2101d4162073934fdbe80f5c3d661f74ac3159a4621d",
+      "creak:upstream_contrast:test:247": "201bb192a5de1d66221f277d2643bca92df9a0a8f72f8e92b0e67b1590b9ba89",
+      "creak:upstream_contrast:test:251": "9fdc57cf53d080f5cea9f1ec9a96ee73629c5f6819899a14d76c1de0035ca108",
+      "creak:upstream_contrast:test:275": "9d1c30ed275f6574af621666f7b2d64608c6d1ec102207d7dfe4d9666f9cdc25",
+      "creak:upstream_contrast:test:276": "c3ad4f9a64a178b210f6bc18b9f46d52faca5d90e8eecad1d9520d3f6e077a86",
+      "creak:upstream_contrast:test:285": "3e665e40c5df6c48b36ee83836e9e501cc984f93e54009945ad33c101eccb2f2",
+      "creak:upstream_contrast:test:287": "338f1d1437738c5d9fe0f0e0d1ee817371a42c4786ae180fd93f79f9a8f0b4cf",
+      "creak:upstream_contrast:test:292": "fc1537f175cab3ac50d6b00bec896757ba0b7e5009175af7e953ce64507eae33",
+      "creak:upstream_contrast:test:295": "36cc48560af51b4e31d299c2b7bd4503eb758708757b094f62228792100ed9b1",
+      "creak:upstream_contrast:test:299": "7d02574a15aa5ceb367fd1985db5d1648e87d679a6d9b0a8d2281c53ca1fc864",
+      "creak:upstream_contrast:test:300": "21bd7d011ec6db50a6d66112bb3c9bddcbb43d4808630c74a547ed7d1ed78c41",
+      "creak:upstream_contrast:test:309": "0ca98e02e16571f9d5eb96005564646056f5802c3a5117670df537e497f18f20",
+      "creak:upstream_contrast:test:312": "c03345672eaa6ab33b31d02cf7da18867dd71a00bcaa8bd121cf258a785f7f5b",
+      "creak:upstream_contrast:test:313": "39fa72b1bd2a617593167b771a35b7be59b2a1e24e0de04eea14abf3d2eb6b54",
+      "creak:upstream_contrast:test:314": "4c891f66e16fea56564b627c3ea2d7a6d994747c239d9b0f42bbb9f9c3d851be",
+      "creak:upstream_contrast:test:326": "ca0dad335383dc9c47c7fd4abc1c09dd549ad7859f58c7eaf8574ee7955b9339",
+      "creak:upstream_contrast:test:327": "71fc24223bd9e3e83b6b3ca669b6e6399e4630cfd12f3dde4093244b588531e6",
+      "creak:upstream_contrast:test:328": "f597c528728b3f7daaa796a3cfb1750c6ff092d7ecef1551631ba07333ea6c1d",
+      "creak:upstream_contrast:test:332": "43bb77c834d7bdc355a49a2d6b4b50ac86153f62c3cd0b3edc79e80b35e884c9",
+      "creak:upstream_contrast:test:347": "2a7e661796712e0240dd1f51cdc0d695ce8af9e9b502546a0878d82638a852d0",
+      "creak:upstream_contrast:test:356": "c4092a7f569bfa0963b7deb708a621b4640af01b793d6ff608e5886bb87cbaf8",
+      "creak:upstream_contrast:test:357": "9f5f5d2e90350fabdbc239e8ecc46060ced5e52d942a8e8870e2f34bd42d2e6c",
+      "creak:upstream_contrast:test:360": "ce6d2932cd3cf0ec7e2b1a11495a0163ebfe5c7b0d520dafa3a0d3656a9caca0",
+      "creak:upstream_contrast:test:369": "4d8d9317ccdd2138fa4daa3c2a4025b2f53c39d111309884d1f93066a2399288",
+      "creak:upstream_contrast:test:376": "cee2fb7e4eb48022508d1dace8fc188e41893cbb34857585343a53396ab64e5d",
+      "creak:upstream_contrast:test:379": "bb1ea625bfb7c856d7a6657526c5481ac586dc4511c97165ef66da9599d9e2d3",
+      "creak:upstream_contrast:test:383": "e7c80b99527d4a5f36727fb4c29f8d586d1262d91178ef477f639d6cd26093f9",
+      "creak:upstream_contrast:test:384": "d078774dbfb3c6058e33357242a1b42fef60ea1ca57d65eebb04dab8b0b577db",
+      "creak:upstream_contrast:test:389": "ba8517ac5824e16d6f1325c4f996459fa84fa2bf5512827d1068a2f3fb73b663",
+      "creak:upstream_contrast:test:399": "9bdddc35d283b78159900d33059fddfc4f0e26144a085bf8d46b8b8559263bff",
+      "creak:upstream_contrast:test:400": "f2d1eb6d1ba154e031e7f1b5efdcfff4386be8faf81c562d4d5abc8cd6178761",
+      "creak:upstream_contrast:test:402": "9927faaf168c46d207c6e7c9213b477e7b5ea1c4c40eb393692b5d6ed4dbc142",
+      "creak:upstream_contrast:test:407": "3427a87f3ad842f45cc4bd5ee60c514fe078592955490b2e1ab63de1e7867c3a",
+      "creak:upstream_contrast:test:411": "1f4243dff8d60b3176f331d47976f134fde7657352b016080c93026ce68faa71",
+      "creak:upstream_contrast:test:414": "b691fe18d9ff1ac988681a242a6154db68ce779db9eefb14ae4ae503acb79428",
+      "creak:upstream_contrast:test:421": "2fe2e813d88b3293468516aab46ea8206ceed6388293c509cbf2851ce9d701ba",
+      "creak:upstream_contrast:test:433": "c4a8693ce3a110b7335bc53280bff587405e2994926dc5b109ffbfef58b2e1f6",
+      "creak:upstream_contrast:test:462": "23ad43f4a8c64a255aa92aee995470a11a1abb1a0d859201c1ed9e2bb8d80839",
+      "creak:upstream_contrast:test:465": "232850c4cfccf73a413ca6aae6ec1542dc60d78f872f4bf9d25568ed3e776e16",
+      "creak:upstream_contrast:test:467": "4b5ab298ed157e3bd36c585bd841dcb626d62672a17ae4d102aab0458b5c54f2",
+      "creak:upstream_contrast:test:476": "4fd046e43cb8ada2f2b0132546186c9ca62b11fad467f08b7c4ce745fe631de7",
+      "creak:upstream_contrast:test:477": "b858840218fdf2ca35015668c93245a9dbce6d7e8fe56b3992cadca1af855b7e",
+      "creak:upstream_contrast:test:479": "7a32884c333dafbd2418d6e11a73ba1734b28754435f3debd56740aaf5572e82",
+      "creak:upstream_contrast:test:480": "30754361afb3b88a573ca3af686b00f00f0374e3e9a6402315dce22d4e9380ed",
+      "creak:upstream_contrast:test:485": "4b9ce55104732b692df3ab18529479c649af7e9f877a8d2be2800b77185d1e2d",
+      "creak:upstream_contrast:test:495": "153765d7d64fee558a8dfd1659acfacd26a4d1b05853e627edf2875bac9e8291",
+      "creak:upstream_contrast:test:497": "3dffce5162b14723bf6801225963815b725544a9568582bcf7472a028dd27a04"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "creak:upstream_contrast:test:0",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:1",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:11",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:13",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:14",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:17",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:25",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:31",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:32",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:34",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:36",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:38",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:40",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:45",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:49",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:60",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:63",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:65",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:73",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:77",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:78",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:79",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:80",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:81",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:83",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:86",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:87",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:92",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:95",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:98",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:101",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:109",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:111",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:124",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:134",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:136",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:142",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:150",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:164",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:166",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:172",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:180",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:189",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:195",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:199",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:203",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:209",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:210",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:219",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:224",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:228",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:233",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:238",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:242",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:247",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:251",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:275",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:276",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:285",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:287",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.7852,
+        "true": 0.2148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:292",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:295",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:299",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:300",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:309",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:312",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:313",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:314",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:326",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:327",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:328",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:332",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:347",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:356",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:357",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:360",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:369",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:376",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:379",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:383",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:384",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:389",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:399",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:400",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:402",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:407",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:411",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:414",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:421",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:433",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:462",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:465",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:467",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:476",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:477",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:479",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:480",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:485",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:495",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "creak:upstream_contrast:test:497",
+      "question_id": "true",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

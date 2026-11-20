@@ -1,0 +1,1481 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "poem-sentiment-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/poem_sentiment",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:43:08+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.25,
+    "uniform_accuracy_baseline": 0.25,
+    "fixed_answer_accuracy_baseline": 0.65,
+    "baseline_adjusted_skill": -1.142857142857143,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 5.23983969999972,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "poem_sentiment:default:test:0": "0806a0db657f58680d9ccc6c83bed75ea1f8e09a80a3f9874471771c17fc35e7",
+      "poem_sentiment:default:test:1": "020e4e6609e7fb9eee73b427682c75173981c21ee699c91c34dfa2320e272617",
+      "poem_sentiment:default:test:2": "fa670776356859dfb4784e1038c15e7cc67d01967d8f591c2d1c90335237ea2e",
+      "poem_sentiment:default:test:3": "ab5986ec116ba1463ab8a085d528dda6f6e8be5f0d184f4fe4f50e39429981fb",
+      "poem_sentiment:default:test:4": "884aa8e478d78a17dda397e52ee1e75e22f4619cec159688ba3ce5ab0bbe1ded",
+      "poem_sentiment:default:test:5": "44607f4a399e33e70dd8dbe25490f2c3da5d3910b2da33767689301b755aa0c1",
+      "poem_sentiment:default:test:6": "3a107d508400b5112c6a1347e51158432130db4c5c9e2271b47364bff7716f35",
+      "poem_sentiment:default:test:7": "3d2809a8e688255442874339fef1ce977d0ece63ec3162da1fa8885f49589067",
+      "poem_sentiment:default:test:8": "86685cb42623d6d7016d6763cef2786bb9ca60011f48cc4b49848016ecce4e92",
+      "poem_sentiment:default:test:9": "844abaafa4fcd7aa943ccd8de95d9c9dc5a7efc9dbe9acf0448d8c5b54e5b517",
+      "poem_sentiment:default:test:10": "02806630fe72277e1057c324c839fdce5c025eea9cb11de84c67b237d002f1fa",
+      "poem_sentiment:default:test:11": "6898240ce5cd90c80d5a38148e307f3a67871d649229972e7d9ab12b998af9f8",
+      "poem_sentiment:default:test:12": "58e249eb26898484a242efe240a743f9236592681fb2763bf4bdaf823c0de38f",
+      "poem_sentiment:default:test:13": "ee4f56134d50f552b70e0f75a9cfa1c453c8db03ece9682a07e452053fe66419",
+      "poem_sentiment:default:test:14": "885f46830143d4f270b9bbd551c8daa2eae5bf48956378d318b2e6398ef18e90",
+      "poem_sentiment:default:test:15": "207c39bfeea26b6cf8522bf38c8cfabfa46aba9684df372c41da07172c998b94",
+      "poem_sentiment:default:test:16": "71ac772b5de25c84d00be68e4e1e99be43e3d13d144908fbd8f197fe657e2feb",
+      "poem_sentiment:default:test:17": "61ac876f0e02415ea391647a95e5042a7bb17b9f280f9582a4feb3a85c36de08",
+      "poem_sentiment:default:test:18": "3124c67b56e637f46fd54d5826bb8c4bef7f35da5b0ba0a9ad7bce411755bc5b",
+      "poem_sentiment:default:test:19": "c16964c92700c6bda1dd8029b835daf643412817110231b3489d48edba2e5f7f",
+      "poem_sentiment:default:test:20": "8d45a8e0ba23ebc5fd60224b068b307599ffb865e3295be0a13cac9ae211f3a0",
+      "poem_sentiment:default:test:21": "9a7082c1bcaeed25b431b905e80bc39a31dc2e75d31dda0c530601e2258eb466",
+      "poem_sentiment:default:test:22": "6eb480b7dd28255224173442cbce4eae29208973dac1a85fc602eb3da2569a92",
+      "poem_sentiment:default:test:23": "4f0969d76552090f55e415c898c999d84444af54329a24a80859b000b7cbb84e",
+      "poem_sentiment:default:test:24": "01b216c7380baafdba1acd4bf9b2707dadbb72231410327e32ad27773a1c3947",
+      "poem_sentiment:default:test:25": "b1088da9c954f883fd2aafe7b4aa31db38a63b18e9d495310f330eb594e645ef",
+      "poem_sentiment:default:test:26": "e4722d117a48cf701eb06eee287a6915c0e456de1af025a51005f84db53683b7",
+      "poem_sentiment:default:test:27": "b6bbf8681abb94775230de4b24b150c8df3bf8e170d3260b0ac2b57c9d9b7bf1",
+      "poem_sentiment:default:test:28": "679b8b94d0ba4c54783ae60ca600fb7896548f67af4fde04daf2dbedc7101c2f",
+      "poem_sentiment:default:test:29": "52a3401106c29ceab7fec70fe96fa7ddc8166f2bb6edc1ad8f660cff56f4ec98",
+      "poem_sentiment:default:test:30": "b67e7d6b2eadb69c55b1731bedb91d89bd0614e85e8a259b3cfaa7ed0c5c551e",
+      "poem_sentiment:default:test:31": "521498708b9f05215d7e0a6441b43189e3bbed85e8346ed7173ef11b378f1519",
+      "poem_sentiment:default:test:32": "35b2793990363e64aac6098abda258fc884d21b279df6ac8a02474dffc366590",
+      "poem_sentiment:default:test:33": "e72e9fd484bef1a0b1870157cf8271a331c947440cd03b96059bb34a0ad743bb",
+      "poem_sentiment:default:test:34": "8319a54893cb8df88d3acbf16c6a16762408f0cdb8ff81e236816435fab7d074",
+      "poem_sentiment:default:test:35": "4bc631b46354515d85adadff27a653e44c1321b350400980561e2b9f3c53b8f2",
+      "poem_sentiment:default:test:36": "b210a8e70df9f9b2ce60d2167adfb96dbcde6a47e0548570126ea6c66d548274",
+      "poem_sentiment:default:test:37": "6e342aa4c8beeedb343f1615c81f84428ffc3b6b58af0c3e7dcfe2dc66178647",
+      "poem_sentiment:default:test:38": "feb981335ea27cc1bba85724309641cb2702291cec8387e3c1c178034e4feecf",
+      "poem_sentiment:default:test:39": "a69226ccc9c770f02120ccf03aa86276d7d965711da3539c0f52501cc85f19ad",
+      "poem_sentiment:default:test:40": "0ee208605c2fb0e79b5c02cc50d9f366b70cb8b242d5e688cee1fda87581e9bc",
+      "poem_sentiment:default:test:41": "0973f021134e71629365fefbe1c654c58329003d0abfe9838079b4c0256c4148",
+      "poem_sentiment:default:test:42": "1fb44abc86cf9fac111027906ab9bee520f9a351da0ec66f7b992faccea0b172",
+      "poem_sentiment:default:test:43": "bbfc17a2b9ecc040ef6542b1ae92ed3e620e3cddcedf320c5456373f1d351bee",
+      "poem_sentiment:default:test:44": "5b1286387fc7d95143c8e733cf04f20cde4c192198b84ef5a115ef1379609be7",
+      "poem_sentiment:default:test:45": "bf0564e9f70eaf1f3a3c7b4a28953325db7253bf09cc6ca0ca6d5b859b1e4d35",
+      "poem_sentiment:default:test:46": "01e21d1f14313e88f9db8d705870624d012643d4ce758709d382d6b18dd71cfe",
+      "poem_sentiment:default:test:47": "79332627ae168efe48b6708b90b3d0e28d69fc76f92aa0f0e6cbf036ee359d9d",
+      "poem_sentiment:default:test:48": "95dfbe57ae8029d5d4ab7cc68bf649efede42b140c31b0c5aaa3cf3abc474fc1",
+      "poem_sentiment:default:test:49": "10fccd63175b3c972f0af164ed7ba08a8a686deaebc90a4e6b3568e70e169155",
+      "poem_sentiment:default:test:50": "744e6dd2d625cea44b92bba7b6bc50834d912f7eec4f74abd61a731a1b0bfff7",
+      "poem_sentiment:default:test:51": "c6a0db32c245ac1cbe20749c9501ea684f24759edd3e06d530a19a09b831abca",
+      "poem_sentiment:default:test:52": "55ab5dd26d7f07643248a65cfa770c28d6b00c4371a8512ffda34c6fa09f715d",
+      "poem_sentiment:default:test:53": "7615588bd7a6ca89aac5f798d88239da1a89cba39a86e987078dce4c2f288b96",
+      "poem_sentiment:default:test:54": "7557508dbb79d0683d80145d3c06de395a47c02a5fc4b0609904626ef0ce698b",
+      "poem_sentiment:default:test:55": "686e6f35f80caa5fcd1523c3b24309f06570c5eea31b7508cfcaaad7931df50e",
+      "poem_sentiment:default:test:57": "748314ce8a155df221ba4f34037a6628fb50e57405192d6c58eb3f38189de8ac",
+      "poem_sentiment:default:test:58": "8b399bbb9d48533c7d8f97818ab1ab297a84a07f187fe323753bdca848549f36",
+      "poem_sentiment:default:test:59": "9322bd79761104e925b681a5ca382f2675bed365dd339e6b8d03eb934ea1ce57",
+      "poem_sentiment:default:test:61": "7c6939c4c3ac52d6f29cc9b71ec469aad3ebe1098912f7ee59bf740e6b258ed2",
+      "poem_sentiment:default:test:62": "49942b11f7cfe93d756e09f6fb62b93ef0d27d85d3807d6ced2b441e6adb18a0",
+      "poem_sentiment:default:test:63": "538c5352ada53030fa66102026faa9dbf530e8d2b538140306f5331e385071d2",
+      "poem_sentiment:default:test:64": "6685a2855ad36cfc4e195e921f3fad2d1d18cce451af16b9a86163221f306f9d",
+      "poem_sentiment:default:test:65": "9d0dc368c56c2adc2c72a92aa891e0a4911b79be4149d8c2d79ffb415ea7e097",
+      "poem_sentiment:default:test:66": "c17ecc02b126f4caaec1f5616b388a37e3cd82b30e052ded702450848d742ce2",
+      "poem_sentiment:default:test:67": "7c46518d2e59081a3349d2498f5c1cca0da144e96963d4329eaf28f6d24d8719",
+      "poem_sentiment:default:test:68": "9a899dc5159cc099c20c68318815c5fad86c2a5d41f91bd4aa7135e610ff5c46",
+      "poem_sentiment:default:test:69": "8d586114c3cdc12dd5a248f0db28c4bb86fab7efb215d77071fd10baf8c7358d",
+      "poem_sentiment:default:test:70": "4fbeacc5f723543769df21bfd64f3e632360df2de96b250d600faf480264b41a",
+      "poem_sentiment:default:test:71": "9703ae17fa1927c3fd577885f94ba75cedfbb80f75227a5322beaee39057f4fb",
+      "poem_sentiment:default:test:72": "b5137022c1a457e64522631208aa2650c4ce2fa353c1c1cf43eee691e8f1fd4b",
+      "poem_sentiment:default:test:73": "407eee3e273658fec0a4c8b15ba55d7cd100f04da414c7d8626840fe624f56fd",
+      "poem_sentiment:default:test:74": "e4f069e0d9c0e0b15feec47ad2c7a5359803b730493f61ea9a3bd45d0baa6fdc",
+      "poem_sentiment:default:test:75": "77cb150537d610488ca201c99a63027e9aab5187d9fdef8aac94c45120cfb67a",
+      "poem_sentiment:default:test:76": "91b1014487e067e76df8710fea274033528a8a0324676f2b6142c7f253062c38",
+      "poem_sentiment:default:test:77": "b7a66d4ba7916392fa9d50c838245bedf75fa0cf76dc69bc6b4364b233556d61",
+      "poem_sentiment:default:test:78": "f8ac644abdb361debb69c848d74b1421e23fb920f12ec69fa05d40b159a03a19",
+      "poem_sentiment:default:test:79": "999f792603e06a9c00338dd3475c82d4ab9491c9392b3d7ddf5f8836a086fc2f",
+      "poem_sentiment:default:test:80": "0cabb68a1a8bb2755c5a814b81c1c526792c9ac02bb6e42dd6e030f117b601d0",
+      "poem_sentiment:default:test:81": "2c6957c1f77971e63aa2d54ae61578b3d4d23ff0a26fc1ae445f3ee8d2a6c10d",
+      "poem_sentiment:default:test:82": "f7772c225b6a4496f4d7352ed4f7f47b855f869c2a788a3ef9d9ace1cd86f155",
+      "poem_sentiment:default:test:83": "65d7da6a178f71d0673a2653f452ab2d82ca3c38a04d2cd6c54e9083a0ef3d6b",
+      "poem_sentiment:default:test:84": "5afb9ee3f899eece261ee37a7b7b455a0fa2c3a060b8c61d0af20668fb31b90f",
+      "poem_sentiment:default:test:85": "7eb491e5143f81528172e4d35b6f70a6ee00f71fba2bdc753164f083780fc56d",
+      "poem_sentiment:default:test:87": "1214063ac7db3acd40c2e848a7a327f43cd5d670f06af8656d5e60ac29cba759",
+      "poem_sentiment:default:test:88": "e11e8d8d8ce0f5664deb547906e6d2f290c477257cd84052f38e0b3a3f53938b",
+      "poem_sentiment:default:test:89": "b7526a6720efa78c1c0d915cd868fa00640dd06fa1dc587907880f6d18af295d",
+      "poem_sentiment:default:test:90": "c7b3867e356d95ab9f88fbf4879e3ad5356a26c7733914769ee32d8b7134b5e5",
+      "poem_sentiment:default:test:91": "37871d1f8071ac7863533d62bd78ae1bce0878b59cd3192eba4a691ab380dd55",
+      "poem_sentiment:default:test:92": "713e596988739d779b5ad861fe74a4f0f9d9d5d5566c032cd29664b7c5048e0e",
+      "poem_sentiment:default:test:93": "4f4b75883089f201ee4b52da32363949f5e7d31b9be929d2824d78d4ff199f87",
+      "poem_sentiment:default:test:94": "5e55d75ce07789e2928196272abe8249cc8083f7c093642ef934f256d7423569",
+      "poem_sentiment:default:test:95": "4dd2e7f1bc9aaec1e0d1c72980476a468fe39bb72fe8301c8b36b2431e27fbad",
+      "poem_sentiment:default:test:97": "52641f2003ed06be2bb39d2c528c46ffa09c75fb67992f61358752f8a95e3885",
+      "poem_sentiment:default:test:98": "57f01cdafabaa0243718d403a260e815787fca16cabf1d04502f278aa9ca0cdc",
+      "poem_sentiment:default:test:99": "02cd35d9dd0ab11cfe73faaebbc3f0dedca9761402c0cfb6bd6ea345c5a4e557",
+      "poem_sentiment:default:test:100": "b2ac22e0db4adac9e01d1c7a88f9cbe7ca7fa85cfe8f2f0b2dfabc303bed4675",
+      "poem_sentiment:default:test:101": "62e0b139fdd6cf8ea1455387bfd2889e3af8872d0547b6697fb5955c26cb5ee4",
+      "poem_sentiment:default:test:102": "d6d14efeaa6ab4481ca2bc42aa3c6b1427cb3302b2ed838f4574fef370ba67ec",
+      "poem_sentiment:default:test:103": "129e5ee7b948d24c23293051f52d81374418da17554e735b7b9fcaca35eb9f21"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "poem_sentiment:default:test:0",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2019182735538016,
+        "negative": 0.29463482865421126,
+        "mixed": 0.4546907782995305,
+        "positive": 0.0487561194924568
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:1",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.535896665665365,
+        "mixed": 0.36767798137578855,
+        "negative": 0.07239411234604987,
+        "no_impact": 0.024031240612796635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:2",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.2970188075230092,
+        "no_impact": 0.23939575830332133,
+        "mixed": 0.414265706282513,
+        "positive": 0.049319727891156455
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:3",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.4485719992011184,
+        "negative": 0.3842620331535849,
+        "positive": 0.14339924106251248,
+        "no_impact": 0.0237667265827841
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:4",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.13790686029043564,
+        "negative": 0.37946920380570853,
+        "mixed": 0.45768652979469204,
+        "positive": 0.024937406109163743
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:5",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3829148744623387,
+        "positive": 0.08982694808442533,
+        "negative": 0.5079523857157148,
+        "no_impact": 0.01930579173752126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:6",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2575681886302328,
+        "positive": 0.1024078329503447,
+        "mixed": 0.4956539114796683,
+        "negative": 0.14437006693975424
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:7",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0781,
+        "negative": 0.5352,
+        "no_impact": 0.1963,
+        "mixed": 0.1904
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:8",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.38827289981020874,
+        "positive": 0.13365298172010787,
+        "mixed": 0.43901708121066824,
+        "no_impact": 0.03905703725901508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:9",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3904438224710116,
+        "negative": 0.3787485005997601,
+        "no_impact": 0.2030187924830068,
+        "positive": 0.02778888444622151
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:10",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.3874749498997996,
+        "no_impact": 0.20450901803607216,
+        "mixed": 0.375751503006012,
+        "negative": 0.032264529058116234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:11",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0719222678553541,
+        "no_impact": 0.35219873785435246,
+        "mixed": 0.5281979364920365,
+        "negative": 0.04768105779825704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:12",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.3691,
+        "positive": 0.1143,
+        "negative": 0.3457,
+        "mixed": 0.1709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:13",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.21279360319840082,
+        "negative": 0.23038480759620192,
+        "mixed": 0.4958520739630185,
+        "positive": 0.06096951524237881
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:14",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.4238,
+        "no_impact": 0.2656,
+        "positive": 0.1338,
+        "mixed": 0.1768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:15",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.007094324540367707,
+        "mixed": 0.4078737010391687,
+        "negative": 0.5776378896882494,
+        "no_impact": 0.00739408473221423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:16",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.20499750124937532,
+        "positive": 0.3494252873563219,
+        "mixed": 0.41969015492253875,
+        "no_impact": 0.02588705647176412
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:17",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.16295334199220698,
+        "negative": 0.37266460185832745,
+        "no_impact": 0.24487960835248274,
+        "mixed": 0.2195024477969827
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:18",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0990702789163251,
+        "mixed": 0.5701289613116066,
+        "no_impact": 0.30460861741477563,
+        "negative": 0.026192142357292815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:19",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.45323597079123734,
+        "no_impact": 0.18555566670001,
+        "negative": 0.32039611883565067,
+        "positive": 0.04081224367310193
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:20",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.34604604604604605,
+        "mixed": 0.4574574574574575,
+        "no_impact": 0.18478478478478477,
+        "positive": 0.011711711711711712
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:21",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.15245245245245245,
+        "mixed": 0.5317317317317317,
+        "negative": 0.25225225225225223,
+        "positive": 0.06356356356356356
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:22",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.2579289644822411,
+        "no_impact": 0.16708354177088547,
+        "negative": 0.09234617308654328,
+        "positive": 0.48264132066033016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:23",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.4470764617691154,
+        "positive": 0.07756121939030486,
+        "negative": 0.4470764617691154,
+        "no_impact": 0.02828585707146427
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:24",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.02555145224074259,
+        "mixed": 0.5575406727218285,
+        "negative": 0.40742589080746583,
+        "no_impact": 0.00948198422996307
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:25",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.2169518663064145,
+        "no_impact": 0.15340738516961874,
+        "negative": 0.6254378064645252,
+        "positive": 0.004202942059441609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:26",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.34366253498600563,
+        "mixed": 0.47051179528188725,
+        "no_impact": 0.16493402638944424,
+        "positive": 0.020891643342662934
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:27",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.03742619833883719,
+        "no_impact": 0.4006804763334334,
+        "mixed": 0.4827379165415791,
+        "negative": 0.07915540878615031
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:28",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.29094181163767247,
+        "no_impact": 0.2558488302339532,
+        "negative": 0.4354129174165167,
+        "positive": 0.01779644071185763
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:29",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.2188875550220088,
+        "no_impact": 0.14365746298519408,
+        "negative": 0.6330532212885154,
+        "positive": 0.004401760704281713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:30",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.1385475976425931,
+        "positive": 0.4994506043352312,
+        "negative": 0.17271001897912294,
+        "mixed": 0.18929177904305264
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:31",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.21950244779698275,
+        "negative": 0.2068138675192327,
+        "positive": 0.3355979618343491,
+        "mixed": 0.23808572284943555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:32",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.12488760115895692,
+        "negative": 0.41562593665700864,
+        "positive": 0.26925766809871116,
+        "mixed": 0.1902287940853232
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:33",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.4535989588547402,
+        "no_impact": 0.22775052557813596,
+        "positive": 0.13584943437781558,
+        "mixed": 0.18280108118930824
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:34",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.06786606696651674,
+        "no_impact": 0.17081459270364818,
+        "mixed": 0.35722138930534736,
+        "positive": 0.40409795102448776
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:35",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.6798359671934386,
+        "no_impact": 0.17683536707341468,
+        "positive": 0.05151030206041208,
+        "mixed": 0.09181836367273455
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:36",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.4626686656671664,
+        "positive": 0.13863068465767117,
+        "negative": 0.327936031984008,
+        "no_impact": 0.07076461769115443
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:37",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.1349754681085411,
+        "positive": 0.14378692299989987,
+        "negative": 0.6023830980274357,
+        "mixed": 0.11885451086412335
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:38",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.005705134621159043,
+        "negative": 0.539585627064358,
+        "mixed": 0.44770293263937544,
+        "no_impact": 0.007006305675107597
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:39",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3633363336333633,
+        "positive": 0.49804980498049806,
+        "negative": 0.1025102510251025,
+        "no_impact": 0.036103610361036105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:40",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.31674842326559216,
+        "mixed": 0.31674842326559216,
+        "negative": 0.3362698968865752,
+        "positive": 0.030233256582240464
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:41",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.1621162116211621,
+        "positive": 0.30273027302730277,
+        "negative": 0.30273027302730277,
+        "mixed": 0.23242324232423242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:42",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.23951556400760685,
+        "mixed": 0.5473926533880492,
+        "positive": 0.12070863777399658,
+        "negative": 0.09238314483034729
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:43",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.18341658341658346,
+        "negative": 0.18931068931068934,
+        "positive": 0.522877122877123,
+        "mixed": 0.1043956043956044
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:44",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.4238,
+        "no_impact": 0.2969,
+        "positive": 0.082,
+        "negative": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:45",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.013514866352988287,
+        "mixed": 0.47712483732105315,
+        "negative": 0.49274201621783964,
+        "no_impact": 0.01661828010811893
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:46",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.09947068810546289,
+        "mixed": 0.4525117347448317,
+        "negative": 0.42524717866773193,
+        "positive": 0.022770398481973434
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:47",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.09370629370629369,
+        "negative": 0.6946053946053946,
+        "positive": 0.11168831168831167,
+        "mixed": 0.09999999999999998
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:48",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.29094181163767247,
+        "negative": 0.6756648670265947,
+        "positive": 0.01869626074785043,
+        "no_impact": 0.014697060587882423
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:49",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.029173743630732343,
+        "no_impact": 0.18932960335697874,
+        "mixed": 0.585373164152263,
+        "negative": 0.196123488860026
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:50",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.14954954954954955,
+        "no_impact": 0.1974974974974975,
+        "mixed": 0.38708708708708706,
+        "positive": 0.26586586586586586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:51",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.30632430812268957,
+        "no_impact": 0.2311919272654611,
+        "positive": 0.26146468178639226,
+        "mixed": 0.2010190828254571
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:52",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.0527052705270527,
+        "positive": 0.048804880488048805,
+        "mixed": 0.42774277427742774,
+        "negative": 0.47074707470747074
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:53",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.4257148570285943,
+        "negative": 0.3983203359328134,
+        "positive": 0.129874025194961,
+        "no_impact": 0.04609078184363128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:54",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.11124437781109446,
+        "positive": 0.04297851074462768,
+        "negative": 0.7965017491254374,
+        "mixed": 0.04927536231884058
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:55",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.43155684431556846,
+        "no_impact": 0.22747725227477253,
+        "negative": 0.30656934306569344,
+        "positive": 0.034396560343965606
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:57",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.2773,
+        "no_impact": 0.2158,
+        "mixed": 0.4727,
+        "positive": 0.0342
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:58",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.5592711253504205,
+        "negative": 0.2679215058069684,
+        "positive": 0.11393672406888265,
+        "no_impact": 0.05887064477372847
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:59",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0672990514228657,
+        "no_impact": 0.29645531702446326,
+        "mixed": 0.5382925611582626,
+        "negative": 0.09795307039440838
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:61",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.14358564143585642,
+        "mixed": 0.36716328367163287,
+        "positive": 0.4433556644335567,
+        "negative": 0.04589541045895411
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:62",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.1885,
+        "mixed": 0.4883,
+        "negative": 0.2871,
+        "no_impact": 0.0361
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:63",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3867386738673867,
+        "negative": 0.46684668466846685,
+        "no_impact": 0.1377137713771377,
+        "positive": 0.0087008700870087
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:64",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.040512153646093826,
+        "no_impact": 0.31259377813344,
+        "negative": 0.586075822746824,
+        "mixed": 0.06081824547364209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:65",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.38241758241758245,
+        "negative": 0.17272727272727276,
+        "positive": 0.37072927072927075,
+        "no_impact": 0.07412587412587414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:66",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.04271281384415325,
+        "no_impact": 0.3810143042912874,
+        "mixed": 0.5196558967690307,
+        "negative": 0.056616985095528656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:67",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.2963961265848058,
+        "mixed": 0.4114006189477888,
+        "no_impact": 0.2340021962663472,
+        "positive": 0.0582010582010582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:68",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.018072890664003995,
+        "no_impact": 0.2164752870693959,
+        "negative": 0.709835247129306,
+        "mixed": 0.05561657513729405
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:69",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.5616575137294059,
+        "no_impact": 0.1579630554168747,
+        "mixed": 0.272990514228657,
+        "positive": 0.007388916625062406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:70",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.1396139613961396,
+        "negative": 0.10841084108410841,
+        "mixed": 0.2734273427342734,
+        "positive": 0.4785478547854785
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:71",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0583,
+        "negative": 0.4102,
+        "mixed": 0.5117,
+        "no_impact": 0.0198
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:72",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.628020770920711,
+        "positive": 0.07849011384062313,
+        "negative": 0.21649690433393248,
+        "no_impact": 0.07699221090473336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:73",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.1816,
+        "negative": 0.1465,
+        "mixed": 0.3672,
+        "positive": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:74",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.17611701061911442,
+        "positive": 0.28571428571428575,
+        "no_impact": 0.28571428571428575,
+        "mixed": 0.25245441795231416
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:75",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3121566277095195,
+        "negative": 0.48386774547997197,
+        "no_impact": 0.18929177904305264,
+        "positive": 0.014683847767455797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:76",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2139,
+        "mixed": 0.4824,
+        "positive": 0.1777,
+        "negative": 0.126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:77",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2951951951951952,
+        "positive": 0.2990990990990991,
+        "mixed": 0.33433433433433435,
+        "negative": 0.07137137137137137
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:78",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.2676267626762676,
+        "no_impact": 0.2148214821482148,
+        "mixed": 0.40234023402340235,
+        "positive": 0.1152115211521152
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:79",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.08154892935761457,
+        "no_impact": 0.28337002201320793,
+        "negative": 0.4982989793876326,
+        "mixed": 0.13678206924154493
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:80",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.08807615230460922,
+        "positive": 0.07044088176352706,
+        "mixed": 0.5714428857715431,
+        "negative": 0.27004008016032066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:81",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.44317841079460274,
+        "no_impact": 0.24397801099450278,
+        "positive": 0.11374312843578212,
+        "negative": 0.19910044977511243
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:82",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2052847562806526,
+        "positive": 0.32259033129816833,
+        "negative": 0.2990691622460214,
+        "mixed": 0.17305575017515765
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:83",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.2076884672990514,
+        "mixed": 0.4680978532201697,
+        "positive": 0.2076884672990514,
+        "negative": 0.1165252121817274
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:84",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.008688704683910916,
+        "negative": 0.678817537201638,
+        "no_impact": 0.29062219115150306,
+        "mixed": 0.02187156696294817
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:85",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.11459686282345889,
+        "positive": 0.08632230992107105,
+        "negative": 0.7376361274852633,
+        "mixed": 0.06144469977020682
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:87",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.277244551089782,
+        "no_impact": 0.2294541091781644,
+        "mixed": 0.4843031393721256,
+        "positive": 0.008998200359928014
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:88",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.2732906837265094,
+        "no_impact": 0.18152738904438226,
+        "positive": 0.03368652538984406,
+        "negative": 0.5114954018392643
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:89",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.16516516516516516,
+        "no_impact": 0.215015015015015,
+        "positive": 0.3441441441441441,
+        "mixed": 0.27567567567567564
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:90",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.37715086034413764,
+        "positive": 0.09673869547819126,
+        "negative": 0.45528211284513803,
+        "no_impact": 0.07082833133253301
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:91",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.39040479760119945,
+        "no_impact": 0.23038480759620192,
+        "positive": 0.2615692153923039,
+        "negative": 0.11764117941029485
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:92",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.006310096153846154,
+        "negative": 0.5360576923076923,
+        "mixed": 0.4460136217948718,
+        "no_impact": 0.011618589743589744
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:93",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.3263631815907954,
+        "negative": 0.44552276138069036,
+        "positive": 0.19149574787393697,
+        "no_impact": 0.03661830915457729
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:94",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.09524762381190596,
+        "negative": 0.3595797898949475,
+        "positive": 0.46113056528264135,
+        "mixed": 0.08404202101050526
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:95",
+      "question_id": "sentiment",
+      "probabilities": {
+        "no_impact": 0.09957012896131161,
+        "negative": 0.48425472358292515,
+        "mixed": 0.4002799160251924,
+        "positive": 0.01589523143057083
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:97",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.3451133073774583,
+        "positive": 0.17060996306279325,
+        "mixed": 0.44264749925127284,
+        "no_impact": 0.04162923030847559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:98",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.35300579189135206,
+        "negative": 0.48172558418214495,
+        "positive": 0.09796285200718993,
+        "no_impact": 0.06730577191931296
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:99",
+      "question_id": "sentiment",
+      "probabilities": {
+        "mixed": 0.42185781421857815,
+        "no_impact": 0.21877812218778123,
+        "negative": 0.20607939206079393,
+        "positive": 0.15328467153284672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:100",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.2830584707646177,
+        "mixed": 0.4958520739630185,
+        "positive": 0.14642678660669664,
+        "no_impact": 0.07466266866566718
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:101",
+      "question_id": "sentiment",
+      "probabilities": {
+        "negative": 0.31006590772917914,
+        "mixed": 0.43688835630117834,
+        "no_impact": 0.22328739764329936,
+        "positive": 0.029758338326343118
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:102",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.31820907455526687,
+        "no_impact": 0.21177293623825708,
+        "mixed": 0.448930641615031,
+        "negative": 0.021087347591445135
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "poem_sentiment:default:test:103",
+      "question_id": "sentiment",
+      "probabilities": {
+        "positive": 0.0374599358974359,
+        "no_impact": 0.34435096153846156,
+        "mixed": 0.4558293269230769,
+        "negative": 0.16235977564102563
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

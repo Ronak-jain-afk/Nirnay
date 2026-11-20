@@ -1,0 +1,1113 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--mailroom-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__mailroom-control-v1",
+    "split": "test",
+    "case_count": 85,
+    "decision_count": 85,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:08+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 85,
+    "expected": 85,
+    "succeeded": 85,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.21497977447058816,
+    "accuracy": 0.6235294117647059,
+    "positive_recall": 0.28888888888888886,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 0.6444444444444444,
+    "f1": 0.4482758620689655,
+    "true_positive": 13.0,
+    "false_positive": 0.0,
+    "false_negative": 32.0,
+    "true_negative": 40.0,
+    "positive_prevalence": 0.5294117647058824,
+    "majority_accuracy_baseline": 0.5294117647058824,
+    "constant_brier_baseline": 0.24913494809688563,
+    "brier_skill": 0.13709507191666637,
+    "baseline_adjusted_skill": 0.28888888888888875,
+    "baseline_adjusted_score": 0.28888888888888875
+  },
+  "elapsed_seconds": 4.39207290000013,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:en:relay_invoice:base:states_amount_owed": "110e82275230e26f12598e0c6bdc53bedbc3278ef73c5227bec755ab4327c821",
+      "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:zh:invoice:base:about_telecom": "41bc674ed36520b4d94a5f2b432698a06e7da5f54a07f9cd3539e26f83516a83",
+      "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:tr:relay_invoice:base:states_amount_owed": "48edb7192ae49fc012df866d409d0a3ed6da7fc3937c1720ab08c070ca854292",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:en:shipping:base:from_billing_entity": "89d120f0f938d7e833d9d4c6f9511cdb85015506b2cd2fb63c651f977d2ca437",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:receipt:base:about_telecom": "a9fe579f33870b2949d28c862bf2679ac528b4cc1781c9ff906e85181c440b4f",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:promotion:base:is_promotional": "551baabd6b28303ba04eef0c9d7f5f5f4eb5ed4005f131476819dccd7b08614b",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:provider_counterfactual:base:has_billing_identifiers": "8b3594480184e3e37163eb2a611942d93f93166aca7eb6a42d13ac6ece086d73",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:invoice:base:from_billing_entity": "1a19900fac518db70ae3d05025dfebeee741649db442a73c207bf432700b5d0f",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:invoice:base:about_airline": "fad708cd69d5b45bd68f3b9d8ae6719d0d368e0ae1f0850ccd70b63670589979",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:receipt:base:about_banking": "c7000fabde7db0fa50add8a9a8b4a7b5a0a7af5b8275adbab6c2417a82e8bea8",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:promotion:base:about_education": "b4059e6ca0ad6fcb0b7bdcb62910b328d895108eaa8aa5ac008a62660fdd889e",
+      "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:newsletter:base:from_billing_entity": "4b68dd14404923709bc0c3e19330cb520d4128c8e5511b0f2ad4eaa8d4573c87",
+      "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:en:promotion:base:from_billing_entity": "fd1e5a23c5454ab83ca20efbc1a9cee52984689fcf2ce8bd323aebe0c0433529",
+      "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:en:promotion:base:about_airline": "7e93ff8191b99c1a20b2266d825264b1eff08d1857f714774b4d438ef216cb76",
+      "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:tr:relay_invoice:base:about_telecom": "33c71b58425ed41fe1f629e4363edc287cc31b91ec3ed5a1c97620d28b3c126a",
+      "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:zh:invoice:base:about_telecom": "b836fe2c9571651445026c4f4066ffe786c64e8b684edbd5b819bfd4fdc73d00",
+      "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:zh:invoice_link:base:about_telecom": "d5c0accc493c88540a4114d06d5a6f63ee77e5cb8f6c5e941e65f9dcaf86fb8e",
+      "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:tr:newsletter:base:has_billing_identifiers": "310c340f48ad0a0624504b1993434e56579aae8a894c1d96bd08441b168f22ff",
+      "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:receipt:base:about_airline": "fa854dc65a188d674bee8d3805c0ffce9b3f491b33f4ae751fa34ecc63fed3c0",
+      "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:shipping:base:has_billing_identifiers": "c3a9c2d73f687a3773a719bb0c9054a45cced3f0614c5e5481896ec7dcfec428",
+      "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:tr:receipt:base:states_amount_owed": "630c0d2e7ed17d6d0a8502ce238933c4f6f78b2f0d9ac8508e7930c6e235bf9a",
+      "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:en:relay_invoice:base:about_education": "17ea89e25478abb63f6cd05ae64be5befff0c920458f00c3ea354e02084dedc7",
+      "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:en:promotion:base:is_promotional": "3d590575284a8e4f0aee5f4fcf2f04a7ac11046b5ae556c7d31f903dc3b53bfc",
+      "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:zh:relay_invoice:base:about_education": "f83ab0f3d37ebdc9b2a2c1ffa499d45d4506a776cc65b357cdac6ebc2f7fd5ab",
+      "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:tr:shipping:base:about_electricity": "8cea3e3fd48911713a38ec4520f1a5c1fb9d1399e5ae374066526986927e0bb6",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:receipt:base:from_billing_entity": "f4ac2c84bc8809e87ead512807da2218d00bc53437a2b7aedc16c1c4bb54ceb1",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:receipt:base:about_telecom": "ef762a27a0bf8a64aaac018c30f34518578983a925f0ff71c80bc088cef5b07f",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:zh:invoice_link:base:about_telecom": "d0182eb8d1462c777f8cee98dcec15ec9bc9a971bfcd6fbbdcb75a3d4845294d",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:zh:relay_invoice:base:has_billing_identifiers": "9898437b14856de0d4e89dbda819b28816c2e6a7c65eb4308ab2fb0ce7714b95",
+      "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:tr:relay_invoice:base:has_billing_identifiers": "aa1f4c8cdfd86451f1ea37e7dd5584d38d7116727cbc7b834f9d0129cd18939c",
+      "open_jev__mailroom-control-v1:mailroom:d9c47152ba46:en:relay_invoice:base:states_amount_owed": "660335480d8cc352a785845f410f6274db71d1e788a364d123e32277538efc0c",
+      "open_jev__mailroom-control-v1:mailroom:d9c47152ba46:zh:invoice:base:about_banking": "2e29bf5123995a4a3ddf9d8b7aaa99ef60d4392203ca8500483d7f1f0433ac39",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:promotion:base:about_airline": "0ee5461e29432a39653208282a75140c28d48efadfd00fec3545464e1927bc92",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:newsletter:base:about_electricity": "d23cf1ab35cc685e1348699171c4e60052e9424b8ef543ca1b9db436c308f58e",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:newsletter:base:about_telecom": "f02db8f0565dde83c9269b8feea5347680ef943144901af7e4496967c1f90aee",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:provider_counterfactual:base:from_billing_entity": "0397db8df6a833806627e5d572c90480e61fd4a13daeec2d1296440846518466",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:provider_counterfactual:base:is_promotional": "4468b14e4d253524ff8f097df8483350ea75dbc3d8f79fc8d04d4bce03925d48",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:zh:receipt:base:about_banking": "c41d2df9bd38c8550aec0d87e282fc4c9f6cf25dcdb8f4a2e6642529fab87474",
+      "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:zh:promotion:base:is_promotional": "449ead4d5b10cb9a23c8d7555c69e1f0cd1928a160bf4f44fea5180285dd8cb0",
+      "open_jev__mailroom-control-v1:mailroom:61223e2f8495:tr:invoice_link:base:about_airline": "8c6bdaac33b0fbe18d414dd7dda0ef0ec6b55eac02b156d6d5bb609388b5db86",
+      "open_jev__mailroom-control-v1:mailroom:f1b4c347295d:en:newsletter:base:has_billing_identifiers": "b80f8e4d987439df120ab5278f05020176d29e1eb0163992e9e667a0d813a5a4",
+      "open_jev__mailroom-control-v1:mailroom:f1b4c347295d:tr:newsletter:base:states_amount_owed": "56685e15e491d3a9a393edad1963e95c2086c47f345a1aae951d60ac79dc0a66",
+      "open_jev__mailroom-control-v1:mailroom:678e97278a5b:zh:invoice_link:base:about_airline": "cb82b3f7cf69174729550a4e54d30f807866d040bbb331bb64e45089a7c6c32d",
+      "open_jev__mailroom-control-v1:mailroom:678e97278a5b:zh:promotion:base:about_airline": "cdb692805406654b14c78e0e5baf24b7cd1dc6aca7e44de7135357dc5d5d1990",
+      "open_jev__mailroom-control-v1:mailroom:678e97278a5b:tr:invoice_link:base:from_billing_entity": "955aac160dd39e381fc5177a545f1fba1eda11e135c2679d22b8718d66841e14",
+      "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:zh:receipt:base:states_amount_owed": "0023534b75e89b36a86f190eea3a7e1bdbaf224f0efebd77c65ddcf97362cf62",
+      "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:tr:receipt:base:about_education": "c5761e6f5f8a92e31f0a297ffb7e64ab76a1bf7b2047b7c3e2f89846ea666f61",
+      "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:tr:promotion:base:is_promotional": "1d77e4bf942aea1158293e1b852a713dcdc7f4a244863e1091e1f0c4c440e448",
+      "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:invoice:base:from_billing_entity": "24fb3c9c23df1c3fbe641680e2f6f83d465165a25a33d7206b90d527e3857d7d",
+      "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:invoice_link:base:about_electricity": "f31d0c1f66163b0fc1aae03cd61363ac7282f6769b7113ab4335053a7fa66cfe",
+      "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:receipt:base:about_electricity": "6b6bd921c8cce9f31d870419388d9cd44111d9bdb86df93df5dca819f7e231f0",
+      "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:tr:invoice_link:base:about_electricity": "8ddd6ba7d020eb29e9489b614c08788ab280441f36a29e926ed66d75984bb439",
+      "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:tr:provider_counterfactual:base:states_amount_owed": "6c74e69128424961dfd440720a4ba23d0ea99168cdc9a7442105d91afe447c10",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:invoice:base:from_billing_entity": "d5f44e7669c5b4e5b957088c47c517ff39fe6d66e0a99017a5a99fdabc5868d4",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:newsletter:base:states_amount_owed": "c559df2c2c03449753795d5f86d7803326e49b7ac4cc57c1cdf1951ef121e23d",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:provider_counterfactual:base:states_amount_owed": "b8d8d286ec8074a9ccfa6af06a4501524b7c1f5da44dd29f86bc9a7885bca091",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:zh:newsletter:base:about_banking": "bca680066d3d7e52f49a998f8005ffd3d3f7649e499906285837778d5fcc3298",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:tr:invoice_link:base:about_telecom": "90636e252bed25d4e7aef4ada05bb4de5cb8565ec4c35a897499b5beb7c969e7",
+      "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:tr:promotion:base:about_banking": "b388dc5f9016e0c418e3fe8b766a1e8d5956475b36bc2b8ab264e018cbf8b04c",
+      "open_jev__mailroom-control-v1:mailroom:453bc1515a6c:en:receipt:base:has_billing_identifiers": "656df36cb5c3fba8ac75d5a389005cece7b05952c01ffb226085c2411b4955ad",
+      "open_jev__mailroom-control-v1:mailroom:8b49ebd58a9a:en:provider_counterfactual:base:about_airline": "00f38983ee86f23085e6cd25709c11d7e862cfe8761edb221fe2de7597a38fe5",
+      "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:zh:newsletter:base:about_airline": "486c3552f05a51929f7bb2c8c2ec822a127bbfd05e1a136e6cffdab69ecbea8d",
+      "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:zh:shipping:base:about_banking": "9ecdcdee6e4b992481d1957b87b0dfa3f1ef07d2cebb24ffe890fb4e00cfe39e",
+      "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:tr:receipt:base:about_banking": "dd2f3ae80a32588c4fd936a367a29d9686d572e8c71d2acedc77a9ee9148f942",
+      "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:tr:shipping:base:about_banking": "e93b8e67cee6753ae74dc55f38c89ecacbbb68d3f8805f325308f9c8d4328fff",
+      "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:en:provider_counterfactual:base:has_billing_identifiers": "e0dbbb9578310fbb0ee60faeb0151d0fac64c55ffd2fb99f205740c96b4f924d",
+      "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:zh:provider_counterfactual:base:about_electricity": "11919c32146e2485d0de150117f15db1fe0992b6baa82e744446237cb17dba97",
+      "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:tr:invoice:base:is_promotional": "8cd5a69b3cbaf8a71649c248fbbddaad95c2fa02d118d21318e7c876005d1c20",
+      "open_jev__mailroom-control-v1:mailroom:296bc70c6f9e:zh:invoice_link:base:states_amount_owed": "967f5a8471571340857fcd2f05e0ea4f89ddc819a07bd1ddddd53c4b5b4409aa",
+      "open_jev__mailroom-control-v1:mailroom:296bc70c6f9e:tr:promotion:base:about_electricity": "5a43d41eed0305a09e63c5db49b483e73192e5f0e9365caf97b6cb3a2906de08",
+      "open_jev__mailroom-control-v1:mailroom:c08b1b2d79b0:en:newsletter:base:is_promotional": "c82fd26ea92485e498e7f86f1e75add8f6d52f2c34b6275c609179a51d99559e",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:en:provider_counterfactual:base:about_education": "23713cd6d2055673085fd3dd4929e0325406963a2477a631eab951d1d75cf834",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:zh:relay_invoice:base:about_education": "bbdbfa8a4d3eb9e5ead1a26d034e2eac4e3a851406d6e1dd40a7edc792c82d17",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:zh:promotion:base:about_education": "ea8c928e6632a447c50a7fad9aec78ec0c74d6c597a7bfe0f6854826735a53e2",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:tr:invoice:base:is_promotional": "f51c4d7f6c95b458103a62042baab4eaffc536c3018368d032c1a1f4bd50fabc",
+      "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:tr:newsletter:base:has_billing_identifiers": "88272f7bb85b1630dbcaaf36c05be2055a8530ce6f4b328d49641408317be3e6",
+      "open_jev__mailroom-control-v1:mailroom:e999a826cd6e:en:receipt:base:about_electricity": "d4a5120550930fe3230829c42f787d0f1800b5b63778ed772369f42f42f94e22",
+      "open_jev__mailroom-control-v1:mailroom:e999a826cd6e:zh:promotion:base:about_banking": "b97ee41beea547fc785eadbb86794f948ab6828d923674775d5bef3397464a41",
+      "open_jev__mailroom-control-v1:mailroom:3d63fc56ac8a:tr:invoice_link:base:about_education": "cf784f20f7a558cbfef360dbb9b81ed1a4d2ad562ea1cbda8dbab5657bdb3f1b",
+      "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:zh:invoice_link:base:about_banking": "c3e7a07051bf2e80cf381e445eeacef9fc9e71dd437785220d6239d135a17245",
+      "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:tr:promotion:base:has_billing_identifiers": "dc689253ec01504eb0580953829c68a3fc11641e24fb0c2d1fefff6652caa719",
+      "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:receipt:base:about_education": "5589e6dcb76a34bff9efe20385f1e0b5a0d4a869ab6fee1ec658fb8d296a6588",
+      "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:account_statement:base:from_billing_entity": "3f540e782fc5aa55357527f11d1b623e1784b55051c93dcdb73c8c7c9fb327d5",
+      "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:provider_counterfactual:base:about_electricity": "fdca30c81eac86d792da55b3787f1fa5bb47f930bb7cc6de72e3d722923071ab",
+      "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:tr:promotion:base:is_promotional": "72f0a32314e46777986d595462e8a061c57aabfbb1986f3b7aeea1650384e90e"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 10880,
+      "output_tokens": 85,
+      "requests": 85,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:en:relay_invoice:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:zh:invoice:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:b75dc67084a1:tr:relay_invoice:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:en:shipping:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:receipt:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:promotion:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:zh:provider_counterfactual:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:invoice:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:invoice:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.8398,
+        "true": 0.1602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:receipt:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:promotion:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.8105,
+        "true": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d2b5d8f2a18:tr:newsletter:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:en:promotion:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:en:promotion:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:f367d013b4a0:tr:relay_invoice:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.791,
+        "true": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:zh:invoice:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:zh:invoice_link:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:827d3dfc2320:tr:newsletter:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.8774,
+        "true": 0.1226
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:receipt:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:en:shipping:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.9734,
+        "true": 0.0266
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e5c4d6484923:tr:receipt:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:en:relay_invoice:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:en:promotion:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:zh:relay_invoice:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:ad6513edd9b8:tr:shipping:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.8721,
+        "true": 0.1279
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:receipt:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:en:receipt:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:zh:invoice_link:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:zh:relay_invoice:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.8008,
+        "true": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:16b947bfc96d:tr:relay_invoice:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:d9c47152ba46:en:relay_invoice:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:d9c47152ba46:zh:invoice:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.874,
+        "true": 0.126
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:promotion:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.8008,
+        "true": 0.1992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:newsletter:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:newsletter:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.8057,
+        "true": 0.1943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:provider_counterfactual:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:en:provider_counterfactual:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:zh:receipt:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:4c6d2c4a2146:zh:promotion:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:61223e2f8495:tr:invoice_link:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.791,
+        "true": 0.209
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:f1b4c347295d:en:newsletter:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.9514,
+        "true": 0.0486
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:f1b4c347295d:tr:newsletter:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.9048,
+        "true": 0.0952
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:678e97278a5b:zh:invoice_link:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:678e97278a5b:zh:promotion:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:678e97278a5b:tr:invoice_link:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:zh:receipt:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:tr:receipt:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:acbbf4e272f7:tr:promotion:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:invoice:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:invoice_link:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:en:receipt:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:tr:invoice_link:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:1ad25cc2449e:tr:provider_counterfactual:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:invoice:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:newsletter:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.752,
+        "true": 0.248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:en:provider_counterfactual:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:zh:newsletter:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:tr:invoice_link:base:about_telecom",
+      "question_id": "about_telecom",
+      "probabilities": {
+        "false": 0.7959,
+        "true": 0.2041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0d779bf923fc:tr:promotion:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:453bc1515a6c:en:receipt:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.8887,
+        "true": 0.1113
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:8b49ebd58a9a:en:provider_counterfactual:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.8291,
+        "true": 0.1709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:zh:newsletter:base:about_airline",
+      "question_id": "about_airline",
+      "probabilities": {
+        "false": 0.8633,
+        "true": 0.1367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:zh:shipping:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.916,
+        "true": 0.084
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:tr:receipt:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:0f68bc6d9228:tr:shipping:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.9057999999999999,
+        "true": 0.0942
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:en:provider_counterfactual:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:zh:provider_counterfactual:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:c2cf2853a493:tr:invoice:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:296bc70c6f9e:zh:invoice_link:base:states_amount_owed",
+      "question_id": "states_amount_owed",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:296bc70c6f9e:tr:promotion:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.8203,
+        "true": 0.1797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:c08b1b2d79b0:en:newsletter:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.949,
+        "true": 0.051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:en:provider_counterfactual:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:zh:relay_invoice:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:zh:promotion:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:tr:invoice:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:69e5d0e3c481:tr:newsletter:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.8027,
+        "true": 0.1973
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e999a826cd6e:en:receipt:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e999a826cd6e:zh:promotion:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.8672,
+        "true": 0.1328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:3d63fc56ac8a:tr:invoice_link:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.8057,
+        "true": 0.1943
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:zh:invoice_link:base:about_banking",
+      "question_id": "about_banking",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:e3b929ddbf89:tr:promotion:base:has_billing_identifiers",
+      "question_id": "has_billing_identifiers",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:receipt:base:about_education",
+      "question_id": "about_education",
+      "probabilities": {
+        "false": 0.8438,
+        "true": 0.1562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:account_statement:base:from_billing_entity",
+      "question_id": "from_billing_entity",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:zh:provider_counterfactual:base:about_electricity",
+      "question_id": "about_electricity",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__mailroom-control-v1:mailroom:25e5e9e631e1:tr:promotion:base:is_promotional",
+      "question_id": "is_promotional",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

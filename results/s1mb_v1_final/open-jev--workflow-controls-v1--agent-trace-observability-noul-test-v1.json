@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--workflow-controls-v1--agent-trace-observability-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__workflow-controls-v1__agent_trace_observability",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:42:18+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.0799853431,
+    "accuracy": 0.85,
+    "positive_recall": 0.5909090909090909,
+    "specificity": 0.9230769230769231,
+    "precision": 0.6842105263157895,
+    "balanced_accuracy": 0.7569930069930071,
+    "f1": 0.6341463414634146,
+    "true_positive": 13.0,
+    "false_positive": 6.0,
+    "false_negative": 9.0,
+    "true_negative": 72.0,
+    "positive_prevalence": 0.22,
+    "majority_accuracy_baseline": 0.78,
+    "constant_brier_baseline": 0.17160000000000028,
+    "brier_skill": 0.5338849469696978,
+    "baseline_adjusted_skill": 0.5139860139860142,
+    "baseline_adjusted_score": 0.5139860139860142
+  },
+  "elapsed_seconds": 5.9435236000008445,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v0:HUMAN REVIEW": "906b8b0d8676334c148d2be8d4eae59436b875bba4ddfad8a89cba4aa7d0706c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v0:PAGE ON-CALL": "b873b619da9b5867b4ed9c3663ceec8c63451cb1e65fa636cbc460ab4b4c5b35",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v2:AUTO-CLOSE": "ef1842b930c8d3a5c1cce4e5e44ca0c731161243e43c9c90245909815160309f",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v0:AUTO-CLOSE": "bf6a6262d803bfa876704a821830bd884252705e3803d472421f65e6e2892f96",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v0:NOT A BUG": "9dae1dee62c9008db9fdb16eb555627bda07ce0fabcdc945dd791956969f4b69",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:AUTO-CLOSE": "b43b60fe354c82c927cb87557ad72aafc1b2651871ec5d638fd1ff4b019f56cd",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:NOT A BUG": "071a5999b963a4804f8c4a68e46bed071349ed746b29cf6a54cc8d02f6232bfd",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:PAGE ON-CALL": "0dcecec473e75bd08996557990a143b65794a60f1079917f8037e81b8744b202",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:AUTO-CLOSE": "9bd74772a64bfcc4172a721763c9232b9a1d495807abf5ea35f2522fd5fd553d",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:PRIORITY REVIEW": "b0427b5cdcd55bec17c87b42d4fb354331dc81b480a6ad2b0d74e007b18a5f38",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:FILE ISSUE · ROUTE": "9238a061aea985913861d48d335a8b7cff3bdd1b4a5ac36bbe3510e7d71a5c96",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v2:AUTO-CLOSE": "9a88bf8828f507b545fe5dd4f224e8071fa10cd54987a41ce0b7683867a7a59d",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v2:COUNT ONLY": "9881b69e3e4203b1924a4f6fb49865e8c59f808e012e66a0a5a4f18312e5f3b6",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v0:FILE ISSUE · ROUTE": "9b385d8ab0034e9af51b6b5a4a5e4e0add67f723411c9ace7f479d7d9c275f5c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v0:COUNT ONLY": "148096ac30b794e9d4f6dd64468f003392a870ce4473c517aab493d20766b3c0",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:AUTO-CLOSE": "c2cac5f863416b1d5bf8ebb03661f3ac5b11dc303d3958225cb2483c18c2f774",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:NOT A BUG": "c13f96eb09b4c61fc2effd44b30551e4e80e3a800e51639a612336909fcac177",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:PAGE ON-CALL": "14cbd0f65ae21b168d4f4b675e263b69a0725e5d0f1dddad0cc17b492ffdfc4e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:NOT A BUG": "befc8d0aaa8ddf0384578f6a3bcd55c5c965aebb1cd861fa41f5f7aebc621095",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:HUMAN REVIEW": "4927a412f77e1f51954bfd265f5e4f1a015b38854ef4e327345c41ac3543b3d1",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:FILE ISSUE · ROUTE": "d8e06b0bd27623e6a52a6d6ae421f5c551e664e7b2d2e94aca1b76439d3d5343",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:AUTO-CLOSE": "e2bb6a956dddd401fb1872c7154f885903f422a887b3c9caf9b4766c7686d886",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:NOT A BUG": "332617e93068e6abd090b773902445230191877d1e283d39d0038b183c460afe",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:HUMAN REVIEW": "013c6c3de731c33715aa6892cd3171566994577f54342ca058241116e26fb26e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:PRIORITY REVIEW": "67e74336a822dc1f4ef7eef2461e0f57479e4f11ced918c14e1ad578e82adfa9",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:PAGE ON-CALL": "06ecdba1d8a71c432074b844d91222ebe4ee73b1b5a62907e5c3a02e3a343cd3",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:NOT A BUG": "aefcc8b1ecd381397fb3e28324463058e211de6214caa9df1455238db7a7d27e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:HUMAN REVIEW": "33408fe0b18e59c8f478c0ea188328987125d69e95dfa49560b5611b358f3523",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:COUNT ONLY": "b0a59faf6b942e77c67b01d8ee8c57f5d380f0a1da51aaa5b01eb81590f533e6",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v2:NOT A BUG": "13285d83a653809d2813dce9a880b3d9b3c38287aa1b7ed895ac1af0aa539955",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v2:FILE ISSUE · ROUTE": "fe04ffeed208cdb9956ea883dc07df8823aa3da234d6a7f071b38c3e15f01777",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:AUTO-CLOSE": "55240fbfe7c9a4f5d02566b3201646e12655fae740b01f13ab7bfb61c8487a50",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:NOT A BUG": "fc6cdf82aed3ba2781277517062f5593ff4de7106aba9078b70a8d95231be304",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:PRIORITY REVIEW": "aa83dfbd5adc5622b3fd26be5ad12bff245d3c1ed2f1f6d0d814ac04681d0cdc",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:PAGE ON-CALL": "8510c5a05ae4c123a095c3767b26b99701019250ecec98300ec47cf5ac1db155",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:COUNT ONLY": "c3c6405a343a6a3e40c0d77f4262fd58898901baf5f590e81f647ab2fab37d08",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v1:FILE ISSUE · ROUTE": "a0c91dab3517a6cdd79d2f62ebea2954e7d360197859039c46a8dc1f07479187",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v2:COUNT ONLY": "0f34ff5cdd0763bdfbb99dc8446d7c607633d4da9d9d4261a003af3bce5d003b",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:AUTO-CLOSE": "b20897189b412d9bed12bd9861cb414e8a8908253770e2e9ad299ac5b8133112",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:PRIORITY REVIEW": "8911b0c459e501f2fde584baa35d6f1f327c767211961b3206e4dbdafb3ec9cb",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:FILE ISSUE · ROUTE": "037b0df5d25b1df831290ab714295f2cff27a43becde9967427c24345844d7a8",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v1:COUNT ONLY": "fd8745858d461c04c955a9c963d9d79ea16b79f886aa380a9336600ab265c211",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v2:AUTO-CLOSE": "a2b5ecf792c6416dc6718fdeb7385f8402e07067cb736ba14bdfd72c1ba7592a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v0:FILE ISSUE · ROUTE": "63e922934baa5b3ba1e0e768a9fcd9bc6bc8a7775b091d41b10bbea91ef9542a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:HUMAN REVIEW": "0623534b481a65d5eb35d5b57f76cf91d9c8fc1da5ac4329979e7721d48ad5b6",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:PRIORITY REVIEW": "e56ce0a284f75b0d99757ab3e3bba342212cb58a84457df2150ea55fe9ef5846",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:FILE ISSUE · ROUTE": "8be85f0e4945cff927e6da7730a8bcbd5e640df19e10f323b8cb3e4aeb00643d",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v2:AUTO-CLOSE": "ba26ada3c1650a0891a070a085e5030729db5d1e0e416891ee118d5de7137665",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v0:PRIORITY REVIEW": "51724312718277c0722fc55ebddf22a533898a56cf0d0cf90c526fb928733b3a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v1:AUTO-CLOSE": "99f958a361c86315d928a6689af00f306cdfd2e78ba6acfdfe5a7d5fc09d10f0",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v2:PAGE ON-CALL": "ed11dcc7f17ffcd1bb73c0d506c55a6de8897921886a9f1cfdcc1387b0275d86",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:NOT A BUG": "2e1ce5db4e7fc44ee5aae7003efc252963ed0fad25ca58a89fa664a67a9a11da",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:HUMAN REVIEW": "3a7bfedac2586249c42745c0fc834ed8cd8929f13fa5dca69cb9edc6452ec1bd",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:FILE ISSUE · ROUTE": "6c4cfd3337439b94e0e2a8c39812f4dd77b72ca249f8cc1c32bf7d6a5e5e8c91",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:PAGE ON-CALL": "7ef589d6b7214df1ef96de82411af8927dfed205f4c43a91e69fbb63dc99483a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v1:HUMAN REVIEW": "ec7edc9fa5de9cb0cebc3e8fa339f7ab79430f6bd7b08f9762378f084000b6bd",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:HUMAN REVIEW": "aeba1e4398ae8adcd3f2e495b142fdb11141edc0f42531e78e37d88bc0279e6e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:FILE ISSUE · ROUTE": "726f6168811e040a7b62722f25a945e4999b22a548e0b8de8590c8f93331768c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:PAGE ON-CALL": "82c6cf05c5538b0c855a7425d8641a5739ec3b44cf6f322c8ef15be34cc37929",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:AUTO-CLOSE": "33e18ae24aaed294aa15381df35d50566051b14b12f73dbc150fd13fa6d3d120",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:PRIORITY REVIEW": "c2ee776ef34ab48b1bdbde00569711b8c7a7ef8fc5f0e9f27158761ee6c5ed5f",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:PAGE ON-CALL": "df98e2fed1a867fb111d06ce68b33f143c36e0a6b5204e7f028876df8ecfc94e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v1:NOT A BUG": "3e98492c1495a22af41a253b5797d34b78d95c235bc16105d21c1db752798eaa",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v1:FILE ISSUE · ROUTE": "5d3e9ac3469cee8579ab984934af2f46031b3d7fc469334d0f5877909b6d6b46",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v2:AUTO-CLOSE": "8b909165d44bb3386e0162309ca4b16e893debbd182dd36eb2f2efa2a8299604",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v0:NOT A BUG": "1cc061ee80d7dfa29ff455a4e16e161c0989d414a8196e3b018dca01560281c8",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v0:HUMAN REVIEW": "97739122af49e6d023d1c04b6710f82fe1ca1115217ae4a9fa00dd969b899be5",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v1:PRIORITY REVIEW": "5c3a32298adb672e1090ce911c3c1954c2a93ba38c48aa2f3e1aa5a344bfdb9a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v1:COUNT ONLY": "053fb321ed91b8823a56e90903c709b2998d7107be78e6aa2a3157b9f0d20911",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v2:FILE ISSUE · ROUTE": "8a5770b80125ada77bdd9dacf2296daa625c2b3ef763878ec311e8ed993ac05c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:HUMAN REVIEW": "1159457dbff064ab4112058962111ceb760e8c2a351c0dd5054b3dfe48e24b60",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:PRIORITY REVIEW": "4ce99d8b2c6a5c4c740d29467822f2a9208a0dc8a86907d3278ef3d1b1d413b8",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:COUNT ONLY": "3a603e74c76bcb6636d4920ca6b55289a6644145fbd290fc91202893d8b7e99b",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:AUTO-CLOSE": "c128e199395617fd78119b2e61942e8b6f4182e679ff5f1c7315b5db26643b67",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:NOT A BUG": "8991082936b4d726a7ee7d48d0eedcb0e1c43feab80d1c3167ed0f8af2c7cab4",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:PAGE ON-CALL": "4f55c82cce08148e03e2163b5e4cef619a740b6f89c451daa2c2ed58d5d8ca04",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v2:HUMAN REVIEW": "0e1c3eef2dc8f151c9196487ddd9620b065d58f46c735b0bd4278252f35d3212",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v2:PRIORITY REVIEW": "0ca0ce860930376a1223c22f0f54cd67ea9535e7e7218a951e3ba7ecdf3b88e9",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:AUTO-CLOSE": "6a7d1455a237f0a3464d452860a047b4caf108ea4f0bedd284aa89e30642641e",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:FILE ISSUE · ROUTE": "0adede04a8ae54b5194b3d13816ec67bdc4ffd0e9b716e25b79eec2c6270273c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:PAGE ON-CALL": "3edbfcb6b2f4f82b275840ac98f6cfca7b6e2caf34866c1e076d97b88c844690",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:NOT A BUG": "66eae4d3e957cd8fbb0b760abc3eb0f87543ab7c260a296ef74b0f112b76299a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:PRIORITY REVIEW": "0383f2ee8b2ebbfd5ac255cc4ced18cc38dd565f881378edeaf128b02260e74f",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:PAGE ON-CALL": "98aaa7bdff7a45026428f21317e8272044775459ada019c839a3608a267efff4",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v2:HUMAN REVIEW": "a1dd381d05cca96dd8218e909f7b1688bc8ea139b66fa746316de65fa91481f2",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v0:NOT A BUG": "88d0b867f0c34318c60c261a4997f5e42e17bceeb92513439546ccff35a95a2a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v1:PAGE ON-CALL": "0537f1ae572c66971c66a92c521d667d2f9f642a2418f2089848dcbbb4a7eb17",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v1:COUNT ONLY": "48136ee2ba27b42e7604883a9bedd2b9b5d93bbdf1b31d951d85943c6bccfd32",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:AUTO-CLOSE": "0513bc95f81f9806cc6d7325dac61e9166af985abfc93e80c8372e5ca613fc90",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:NOT A BUG": "9064401c67b7c14f288371331d99c355b2aaeb9c61836fa560dc93cb6ab7437a",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:FILE ISSUE · ROUTE": "bcd82518d934d6d4dc0f8272f04c174ee395e255d0ee485b83f9f96892ea02e9",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:235:v0:AUTO-CLOSE": "f5391b61658d2e875d6aa9c37e271fa3bdd628b22644389b6630608785b21345",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:235:v0:FILE ISSUE · ROUTE": "0eb3baadaa48729589d4e442d6fd2212aecd6170ae7ebff7826fd92d09ea6e10",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:NOT A BUG": "d8662f3048dee55747a8f5fbde012f4ca20ebc8b33cda944c88d2c11719d841c",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:FILE ISSUE · ROUTE": "bb4beadba650ca692c3f842154f70fb4ed8f41a45f463e208b53e07c68cbc8a0",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:PAGE ON-CALL": "60e1fc899e89c1fc976419c4c311b93b0871f34241bd9d50aafe9bb48703dc47",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v1:FILE ISSUE · ROUTE": "d925372f7edd0fb3eb19dcddbfe455d05f8170f4632eebed70eb2e9993e07813",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v1:COUNT ONLY": "b098e2eef90f65039c4742fb9e8ee470a24f820cd9610f5740c67b90f6fddba3",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v2:NOT A BUG": "54829e2bc6ff6b41aa4038b10996e3cb9afe7b9f5d91911bc1a6d6c75b4d12a7",
+      "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v2:HUMAN REVIEW": "5cbf62341efe56c991f4d4fc214daa1a0d50e6f00058cdd0a5087d3583fed6ce"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v0:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:11:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:26:v2:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:38:v2:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v0:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v1:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:74:v2:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v1:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v2:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:86:v2:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v0:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v1:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:103:v2:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v1:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:104:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v1:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:108:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v1:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:125:v2:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.998,
+        "true": 0.002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v1:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:151:v2:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v1:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v1:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:161:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.9977,
+        "true": 0.0023
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v0:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v1:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v1:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:176:v2:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v0:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v1:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v2:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:188:v2:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:PRIORITY REVIEW",
+      "question_id": "PRIORITY REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v1:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:205:v2:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v1:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v1:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:224:v2:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:235:v0:AUTO-CLOSE",
+      "question_id": "AUTO-CLOSE",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:235:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.2852,
+        "true": 0.7148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v0:PAGE ON-CALL",
+      "question_id": "PAGE ON-CALL",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v1:FILE ISSUE · ROUTE",
+      "question_id": "FILE ISSUE · ROUTE",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v1:COUNT ONLY",
+      "question_id": "COUNT ONLY",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v2:NOT A BUG",
+      "question_id": "NOT A BUG",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__workflow-controls-v1__agent_trace_observability:workflow-controls-v1:agent_trace_observability:42:245:v2:HUMAN REVIEW",
+      "question_id": "HUMAN REVIEW",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

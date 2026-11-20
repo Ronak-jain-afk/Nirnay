@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "plane-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/plane",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:43:03+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2482820423,
+    "accuracy": 0.52,
+    "positive_recall": 0.54,
+    "specificity": 0.5,
+    "precision": 0.5192307692307693,
+    "balanced_accuracy": 0.52,
+    "f1": 0.5294117647058824,
+    "true_positive": 27.0,
+    "false_positive": 25.0,
+    "false_negative": 23.0,
+    "true_negative": 25.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.006871830799999978,
+    "baseline_adjusted_skill": 0.040000000000000036,
+    "baseline_adjusted_score": 0.040000000000000036
+  },
+  "elapsed_seconds": 5.26091439999982,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "plane:default:test:81": "6f1afbd1aefa4e4752fc8236c247e0e6b2d5e04207defd9ef2d58f8b6bf79820",
+      "plane:default:test:98": "1e5a475c33e078a2e8b70a1ddb39d0ccb147b5950eb5b5b8fc482dfad5b502ac",
+      "plane:default:test:279": "9704e37e60a4775b6056886e7696306b6e4d16a33fc1510e0ce83dc0702cf3aa",
+      "plane:default:test:299": "a7feecd78ee611e98946deda88e523e026d44d212b61f8440244588898693108",
+      "plane:default:test:504": "2d7861e6966d712bf48e576252ce016e8acff7decb1c81662ff0b14833882d94",
+      "plane:default:test:535": "63c815b6df0f95d863c32bf73f6f1c60a3481c0505e679f87152a927f4519ac4",
+      "plane:default:test:573": "5b7a29d86739be2023dd81dc6130d166e15ae38cbbbe83199b74ea3446ee7207",
+      "plane:default:test:928": "addbbe78b4b4e1eabb66fcd470a77481040e88959611f2e7cf9adb75d53d281e",
+      "plane:default:test:984": "59c8523c9b554a8211a2802173dd74be5ae6009c30025ca9174a7ba935f12c05",
+      "plane:default:test:1252": "478b0eea492883c55146ffa98d9c356a1c7884ad67f3430720195fc4e27db193",
+      "plane:default:test:1327": "371118c815b07b6ba5ba779f6e8b01f5b78ccce4e0635023a314ba9e2e57586c",
+      "plane:default:test:1414": "be6b792687da49b10bf84001986baf55c8e85c631131c6761439b92053333c7a",
+      "plane:default:test:1439": "4c7d4fa5af63ebe1bed34d6a61d02bf45afbf6d486ba3311e0ef59c447f7513d",
+      "plane:default:test:1452": "64eec2179589143b5ca8ec0e4be067734a86fce4c2d244988ffc2c65287a5ec8",
+      "plane:default:test:1647": "b540b24e7fdb54b9cb91abee1100497a4c36b3fe0597bc3bcca4dd735ef85609",
+      "plane:default:test:1677": "b0c5870dd5634c30fd349a867ff74018de2420efea584d13b77ae7a228a564d7",
+      "plane:default:test:1810": "c4b77890c6eca24b7e163709ae90aca7c8d283f1a33c5f20333d626227423858",
+      "plane:default:test:1934": "b38b4799eebfad0bcf960380971310f0b211cd1fa6a4fc939bf0c420c4c09107",
+      "plane:default:test:2267": "821024ef3413f1c37242de4247e45b03d3d04e9d4893bd7145abed90a84752e5",
+      "plane:default:test:2324": "c2442b4fa9b0d2909d8fe9bdb752dde57eff8e4fb43923d09ed56a1caf278359",
+      "plane:default:test:2352": "b2d1d46165731fad683d55a5f08214056058d256e18027ccd29cf292af4b69d3",
+      "plane:default:test:2354": "8532089667d6347fedd7cadd357e7cfdea7c0fdfef605ddbe3ae10ae28a3fb7d",
+      "plane:default:test:2403": "70ef9631e20f09404c6fd41fd97e37550364991ca2bdae20ac73e5e91ff93376",
+      "plane:default:test:2582": "c6fdd4e5ee860995e5a9c2dc466c3255141e1d0dc1558404654bfd06a5811eb4",
+      "plane:default:test:2586": "830d40b0f671cfe8498e7f190a68be33f7780087400b349d23c717699fadd3d3",
+      "plane:default:test:2655": "d01db6ceba90f2fa9042e7e49f8b40b6565f80afe1f94f36d84dedfcdb0d0ed9",
+      "plane:default:test:2818": "dc7045fc15657b212767c6205bc3f3f483b4b58818a512ffbff2b91144c93be8",
+      "plane:default:test:2900": "0ef0831f18a7a9b294d2e48284605688dce152d3d115e01ff36a527f2e0df4f2",
+      "plane:default:test:2942": "8fa12245a8418bb654edf84f55f490c9ae7ab4aa7159e84f8dfa8e07bed41104",
+      "plane:default:test:2960": "f7262f3315462e9a9afaf45f68687c01a71674b7e63ec987e88b0a0e4064a26e",
+      "plane:default:test:3044": "e422f9eb1fcaeb397e3bb3ea4d4f95eda4916acccba8f5b2f3655913de0cd54f",
+      "plane:default:test:3364": "c281b4153e333ed44b7a214540ab1342feab03cb611c01108a179cb356975507",
+      "plane:default:test:3573": "cf5b7137aa0186bf3e8ab62c8feee81f944c82f2d0e745ec4997d29c4e4b0028",
+      "plane:default:test:3606": "4db7e886658e18d195660a8dbb99d130209e4f09f755880da8ba1dd6fe2fc67f",
+      "plane:default:test:3694": "424f32dced89b76d3f7fef321e83991e457462afc110693e9ede9ff0898fe26e",
+      "plane:default:test:3706": "fc577fe0f892af6adfbad55e853a0d34b4058ea83b1e94f8ec677adaac17e0a1",
+      "plane:default:test:3755": "7c0cffaabd6080cee51c2a1a0e9ce01a83ca79153de9c43ec3d5cb6aed4489cb",
+      "plane:default:test:3760": "25cff77180cf7b63f17f8a4a9a4c37d9c8d593434bff18c72b4bae32be225d44",
+      "plane:default:test:3879": "88907f7af7188c98c0d0d6ab4bde66fe03322fe99e4c99c3a9d8479da4e4705e",
+      "plane:default:test:3962": "7a75f7b4715551ff4beefb2fc6af3d60f189954c1783d215c5d5676c0c2157bd",
+      "plane:default:test:4395": "2f3cdead10d36bc2783f6b1c535531c80de1ef537e4ad7fef5fd1f9068ddf6fe",
+      "plane:default:test:4396": "05b6679145bf3afbc45272b9f6684304127d94d009bf7bad21f71c47b1861de6",
+      "plane:default:test:4446": "f1ed3c697410e08dc9fd7e4568cab7bfd11eec0d645f7b6c77cd951131b5d919",
+      "plane:default:test:4500": "565e58e06ed2c905dd6c7f665f1d5e04a4080e44e011ad5780b083205ec5cb81",
+      "plane:default:test:4597": "899390a76b9765891feb2b76b86e33efd39c156ccaf2ca6371d6a66b3e6f147d",
+      "plane:default:test:4696": "cd509d1de926b26f17325fc67dd128bbd33dc7229fde05e0aab836c25694eced",
+      "plane:default:test:4831": "7dd7040598d277c20e6cbadfc31c91d9eb0d2db641188988e36506df205315fb",
+      "plane:default:test:4928": "a43b226be681576513f99c7de06d17c119802ae6b9b3088eb22115df44ea9104",
+      "plane:default:test:5040": "355ed3b7700ceba1d7574da07ec88f2398790fe1529a960deda1f66c5a833364",
+      "plane:default:test:5145": "74a54e368d2f99d12f4772f2d5c54c42f277bda3250d99fc810bd8477843e896",
+      "plane:default:test:5261": "6379eb0ecc4782046c8e79eef8da56c59cf9298c0095ceae8f10316f7feaa7f3",
+      "plane:default:test:5287": "5827552af470a7757a016cf58d96bdeafd756c67b57fc7a4ade4b7f23b83e3af",
+      "plane:default:test:5609": "abc95fca710e9f2f628f5a627225ae6d8578b588f22d6921a55796538aa62283",
+      "plane:default:test:5664": "efbd2f05a517e2da1b7f66bf354c3fc6c95579c4182f1a697a85040fd9c4b0b3",
+      "plane:default:test:5669": "b719332bd2e47c04d94d0914071fbed21e4614efe2d30d9eb3c1c9a56ed7de1c",
+      "plane:default:test:5758": "bd74583a977c57b92ca86592eef05917136e28dab00bfad1729154762cb9c695",
+      "plane:default:test:5829": "81ec6fca49d10bb75a9ec24b5ad3c172a2cf6d5c4a9e49aeb029ebebc11095cd",
+      "plane:default:test:6040": "9eb73c696d65cbe255dc2214791ecf811f844f411e0724b0b52768720815c23d",
+      "plane:default:test:6139": "84480e4535be5242ef80474233cda819cda2be5bdbc7f2e4f547dad8a7a83df9",
+      "plane:default:test:6146": "e64f2f5c3928e8f0acd543ca80becb0f77ea1a2d08210ef6d849256c6012e9d2",
+      "plane:default:test:6313": "4f65b478f8f3e68dccab381ce963ce6adba3f314b1c7cc1d8e4cb6b90140d32f",
+      "plane:default:test:6369": "599c7e92f58799c4f85787434400a34152e58e64f94178b3437cc600978eb870",
+      "plane:default:test:6373": "86209f239567a41e250318a661f2529acf2a3ad26e1c27f12618c8dc66d87a2a",
+      "plane:default:test:6469": "94b2b4f8e6b239e4307cab0bcd1f37c916c267bd08aaffdee22c4ceb2420836c",
+      "plane:default:test:6569": "fda8b33a26c3128934ead20c0567f33f64ca33005bce1c56e3cfdf028c309516",
+      "plane:default:test:6650": "ba2d0723b45569751cb68c3b55b813397e595973f78fab834fafd13baa0326be",
+      "plane:default:test:6816": "6af55892e14d2e3ed7b2dcf6c42a7fd0988e56e306306b256ccd9b1db0464e81",
+      "plane:default:test:6834": "91cb2042d2a314f86d0609bd59750dda46bcd3d7da9a1aceae05b1e2559177dc",
+      "plane:default:test:6931": "27787740cbfa388741ba5ce9f44d12ac27cead46fae8da9f215c4db5be55ff7a",
+      "plane:default:test:6938": "73ad06ba34f3d4c51baf3fbd274e8dbf3aa996f33730766c83b37070fc5989c1",
+      "plane:default:test:6965": "172daa73b4f759a865a927692e96cbe9d03d16ca93d24600e52567cdd4395bae",
+      "plane:default:test:6971": "70d9c2989c1be7628b210650320d41b38f85caa68901073015a7347da0763351",
+      "plane:default:test:7039": "27489705af639a8ae9fb3f7dc26b0eb24efa1b9bf9980af51fee362ee54d6b3e",
+      "plane:default:test:7078": "f764276b9cf835f07a1660b1bcb19ea869f0edd97782a282feae217708f44c64",
+      "plane:default:test:7167": "fdafdc1cd48089658a72960018db3cabc184678c0e65522d1852627fe86b71af",
+      "plane:default:test:7173": "ba22bddd09ce0e75e1c32f3d70bde4806dbdfeb9feac91a861d02db3fbc745a2",
+      "plane:default:test:7454": "74513b49b6a748fc0e9b2c87635415792d81b266b6583ae8831ef49be2ed5d38",
+      "plane:default:test:7539": "bd4d147c4ff37836e456af1442da430edaa5bab0dbbb0d2b77f0874da20bc94a",
+      "plane:default:test:7720": "07f3929c01fe6236db6abbac45de65aaca8ff4eacb3e5a4faf4552937b0c3dd5",
+      "plane:default:test:7798": "bdf027ebd859827511b4e903290550c842e2fbb70c348f2c5abf42aaf584a238",
+      "plane:default:test:7984": "9aa6075ee2e3859ed724108608d52ab5350ee2a39257e31c9db0d99d491edcdd",
+      "plane:default:test:8076": "917b0f9ee5c45f24f2c2f8a84abfe61ec4b98f924f98d6ec7d72b0b05783a1fc",
+      "plane:default:test:8251": "533c031a9601fdf688a83f74226fe476317134372c7f7402256990102218f025",
+      "plane:default:test:8256": "2315bd615eb5bc2441c9cf0669e14df6a11d7888619fb22d88867e8bb74c0d38",
+      "plane:default:test:8426": "4e99efe7f5cb570ddcc529e7642904f9b609349986e145ec18182f49896aa0b5",
+      "plane:default:test:8545": "7dd15b26aacb389b3f352315d4d0452a325e88bf12cbc7c8a9b69049852075d0",
+      "plane:default:test:8682": "0fdd889e1072a4b9ff1b033eacdaf4c077d9a070c68c78f534b7966ad8758526",
+      "plane:default:test:8766": "1490e7b892c409e1a9e67f162ac0b31eb65749dcc4cc1451545460c4e69a32d3",
+      "plane:default:test:8846": "b56f1ac296dc6e20f536964c540548283f059480aa8044a93717205a067301a2",
+      "plane:default:test:8903": "8fc276c67717ba108bb94dd7579d3656fd75c99fa2f6b76e6c4a1f6e5a145260",
+      "plane:default:test:9056": "b96c41a5f5b44df06364704dc0a182c45bf198a571db609a46011f43d1f69b19",
+      "plane:default:test:9263": "a67bba00df275cd83cdcbc84bf731436059fd611f4e4c3f62e66eb5641fbba46",
+      "plane:default:test:9291": "e26203a98268c2f18b70ac78ea502e3ed03b3f10b90a24256fbc233de50ecd95",
+      "plane:default:test:9309": "ef89082e8e044ba48064705b6f06ae84d687dbdb849bb501d1154f29d9c6c5cd",
+      "plane:default:test:9788": "c2fe37ac1253af615af08506824be26908c02d1bfa188ddcd84e94b798f77193",
+      "plane:default:test:9830": "04155f93d4bbc2b9a04427d66c31f88680999e557692d22e04b0d95e2727e39c",
+      "plane:default:test:9846": "06ac6acd9ba74a1887917c390456731a56d4615ad0d4a3eae26d79274c67d403",
+      "plane:default:test:9847": "b52a77f70e3039011baaa37a3a976f6ea285dd15ef84f8b415576e2ebd5884ea",
+      "plane:default:test:9990": "4930d3d26899f32ea4b89c5f50027da182641afa64ac6cc08346c43b92775f59",
+      "plane:default:test:10019": "832b71fbae4db518ddc2c1e2a9803b0b1c5fc13a9a78bdbdb8e66911d3a030d0"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "plane:default:test:81",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:98",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:279",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:299",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:504",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:535",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:573",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:928",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:984",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1252",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1327",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1414",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1439",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1452",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1647",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1677",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1810",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:1934",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2267",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2324",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2352",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2354",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2403",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2582",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2586",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2655",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2818",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2900",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2942",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:2960",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3044",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3364",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3573",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3606",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3694",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3706",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3755",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3760",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3879",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:3962",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4395",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4396",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4446",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4500",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4597",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4696",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4831",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:4928",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5040",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5145",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5261",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5287",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5609",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5664",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5669",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5758",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:5829",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6040",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6139",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6146",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6313",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6369",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6373",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6469",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6569",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6650",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6816",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6834",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6931",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6938",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6965",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:6971",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7039",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7078",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7167",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7173",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7454",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7539",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7720",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7798",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:7984",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8076",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8251",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8256",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8426",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8545",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8682",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8766",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8846",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:8903",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9056",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9263",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9291",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9309",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9788",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9830",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9846",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9847",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:9990",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "plane:default:test:10019",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

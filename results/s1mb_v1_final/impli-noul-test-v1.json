@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "impli-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/impli",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:37:39+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2535011844000001,
+    "accuracy": 0.56,
+    "positive_recall": 0.86,
+    "specificity": 0.26,
+    "precision": 0.5375,
+    "balanced_accuracy": 0.56,
+    "f1": 0.6615384615384615,
+    "true_positive": 43.0,
+    "false_positive": 37.0,
+    "false_negative": 7.0,
+    "true_negative": 13.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.014004737600000317,
+    "baseline_adjusted_skill": 0.1200000000000001,
+    "baseline_adjusted_score": 0.1200000000000001
+  },
+  "elapsed_seconds": 6.660634100000607,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "impli:idioms/manual_antonyms_ne:test:19": "c08524aeeaf846a02214ca6ff0d545ca3a515b137edc45fa52d3046affe910ce",
+      "impli:idioms/manual_antonyms_ne:test:40": "0df9a368707af6776bc9cbfd15e181642aa4f4068c3a529dc87b0eb9b5a894a2",
+      "impli:idioms/manual_antonyms_ne:test:47": "54242d70ae227c5ffd5016ecdf0e1738e47f156f26e89c5303d98b43b2fb51ab",
+      "impli:idioms/manual_antonyms_ne:test:69": "9eadff13a8d43ae9590b1e5c6d9eae394c96774564a9b913dce9ac008d3cae23",
+      "impli:idioms/manual_antonyms_ne:test:88": "99883e0c9824d696f928fadf7fcaf26169c4399704030ed357aa4e2c257e149c",
+      "impli:idioms/manual_antonyms_ne:test:91": "1933c501ad795aef610a3a44471aa4f5aeef8a62d02351c0de2138405a3a3038",
+      "impli:idioms/manual_antonyms_ne:test:101": "df4509d80e757ecec048bc6358aab19c57ce813e5e8064c40c6d40b43c3bfea8",
+      "impli:idioms/manual_antonyms_ne:test:105": "07db83124075453c997706c1839af53814130d4bd899e2a3df4d510fd4850702",
+      "impli:idioms/manual_antonyms_ne:test:144": "eb09d59e92e738e5fe5924a8f3f537d4696104b8af791b7f9bcfd255d2ef7564",
+      "impli:idioms/manual_antonyms_ne:test:148": "df96fa633e27884b7e70f5aba1b1176d7c43468c51ea56e8d155f507124f71a8",
+      "impli:idioms/manual_antonyms_ne:test:155": "9418c1ffa4867d3b8a2895a5c9a8452fe0ed5f3b4609c77ed4e4f5ee297559f3",
+      "impli:idioms/manual_antonyms_ne:test:163": "be1c2db2075a475462bda32d9baab32ad8c62bfa71b122b8788f7635c3586d5e",
+      "impli:idioms/manual_antonyms_ne:test:168": "15525e01753138833cd5d9d3dd2347bf15d121c04c883567b073ea489596724b",
+      "impli:idioms/manual_antonyms_ne:test:173": "7713fb0d7c44d1170c0fdbf16b855b324afff6c8fce1f9e01cd7cc463e348be2",
+      "impli:idioms/manual_antonyms_ne:test:186": "7e2128fbb801edb6f009f582856730c5c730bea2610447dd5bc019935f9b71fe",
+      "impli:idioms/manual_antonyms_ne:test:200": "b4953b9b9259edcf396908ea8c60117dc3c003814739450abc3342c4de83b0c1",
+      "impli:idioms/manual_antonyms_ne:test:205": "3d275a635c844f528404f88189f398b38a3f1fe1ca4e6b7d7f1edc594f7999cb",
+      "impli:idioms/manual_antonyms_ne:test:207": "f2a2bbcc23602b8eedbb6276b12b1eb2669ff69656a0f46d4b634addb4268df5",
+      "impli:idioms/manual_antonyms_ne:test:227": "fddec481f672c929a8552dc0a39c209e7f97c3b72f69a4f63f547fa981aa7748",
+      "impli:idioms/manual_antonyms_ne:test:252": "6139666f2c04d45da621d7f26cb868997a8f103a8054b71e185b7d7ca21bd9f7",
+      "impli:idioms/manual_antonyms_ne:test:260": "3e4afbe670cbcddf0285d55b5f497834bb7acf8956e964e74c3402f0e17d954e",
+      "impli:idioms/manual_antonyms_ne:test:271": "16cd8e91647a13ed3b36af2c42ac6c88ecdbb191052096d0d08cfad11824a541",
+      "impli:idioms/manual_antonyms_ne:test:287": "26f5b14f8249c6fc925e515c99f656fc8bc2a76e1758bfcb3e1be780c46ae2d5",
+      "impli:idioms/manual_antonyms_ne:test:357": "07c6f9e57f7dfc413ac1cded3a4c33aff7489f4f8a68df1547cd15595ca78f69",
+      "impli:idioms/manual_e:test:10": "18118a33a686908c04f53afb244e06ec3f5a752ff32d43c339e53eb932a4ef8c",
+      "impli:idioms/manual_e:test:38": "ecdb79ead394618fe0795ad0bc6bda2559acf9a62d329f9fa6182fcc79124d0f",
+      "impli:idioms/manual_e:test:49": "bec223c550f9a7bb406157531f4fc37f6c0bd76aeb82d2182be8302ded05203b",
+      "impli:idioms/manual_e:test:98": "4ff1ed5d5601945371e31e2dd77e9db3b93b7fbaf141e1f4cdb46b9c451a4a10",
+      "impli:idioms/manual_e:test:101": "57709adf4567fcaf9bdf9ffe2a80f700ff2256e92001b04b2e277ed9e2d03b71",
+      "impli:idioms/manual_e:test:116": "b1ff96ccbe2ea97373bd768b220cf51a052b8c65b471b2856ff077da9df8970a",
+      "impli:idioms/manual_e:test:121": "6981c445df804fc23eea4797f59543bddd859a245579946bc9e41d19f404407b",
+      "impli:idioms/manual_e:test:143": "febd466401967bca85dbf8f084f0aa4304a0edfc9ac36888925e12ae6bce929f",
+      "impli:idioms/manual_e:test:153": "11b05e89bc66e39d7be87bce908b1a7c205453ddc66a296cdc8bc014f59114d8",
+      "impli:idioms/manual_e:test:182": "2135ab57ee984c767c772572c416a5c25f52631c4e3adb69fcf43562f3b34d9a",
+      "impli:idioms/manual_e:test:213": "cf7b972533741e746b4e5778f9a3916a450e6eff2059243cb93841634572b0e9",
+      "impli:idioms/manual_e:test:229": "f9eac82fe8751d1c8efee51165fd599e3a1be655e9989ff3a453bf2bb773775c",
+      "impli:idioms/manual_e:test:263": "10951517f0c2abe474489c91524279f2068d237c084b3d225d597cb0e53f2502",
+      "impli:idioms/manual_e:test:276": "e6a7dd109b0a59696a68f7f28be3efb386c69559396eb33348b512727127dd91",
+      "impli:idioms/manual_e:test:279": "6bc2a2e90d6d21f934d56563bffe4123e314bc18d97584eb88d59b11867caa56",
+      "impli:idioms/manual_e:test:292": "156e276e364f14981b241fe203d67bdab42e1950ee15a890af184a4f4570cf61",
+      "impli:idioms/manual_e:test:299": "ae191c8a8ad8ca284c6de45ef9e6b1897e0532b7246ac1e0394e3eff15dc6d40",
+      "impli:idioms/manual_e:test:301": "61df545a10908a674cad395ccd9754e229369f555d0081dd80b18bab4bafa118",
+      "impli:idioms/manual_e:test:326": "2b804e74c3f44ae19c7ff61fdd2448339c79961c29475a6fc312a8a6caa675c3",
+      "impli:idioms/manual_e:test:340": "c1f79a03ee6ee68216d3bba2d2005c125f5e0c39c46004f12598a8f521c9f594",
+      "impli:idioms/manual_e:test:347": "c88e36703b329f438ab95714e6b5e3ad89ed97a01e465fc905b9f814e4aad5fc",
+      "impli:idioms/manual_e:test:358": "26bd77f00646baf172a4c2707a35de6dbdb87fb72e66210906efe519055d9933",
+      "impli:idioms/manual_e:test:364": "1ca13df196e7e6cdc11d92efdd6a4ef5da9b8a6aa2f5488fbea37f6f6c1d8be6",
+      "impli:idioms/manual_e:test:410": "7c8c2cfa9c54d167000c6498dbc170dbd58a7ee04fb066aefaedf08410d2edec",
+      "impli:idioms/manual_e:test:420": "28097b17da644c1060a1b3c47423b601d99875b8d278d2e63bacc3c6fb05433b",
+      "impli:idioms/manual_e:test:424": "62a4a0a009de03fd007723b80083e760b84b9bf6b0868f578108832dd93dab75",
+      "impli:idioms/manual_e:test:430": "9ad27ed65695729ed836091617a4101fcf767068c4bd772f2a2c4d55e8e54552",
+      "impli:idioms/manual_e:test:435": "ac3216f6b352625637ae0dd8a7cc81441f2ea95f3aa5ee54f1549deaaec23f02",
+      "impli:idioms/manual_e:test:449": "043f865b8270955f69e07c5f84159c4ceecd921743a5ada0466c2501b984d2a8",
+      "impli:idioms/manual_e:test:467": "f3c734e5b75d4ec1d4017f8c919286cb29726aeffba2a2a8d748b455f77d0c95",
+      "impli:idioms/manual_e:test:468": "265c9f4020ce653c2155fb7a07f5830535d4f61d3586985287fe9d4f9bc01178",
+      "impli:idioms/manual_e:test:470": "fd2d0e0b09088acf202ee14687dfdd3dabff0d935bf0bd7ff4bc844128d92b9e",
+      "impli:idioms/manual_e:test:502": "56582ae9f2342abe2598f4847fa826ec0e32260e135fbeba2d2039ec2da01719",
+      "impli:idioms/manual_e:test:507": "e1ed2427dc988aef87d54dc31bbfd3549776d247eee38862a5e51e699f57cbe8",
+      "impli:idioms/manual_ne:test:0": "3fb30a6cfa0056829945dacda76d0d89cfbdb320aafe1c599edc5b6186cd05d1",
+      "impli:idioms/manual_ne:test:14": "cb9d54ead8e1c942f6b3aa2e6806a109e0f2483350bef069289b73f3533ec976",
+      "impli:idioms/manual_ne:test:15": "8b034d9f4b82deb14b66acb46f026e098060bd92af9878b3a4bc2e651a0b9d0b",
+      "impli:idioms/manual_ne:test:86": "158e0247ab071255a78178b199588ee77d3412980fd7830794d487f3e75b47b1",
+      "impli:idioms/manual_ne:test:99": "37778227ebc3255757e5216f4f00da538f5b099e1cf5538d753f4d95446f75ed",
+      "impli:idioms/manual_ne:test:107": "61fdf8766fb600e4310584d2dae6a81b4f0553b68ddeb087010385c61d5b837c",
+      "impli:idioms/manual_ne:test:121": "79d7542a48a46501b86178d234f2f556d88ad7088741a363342533560aa71aed",
+      "impli:idioms/manual_ne:test:188": "e815ee4418472813b9b17b0fe49d434d940a2fce63439b886dd69660f4cb79fc",
+      "impli:idioms/manual_ne:test:207": "57e125bcb483d7feec52f73ca7ba5650d08c4ed2214315d056405b5072c30d85",
+      "impli:idioms/manual_ne:test:217": "a79d50f5f16ea30590b3865d4ad88335da41b741d04088c03207208eeab660cd",
+      "impli:metaphors/manual_e:test:1": "7552ee3051b5b25cdf6d4c7eeee60f2ca41f8b48d6e1c47dcf768da6dadc656f",
+      "impli:metaphors/manual_e:test:9": "db8cc82b9c3d69c182843d01d9658b20cd5e9e315fc49f27a71c09b7ebdb896c",
+      "impli:metaphors/manual_e:test:34": "1d0fcea8acfe0663e0f93b67099086f7814b95437d78e98ffef0a77dc9901ca3",
+      "impli:metaphors/manual_e:test:56": "d7d0001db09dce58560104fbed555b57826dd13135f976e55776ff05134badc4",
+      "impli:metaphors/manual_e:test:62": "09c79455c6a3f803804a73289647514bb8a6c9f4c7398f3672f61c660991a039",
+      "impli:metaphors/manual_e:test:86": "11c483898e60b3f50c35edb6ca760f95570d1cfef7c7bd348ef04c321d9e31a4",
+      "impli:metaphors/manual_e:test:125": "33b241b7ae3b6f1a1b13ae6efeb662e8719f9dea95c15c09f42c5576116409c8",
+      "impli:metaphors/manual_e:test:135": "28541147d474f29d0483061e247ccf5061ecdbce548d39abd2714dafc858c4c1",
+      "impli:metaphors/manual_e:test:151": "77757ff40ddc487cd5ee8cfcba03f5a0ce1a3a06cf9b0b6c6699bdd1c083f61e",
+      "impli:metaphors/manual_e:test:154": "1f370674d18554fcd9fef12ad6a995bc27c0bd7e9ed609952603012b475f8a47",
+      "impli:metaphors/manual_e:test:164": "b62df0463b8fe3212d1c57a7783d837da12362a8ecdf09a7f4c16b4f6b4848bc",
+      "impli:metaphors/manual_e:test:180": "b1505b41168cc9e986fc7cf81ec76364f3b2c381474407e3e2e970788701e1d6",
+      "impli:metaphors/manual_e:test:207": "bea20496d9daba213ab66e30643d16b45e119550eae2291455e7e4ec610cac3a",
+      "impli:metaphors/manual_e:test:258": "172947e4c129eb32e482e7e98201ba661f013065d02b476fe98f8ab6ee0d1002",
+      "impli:metaphors/manual_e:test:300": "843e7d1b2580d6d1fbfe1c1047f5f174037dfaeef8168b5fabc18eb2c47e5760",
+      "impli:metaphors/manual_e:test:373": "e78b24f97c4684cbc1f43c97d2e06707a92ae10db2d0391d132a67878ff8ff9c",
+      "impli:metaphors/manual_ne:test:22": "2d1a03a14649e2aa196ec4c6db6daba3830ba0fd1d72938b8abe97cd7a993a7d",
+      "impli:metaphors/manual_ne:test:25": "ae55b5207c6bba7e7fab7f975dbcf9392466f44f9b95b9a4e097981743af0349",
+      "impli:metaphors/manual_ne:test:27": "96975ef026dcdfa156240425753d207ffc4dd1e2e8247313a9ef6e0b92c5fae9",
+      "impli:metaphors/manual_ne:test:55": "87ba6db49463f727e59222296bb2bf8a3b996cbb944c8e7299cc8e95ae320731",
+      "impli:metaphors/manual_ne:test:63": "36f7057316130be5f2bcc183b2f77ade3a3913de2b27d44c4ae5c9a45395f641",
+      "impli:metaphors/manual_ne:test:78": "9ac7399df7c96f2c416ab3ac731f16c24d50ed4f2c11a712b6eb0ecfe79b85b2",
+      "impli:metaphors/manual_ne:test:89": "30134dcddbfae964e15cd598ef4f894921f09733de70a5f0ae4bebc99f128c0f",
+      "impli:metaphors/manual_ne:test:107": "e0a9c9825e48829418dd23d595f2aceea621089b1171adc537c93a86d0798a88",
+      "impli:metaphors/manual_ne:test:109": "ebb516d1af605be922c5f459c645bce514fa89d33aedb225a30810a923a3a7bf",
+      "impli:metaphors/manual_ne:test:113": "81fae35b0697562ff47ed80a0e27db424146bb0d7b7ce0e98999dfbf1b0d549e",
+      "impli:metaphors/manual_ne:test:161": "41cf736b73d90bbb9438847b245ad047cb23ce4972122df85370a4af1597b2ff",
+      "impli:metaphors/manual_ne:test:170": "f7a43c26160422315cc3fff8718d852c699c1a426c0ba73854a1c13763788a4a",
+      "impli:metaphors/manual_ne:test:182": "4ff5fbff454c95996c5e1bbb92a41ec90c9fb585afb2039bbb0f1b1d1afa5c22",
+      "impli:metaphors/manual_ne:test:203": "e96758be3ddb4edacd54d0dc93a9ae580912f3b094460616387cc3fa07ee3b7c",
+      "impli:metaphors/manual_ne:test:216": "e12783e9b86a09152167a56dbf3aa0580e546eb988d1eb2cb57b01f4b9af7dfa",
+      "impli:metaphors/manual_ne:test:248": "d9c590aea7ec052fd8dc38e28dbd345072d238d932de1ac6c164cb2a5472d245"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:19",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:40",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:47",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:69",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:88",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:91",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:101",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:105",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:144",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:148",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:155",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:163",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:168",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:173",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:186",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:200",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:205",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:207",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:227",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:252",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:260",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:271",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:287",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_antonyms_ne:test:357",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:10",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:38",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:49",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:98",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:101",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:116",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:121",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:143",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:153",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:182",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:213",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:229",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:263",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:276",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:279",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:292",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:299",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:301",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:326",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:340",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3711,
+        "true": 0.6289
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:347",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:358",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:364",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:410",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:420",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:424",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:430",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:435",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:449",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:467",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:468",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.2891,
+        "true": 0.7109
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:470",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:502",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_e:test:507",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:0",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.30079999999999996,
+        "true": 0.6992
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:14",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:15",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:86",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:99",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:107",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:121",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:188",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:207",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:idioms/manual_ne:test:217",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:1",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:9",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:34",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:56",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3164,
+        "true": 0.6836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:62",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:86",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:125",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3086,
+        "true": 0.6914
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:135",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:151",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:154",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:164",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:180",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:207",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:258",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:300",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_e:test:373",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:22",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:25",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:27",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:55",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:63",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:78",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:89",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32030000000000003,
+        "true": 0.6797
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:107",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:109",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:113",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:161",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3516,
+        "true": 0.6484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:170",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:182",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:203",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.3125,
+        "true": 0.6875
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:216",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "impli:metaphors/manual_ne:test:248",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.32809999999999995,
+        "true": 0.6719
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

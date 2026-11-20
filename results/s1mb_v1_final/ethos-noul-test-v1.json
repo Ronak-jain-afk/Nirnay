@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "ethos-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/ethos",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:27:36+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2230628398,
+    "accuracy": 0.67,
+    "positive_recall": 0.42,
+    "specificity": 0.92,
+    "precision": 0.84,
+    "balanced_accuracy": 0.67,
+    "f1": 0.56,
+    "true_positive": 21.0,
+    "false_positive": 4.0,
+    "false_negative": 29.0,
+    "true_negative": 46.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.10774864080000002,
+    "baseline_adjusted_skill": 0.3400000000000001,
+    "baseline_adjusted_score": 0.3400000000000001
+  },
+  "elapsed_seconds": 13.743669699999373,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "ethos:default:test:0": "566dc206a63f6bbfc2810956d154ce7602e2665febeb20e7948b9666b9b22521",
+      "ethos:default:test:16": "78ac6ce98bea27cc851e7e85d20682a546caff0a0641bb5066d17adae42b7cce",
+      "ethos:default:test:20": "74b1918391ea2892842e501c724317b67834c850acef626a628b02298970f791",
+      "ethos:default:test:21": "a0f2fd158fe3ca06a6b238841569f7a7b1f3299facedb8b2b277473acbfe3c10",
+      "ethos:default:test:22": "9a7e23c2c0a25d456265c12c1fb473d24e83d39c9b693a8007d9a332a2586af1",
+      "ethos:default:test:23": "8819f4e7ddbc040812eb5a9c485d82e963df80f86091662a7f9c16c7a1c82b9b",
+      "ethos:default:test:24": "712e7d5dc2353ba75e8bd12b10252df928acd5f0206d893a3039d5d86cc21535",
+      "ethos:default:test:25": "4b414046e653839e002699bbba882ee0d1008e5f939024ad33ddc2d020eb9fd4",
+      "ethos:default:test:26": "8224cdcc18066a7b26ff3910df52b21c1e9bec1627ffad427063299054d111b0",
+      "ethos:default:test:27": "24d2b7deb3f4d889c0681382c68b96baf2035993b0185f50fd530ede02682298",
+      "ethos:default:test:29": "f7ebb8e551ba8ab379fbd40f39e37e379e5ed4c3474d3497d080a2f3ce99f892",
+      "ethos:default:test:36": "c5f0a895e1e04fcec93f8f91eb8f19184c73828a07d5e4a9714fc6fc549d4ec3",
+      "ethos:default:test:38": "2602ccc1317ccfa4677cdcc5aa44cf79542c50a6e3c36090af86d9303c8093e2",
+      "ethos:default:test:47": "0e69b39083053076b11f2ed3ae3b57cc525e57d80fef8051baab98533709ee9b",
+      "ethos:default:test:48": "56fe22ff47c7b32b381a442f807dcf52f4b49ec33f3087a7d549e5b8aeac66e9",
+      "ethos:default:test:49": "9be45caf267f9a8d6da05d4db1f69215c15be5aad536865a8998f6da456e0e43",
+      "ethos:default:test:51": "c2cbe01bfba83aa7a7ddf2aae721820af6bf71b47ecc982acde3f27fc0e6cb8c",
+      "ethos:default:test:53": "845535e0f696c6a2bc9f7a4552c8c58f919d4e68badd9bab30c13a1c410a0f7b",
+      "ethos:default:test:60": "d59e890edfd3a03a66e0d710308ff82971421b004fb46a6778b9449d393880e0",
+      "ethos:default:test:63": "a787ceaa4ecf41445c718c09d5dc3aecebe02c066766feef45c7cf321f3f8cb6",
+      "ethos:default:test:65": "9c5be9f7a1668da5f93a26d549fd3d0631e68e4eacbae1ed0870bff24d1c0d9b",
+      "ethos:default:test:69": "3d48b6627deba6e0b9bcba8f5b76f056de7acec1866819d13939c7082d6852fe",
+      "ethos:default:test:71": "b606eb380f943f47a8db9a69eb21848e9e39592066028617cb24ad6f227fc9f9",
+      "ethos:default:test:86": "9d360f6b3a32811b8bca7c0eaa1b779417fd2384443df220138caaa0ee7598f1",
+      "ethos:default:test:89": "c8229b8719d893cbbc0bf84162a40fe58949b4688a14b58a192c7f5bb6bff300",
+      "ethos:default:test:92": "3976a9f4264a72f045af748f421ac830fc3132181572be7df62df5afdd5c9ea3",
+      "ethos:default:test:97": "babb9f219b997af80b407261cb2a2aa3f0e268bc5b98f89f3b33ed07169b7f1e",
+      "ethos:default:test:99": "9e35646648ea858d19b2b20c90b74ed5a1efb90a89dad383c9981354846c1a8d",
+      "ethos:default:test:110": "f898140e295cf38f1e036c2674a1f3b6c9c83f4a97130b44d558742d7216a965",
+      "ethos:default:test:111": "0beb47b699fd2b7aac68631e6c06f4edc130e838b1b2e285e0a1c698d82ab8e6",
+      "ethos:default:test:112": "7effaac271b9920b12960c352b85ad67b0c5ffb39b660fa13398d7f9e16533a6",
+      "ethos:default:test:113": "846531614b68686b32d4c0aa571718d8609520e663dd389af61e9417f2b3da91",
+      "ethos:default:test:121": "19d21b82314e6c1922cd2d9ef0eca9d884814f70fee8af95f00ce66509dab527",
+      "ethos:default:test:128": "2f0c3873cb141034ad5d5395fa9127e5df9cca913c95207e6e118f01bd0de23b",
+      "ethos:default:test:133": "1fc6aa99424a4ae79a159ccdb196cccafcd734c01100de484b9a3f76132e5e99",
+      "ethos:default:test:150": "f5342d70368132b066853bcbabdf3ff77e767c99174141362e56e4b5e16ac43a",
+      "ethos:default:test:164": "8599ff97a48d7daeceb116f6a2b302a4a42bff1156a54851acc2b4a2e727abbc",
+      "ethos:default:test:165": "94d5badca4b65cbec5fd1aa4665e4fdc54ddef749d6883e3deface6f6f673d7e",
+      "ethos:default:test:166": "647fa89534c06fb2c87385b9e5772c0ae19f38b75cf3cdb058a2088b8ddc49c3",
+      "ethos:default:test:168": "5bcd24dd54f52005ad4b5eee4176de6af2acdc2c6c989967ae93594c44e40aca",
+      "ethos:default:test:170": "806674ebc81a87ea8e6821934a819cc95aa994704389e6d0527b7ba28e61521b",
+      "ethos:default:test:171": "08b879fd9e53fbe2de0902a18d9ab36b95820d28cbf9a9263f15aafc7ecc9dbb",
+      "ethos:default:test:172": "de3455ec19c904ae24f26a05b04baf16788f07e2162707e0f6ca586c8b4021ad",
+      "ethos:default:test:176": "7bdc3c1c557fb5ccc64b85fae40e44d3b253121dd27b32231b49f3462345019f",
+      "ethos:default:test:177": "0a6075bd5bca3b2ad5c54add89854991c5b31815acd4e46fb6eb1d14ce7450a9",
+      "ethos:default:test:181": "0c59bc5aa2870c0a1f1a55bcb7bf22f70ecce7259314a6cfad6b9fe7ab18cc13",
+      "ethos:default:test:186": "34bd6f2def002e68767fc4b632256d276687c9a518e9e291788d601cfe914d09",
+      "ethos:default:test:190": "3a9662d4b15b9bfff70411a452a112626de6b39ec35beb63ea5efccaa7110683",
+      "ethos:default:test:192": "af4b2c869c6db5cc55bb11be99915e448877631fc155d049544aa3cb45c62c70",
+      "ethos:default:test:193": "6df196e4a92d61100a2b7703e9e41177c4ca61f00c81ad1fdb16dbe68cc2246a",
+      "ethos:default:test:195": "6ae834d1276d293bf93d051d7c5c36dbbf2aebeefb6b87db7904e436f682134c",
+      "ethos:default:test:196": "e04584a886d12c7dfe4914d26dd27d6c2151d426c6c873dfb7ca358679dc634c",
+      "ethos:default:test:198": "e7bf716c5549be83bace8ab7823923b9af4e6b379f6b8f8358a58c69460f1cfe",
+      "ethos:default:test:199": "6197bc306431cbdf56a625a19c0c3d8a2a8533ff0736a9646fb950ce02526f35",
+      "ethos:default:test:202": "d80b74ee49c364c118af533c05f95897634153ce3d998bc366d1b2c58a210251",
+      "ethos:default:test:208": "bd1f9447a1ad9d873fa1259241715bbf708cbdf641d77edd72a1a438a8e31640",
+      "ethos:default:test:214": "02cd651bf5ea772fd90aa83027870fc04d25e40abb3f50e04ec96d27924703c4",
+      "ethos:default:test:215": "893a9997d2884dce48f1f0f085f8f94abd9ecbcd9b3fa05dfc6c95eb4116fa78",
+      "ethos:default:test:217": "a052ff93e57ed57ab3076a9f6fc190ea7f191c0214d976bd9d030c0362e65210",
+      "ethos:default:test:218": "2e6ba51b34107de41144cecf739b840d4663b0053e589d7e912caa3136d94d1e",
+      "ethos:default:test:220": "b7590565ca09d219563f4a5ae8b4aa7f4ae472e9c76e5789ebb16ce5835a0617",
+      "ethos:default:test:228": "04698427b57faa12d907b71ece39627b948854a3e5fb70803ce86aa673cb0594",
+      "ethos:default:test:231": "1ac0fc2ccc4b3fa2cc6dfcc9a9067b3915a2a36ec77518ddae1f7747ec117db1",
+      "ethos:default:test:248": "dbe73915ad7ee024bc5f7f89ba8f9e2e7ba31be6a19ee74685287abfaacd7309",
+      "ethos:default:test:250": "7fe327c4180e4d326561151313839e9363dfee98b6adfe4ba4aa3ea78086110d",
+      "ethos:default:test:255": "db3056871823aa1b2fdbf9582315d19e372b59f96cbde25d0086f2576e9b5f32",
+      "ethos:default:test:260": "d34f65ce0c8c1af27e1caba97c2c2e7231002647a72db265b2dac583c758f9d7",
+      "ethos:default:test:261": "e31646ca6e40d9b6297abae5db25e0ea91b29a9794fe5f102da9d60b1651c408",
+      "ethos:default:test:262": "755958d34233f60d1a65de80486cd74b1dd5921abad0e15bffd08a33067e372d",
+      "ethos:default:test:264": "38ae1a741ea8ebd1a8c04be38661255dad5f4f2e99b70ac717acab191a246a28",
+      "ethos:default:test:265": "32c696d1ee979a99f67687f56ef7ed95422f17808ff8c9a8fc109107d41c2bf2",
+      "ethos:default:test:272": "41b1efe66e4a64630d9c4107dd63654990d6cb632d64cd9c44ad37dabe934a01",
+      "ethos:default:test:294": "cb139162f1230ba4ea5060eb1da096bb4cac5552a6a35cda9762e06ad4bb409c",
+      "ethos:default:test:297": "00c83ee94524f16219d18d1762104dc93b91ff3dea8aba4bf40a3ffae7bc835b",
+      "ethos:default:test:306": "507d17808d363e86873a58685ccb0c9145af8e3bd4da27314b4b0bcb92b89a69",
+      "ethos:default:test:315": "66410b4176af6240d7a5dbc78f01ba5ac27422832e3ecf7148b3d66d191385e9",
+      "ethos:default:test:320": "58bcff8c677f41f3fb28d55014bddf6a95ea4df4568da558c167caceb7d2cf5a",
+      "ethos:default:test:321": "67bcaba43f2798eace6b25983fc5c8cc7c6055368bd2442f385e09bf995be92c",
+      "ethos:default:test:326": "5acc375c7f6cdbe694e67a3d5560c00846a94d70470a89a719648a0071698a7a",
+      "ethos:default:test:329": "8ac5f4af34627928687309bbba7913ca178022fca52ecbb753d5dab7dfb267f2",
+      "ethos:default:test:330": "33164032310a168f6c2fe61699bf13de41c7b513cd52e917201d115cd6b3db62",
+      "ethos:default:test:349": "6b973c58a28d834d709d98e1f90bae5612d3e6f949035042959b58319e02b857",
+      "ethos:default:test:350": "eaedc1de56eff0a55dd5a18e2ec65bf4dd30f470dea1128756f3ec11eecb07e6",
+      "ethos:default:test:357": "efeebe50cb30fc10fd9a3f9deb37e4d3ec5d9e65c2a611e14c0ff5808e11ed97",
+      "ethos:default:test:361": "6ec0279e58e21037b9759e047de17b8e437fc6368ba599bff47ab1dfd44ff6a0",
+      "ethos:default:test:365": "014b5ac9c8397e525395076b22f48c237c53ed5150fdb323dd44a72112e39fec",
+      "ethos:default:test:366": "d312db93d285f09bcc42fc47f9c7ffb284ceb05cc1979129aca35bedff4f1880",
+      "ethos:default:test:370": "72a20d24ef41ad2893cedc4eabf826204455974cf993486409f1ddbb42349ab7",
+      "ethos:default:test:376": "5919e5dbee848b08c12d194b39e2a15947dbd7ecf5b45175b980b759942cb55e",
+      "ethos:default:test:377": "770897308b70ebd39243fbbe82895a942adfc2b0b08d3b68455d3628feff13d0",
+      "ethos:default:test:381": "ebf3b508b919d69874f689efc2399b935f087c454b504afb3896ffdb76d40ef1",
+      "ethos:default:test:383": "696dc7068f6aa27fe20bb793e4cee31a78ea3105197e364fab7ff929f2fb332f",
+      "ethos:default:test:385": "4d4be75b4ad2a0ce5c77afdda5a10ca20e4e318f0eb64ecdbd0ab07bd81960be",
+      "ethos:default:test:386": "2b9b4732bd6aa4c8a4236c9ee361b810f10e55be489f7884b42da54b1c620359",
+      "ethos:default:test:388": "bb6a25288231d9cb431bb6e02a97f9336acaed3918464384869db81c16d5024d",
+      "ethos:default:test:390": "51fb249312ade402d58ab02bd8a8202a8ae8085d788700644469bafb2699d728",
+      "ethos:default:test:391": "a099faa3b4d4dada08bc267e664ec3c26e9e43b59690c606c2c3bdb029d024ff",
+      "ethos:default:test:392": "725cdb6e8f2346877377d4479869d6cd600e4b3ccea43e59c97398f6a7632e6b",
+      "ethos:default:test:393": "43d7ea5d44a894fe9b14cdd73e3b2b714c808f334fbf6e853fcda2f45fc43f9d",
+      "ethos:default:test:395": "76b1a0d736eab00a99cf84c33c55634122a9d36678024263df0c3a83da301b49"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "ethos:default:test:0",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:16",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:20",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:21",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:22",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:23",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:24",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:25",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:26",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:27",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:29",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:36",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:38",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:47",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:48",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:49",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:51",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:53",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:60",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:63",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:65",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:69",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:71",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:86",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:89",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:92",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:97",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:99",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:110",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:111",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:112",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:113",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:121",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:128",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7959,
+        "true": 0.2041
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:133",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:150",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:164",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:165",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:166",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:168",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:170",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.8105,
+        "true": 0.1895
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:171",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:172",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:176",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:177",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:181",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:186",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:190",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:192",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.8872,
+        "true": 0.1128
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:193",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:195",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:196",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:198",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:199",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:202",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:208",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:214",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:215",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:217",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:218",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:220",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:228",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:231",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:248",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:250",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:255",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:260",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:261",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:262",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:264",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:265",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7441,
+        "true": 0.2559
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:272",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:294",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:297",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:306",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:315",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:320",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:321",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:326",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:329",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:330",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:349",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:350",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:357",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:361",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:365",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:366",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:370",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:376",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:377",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:381",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:383",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:385",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:386",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:388",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:390",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:391",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:392",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:393",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "ethos:default:test:395",
+      "question_id": "hateful",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

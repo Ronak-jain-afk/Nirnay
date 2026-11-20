@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "laya--enron-spam-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/laya__enron_spam",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:26:52+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2894541350000001,
+    "accuracy": 0.5,
+    "positive_recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "true_positive": 0.0,
+    "false_positive": 0.0,
+    "false_negative": 50.0,
+    "true_negative": 50.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.15781654000000045,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 15.842079000000012,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "enron_spam:default:test:8": "c6e29b9b5d507b139ea25f5fe0b9044bddf67ecfae0fb98557363361b97e361a",
+      "enron_spam:default:test:20": "ba1c848a0d5eb7cf534e6652342083e0d4d0964a2c80adb124736256ebf4ce06",
+      "enron_spam:default:test:37": "0c54a18f6bfad14b0877bafb3eb8f6f497244f6f4f0ba022133fcb0090484668",
+      "enron_spam:default:test:43": "e9684d894805b08b5a12b213099147b46c871ce6752555232384fb566ec36127",
+      "enron_spam:default:test:51": "889d60a98a55a882b2c54a6dfd3be36b41ff4f7f964df5f18c2c9b5c2a85150d",
+      "enron_spam:default:test:52": "ce992ff0a56d9b4d9f073da137ea084ea8526e858fea9e6b7cbffa2008414e84",
+      "enron_spam:default:test:98": "7c9b1f61d655ad6c8d28034171ad507dfdd96decc688d93f8d5ae4a56557380c",
+      "enron_spam:default:test:108": "571f712e7a1381d764ca9660e14dbdcf783c1b9a08301b0e7d438b32fa038513",
+      "enron_spam:default:test:116": "03183787aaaf1cd135cff81916a2d58feb8ebe3a21180f37bcb63e4a49c4b587",
+      "enron_spam:default:test:151": "b67b3dc3afc46ea5b55de927b496ed6a4167a2aeb94a5ce33b0cfc09f600d870",
+      "enron_spam:default:test:175": "7950e41d4805a53ede8c46256f5c55f8367eafce96bddaf91d12fedcb08cad72",
+      "enron_spam:default:test:191": "45eb95d6341ffc38d6d11dc6d3739ecb6b58d633548bbfb82920914f3586cdd1",
+      "enron_spam:default:test:270": "4839a18a60e64bd2a6ec468f5dbb7af7dd2dff5af3365eba26c034ce94e950f5",
+      "enron_spam:default:test:286": "4422c9adfd829b3c72d37b74a14aecbf468a0e6fab69603744cdcc856972eff0",
+      "enron_spam:default:test:291": "32393763004e12a5897ed3b7d446e205eefd6c05efd1c85bda1545d2f846729f",
+      "enron_spam:default:test:310": "5a954e294047cb3ba55b6929f99a17ab3400dc256575badc3a33a90ab1fa0a33",
+      "enron_spam:default:test:317": "60629fde090c2571f3b6b68bb779e64876daa27d0958c801bce3f7663d0710a6",
+      "enron_spam:default:test:318": "0fd29c49f0be2785d0b1049299c12b0200d11aa0fa165829ac99ed346ffee9bd",
+      "enron_spam:default:test:330": "24c68e3448dfd816ab00c9550b5528c2c4586d6bcc22530e898aab0ac9f95c3d",
+      "enron_spam:default:test:376": "919717c77a86bd5a202fb9a811738ab0105c2bb6c2106be76de3e55c89d5e960",
+      "enron_spam:default:test:383": "9ed59dbb745775a86f42bcc248fb83968d8657e83f311d84cdce55a201618a5d",
+      "enron_spam:default:test:393": "3e1c7bdded00a172593fa995591d4d12217cc9d8d51f8bbafe6b733cc3121cc6",
+      "enron_spam:default:test:427": "8a1dffaa42bc1decbcdb20d55e2d50fddfaebf6de8da99ebd96a3a197ee844a3",
+      "enron_spam:default:test:429": "549c207efba8afeb0c3426eb24cc9c55a724fca0bd760a5b2f6f573e7fc87ca9",
+      "enron_spam:default:test:443": "ffb722ec936764b887ca965a776f13f202e41d154589d22f10bc8140ab57dfd6",
+      "enron_spam:default:test:453": "0fbf10291ebb08ea4b3885eb85d5a5c63e48216d4eaf3e47f432ab0ad2788a94",
+      "enron_spam:default:test:457": "536c31b8a3cd4d6ca5677ddc54b6e8b8f9dc8bda2114f4403e8e032781a31c75",
+      "enron_spam:default:test:478": "039f7da7b3c32b247a9ddb68de48634226e37e8341c4f1388b1a3f6c63b1a3aa",
+      "enron_spam:default:test:511": "1b8c0dfc571fbae2462cff6a971828c05abba9333f4cb51fa221c4cd8b85a195",
+      "enron_spam:default:test:540": "ffd078a9261a2695460eed7e0db4b340fd10c108165d3e1c997ecc1ee85889ac",
+      "enron_spam:default:test:546": "455d01e84408551afd2e6d463d35c5514fc0e65e5936185b9666f135144d9159",
+      "enron_spam:default:test:552": "dbefc5027f39971d264fba4e4ce8364df942739acb83f4daf24695b20d2d2c43",
+      "enron_spam:default:test:597": "34ae727fd239647f3b4eb1493fc887ae0c57bf67f12dc921e86bf27edda07a75",
+      "enron_spam:default:test:628": "a79b9ab8c05a5844dfeaf874d1fa3fe0b8b9fbe770a7bb08e4850b7ebb41703d",
+      "enron_spam:default:test:719": "832e2f3bd305b6103d8cff932fc3fbaab5effa9d780dfca0962b89fcdce77d5c",
+      "enron_spam:default:test:769": "abf35d0a8afdeb8b7478df1a38de1a37b0b21d2062c7148a2122cbb2d269423c",
+      "enron_spam:default:test:770": "db2c5263d4cb03196c4feb532278daabb4f51ed5d5da22b085061ff746b2d5a5",
+      "enron_spam:default:test:793": "0535f711f1774f6a6862999c1de8e468bbda06f3b9331674ebf43b98153096da",
+      "enron_spam:default:test:811": "9b7c4c854a3b1ea354b5fcd064f1cf9c399d462b273ba63b7e9cd1290746bad7",
+      "enron_spam:default:test:839": "f1741d97f48dc1aac78e1ff49d4b0e1d6f3c324203f6a7016740e95a24638eb2",
+      "enron_spam:default:test:887": "4c0393603e8a42265bd542244eee23113a458ba2f4c22a5b1d27c9ae5e4d6084",
+      "enron_spam:default:test:924": "9722c1dd5d09343c2cb3e2b274adff4dc258429c658f40d0d09bbea2739d3f86",
+      "enron_spam:default:test:933": "6a53e065ad38967fe18bd1ce2a6f76cbb3e09c3fb85f04c350899e08d7cde7d0",
+      "enron_spam:default:test:950": "f3dc70c0f906f75c5c4d374db72056afddcfdef88ca8b1d36bdba2cd0eddc113",
+      "enron_spam:default:test:959": "c9ce162134f446164144ebb17cc257393b3464f5e23d63340e6b217f5eee44e2",
+      "enron_spam:default:test:964": "79b729117008d763f7352d87f546b27a34ab18692fd037688cb4c08dac119c41",
+      "enron_spam:default:test:973": "94e178c67aefdccdf9aa942690f0b5e5a6d9a9f31cc2e3ec314383911933ba88",
+      "enron_spam:default:test:988": "55e5dbac3d08598a2b56db32c1c2bc383196194d5c7002f8d0e52893ab87ec55",
+      "enron_spam:default:test:989": "b4dadb07945033d7cb8f058a76998677f37ea8255d4346912e39d19cb0157a53",
+      "enron_spam:default:test:1016": "8844500c85009f8c1944aa1f743b96dc417273aa27f669cd5621ddd9fd9b6035",
+      "enron_spam:default:test:1035": "36faf26efe152040771ed64714035a21efbef4f88aa323bc9643715465d644c3",
+      "enron_spam:default:test:1057": "c8ac607ec5739fbdc5ad586dc05950ace8f9ed5eec72a395b3cabcf1a8c6273c",
+      "enron_spam:default:test:1074": "af2f3e504635455d747c2ef77396dc712f6b0dff26f4bf8c98cf67585cf9d2fb",
+      "enron_spam:default:test:1083": "f7904e174d9a6599fb8eabb4a53adfd02ffd236f47e2746dcaae8c77f5c8594f",
+      "enron_spam:default:test:1101": "511863ba0802bebbedf26c433b688df9c4b94d53a8f73a12d840de98ff149ef2",
+      "enron_spam:default:test:1113": "9b7ef2ce63fe56bb5278ff0cf9823115d3b03dfcc0f4f57de908cb3214908207",
+      "enron_spam:default:test:1115": "b5f762c2d4f61c045ca74dd112d855ae5af88bf3de086508aef33b792d091d1f",
+      "enron_spam:default:test:1124": "5e8ba792c3e5263b37565a4fc7219f3f1a7f16cdde1721cb4adabd61b616d3e9",
+      "enron_spam:default:test:1141": "459e4f2750dfd2f7025490755d72c960458cc57016bead4ddecdb34e28dedc00",
+      "enron_spam:default:test:1149": "8a179a16c754c9cc7966464c24216b068e06e7a1ae7a92d64e002468f76d6ef2",
+      "enron_spam:default:test:1181": "a50f82618dafa577bbe92cc9b4bb5b66fce7624e5448ecd2ed0d7af443ebbc6c",
+      "enron_spam:default:test:1213": "581768beb9ca3b338e31b02f2c360d3f474f01721f8c8f0b1ad8d13e3f1d616d",
+      "enron_spam:default:test:1216": "271e8ec35e59457562a0813df683e180b04a3dfcfd7756d33d5bfba5f7967c76",
+      "enron_spam:default:test:1226": "b89ae7175b118c89057c7adc7a8b34977a28f3a889dbfff536d40838aefee136",
+      "enron_spam:default:test:1252": "02594d178fbfd8a2a80b102d5831d278360a918d9fbb6da4a4457be9b3c50e19",
+      "enron_spam:default:test:1255": "fd816f26420270fa051cca25d8e3dae09c1372c5dc7ef7226e38a3e93f39d9a5",
+      "enron_spam:default:test:1319": "8facd3a127dfe14cf503bfb0b42019ea83c0ececca9e9bdc9fb943a27db418b0",
+      "enron_spam:default:test:1394": "07d7bc679a6f83232a91d0b7bb999e4d83f9342f9379070e6d15dabb5acd7609",
+      "enron_spam:default:test:1418": "2ef278b44ed2482954570e6d86ac07795669d6f7567f76d9dd9dfad81f8567c2",
+      "enron_spam:default:test:1420": "9c7201d4584ae7ec16ef89805fb59b93fb691a01504fde8628b4d456f8a77755",
+      "enron_spam:default:test:1424": "d452859c53e3b983cacf7054faca03bb3cc6f0d3dade92c7f0894f203f923c53",
+      "enron_spam:default:test:1447": "1040dab50dc3757fe5dad2da1868f77f48ed52825da2e8989585206a46359870",
+      "enron_spam:default:test:1465": "c4f608249dfc9c83a0b40c28ca65e5d6eee570947c60cea31010e9607a87229e",
+      "enron_spam:default:test:1478": "d5d95e7fdbf297a637835fb7442f07f474ca727e4ac0a2945509ba3c1266919f",
+      "enron_spam:default:test:1480": "ca5fd9475b512658eed08ead2c259a9a6fc301cc9fbe05fdf597d724b1c315a6",
+      "enron_spam:default:test:1498": "902a4278aa4da960e84d0d1c6c9d307f02cd4aad8da26661a79026055aaaba3c",
+      "enron_spam:default:test:1527": "9240c1d4ffc9bafb27b5cf277bd906d72192f788699760fae6b3df602a84b908",
+      "enron_spam:default:test:1537": "3ba248b1d04d2bf459c2607b930a9b8900814142194f7c08ac9d888d9787aac9",
+      "enron_spam:default:test:1548": "b4448e53a0082d3f2a670efbad06bdbd8e4e54217f9b85b91fe457af3e1e0c45",
+      "enron_spam:default:test:1567": "a38214e6aee57347743956d167be4e6d0b0a09b19e11a762297ac5fdf9013ac6",
+      "enron_spam:default:test:1570": "095ab14d5196a2d69e7b3d5a35bca929340e97680dd0fecae2363a5f7ea4f511",
+      "enron_spam:default:test:1578": "f245adefe48431ee6a8a83a09d86be4d24b3103e128d04c8f3abb0fee849a38f",
+      "enron_spam:default:test:1620": "8afb20231d7dfee1ac46bdd0814ce9836e43c893b8803b2deb74077e303936a3",
+      "enron_spam:default:test:1642": "5377a8773fa23445bfe3be3540123d4a5921e4c8b28f990907fbbf6c27e486d2",
+      "enron_spam:default:test:1648": "6f0829cdc1915f3b034ac323e6ab34a17b03143ac8508cc5f818a464826523de",
+      "enron_spam:default:test:1672": "f43be4f2f67cda958ae6e01e695765bdda8cce084783b8837d2dc41f35eedc05",
+      "enron_spam:default:test:1677": "b32a9db97847263969f3101c8859fb2daf716cd6575ad4d816ab8212feada155",
+      "enron_spam:default:test:1756": "9fc51b2e2d097740c80be775016e9729ccc70d922cd710d759fee32df5437b5e",
+      "enron_spam:default:test:1775": "5289c291f832044e5a429b5f44a20af51ef26bf13128de12a1059181157cc82d",
+      "enron_spam:default:test:1798": "970f8f7d9ddfc33ff43b606202e8f5405f08498c983c340d60d8aef5d7801947",
+      "enron_spam:default:test:1809": "4a000ae133ab8dea61750270e062b23e0796c3d8f1c6f867eb9406b61e1f2aad",
+      "enron_spam:default:test:1814": "4eb8315d7d1c631b8b75b9d2bb9bf275537f8d689788f6a8dc9db3adeb372906",
+      "enron_spam:default:test:1816": "74863549f9c9132c031764d041e05cc2b68dbd992d58cf179f8829db56eb6aa0",
+      "enron_spam:default:test:1821": "173e274d441b3432fd27def0350ed252dd86408689932e79a45980c209727f2b",
+      "enron_spam:default:test:1871": "d05befb0121231fcc1b6f08d9530907204e115d65d0a438d44c221f09bbc8477",
+      "enron_spam:default:test:1872": "91084e02b641c397300916ac285005cff619bf4e74e9b0afe05573b3900bbe39",
+      "enron_spam:default:test:1881": "a6798184f090dad49a194ca249f5933060c9687315f752c227d53bedafe328e7",
+      "enron_spam:default:test:1890": "9617f835467ad38589121931fa5884fa820b04dc042becb0d5f0a4236a2ef0c4",
+      "enron_spam:default:test:1916": "c41436fc1abb71daf6f4e22f79f93da7b2cd1a53666c1074853c20950e6c2d9d",
+      "enron_spam:default:test:1917": "550a0d7ea80778e471ca65ca87342aeecd8d50ececff62c420d3731592526319"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "enron_spam:default:test:8",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:20",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:37",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:43",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:51",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:52",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:98",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:108",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7304999999999999,
+        "true": 0.2695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:116",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:151",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7363,
+        "true": 0.2637
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:175",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.752,
+        "true": 0.248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:191",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:270",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:286",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.75,
+        "true": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:291",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:310",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:317",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:318",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6758,
+        "true": 0.3242
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:330",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:376",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:383",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:393",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:427",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:429",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:443",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:453",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:457",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:478",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7773,
+        "true": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:511",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:540",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:546",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:552",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:597",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:628",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:719",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:769",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:770",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:793",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:811",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:839",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:887",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:924",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7148,
+        "true": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:933",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:950",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:959",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:964",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:973",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:988",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7461,
+        "true": 0.2539
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:989",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1016",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1035",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1057",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1074",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1083",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1101",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1113",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7578,
+        "true": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1115",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1124",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1141",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7031000000000001,
+        "true": 0.2969
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1149",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1181",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1213",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1216",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1226",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1252",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1255",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1319",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6659999999999999,
+        "true": 0.334
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1394",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1418",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6992,
+        "true": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1420",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7695,
+        "true": 0.2305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1424",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1447",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1465",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7246,
+        "true": 0.2754
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1478",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1480",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1498",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6797,
+        "true": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1527",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1537",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1548",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1567",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1570",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1578",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1620",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7343999999999999,
+        "true": 0.2656
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1642",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1648",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1672",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1677",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1756",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1775",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1798",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7284999999999999,
+        "true": 0.2715
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1809",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6679999999999999,
+        "true": 0.332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1814",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6953,
+        "true": 0.3047
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1816",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6582,
+        "true": 0.3418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1821",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1871",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7188,
+        "true": 0.2812
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1872",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6816,
+        "true": 0.3184
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1881",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7227,
+        "true": 0.2773
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1890",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.6895,
+        "true": 0.3105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1916",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7129,
+        "true": 0.2871
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "enron_spam:default:test:1917",
+      "question_id": "is_spam",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

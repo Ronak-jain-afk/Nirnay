@@ -1,0 +1,1371 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "sgd-choice-test-v1",
+    "task": "choice",
+    "dataset": "datasets/sgd",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "target_mass_at_prediction",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:44:55+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "target_mass_at_prediction": 0.48,
+    "uniform_accuracy_baseline": 0.35333333333333317,
+    "fixed_answer_accuracy_baseline": 0.41,
+    "baseline_adjusted_skill": 0.11864406779661016,
+    "baseline_adjusted_score": 0.11864406779661016
+  },
+  "elapsed_seconds": 6.598953900000197,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "sgd:default:test:419": "a3d5aa78c9deeaddcea824940870a0917a87ca038789c714a409fdf1840e2bcb",
+      "sgd:default:test:543": "fdaa304d6a2abdcb5843186e9d16418d31f7f32fefa6ab57c05db2cd8dafa44e",
+      "sgd:default:test:800": "79a0f96dbb244bd8e7c4d871303df95789c9c70a2b14e2be7ecc40fee2fe16cd",
+      "sgd:default:test:853": "e6500599e54d7e69ee6bd04a843f81e2c5701754da920d4a81ba8bbb267dc0eb",
+      "sgd:default:test:1177": "d761140cc8f989c2420b7baf1108565fd24733db013905051a940f1cef1855bd",
+      "sgd:default:test:2377": "7ab40b98e90d038dfd1016b84a0f7cf6c6f2bfa78d87772d35848ce322e68337",
+      "sgd:default:test:2508": "d7e67484782299a011add843a597aead51b7e53c299f8a3e0b5a7da1763a739d",
+      "sgd:default:test:2835": "ae8085f3365ef1dc4666298dcb77263879c7c45bfac98f240a465134c224d0d7",
+      "sgd:default:test:3023": "84f8566345b498f534f11bbd0c02d84f55cdb52753c8b95953b6e17cefc65554",
+      "sgd:default:test:3664": "99f48448899add5fce5e5b1771d35bbaa4cc0c2edbbbd2c42ad05eac9fbb6c3b",
+      "sgd:default:test:3666": "64c96b4152a049847bbf8a651c7998a100ab9b7e86bd3a977ba2ff8e48cfaf84",
+      "sgd:default:test:3824": "1491a0ffa0db09064044533b74ee3a1fe37001a13182d04d9321159914353dc2",
+      "sgd:default:test:3982": "11c5d06ab4aff9fe7a6267e17ac97d2119cd5bce7d61505fe03c83cba65ab64d",
+      "sgd:default:test:4858": "b55b72800b0ea1c94ad54a1016c381ac1ca3746aeaa578c47134d66d79e23e80",
+      "sgd:default:test:5211": "c16c6f60054ce509d828b3e45a11ea21db80ea6242fcacaabbf97b9aa6600ec3",
+      "sgd:default:test:5431": "bce3f951759f194c4313aa18c0a25223b3ac054fb905aa9ca5889a18234823e4",
+      "sgd:default:test:5770": "5b4c222700d10b943e3d3054d280a97c8716e2f961ba78fabd23633ad7fc5299",
+      "sgd:default:test:6185": "b279096e2ca1a99b27e7f6f7d8c288cb8986c8d36cfafc5d7c57d9b4a51f3ae4",
+      "sgd:default:test:6306": "bf4eb29f6645634293d2db25acb79f34e87548464959cb9ccb8f5bebb60d4615",
+      "sgd:default:test:7285": "8d4567a5301f173eda1f9b89a6e99be566a1c72d5a8e1814776ca8790a6b4f9f",
+      "sgd:default:test:7619": "9e452636564a4cf154123c0f4d8f7332032989cb804c8d439e8392fe4de59e6a",
+      "sgd:default:test:8009": "4cfba312eeba1d73217c11dfe02fc48bccccb3336352dd61de739a93a3fc9ead",
+      "sgd:default:test:8158": "78a0225740c41a4aff0f78a477c4efa1d3dc4bb7d337083f0413554cf9639475",
+      "sgd:default:test:8416": "8fcf941832fd01b1951041fef8ec961eeae564a8f2f1e3c8da7f3db5cd9e8ecc",
+      "sgd:default:test:9588": "fecb0497425a3eabed8096e81212cb08adcb21cf5a8af3daa9396d1242adcd05",
+      "sgd:default:test:9658": "bad77e0d318e552f8beed5955dd7f5fb2bb53fe8b3f40bbaa1be15a507ac609d",
+      "sgd:default:test:9798": "b9b73099cdb130d21d2d1e7b4a529c9b83e007895f8c1b66c042de5d9646978e",
+      "sgd:default:test:10484": "bb779cf7d058acc420f3ebc706099cda9cf2a2ab9e1a4bed1a68fe813e4f9cd1",
+      "sgd:default:test:10590": "0fe700868bb266e533dd53858f94665718fa292cc3a40058ab57805e195c59d5",
+      "sgd:default:test:10886": "c3293238f2c28ce2db5c2e4fbccfffdbda9771df93fe86cf8182c5575f81f155",
+      "sgd:default:test:11299": "b94b3d40e74c6eafc8f39350a76c9eeaa5e891a70023d981ed6968adc8dcd4dc",
+      "sgd:default:test:12045": "5da3acf0ca7d14b1873806eab5612ab6900d831ecc4302bb66d391d7cfff5be3",
+      "sgd:default:test:12448": "a3c0ce89735467435e3d7385bdabe5daa04cdc0524f73cf1b26fe60d3c152691",
+      "sgd:default:test:12678": "1011bfa2faa0e2b8c68f9d331068127fcd0a9b9749e00d7336f01c0a6c0464ed",
+      "sgd:default:test:13836": "f1a4efaf87c63f1dfa82ae87b6076d2972e281565f68a61a9a9fb80fd82c1b88",
+      "sgd:default:test:14020": "172e0f105d7beed1415c2fac260f6e7006e6cf7d06ca0b9b78ccafd73d61b5f9",
+      "sgd:default:test:14836": "bb4fb2eb2a831d905412f9e55bcbf236c61c8b335e34871ae9c93a3339ae6f59",
+      "sgd:default:test:15190": "dee41edd68a86ce3b2937aef125d23db78c042c2c64420c69139470d3c5f1224",
+      "sgd:default:test:15317": "65c2901709fa8e021d0606b9c4a8418dd47ac66531892411c5f2a526ef93db14",
+      "sgd:default:test:15561": "e8027975d9dd563facb4a3d712696a732fa22b9c5c4164d312f8360b3f9f209f",
+      "sgd:default:test:16285": "4587262367d9c06d2a49dd7bc55f751d84e3b5dcd0c89e6176629074627da897",
+      "sgd:default:test:16390": "d2a8a0cb938d2c01f094dce3ca86ee2dec48c7aa246eb0566ee84c8d18abb471",
+      "sgd:default:test:17333": "23bfa55e9fb3407d6dc55f380852c7b62fbd3b00c39a03708e9edb55135d0107",
+      "sgd:default:test:17964": "129b2ceca467544ed5f223664bbc3323a647cbffcf8db2411e1e2023b42e2362",
+      "sgd:default:test:17998": "a2822f5da9bf03ff670880aa57f0a6f7cf2a35bac98a31516176c56d833de735",
+      "sgd:default:test:18632": "185d9e6a5a7d3a6b83f9d98ed3beb7b1bb2bc79b7d368d86e50d9e1342bb103a",
+      "sgd:default:test:19203": "844415b43c8e8e9a0676c0270d6e82dc4755b60920edd83187e84956888eccef",
+      "sgd:default:test:19393": "29f2e142d0b70725fe23842e13fe36306ccc1300b98729d9144201d80a28bf00",
+      "sgd:default:test:19652": "85466284df320ffdac32ec5e9d66b147b9f9700bc6a9cc61d74631aba690846f",
+      "sgd:default:test:20147": "b035c398790d7aff6fe66f68912ea6d1c2f0f8d06ef70ec986d8409447a33bb5",
+      "sgd:default:test:20425": "c8cbcde5198fc9a8e1482222c41b16454cc166350d622b87f69a034f1288460d",
+      "sgd:default:test:20461": "d004b02ed70bc8c4938dc24f0a1682572ce1a67b91081a25c2a9fa64623d5f42",
+      "sgd:default:test:21032": "805db923bc43cbca10e9e1799439d85ea3eaa006c74628f9cd104439b45db6c3",
+      "sgd:default:test:21574": "8135077f8d431bdacae18ca1b9864e621ef9271f0ba0dd998296b5b083d3c55a",
+      "sgd:default:test:22499": "d93fe4934d4e940a703b7ab015f0667e2de1ea2c383baa49f131e71c8adb4a79",
+      "sgd:default:test:22536": "0a06997ff6bc5dfef6ac24ccc0cc391c2f9403c607f554cb3a75477f0be7a383",
+      "sgd:default:test:22724": "b65fc71177b98332b28b10f408b8191056b4c3268b6d2919b3a8a0e7b259aa83",
+      "sgd:default:test:24312": "8e089c729dc8c9b2ca025c155fe81818582ff187bc80259a85de533d5cde5e37",
+      "sgd:default:test:24861": "0e8a7da9f22c0c5f33d9c31a5c3ae948732628e4dc9aabf115dd2c87bb0dcdf0",
+      "sgd:default:test:24897": "61a7fde54442caa18ff08c337ddc084d6d5c5490819c755380c42a6dc1d977fe",
+      "sgd:default:test:25008": "fbcefe26dd797f3e54649a5a4d2d2db93c9ca9b917d7924617cec4bcf8622abe",
+      "sgd:default:test:25529": "d4dabba314a3cc51a53f6dfa7cd1b39dddd85103c090f51fa7d1b183bd64fb7b",
+      "sgd:default:test:26409": "3b71ae2aa4d2704a81be7fdd0e5c95402f5138c5102162965569ea63cb08ab70",
+      "sgd:default:test:27193": "6c2611faace8fbe299d71c037a6075ebd9e2dd357394c8d5e975613870bfe105",
+      "sgd:default:test:27309": "44e8ce8bc611f758a5eb66721f4c1abc02a40e9dd2f7f9fd1b66ce970bf340b1",
+      "sgd:default:test:27688": "cc9f15217d7a49be351adc6e21e07b3b9209ce5291b2d119b3825a624a1c7cc6",
+      "sgd:default:test:27998": "4e9993edd09a0f7f72208ad2b4f8feeaecda2e9f0933279d06493f9c3a2c54f8",
+      "sgd:default:test:28149": "883474e63e4f252bedbc99536dab98df7a4eabe107a9dd182f1d9ac860110dc2",
+      "sgd:default:test:28178": "530eece412ce12218f4b8d673d6904e5e699a4602ae167d66d58741214718d39",
+      "sgd:default:test:28886": "42def49e26c1388fa8d84697a15de11ee41770bb2fde338295eaa762f9821a9b",
+      "sgd:default:test:29036": "3d6779d045b885995f2c14b9db2e3cd332b3ab5d5fb60c8003ce94428aee44a8",
+      "sgd:default:test:29048": "85b8842d99d0fca36e5596f5fc5af6117dc303824a98207d172522e0f8b036eb",
+      "sgd:default:test:29063": "132221b6f7f39c6e68ce202aa4f43ff7b98d3f6dc72f6741d904100f2ac6f4dc",
+      "sgd:default:test:29386": "331eaa9dd16773c522ce7e586a355a95214579ea73b96ce2b8d1cb5f2d3b69e9",
+      "sgd:default:test:30096": "d24e4b28d477d3dca8ff4b85f5c870f1c48bc742e470c7c0d258b0fcc92e2c28",
+      "sgd:default:test:30138": "6a593df9262927f0c70c4e7f613ab0c7e5acfe145acb2f676539b66f5cc2b598",
+      "sgd:default:test:31865": "ff7983ecabad81ade1d0c8247e7bfd44701c6dd9145d8fb369ff1b150543af49",
+      "sgd:default:test:32110": "c2cf3db7fa9fe7c769ee484fc19397e7e588204f11c77b10c7a923b99f7ff3e9",
+      "sgd:default:test:32482": "3f059e1daeb765a1008cfc6a27610fe7ee26886d2f88b139109e70e8c383516d",
+      "sgd:default:test:33022": "2c8f59e63d752e437bbc6e8f62b5003ccb7e23a54200f5af2054c8f50d5de8a7",
+      "sgd:default:test:33252": "9c1a5bea96c1c142a75981758069851e3936e74a6f300501940e994e208c73b6",
+      "sgd:default:test:34070": "2a23bbf02669ac9ef09fb7f4c8e4e5dc6929dc51c64a51b79a85fd212fab3be1",
+      "sgd:default:test:35040": "9a9a8392c5e62c5e2a60cfc1d1c8fd6e8483b135efff80b1614785266a257524",
+      "sgd:default:test:35114": "e591db0c6a37863050fffec2186efce358d10e6838430466a07b441cad183791",
+      "sgd:default:test:35608": "4711d610d48a908a4e3dc179bc0838e97a5f8281fbb077fec6fcd0c5f743d900",
+      "sgd:default:test:37076": "df62437da70736e56eee70fbb46bbad8d84f7c250a73dbe8dd3dafb54d85f7c9",
+      "sgd:default:test:37287": "f1cd1cf559d60f9ef40ea970ce9a65ae8e14012a68f651119ebac20124d0a48d",
+      "sgd:default:test:37668": "47bbb31184dbc1a9a780ed75c48350f598d72b80cc3bd00d0a61879cc6617707",
+      "sgd:default:test:39318": "f7bc1429df07fc1826495e687ade0142018aff2197890caa5ec67022700b97bc",
+      "sgd:default:test:39368": "de4403b26d9248d64efce3a4445b19bd3b7a9b5818d7be046e9dcf9cf809a41e",
+      "sgd:default:test:39932": "e6b083d7774c1dc627745ff05958fb5a0ef15c514d995cf199124d4aa80653cc",
+      "sgd:default:test:40835": "1d984670f7ab3baad56f0f5cbb60463b5e7ecf7c6607c2b77bf584731324b908",
+      "sgd:default:test:40905": "39d836618f3734e003164edc415620a2fec886ea4d6fc9ea09c408d5afc4b50a",
+      "sgd:default:test:41314": "6f599622790418237f59de6e774a7897d71bf12a5289cb28ee1a33534c328ed0",
+      "sgd:default:test:41944": "98f4f0484e82e1230dc159b73ab35b7d057f1cc65187921ff6bf3bf85448e5be",
+      "sgd:default:test:42797": "7c71f2d7cdc5ba9ec6930806597e5be4fed2b66fa98693fac4736a920c273d4a",
+      "sgd:default:test:43633": "d59bd45b6c55ab827297fc969517533c52e69143c5aa08285e26a45e9dc2fc65",
+      "sgd:default:test:44568": "925d72a4cbe83b0edf12942759d0c2165294b6033eaf5a3c4ab4b1803b581c9f",
+      "sgd:default:test:45409": "b885db32cac8638e8e165a08a7696907000833d138733e418f1010f028a8e991",
+      "sgd:default:test:45547": "9e138c9aee9d158376323fb51aa2910c28ddc662b072fa94cd68d99dd35c84b3"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "sgd:default:test:419",
+      "question_id": "intent",
+      "probabilities": {
+        "ReserveHotel": 0.1836,
+        "SearchHotel": 0.6328,
+        "NONE": 0.1836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:543",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchHotel": 0.3322658126501201,
+        "ReserveHotel": 0.6176941553242594,
+        "NONE": 0.0500400320256205
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:800",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.09634451677516274,
+        "LookupMusic": 0.5280921382073109,
+        "PlayMedia": 0.3755633450175263
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:853",
+      "question_id": "intent",
+      "probabilities": {
+        "PlayMedia": 0.5317317317317317,
+        "LookupMusic": 0.40080080080080077,
+        "NONE": 0.06746746746746747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:1177",
+      "question_id": "intent",
+      "probabilities": {
+        "FindEvents": 0.3578652247922299,
+        "BuyEventTickets": 0.5905677380594773,
+        "NONE": 0.05156703714829278
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:2377",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.08001998001998002,
+        "GetCarsAvailable": 0.15904095904095902,
+        "ReserveCar": 0.7609390609390609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:2508",
+      "question_id": "intent",
+      "probabilities": {
+        "FindRestaurants": 0.4922,
+        "ReserveRestaurant": 0.373,
+        "NONE": 0.1348
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:2835",
+      "question_id": "intent",
+      "probabilities": {
+        "FindBus": 0.46484648464846484,
+        "BuyBusTicket": 0.46484648464846484,
+        "NONE": 0.0703070307030703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:3023",
+      "question_id": "intent",
+      "probabilities": {
+        "BuyBusTicket": 0.5122122122122122,
+        "FindBus": 0.32652652652652653,
+        "NONE": 0.16126126126126125
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:3664",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.07473736868434216,
+        "BookAppointment": 0.7542771385692846,
+        "FindProvider": 0.17098549274637317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:3666",
+      "question_id": "intent",
+      "probabilities": {
+        "FindProvider": 0.3150986875062619,
+        "NONE": 0.30528003206091575,
+        "BookAppointment": 0.3796212804328224
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:3824",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.11440296266639977,
+        "FindProvider": 0.31478330497447704,
+        "BookAppointment": 0.5708137323591232
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:3982",
+      "question_id": "intent",
+      "probabilities": {
+        "BookAppointment": 0.7741741741741741,
+        "NONE": 0.0986986986986987,
+        "FindProvider": 0.12712712712712712
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:4858",
+      "question_id": "intent",
+      "probabilities": {
+        "GetWeather": 0.7056592474298832,
+        "NONE": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:5211",
+      "question_id": "intent",
+      "probabilities": {
+        "ScheduleVisit": 0.5463536463536464,
+        "FindHomeByArea": 0.33166833166833165,
+        "NONE": 0.12197802197802196
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:5431",
+      "question_id": "intent",
+      "probabilities": {
+        "GetTimesForMovie": 0.3022164536741214,
+        "BuyMovieTickets": 0.6201078274760383,
+        "FindMovies": 0.0568091054313099,
+        "NONE": 0.02086661341853035
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:5770",
+      "question_id": "intent",
+      "probabilities": {
+        "FindHomeByArea": 0.3963018490754623,
+        "NONE": 0.11174412793603199,
+        "ScheduleVisit": 0.4919540229885058
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:6185",
+      "question_id": "intent",
+      "probabilities": {
+        "MakePayment": 0.24144144144144145,
+        "NONE": 0.12512512512512514,
+        "RequestPayment": 0.6334334334334335
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:6306",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.12877122877122876,
+        "GetTrainTickets": 0.7180819180819181,
+        "FindTrains": 0.15314685314685317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:7285",
+      "question_id": "intent",
+      "probabilities": {
+        "FindMovies": 0.6144674882276324,
+        "NONE": 0.38553251177236747
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:7619",
+      "question_id": "intent",
+      "probabilities": {
+        "PlayMovie": 0.4551,
+        "FindMovies": 0.3828,
+        "NONE": 0.1621
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:8009",
+      "question_id": "intent",
+      "probabilities": {
+        "BookHouse": 0.1933806619338066,
+        "NONE": 0.2636736326367363,
+        "SearchHouse": 0.5429457054294571
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:8158",
+      "question_id": "intent",
+      "probabilities": {
+        "BookHouse": 0.42185781421857815,
+        "NONE": 0.16798320167983202,
+        "SearchHouse": 0.41015898410158985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:8416",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.13842315369261476,
+        "BookHouse": 0.24171656686626747,
+        "SearchHouse": 0.6198602794411178
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:9588",
+      "question_id": "intent",
+      "probabilities": {
+        "FindBus": 0.7535232383808097,
+        "NONE": 0.10494752623688156,
+        "BuyBusTicket": 0.14152923538230885
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:9658",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchHotel": 0.3248496993987976,
+        "ReserveHotel": 0.5519038076152304,
+        "NONE": 0.12324649298597194
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:9798",
+      "question_id": "intent",
+      "probabilities": {
+        "FindEvents": 0.4219,
+        "NONE": 0.1699,
+        "BuyEventTickets": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:10484",
+      "question_id": "intent",
+      "probabilities": {
+        "FindEvents": 0.3418,
+        "BuyEventTickets": 0.582,
+        "NONE": 0.0762
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:10590",
+      "question_id": "intent",
+      "probabilities": {
+        "BuyEventTickets": 0.558991293905734,
+        "FindEvents": 0.38306814770339237,
+        "NONE": 0.057940558390873614
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:10886",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1805194805194805,
+        "BuyEventTickets": 0.49170829170829167,
+        "FindEvents": 0.32777222777222775
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:11299",
+      "question_id": "intent",
+      "probabilities": {
+        "GetWeather": 0.6927855711422846,
+        "NONE": 0.30721442885771544
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:12045",
+      "question_id": "intent",
+      "probabilities": {
+        "LookupMusic": 0.5786786786786786,
+        "NONE": 0.1827827827827828,
+        "PlayMedia": 0.23853853853853854
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:12448",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1559816257239864,
+        "ScheduleVisit": 0.06391052526462952,
+        "FindHomeByArea": 0.780107849011384
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:12678",
+      "question_id": "intent",
+      "probabilities": {
+        "AddAlarm": 0.3531468531468532,
+        "GetAlarms": 0.4390609390609391,
+        "NONE": 0.2077922077922078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:13836",
+      "question_id": "intent",
+      "probabilities": {
+        "BookAppointment": 0.5317317317317317,
+        "NONE": 0.22482482482482483,
+        "FindProvider": 0.24344344344344343
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:14020",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.17362637362637365,
+        "FindProvider": 0.6165834165834166,
+        "BookAppointment": 0.2097902097902098
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:14836",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1579788296385061,
+        "BuyBusTicket": 0.7684242061114439,
+        "FindBus": 0.07359696425004993
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:15190",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.14145854145854148,
+        "FindBus": 0.362937062937063,
+        "BuyBusTicket": 0.4956043956043956
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:15317",
+      "question_id": "intent",
+      "probabilities": {
+        "GetAlarms": 0.2789095266626722,
+        "AddAlarm": 0.6513880567205911,
+        "NONE": 0.06970241661673657
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:15561",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.10169152237013311,
+        "FindProvider": 0.7506756080472425,
+        "BookAppointment": 0.14763286958262437
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:16285",
+      "question_id": "intent",
+      "probabilities": {
+        "BookHouse": 0.2770506544110301,
+        "SearchHouse": 0.5775801778399441,
+        "NONE": 0.1453691677490259
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:16390",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchHouse": 0.5234523452345234,
+        "NONE": 0.2812281228122812,
+        "BookHouse": 0.19531953195319532
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:17333",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1035,
+        "FindProvider": 0.3457,
+        "BookAppointment": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:17964",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchHotel": 0.5892696573084225,
+        "NONE": 0.2068138675192327,
+        "ReserveHotel": 0.2039164751723449
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:17998",
+      "question_id": "intent",
+      "probabilities": {
+        "ReserveHotel": 0.4431341195282831,
+        "SearchHotel": 0.4431341195282831,
+        "NONE": 0.11373176094343394
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:18632",
+      "question_id": "intent",
+      "probabilities": {
+        "GetRide": 0.7773,
+        "NONE": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:19203",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchRoundtripFlights": 0.36133613361336137,
+        "NONE": 0.24802480248024802,
+        "SearchOnewayFlight": 0.39063906390639064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:19393",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchRoundtripFlights": 0.35420841683366733,
+        "NONE": 0.31312625250501,
+        "SearchOnewayFlight": 0.33266533066132264
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:19652",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.09674837418709353,
+        "ReserveCar": 0.8207103551775887,
+        "GetCarsAvailable": 0.08254127063531766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:20147",
+      "question_id": "intent",
+      "probabilities": {
+        "GetCarsAvailable": 0.33396660333966605,
+        "NONE": 0.22267773222677734,
+        "ReserveCar": 0.4433556644335567
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:20425",
+      "question_id": "intent",
+      "probabilities": {
+        "GetCarsAvailable": 0.20716573258606885,
+        "ReserveCar": 0.7466973578863091,
+        "NONE": 0.0461369095276221
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:20461",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.05392989114151602,
+        "ReserveCar": 0.8582842305003495,
+        "GetCarsAvailable": 0.08778587835813442
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:21032",
+      "question_id": "intent",
+      "probabilities": {
+        "ReserveCar": 0.6099489540586528,
+        "GetCarsAvailable": 0.33820438394555097,
+        "NONE": 0.05184666199579622
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:21574",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchHouse": 0.6878439219609804,
+        "NONE": 0.1089544772386193,
+        "BookHouse": 0.2032016008004002
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:22499",
+      "question_id": "intent",
+      "probabilities": {
+        "GetWeather": 0.7123246492985972,
+        "NONE": 0.2876753507014028
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:22536",
+      "question_id": "intent",
+      "probabilities": {
+        "LookupMusic": 0.43420789104746643,
+        "PlayMedia": 0.4772681754456239,
+        "NONE": 0.08852393350690968
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:22724",
+      "question_id": "intent",
+      "probabilities": {
+        "GetRide": 0.781981981981982,
+        "NONE": 0.218018018018018
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:24312",
+      "question_id": "intent",
+      "probabilities": {
+        "BuyEventTickets": 0.6441779110444777,
+        "FindEvents": 0.2674662668665667,
+        "NONE": 0.08835582208895554
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:24861",
+      "question_id": "intent",
+      "probabilities": {
+        "BookAppointment": 0.7155155155155155,
+        "NONE": 0.13003003003003002,
+        "FindProvider": 0.15445445445445444
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:24897",
+      "question_id": "intent",
+      "probabilities": {
+        "FindRestaurants": 0.28724362181090546,
+        "ReserveRestaurant": 0.6487243621810905,
+        "NONE": 0.064032016008004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:25008",
+      "question_id": "intent",
+      "probabilities": {
+        "FindRestaurants": 0.3284284284284284,
+        "ReserveRestaurant": 0.61001001001001,
+        "NONE": 0.061561561561561555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:25529",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.06486756621689156,
+        "MakePayment": 0.1933033483258371,
+        "RequestPayment": 0.7418290854572713
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:26409",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.12724175934275123,
+        "FindMovies": 0.6966235848111412,
+        "PlayMovie": 0.17613465584610763
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:27193",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1465,
+        "FindTrains": 0.3867,
+        "GetTrainTickets": 0.4668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:27309",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.2175824175824176,
+        "FindEvents": 0.515084915084915,
+        "BuyEventTickets": 0.26733266733266736
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:27688",
+      "question_id": "intent",
+      "probabilities": {
+        "FindEvents": 0.3049744770293264,
+        "BuyEventTickets": 0.6060454408968071,
+        "NONE": 0.08898008207386648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:27998",
+      "question_id": "intent",
+      "probabilities": {
+        "ShareLocation": 0.582,
+        "NONE": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:28149",
+      "question_id": "intent",
+      "probabilities": {
+        "GetTrainTickets": 0.6520391843262695,
+        "FindTrains": 0.27918832467013194,
+        "NONE": 0.06877249100359856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:28178",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1523152315231523,
+        "SearchOnewayFlight": 0.6914691469146915,
+        "SearchRoundtripFlights": 0.1562156215621562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:28886",
+      "question_id": "intent",
+      "probabilities": {
+        "BuyMovieTickets": 0.2812281228122812,
+        "NONE": 0.1621162116211621,
+        "FindMovies": 0.3086308630863086,
+        "GetTimesForMovie": 0.24802480248024802
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:29036",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1846,
+        "ReserveRestaurant": 0.5703,
+        "FindRestaurants": 0.2451
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:29048",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1865186518651865,
+        "BuyMovieTickets": 0.33203320332033204,
+        "GetTimesForMovie": 0.2832283228322832,
+        "FindMovies": 0.1982198219821982
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:29063",
+      "question_id": "intent",
+      "probabilities": {
+        "ReserveRestaurant": 0.652952952952953,
+        "NONE": 0.15735735735735737,
+        "FindRestaurants": 0.1896896896896897
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:29386",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.08881118881118881,
+        "MakePayment": 0.2556443556443556,
+        "RequestPayment": 0.6555444555444555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:30096",
+      "question_id": "intent",
+      "probabilities": {
+        "PlayMedia": 0.42727272727272725,
+        "NONE": 0.15904095904095902,
+        "LookupMusic": 0.41368631368631364
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:30138",
+      "question_id": "intent",
+      "probabilities": {
+        "PlayMedia": 0.4060375849660136,
+        "LookupMusic": 0.5075969612155139,
+        "NONE": 0.08636545381847262
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:31865",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.31112224448897796,
+        "FindAttractions": 0.688877755511022
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:32110",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.2773,
+        "FindAttractions": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:32482",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.15399201596806386,
+        "FindTrains": 0.6003992015968064,
+        "GetTrainTickets": 0.24560878243512976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:33022",
+      "question_id": "intent",
+      "probabilities": {
+        "FindTrains": 0.5541458541458542,
+        "NONE": 0.12977022977022978,
+        "GetTrainTickets": 0.3160839160839161
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:33252",
+      "question_id": "intent",
+      "probabilities": {
+        "GetTrainTickets": 0.5978195639127826,
+        "FindTrains": 0.35167033406681336,
+        "NONE": 0.05051010202040408
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:34070",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.20079840319361275,
+        "FindMovies": 0.5380239520958084,
+        "PlayMovie": 0.2611776447105788
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:35040",
+      "question_id": "intent",
+      "probabilities": {
+        "FindAttractions": 0.7056592474298832,
+        "NONE": 0.29434075257011677
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:35114",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.332,
+        "FindMovies": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:35608",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.1934,
+        "ReserveRestaurant": 0.5664,
+        "FindRestaurants": 0.2402
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:37076",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchRoundtripFlights": 0.6060454408968071,
+        "NONE": 0.1935742167951156,
+        "SearchOnewayFlight": 0.20038034230807725
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:37287",
+      "question_id": "intent",
+      "probabilities": {
+        "ReserveHotel": 0.5552552552552552,
+        "NONE": 0.2697697697697698,
+        "SearchHotel": 0.174974974974975
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:37668",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchOnewayFlight": 0.4195224298131681,
+        "NONE": 0.17464282146068538,
+        "SearchRoundtripFlights": 0.40583474872614644
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:39318",
+      "question_id": "intent",
+      "probabilities": {
+        "FindEvents": 0.3184,
+        "NONE": 0.248,
+        "BuyEventTickets": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:39368",
+      "question_id": "intent",
+      "probabilities": {
+        "FindBus": 0.29460539460539464,
+        "BuyBusTicket": 0.5971028971028972,
+        "NONE": 0.1082917082917083
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:39932",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.22537462537462535,
+        "GetCarsAvailable": 0.2985014985014985,
+        "ReserveCar": 0.4761238761238761
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:40835",
+      "question_id": "intent",
+      "probabilities": {
+        "BookAppointment": 0.33949445499050857,
+        "FindProvider": 0.5775801778399441,
+        "NONE": 0.08292536716954742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:40905",
+      "question_id": "intent",
+      "probabilities": {
+        "GetTimesForMovie": 0.30816856401038545,
+        "NONE": 0.23986419013381263,
+        "FindMovies": 0.34911124425803874,
+        "BuyMovieTickets": 0.10285600159776312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:41314",
+      "question_id": "intent",
+      "probabilities": {
+        "FindProvider": 0.31884638493891454,
+        "BookAppointment": 0.6141598237532545,
+        "NONE": 0.06699379130783097
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:41944",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.10929070929070928,
+        "BookAppointment": 0.7609390609390609,
+        "FindProvider": 0.12977022977022976
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:42797",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.2441,
+        "AddAlarm": 0.4707,
+        "GetAlarms": 0.2852
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:43633",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.2773,
+        "ShareLocation": 0.7227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:44568",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.2305,
+        "GetWeather": 0.7695
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:45409",
+      "question_id": "intent",
+      "probabilities": {
+        "NONE": 0.14231536926147706,
+        "FindAttractions": 0.857684630738523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "sgd:default:test:45547",
+      "question_id": "intent",
+      "probabilities": {
+        "SearchOnewayFlight": 0.5391,
+        "NONE": 0.2109,
+        "SearchRoundtripFlights": 0.25
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

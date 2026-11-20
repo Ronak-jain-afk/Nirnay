@@ -1,0 +1,1582 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "s1mb-generalization-contextual-score-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/s1mb-generalization-contextual-score",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:44:09+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.2953442817474652,
+    "normalized_score_rmse": 0.3437756005969713,
+    "constant_score_baseline": 0.5,
+    "constant_mae_baseline": 0.3,
+    "baseline_adjusted_skill": 0.015519060841782673,
+    "baseline_adjusted_score": 0.015519060841782673
+  },
+  "elapsed_seconds": 5.112167299999783,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "contextual-score-001": "b17afec6ffe82c51caa93f71cb5d43f4756b1ba894842fa1cec836e722d86f78",
+      "contextual-score-002": "d7ee959c3eae6501dc74353f1c4c84db38d2357d7ef340fe0b53458bac332089",
+      "contextual-score-003": "56762eb840497b6e9066ae6fd46288589143803ccebacdab75604b8f87e3d733",
+      "contextual-score-004": "38d3c81fdafd5a4076f4f435b86297ae6ed2fa2a9c4146e1875c62e16073aa15",
+      "contextual-score-005": "626beeae9cc2e8a47208753ae3ef7fad3f9c04b224c3814260659cdc66962eea",
+      "contextual-score-006": "655689b7d03e284a21c4146ea00bca1a92fdcbac3b7f60f646ac7db8c5a5ccc2",
+      "contextual-score-007": "e0fedfeb1eabf6d02bbb7e4d3765c5e9fd49ea5e5469e9518c3ef32064028f9d",
+      "contextual-score-008": "f7c9285e4938f438ccfbd8270ecd144146b1c613bec95051b97c564fff489778",
+      "contextual-score-009": "06f06e7127e176a0ad0429c07368e686c8809bcd3bde8d81e2cf5028df6afb60",
+      "contextual-score-010": "d6df17728d5174475c50e3512c9c19993e37c5f6eaf11e0e645c27887bd99972",
+      "contextual-score-011": "01235aef144be2a1419142c71f1fa0bae1441cd06bbc4d41d4d96b08d6d19d07",
+      "contextual-score-012": "97f9420775622d7b340503230c44c29a6d69c27777996bfb8dce1fe7c585c35a",
+      "contextual-score-013": "afc9d81360fa8a86824f46192c88bf82fdd81bae5f07383acdba05069e22176d",
+      "contextual-score-014": "91049809b13e0765afe9ba5a68769e2dca48ed3972f77cd0aa94eb6e6ae4e52a",
+      "contextual-score-015": "b8e27a9883ec7b0d22d333322a7b137bf4038053feeb534762f133f3e515bfb3",
+      "contextual-score-016": "005514e3fc916002198571683fa7d545eec031c777086e867dfb1e140b277687",
+      "contextual-score-017": "ede4efc67196e998403bc2dc41826cd0c52b6131f46ba1b104a97d80209324be",
+      "contextual-score-018": "693bfe20f1d5a99a013f82ccf0eba70dd6e64a51387ba39e6776b7ab60276d15",
+      "contextual-score-019": "53456dba6135778bd98004f8cd1d453f24ec69a49804bb4d53d327abfb45c518",
+      "contextual-score-020": "00867995577ac6eaa896c5c9bc0c920f8599dfaaec793891b72794119524c045",
+      "contextual-score-021": "6801ad6b3c0147b406b673995aad5f6bac15adbe7265dccca05deba04609acda",
+      "contextual-score-022": "df918d81d0ae0045a12eeed9febbad30bb57b2bcb608e5d4e195946aa67c9df9",
+      "contextual-score-023": "db7524eebc2c50b2834b754082fe4bb0edd625acebe6d010282f73373025a106",
+      "contextual-score-024": "5a2f84c72e65c4bfaa6c6aebbf618573f89bbda8e913ada6a4fb69451dd3bd49",
+      "contextual-score-025": "5d5ca880bc47f9970bc8063fef96ad0254706c337e7216fd56fc20a2e770a95b",
+      "contextual-score-026": "2e37022593c8054684fff99e93900a8fc0f91834f77a6be7b068cb615d387bf4",
+      "contextual-score-027": "87bf492935504c89acb4c58a8669994af7256df39407096847935f39330962de",
+      "contextual-score-028": "0b6313237cbc498979069b54fad1e581a55bb9564b3e9123d3bd4609ad00e3f3",
+      "contextual-score-029": "46a98f8f8a01fc2a207fc0bb750c940bbd04a083272deb055bf7d30aff6631e7",
+      "contextual-score-030": "62a29f7b51d4311df0d61cfdc7094465553ca0ec0d1f739e49f68328c69be376",
+      "contextual-score-031": "c20d279a2538baaaf7bf207aaae31c5bd129f69b42541f37284be8d7e6873b5a",
+      "contextual-score-032": "55032ca9d7fe12c126fcc7f6ed38a1602e15a1c5043aeb4c3a854c40c9e1e8ea",
+      "contextual-score-033": "3816f0e1efa8d6879afcf5aec1e9b07e0c1db25cecfebad473a008da5b07b06a",
+      "contextual-score-034": "a61d1cac01d156bf79b25fbc6014c793d961307caa09a6aba1819d7d2339655a",
+      "contextual-score-035": "d4648989fbe7eb14ef2d21a892238d54dcb5d6ac6c02a7b4c1bda72ed2439c22",
+      "contextual-score-036": "1fcaf9f2501683d6ac17366de9c082430f14969856cc3351bcdf475e8e25eb21",
+      "contextual-score-037": "ae515f95717a165a2f1bf746582ccf49eab91f0fff9e8d152572ea5a1ec47725",
+      "contextual-score-038": "6e1a8fab97acc17a248b67b21689157d44470f074fa1a04c1a5c7cc4c9d3f755",
+      "contextual-score-039": "21773807780bba56444230799e6beda42a80c99817e9dcc8674ecdb93126dd6c",
+      "contextual-score-040": "de0745c27b1c219111fe874739f8aa0499e01651b8b052c17b8f7a6d67b86fcf",
+      "contextual-score-041": "0ef8a58b0355bc75ed5050cc4159910fad05747583bf77c2e4b5ff885e8095f3",
+      "contextual-score-042": "b340f7339bc7d946d0629bc58c41196625773f768d87845cf542d5c2e65d6092",
+      "contextual-score-043": "336364121e7914db1f89832362fdd099ec4ff630cd532464dffe0dab6b1ccd38",
+      "contextual-score-044": "d298b093e280136ba4d984a6022ba1f4f2f117934c0b1ff29914cb63d678058a",
+      "contextual-score-045": "1b66daf894ed253688db35c6f2360d7db878b60cdd93755c6f57468fdaf14aa1",
+      "contextual-score-046": "db8e75096eda0bdda7d57f0d66c4bb48f3842267aac757b90e61035e0b9cde65",
+      "contextual-score-047": "5566b1e2c58ef0dcbf40e4a7d4583e4277c9f8f69fe1106d600019d6b41da9c2",
+      "contextual-score-048": "6c90442c1b0b27bd2c6b5ebeb478da9096169ca80e01a7d0db46dcdc79e57656",
+      "contextual-score-049": "4ac1f55b41ff6b64cf0a0cb4660c8ba32846bcfa713036c1555e5d3fcf1b8298",
+      "contextual-score-050": "e5dd3dc5b20202f2ef9c12262dfc9c75c94e5d49db904cd4bd9120059d8b13a7",
+      "contextual-score-051": "e721724f185c1e6aca9b4f08bd306bca069f29792aba21f52fe42e3c484599e4",
+      "contextual-score-052": "487da06a2d66d4412cd2a8f616b0ca0494120ee3a258c458946a97d0a6c13c48",
+      "contextual-score-053": "1c211032f9f8c77a35ac3aac2fe9a3d3c5e80b6657f2866200af1457e8f6cb73",
+      "contextual-score-054": "82d3995af71cd8bf644a8a692327bbe1972b04f13d830837741d406dcb2df384",
+      "contextual-score-055": "964340eb145aa4ee9853fd92dd9b7e8ff46973df9f9705c3cc02022cab265702",
+      "contextual-score-056": "e34846b999d6b9c436c2f111f1bbea38196190cedb9e95d2c28450a2ca8374f0",
+      "contextual-score-057": "fe7615a6881990533dd1432022e84bd2d4cd8a3f1eb8f4b45da382bfbee1c22c",
+      "contextual-score-058": "b801dab96913d6a216ab137da1f1f9dc9955c361795cdde8ba0eb05da507373e",
+      "contextual-score-059": "138bd1ef28b5db448951b6a5e2a95be4ae2b3e6eb4d0fa0ea728442bfe45ab4b",
+      "contextual-score-060": "2bf6a10b55a267f9393cc01d1a64e10186dfc83cbb9a42b4129c482594935159",
+      "contextual-score-061": "bd7c50a3fc56deb1c951dab8af09ecab936c5dd3dc7c1ccd18dcee40e331d726",
+      "contextual-score-062": "316baeb6a328c0c51bec1db342ccaad4cf42b49a187800be6b724b9f3c273c7f",
+      "contextual-score-063": "96c1cd7f033f50b5aa98f02c524cd31fabfe82e87ee750a7affdcc0a08e3f8d0",
+      "contextual-score-064": "688553a68460df830d7577d5ee7ba33d8a070630103d483781292e54a76759b8",
+      "contextual-score-065": "60afb135761b569a983911dd303ba0516600519b1cb852fdbcbf1bd3328f40b4",
+      "contextual-score-066": "e0e19ed38a7154c6b11c02636220d306be86a05465214a5e5d04873643d8800c",
+      "contextual-score-067": "6ddf1193ea5a489b8ce6852f7175a81b7c1f3f1dc53e87068e4066ff1d134cf5",
+      "contextual-score-068": "37a3a3122393324f9103ea8d9114e40572b95c25d88d6f0409d74842e3931cec",
+      "contextual-score-069": "b58c547ca2ddfbe1f2d15f6aba6eb15497329541bdc123139a35e0f59acc834c",
+      "contextual-score-070": "9c3fd85e1b8007f48eadf16db7eab939ae54056ebd6ba4fcd110eeb72f394754",
+      "contextual-score-071": "9b0da50057e194e8e7bfdde1dbabef281d2564e6cd515d3e4a389977538634f6",
+      "contextual-score-072": "313c65eabf5d9ffb77d8e954878b9613d7a3ee4ce6088e4ce9c14d816375fafe",
+      "contextual-score-073": "ce8033d1b163fd08d9753121c76d28791fd1804a11ea4c824a33accd80b6ebdf",
+      "contextual-score-074": "490011735f896fe8836506835b0a3abca0ba36995f9694968c73a7e6b2d6672c",
+      "contextual-score-075": "a0c454560d17f101ee6d7ebfd8c8f3972402896d6b6e2cbc668c1e018ed022db",
+      "contextual-score-076": "562f7b5638290b293fcc65e167b987da967f8133e5a94fea155d59563cceaea8",
+      "contextual-score-077": "ec2862aa2ad4078204c6ac5eb28579eb68d931ce0129921b1ce98e26500cc7ff",
+      "contextual-score-078": "c7080c19ba8ab736243a85f34eacc4e483e63d7a8e3e80e61c8c6a07aaa0fee3",
+      "contextual-score-079": "f19c4b878551e265b89947a66dd0a97f01740f9bbe5216393b9034bad8b929ec",
+      "contextual-score-080": "7a895b90e665beb6d32db01b6c4a24e8019beeb55fa102863466804c5c5ee151",
+      "contextual-score-081": "028800bd73e0d5e269029d411f2df0c2bbf0d0748cb9ddfb1e3ec2d9ad8668a1",
+      "contextual-score-082": "666c590f9e2711a7fc92271af7ded935989af864debd967e663ddf4931d1c17d",
+      "contextual-score-083": "7651f3ffaf44daad6896415adb37cd84fe4c430a7588a64ae0207ac34560d6d3",
+      "contextual-score-084": "3c4445f23fb2310db3e6b2f924a5716ae63321993a0c65e8576f09f556ccc461",
+      "contextual-score-085": "0eaba2c4dfe9da8435e743a85749d06cffe6656a095a39286305cb159259445c",
+      "contextual-score-086": "565b5e2dc7fb7f141f9ab43e8b2745d0f45570a6dc7272803d78014e9592ff85",
+      "contextual-score-087": "f435117a42f6d5d74b998c306d61517c9b1f5eea4ce433a2312c189053eb342d",
+      "contextual-score-088": "67dfcb443c277f6fc71f0b97c92a2e0ff295ab7f16b242d23021811f83138a36",
+      "contextual-score-089": "df44d8918eef563daf85960b75471d4848fcfd5a773063f35837510efb4016ca",
+      "contextual-score-090": "f89ba910262f71a975738526474ccd752640ebee5f4a07c4a5340e3bf16c9fd8",
+      "contextual-score-091": "33994ed92a5df24bda771374b017f17889af16e1c129d85eae94ad38a29d3a64",
+      "contextual-score-092": "f2a9380fd348dc6980e7a20859e4abc2c31811467d919e3287318c89e03e2fda",
+      "contextual-score-093": "f7a94eba1be0d08e78d97927c7ee27f77e76232fd42e97f356b323e30731034c",
+      "contextual-score-094": "68d0ac61319d1fe8e91b51f8d361c64407967b1eb4cf84a070503555c75d2115",
+      "contextual-score-095": "c5e4b0455611fecc86b2951201a51cbbaf026b0de17493218688d82265342b2a",
+      "contextual-score-096": "c2de9aa364c92745247555554db84c6b9e87952be6b4c0b71c2d267b38995a59",
+      "contextual-score-097": "bf1210209218c22aee07ec2cc028aac6b5e1ed53397c3148f3374e288d7fad8d",
+      "contextual-score-098": "013b60abe552ed7db42c051707eae0545fe58b8f7e1ddf8f9435e53e35c10d41",
+      "contextual-score-099": "892931c52ce07228fe7abfb27326ca7ae69abe2c789b5601c1b57175c229a1af",
+      "contextual-score-100": "38a9084853bfd477636c7ac346949b398a57ed9305981e508ba114ce0aeada5f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "contextual-score-001",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3398,
+        "1": 0.166,
+        "2": 0.1602,
+        "3": 0.1631,
+        "4": 0.1709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-002",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.22482482482482483,
+        "1": 0.16126126126126125,
+        "2": 0.1827827827827828,
+        "3": 0.18868868868868868,
+        "4": 0.24244244244244245
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-003",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21682168216821682,
+        "1": 0.1445144514451445,
+        "2": 0.21092109210921092,
+        "3": 0.207020702070207,
+        "4": 0.22072207220722073
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-004",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.207979202079792,
+        "1": 0.42575742425757424,
+        "2": 0.15428457154284572,
+        "3": 0.11818818118188182,
+        "4": 0.0937906209379062
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-005",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3262,
+        "1": 0.207,
+        "2": 0.1592,
+        "3": 0.124,
+        "4": 0.1836
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-006",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.15934340906816136,
+        "1": 0.18666800120108099,
+        "2": 0.174957461715544,
+        "3": 0.23561205084576117,
+        "4": 0.24341907716945252
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-007",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21092109210921092,
+        "1": 0.21392139213921393,
+        "2": 0.1865186518651865,
+        "3": 0.1777177717771777,
+        "4": 0.21092109210921092
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-008",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1875,
+        "1": 0.2441,
+        "2": 0.2256,
+        "3": 0.1875,
+        "4": 0.1553
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-009",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1855185518551855,
+        "1": 0.2012201220122012,
+        "2": 0.1562156215621562,
+        "3": 0.21092109210921092,
+        "4": 0.24612461246124615
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-010",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.14854854854854854,
+        "1": 0.20040040040040039,
+        "2": 0.16816816816816818,
+        "3": 0.23363363363363363,
+        "4": 0.24924924924924924
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-011",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.30632430812268957,
+        "1": 0.2311919272654611,
+        "2": 0.13168148666200422,
+        "3": 0.1639524428014787,
+        "4": 0.1668498351483665
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-012",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.24560878243512976,
+        "1": 0.14910179640718563,
+        "2": 0.18812375249500998,
+        "3": 0.20369261477045908,
+        "4": 0.21347305389221558
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-013",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.4805,
+        "1": 0.1875,
+        "2": 0.0933,
+        "3": 0.0903,
+        "4": 0.1484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-014",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2002,
+        "1": 0.1973,
+        "2": 0.1826,
+        "3": 0.249,
+        "4": 0.1709
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-015",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1973,
+        "1": 0.1377,
+        "2": 0.207,
+        "3": 0.2412,
+        "4": 0.2168
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-016",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2384192096048024,
+        "1": 0.12016008004002,
+        "2": 0.17488744372186094,
+        "3": 0.0737368684342171,
+        "4": 0.3927963981990995
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-017",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2197,
+        "1": 0.1143,
+        "2": 0.1689,
+        "3": 0.1768,
+        "4": 0.3203
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-018",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21,
+        "1": 0.1855,
+        "2": 0.2012,
+        "3": 0.1611,
+        "4": 0.2422
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-019",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.15055055055055055,
+        "1": 0.2023023023023023,
+        "2": 0.15055055055055055,
+        "3": 0.23653653653653656,
+        "4": 0.26006006006006005
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-020",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.20212021202120212,
+        "1": 0.18951895189518952,
+        "2": 0.19531953195319532,
+        "3": 0.1982198219821982,
+        "4": 0.2148214821482148
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-021",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.18467386954781911,
+        "1": 0.12454981992797118,
+        "2": 0.28921568627450983,
+        "3": 0.1758703481392557,
+        "4": 0.22569027611044415
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-022",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.16798320167983202,
+        "1": 0.2597740225977402,
+        "2": 0.17578242175782424,
+        "3": 0.21187881211878812,
+        "4": 0.1845815418458154
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-023",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1689168916891689,
+        "1": 0.1338133813381338,
+        "2": 0.19531953195319532,
+        "3": 0.19531953195319532,
+        "4": 0.3066306630663066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-024",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2068138675192327,
+        "1": 0.11609551403736638,
+        "2": 0.14926566090518537,
+        "3": 0.15316215406134479,
+        "4": 0.37466280347687086
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-025",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.166,
+        "1": 0.2373,
+        "2": 0.2129,
+        "3": 0.1875,
+        "4": 0.1963
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-026",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.13478652134786523,
+        "1": 0.06979302069793021,
+        "2": 0.07909209079092092,
+        "3": 0.12258774122587741,
+        "4": 0.5937406259374063
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-027",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.4765523447655235,
+        "1": 0.125987401259874,
+        "2": 0.17768223177682232,
+        "3": 0.0937906209379062,
+        "4": 0.125987401259874
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-028",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1338,
+        "1": 0.2793,
+        "2": 0.167,
+        "3": 0.2422,
+        "4": 0.1777
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-029",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.16485163352982315,
+        "1": 0.24388050754321108,
+        "2": 0.2399840143870516,
+        "3": 0.19612348886002595,
+        "4": 0.15516035567988806
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-030",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21002100210021002,
+        "1": 0.1318131813181318,
+        "2": 0.2617261726172617,
+        "3": 0.1689168916891689,
+        "4": 0.22752275227522753
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-031",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3186868181363227,
+        "1": 0.09578620758682814,
+        "2": 0.1583425082574317,
+        "3": 0.163246922230007,
+        "4": 0.2639375437894105
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-032",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.19431943194319432,
+        "1": 0.3203320332033203,
+        "2": 0.1611161116111611,
+        "3": 0.1709170917091709,
+        "4": 0.1533153315331533
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-033",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.14352823588205899,
+        "1": 0.14832583708145927,
+        "2": 0.20199900049975014,
+        "3": 0.0766616691654173,
+        "4": 0.4294852573713144
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-034",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3536768384192096,
+        "1": 0.17198599299649825,
+        "2": 0.07763881940970487,
+        "3": 0.19539769884942473,
+        "4": 0.2013006503251626
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-035",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1816,
+        "1": 0.1289,
+        "2": 0.2637,
+        "3": 0.2031,
+        "4": 0.2227
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-036",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.35371222733640184,
+        "1": 0.20222133279967983,
+        "2": 0.12457474484690816,
+        "3": 0.1572943766259756,
+        "4": 0.16219731839103463
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-037",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1993794414973476,
+        "1": 0.2639375437894105,
+        "2": 0.17305575017515765,
+        "3": 0.18766890201181063,
+        "4": 0.17595836252627367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-038",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.17215823735603406,
+        "1": 0.2620931397095643,
+        "2": 0.25037556334501754,
+        "3": 0.1984977466199299,
+        "4": 0.11687531296945419
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-039",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.16583416583416585,
+        "1": 0.15124875124875128,
+        "2": 0.2,
+        "3": 0.2341658341658342,
+        "4": 0.24875124875124877
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-040",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1924192419241924,
+        "1": 0.30273027302730277,
+        "2": 0.1455145514551455,
+        "3": 0.20212021202120212,
+        "4": 0.1572157215721572
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-041",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.28936042438194376,
+        "1": 0.22580322290061056,
+        "2": 0.1329196276648984,
+        "3": 0.15543989590631568,
+        "4": 0.1964768291462316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-042",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.06633366633366634,
+        "1": 0.14735264735264736,
+        "2": 0.2106893106893107,
+        "3": 0.14245754245754247,
+        "4": 0.4331668331668332
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-043",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2306153076538269,
+        "1": 0.22281140570285143,
+        "2": 0.11965982991495747,
+        "3": 0.18169084542271136,
+        "4": 0.24522261130565282
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-044",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.10389610389610388,
+        "1": 0.09320679320679319,
+        "2": 0.24585414585414583,
+        "3": 0.4057942057942058,
+        "4": 0.15124875124875123
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-045",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1846,
+        "1": 0.2363,
+        "2": 0.1709,
+        "3": 0.1602,
+        "4": 0.248
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-046",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2814814814814815,
+        "1": 0.15055055055055055,
+        "2": 0.13493493493493494,
+        "3": 0.18768768768768768,
+        "4": 0.24534534534534536
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-047",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21213334668134948,
+        "1": 0.20532585844428872,
+        "2": 0.16518169986985684,
+        "3": 0.21503654019421362,
+        "4": 0.20232255481029132
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-048",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2051,
+        "1": 0.2256,
+        "2": 0.1504,
+        "3": 0.1865,
+        "4": 0.2324
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-049",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1795384154261165,
+        "1": 0.2233989409531422,
+        "2": 0.17364372065141376,
+        "3": 0.2233989409531422,
+        "4": 0.20001998201618545
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-050",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.31808191808191805,
+        "1": 0.1727272727272727,
+        "2": 0.15704295704295704,
+        "3": 0.15024975024975024,
+        "4": 0.20189810189810187
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-051",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.22657734226577342,
+        "1": 0.18748125187481252,
+        "2": 0.17968203179682032,
+        "3": 0.22657734226577342,
+        "4": 0.17968203179682032
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-052",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1905905905905906,
+        "1": 0.12902902902902902,
+        "2": 0.2092092092092092,
+        "3": 0.054754754754754754,
+        "4": 0.4164164164164164
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-053",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1738,
+        "1": 0.2158,
+        "2": 0.2031,
+        "3": 0.2305,
+        "4": 0.1768
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-054",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21200600300150077,
+        "1": 0.12896448224112056,
+        "2": 0.20520260130065035,
+        "3": 0.07083541770885443,
+        "4": 0.38299149574787394
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-055",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1866866866866867,
+        "1": 0.16226226226226226,
+        "2": 0.1896896896896897,
+        "3": 0.2111111111111111,
+        "4": 0.2502502502502503
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-056",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.165,
+        "1": 0.2471,
+        "2": 0.1748,
+        "3": 0.2051,
+        "4": 0.208
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-057",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.20501799280287886,
+        "1": 0.08536585365853659,
+        "2": 0.18152738904438226,
+        "3": 0.29478208716513393,
+        "4": 0.23330667732906837
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-058",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.26784105695125615,
+        "1": 0.22580322290061056,
+        "2": 0.17105394855369832,
+        "3": 0.15053548193374036,
+        "4": 0.1847662896606946
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-059",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.18948105189481051,
+        "1": 0.23537646235376464,
+        "2": 0.207979202079792,
+        "3": 0.17768223177682232,
+        "4": 0.18948105189481051
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-060",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.26786786786786787,
+        "1": 0.24044044044044044,
+        "2": 0.22582582582582583,
+        "3": 0.15245245245245245,
+        "4": 0.1134134134134134
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-061",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.30512717804926903,
+        "1": 0.10224314039655517,
+        "2": 0.15351492088924495,
+        "3": 0.17895053074304026,
+        "4": 0.26016422992189064
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-062",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.08742622786836052,
+        "1": 0.13964189256777032,
+        "2": 0.2949884965489647,
+        "3": 0.048114434330299084,
+        "4": 0.4298289486846054
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-063",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.08108378324335133,
+        "1": 0.7225554889022195,
+        "2": 0.09178164367126576,
+        "3": 0.028394321135772848,
+        "4": 0.07618476304739052
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-064",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2600340306275648,
+        "1": 0.14563106796116504,
+        "2": 0.15543989590631568,
+        "3": 0.22290061054949456,
+        "4": 0.2159943949554599
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-065",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2002200220022002,
+        "1": 0.2734273427342734,
+        "2": 0.23052305230523054,
+        "3": 0.1562156215621562,
+        "4": 0.1396139613961396
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-066",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.09271655510040962,
+        "1": 0.21560595464082322,
+        "2": 0.16485163352982315,
+        "3": 0.14826656009591366,
+        "4": 0.37855929663303023
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-067",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.22772772772772773,
+        "1": 0.25415415415415415,
+        "2": 0.2043043043043043,
+        "3": 0.1915915915915916,
+        "4": 0.12222222222222222
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-068",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2773277327732773,
+        "1": 0.2148214821482148,
+        "2": 0.1367136713671367,
+        "3": 0.1455145514551455,
+        "4": 0.22562256225622562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-069",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2755377688844422,
+        "1": 0.10115057528764382,
+        "2": 0.18859429714857429,
+        "3": 0.26573286643321664,
+        "4": 0.16898449224612305
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-070",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.12066033016508254,
+        "1": 0.2755377688844422,
+        "2": 0.208104052026013,
+        "3": 0.22571285642821412,
+        "4": 0.16998499249624813
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-071",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1717454291137976,
+        "1": 0.22729543410930167,
+        "2": 0.1609551403736637,
+        "3": 0.18243580777300433,
+        "4": 0.2575681886302328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-072",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1934,
+        "1": 0.1816,
+        "2": 0.166,
+        "3": 0.1582,
+        "4": 0.3008
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-073",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.160344309878891,
+        "1": 0.23361024922430187,
+        "2": 0.1964768291462316,
+        "3": 0.17595836252627367,
+        "4": 0.23361024922430187
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-074",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.18859429714857429,
+        "1": 0.2501250625312656,
+        "2": 0.21690845422711355,
+        "3": 0.22081040520260128,
+        "4": 0.12356178089044521
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-075",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.15635635635635636,
+        "1": 0.261961961961962,
+        "2": 0.1925925925925926,
+        "3": 0.16426426426426427,
+        "4": 0.22482482482482483
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-076",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.18876426997796916,
+        "1": 0.1643300620869217,
+        "2": 0.31093530943320646,
+        "3": 0.0895253354696575,
+        "4": 0.24644502303224514
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-077",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.15637200921013114,
+        "1": 0.24927420162178396,
+        "2": 0.24536990689758736,
+        "3": 0.21994193612974272,
+        "4": 0.12904194614075482
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-078",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.23193612774451097,
+        "1": 0.25149700598802394,
+        "2": 0.21147704590818364,
+        "3": 0.13253493013972056,
+        "4": 0.17255489021956089
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-079",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.24987506246876562,
+        "1": 0.19130434782608696,
+        "2": 0.1215392303848076,
+        "3": 0.21669165417291356,
+        "4": 0.22058970514742632
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-080",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.24122412241224123,
+        "1": 0.21972197219721973,
+        "2": 0.17381738173817382,
+        "3": 0.21682168216821682,
+        "4": 0.1484148414841484
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-081",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.22050154860625434,
+        "1": 0.15605954640823258,
+        "2": 0.17953841542611648,
+        "3": 0.19412528724148265,
+        "4": 0.24977520231791384
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-082",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1855,
+        "1": 0.2383,
+        "2": 0.1641,
+        "3": 0.1885,
+        "4": 0.2236
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-083",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2194805194805195,
+        "1": 0.24875124875124877,
+        "2": 0.17662337662337665,
+        "3": 0.17072927072927074,
+        "4": 0.18441558441558442
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-084",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.21,
+        "1": 0.1445,
+        "2": 0.2061,
+        "3": 0.2197,
+        "4": 0.2197
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-085",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.16716716716716717,
+        "1": 0.087987987987988,
+        "2": 0.10950950950950951,
+        "3": 0.1368368368368368,
+        "4": 0.4984984984984985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-086",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3004995004995005,
+        "1": 0.19410589410589413,
+        "2": 0.17952047952047953,
+        "3": 0.18831168831168835,
+        "4": 0.13756243756243758
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-087",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.30466953304669536,
+        "1": 0.1933806619338066,
+        "2": 0.17968203179682032,
+        "3": 0.1708829117088291,
+        "4": 0.1513848615138486
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-088",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.248,
+        "1": 0.1875,
+        "2": 0.1436,
+        "3": 0.1846,
+        "4": 0.2363
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-089",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.19639819909954975,
+        "1": 0.18169084542271136,
+        "2": 0.10995497748874436,
+        "3": 0.27163581790895447,
+        "4": 0.24032016008004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-090",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.23165482030233256,
+        "1": 0.13394734207628392,
+        "2": 0.23165482030233256,
+        "3": 0.17499249174091502,
+        "4": 0.22775052557813596
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-091",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.19902088120691375,
+        "1": 0.13268058747127584,
+        "2": 0.2360875212308922,
+        "3": 0.19612348886002595,
+        "4": 0.2360875212308922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-092",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2175824175824176,
+        "1": 0.2175824175824176,
+        "2": 0.19510489510489512,
+        "3": 0.2106893106893107,
+        "4": 0.15904095904095908
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-093",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1902287940853232,
+        "1": 0.14147267459286642,
+        "2": 0.20491557598161653,
+        "3": 0.24777700069937053,
+        "4": 0.21560595464082322
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-094",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.3089089089089089,
+        "1": 0.15545545545545544,
+        "2": 0.16516516516516516,
+        "3": 0.21211211211211212,
+        "4": 0.15835835835835838
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-095",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2537731134432784,
+        "1": 0.19130434782608696,
+        "2": 0.11564217891054474,
+        "3": 0.22648675662168916,
+        "4": 0.21279360319840082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-096",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1944944944944945,
+        "1": 0.261961961961962,
+        "2": 0.18868868868868868,
+        "3": 0.21411411411411413,
+        "4": 0.14074074074074075
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-097",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.1738,
+        "1": 0.1123,
+        "2": 0.1641,
+        "3": 0.1689,
+        "4": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-098",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.175975975975976,
+        "1": 0.14374374374374374,
+        "2": 0.2023023023023023,
+        "3": 0.23363363363363363,
+        "4": 0.24434434434434435
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-099",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.2888111888111888,
+        "1": 0.14925074925074924,
+        "2": 0.1746253746253746,
+        "3": 0.1834165834165834,
+        "4": 0.20389610389610388
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "contextual-score-100",
+      "question_id": "judgment",
+      "probabilities": {
+        "0": 0.11417440815103384,
+        "1": 0.28288882229547496,
+        "2": 0.4799720307661572,
+        "3": 0.06003396264109479,
+        "4": 0.06293077614623913
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

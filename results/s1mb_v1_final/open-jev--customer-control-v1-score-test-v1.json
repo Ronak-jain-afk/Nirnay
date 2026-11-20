@@ -1,0 +1,732 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--customer-control-v1-score-test-v1",
+    "task": "score",
+    "dataset": "datasets/open_jev__customer-control-v1",
+    "split": "test",
+    "case_count": 50,
+    "decision_count": 50,
+    "primary_metric": "normalized_expected_score_mae",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:39:54+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 50,
+    "expected": 50,
+    "succeeded": 50,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "normalized_expected_score_mae": 0.4426261062205377,
+    "normalized_score_rmse": 0.4983222976773965,
+    "constant_score_baseline": 0.25,
+    "constant_mae_baseline": 0.33,
+    "baseline_adjusted_skill": -0.3412912309713263,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 2.9188594999995985,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__customer-control-v1:customer-control-v1:42:46:bug_severity": "fcd5c480a7b0d905b7b7809bc9043b02d38b756651fa49bd1a9b2ffb464f86fc",
+      "open_jev__customer-control-v1:customer-control-v1:42:52:churn_likelihood_level": "2674eabab84b2595280f2886af0783eb73a85de165c1922ab53c0125d648b4fa",
+      "open_jev__customer-control-v1:customer-control-v1:42:93:frustration": "93fa871b4bcbeba6efa543d934e395680c1765f6d53902ca9efdd7b24c6bceb9",
+      "open_jev__customer-control-v1:customer-control-v1:42:94:churn_likelihood_level": "53d9297d349fd5e786f45bd5a02c514e91e3d45c4716d4a25b25a93a82708008",
+      "open_jev__customer-control-v1:customer-control-v1:42:109:bug_severity": "566efd823362a845c0b451b0ab141a07abed6ca21fecbcf1022e8c1d15dd0b27",
+      "open_jev__customer-control-v1:customer-control-v1:42:112:frustration": "43f60bc4f76d57a4c9729f22e8803bb475ad8a746f4fa8544b3f2c6e4e69ecdf",
+      "open_jev__customer-control-v1:customer-control-v1:42:112:churn_likelihood_level": "6cb10e446f2620c099506aed1b312e00dfcf6ceb270cd353417026ea63a9435c",
+      "open_jev__customer-control-v1:customer-control-v1:42:113:frustration": "618181d31895a3ca7bb6570ed0f58f980ffcccc51753b3516aa333a0dfd8f777",
+      "open_jev__customer-control-v1:customer-control-v1:42:113:churn_likelihood_level": "0156e6aa4e224fe47412714237c49cb15833558a7d1481e25695d05dd8dd4629",
+      "open_jev__customer-control-v1:customer-control-v1:42:125:frustration": "b4138bb2f73e59ea2a83b794d68eec908f57abce9e497afd9640916ab42c1a22",
+      "open_jev__customer-control-v1:customer-control-v1:42:161:frustration": "88ccaee57848da0fd92adc2ac2803ae392b9242c5dc01ec781e786bd864275be",
+      "open_jev__customer-control-v1:customer-control-v1:42:178:bug_severity": "9837f0f8a90278f230daf62ff60ab25ca824836d7223e5e40be383ff430e666a",
+      "open_jev__customer-control-v1:customer-control-v1:42:192:churn_likelihood_level": "a3b1e2c544d180ddfd4b2a0e60c1f3725586fd0581479949d1b415222d6ab13e",
+      "open_jev__customer-control-v1:customer-control-v1:42:193:bug_severity": "5ebae46ba1d8a48bd683b5a7cd775f021f027967451487085bba727126d10d4d",
+      "open_jev__customer-control-v1:customer-control-v1:42:193:churn_likelihood_level": "9228131c83c20224c80d37fd52a5071d28010a13bf4e58c13dd87bba8cf9e6a5",
+      "open_jev__customer-control-v1:customer-control-v1:42:197:churn_likelihood_level": "bb074581f4df93024854eaac50b251a62a7225801b930376b574a1d8c22a4fd6",
+      "open_jev__customer-control-v1:customer-control-v1:42:304:churn_likelihood_level": "f766b0817c8c81032d265f354dd8e656ba69705e40474753a978e79bfdf26fb4",
+      "open_jev__customer-control-v1:customer-control-v1:42:336:churn_likelihood_level": "107c7234a87815ee93e4c5daf51c0168c90f720d39df3456d62037a8f4ac4700",
+      "open_jev__customer-control-v1:customer-control-v1:42:352:bug_severity": "68bbf80bbbd5c783dd97491305802a5b29d03df1a163ed3012a3248f0b3b18a3",
+      "open_jev__customer-control-v1:customer-control-v1:42:352:frustration": "742971dd34b753bd76077256ed84766c174ac7df21afcd45e92744245949adb1",
+      "open_jev__customer-control-v1:customer-control-v1:42:372:churn_likelihood_level": "a6bda17dfe44caca2a591d0ce3034fb2d6602cf5ff2200033480fb79a3bd80e1",
+      "open_jev__customer-control-v1:customer-control-v1:42:377:frustration": "03d1f425357c6276eb613504fb09dab63b83822894d06288876e4735164990e7",
+      "open_jev__customer-control-v1:customer-control-v1:42:424:churn_likelihood_level": "10d160411159165d53beb15e0b3c3c2fcd29da608770d544d3c7796666085afa",
+      "open_jev__customer-control-v1:customer-control-v1:42:442:frustration": "ca85ee5ac28dd04b747992bb34f190cdbd503cb547b1d1be1c5a6d96f0b1b2b0",
+      "open_jev__customer-control-v1:customer-control-v1:42:442:churn_likelihood_level": "b91f2355afb2e593238f4a0d7c719eb551a56530066153761faadf84bb934cfa",
+      "open_jev__customer-control-v1:customer-control-v1:42:485:frustration": "930a1c3ef6c1ee8f16e89e048c26f530fc81232035b87b18c382db801f76fcad",
+      "open_jev__customer-control-v1:customer-control-v1:42:499:frustration": "a8cdd5eddcf17ee02c84dd132e276705074d9ddd70834620342a80452df41993",
+      "open_jev__customer-control-v1:customer-control-v1:42:511:frustration": "6d332fc82f5af77bb107113772cae1f3d35a25b8a8defab0d7923f323e8a3a8a",
+      "open_jev__customer-control-v1:customer-control-v1:42:516:bug_severity": "3fba0930a5465789676897114d7f560ce0f7b8ca56a55684faf33f789c1872ad",
+      "open_jev__customer-control-v1:customer-control-v1:42:519:frustration": "b18291679ffd897a7c00090340bdb9bb11d9b37a0346b9e79cdeaa092e26eaba",
+      "open_jev__customer-control-v1:customer-control-v1:42:557:bug_severity": "fb38c8fc05c6f51b594563b2d00361df2cd726a97b6182d3154c4260f5177468",
+      "open_jev__customer-control-v1:customer-control-v1:42:557:churn_likelihood_level": "1dfec1c47f0147c7b3b239d2d25ee84962e7bd8bfda5b2592f46f5d8fa8c713b",
+      "open_jev__customer-control-v1:customer-control-v1:42:581:bug_severity": "1b1947a1f81af06cccc2edfc4b572e1e072bbe4ddb5fc4671195510329522dbb",
+      "open_jev__customer-control-v1:customer-control-v1:42:638:churn_likelihood_level": "453da75a24f091e883a60f5cefc3e6c4168a5e0467836b551715eb95396d9fd1",
+      "open_jev__customer-control-v1:customer-control-v1:42:691:bug_severity": "d06b52b9bea4e51fa3ccfa21240cede7fece9f3e7ff6919deb6fa9bc5feaa0a8",
+      "open_jev__customer-control-v1:customer-control-v1:42:691:churn_likelihood_level": "9d23a1d1c1f994facae5d7fb9b07295efffabe66b5981a0f4a8d3b3f742ee04a",
+      "open_jev__customer-control-v1:customer-control-v1:42:724:frustration": "09a28dda43d0afafc7f5af382e725f09b6e0699d3124f4c9d415619c1baba56d",
+      "open_jev__customer-control-v1:customer-control-v1:42:729:frustration": "d9a4bdba229e6b642aa88ef5b608c513c1d78c8e4dcfba3683ce097f848d53c0",
+      "open_jev__customer-control-v1:customer-control-v1:42:752:bug_severity": "e5301fa3463f4c57a47622491ce1e89a59839936c8a4ac739234581894351d18",
+      "open_jev__customer-control-v1:customer-control-v1:42:752:churn_likelihood_level": "ac0b54e420b10754dbbdd5ebcd553576a065221f6848ebf2d94ed3a97df21df8",
+      "open_jev__customer-control-v1:customer-control-v1:42:768:frustration": "c9daaa31fb9e342b7254bd4cb930e739fe0b064b5d416e83b1a07533f55e1b7a",
+      "open_jev__customer-control-v1:customer-control-v1:42:849:bug_severity": "b0d8b3fb07eadc46485b3aa5bee0c84f795a9a183c89a106cc012b88a5f992b6",
+      "open_jev__customer-control-v1:customer-control-v1:42:876:frustration": "f4ec74951dd05c9beaa3c0c1f53ad3989412ba0a56386372f3c62c4d2de344a3",
+      "open_jev__customer-control-v1:customer-control-v1:42:876:churn_likelihood_level": "872faf88a8487c26bcacfe6983cb56143917683ed462b2c6638fe1b8b3a5823d",
+      "open_jev__customer-control-v1:customer-control-v1:42:886:bug_severity": "57abddad591e368c4aae9b08874145bcea5a66de4303d72c090ad772695eb5d7",
+      "open_jev__customer-control-v1:customer-control-v1:42:952:frustration": "02b64ad064c91dd101e9652863ac03105233c41170c48b9089afa69e5588334b",
+      "open_jev__customer-control-v1:customer-control-v1:42:964:bug_severity": "1b17cf1d83a289e17c584c41a13311eed702138a7fe94e2d2902e3aa0d96d77a",
+      "open_jev__customer-control-v1:customer-control-v1:42:964:churn_likelihood_level": "e2ad29c868e076e4bb3d66034464cd79cd48b2ada2dc3c54b04523a75b64e08d",
+      "open_jev__customer-control-v1:customer-control-v1:42:979:churn_likelihood_level": "2d31236ca10cdcb04bc372b4f579ff92efffed7d5e29c98af5696670ce88a509",
+      "open_jev__customer-control-v1:customer-control-v1:42:992:churn_likelihood_level": "051b9bd23ef4ca19a3e4efba2d6c07cb79bc270364369b11d11e71c57018d50f"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 6400,
+      "output_tokens": 50,
+      "requests": 50,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:46:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.07764658795277166,
+        "option_1": 0.49049429657794674,
+        "option_2": 0.4318591154692815
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:52:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.38827289981020874,
+        "option_1": 0.23514134452102683,
+        "option_2": 0.37658575566876434
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:93:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.007388178913738019,
+        "option_1": 0.39586661341853036,
+        "option_2": 0.5967452076677316
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:94:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.19003892604052303,
+        "option_1": 0.23295738097614532,
+        "option_2": 0.5770036929833317
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:109:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.03326653306613227,
+        "option_1": 0.5870741482965932,
+        "option_2": 0.3796593186372746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:112:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.04880488048804881,
+        "option_1": 0.5781578157815782,
+        "option_2": 0.3730373037303731
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:112:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.4164164164164164,
+        "option_1": 0.15345345345345346,
+        "option_2": 0.4301301301301302
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:113:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.05364635364635364,
+        "option_1": 0.5033966033966033,
+        "option_2": 0.4429570429570429
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:113:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.2383,
+        "option_1": 0.2656,
+        "option_2": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:125:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.018321986383660394,
+        "option_1": 0.44583500200240284,
+        "option_2": 0.5358430116139368
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:161:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.06936936936936937,
+        "option_1": 0.5786786786786786,
+        "option_2": 0.351951951951952
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:178:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.03587488757869491,
+        "option_1": 0.6987109023683421,
+        "option_2": 0.2654142100529629
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:192:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.029132045249774752,
+        "option_1": 0.1730903994393833,
+        "option_2": 0.7977775553108419
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:193:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.05729686564184468,
+        "option_1": 0.7330804551806748,
+        "option_2": 0.2096226791774805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:193:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.08943577430972388,
+        "option_1": 0.5393157262905162,
+        "option_2": 0.37124849939975985
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:197:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.10673989016475285,
+        "option_1": 0.218472291562656,
+        "option_2": 0.674787818272591
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:304:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.07290206288804327,
+        "option_1": 0.3168435810134188,
+        "option_2": 0.610254356098538
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:336:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.03642549784849395,
+        "option_1": 0.38506954868407883,
+        "option_2": 0.5785049534674271
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:352:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.1094,
+        "option_1": 0.4375,
+        "option_2": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:352:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.06606516290726817,
+        "option_1": 0.6343859649122807,
+        "option_2": 0.2995488721804511
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:372:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.08744372186093048,
+        "option_1": 0.39279639819909956,
+        "option_2": 0.51975987993997
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:377:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.07312687312687312,
+        "option_1": 0.5424575424575424,
+        "option_2": 0.3844155844155843
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:424:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.00240120060030015,
+        "option_1": 0.21200600300150074,
+        "option_2": 0.785592796398199
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:442:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.006496102338596842,
+        "option_1": 0.3454927043773736,
+        "option_2": 0.6480111932840296
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:442:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.03594673074997497,
+        "option_1": 0.24832281966556521,
+        "option_2": 0.7157304495844597
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:485:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.015107553776888443,
+        "option_1": 0.4924462231115558,
+        "option_2": 0.4924462231115558
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:499:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.046044746304434676,
+        "option_1": 0.6086695964842189,
+        "option_2": 0.34528565721134635
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:511:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.010017028949213663,
+        "option_1": 0.3521987378543524,
+        "option_2": 0.637784233196434
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:516:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.04291417165668662,
+        "option_1": 0.545808383233533,
+        "option_2": 0.4112774451097805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:519:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.06890335503254882,
+        "option_1": 0.5867801702553831,
+        "option_2": 0.3443164747120681
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:557:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.04137032956025243,
+        "option_1": 0.7551838124812181,
+        "option_2": 0.2034458579585295
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:557:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.07327327327327328,
+        "option_1": 0.44184184184184183,
+        "option_2": 0.4848848848848849
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:581:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.023106932079623884,
+        "option_1": 0.7541262378713613,
+        "option_2": 0.2227668300490147
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:638:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.040328229760832585,
+        "option_1": 0.4123886720704493,
+        "option_2": 0.5472830981687181
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:691:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.0664,
+        "option_1": 0.459,
+        "option_2": 0.4746
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:691:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.04366943139802139,
+        "option_1": 0.44109123613470574,
+        "option_2": 0.5152393324672729
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:724:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.051748251748251754,
+        "option_1": 0.6516483516483517,
+        "option_2": 0.29660339660339663
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:729:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.03100930279083725,
+        "option_1": 0.5665699709912974,
+        "option_2": 0.40242072621786534
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:752:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.054118821767348974,
+        "option_1": 0.5460808786819771,
+        "option_2": 0.3998002995506739
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:752:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.01168831168831169,
+        "option_1": 0.18441558441558442,
+        "option_2": 0.803896103896104
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:768:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.08429768555466881,
+        "option_1": 0.5767158818834797,
+        "option_2": 0.33898643256185157
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:849:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.04442221110555278,
+        "option_1": 0.48464232116058026,
+        "option_2": 0.4709354677338669
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:876:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.048804880488048805,
+        "option_1": 0.5859585958595859,
+        "option_2": 0.36523652365236525
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:876:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.1149874686716792,
+        "option_1": 0.25453634085213034,
+        "option_2": 0.6304761904761904
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:886:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.041082164328657314,
+        "option_1": 0.5753507014028056,
+        "option_2": 0.38356713426853706
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:952:frustration",
+      "question_id": "frustration",
+      "probabilities": {
+        "option_0": 0.03698135898977751,
+        "option_1": 0.3288234115053117,
+        "option_2": 0.6341952295049108
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:964:bug_severity",
+      "question_id": "bug_severity",
+      "probabilities": {
+        "option_0": 0.07680753054275988,
+        "option_1": 0.6141598237532545,
+        "option_2": 0.3090326457039856
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:964:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.10370741482965931,
+        "option_1": 0.5244488977955911,
+        "option_2": 0.3718436873747495
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:979:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.06673316708229426,
+        "option_1": 0.3253865336658354,
+        "option_2": 0.6078802992518704
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__customer-control-v1:customer-control-v1:42:992:churn_likelihood_level",
+      "question_id": "churn_likelihood_level",
+      "probabilities": {
+        "option_0": 0.03149370125974805,
+        "option_1": 0.26554689062187564,
+        "option_2": 0.7029594081183763
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

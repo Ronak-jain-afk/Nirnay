@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "qasper-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/qasper",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:43:35+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25646189770000005,
+    "accuracy": 0.47,
+    "positive_recall": 0.66,
+    "specificity": 0.28,
+    "precision": 0.4782608695652174,
+    "balanced_accuracy": 0.47000000000000003,
+    "f1": 0.5546218487394958,
+    "true_positive": 33.0,
+    "false_positive": 36.0,
+    "false_negative": 17.0,
+    "true_negative": 14.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.02584759080000021,
+    "baseline_adjusted_skill": -0.05999999999999994,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 27.107362900000226,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "qasper:qasper:test:10": "226e9bc5a70783adfd79e9ad20bc67bba4788ced15177ef51da8491c4d4048d2",
+      "qasper:qasper:test:16": "0a5b9e02116144a4d02de8f9add473dcf53b30f68b021b7c0b5f2dc8c38bb9df",
+      "qasper:qasper:test:21": "41ea0b681e8ea2a0ebe4633a1220d08de0e5daef16123792cdddb12a90554b06",
+      "qasper:qasper:test:23": "19ee8510cfb369de242d94f872b985810e02f0ac243731769bec3ed4d187ab17",
+      "qasper:qasper:test:24": "d45d7d5a26215142c745491a0eb455ea5184f1c93d7870d94ccfe209e7228382",
+      "qasper:qasper:test:30": "9edefa79eaf05fbbe6e4c3f57628791b3d91c55d5669bea7e70fef3e20b84f09",
+      "qasper:qasper:test:31": "1bcffd7ab3e97d7e0f78a2ce530f1d767213c793f12d1fd573b5238df9badc04",
+      "qasper:qasper:test:36": "46c5d6b8f14f4f88ac04915dd4c4d4b0a678bde4bee7f3777b96bad0d7be0639",
+      "qasper:qasper:test:39": "f68cf858ad669be6978f812f633a2a2554a0423c7fcf9908245ffb3f64885b6a",
+      "qasper:qasper:test:53": "71c2588b0fad37e714f14df0cc922eadc76d6786f288d71ffbf6c00b04aa18e2",
+      "qasper:qasper:test:54": "75ae7a454d3a0c7d50fdf935e15aa8dc93aaad3986573c9e146c459a5574d59a",
+      "qasper:qasper:test:62": "14780fb535dd6509fb51424f3225cd3cb02057fc306422f4888e4421f94c37f5",
+      "qasper:qasper:test:65": "039bb335af34efa2efcdd9f14f66434bcf280a99329a777d2a37018442c02897",
+      "qasper:qasper:test:66": "f6d2d280837b927e9cdb0501eff6a4571d970e22d2da69256177a5da47e412c6",
+      "qasper:qasper:test:78": "020d8bd9806d772a29ea012571ff1d5d93ff5f4c2c6c40d69ea631a5d827c6e7",
+      "qasper:qasper:test:84": "038b36b3d3b651228d95a0a9be4f1a63855239051a1c3ab67c84d64b29db117c",
+      "qasper:qasper:test:85": "684aa213cc2e67152052090d857e3c6c615e50b422ae474c7bbd11fa816f8d74",
+      "qasper:qasper:test:86": "29e59714094694e0a8df6e7ce202615726a0a3d1ee3ae37f3c8ba207647f842c",
+      "qasper:qasper:test:92": "3eb2b3625fe9a5fa91b89963fd30320eb61fe6a5ee250bccdc9ac8b5bd66dacf",
+      "qasper:qasper:test:97": "8a8dc7941554e702659364025877ab159157a5c8bb3aae82238a5a4d93c3abcb",
+      "qasper:qasper:test:98": "c096e468e90f79a5f797501485affb8fe9a07919d3d5b5366faceff31b5b3bae",
+      "qasper:qasper:test:114": "ac0ab1c93e6691f8cc08fd2f97398be4615a160859588b63a88fd92d68618f90",
+      "qasper:qasper:test:124": "163f61c900bf7004a5838fb719abeeb558cae6258140ea70efe1ec1316e1fb73",
+      "qasper:qasper:test:129": "3cf2c30f2ec726f8fa3da654ff2edd7133634d4822659d0747bd9780f9f8e6cc",
+      "qasper:qasper:test:145": "e812b41c09ad63ccf0576239ab5894500e138b550da1dbe5ee1c322a9ae8a173",
+      "qasper:qasper:test:146": "80ddea137d80b202539bfbf472ef402ff3432c97f2258b8b7985c43b5cc34d91",
+      "qasper:qasper:test:147": "f2b00c797bb687cda31b081ffc0a1a4f6d2a067ba14f36a58baefdb3a2d5af0f",
+      "qasper:qasper:test:149": "e5ef9d0ec33f51f8b61516c10a7dd36688cd19f81c0b7d3507d57cfa85bf0a9f",
+      "qasper:qasper:test:157": "f9935d2090f71c8f7aaf7533a9e5e01eb22097bec8bf3255a0994120563afb02",
+      "qasper:qasper:test:162": "d58e328e81bd88e1b4e9ad9da526af3999e69428b076c133f5995df9fcaf14cf",
+      "qasper:qasper:test:165": "989e12a4508e5ac095dd852e72b745839a15012011111132fe65c6faf40ea944",
+      "qasper:qasper:test:176": "259d95a149f5915b6c4d26189a0922a3fb12ee6c998ea456e031f0ccc52e18c6",
+      "qasper:qasper:test:179": "f2ae66064009aa1fe0d302591549344ca561d2ee958bf1c2d27b2c3a483e1047",
+      "qasper:qasper:test:183": "2e61f9187d874b7b28c035273780d21496eee47272dcc554b292ecfce1fcbe91",
+      "qasper:qasper:test:186": "d3150af7daf89e280c7bd23188d34ae42d33a8506e305844aa0db1915b874107",
+      "qasper:qasper:test:187": "c537cdc5a655622f07bcd1b3f471e6f25b810c04dbc1184869acc88ac4e7f279",
+      "qasper:qasper:test:190": "5f7bef3bf7791eb1e112dea59e2720bc9d7c0b2ce182adfc830f1f9b58acb5af",
+      "qasper:qasper:test:194": "f64fa0407b71d8eccf6f9756f51ee03603243af25abe0caa71c5dedf3481e728",
+      "qasper:qasper:test:197": "8d503edb1d5621d6c3d4ab73ba770701a658047ff11ce26bec4929045a2e4ee0",
+      "qasper:qasper:test:199": "1bcd6a97e95b702b351bc3c57fdabd41c7d345360f97f7770d264bed28186d59",
+      "qasper:qasper:test:200": "d9898c503f6a01c20b081e961373560d32997b7cbe6f0ef17bcacaa4643c17ad",
+      "qasper:qasper:test:204": "f0ae6564e0b3353606aebdbbd2aa00339685aebdf9b1c39faf1cc1e34c3af99b",
+      "qasper:qasper:test:207": "f7d2ad294d205cb3db7f84d4a61e168814140feecdef17efbc957d1c1d1b1bc3",
+      "qasper:qasper:test:208": "a028f1bf26ad1af1d387b820b1eb6680d0ea10320a1853683558203e1595519a",
+      "qasper:qasper:test:209": "d99b4c1c32b6e954fad8ce25b96e4bde1a1c55601672db80f14959fad53813aa",
+      "qasper:qasper:test:210": "6b8a205befac3c25153f353064510b74cfb7f54159de0146b52c639a76e988a4",
+      "qasper:qasper:test:213": "84756247f1c05b3f32140b4573257ee881fee87c77d87c9bdc4ce59630337390",
+      "qasper:qasper:test:214": "ec2e4fa5b5175bf43a7600d712d64c4ef97342eb5f3b3260ed07bdb2a7185234",
+      "qasper:qasper:test:215": "afb0f82d2f8c4a3e75f88e24ba89d96a3f29aee6a922e1f5e1fc8091c38132c1",
+      "qasper:qasper:test:220": "fa284fdc348e753f2978959c0834c8f7eadd6d929ae638129f98975bed374d3f",
+      "qasper:qasper:test:223": "2c050c608bf49c158e4f0e6df05e72a1cd60eecdc642f8ed77888e422f1801e7",
+      "qasper:qasper:test:224": "5748dcb554858adf0c85d2302e2156fa521f1e87224f834456f3abef2bf66565",
+      "qasper:qasper:test:233": "218be8aa13db51454dbc3c43c97bfa51814332cdb563261b4055cbc43d4c90d5",
+      "qasper:qasper:test:239": "3291e1d2b45db1e45e6d47f5757f7b08dc71f1a2114d0489489d391f6acc4b53",
+      "qasper:qasper:test:242": "79cde5d3dfcee0e0d892342a01619194fcaa085106080bdfd518b8280558b4df",
+      "qasper:qasper:test:245": "7c4db5b0c53874511022dd4420a40bfb0f60fd2023dd22c1a09ca4ed580c81c7",
+      "qasper:qasper:test:255": "b6ff62ae449ebbcea5e497fcd02cdad8fdedff14c6a696f2f15ba8c3fd4244df",
+      "qasper:qasper:test:265": "1a53c1a712610b865cfb1644b12bd3edc11ae9ed33e37b8cd9a88de418b82f6f",
+      "qasper:qasper:test:268": "1d5c131efbefb503ed57e2d7f7bdac75cbc320ae25be85c4bd893a4e1c172b82",
+      "qasper:qasper:test:269": "101126c75992dcfec5a70766c692229f5bff51564f84f3c9f8c6c28158cdb2f6",
+      "qasper:qasper:test:271": "e6e5d9f5eab0395a4893dedc330f3b423f282404b0987c0d1fcf76fe0480c770",
+      "qasper:qasper:test:272": "ccd9487bd8097a271663336079c1e77616a796cbe2a78f4f25ac31100ceeb0af",
+      "qasper:qasper:test:276": "49d1729330e83275fc81da4d8fb68d998f848555dde0d69de72845e5910b682d",
+      "qasper:qasper:test:288": "cb20263d31c901278ab08a2977393b1f1d3d420725fc7ff38b0ecebee6275ebe",
+      "qasper:qasper:test:295": "245c142062a41fd9e7369e7912f52b0415e5b5bd02e4fde51e9d6f0e23f12165",
+      "qasper:qasper:test:297": "dd51d12df78f9931367f6ed11b0257639862e69c6fdbe4f1bde4bff40f05012f",
+      "qasper:qasper:test:300": "565f50ccdba61b313395b03d93983e00d4183bf2b49b2bfca16c384df11adb1c",
+      "qasper:qasper:test:304": "1e01d928982467e8e1df1f1874d8c6927529eea24bab19ad84b81e4603c18e84",
+      "qasper:qasper:test:305": "b061a4c6c8216e9c86d3575c45623a074f9516a91f2c093d10b8fd014b3078d5",
+      "qasper:qasper:test:311": "b7bb0c48bf8a7515ed063f11281d9d054b939495ae7121db4206a88af81f628d",
+      "qasper:qasper:test:312": "4235c61e065be196a3ae82ff8fbf1c8ba1c0389993cebd7d228bbb781c00d91f",
+      "qasper:qasper:test:313": "3b87934cf8d406522e682c243a7f666eabb569101e13d500e171c23daefa8552",
+      "qasper:qasper:test:318": "98cace8ad2fda259c293caa47f3664121afd4c249e04e5df41429a35d8e9bd01",
+      "qasper:qasper:test:323": "2e9cde9a990473de214cfbae74bf3f8a662911126c797375d6f8417b68bb8f00",
+      "qasper:qasper:test:324": "a84e046c5087a1ef78c916c305eb4f876e693d4137844bb38d3c91860c7a30af",
+      "qasper:qasper:test:325": "b79e9e815c81542139c14551723572ecdcc277178b7143ceea1957a0cf94d8e8",
+      "qasper:qasper:test:335": "09a3233e51f1eccde61bec49a3604968468febfb6c002b3dcdf52dbe2140a663",
+      "qasper:qasper:test:349": "ed15426d5dcdb0b832f3ce57c3978222f84e15a41a9b5ff2f07ddf7c0f2ade07",
+      "qasper:qasper:test:353": "6d0db45b3625ca7a7e3f0be1c3f857704b81298c2ebccccefe1e0fb477fe310f",
+      "qasper:qasper:test:354": "96f4ee219958d25cd6de3d48a284190143279949050f0396d70ea636982732fd",
+      "qasper:qasper:test:355": "60acdf5539834529cab3aff08fd35cadae95a8181d9d3225f3368b079693462a",
+      "qasper:qasper:test:359": "db037484cecb4a6ced94f3cf1c305fdeb9609027889e956933ccb66deb0ea5d6",
+      "qasper:qasper:test:360": "3fc2396e58faf13ba214424ea2791029cdfd5d3e82c606781c104685dc19bf7a",
+      "qasper:qasper:test:365": "15225d85a28b72fa47f97187176a381cc79eedbf49b469c203972677f988b229",
+      "qasper:qasper:test:376": "28b54601d916101c57452fdb3b9abf75026f6b83dc22308f0060aa1326ba9825",
+      "qasper:qasper:test:379": "4f8a08f5532d06278a0f3bc0009814e9a33ed1fbe8465c29f18697edef739def",
+      "qasper:qasper:test:384": "0ccb3ae3fa2d9ca7bf71d05e30bef8aa3170585a63d0f00bf29fbcecddff8652",
+      "qasper:qasper:test:391": "b638cf7f9f252549d1371d2b6d11729cf02b8f479383effca49dfe0e1e3981fa",
+      "qasper:qasper:test:392": "412a245b9db57f0b42b8174d655c23834397500c52071dbc56d79b5a872404d3",
+      "qasper:qasper:test:395": "4e22b2a76c503989d75c27d4d4ec891892b89db4670d6f2757a31ee74f42a400",
+      "qasper:qasper:test:398": "7fdd13e9b9a8b7a863d83a4fa3c46ad845cda1181e0395f08738fc75ca0a6344",
+      "qasper:qasper:test:400": "2697586bc52fe63066f8267e967073853480472666bf721dc00079264959cf1f",
+      "qasper:qasper:test:401": "b53ff2aba692a2ac6b74b4014914d730e3f980ee7c2757f72aaf485bd3f071c0",
+      "qasper:qasper:test:402": "34330434d47cc0cf6dc7884cab3563a86303da874a472b2c1934755eb51df08d",
+      "qasper:qasper:test:407": "b0f1529b4d72ce2b274f094ff995f9f6de17617efca483873954880664de2644",
+      "qasper:qasper:test:409": "e296c52e714d0b14bb85ac7fa99beaaefd5e1ff17571bf7dfb01d916ad1cef11",
+      "qasper:qasper:test:411": "562573ff2fd4570c924a4fcbf91f24faa5f696dfbcdc2af184c1faf9aa1e449b",
+      "qasper:qasper:test:414": "2335ec6789db21bed899cd1f4469d8f180e974c3ceeead3a18786aaa2e953573",
+      "qasper:qasper:test:415": "57b60f68e737efe14a808dd17ab45c7c661850c07cd1ed47a5e374c30062ce24",
+      "qasper:qasper:test:424": "da7a5c0b944ef945272d04abb8a1d624cc69374e1187bd29ec81c90bc2ca1ba4"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "qasper:qasper:test:10",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:16",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:21",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:23",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:24",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:30",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:31",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:36",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:39",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:53",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:54",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:62",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:65",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:66",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:78",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:84",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:85",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:86",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:92",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:97",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:98",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:114",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:124",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:129",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:145",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:146",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:147",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:149",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:157",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:162",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:165",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:176",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:179",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:183",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:186",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:187",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:190",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:194",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:197",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:199",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:200",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:204",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:207",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:208",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:209",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:210",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:213",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:214",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:215",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:220",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:223",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:224",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:233",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:239",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:242",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:245",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:255",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:265",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:268",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:269",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:271",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:272",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:276",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:288",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:295",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:297",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:300",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:304",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:305",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:311",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:312",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:313",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:318",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:323",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:324",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:325",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:335",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:349",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:353",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:354",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:355",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:359",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:360",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:365",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:376",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:379",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:384",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:391",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:392",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:395",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:398",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:400",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:401",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:402",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:407",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:409",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:411",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:414",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:415",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "qasper:qasper:test:424",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

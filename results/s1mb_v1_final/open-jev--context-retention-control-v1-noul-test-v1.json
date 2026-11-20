@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--context-retention-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__context-retention-control-v1",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:39:48+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25491845130000007,
+    "accuracy": 0.5,
+    "positive_recall": 0.56,
+    "specificity": 0.44,
+    "precision": 0.5,
+    "balanced_accuracy": 0.5,
+    "f1": 0.5283018867924528,
+    "true_positive": 28.0,
+    "false_positive": 28.0,
+    "false_negative": 22.0,
+    "true_negative": 22.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.019673805200000283,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 27.921747599999435,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:call_t2": "6d57883fbe16ca14c74826efc9f7433b0e702b922fedec4d2324bb326f32f91b",
+      "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:result_t2": "b6e055684ff40f53c46e8437b5bfe9c4c622abdb342d8f7719313125941ce396",
+      "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:result_t5": "faa5537d66ca45c0c83b66fe7c4c3c36c12d9f8e2ea82c165d6aca5a59611bd7",
+      "open_jev__context-retention-control-v1:case-1a559c0e1ba7f27c17f6:result_t5": "3f7e869f8dc5a8f6920347de24f2e4d4bc4d1c5b29c635b442bc456aabc5ad05",
+      "open_jev__context-retention-control-v1:case-4cf577e172b6b623821e:call_t3": "ea619d9310d075296df23156f21e306639485815824344d1e0a97f396791b897",
+      "open_jev__context-retention-control-v1:case-4cf577e172b6b623821e:call_t5": "5832cfb84641e16d12767f72a2f24278ef4768ac4b934282a842dc285e1c01b9",
+      "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:call_t3": "40964eff9672445005cd1875ceaf969876d8b3d54abe969225c12ed0470279e5",
+      "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:result_t3": "91497ca4000d75fc9b1d223771fad3f246569f8cc9b833b359e3fbd2b7076f29",
+      "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:call_t4": "a122ee596e81cfa11c8bdf26292846783478fda5daf825caec18590bee59c2d3",
+      "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:result_t4": "4878598dd0ad80402332c2483aedb6abd77fb67f0ddb0f4c510a412dfd46a576",
+      "open_jev__context-retention-control-v1:case-366b02fe82ed4aa515fd:result_t3": "de8f5cf8ff14e6f88af48e0428e49c5a5718bfec60248d878a4fe630cb4730b6",
+      "open_jev__context-retention-control-v1:case-366b02fe82ed4aa515fd:call_t5": "9ea8f4592cc7343192b1567fcc809ff6f81d670a59863930479709ca8ae3aba5",
+      "open_jev__context-retention-control-v1:case-57c0d3f4ce0a22506da7:call_t5": "a367e88ed1283a51fde672ac207333c5f95ca1d3c86f0417a3e31754deda3e28",
+      "open_jev__context-retention-control-v1:case-57c0d3f4ce0a22506da7:result_t5": "2f18d104e39a70e983e6ebc789473ecf68e890a71d5b91e848870f6e3d5836b5",
+      "open_jev__context-retention-control-v1:case-d258360f82535a716acc:call_t3": "81a6edf97785010646f8b331f632643574a0a9870c90fcd6f51db9c9443fa5d6",
+      "open_jev__context-retention-control-v1:case-d258360f82535a716acc:call_t4": "eb83c156f1689823f53e974a1fe969842576290f3c81253896e03c22ff5c36b3",
+      "open_jev__context-retention-control-v1:case-d258360f82535a716acc:result_t4": "a0ff8a9bdd962ef917ca8a63da617217c55869b1e33d542018e8dc1eb226fd5b",
+      "open_jev__context-retention-control-v1:case-62eb296e25aeceeb8785:call_t2": "c3e4a18c8b826dbc128be163e66dd42891399321a76defdfe3d862a42df2b9bd",
+      "open_jev__context-retention-control-v1:case-62eb296e25aeceeb8785:result_t4": "451df47cafa149084e7415a64a23f411098eba2b85c5039f7f00b5938a80b843",
+      "open_jev__context-retention-control-v1:case-c3c960f331f2ef226b0f:call_t4": "8d65cbd1e102f8101a0d84de89b05b9b06b765c8f18eea9b832605b342d603c5",
+      "open_jev__context-retention-control-v1:case-af3c3ec535f82db12df9:result_t3": "bd1ee7024274b8284b585460a188f67f49e442021cfe7d92497673e73c6e63b2",
+      "open_jev__context-retention-control-v1:case-af3c3ec535f82db12df9:call_t4": "d112a04be13f1994268535594328c74d2676a33795daa507ca438ff1821c132f",
+      "open_jev__context-retention-control-v1:case-7cfdbbb31b8380cf3f80:call_t2": "a6a3703db4f520e7d385e26a08ca512efaac8c9d7bc9efbfeeefecd8bacf8ed4",
+      "open_jev__context-retention-control-v1:case-7cfdbbb31b8380cf3f80:result_t2": "a730fef8b4e1c213d875849cffc8a2d206cd3da0fe350fe775e08d4a79d3246b",
+      "open_jev__context-retention-control-v1:case-7437aa159b600cd6422a:result_t2": "d9a09176e66950c12b6e3e0653da50a7e0fa7207564ec1cbc76185a1d759fd23",
+      "open_jev__context-retention-control-v1:case-7437aa159b600cd6422a:call_t3": "0b2f5f315fa79f6835c0e3dafdabd5bc6044916c4a873ea6d05186f0818627d4",
+      "open_jev__context-retention-control-v1:case-3e275f8633838b9faacd:call_t3": "b8b896d481f91c223568a39c7ab8fd0908d2d8c0030c34a5b1124dd7d365b7ab",
+      "open_jev__context-retention-control-v1:case-3e275f8633838b9faacd:result_t3": "f5b0172aef2a3bd02a0e30480af93d7e4939b15263fa757ada410699097b6c6a",
+      "open_jev__context-retention-control-v1:case-ca013dd202e5fcd9a0fb:result_t4": "10e4877f95f2f47315ad526bcc539ed5fa219cef41c9489d37c70f35fa4869f3",
+      "open_jev__context-retention-control-v1:case-ca013dd202e5fcd9a0fb:result_t5": "b59f6687e5f617a96568943ac027c925425cf76348c571788c00cb2ae4fc19d1",
+      "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t2": "38125658291015765ba8289fe98ae5ae4b87fd6a480944d7845105475c3bcdcd",
+      "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t4": "82aba76cfd18bb8ba3c66b72c0b5857c63e754c1f478da4033f23076b34d0e26",
+      "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t5": "ddc0e142e5398049ff64b796d6de2a61996f7229dccfe28c386318b81701ccf2",
+      "open_jev__context-retention-control-v1:case-77fad8683abbf0e4959a:call_t4": "feaead6c4fe2183f156f14349580c53f6d8601ccca24b147b39ddbc0b42c30da",
+      "open_jev__context-retention-control-v1:case-ceadcb1a48528724e183:call_t2": "946ec7c0fa23693d5aa236a0b202903324611bbcfeb3d865eb5d26c70e1b3f30",
+      "open_jev__context-retention-control-v1:case-1a1041682d75cd9d8e97:result_t3": "2e22ea93092452817bdc8f406e08290840ae1b97d7576158ca5f7ea1342dd387",
+      "open_jev__context-retention-control-v1:case-00acc7e10cd59b04ed6b:call_t2": "bf11731749392860deb758f105ed55244079fd7de4cce902445fc13b67dc2898",
+      "open_jev__context-retention-control-v1:case-00acc7e10cd59b04ed6b:result_t3": "fcb6b589350695666cb2343e52e7e4a19ca29be2bd7d8a42b550255c5fb5325f",
+      "open_jev__context-retention-control-v1:case-86303c3adb54db4a6813:call_t4": "42d57c2b38646e490215808c84145e7e1cee43d6282a32fd96e39fb1edef65d2",
+      "open_jev__context-retention-control-v1:case-0afac6f203768eec40ce:result_t2": "8d6c11a054abc30d4a5c5641d2e6159c30e6bbf9f5aa29c62b86561ab017b9c8",
+      "open_jev__context-retention-control-v1:case-0afac6f203768eec40ce:result_t4": "89382d5a224df850df1dd0bc008e7c9f89053a3fb3b4a12f021723d138e9cdba",
+      "open_jev__context-retention-control-v1:case-84c8c032b1427d245fd2:call_t5": "ebf4f59e972d241f6b2533c10e9f394e9f8ac91d3343bf15d783ca057166ba27",
+      "open_jev__context-retention-control-v1:case-d741c6b8a75d56c43c0a:call_t2": "92bd54055249d11e434ec792e3dca21c5498ba4cc5c49fb529593137b2e309ed",
+      "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:result_t2": "921e852d96d15a31ddb4c7474699d53d23036c9dfbffd2af067790cb1280e756",
+      "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:call_t4": "a597d977da16282954b3ea9db9940723e791c01439c47907efd106b28639ac92",
+      "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:result_t4": "ca0e8ac4cf6aea0a989032eb4ae01d7ccb4c8f8bbd35aaf78ccd0d02cc48c1ae",
+      "open_jev__context-retention-control-v1:case-fe0e80632338f563b34c:call_t5": "f030fbf345b3bf54bfdd0e42d3e3e4c9515b6b0f7253843c443598cc5cb2c885",
+      "open_jev__context-retention-control-v1:case-1f4182446565efd15dbe:result_t4": "b211fe0db8f477ec9b94979ae1d5260b5adefc5026fe223594b35bb15f3f5e3b",
+      "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t2": "c0b8c357d8d4958e3cdd7141f7f0373708223fc3dc878e437922e798e146d4cb",
+      "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t3": "e0080003b630b9d553e6f2a07908cc9d0c31039750f349b7cece35d7690fc40e",
+      "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:call_t6": "75fe3b79236e6292f93451a9b8b5e78975ab26f8412d97f1d23d10b4fbc0e3d7",
+      "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t6": "e1bcf480b1e56aaa58bd6079d21bceb7ed9d61104099e3d59fecd78e0a16c605",
+      "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:call_t2": "85ad2290787546acfe998b4350cc9bec2405f4586c2d9c624831f8c6520d2e02",
+      "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t4": "5fa3fe92c9c6930f1c5e2da28696ba1a04c76966ef55147454e86f3e297964bd",
+      "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:call_t5": "4097b8885266d76b60b2217f168dc0e12b3daebb79ae0055865dfdfa6aaccb47",
+      "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t5": "94460580312c3140684e9e8f2de437317b49d8860b3964caa0937f501782d721",
+      "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t6": "d39a4f75184a8e3734017f1b7801438fb9e3b6f836ee7a5c5e197f021177edf1",
+      "open_jev__context-retention-control-v1:case-d987d570bab21297a474:result_t3": "902e71b52ef9c71ea1c7c9ed6ad602168743e74b77a0e70bac1348dacb9d1bf3",
+      "open_jev__context-retention-control-v1:case-d987d570bab21297a474:call_t5": "a303f2e2c139e77cc34cb4d2c1cdb1ed015a01e50697eab2b0dc072fec28c95f",
+      "open_jev__context-retention-control-v1:case-d987d570bab21297a474:result_t5": "517860a8734c11e18eb142f23087571412b1a842c35fa9bc25835245476c9e14",
+      "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:result_t2": "3365c3632bc6e35552d085a49d228ac2cb377e50b0c198388ed39f94a7c4da1a",
+      "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:call_t3": "6d11ad5b195d84a5644e12ee884b00fd6a25bab4c5e88d4c489335a5803817ab",
+      "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:result_t6": "68a5b9f708999162e8cb32a5692406e504436c87d8af1333a23c3422d5a2ce20",
+      "open_jev__context-retention-control-v1:case-59f2c5b6293647c422ef:call_t2": "0d423a4ade0497789cc2e70a3614bbc42a107262a721e1b490b67a45868eb700",
+      "open_jev__context-retention-control-v1:case-84b40eeaf788ecefc161:result_t3": "b9e8cb6c198690f5b384c9ea22f667a5fa9fec7948e6eae3e419ea11594865bf",
+      "open_jev__context-retention-control-v1:case-fb6ecc44588dc3a08f34:result_t3": "299ac9ec9122c2685492d1efd90686482e6a6720a55a5aaddea352ae5c6933ff",
+      "open_jev__context-retention-control-v1:case-355f3b361615c4557be2:call_t3": "8e770dc6d8cc6eed07d1de890fcd262aeaf918f5dcf51f1b5891bdd8cc87fe05",
+      "open_jev__context-retention-control-v1:case-116fba8210631351fb77:result_t2": "59da8f43644227bd8d452b44218a425894259706987302d776748deed6c4fd84",
+      "open_jev__context-retention-control-v1:case-116fba8210631351fb77:result_t5": "2edc064107f9c5981f89e7ef2622eab7599d03526a1c054025f3017644fae771",
+      "open_jev__context-retention-control-v1:case-4457e3206a2f98b3e0c8:result_t4": "a18433d935ab988db651094bc17a01c28b59c558bd9f35a908be9f401a1e3d59",
+      "open_jev__context-retention-control-v1:case-124037df8efb3939ab85:result_t2": "41b22c6fc3280a8138014b6ea648555e19593ce9add343e7c76fca8b0dd69753",
+      "open_jev__context-retention-control-v1:case-124037df8efb3939ab85:call_t3": "abb98e01bd1959a7d59a75795dc4c9bec4d7c19d229e65a265c3b603c1cc4267",
+      "open_jev__context-retention-control-v1:case-2473810ad14ca5026b95:call_t3": "84ac6c50d200fd11d56d16cb7bcc37cf7e722b98bb7cd372d540d06492bafeda",
+      "open_jev__context-retention-control-v1:case-2473810ad14ca5026b95:call_t5": "2e8959577de3a71a408139ba7b0a39656fe028289f9fd68f529b4a5214ca3441",
+      "open_jev__context-retention-control-v1:case-6304abae5f81d086fe28:result_t2": "d8b50db009f39881fcb449a3caf130a4a86ef8a8bb115639ccd742d1ca2a43be",
+      "open_jev__context-retention-control-v1:case-6304abae5f81d086fe28:result_t5": "897ed8533612edde7b685420ee5baf0011b757878f8c4176abefe9900a96cfc9",
+      "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:call_t3": "708f765f4af6f6c272309bddcbbfc4c2f9b36b3146a8d8ebb4ea0ddc3faff804",
+      "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:result_t3": "fd4fd7d4a9e24f0c8d45f528cd55cec60eb9f4ec011d2ee6259d1f2d12e8216f",
+      "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:result_t5": "a3f2224ec3ca9ad43490c9784ca52e163de67870c678ff241f04431b1e085b5f",
+      "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:call_t6": "a7d8aa941a5c37811758dacb72e50871a84e7ab74e4b98acbd11b43eb390d9fc",
+      "open_jev__context-retention-control-v1:case-2f80e5e4937a527634af:call_t2": "441c338802afd7056afbd2d2c14387fd9fd06dfa65664b96f5c8fd0c6528f7d2",
+      "open_jev__context-retention-control-v1:case-2f80e5e4937a527634af:call_t4": "dc5008f90714bcae6360c66c11eac022362e22542a66b6f4f4ae5a6899d07f48",
+      "open_jev__context-retention-control-v1:case-1568407ea3702f40bcae:call_t4": "381b62d58d8817a45087ee45c9cb64b86c53082981e60962e99386c189ac6082",
+      "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t2": "6999f6697c9725ec2fbb69a616c485552d3bdca2a8b628e65646bbdcd37b9f90",
+      "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t5": "18ae9c6b30b83a3036971629d44ad8322632465cda4f3bef2bafa178d551ae54",
+      "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t6": "e1ed3586c6d9a8da4a069addb1f2acaf4caadc0fcd520f0247b2ea28c7b78693",
+      "open_jev__context-retention-control-v1:case-ec35e788d2088bf0bd2b:result_t3": "95eb77fbe16c532c1d439abe29a023ae996bf2e8b3dd74845518330b53801870",
+      "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:result_t2": "0437f32120b6a88a1eadf196507a788c8e9d191bd8d33919994fd5462f14e385",
+      "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:call_t3": "028b535534e664c3d3372a46a951de486489d74716d5617bc3497fd4d05be8a2",
+      "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:result_t6": "3b5bdffd0c2464cd07f2782e45640f0f29fa500a2285686fe1632ff0112934af",
+      "open_jev__context-retention-control-v1:case-5558cd09c40295ec5458:result_t2": "b125c6753f43ad143e9b5d6b346d2dce10b05df0b49004e228d1c1a27e569369",
+      "open_jev__context-retention-control-v1:case-5558cd09c40295ec5458:call_t4": "fe40b7334344fd94a03466d8c9245212d167009a212eba83fcd6c5a7c3c5e6ed",
+      "open_jev__context-retention-control-v1:case-0f85dd75ab280ff59a41:result_t4": "64090536332699abdbc00a4b10172df6fce9c623611e0cadc25a0867759429cc",
+      "open_jev__context-retention-control-v1:case-3119860293d6d124aaad:result_t5": "ddd0fbeed11b524515c1a43f9c2b5c4202d38b855cf40c88918dfc1a6c81c186",
+      "open_jev__context-retention-control-v1:case-3119860293d6d124aaad:call_t6": "0013b93120258b003c1a17e05d9d3d7974e1771b5d5ca0fd76293a2aae2cdd5f",
+      "open_jev__context-retention-control-v1:case-c2960fb5d2bddf8bea4c:call_t2": "9af20c5040a180e411cd4970685500c9cd7936d492b3b979ed196d41cea14b10",
+      "open_jev__context-retention-control-v1:case-c2960fb5d2bddf8bea4c:result_t4": "e55050fd39ab27fb67205dbe016ccbd9ba4ed89737242adf5befb8e1a6ad4e44",
+      "open_jev__context-retention-control-v1:case-906bdc87c5749e0dc230:call_t3": "0c3cea746828922c7f1e75cf78ed83b2ac83d5157a187d76bf13c26fe91147e5",
+      "open_jev__context-retention-control-v1:case-906bdc87c5749e0dc230:call_t4": "ee832b14aee491729e0dfb787ef3548901db63f94f6584b253a91ce8b50a67df",
+      "open_jev__context-retention-control-v1:case-c6dc5a5d97366b1165a8:result_t4": "15596aec38616de85e6c8262ee12c6318c9fe644671082fd6e40332d76c3547a"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-18d59abc7413e012340f:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-1a559c0e1ba7f27c17f6:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-4cf577e172b6b623821e:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-4cf577e172b6b623821e:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-8fee4b7d3bba96c17bf9:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-366b02fe82ed4aa515fd:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-366b02fe82ed4aa515fd:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-57c0d3f4ce0a22506da7:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-57c0d3f4ce0a22506da7:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d258360f82535a716acc:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.36719999999999997,
+        "true": 0.6328
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d258360f82535a716acc:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d258360f82535a716acc:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-62eb296e25aeceeb8785:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-62eb296e25aeceeb8785:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c3c960f331f2ef226b0f:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-af3c3ec535f82db12df9:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-af3c3ec535f82db12df9:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-7cfdbbb31b8380cf3f80:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-7cfdbbb31b8380cf3f80:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-7437aa159b600cd6422a:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-7437aa159b600cd6422a:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-3e275f8633838b9faacd:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-3e275f8633838b9faacd:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-ca013dd202e5fcd9a0fb:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-ca013dd202e5fcd9a0fb:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fa2ad8bfa61564fac563:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.4102,
+        "true": 0.5898
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-77fad8683abbf0e4959a:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-ceadcb1a48528724e183:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-1a1041682d75cd9d8e97:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-00acc7e10cd59b04ed6b:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-00acc7e10cd59b04ed6b:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-86303c3adb54db4a6813:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-0afac6f203768eec40ce:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-0afac6f203768eec40ce:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-84c8c032b1427d245fd2:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d741c6b8a75d56c43c0a:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-5b901ae21b09269a8885:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fe0e80632338f563b34c:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-1f4182446565efd15dbe:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:call_t6",
+      "question_id": "call_t6",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-cba4d02d1f35d8553669:result_t6",
+      "question_id": "result_t6",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.35550000000000004,
+        "true": 0.6445
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb9dee7f04da7808ea35:result_t6",
+      "question_id": "result_t6",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d987d570bab21297a474:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d987d570bab21297a474:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-d987d570bab21297a474:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-855d244b1afbb73091e5:result_t6",
+      "question_id": "result_t6",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-59f2c5b6293647c422ef:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-84b40eeaf788ecefc161:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-fb6ecc44588dc3a08f34:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-355f3b361615c4557be2:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-116fba8210631351fb77:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-116fba8210631351fb77:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-4457e3206a2f98b3e0c8:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-124037df8efb3939ab85:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-124037df8efb3939ab85:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-2473810ad14ca5026b95:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-2473810ad14ca5026b95:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-6304abae5f81d086fe28:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-6304abae5f81d086fe28:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c8451573cff59650d46f:call_t6",
+      "question_id": "call_t6",
+      "probabilities": {
+        "false": 0.39059999999999995,
+        "true": 0.6094
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-2f80e5e4937a527634af:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-2f80e5e4937a527634af:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-1568407ea3702f40bcae:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t5",
+      "question_id": "call_t5",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-a92b413d2e202c6fab15:call_t6",
+      "question_id": "call_t6",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-ec35e788d2088bf0bd2b:result_t3",
+      "question_id": "result_t3",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-46a7cc39c6c7b5a58dba:result_t6",
+      "question_id": "result_t6",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-5558cd09c40295ec5458:result_t2",
+      "question_id": "result_t2",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-5558cd09c40295ec5458:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-0f85dd75ab280ff59a41:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-3119860293d6d124aaad:result_t5",
+      "question_id": "result_t5",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-3119860293d6d124aaad:call_t6",
+      "question_id": "call_t6",
+      "probabilities": {
+        "false": 0.4023,
+        "true": 0.5977
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c2960fb5d2bddf8bea4c:call_t2",
+      "question_id": "call_t2",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c2960fb5d2bddf8bea4c:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-906bdc87c5749e0dc230:call_t3",
+      "question_id": "call_t3",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-906bdc87c5749e0dc230:call_t4",
+      "question_id": "call_t4",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__context-retention-control-v1:case-c6dc5a5d97366b1165a8:result_t4",
+      "question_id": "result_t4",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

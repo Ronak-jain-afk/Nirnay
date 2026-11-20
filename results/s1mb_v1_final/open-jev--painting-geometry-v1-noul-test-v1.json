@@ -1,0 +1,693 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--painting-geometry-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__painting-geometry-v1",
+    "split": "test",
+    "case_count": 50,
+    "decision_count": 50,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:41:13+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 50,
+    "expected": 50,
+    "succeeded": 50,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 1.8256000000000137e-06,
+    "accuracy": 1.0,
+    "positive_recall": 1.0,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 1.0,
+    "f1": 1.0,
+    "true_positive": 35.0,
+    "false_positive": 0.0,
+    "false_negative": 0.0,
+    "true_negative": 15.0,
+    "positive_prevalence": 0.7,
+    "majority_accuracy_baseline": 0.7,
+    "constant_brier_baseline": 0.20999999999999996,
+    "brier_skill": 0.9999913066666667,
+    "baseline_adjusted_skill": 1.0,
+    "baseline_adjusted_score": 1.0
+  },
+  "elapsed_seconds": 2.7307694000010088,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:silhouette:x3_y3": "115222945609a2944022b255ed6fa1a0e0bc917d766c0cf68df1d33564d76999",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:silhouette:x3_y5": "6623ec5602aa2f776c43298e3a1ae0ebfdcec26de25a9c3a20305d70b9e536b8",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x4_y0_green": "750158aa42eedce546e2ba94dbc41fc387c2d61fc5f70206bf4e9c3011292e6f",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x5_y0_green": "4b450cede8b770e46379a6f224ccd224bc17fefadca41acefb6376075f28868d",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x3_y7_red": "e28e21bcae3758abea6a9bab0c6dce116a12e8000840e14755fe0209da34d4d4",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x6_y0": "34341d44a03ba2920765e3a6ba0cf958132deff912c7d49036335d3be7659eb9",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y0": "aa69dad5a56975c1c0d5ac2052000c2bf5885e8776647a20b29d5809153bef52",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y3": "b7ec0f7278a12e848758aed54d639d38cf7768412cbe801deec2c5a110154eb1",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y4": "33d875e2de590b29c26784846e6e1b52a6b4d424756c7d3eb5d5121f4c0f8270",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y5": "b36606db9ac1e0b9a23cf108cb1202fdf91f0f9a756344d69d7d7ca9dc099b53",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y6": "2beb6f1d897c0b5d4ba2c49a0f8cf3f91c93e4b90e8295c0479e265ea341ebc3",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y1_green": "93f372ccf37556d9e86bb7a9fb086563603dc0c3d24bab4e1cfb5629c42ead85",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x4_y1_red": "9ccd34f5f765be68971285d3f696d708120124aa89d1e6e5be7ca7b55ca842ca",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x5_y1_red": "b640d958c2dfbb701484da20667b575b3222b83fbd695d49d5a30716aeefb2e4",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y2_green": "4510c882aa364aba25bb75de429bdcfe05c4d26dec14a4750926459e8a3bc111",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x4_y2_red": "bac8272e52d7dd9dd4146ab93e719ecb7b029c848aa9950211c385e52bb1cc36",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x5_y2_red": "60a3ce5e0ef70d251f0a6049e036fa63568d55ae320a8237613b7af909be41e8",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y3_green": "61062b0ee73749820620f64f0e8cc2390f218d39817ffad6bb219bd033311f36",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y4_green": "dccbc113c6b73620a7b757ff72a5833df2ce49487bbbb5370a7bca9ca9e22c9b",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y5_green": "9e72b781c08fe4c86d52e3fef6a50dded0f7a1cc7be29090ffb81ce58b3fb9b7",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y6_green": "de04c02d9575d29d9ad8a4f5be88e08c666e58886a8f2b2220f1acd91f5364a8",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y7_green": "3fb30c5b8b774e86dd01ef4ba73c0d76ed2c06c820acf8994f03202f0b8a521a",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y1": "5a711334f91c7b8a78fa91302092b0cffda8ad0a63b5fd0eec508ac586b0d366",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y2": "81886bd4728bff6411b68f751b4a85653c9855eec421ea99f5adefdb35c269be",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y3": "cf4e1dd303350a28d28647aadf0ac03347e1b2dc3fa1f0ea20747d7dc1849102",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y4": "5710b8ab3dc77d35cb3be6cf70949a52e020114121fd18faea08af37972bce02",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y5": "143f109c618da21a61445623c15fd6089839514531e2d65bca78c5c043831e14",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y6": "6aad5059ced11e429744fcc6fbf6d5844d83e7d25d429f159f03b50cf69de711",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:rgb:x7_y4_red": "f5eb754eed7f1f1985881e4de6b5d39dbff0fcb7f13c1d7641caeb47a9471dd2",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:rgb:x7_y6_red": "6142df3a4ebf3ff41361be362f12d1d5923a789bb3c2fb048c609b98cffcfc59",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:silhouette:x5_y1": "1298b9bbef140ba637bce60028192a9f711052879a844fa715a7c79961f8aaac",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:rgb:x0_y3_green": "52a123d0889c0644778ced474b743c2765698b18defd99f9cbb1e7392f245faf",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x3_y0": "1a84ea3081aef611854556c2c0849554808e199f14ed5c00ab88cfd21eb2c34e",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x3_y7": "2ee7b0287b823f7c916817046e83c7c434bb343da21889cce8385d59a337fa4d",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x4_y7": "584ca1195cc27ff3a61ea414fbc60d8986e0f010becbeff7591fc5d5e7e37e6f",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x5_y7": "457925f00d0b0a9d608d33d8ffe3d3bb9ccc905e64d96e5547b6e64931bc0fcb",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y1_green": "c1581b6127ae0979fa1361ff592d1dc97e114a9305ccbc2613ab1817557e4f7f",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x2_y2_red": "f6086dff3f8929449c1ebbbbbe3cafd4c52cdb084d0d59138d5c3ff064ef3876",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y2_green": "9f3e16641179a751ec38ad69cfdc313f74f497c7ed013f0daa54f09a04b0fe75",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y3_green": "7d35ab4126992d9e9564d1880ec5c53bd9920331dd11281d229886432829cc1a",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y4_green": "157c14ae25b6560bf866687448cce9e18aa2dda00b6c3fe60370d1c707027863",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y5_green": "6d68301ec9a4cd7a0cee59b552a4ea76f0dd2b952de49c7239d3fcb81c026e1b",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y6_green": "2eed88ed3bf92e47ec8a1322964b9feb0da374b96a69a31406b77a29e320dcb2",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x2_y1_red": "a8496d0c2450a659c761c4ae1145761ce504274acc55378e08c173fb51b0e266",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y3_red": "93d64eb7493ba671d52e143d2ba09feef84f44cabdf8d2a4af38256c50da1c2f",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y4_red": "f617135afe1f629a4f9ba66cbab778a52dc7c409ae27f6822c3fbfe1eec6becc",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y5_red": "c2fe859f6e122901aa432edea81437d3ea98ec9bc133fc2e54b045bc05bc9ed1",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x1_y6_red": "8460ed2389093d88528d06460025cf148e84727ac1f04c1f1924dac8958bce7f",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y6_red": "5def3199553895258fc45d656ce847a05687e9f8a22cb375ee30f5de5e645e5b",
+      "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x5_y7_red": "09f7d7523c2260ccc18c2b1e6dd6936d6769a01d1a38cdf506f9054932586740"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 6400,
+      "output_tokens": 50,
+      "requests": 50,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:silhouette:x3_y3",
+      "question_id": "x3_y3",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:silhouette:x3_y5",
+      "question_id": "x3_y5",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x4_y0_green",
+      "question_id": "x4_y0_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x5_y0_green",
+      "question_id": "x5_y0_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:abcacd3450f612a236591aa9:rgb:x3_y7_red",
+      "question_id": "x3_y7_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x6_y0",
+      "question_id": "x6_y0",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y0",
+      "question_id": "x7_y0",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y3",
+      "question_id": "x7_y3",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y4",
+      "question_id": "x7_y4",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y5",
+      "question_id": "x7_y5",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:silhouette:x7_y6",
+      "question_id": "x7_y6",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y1_green",
+      "question_id": "x3_y1_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x4_y1_red",
+      "question_id": "x4_y1_red",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x5_y1_red",
+      "question_id": "x5_y1_red",
+      "probabilities": {
+        "false": 0.9999,
+        "true": 0.0001
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y2_green",
+      "question_id": "x3_y2_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x4_y2_red",
+      "question_id": "x4_y2_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x5_y2_red",
+      "question_id": "x5_y2_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y3_green",
+      "question_id": "x3_y3_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y4_green",
+      "question_id": "x3_y4_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y5_green",
+      "question_id": "x3_y5_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y6_green",
+      "question_id": "x3_y6_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:94f504a4c1a4c42a02375cee:rgb:x3_y7_green",
+      "question_id": "x3_y7_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y1",
+      "question_id": "x0_y1",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y2",
+      "question_id": "x0_y2",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y3",
+      "question_id": "x0_y3",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y4",
+      "question_id": "x0_y4",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y5",
+      "question_id": "x0_y5",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:silhouette:x0_y6",
+      "question_id": "x0_y6",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:rgb:x7_y4_red",
+      "question_id": "x7_y4_red",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:2eb89df9237d5b64f4c49323:rgb:x7_y6_red",
+      "question_id": "x7_y6_red",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:silhouette:x5_y1",
+      "question_id": "x5_y1",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:a1117f0a709d2110ad6caca7:rgb:x0_y3_green",
+      "question_id": "x0_y3_green",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x3_y0",
+      "question_id": "x3_y0",
+      "probabilities": {
+        "false": 0.0039000000000000146,
+        "true": 0.9961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x3_y7",
+      "question_id": "x3_y7",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x4_y7",
+      "question_id": "x4_y7",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:silhouette:x5_y7",
+      "question_id": "x5_y7",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y1_green",
+      "question_id": "x6_y1_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x2_y2_red",
+      "question_id": "x2_y2_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y2_green",
+      "question_id": "x6_y2_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y3_green",
+      "question_id": "x6_y3_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y4_green",
+      "question_id": "x6_y4_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y5_green",
+      "question_id": "x6_y5_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:f53d053754fd363524f68104:rgb:x6_y6_green",
+      "question_id": "x6_y6_green",
+      "probabilities": {
+        "false": 0.0,
+        "true": 1.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x2_y1_red",
+      "question_id": "x2_y1_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y3_red",
+      "question_id": "x3_y3_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y4_red",
+      "question_id": "x3_y4_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y5_red",
+      "question_id": "x3_y5_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x1_y6_red",
+      "question_id": "x1_y6_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x3_y6_red",
+      "question_id": "x3_y6_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__painting-geometry-v1:painting-geometry-v1:6fe0516ce23f50937d8a1520:rgb:x5_y7_red",
+      "question_id": "x5_y7_red",
+      "probabilities": {
+        "false": 1.0,
+        "true": 0.0
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

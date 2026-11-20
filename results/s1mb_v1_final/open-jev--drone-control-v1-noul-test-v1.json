@@ -1,0 +1,501 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "open-jev--drone-control-v1-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/open_jev__drone-control-v1",
+    "split": "test",
+    "case_count": 34,
+    "decision_count": 34,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:40:09+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 34,
+    "expected": 34,
+    "succeeded": 34,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.25460890117647056,
+    "accuracy": 0.5,
+    "positive_recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "f1": 0.0,
+    "true_positive": 0.0,
+    "false_positive": 0.0,
+    "false_negative": 17.0,
+    "true_negative": 17.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.018435604705882236,
+    "baseline_adjusted_skill": 0.0,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 7.518884700000854,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "open_jev__drone-control-v1:drone-control-v1:parent:7f23555dbd324ec2fc8c6582:left_gap_geometry:target_truly_lost": "0b0d5946df77e7546b003da985ad780066b336650be3573d4ad0e523e444f8c7",
+      "open_jev__drone-control-v1:drone-control-v1:parent:0f7faed7272d6f15b927c757:climb_clearance_limit:target_truly_lost": "8fe4b519d062c5d2068ab301e37f22a7e8be4f399a816321566a83dabee4cc54",
+      "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:distant_geometry:target_truly_lost": "a52545a9716f29750805bed16fdc327f06961abe7329f243d95b970560f606c0",
+      "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:climb_unverified:target_truly_lost": "dfeb5e47e2ac7be1c90013aa0644c3de4298b83ee6e1a34256867ab7ae4e3633",
+      "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:side_goal_left:target_truly_lost": "f9341d987c77dcf0e3220d77941c84e7239e6b8cbc248bd9063880a3deb753fd",
+      "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:route_goal_counterfactual:target_truly_lost": "af0b237babadcc668ad8321f5a827f9c3f6ecd1367ed664525f8bcd4556417e8",
+      "open_jev__drone-control-v1:drone-control-v1:parent:6639b47fc4ab1d334584a70a:side_goal_right:target_truly_lost": "9cd37fe8da31afa1165e7e1334e4df8cb75dfa998190b516ea864763d6170d69",
+      "open_jev__drone-control-v1:drone-control-v1:parent:64f8f0d70ef6d1425fb13eea:id_and_order_permutation:target_truly_lost": "77b64b8dd85164c196d5b07c2f51d6d9ff7ee6eca0fcb97d133f67f86763f0a7",
+      "open_jev__drone-control-v1:drone-control-v1:parent:032c7c0f6713979970417347:observed_failed_scans:target_truly_lost": "7120734d9e2a06d5f67c344ad76b0429d76a90760c242fba9df8d592450126cf",
+      "open_jev__drone-control-v1:drone-control-v1:parent:6e26c82e1bb07773ab7165bf:route_goal_counterfactual:target_truly_lost": "15bf6270fa26a627064d1ea09d30b0d26a6250604367208126c860449e8ad85a",
+      "open_jev__drone-control-v1:drone-control-v1:parent:b8074ea5eed476a8d1f4c04b:right_gap_geometry:target_truly_lost": "0a06d315cc883e90dd5467480547ce59e1a7c33bd539d7914e20cf7f3de478d4",
+      "open_jev__drone-control-v1:drone-control-v1:parent:cab79a38712bdc6523709bc0:climb_unverified:target_truly_lost": "e388b25e4799982ae73938e8db7776dc25949b5d8987bbde5ef09bb712cbdba6",
+      "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:climb_available:target_truly_lost": "567fa3d14d6408894a547c5c7e18dc3ccac5c7354ae93e7e63b258b321f87132",
+      "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:missing_gap_action:target_truly_lost": "4381ffe632c7ef6e7c28a06328eaa44724689a25ae5a1ec9ee85a916c6a10384",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:observed:target_truly_lost": "b76ffadfffc4e2c6ab8a6e0de7f4990278c693972789eaf5cbdc54a88f7e36ad",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:right_gap_geometry:target_truly_lost": "a0c177259139526a21a81d7fbab5c22631be5e48e8ed17097204658fc09dd6fc",
+      "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:climb_unverified:target_truly_lost": "1748c47db96916ccce289408b0b3b4b478a2e5d5c2f081f7f8ae1ba10a7be892",
+      "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:climb_available:target_truly_lost": "0d9c720504c431705d9bbe30de795e0c15334bfeae36880f301fc2c12d26b9fb",
+      "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:single_permitted_maneuver:target_truly_lost": "1510748f70511a7aa3bf8882d4bd0db5387b437745c76fe313f5198febc26b71",
+      "open_jev__drone-control-v1:drone-control-v1:parent:124f25955747f8f126b1ba06:route_goal_counterfactual:target_truly_lost": "1f915523e39fad5e8d5db47f1cc81ec4d640c04e2318895491b155b42be42580",
+      "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:imminent_geometry:target_truly_lost": "7124cebc001e92c666ae127931c043dbac90b972af23f4ffa032e83d8216b1bd",
+      "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:climb_unverified:target_truly_lost": "018dbcfb0c49735876651960e09859f6b3a7afdca11c900c7d2d752c62b125b8",
+      "open_jev__drone-control-v1:drone-control-v1:parent:e7e8475180f7b72ee9f02c5c:missing_gap_action:target_truly_lost": "e1972065d44669a71bd03dc18a40522c859a0746de30be0fc7682bf000ce8cb9",
+      "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:side_goal_left:target_truly_lost": "5e3eccba0951320fea25ead8f2408007a2164a84e2577a55f96c665dbf14a4d5",
+      "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:single_permitted_maneuver:target_truly_lost": "db2abe1de7652a18801cf52ccc58fc0e8cf5f055888a8b775a1667c75d40d6d7",
+      "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:id_and_order_permutation:target_truly_lost": "2c7c6ff02cba75efcbe93b23799fa867b8d1bd9e22cafcf79e8e98ed3a2e53d8",
+      "open_jev__drone-control-v1:drone-control-v1:parent:762769613f0102b1a89a695a:observed:target_truly_lost": "947961ac0ec300d6eac5ecf947b3cb220c18122821f77d3584b974b22449379e",
+      "open_jev__drone-control-v1:drone-control-v1:parent:762769613f0102b1a89a695a:observed_failed_scans:target_truly_lost": "cc32cebb2302e96531b4bc75b332de2eebf79f6a51d704687ac4affa32e16bbb",
+      "open_jev__drone-control-v1:drone-control-v1:parent:5a2040467b25b58c32e2b197:observed:target_truly_lost": "5b3493b92e85c6e3bb9d3615d7c4d67e3695566e2b425c52c0f840df805e729a",
+      "open_jev__drone-control-v1:drone-control-v1:parent:5a2040467b25b58c32e2b197:brief_occlusion:target_truly_lost": "934d7a5efbe903e688e9de0203daaf9e33672f6e34e39338dd1e53d967b3cdaa",
+      "open_jev__drone-control-v1:drone-control-v1:parent:228e397f021d25e858aa3a3e:occlusion_timer_only:target_truly_lost": "91d82bc658a35c76d4182bc7292ecc6974fafd6dfab1540d325825c6def7372a",
+      "open_jev__drone-control-v1:drone-control-v1:parent:3ba6f739686320d02f2f350d:observed:target_truly_lost": "5c09afa395dd2110b584ababe98cc79e29afe011229aa3cdd4698ae0fa560c74",
+      "open_jev__drone-control-v1:drone-control-v1:parent:c25a0cac6254b3783ffa707a:left_gap_geometry:target_truly_lost": "b17944739c61c0bbde58bdd2c3fb5d1e2e11bbf7fc8d306fd767356fab3640e4",
+      "open_jev__drone-control-v1:drone-control-v1:parent:d1f9a8ee65a76020dbe1dd40:observed:target_truly_lost": "9634aff53af2a309bc803cc8bc087c15daa3b0f81d2c12430dbdfe19b8dce352"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 4352,
+      "output_tokens": 34,
+      "requests": 34,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:7f23555dbd324ec2fc8c6582:left_gap_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:0f7faed7272d6f15b927c757:climb_clearance_limit:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:distant_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:1032cae4a3fb8421dd96de76:climb_unverified:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:side_goal_left:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:ec6e0a978148b1afbf5e1af5:route_goal_counterfactual:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:6639b47fc4ab1d334584a70a:side_goal_right:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:64f8f0d70ef6d1425fb13eea:id_and_order_permutation:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:032c7c0f6713979970417347:observed_failed_scans:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:6e26c82e1bb07773ab7165bf:route_goal_counterfactual:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:b8074ea5eed476a8d1f4c04b:right_gap_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:cab79a38712bdc6523709bc0:climb_unverified:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:climb_available:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:4f592e00e29c94bc4b65297e:missing_gap_action:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:observed:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:right_gap_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:2f465b9448f6ea56938d31b4:climb_unverified:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:climb_available:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:abc44c9c782671ec445ee6c5:single_permitted_maneuver:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:124f25955747f8f126b1ba06:route_goal_counterfactual:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:imminent_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:d968204c95c42e6c8623bf7e:climb_unverified:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:e7e8475180f7b72ee9f02c5c:missing_gap_action:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:side_goal_left:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:single_permitted_maneuver:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:37fd44252ab740dbf69302ca:id_and_order_permutation:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:762769613f0102b1a89a695a:observed:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:762769613f0102b1a89a695a:observed_failed_scans:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:5a2040467b25b58c32e2b197:observed:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:5a2040467b25b58c32e2b197:brief_occlusion:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:228e397f021d25e858aa3a3e:occlusion_timer_only:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:3ba6f739686320d02f2f350d:observed:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:c25a0cac6254b3783ffa707a:left_gap_geometry:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "open_jev__drone-control-v1:drone-control-v1:parent:d1f9a8ee65a76020dbe1dd40:observed:target_truly_lost",
+      "question_id": "target_truly_lost",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

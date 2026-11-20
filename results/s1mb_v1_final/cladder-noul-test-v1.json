@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "cladder-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/cladder",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:18:01+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.24795161110000005,
+    "accuracy": 0.58,
+    "positive_recall": 0.72,
+    "specificity": 0.44,
+    "precision": 0.5625,
+    "balanced_accuracy": 0.58,
+    "f1": 0.631578947368421,
+    "true_positive": 36.0,
+    "false_positive": 28.0,
+    "false_negative": 14.0,
+    "true_negative": 22.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": 0.008193555599999791,
+    "baseline_adjusted_skill": 0.15999999999999992,
+    "baseline_adjusted_score": 0.15999999999999992
+  },
+  "elapsed_seconds": 15.625003600000127,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "cladder:balanced:test:249": "1ba655f16581a4ec3c893cad83a0f3a44ce3277452be2deecf95b3805ca1800d",
+      "cladder:balanced:test:305": "9a8148a526da200042c93fe70e8849d56d52a996eaf3e567a975ca0a0d5a0f4b",
+      "cladder:balanced:test:324": "ba2027c6e46a21d08034ab9a4a9e532c2927436bd11d0d51989926f1b49eb4a2",
+      "cladder:balanced:test:479": "e7a74a1e52e7eb7739bdb91a27ddfc402b2ec9bd1677afcf56f95d60ade32243",
+      "cladder:balanced:test:645": "fca37156bb5b2a4b8b920793f76df5b2db2353adadd870e8643ab4a8303945d5",
+      "cladder:balanced:test:784": "3c80ca07cf1bdad8f09c7ea1e429cef1509ec2147ad40a6be5273b845115a2b5",
+      "cladder:balanced:test:966": "e3efa6b4dcb2294d2f5a1dbda0a80542b6fb4a45efa5ef4ec058774b7b423c16",
+      "cladder:balanced:test:1059": "a0718a1f46fc8e5d30db1f08008fa0dbb745f3f5caef1a75e10f3a724be49a31",
+      "cladder:balanced:test:1328": "74dbe457f0df759ab3cf641d04aafb3bf2810441dba139cb8e4992d923c7b9f6",
+      "cladder:balanced:test:1335": "535b4a58928e843d007d7805be06b27c16227eb61e2b52e319d011d707d27b0c",
+      "cladder:balanced:test:1406": "75ff6ddecdd4e310a5d03463a99dd796c4a11c8dedbb6b445cbd2c3abab9c514",
+      "cladder:balanced:test:1505": "09b7287f36a188a5a8179cea6edfabd5c228c9cdc997fc993c7d658b95888ea6",
+      "cladder:balanced:test:1577": "ac30c0535374d0bedc6b6e016d94397420226979421fdd373ac1fe277a2d4c48",
+      "cladder:balanced:test:1602": "be81b0bb85377c98ced5be4943a8f75a6026a2784fc66002c6f3d0c8615d3cd3",
+      "cladder:balanced:test:1737": "1b0ab20123cfab97b60cdac6553f80548f57b0544af95ec4ca155d9e1ce039e0",
+      "cladder:balanced:test:1855": "c5895cad200b46a2ac285ebdc18b2b1a7f2710f260ee5a5b131d16f16875812e",
+      "cladder:balanced:test:1865": "ea31571c5750a1d54a60fc516a87e3086a3f67535a539ccff74c5b30412bdafb",
+      "cladder:balanced:test:2287": "5393ed9a9e1f272047f628949e48eece13d04d87c6e26cab61b786f07ce733cc",
+      "cladder:balanced:test:2504": "22fd133b059df1438d33d1d2494b5c7598a600a558ae119b2e8bdefc161a837e",
+      "cladder:balanced:test:2524": "ae439317a5434e742c56cbe209ac948b63d4a32c7ea9228b1f2c06fdc31cff7a",
+      "cladder:balanced:test:2539": "afd181b2f3952e1b045fe0690f3a78bb2295abc0884067b4e3ad9cdad507c04b",
+      "cladder:balanced:test:2827": "b88198636f00dae397b6c55e1efd9e420f3037b4318a0d07b06dc5898ed5e157",
+      "cladder:balanced:test:2852": "f184d283a49d8dd27d6ec14e6592dd37117d02e8534ba014cd16066ce18cb343",
+      "cladder:balanced:test:2865": "9c7eec0028e3276ece444997818ecafd60abe9c00c59612b52f429c431e86045",
+      "cladder:balanced:test:3012": "88181329ad8a1bf8f719259786f2a30cf1cfebfa362d7b4a77fe4dd0cdf21a24",
+      "cladder:balanced:test:3044": "c597265e794886257ad36389aa5cefb70d9faa24aa1ba3cb15e91eda07ae5d84",
+      "cladder:balanced:test:3113": "eccf79668a0a60303d9359dcdba788d464dd37a304881affb3bca135a3254497",
+      "cladder:balanced:test:3503": "fd0ce7d45fd5ff317d47aafbfc3f7a2d5fa2439a346ddf1071f241a49a671c8e",
+      "cladder:balanced:test:3564": "7851c2eb34fdde4e6c6d84e41e709926aee3cb002f9ca3d938315318ec8ac435",
+      "cladder:balanced:test:3901": "2d4facadf08c0af4b5b1cc3273056088ff190755b42c0837ebea6c7950c1fc09",
+      "cladder:balanced:test:3963": "c186808913b52a9a26fc2d072fd99b3cf6714bf1843cda5dee6d2209599ad585",
+      "cladder:balanced:test:4041": "87e98cd041bc6126afd90760921dc9ff5ecaa6bb49752be419e67cb6133eeb36",
+      "cladder:balanced:test:4120": "ccd671ddfa3d63723f800e6fc82fa27d06cfd1c095bc4c0481625764065bc8dc",
+      "cladder:balanced:test:4173": "76d0140d8a6c4e95d4db1b17b01a73f0d69ff2f518f886547bf5f42a2d7d4ab5",
+      "cladder:balanced:test:4289": "e138f5fd600ab5d945404dd7fe2fdd9dc09562981adbd0d754c77010aa6b37cd",
+      "cladder:balanced:test:4328": "f7c15b236d7cf00d2e85f91f9f80acbbba2f331d989a9ccabdc441ba39a361d3",
+      "cladder:balanced:test:4397": "6defd26642d8f9f0b548a97f1ce7122d6cd15c4222ba0de91a1fed46f822b41c",
+      "cladder:balanced:test:4415": "6d7a3b4d52c243bf1e9ea2d256abc14d80cc69256c9268549f01c2c22554c977",
+      "cladder:balanced:test:4536": "cdcd784446f27ab9e71a75c36e777e98dbebec138422914a6ca2e64c695997f5",
+      "cladder:balanced:test:4729": "6d49336eac0a0e4752d73957622856fb53da2828bf15b59aae477fc57dfdfd83",
+      "cladder:balanced:test:4960": "03ba6ae8202b7d347aa36212d23daa2d4182971351b848604e7ddda236252c67",
+      "cladder:balanced:test:4971": "8a0e99c49e8a52d9c8e5484254112d58961f28a429680797ea5824cc6c6aef0f",
+      "cladder:balanced:test:5024": "062ab4ad5413fe61160f7e709260d728b1a224cea67a04ea5fbf432b080dd8d2",
+      "cladder:balanced:test:5029": "14be3b09eec8ed7dd1fd2c89948abca63ac42bc8a05cc94e95d801f157670397",
+      "cladder:balanced:test:5114": "1ad7e5007d87b6cb791fd974f411f70ae618bd1c39da8f65dc4412e8e60694ca",
+      "cladder:balanced:test:5145": "08a879d5407397d77cd9836520ffbe2787ede48b0e2009b849a3ef43f36ddaec",
+      "cladder:balanced:test:5194": "2d0b389ca49b19f82756979632d11d97b943fb7d0818d5eb9dbaaa61fd917c8b",
+      "cladder:balanced:test:5697": "a7f679c6dd7ff65ebe264f5f8f21a2cd80a468953108ef7ed9d3046febafc675",
+      "cladder:balanced:test:5794": "6b99261049e18f19734d49a822a709d4b2e884451e493d2a583a41f74b156a78",
+      "cladder:balanced:test:5905": "9328596c97fa9c4af25a5749fdee93942a08896112dde87f625fb5b42bebaad7",
+      "cladder:balanced:test:6071": "ff58820d16912f7447ecafeafe832a7019c1eb255060012b4f39164f929ed1ec",
+      "cladder:balanced:test:6079": "dd305efc84e06a038c0ccd6bd507e11a14ec0a2646ce4b217ea6a6109fe033b9",
+      "cladder:balanced:test:6157": "e2677d07f8d257eb33d201e9ed4158bcedf28cab4ae6b9c6ca1c4b232c1bfb77",
+      "cladder:balanced:test:6168": "ab158e5d5b37bf231e9426eaaae6d984340eb962d9114da44406d5b6c0349d6d",
+      "cladder:balanced:test:6265": "8cbf298d7621da71836f671d931bfaf51157176fb5c15edd86a92444a0b70cfe",
+      "cladder:balanced:test:6468": "a0a7ff744fe05f8338f60ff35575203105961e23e96ee466ee044c826c02819d",
+      "cladder:balanced:test:6494": "ab17c83a327ea388256e81b3345385b3a62085c81e7e481b51f305781e3cb7a0",
+      "cladder:balanced:test:6732": "bd17187b2b0a89fa14a368e43043cc091bfd8599a9283955cd334765ee892539",
+      "cladder:balanced:test:6824": "690e3a6ca56e97239e3663f451f83a77f1ee4ba9aeaa376e3355aa5c86943655",
+      "cladder:balanced:test:6910": "4702a9b8032389f045acd8ed603f4dc3119ced06cac3de4ad54ec7d8062f9522",
+      "cladder:balanced:test:6927": "7767bdbdad01dfb3ef1f1c7cdf38352c232f4b8fd74107c8e7b2bb11babe6b18",
+      "cladder:balanced:test:6935": "cb09e0deb345f7abb9bba5563a590e84cf13a286c4ad5435567406d0e81e89b3",
+      "cladder:balanced:test:6943": "3f39ef1c1431e3c54c0c458e8a48675eeec54bf0d76605955d352054c91450c1",
+      "cladder:balanced:test:7283": "3d4cf7ff7073053b7b6fa91aa23125a40e28c891936d43c1ce7c4cc48851f794",
+      "cladder:balanced:test:7290": "b0a7270c38f15e338881b0e8ebf2ddf56074345786682a9fd17756aeb7b5dcd0",
+      "cladder:balanced:test:7466": "59328d507742cc24741caa56497a4ea711d7bf9c92e0823994477e5bdd5e5241",
+      "cladder:balanced:test:7530": "40c6de676dc9e8ecc291b3b7e28f1a7f05ffabeaaccd117cc2f2685ab1943a99",
+      "cladder:balanced:test:7627": "d7b1a719c0ac087d277298a7448983ee620b2e8ad02544af6ad14ebc131abe24",
+      "cladder:balanced:test:7780": "9e07a55f6c5a3a83d3a8544d1f7406f248b23fa6a0b37735727761afdbdaf898",
+      "cladder:balanced:test:7788": "dca197a1f41d46fe9d559df43c0117b273bf66e932c608306fc77b6223594517",
+      "cladder:balanced:test:8052": "bd310371533f27a97bf4a4efb2d013b405729944fddfce9d3b5bd764d0af4669",
+      "cladder:balanced:test:8074": "3b72605a51ca0c3a747218e454c7834bd1cb3dc3f5d21cfa5f774b0e3c9649b8",
+      "cladder:balanced:test:8142": "2c39e1e1d09a7d62f4d6f115753ccb2de0d6092cdefcd5b4b635010a2a58257c",
+      "cladder:balanced:test:8180": "3f06a61bc241f9d875f3a8bf4bf421114db95f5d8457d4e58e5d59bcbfd9d71b",
+      "cladder:balanced:test:8213": "39102a567ca828e8eafc557e4a01965278472ad1784562e8b2c41d1a40577f1f",
+      "cladder:balanced:test:8340": "ce2ed20b85c2f823acae1d7e59734816f3bf1a39b5f0c2f859666648c5cac112",
+      "cladder:balanced:test:8486": "45da4412f91a0ce0ce3732325d28f12d333484d2066aa34842909bc75507f24b",
+      "cladder:balanced:test:8576": "a7d1e0285e0d88a066af8e038a9775e2adfa754bdeed3dac3c1178bd760d31b7",
+      "cladder:balanced:test:8661": "071806d3da9d7afeeb3c331a20c21c4a70d3aaed3b3070f28acf7281338815e6",
+      "cladder:balanced:test:8740": "fd3838bd6f5bf7c6fc284bd6d9bfaeb20bdd3a76f2865c250b97c96fa9ac3fb8",
+      "cladder:balanced:test:8753": "e6fd3040d5ffbd8073585cee0a038e3445c5ccca49dce45b76ee4671ab79f25d",
+      "cladder:balanced:test:8880": "f593881156ef2b3dbddc9b5fa46a07aa4c41be8b44e4602aab9a81695534a300",
+      "cladder:balanced:test:8948": "fbf7a8e2ca5236615cbb76c2ed0e4ad1279890d4f64b3868aa7a0a7f6a1c3c47",
+      "cladder:balanced:test:8960": "20eff004b480b172b103cbbd1bdd4a26eb32729e995ab93b17dfea3845e4dbf6",
+      "cladder:balanced:test:9088": "1dc05b5e7c87b34f9b897b1105549a1d95d01c46d1a46a424dbd2e8988fd2ee9",
+      "cladder:balanced:test:9109": "41d843e87b439408ccaf791219e223d39e7e6f5e3b3faa5011bf209d8b0a5647",
+      "cladder:balanced:test:9238": "f09c8810e5effc49f895cdd4a83c4ea82ecf1de91828707987c351336f550b75",
+      "cladder:balanced:test:9378": "bf1613aceeb6e5cb43de8fd3753d0943f6c6fa109f758ad2cabd47bcd710f98a",
+      "cladder:balanced:test:9417": "1599314ffffbed34d0f025cafc73d78d9daac0b983927b0da825abaf33600e9e",
+      "cladder:balanced:test:9459": "b1d395bcf06c0c67dc12dc3fdf8d8f7eabe7076aca3d5d6a8254d368b1fa3b22",
+      "cladder:balanced:test:9507": "af8bb53201349bf2ef0c149aa1834b1e96f69bdcbb93bd7eccedd4a28572dc0b",
+      "cladder:balanced:test:9525": "55230e5024a7d3c789510acfa01ab26259c3dd017d8c0c8ccb94a15ae050528f",
+      "cladder:balanced:test:9562": "1fecdfafdd632618629c626aea2ff682eb8c1305fe84f4ed0fd27965b0c6f25f",
+      "cladder:balanced:test:9618": "fd645eee9f9c79723e4ab14342d969f60445405862e9f3da01ede5394ff7764e",
+      "cladder:balanced:test:9633": "4a0256487c6aabbe720c875de0b7d6ad58bb60033626540a0d3dd71a33e4b53b",
+      "cladder:balanced:test:9692": "a1bbe66060bf4562ae5d5cf26e6254afcde1662f9076a979fc8048b18c81d1f1",
+      "cladder:balanced:test:9722": "fe20b6ff04b5224a2970ab7ba7604fea8a830e02ad3624eb7865c35079271ac4",
+      "cladder:balanced:test:9791": "4846846a0573d482645aa24a5ace8eeec8e8b1c7ea75fd878674ff951fa25c7e",
+      "cladder:balanced:test:9798": "d6b349c562a20613e718d861ee8ba88280f3644e5660c35950968d06163cf498",
+      "cladder:balanced:test:9860": "0ca8b55933c2251b64e0a413a73e975a61751d398761584fc824761732fe43b9"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "cladder:balanced:test:249",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.3398,
+        "true": 0.6602
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:305",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:324",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:479",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:645",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:784",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:966",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1059",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1328",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1335",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1406",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1505",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1577",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1602",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1737",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1855",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:1865",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2287",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2504",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2524",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2539",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2827",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2852",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:2865",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3012",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.6934,
+        "true": 0.3066
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3044",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3113",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3503",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3564",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3901",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:3963",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4041",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4120",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4173",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4289",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4328",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4397",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4415",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4536",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4729",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4960",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:4971",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5024",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5029",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5114",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5145",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5194",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5697",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5794",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:5905",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6071",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6079",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6157",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6168",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6265",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6468",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.39449999999999996,
+        "true": 0.6055
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6494",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6732",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6824",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6910",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6927",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6935",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:6943",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7283",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7290",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.3984,
+        "true": 0.6016
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7466",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7530",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7627",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7780",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:7788",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8052",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8074",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8142",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8180",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8213",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8340",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8486",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8576",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8661",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8740",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8753",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8880",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8948",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:8960",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9088",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9109",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9238",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9378",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9417",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9459",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9507",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9525",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9562",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9618",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9633",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9692",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9722",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9791",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9798",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "cladder:balanced:test:9860",
+      "question_id": "answer",
+      "probabilities": {
+        "false": 0.35940000000000005,
+        "true": 0.6406
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

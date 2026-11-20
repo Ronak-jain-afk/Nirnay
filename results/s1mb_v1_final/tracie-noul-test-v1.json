@@ -1,0 +1,1293 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "tracie-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/tracie",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 100,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T16:03:13+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 100,
+    "succeeded": 100,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.26117133290000005,
+    "accuracy": 0.42,
+    "positive_recall": 0.32,
+    "specificity": 0.52,
+    "precision": 0.4,
+    "balanced_accuracy": 0.42000000000000004,
+    "f1": 0.35555555555555557,
+    "true_positive": 16.0,
+    "false_positive": 24.0,
+    "false_negative": 34.0,
+    "true_negative": 26.0,
+    "positive_prevalence": 0.5,
+    "majority_accuracy_baseline": 0.5,
+    "constant_brier_baseline": 0.25,
+    "brier_skill": -0.04468533160000021,
+    "baseline_adjusted_skill": -0.15999999999999992,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 5.280622399999629,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "tracie:default:test:62": "a6c40198fd67033b2946176a64830b6beb803124ad0ffb2cc3c15dd3ddc8e869",
+      "tracie:default:test:111": "9767fa10db45ad9b7f687d7210fa1e6abd742c0860ffda302c8bd54e258377a1",
+      "tracie:default:test:160": "0e55421ac5c0d68e541d0640720bcc1a38bbb8cf690877ad8c048aa9f7280dc9",
+      "tracie:default:test:191": "524701a801d148f0e9ff6397c8c685cbb1d71a61426f1c2c8bad0f5ba7477daf",
+      "tracie:default:test:255": "4c10c8ddce04e3708c2dc3f558e2446d2dfb175ffcfdbf9c907c37bd26e6c804",
+      "tracie:default:test:371": "545c06eeb0b60b74876877648702eee861558d97e9e1d81978693181966899b4",
+      "tracie:default:test:419": "15ea8401b31c7bd7950a25df99c801295fe79143213baed7a8e2c5cf48949abc",
+      "tracie:default:test:466": "49e8338ce3c5497742b79df7a4024d480d49bfda1514c7369feb0dc79cd163a5",
+      "tracie:default:test:588": "ae8fb2af3f08fa94d3d9431be3c73403154590b0f1a552ccec5b44c4a2d4e3f2",
+      "tracie:default:test:590": "c4662dfa0b88395b5da6ccac37b2ad05c32ba1f37af164c31312ad540fb27fc4",
+      "tracie:default:test:663": "5b7b9035d9ec4a97bea6ac136537b17d469336bb811e5bae481ee535a0b34079",
+      "tracie:default:test:680": "034a822a456d550e947ab073cabb1fc885b2720b3a91c443647cc53ed0e17c6d",
+      "tracie:default:test:696": "cc7e43a94a59bd1f2a85386be2ed2f42ccc7615c95b1a260ce1db701b83f8063",
+      "tracie:default:test:710": "1214660500bed054d02c34154c918f7a135fa848629a9c5c676eb314f89aa005",
+      "tracie:default:test:765": "3513fa644746aab8e5dbd0038f47d322d8fa6713baca8853d97fdf13853fac36",
+      "tracie:default:test:780": "26cee656886ff0e628bb92498815c2a9801574f701e673cc17e11a91bfc81e18",
+      "tracie:default:test:817": "a1fc8d125aa21aa2a5c1e56dd5645a228cf0434bdc0b79ff5a05befc29919645",
+      "tracie:default:test:874": "112775464835ebc0039eb152578d9cb3c4c3856f806dead88c5cdc0b531e637b",
+      "tracie:default:test:940": "fa5a7129130577c8bc6f373ab2cef79a624a0c88fc1f67e9024c930b43b118a3",
+      "tracie:default:test:944": "71d28338ec4a5f45361ddfc6251834b9f0a7a445f85e425ba4e5f32265466b7f",
+      "tracie:default:test:955": "9fe117eb2072f963ed47e07f8f1125ef7e69f50ecaada7210b884bf4adfeb367",
+      "tracie:default:test:967": "3eb19b4f4dfd04cef010a036effd4263baa78d85aa52c7d25b5ae7fd5e3bbf86",
+      "tracie:default:test:972": "d8605be75f142c86efbdc503361b648703a046a1f29d8849b698acc183f9429b",
+      "tracie:default:test:978": "7a01fb6454d7098cda08ef1016036df80152f7a0fcdc64ac32514ed36f7f5ece",
+      "tracie:default:test:1013": "e091bb722a10378d69a78566ca27a4bf507ff378a98039e52e9e411f89dc41e8",
+      "tracie:default:test:1078": "bde135e089451e207a8c0bb0381afda5f7e71b068d7c8fede625c113c2e94ddf",
+      "tracie:default:test:1090": "79596bcebd3fea9f7829e729db48f0ac2690cd179a343305e038d8be3a3d4053",
+      "tracie:default:test:1124": "049368bc305cc56353900b81a4b7405cf7937e9c527281309b865130f8044181",
+      "tracie:default:test:1186": "b7b4ca507410aec9934241382dbe33bb12fe297d436cffe04cfc25947cb3d258",
+      "tracie:default:test:1190": "da09eea59d4796460de34ee4549e6d6085dc318b72363826c98a974cab939b2e",
+      "tracie:default:test:1229": "1fddd944c4f202c4ec26458cb6632e55d9c7c7d43d215804157c1751b285f491",
+      "tracie:default:test:1365": "72c956a0c14a553af2d561743f97ca6ec962e2e73ab25c0aa0e8e2e06c08ed34",
+      "tracie:default:test:1375": "5774c5dd0f58ef7580f2c32a701193e28e23d9ec9bc8a1275d9353262c1d715a",
+      "tracie:default:test:1381": "232a29bdfd8523e08ea57c3cb2de57de78d7eed1caacaab2a6793d293e336838",
+      "tracie:default:test:1383": "10dbf47da9cb2055b32ae01cc73e968fdfcb1ec61f4d762737946a180801c124",
+      "tracie:default:test:1428": "3837069a88122cd89872ac449496291ed403ea655c454d5eb4e479c89cd98d4b",
+      "tracie:default:test:1479": "9a957e74029ad2e91004688a2e60af8e76bc657a4e7231c0d488168525109a76",
+      "tracie:default:test:1518": "eea2cb040aaf2a67e6ddff9039ca1916df0aea1f751f3b3f886257277deede31",
+      "tracie:default:test:1526": "2377c6c71eeccaf73be70976c367057ca1facdecb35be42f8092fcfd4b7915a7",
+      "tracie:default:test:1609": "6139a8d61fa421428d2b3067a20b7805ca9f6a63a2b394a406af02b97e162eb6",
+      "tracie:default:test:1667": "ae15ffd808a9adf5629ebc3b13be6851483b66018ec4496cd6290fa54b62a2f9",
+      "tracie:default:test:1673": "dca0e5e73f860a0a1951358842f20c4d9b7a05a28bea9673fc07264e0e31e5c3",
+      "tracie:default:test:1694": "4ee4f1a0f7a7693ea44d452ddb73853ea6554ab34982bf45799e983c62ec38fb",
+      "tracie:default:test:1722": "484f8e7e0e44456231ae31a584c9d44fa502e1c1fbe34cd5818b3e8795931ea0",
+      "tracie:default:test:1779": "d2902b0f045ebe4cce12da7bd322423abf989eac0651ad4bffdf16abff6cc43d",
+      "tracie:default:test:1817": "69a71147e712de7de4514e191f92e16d6b9421e0f0d8b3dcf5f4634975c923c8",
+      "tracie:default:test:1823": "cf22fbe60130120d98d002f9aee48b557bde26f77faee770b49849c3f5b4a408",
+      "tracie:default:test:1844": "410067310665b1f6ac6ce6464299b0db98f6dfd5033d4dc23474191459d6e50f",
+      "tracie:default:test:1873": "f8c696aac951da392090a7c9337b94f43d9025d6616f96d93ba971e0bce677b8",
+      "tracie:default:test:1881": "3de41637d238d5b90e6aa0500d1c7f9de0700a8781d006f8e26da5da632b7f6b",
+      "tracie:default:test:1900": "82fa555039feea2c44b12adc150037415f5f77bd9fc086e396349d359002a0b5",
+      "tracie:default:test:1909": "0f11503ffbd66e882b49ad35accb32b9cb7fd346041937c6f33366185de28e1d",
+      "tracie:default:test:1963": "3a41bb5ec6da907d091fd206499740b47adb952618962567025db359afa9d4aa",
+      "tracie:default:test:1990": "f62fbd213ee07dc9895c7a175acb56f7b62e41d08039d2ae260b719a976277fd",
+      "tracie:default:test:2040": "2493e4a7978173d119020d61ef7c18902bceb0d96f191709ef2a815bfa4fba22",
+      "tracie:default:test:2270": "989b34054bd168fe9fc66349271d9ae3a81923c45346c41aef3cc065bc7cc3b7",
+      "tracie:default:test:2277": "9feaef76dd7c660e045b082428a0c285ba98d3a2fb36a1a6ab734725e3fae1d2",
+      "tracie:default:test:2329": "aff5f16e6bcbc087a6717c09105505d1c68cc20d71a126b269874c3edf6bc4dc",
+      "tracie:default:test:2345": "afa8f3b67d812ce2cabed9995d872752467dcd8e973deea4c782fd1cb03250d8",
+      "tracie:default:test:2348": "2c4a88a94dce14a5cf53442a6870e9e91a94803eb8fbe904ed5685a5f72f2dbd",
+      "tracie:default:test:2376": "0f0b7137b518a2b8eca659c13b52003ddd05593a29ad03d6b211fd4f1b181c4f",
+      "tracie:default:test:2377": "c9b492a0a2f61519e00af7155476719871cb40c3a72a37d7e92e9b2589d44855",
+      "tracie:default:test:2445": "5131ce5b9d61ea86a732b73e02d938426b39dccf8b69ddd9244a8d91d2a84132",
+      "tracie:default:test:2484": "004f0dde55835a562225632f6893936d5f246095dd362295fa90aadd7fb373fd",
+      "tracie:default:test:2498": "8f55bde4dfc049f62c8aa4a1c42a4cdbf75a4de51bc7333b2f25227f9236add0",
+      "tracie:default:test:2506": "5e510a72aff777d8a56d3f26de68b134fbe6f1c6c7699e0cccbf25d0911ee17e",
+      "tracie:default:test:2544": "de7d48f6bf3739b07835ae2631faa584f1af12b857f58a617c3c5e2d4165e4e1",
+      "tracie:default:test:2552": "dee655d441a7db9b8352bc6bc702f673be9e82528b4633b2ee342a322c5a50fd",
+      "tracie:default:test:2611": "ddbfbfc865b9134459ccd7ea7b6cc75a2bc72059f7248404bc3bcec66b8297a4",
+      "tracie:default:test:2626": "2b1788a032b7562202b1c12309087ccd138638396266f400cc249024b8f90226",
+      "tracie:default:test:2685": "1a6070e55df3338fa877f83115dbd4800187be4f354e535903a47711bfe0f75d",
+      "tracie:default:test:2753": "74ccf39819e4499fea783773680f92a376821dad04f286172b12933583c98c76",
+      "tracie:default:test:2771": "ffc7f7c7f10ea1aaff887222a05b10b0d104668600f3822b05fd660cba4d9036",
+      "tracie:default:test:2773": "08927b4849691f9d0319fb3d4c856b3a7d52ee728c0b81c08219996428ee7f6b",
+      "tracie:default:test:2851": "28056a324ab0c49b2451c1e1bc09618e6c41a0a1788b1349d3c55e1044412dc1",
+      "tracie:default:test:2907": "12e060cec849259076a3b967d54281fc48beb2feca9042b0070c0daecee1047f",
+      "tracie:default:test:2944": "fc052f5513b868ae66b77fcc86ce6cbf562181f4ca4fcd6a4f14f8fa6718a613",
+      "tracie:default:test:2987": "89fa84d39d0535b7e8c19981272bb559599342385e9dce76558cdd8105f52b93",
+      "tracie:default:test:3043": "e74e8d917c34752ed2375611073bf396f3ef5266449091c4c8c48f99c713f615",
+      "tracie:default:test:3053": "9e49f5e15cbaf416c39fd9319d95f4a2b17474c310114cde775bf534c0d5d829",
+      "tracie:default:test:3208": "ce4b0e545524ad302c378fbea3e79bb694a145538c8900beea3dc8b3762a1661",
+      "tracie:default:test:3288": "ad13b44232588b5bdd111e834ae66e961fb159c042ad60c64e51fe82aba2e30d",
+      "tracie:default:test:3428": "f77675f714f2caaf475ea8ea4fd3431b43a08fb53ae809bf28afa8b72dc2add4",
+      "tracie:default:test:3491": "ac67edf63a28fc0ad051f5dec18147c64f001f53e4253fd15d20d388098a2b13",
+      "tracie:default:test:3546": "8da4ffcba03bf1374f1d433da3c9efee57fedd037623c8b07b40c4c6ee9331fa",
+      "tracie:default:test:3556": "5e5f8833ab9a769191e15edb72084d04b2ab6c88df646699e0ecf7d21ad4d792",
+      "tracie:default:test:3651": "789862eb217f857318cde6e9529c34ae3b711e9435377fad288cbf1a85bf277d",
+      "tracie:default:test:3663": "43ec0bf0e1a51920f5f4f9629794dffe3291c2992e09c7f44ed60eb1fd8effbd",
+      "tracie:default:test:3752": "b084704b6efa0473bffe145fb4f2e1430fef664773be95b7eaa2445c4946c88f",
+      "tracie:default:test:3837": "dfbb905b28c4ccd9291103c064d8d663f58601f047cec1a94d18ab0422655e03",
+      "tracie:default:test:3845": "71667db7c752476f74bf775f681d2a5c2f3afa2d32a194a4bbd6a00c5c0cfab4",
+      "tracie:default:test:3850": "b30b5169be380f5889bca8c9866cff4b6ff56863258e7ffb644da94b46eb64e4",
+      "tracie:default:test:3870": "5a2f17d0e6c440a7e7cb9e4e80e9efcbb56734842df152b952402750caa8e3db",
+      "tracie:default:test:3878": "6ac6bfcb3cebe2e7bd1b7dd80837b8af7f075fb1435b02aeb79fda47f65421ca",
+      "tracie:default:test:3962": "b755111fa285a789edcfc8bcb3ac7ea99db01c15956bf85a79446dc6ebc60615",
+      "tracie:default:test:4022": "cc41b59a37278de8606db8c960d104199d6f1ac59c4e7bffa0de0496137e315a",
+      "tracie:default:test:4043": "b89bf72dbebf8937c8965625b27141506b20f65aecf97508aa63bd6c4c940fa9",
+      "tracie:default:test:4078": "0e779394b14eaaadcbfa7c7fc1871e3b4194aa41d452c9ebfe2a39cb199c550d",
+      "tracie:default:test:4129": "ca2be42bbb777babb88a1722b6bd5e9ff399b500624b8bf514f6ef3be062c524",
+      "tracie:default:test:4177": "18d70bd0d98c127b76be0c166b4fb6630c8079c47a40235b6c3e91fe517930ae"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 100,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "tracie:default:test:62",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:111",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:160",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:191",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:255",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:371",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:419",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:466",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:588",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:590",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:663",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:680",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:696",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:710",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:765",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:780",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:817",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:874",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:940",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:944",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:955",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:967",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:972",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4375,
+        "true": 0.5625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:978",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1013",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1078",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1090",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1124",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1186",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1190",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1229",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1365",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1375",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1381",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1383",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4062,
+        "true": 0.5938
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1428",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1479",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1518",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1526",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1609",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1667",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1673",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1694",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1722",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1779",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1817",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1823",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1844",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1873",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1881",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1900",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1909",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1963",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:1990",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2040",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2270",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44530000000000003,
+        "true": 0.5547
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2277",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42190000000000005,
+        "true": 0.5781
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2329",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2345",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2348",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2376",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2377",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2445",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2484",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2498",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2506",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2544",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2552",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2611",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2626",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2685",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2753",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2771",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2773",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2851",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2907",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2944",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:2987",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3043",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3053",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3208",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3288",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3428",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3491",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3546",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3556",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3651",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3663",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3752",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3837",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3845",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3850",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3870",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3878",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:3962",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:4022",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:4043",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:4078",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:4129",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5352,
+        "true": 0.4648
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "tracie:default:test:4177",
+      "question_id": "entails",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}

@@ -1,0 +1,2393 @@
+{
+  "format_version": 1,
+  "run_id": "nirnay-v1-final",
+  "benchmark": {
+    "id": "followir-news21-noul-test-v1",
+    "task": "noul",
+    "dataset": "datasets/followir_news21",
+    "split": "test",
+    "case_count": 100,
+    "decision_count": 200,
+    "primary_metric": "binary_brier",
+    "evaluation_family": "ordinary"
+  },
+  "model": {
+    "training_exposure": null,
+    "id": "nirnay-0.5b",
+    "adapter": "llama-cpp",
+    "revision": "v1.0",
+    "settings": {
+      "backend": "caller-managed-llama-server",
+      "base_url": "http://127.0.0.1:8080/",
+      "endpoint": "/v1/systemone",
+      "served_model_name": "nirnay-0.5b",
+      "revision_source": "caller-declared-checkpoint-revision",
+      "runtime": {},
+      "case_batch_size": 1,
+      "max_questions": 64,
+      "max_candidates": null,
+      "max_request_bytes": 16777216,
+      "timeout_seconds": 600,
+      "max_retries": 2,
+      "renderer": "native-systemone-structured-anonymous-v1",
+      "score_criteria_order": "ascending-value-v1",
+      "temperature": "model-file-native",
+      "input_length_policy": "server-native-overflow-rejection-required-no-local-truncation",
+      "probability_normalization": "native-server-no-client-renormalization"
+    },
+    "total_params": null,
+    "active_params": null,
+    "parameter_count_method": null
+  },
+  "created_at": "2026-11-20T15:29:29+00:00",
+  "evaluator_version": "0.1.0",
+  "provenance": "measured",
+  "status": "complete",
+  "counts": {
+    "cases": 100,
+    "expected": 200,
+    "succeeded": 200,
+    "failed": 0,
+    "abstained": 0
+  },
+  "metrics": {
+    "binary_brier": 0.2376169961500001,
+    "accuracy": 0.57,
+    "positive_recall": 0.26,
+    "specificity": 0.6733333333333333,
+    "precision": 0.20967741935483872,
+    "balanced_accuracy": 0.4666666666666667,
+    "f1": 0.23214285714285715,
+    "true_positive": 13.0,
+    "false_positive": 49.0,
+    "false_negative": 37.0,
+    "true_negative": 101.0,
+    "positive_prevalence": 0.25,
+    "majority_accuracy_baseline": 0.75,
+    "constant_brier_baseline": 0.1875,
+    "brier_skill": -0.26729064613333375,
+    "baseline_adjusted_skill": -0.06666666666666665,
+    "baseline_adjusted_score": 0.0
+  },
+  "elapsed_seconds": 25.71393949999947,
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "input_hashes": {
+      "followir_news21:04221c5a5ef2c83a1f811589a9a21a0db65f8fa9da075aaf123361bf965f1492": "c0ae15428e4485bb39b7ac68c5a4389e0f735a19c14619101a2fe57799e04bbb",
+      "followir_news21:9f438e47e0fd89b9a15b44464688bf63cd4e1887ba04696f3577f19424dc4d7a": "81282bdb6198266aa71f04d0392d6220a5d5ee400d7e632e514ee784ac81d923",
+      "followir_news21:22c1229c377364ee8008727aa34ccd918d5603ddb8418dab448c378a2145f038": "a465d7a2739b2a556f09a89827aa2f0cdccd1fbcc3c635fd9b02ed5cafc57629",
+      "followir_news21:5e6b24efad43352d9984153aab76a2087c49ced10188b976711a19c2268a02d1": "fe9714f89d75aa5fd44ecd9789f824b6bace1847b429c6a410f28d6d32e44cbe",
+      "followir_news21:e11cff5b17a81479e681209d75e15d3e8c382b52d489fbf20c7756f1098a2914": "68528f66c734f163ec7e8525e828040bb5de3454467b3c15f830b919435f7bfc",
+      "followir_news21:b5d1cb0b2c88aeb5f4b585c96ad7501ce0740ecf5d75d6f27d1ce1816087eaa2": "986dbf96e99fe0b14d08799692bc7dc28223d89b3826ac2364b65f39cad0a89c",
+      "followir_news21:a0a302b8a8b7c16785214356725a70012581a80ef0cc573ef0a126cc7641697f": "7e04fc9c79ff57ddd9065bbf9f4946cedc0ffe03539b5baba5eee729210ec339",
+      "followir_news21:b088403cceab0426aff3ec5e085c9518c94d36fce7d7854d37848e6c2aabe6cc": "d4d4b922d62b6683beef80f6ce3f714eb80287ccc6fe1ea8d556a9b226e585b6",
+      "followir_news21:61825a4ee1cc4ee1d1e6bc7e5bf5db33a997b445cc510749f736178375dab5c3": "3ced9307b0c193f03d8f4616245c2d5757d63130e38b1875c7fe2a0a70eadc64",
+      "followir_news21:e836378fffb6ae0b9bf79c37308cfedbf109065a761c7ee76b63402fbae72a75": "9fd4301479aee4aa63c71cb6f282b43fce760754f50e1a93ad313b810dea67b8",
+      "followir_news21:34b4c6fd1d25dc7203bea614107f64dccc4f03aa56394633768210fe61e24329": "04e774ec45d08f19afa429659b3fdfb50638f1cab0b38472b9e2f10abb18c6d0",
+      "followir_news21:f025bbdc9d87e62a97cf4e1d521f57c3ca0be41c02629b6b2209e8373fd8d425": "991449692e672de3b9a9fd5d9728cad46ab1e58f15d8d38edb0171a1b2db9865",
+      "followir_news21:549d5179209a2a2988249d5e96919ed0c7adf6956ef3c7b3428c0517c2398c3e": "b03b4226db783e4b6a95f4fee83baa336d282663e67c836887bcb2da6e28c08d",
+      "followir_news21:070400d71384a402734f3ec91013c13e8c7f5a0eaf0ce5907ac5d29f553f61af": "82e13bbd54e0a859063ea008eebeb268423a3c4b48c739321ff69ca0d0ffed91",
+      "followir_news21:4e1a461414cc11f95ee5a8a95b236325a726ca3436d3d7d5e55d7454ecf5c911": "918bd8a50810d8495b06402137f087b975ccc77fc5460db9b9084e470fed4eed",
+      "followir_news21:88d3707213fc5ef837ced7f75ce811c3a6bcca9e2d72e8604348b2ab6605dd2e": "6b39c4bf5342cd7597228b01ea20ac3e8e33fd2745f655bb0e6c6001b2f46d55",
+      "followir_news21:1ea78f51bce999fb39dcb12a5c0aba26f61595c4fdafdeb625b5ce0b4559aa80": "e485852a3f4574e3aae6fbffa2fcbb073f76e29833bfa649ed71ec5204a9ce58",
+      "followir_news21:26cfd241cb398e9c3af8eb1da1e1a92e26010e6dad8abd298bb203e0d85efdfa": "fe7c10c3e24f1237d4c60a28798c4d69412e72ad5401712b90f1ffaf7c2567ab",
+      "followir_news21:65f74ac6bb671e6898571d75cb8dae2a25c72393f82c6871ed1567c5554d837c": "1044765bf303604fd4ce11e9b6f04aa18054ec3e0b1896ba09294847b4841e2a",
+      "followir_news21:32c9d39a2eb368fd22ad0ac586ce7264342cd7fd38bb4c99f25611eb9659372b": "4d5229dc31d52a42d21f99ffc7a51f05ad82dc6889fb4dc41861db448fd2cbea",
+      "followir_news21:d5deb04e330b6da152af090254a2594335af3f9cf740ff01be2dcd1ba6d82ce0": "772719181b13cb4ee85e8370c45ed0273946321d3df4df1bea7b07cec31d6ff9",
+      "followir_news21:276e20e44c70d6df4ca80db5fcfc2b1bd4d978a7b017a9aceabab27b2572cdf9": "c85a99e5fdcf7b7405c02bcbaba0f281bd7213bf4f8cda243f7e0eeda461c151",
+      "followir_news21:aca141bb20867cde036aa7ca680c5dedae5cbff227bee42c9d53fcc785755ed5": "4d7be18ab678eb122da1abe5d9248d91cbdadb3d2e93d5e25df5d602a761c365",
+      "followir_news21:835ca22b3068ba883407e9c03e6b5e0c5b980eb92aa8c2255a26f030c8060592": "a27cb445c08748e2671310ae500e81d1567674b87ed0a7f2223eec0d3bbcd5ba",
+      "followir_news21:afd16c063b3ff8bf6d09adb3526d537dfbe6a0321ebbeb556b5d45ab1cfc0f26": "2a8403b67ee2798c074f15ae182f72de34bba3546fefededddf04c338a2cb152",
+      "followir_news21:5adb8907eb8eee75aa6907854ce43f17d81b8935e0fdbf7f68201e915a05de94": "b1fd95114102cb3901b4b83890a31f089493e8ae2cec17600a2bc0043a77bcc8",
+      "followir_news21:ad0039ec0574a8f6dcf639964a191d2e89f9c21f2cc1fafd916423cb1db35934": "21f44e166a3d4ced74d437bbbd5dbac80d31a0c2b888b831cd589a77fb56f58d",
+      "followir_news21:9c96ad21408dffb31c4958b13aab3d408984cc7cded61cd84ef09c465b86c5f9": "d8b61dfc9dc3c086eda77d33f941b0c23773718fe2b0aaeaebc034d157e161d2",
+      "followir_news21:36c2475164d3ac77aad3e33fa3ffbe2076535549d67671a6b543f0f8c1297b29": "12fab85f4e6be1862423847c4c427a0b170a538383ff812e6b8b56a5428a7aef",
+      "followir_news21:d4b26d69155bac8ef6e36bb7a38416e866fc2961ad8cf9bb7b2d305818429ee4": "bd4c687709fa8b524b76af5cf60028d2388821515c399c37a3bbac91146bcd69",
+      "followir_news21:f5c6f1da54e889beb78d2c27fc437d58d07b31c638e61279a2767d52f1fdd479": "eae95bd258e1fdd2200e512fc9624d43cdde125a1f3d44708db4044154303ab4",
+      "followir_news21:a1d5776a37838455dd07cb0919541fe23a018464281d8b14cc068ef07bf1f7bf": "1fc47cd9443841432f0d5ab7bd4a7a8a0b639664e02b4754ddd993a080977a81",
+      "followir_news21:96e43c49124f2021dd1aa3b9f3790d9ed1b4967f2881decbb6c7b2313b11b191": "389feb59e25788c36ff275a9f470b25a9e515a2ad6017a4e38ed8aee1de682d4",
+      "followir_news21:f44fd0fe66da7ee32e19af7d1c0fbc663fe9ce2bc8043c260e92a6687303d664": "4f2da36cbb13cab0be748889f87c210759ed2ac1c3446547dab7e3928ef6c372",
+      "followir_news21:40f474821363e8da7bc11a070a43391cf6a40e78588d3b193dd91cd759169913": "bc38f829ab3c1a9a411f9b4268c64d14789a0a2e56f57e3bca0dde132a211687",
+      "followir_news21:4e1bc78179542604e5e4e25d6a253b7efee0ffd4ff0a205ad9c342ba2bf21039": "eaeb77fa2226b12971ce9850c2dbcdfa5e27be95042e101a4a352d1f7779ef80",
+      "followir_news21:e46f9b49920d6b7192df76cec31493157d5d89bba304d18be83424555a127b19": "8d073e522a70dbb843f0335b6afee73a0138bd7cf251d538bd46f9a4c7aec53a",
+      "followir_news21:45b8db841b9b86053212e0e0f27822c501fbee34aa72d3a1de4d2e3b02844095": "b1aca788b26cdfb538ddb38bf3bef48a420cb5740c8f52c7bf4ee794225d91fe",
+      "followir_news21:17afb922f7949ae21b14c350ccbffbe911c8e22f697c7581c2c8de83b210b5f4": "8fb417da99a181a102a47fd502970caecf90bb7ad624c53fe161e66f3aa9b9cb",
+      "followir_news21:ac2071ac9fb1fa31f0e3c30481216dd0dbc443274db577cc98f221418565df6d": "79997a6b7761b074dcb844f98501ca05f9f1b6aed49770343641c058e1d54643",
+      "followir_news21:4cef4366d8606ca3f743b5d3da0034feb8cb0b08cee3b128c35f608ccdb932e3": "116f1510c4d1871ef75a2720f5a5a7cdd9f9cfce45081e19442b70648a6e7903",
+      "followir_news21:48c786f673597f76f29694eef7ac3c340e938e9ea4cad9587cef06a90b461e02": "fd0bbd3b606a487c3593f73d3b15cd125be99b32b12fb7f8314af5010ef42ec0",
+      "followir_news21:1b40718d1342deab2e5d8648616694b65cc3d9373447cf10871234c2b4c7c96a": "9f01b6e04c749def890d575eca33a9c6ce5121d6d5845a656aa457af7963bf07",
+      "followir_news21:47deb46387ca7949ad3d8866fcc013cc41f3862b83b0aa69327bf3300606a1fe": "0c274254d2b173da1b9c53ab2a9881fceb2f0cced59fec40de9c4fed942e43ea",
+      "followir_news21:14fe52daa9a86a0e2291aaf495a932847f04c1c5cf5963c1d86f9348152e91b9": "06fa81cee2fe0c171b0bf2425b1cfd2c1d2eee7c394b4800c6905caaeea046f3",
+      "followir_news21:f372dce8ba76dc126988d5881000dab4926d47d4eb1620b9529e1306d2650b09": "1a8ffdf35eee126010a6dd0ff8a052b40eedd61a4a57cd2534540dd49577111c",
+      "followir_news21:1071d966aba80f5d514046ee1a6698d12447496e8329743c8cd1e3cba2dab662": "b7d4750fc0f8b3b152caf07de31d52022939912af4fd9c1d2239e05beff7a323",
+      "followir_news21:5a9666b90991dd6d0064c344b6cc460a38ef9d8ca89ac32d725b8479de193900": "108f2fa4a2e3c5b10627a1efbbcfa18e68a77ebff7faf7098e94e0b82dc5b26b",
+      "followir_news21:f264d70875427679b68777a50615a8a7ecee8bb3f86adfc52bc9397a3ddfc0df": "73d9f7c7e29e0d60893da43d36c090c7ef8f5d28b1203da7be08fcdd385d9f3e",
+      "followir_news21:f073a9956f326316bd99aa8933b954aba45ac086ac60a788ce663283ae8fad65": "cd33ec8349c833c94a9946d62a71ce2a728e77949e62b8c5af0d3a4845c592f9",
+      "followir_news21:66eccb42f427c7bebc796cbaa01b9aeeaac457de3f0aa5fc7a6f92c375aadf81": "a968812b74fbf8cc63d906c9aa1c3421a0be0dd2d3ce7e1578463338d49ff286",
+      "followir_news21:337d71c2ba11169adbba603c53eaf8cf10f74b99f8a580fe468d2def9b3a753b": "7561dc1b548f06fc1add046f894a6b5a1f04d02ab09111935f4bacaf23809b37",
+      "followir_news21:8e5cf8782ad562324c922b83cc1e0cc8a7de8c6581266c22af583a88dbf71595": "2b7f37c8ce4e03e86701831f7510c1133105d712ebdff477634705538e8b3720",
+      "followir_news21:31bdf1c1e01ed286434a443b4cc40a7ca204b7c5adb2751c619fd62acb2cede7": "9cbabe2d80989363f59791494092823ca4a989f9eaabc9b7a1674e7787173811",
+      "followir_news21:9a36c8c99fda73271b8a087635fe8d3153e563d649640d00a219dfeec7b3a4a9": "d834eeedc614619aba4d5ce3e7110d43c8ef08b8c58448045dbcb4720c26c1d0",
+      "followir_news21:15e8f59230452f7ac1ee559a85bdfe3a49502951597bf91d1ce5bc8fa50d0385": "cc148b4682449c62450aa3f2da6f3ed950b045a6eeeab397d52ed0715c3d7e9a",
+      "followir_news21:aeed758c8da19c6524441777b16d977339a3e7438f7d9466b60445a19137fe1b": "6d54a991f42cd8a44765cb1b47052c2eb31dca3c104f72f898de373c0788cd1d",
+      "followir_news21:5debac6239b5828cc5aab9c05b706bdc586bd675ef7aaadc5078f24dd64a74f9": "f67aaf1f9cccb84deefe8a4f7b05df5a0a939741fdcbf8d707e81c4bdfa0f1f1",
+      "followir_news21:a7e53d7489e6b9c10fe0e5632ad605c04c3091a1ab4433d0e3ad9d4efc003841": "35101167f7f5b7b4aafe5f6ff92ad4adb0c87d7dca6f6226ba101dc3a0bccc45",
+      "followir_news21:5473d7ca1502483840c7bbd9b93464afd6c6543b6a30db0762f51200507e168c": "0ab8296a41e4e6b1c3e966441bc1c0b42f8650cf246a59259be73e6f236e9c5e",
+      "followir_news21:d94f81b879f02c577993e8bf3132f248f78dfe294cc96a55dd2f5c99d5059fbb": "151ca41292bd28f2e397f7d6d80ecb68820203c28f4cf032eb167dab34a641d5",
+      "followir_news21:a3e946e1abcff480eef36c3da23ec2270811fb263936aa5306464d64e687070f": "23444dcf5f4c13aafeea2ef1b38e173696bab42325a1093b13c9bffce38f110f",
+      "followir_news21:8a3392cc4ef33d68c37c0031d26480976f1dceea17ef2be8d36dd1c6c24900ed": "8561f5f0d463f5b67673c107783f89c094280578ed90290e7c889aac2e9ad9c0",
+      "followir_news21:7826462aa0baaa3c2c2d9eef73eda92d6b08597f6bfb747370ec7f89efba0f76": "726f76dc2d6d895f258a90d4926c371f912689fd3e1761bd1eddc207b8c6ecfb",
+      "followir_news21:af9512ee1299e06781411c1c1ff4b1dfeeddd500de7d3dd82b553a144151b59e": "62a4ef3194360d1216d37d502115d0f205517b169ed73b8a5b5b9813c54723b3",
+      "followir_news21:caa209bd975f26f7544ce6ec89f928cac2732947e316b5f536469e0bcf263e01": "ae89153d17b9d1bafab1962c952f2e573f373d27c884200dbd627fe704aa24d2",
+      "followir_news21:3de76077b882a2b7a49103d19726c21f82d72319f6792864e9b2c3ec3373acc9": "dccbeb224cd672bf74c7f0d7a4f3e41c8014487684752ed04e9aad5b0256ce44",
+      "followir_news21:afcb2877788b652228659c4adcc9ae982c0ea73b06875493d5f9ff9c97ec9e3f": "dcb342e6a474af0b08047cd4cdad4afe900c2343dca8adfa9037bd41fe89120f",
+      "followir_news21:faa984676161cc674e3d2331bd575de349d239e7e06de7a7b6c778314cfe03ca": "26bcc3dbad71c55b480faad14e63cd693e19e0223d80298dde8d931ead4e690a",
+      "followir_news21:f326c5515ceb4d65ce30b38d701b78b1b1d8597ee4b3ba2e4b2ff4fdd5ad8e40": "a208d55ae02358cfcb607527271723c3a81339ed490f4112c65dabcf4214e0f3",
+      "followir_news21:9c60d5043e7c452f6597a7ba2700f2b771fe77fb235c736c67b53f389e1bc868": "add0cac82c8f30d8dcb541207912f521d415d1c26246f5ac28fae1075b644abc",
+      "followir_news21:528d7455cb911dd5dc63a0382155374647e1d6d71f1a7a577d05a6545c800102": "fcd64dfea5fac37ae4311eb6fb223aa4d2ca8dedae34379019dac896f744692b",
+      "followir_news21:45119526f6b4b90e0d75b9d107d1abd215f6e142ca85e9dbdf7e1708f7559254": "f805f0d34b136a8d3d5d803999e7741d2f2e10a542eff1d8c5cf05cd1fae025f",
+      "followir_news21:e98d46982de7b70e645f9dabfd51bec658f1ee92e9aa13d6f05826e4a2520658": "4f2f42042849b799c975373cc90db7428cb912c664b7440913b4012fa95bfd75",
+      "followir_news21:2d808dc121b926cea3ed0f241d1dba28e2da17c089c532b8aeff7e18572c4da3": "9d74e5a1d7514a8a3b3958e4ed92690c28eb893f078df7358ffa1e09dd0c9d22",
+      "followir_news21:432afb91c8775af964bb7b2d3fd4cb0be64a13bf451b1178e7ebb12f0ec060bb": "6bfe628eac8c8385562ef003ac95863087469efaab3a3b2a9301325e0fb15ac0",
+      "followir_news21:825bf38a8fcdf7f5efcab3ff540e2915cd88957eda1532ffabecd7a477c5b88c": "b5e3192105d61e0f8c82498d551e6e80b3e9a898c4aa4b08ccdfbc421e0514a8",
+      "followir_news21:4fa53009cb605e417dca0591c4d2d9a5e2cf9eb882b27c505ffd9480b09f1dde": "7cec68edd5f1b06827f80c45dc7817367476c93b16b42776fc194d8a5deb964a",
+      "followir_news21:3a8a9cebf95689ff1bf4a50acc7f1e1a1c70d7060dfd6e8953bd3a9e41bd7dca": "d4e9334b9693382885c994a7c5ca2bd322537ba6f8145508181adff62ea7e3d3",
+      "followir_news21:95dffb87a290509bb1412055babc1bf240ece9c34e17f09d33590cdceae5edc0": "d29c8190d6958b6a49b2818525dbbd06535a7b5a7ac9f862ca8be81321f78f51",
+      "followir_news21:bccc140d51bfef426186429cd5756d0b676bd78cb9289a134b7e027feaf97cac": "d1e4b858186d0aad4275d575128089f38b3c3a24fd094ade37a66f0ec2a582f7",
+      "followir_news21:98e83a6a22c65198f17118ba25b2016aa01747b57376e4d52be570a249d15cf9": "b9b344e198c12ce766e8c1be5ba18c78bb099c09713861dc4014a54ae08b6291",
+      "followir_news21:6064d4a34a56b9f3d8f3d8fe98d616ce0b70fde515600fb74fe2ed94e73072b9": "05c0a5ac69bc7eaa99f33057297a3ff46cb8d775200804a43edd2305523bffb5",
+      "followir_news21:aa8dfd9fbef44d1d0314294b689884a58ec2641071122b084e77d22c5d054c1b": "f25eb7da823873ba5c269657990bdcfb02dafd8d86ca83c0d24917099235d98f",
+      "followir_news21:caccd6bc82b421d79a1a18535e7086c8844db5d7af2312e574f0342c96057841": "51ea60739eb65843be327b4fa727149391b22181497a7a965fbcd293679e9987",
+      "followir_news21:fdbdfa54c0586c67b615b499ffcc92df0d506f665641432de3e5c1f37d4144d8": "fc930b544461f00fd1d6d331b1d4052a644d09060602187bc11b6faa93caad3e",
+      "followir_news21:a24c2339c687eb5f4e22bfcb5d624ee4217f006ab9b18c0a3ef916d967ba6e22": "1527b792b1af8d16be8ab9d609ada15f3a0f4328774183a3e257ccc626799a7f",
+      "followir_news21:68d2ba6bcfa4fd51e508ceb9e6cbc4c479a715b100ead3206980e5c9de92f09b": "ed4039635fb0b610db3752d2c3aeca2671c818606e26b608f22a8044ff150e52",
+      "followir_news21:12b08fae792c538719a18f83ea95215fd0e4ae3d84bf9258a9472ded3e15743a": "1fafc1ed8c9af83e85310749787ce4aef3fc7f70dba6a54e066faab97009d17f",
+      "followir_news21:9befe90af7b416404027582a8102398bcd2a744a58a025b9d4a108de9e2f3e7d": "19ab278b6f343a1d4a25aa2fc9eb1580caee1e5b6babdbe4b2a8363ec605a4a9",
+      "followir_news21:579dba1817dbfbabaf412e0962a9106640f0e800d28de1602b80db9edceb8aad": "f9649ae6588ee80949d7f225e7099c97bee4e644aa47cab2a7966312afc64e78",
+      "followir_news21:59b33ad8387f13981880c11c1d689f0972b7d2107910da12734de3cc5d9bec25": "9263aaf9725612168fbaae1034741b29a8761b3cf05cf2ab5c1faa8506d30aef",
+      "followir_news21:9cc0fa3c831397b4ad11f9f1f2b1de2d850597f2af3d71610faea1f7e8d95a68": "da05283a6cf22fa36ec4af500ef1b5ffe70963dbd8ac44dc6df0c27098b063c0",
+      "followir_news21:be2b070bc2c00430ad3d7f14a968be01d96846b09becb3c58860b4023bb2d4a3": "d145c6fb70cb6bcfd5eae308782dfe5230016304a1682727c3f1426b43139dfe",
+      "followir_news21:4f4b88f355e9987358a0083932c2bbee62b21cbbad761b964d71ede2cc964257": "4b44ae0e074ee518a60fa3fbfdc824dbf61bb5478d49f43a2679ae50339b3663",
+      "followir_news21:730639ceca12afbec4cf938fcd42115488ff325424578178236b4091678954db": "daed0fcb8b4dcd59ef111c73fde0521b5d2785e74b37642c261ea52e77bdd9d2",
+      "followir_news21:203d19b375989f5f71fb02a09406d899f2bdb201a5af1dc4b22c3de078f0cd91": "d8d7b5226c0c33b3d7da84a559fb233f8d40b6b9ac7f14eda6690651d5f12c65",
+      "followir_news21:5f0ac225f844c0cb71ae9c306638dbcc48cf18076bbe06b21f14182d35ff9b93": "28748c26b06a2dc471b26a71240b804351140b432ec112b5b624cdbc616ac279",
+      "followir_news21:4226bacf4c8bda50a7a2dd9d88ab2c417c404a6dbf31e66e1569569623085518": "05cc5b74769827f9805f9e33c3076d5b9785aa3b6dc7bbdb83cf4bba6560b73b",
+      "followir_news21:876fe54d4eebdc7c7ffca2be4cde90c73f16d1c83d20eaa3f051ff0a00445a91": "1c58f9d48b65531c6990a5544f242424d4e1f42d8a79129fae4e5e7d8d0a16fb"
+    },
+    "evaluator_source_sha256": "35a268587ef0b45cbf57e4e8b093237ec7c08b1a4f9d5321e69842c36fee59a3",
+    "evaluator_revision": "29eb459054bfbc3a6528cae1a566804bc8d14b6f",
+    "dataset_source": {
+      "repo_id": "hotchpotch/S1MB-english-v1",
+      "revision": "10bcb8c6916b98b966cc1f03aab1781a7c354b4c"
+    },
+    "api_usage": {
+      "input_tokens": 12800,
+      "output_tokens": 200,
+      "requests": 100,
+      "retries": 0
+    }
+  },
+  "predictions": [
+    {
+      "case_id": "followir_news21:04221c5a5ef2c83a1f811589a9a21a0db65f8fa9da075aaf123361bf965f1492",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:04221c5a5ef2c83a1f811589a9a21a0db65f8fa9da075aaf123361bf965f1492",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9f438e47e0fd89b9a15b44464688bf63cd4e1887ba04696f3577f19424dc4d7a",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9f438e47e0fd89b9a15b44464688bf63cd4e1887ba04696f3577f19424dc4d7a",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:22c1229c377364ee8008727aa34ccd918d5603ddb8418dab448c378a2145f038",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:22c1229c377364ee8008727aa34ccd918d5603ddb8418dab448c378a2145f038",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6855,
+        "true": 0.3145
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5e6b24efad43352d9984153aab76a2087c49ced10188b976711a19c2268a02d1",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5e6b24efad43352d9984153aab76a2087c49ced10188b976711a19c2268a02d1",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.7606999999999999,
+        "true": 0.2393
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e11cff5b17a81479e681209d75e15d3e8c382b52d489fbf20c7756f1098a2914",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e11cff5b17a81479e681209d75e15d3e8c382b52d489fbf20c7756f1098a2914",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.7090000000000001,
+        "true": 0.291
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:b5d1cb0b2c88aeb5f4b585c96ad7501ce0740ecf5d75d6f27d1ce1816087eaa2",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:b5d1cb0b2c88aeb5f4b585c96ad7501ce0740ecf5d75d6f27d1ce1816087eaa2",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a0a302b8a8b7c16785214356725a70012581a80ef0cc573ef0a126cc7641697f",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a0a302b8a8b7c16785214356725a70012581a80ef0cc573ef0a126cc7641697f",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:b088403cceab0426aff3ec5e085c9518c94d36fce7d7854d37848e6c2aabe6cc",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:b088403cceab0426aff3ec5e085c9518c94d36fce7d7854d37848e6c2aabe6cc",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:61825a4ee1cc4ee1d1e6bc7e5bf5db33a997b445cc510749f736178375dab5c3",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:61825a4ee1cc4ee1d1e6bc7e5bf5db33a997b445cc510749f736178375dab5c3",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e836378fffb6ae0b9bf79c37308cfedbf109065a761c7ee76b63402fbae72a75",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e836378fffb6ae0b9bf79c37308cfedbf109065a761c7ee76b63402fbae72a75",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:34b4c6fd1d25dc7203bea614107f64dccc4f03aa56394633768210fe61e24329",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:34b4c6fd1d25dc7203bea614107f64dccc4f03aa56394633768210fe61e24329",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f025bbdc9d87e62a97cf4e1d521f57c3ca0be41c02629b6b2209e8373fd8d425",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f025bbdc9d87e62a97cf4e1d521f57c3ca0be41c02629b6b2209e8373fd8d425",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:549d5179209a2a2988249d5e96919ed0c7adf6956ef3c7b3428c0517c2398c3e",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:549d5179209a2a2988249d5e96919ed0c7adf6956ef3c7b3428c0517c2398c3e",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:070400d71384a402734f3ec91013c13e8c7f5a0eaf0ce5907ac5d29f553f61af",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:070400d71384a402734f3ec91013c13e8c7f5a0eaf0ce5907ac5d29f553f61af",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4e1a461414cc11f95ee5a8a95b236325a726ca3436d3d7d5e55d7454ecf5c911",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4e1a461414cc11f95ee5a8a95b236325a726ca3436d3d7d5e55d7454ecf5c911",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:88d3707213fc5ef837ced7f75ce811c3a6bcca9e2d72e8604348b2ab6605dd2e",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:88d3707213fc5ef837ced7f75ce811c3a6bcca9e2d72e8604348b2ab6605dd2e",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1ea78f51bce999fb39dcb12a5c0aba26f61595c4fdafdeb625b5ce0b4559aa80",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6484,
+        "true": 0.3516
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1ea78f51bce999fb39dcb12a5c0aba26f61595c4fdafdeb625b5ce0b4559aa80",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:26cfd241cb398e9c3af8eb1da1e1a92e26010e6dad8abd298bb203e0d85efdfa",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:26cfd241cb398e9c3af8eb1da1e1a92e26010e6dad8abd298bb203e0d85efdfa",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.627,
+        "true": 0.373
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:65f74ac6bb671e6898571d75cb8dae2a25c72393f82c6871ed1567c5554d837c",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:65f74ac6bb671e6898571d75cb8dae2a25c72393f82c6871ed1567c5554d837c",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:32c9d39a2eb368fd22ad0ac586ce7264342cd7fd38bb4c99f25611eb9659372b",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.7051000000000001,
+        "true": 0.2949
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:32c9d39a2eb368fd22ad0ac586ce7264342cd7fd38bb4c99f25611eb9659372b",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.7402,
+        "true": 0.2598
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d5deb04e330b6da152af090254a2594335af3f9cf740ff01be2dcd1ba6d82ce0",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d5deb04e330b6da152af090254a2594335af3f9cf740ff01be2dcd1ba6d82ce0",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6718999999999999,
+        "true": 0.3281
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:276e20e44c70d6df4ca80db5fcfc2b1bd4d978a7b017a9aceabab27b2572cdf9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:276e20e44c70d6df4ca80db5fcfc2b1bd4d978a7b017a9aceabab27b2572cdf9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aca141bb20867cde036aa7ca680c5dedae5cbff227bee42c9d53fcc785755ed5",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aca141bb20867cde036aa7ca680c5dedae5cbff227bee42c9d53fcc785755ed5",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:835ca22b3068ba883407e9c03e6b5e0c5b980eb92aa8c2255a26f030c8060592",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:835ca22b3068ba883407e9c03e6b5e0c5b980eb92aa8c2255a26f030c8060592",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:afd16c063b3ff8bf6d09adb3526d537dfbe6a0321ebbeb556b5d45ab1cfc0f26",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:afd16c063b3ff8bf6d09adb3526d537dfbe6a0321ebbeb556b5d45ab1cfc0f26",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5adb8907eb8eee75aa6907854ce43f17d81b8935e0fdbf7f68201e915a05de94",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5adb8907eb8eee75aa6907854ce43f17d81b8935e0fdbf7f68201e915a05de94",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:ad0039ec0574a8f6dcf639964a191d2e89f9c21f2cc1fafd916423cb1db35934",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:ad0039ec0574a8f6dcf639964a191d2e89f9c21f2cc1fafd916423cb1db35934",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5391,
+        "true": 0.4609
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9c96ad21408dffb31c4958b13aab3d408984cc7cded61cd84ef09c465b86c5f9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9c96ad21408dffb31c4958b13aab3d408984cc7cded61cd84ef09c465b86c5f9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:36c2475164d3ac77aad3e33fa3ffbe2076535549d67671a6b543f0f8c1297b29",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:36c2475164d3ac77aad3e33fa3ffbe2076535549d67671a6b543f0f8c1297b29",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d4b26d69155bac8ef6e36bb7a38416e866fc2961ad8cf9bb7b2d305818429ee4",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d4b26d69155bac8ef6e36bb7a38416e866fc2961ad8cf9bb7b2d305818429ee4",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f5c6f1da54e889beb78d2c27fc437d58d07b31c638e61279a2767d52f1fdd479",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f5c6f1da54e889beb78d2c27fc437d58d07b31c638e61279a2767d52f1fdd479",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a1d5776a37838455dd07cb0919541fe23a018464281d8b14cc068ef07bf1f7bf",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a1d5776a37838455dd07cb0919541fe23a018464281d8b14cc068ef07bf1f7bf",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:96e43c49124f2021dd1aa3b9f3790d9ed1b4967f2881decbb6c7b2313b11b191",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:96e43c49124f2021dd1aa3b9f3790d9ed1b4967f2881decbb6c7b2313b11b191",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5429999999999999,
+        "true": 0.457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f44fd0fe66da7ee32e19af7d1c0fbc663fe9ce2bc8043c260e92a6687303d664",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f44fd0fe66da7ee32e19af7d1c0fbc663fe9ce2bc8043c260e92a6687303d664",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:40f474821363e8da7bc11a070a43391cf6a40e78588d3b193dd91cd759169913",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:40f474821363e8da7bc11a070a43391cf6a40e78588d3b193dd91cd759169913",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4e1bc78179542604e5e4e25d6a253b7efee0ffd4ff0a205ad9c342ba2bf21039",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4e1bc78179542604e5e4e25d6a253b7efee0ffd4ff0a205ad9c342ba2bf21039",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e46f9b49920d6b7192df76cec31493157d5d89bba304d18be83424555a127b19",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e46f9b49920d6b7192df76cec31493157d5d89bba304d18be83424555a127b19",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:45b8db841b9b86053212e0e0f27822c501fbee34aa72d3a1de4d2e3b02844095",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:45b8db841b9b86053212e0e0f27822c501fbee34aa72d3a1de4d2e3b02844095",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:17afb922f7949ae21b14c350ccbffbe911c8e22f697c7581c2c8de83b210b5f4",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5312,
+        "true": 0.4688
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:17afb922f7949ae21b14c350ccbffbe911c8e22f697c7581c2c8de83b210b5f4",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:ac2071ac9fb1fa31f0e3c30481216dd0dbc443274db577cc98f221418565df6d",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:ac2071ac9fb1fa31f0e3c30481216dd0dbc443274db577cc98f221418565df6d",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4cef4366d8606ca3f743b5d3da0034feb8cb0b08cee3b128c35f608ccdb932e3",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4cef4366d8606ca3f743b5d3da0034feb8cb0b08cee3b128c35f608ccdb932e3",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6406000000000001,
+        "true": 0.3594
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:48c786f673597f76f29694eef7ac3c340e938e9ea4cad9587cef06a90b461e02",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.45699999999999996,
+        "true": 0.543
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:48c786f673597f76f29694eef7ac3c340e938e9ea4cad9587cef06a90b461e02",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1b40718d1342deab2e5d8648616694b65cc3d9373447cf10871234c2b4c7c96a",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1b40718d1342deab2e5d8648616694b65cc3d9373447cf10871234c2b4c7c96a",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:47deb46387ca7949ad3d8866fcc013cc41f3862b83b0aa69327bf3300606a1fe",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5586,
+        "true": 0.4414
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:47deb46387ca7949ad3d8866fcc013cc41f3862b83b0aa69327bf3300606a1fe",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:14fe52daa9a86a0e2291aaf495a932847f04c1c5cf5963c1d86f9348152e91b9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:14fe52daa9a86a0e2291aaf495a932847f04c1c5cf5963c1d86f9348152e91b9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f372dce8ba76dc126988d5881000dab4926d47d4eb1620b9529e1306d2650b09",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f372dce8ba76dc126988d5881000dab4926d47d4eb1620b9529e1306d2650b09",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1071d966aba80f5d514046ee1a6698d12447496e8329743c8cd1e3cba2dab662",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:1071d966aba80f5d514046ee1a6698d12447496e8329743c8cd1e3cba2dab662",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5a9666b90991dd6d0064c344b6cc460a38ef9d8ca89ac32d725b8479de193900",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5a9666b90991dd6d0064c344b6cc460a38ef9d8ca89ac32d725b8479de193900",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f264d70875427679b68777a50615a8a7ecee8bb3f86adfc52bc9397a3ddfc0df",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f264d70875427679b68777a50615a8a7ecee8bb3f86adfc52bc9397a3ddfc0df",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5039,
+        "true": 0.4961
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f073a9956f326316bd99aa8933b954aba45ac086ac60a788ce663283ae8fad65",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f073a9956f326316bd99aa8933b954aba45ac086ac60a788ce663283ae8fad65",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:66eccb42f427c7bebc796cbaa01b9aeeaac457de3f0aa5fc7a6f92c375aadf81",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5703,
+        "true": 0.4297
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:66eccb42f427c7bebc796cbaa01b9aeeaac457de3f0aa5fc7a6f92c375aadf81",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:337d71c2ba11169adbba603c53eaf8cf10f74b99f8a580fe468d2def9b3a753b",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:337d71c2ba11169adbba603c53eaf8cf10f74b99f8a580fe468d2def9b3a753b",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:8e5cf8782ad562324c922b83cc1e0cc8a7de8c6581266c22af583a88dbf71595",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5625,
+        "true": 0.4375
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:8e5cf8782ad562324c922b83cc1e0cc8a7de8c6581266c22af583a88dbf71595",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:31bdf1c1e01ed286434a443b4cc40a7ca204b7c5adb2751c619fd62acb2cede7",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5234,
+        "true": 0.4766
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:31bdf1c1e01ed286434a443b4cc40a7ca204b7c5adb2751c619fd62acb2cede7",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9a36c8c99fda73271b8a087635fe8d3153e563d649640d00a219dfeec7b3a4a9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9a36c8c99fda73271b8a087635fe8d3153e563d649640d00a219dfeec7b3a4a9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:15e8f59230452f7ac1ee559a85bdfe3a49502951597bf91d1ce5bc8fa50d0385",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:15e8f59230452f7ac1ee559a85bdfe3a49502951597bf91d1ce5bc8fa50d0385",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5664,
+        "true": 0.4336
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aeed758c8da19c6524441777b16d977339a3e7438f7d9466b60445a19137fe1b",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aeed758c8da19c6524441777b16d977339a3e7438f7d9466b60445a19137fe1b",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4961,
+        "true": 0.5039
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5debac6239b5828cc5aab9c05b706bdc586bd675ef7aaadc5078f24dd64a74f9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6543,
+        "true": 0.3457
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5debac6239b5828cc5aab9c05b706bdc586bd675ef7aaadc5078f24dd64a74f9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6621,
+        "true": 0.3379
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a7e53d7489e6b9c10fe0e5632ad605c04c3091a1ab4433d0e3ad9d4efc003841",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a7e53d7489e6b9c10fe0e5632ad605c04c3091a1ab4433d0e3ad9d4efc003841",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5473d7ca1502483840c7bbd9b93464afd6c6543b6a30db0762f51200507e168c",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5468999999999999,
+        "true": 0.4531
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5473d7ca1502483840c7bbd9b93464afd6c6543b6a30db0762f51200507e168c",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5996,
+        "true": 0.4004
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d94f81b879f02c577993e8bf3132f248f78dfe294cc96a55dd2f5c99d5059fbb",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:d94f81b879f02c577993e8bf3132f248f78dfe294cc96a55dd2f5c99d5059fbb",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6034999999999999,
+        "true": 0.3965
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a3e946e1abcff480eef36c3da23ec2270811fb263936aa5306464d64e687070f",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a3e946e1abcff480eef36c3da23ec2270811fb263936aa5306464d64e687070f",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:8a3392cc4ef33d68c37c0031d26480976f1dceea17ef2be8d36dd1c6c24900ed",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:8a3392cc4ef33d68c37c0031d26480976f1dceea17ef2be8d36dd1c6c24900ed",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:7826462aa0baaa3c2c2d9eef73eda92d6b08597f6bfb747370ec7f89efba0f76",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:7826462aa0baaa3c2c2d9eef73eda92d6b08597f6bfb747370ec7f89efba0f76",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6367,
+        "true": 0.3633
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:af9512ee1299e06781411c1c1ff4b1dfeeddd500de7d3dd82b553a144151b59e",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5195000000000001,
+        "true": 0.4805
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:af9512ee1299e06781411c1c1ff4b1dfeeddd500de7d3dd82b553a144151b59e",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:caa209bd975f26f7544ce6ec89f928cac2732947e316b5f536469e0bcf263e01",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:caa209bd975f26f7544ce6ec89f928cac2732947e316b5f536469e0bcf263e01",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5273,
+        "true": 0.4727
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:3de76077b882a2b7a49103d19726c21f82d72319f6792864e9b2c3ec3373acc9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:3de76077b882a2b7a49103d19726c21f82d72319f6792864e9b2c3ec3373acc9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:afcb2877788b652228659c4adcc9ae982c0ea73b06875493d5f9ff9c97ec9e3f",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6191,
+        "true": 0.3809
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:afcb2877788b652228659c4adcc9ae982c0ea73b06875493d5f9ff9c97ec9e3f",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:faa984676161cc674e3d2331bd575de349d239e7e06de7a7b6c778314cfe03ca",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6445000000000001,
+        "true": 0.3555
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:faa984676161cc674e3d2331bd575de349d239e7e06de7a7b6c778314cfe03ca",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6328,
+        "true": 0.3672
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f326c5515ceb4d65ce30b38d701b78b1b1d8597ee4b3ba2e4b2ff4fdd5ad8e40",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:f326c5515ceb4d65ce30b38d701b78b1b1d8597ee4b3ba2e4b2ff4fdd5ad8e40",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9c60d5043e7c452f6597a7ba2700f2b771fe77fb235c736c67b53f389e1bc868",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.3438,
+        "true": 0.6562
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9c60d5043e7c452f6597a7ba2700f2b771fe77fb235c736c67b53f389e1bc868",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:528d7455cb911dd5dc63a0382155374647e1d6d71f1a7a577d05a6545c800102",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5117,
+        "true": 0.4883
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:528d7455cb911dd5dc63a0382155374647e1d6d71f1a7a577d05a6545c800102",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5859,
+        "true": 0.4141
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:45119526f6b4b90e0d75b9d107d1abd215f6e142ca85e9dbdf7e1708f7559254",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.48440000000000005,
+        "true": 0.5156
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:45119526f6b4b90e0d75b9d107d1abd215f6e142ca85e9dbdf7e1708f7559254",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5547,
+        "true": 0.4453
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e98d46982de7b70e645f9dabfd51bec658f1ee92e9aa13d6f05826e4a2520658",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:e98d46982de7b70e645f9dabfd51bec658f1ee92e9aa13d6f05826e4a2520658",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4727,
+        "true": 0.5273
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:2d808dc121b926cea3ed0f241d1dba28e2da17c089c532b8aeff7e18572c4da3",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4609,
+        "true": 0.5391
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:2d808dc121b926cea3ed0f241d1dba28e2da17c089c532b8aeff7e18572c4da3",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.48050000000000004,
+        "true": 0.5195
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:432afb91c8775af964bb7b2d3fd4cb0be64a13bf451b1178e7ebb12f0ec060bb",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4648,
+        "true": 0.5352
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:432afb91c8775af964bb7b2d3fd4cb0be64a13bf451b1178e7ebb12f0ec060bb",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:825bf38a8fcdf7f5efcab3ff540e2915cd88957eda1532ffabecd7a477c5b88c",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4336,
+        "true": 0.5664
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:825bf38a8fcdf7f5efcab3ff540e2915cd88957eda1532ffabecd7a477c5b88c",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4fa53009cb605e417dca0591c4d2d9a5e2cf9eb882b27c505ffd9480b09f1dde",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4fa53009cb605e417dca0591c4d2d9a5e2cf9eb882b27c505ffd9480b09f1dde",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:3a8a9cebf95689ff1bf4a50acc7f1e1a1c70d7060dfd6e8953bd3a9e41bd7dca",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:3a8a9cebf95689ff1bf4a50acc7f1e1a1c70d7060dfd6e8953bd3a9e41bd7dca",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5156000000000001,
+        "true": 0.4844
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:95dffb87a290509bb1412055babc1bf240ece9c34e17f09d33590cdceae5edc0",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:95dffb87a290509bb1412055babc1bf240ece9c34e17f09d33590cdceae5edc0",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6152,
+        "true": 0.3848
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:bccc140d51bfef426186429cd5756d0b676bd78cb9289a134b7e027feaf97cac",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.3477,
+        "true": 0.6523
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:bccc140d51bfef426186429cd5756d0b676bd78cb9289a134b7e027feaf97cac",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.4141,
+        "true": 0.5859
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:98e83a6a22c65198f17118ba25b2016aa01747b57376e4d52be570a249d15cf9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:98e83a6a22c65198f17118ba25b2016aa01747b57376e4d52be570a249d15cf9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.42579999999999996,
+        "true": 0.5742
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:6064d4a34a56b9f3d8f3d8fe98d616ce0b70fde515600fb74fe2ed94e73072b9",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5078,
+        "true": 0.4922
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:6064d4a34a56b9f3d8f3d8fe98d616ce0b70fde515600fb74fe2ed94e73072b9",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5957,
+        "true": 0.4043
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aa8dfd9fbef44d1d0314294b689884a58ec2641071122b084e77d22c5d054c1b",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5781000000000001,
+        "true": 0.4219
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:aa8dfd9fbef44d1d0314294b689884a58ec2641071122b084e77d22c5d054c1b",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6289,
+        "true": 0.3711
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:caccd6bc82b421d79a1a18535e7086c8844db5d7af2312e574f0342c96057841",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5898,
+        "true": 0.4102
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:caccd6bc82b421d79a1a18535e7086c8844db5d7af2312e574f0342c96057841",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6073999999999999,
+        "true": 0.3926
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:fdbdfa54c0586c67b615b499ffcc92df0d506f665641432de3e5c1f37d4144d8",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:fdbdfa54c0586c67b615b499ffcc92df0d506f665641432de3e5c1f37d4144d8",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a24c2339c687eb5f4e22bfcb5d624ee4217f006ab9b18c0a3ef916d967ba6e22",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4688,
+        "true": 0.5312
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:a24c2339c687eb5f4e22bfcb5d624ee4217f006ab9b18c0a3ef916d967ba6e22",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:68d2ba6bcfa4fd51e508ceb9e6cbc4c479a715b100ead3206980e5c9de92f09b",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:68d2ba6bcfa4fd51e508ceb9e6cbc4c479a715b100ead3206980e5c9de92f09b",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6504,
+        "true": 0.3496
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:12b08fae792c538719a18f83ea95215fd0e4ae3d84bf9258a9472ded3e15743a",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.36329999999999996,
+        "true": 0.6367
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:12b08fae792c538719a18f83ea95215fd0e4ae3d84bf9258a9472ded3e15743a",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.41800000000000004,
+        "true": 0.582
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9befe90af7b416404027582a8102398bcd2a744a58a025b9d4a108de9e2f3e7d",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4414,
+        "true": 0.5586
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9befe90af7b416404027582a8102398bcd2a744a58a025b9d4a108de9e2f3e7d",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:579dba1817dbfbabaf412e0962a9106640f0e800d28de1602b80db9edceb8aad",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.375,
+        "true": 0.625
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:579dba1817dbfbabaf412e0962a9106640f0e800d28de1602b80db9edceb8aad",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.42969999999999997,
+        "true": 0.5703
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:59b33ad8387f13981880c11c1d689f0972b7d2107910da12734de3cc5d9bec25",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.3789,
+        "true": 0.6211
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:59b33ad8387f13981880c11c1d689f0972b7d2107910da12734de3cc5d9bec25",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.44920000000000004,
+        "true": 0.5508
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9cc0fa3c831397b4ad11f9f1f2b1de2d850597f2af3d71610faea1f7e8d95a68",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:9cc0fa3c831397b4ad11f9f1f2b1de2d850597f2af3d71610faea1f7e8d95a68",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5508,
+        "true": 0.4492
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:be2b070bc2c00430ad3d7f14a968be01d96846b09becb3c58860b4023bb2d4a3",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.4766,
+        "true": 0.5234
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:be2b070bc2c00430ad3d7f14a968be01d96846b09becb3c58860b4023bb2d4a3",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5742,
+        "true": 0.4258
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4f4b88f355e9987358a0083932c2bbee62b21cbbad761b964d71ede2cc964257",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.49219999999999997,
+        "true": 0.5078
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4f4b88f355e9987358a0083932c2bbee62b21cbbad761b964d71ede2cc964257",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.623,
+        "true": 0.377
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:730639ceca12afbec4cf938fcd42115488ff325424578178236b4091678954db",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.48829999999999996,
+        "true": 0.5117
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:730639ceca12afbec4cf938fcd42115488ff325424578178236b4091678954db",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.6113,
+        "true": 0.3887
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:203d19b375989f5f71fb02a09406d899f2bdb201a5af1dc4b22c3de078f0cd91",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5,
+        "true": 0.5
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:203d19b375989f5f71fb02a09406d899f2bdb201a5af1dc4b22c3de078f0cd91",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.5820000000000001,
+        "true": 0.418
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5f0ac225f844c0cb71ae9c306638dbcc48cf18076bbe06b21f14182d35ff9b93",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.33199999999999996,
+        "true": 0.668
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:5f0ac225f844c0cb71ae9c306638dbcc48cf18076bbe06b21f14182d35ff9b93",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.3359,
+        "true": 0.6641
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4226bacf4c8bda50a7a2dd9d88ab2c417c404a6dbf31e66e1569569623085518",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.5918,
+        "true": 0.4082
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:4226bacf4c8bda50a7a2dd9d88ab2c417c404a6dbf31e66e1569569623085518",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.45309999999999995,
+        "true": 0.5469
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:876fe54d4eebdc7c7ffca2be4cde90c73f16d1c83d20eaa3f051ff0a00445a91",
+      "question_id": "relevance_0",
+      "probabilities": {
+        "false": 0.38280000000000003,
+        "true": 0.6172
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    },
+    {
+      "case_id": "followir_news21:876fe54d4eebdc7c7ffca2be4cde90c73f16d1c83d20eaa3f051ff0a00445a91",
+      "question_id": "relevance_1",
+      "probabilities": {
+        "false": 0.38670000000000004,
+        "true": 0.6133
+      },
+      "box": null,
+      "error": null,
+      "abstention": null
+    }
+  ]
+}
